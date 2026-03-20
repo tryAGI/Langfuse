@@ -9,6 +9,7 @@ nav:
   - Ingestion: examples/ingestion.md
   - Projects: examples/projects.md
   - Scores: examples/scores.md
+  - Datasets: examples/datasets.md
 # EXAMPLES:END
         
 theme:

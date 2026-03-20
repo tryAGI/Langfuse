@@ -98,6 +98,17 @@ using var client = new LangfuseClient(apiKey);
 var response = await client.Scores.ScoresGetManyAsync(
     limit: 10);
 ```
+
+### Datasets
+List and manage datasets for LLM evaluation in Langfuse.
+
+```csharp
+using var client = new LangfuseClient(apiKey);
+
+// List all datasets in your project with pagination.
+var response = await client.Datasets.DatasetsListAsync(
+    limit: 10);
+```
 <!-- EXAMPLES:END -->
 
 ## Support
