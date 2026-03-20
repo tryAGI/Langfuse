@@ -369,7 +369,6 @@ namespace Langfuse
                 }
             }
         }
-
         /// <summary>
         /// Create a score configuration (config). Score configs are used to define the structure of scores
         /// </summary>

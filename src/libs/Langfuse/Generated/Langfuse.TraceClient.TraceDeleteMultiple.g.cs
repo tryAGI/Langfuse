@@ -369,7 +369,6 @@ namespace Langfuse
                 }
             }
         }
-
         /// <summary>
         /// Delete multiple traces
         /// </summary>

@@ -369,7 +369,6 @@ namespace Langfuse
                 }
             }
         }
-
         /// <summary>
         /// Create a score (supports both trace and session scores)
         /// </summary>

@@ -16,7 +16,6 @@ namespace Langfuse
 
             global::Langfuse.ProjectsUpdateRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Update a project by ID (requires organization-scoped API key).
         /// </summary>

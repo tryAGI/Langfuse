@@ -25,7 +25,6 @@ namespace Langfuse
 
             global::Langfuse.OpentelemetryExportTracesRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// **OpenTelemetry Traces Ingestion Endpoint**<br/>
         /// This endpoint implements the OTLP/HTTP specification for trace ingestion, providing native OpenTelemetry integration for Langfuse Observability.<br/>

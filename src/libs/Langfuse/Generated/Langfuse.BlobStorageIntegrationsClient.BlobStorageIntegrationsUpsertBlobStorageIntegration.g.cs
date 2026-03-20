@@ -369,7 +369,6 @@ namespace Langfuse
                 }
             }
         }
-
         /// <summary>
         /// Create or update a blob storage integration for a specific project (requires organization-scoped API key). The configuration is validated by performing a test upload to the bucket.
         /// </summary>

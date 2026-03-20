@@ -14,7 +14,6 @@ namespace Langfuse
 
             global::Langfuse.LegacyCreateScoreRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create a score (supports both trace and session scores)
         /// </summary>

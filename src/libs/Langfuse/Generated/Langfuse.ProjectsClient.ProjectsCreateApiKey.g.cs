@@ -375,7 +375,6 @@ namespace Langfuse
                 }
             }
         }
-
         /// <summary>
         /// Create a new API key for a project (requires organization-scoped API key)
         /// </summary>

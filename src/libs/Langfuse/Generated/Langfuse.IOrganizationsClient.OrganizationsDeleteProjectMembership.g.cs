@@ -16,7 +16,6 @@ namespace Langfuse
 
             global::Langfuse.DeleteMembershipRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Delete a membership from a specific project (requires organization-scoped API key). The user must be a member of the organization.
         /// </summary>

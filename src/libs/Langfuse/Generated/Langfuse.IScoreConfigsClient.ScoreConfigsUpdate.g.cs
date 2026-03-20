@@ -16,7 +16,6 @@ namespace Langfuse
 
             global::Langfuse.UpdateScoreConfigRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Update a score config
         /// </summary>

@@ -16,7 +16,6 @@ namespace Langfuse
 
             global::Langfuse.CreateAnnotationQueueItemRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Add an item to an annotation queue
         /// </summary>

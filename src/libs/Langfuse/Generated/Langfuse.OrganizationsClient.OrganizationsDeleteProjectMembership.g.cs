@@ -375,7 +375,6 @@ namespace Langfuse
                 }
             }
         }
-
         /// <summary>
         /// Delete a membership from a specific project (requires organization-scoped API key). The user must be a member of the organization.
         /// </summary>

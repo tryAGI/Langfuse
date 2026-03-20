@@ -14,7 +14,6 @@ namespace Langfuse
 
             global::Langfuse.CreateCommentRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create a comment. Comments may be attached to different object types (trace, observation, session, prompt).
         /// </summary>

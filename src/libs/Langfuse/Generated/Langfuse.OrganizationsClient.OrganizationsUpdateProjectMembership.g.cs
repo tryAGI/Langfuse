@@ -375,7 +375,6 @@ namespace Langfuse
                 }
             }
         }
-
         /// <summary>
         /// Create or update a membership for a specific project (requires organization-scoped API key). The user must already be a member of the organization.
         /// </summary>

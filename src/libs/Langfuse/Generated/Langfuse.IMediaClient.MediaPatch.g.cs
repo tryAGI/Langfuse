@@ -16,7 +16,6 @@ namespace Langfuse
 
             global::Langfuse.PatchMediaBody request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Patch a media record
         /// </summary>

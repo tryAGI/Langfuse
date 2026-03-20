@@ -369,7 +369,6 @@ namespace Langfuse
                 }
             }
         }
-
         /// <summary>
         /// Create or update a membership for the organization associated with the API key (requires organization-scoped API key)
         /// </summary>

@@ -14,7 +14,6 @@ namespace Langfuse
 
             global::Langfuse.UpsertLlmConnectionRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create or update an LLM connection. The connection is upserted on provider.
         /// </summary>

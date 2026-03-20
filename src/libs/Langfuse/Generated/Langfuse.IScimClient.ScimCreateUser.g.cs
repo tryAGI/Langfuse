@@ -14,7 +14,6 @@ namespace Langfuse
 
             global::Langfuse.ScimCreateUserRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create a new user in the organization (requires organization-scoped API key)
         /// </summary>

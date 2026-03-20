@@ -380,7 +380,6 @@ namespace Langfuse
                 }
             }
         }
-
         /// <summary>
         /// **Legacy endpoint for batch ingestion for Langfuse Observability.**<br/>
         /// -&gt; Please use the OpenTelemetry endpoint (`/api/public/otel/v1/traces`). Learn more: https://langfuse.com/integrations/native/opentelemetry<br/>
