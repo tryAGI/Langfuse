@@ -1,0 +1,19 @@
+#nullable enable
+
+namespace Langfuse
+{
+    public partial interface IDatasetsClient
+    {
+        /// <summary>
+        /// Get all datasets
+        /// </summary>
+        /// <param name="page"></param>
+        /// <param name="limit"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Langfuse.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Langfuse.PaginatedDatasets> DatasetsListAsync(
+            int? page = default,
+            int? limit = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}

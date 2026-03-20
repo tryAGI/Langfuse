@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Nuget">
+    <Description>Generated C# SDK for Langfuse — the open-source LLM observability platform. Tracing, evaluation, prompt management, datasets, scores, and metrics.</Description>
+    <PackageTags>langfuse;observability;tracing;llm;evaluation;prompts;datasets;metrics;api;sdk;dotnet;openapi;generated</PackageTags>
+  </PropertyGroup>
+
+</Project>

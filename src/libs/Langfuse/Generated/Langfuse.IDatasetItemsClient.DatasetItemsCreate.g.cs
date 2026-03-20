@@ -1,0 +1,44 @@
+#nullable enable
+
+namespace Langfuse
+{
+    public partial interface IDatasetItemsClient
+    {
+        /// <summary>
+        /// Create a dataset item
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Langfuse.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Langfuse.DatasetItem> DatasetItemsCreateAsync(
+
+            global::Langfuse.CreateDatasetItemRequest request,
+            global::System.Threading.CancellationToken cancellationToken = default);
+
+        /// <summary>
+        /// Create a dataset item
+        /// </summary>
+        /// <param name="datasetName"></param>
+        /// <param name="input"></param>
+        /// <param name="expectedOutput"></param>
+        /// <param name="metadata"></param>
+        /// <param name="sourceTraceId"></param>
+        /// <param name="sourceObservationId"></param>
+        /// <param name="id">
+        /// Dataset items are upserted on their id. Id needs to be unique (project-level) and cannot be reused across datasets.
+        /// </param>
+        /// <param name="status"></param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::System.InvalidOperationException"></exception>
+        global::System.Threading.Tasks.Task<global::Langfuse.DatasetItem> DatasetItemsCreateAsync(
+            string datasetName,
+            object? input = default,
+            object? expectedOutput = default,
+            object? metadata = default,
+            string? sourceTraceId = default,
+            string? sourceObservationId = default,
+            string? id = default,
+            global::Langfuse.DatasetStatus? status = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}
