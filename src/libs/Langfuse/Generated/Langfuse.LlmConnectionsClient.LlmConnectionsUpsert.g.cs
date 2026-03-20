@@ -369,7 +369,6 @@ namespace Langfuse
                 }
             }
         }
-
         /// <summary>
         /// Create or update an LLM connection. The connection is upserted on provider.
         /// </summary>

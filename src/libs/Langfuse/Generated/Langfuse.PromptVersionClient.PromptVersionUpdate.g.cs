@@ -381,7 +381,6 @@ namespace Langfuse
                 }
             }
         }
-
         /// <summary>
         /// Update labels for a specific prompt version
         /// </summary>

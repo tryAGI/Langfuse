@@ -16,7 +16,6 @@ namespace Langfuse
 
             global::Langfuse.MembershipRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create or update a membership for a specific project (requires organization-scoped API key). The user must already be a member of the organization.
         /// </summary>

@@ -16,7 +16,6 @@ namespace Langfuse
 
             global::Langfuse.AnnotationQueueAssignmentRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create an assignment for a user to an annotation queue
         /// </summary>

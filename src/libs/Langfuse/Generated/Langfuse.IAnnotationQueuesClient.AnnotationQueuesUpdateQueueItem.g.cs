@@ -18,7 +18,6 @@ namespace Langfuse
 
             global::Langfuse.UpdateAnnotationQueueItemRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Update an annotation queue item
         /// </summary>

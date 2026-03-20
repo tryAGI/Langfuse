@@ -375,7 +375,6 @@ namespace Langfuse
                 }
             }
         }
-
         /// <summary>
         /// Update a project by ID (requires organization-scoped API key).
         /// </summary>

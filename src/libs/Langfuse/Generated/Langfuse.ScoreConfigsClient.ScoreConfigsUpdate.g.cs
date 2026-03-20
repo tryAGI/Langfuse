@@ -375,7 +375,6 @@ namespace Langfuse
                 }
             }
         }
-
         /// <summary>
         /// Update a score config
         /// </summary>

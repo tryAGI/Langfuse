@@ -14,7 +14,6 @@ namespace Langfuse
 
             global::Langfuse.CreateModelRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create a model
         /// </summary>

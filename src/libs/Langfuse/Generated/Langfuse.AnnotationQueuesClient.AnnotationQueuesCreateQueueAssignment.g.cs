@@ -375,7 +375,6 @@ namespace Langfuse
                 }
             }
         }
-
         /// <summary>
         /// Create an assignment for a user to an annotation queue
         /// </summary>

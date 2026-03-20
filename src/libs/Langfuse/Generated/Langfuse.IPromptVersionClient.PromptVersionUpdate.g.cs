@@ -18,7 +18,6 @@ namespace Langfuse
 
             global::Langfuse.PromptVersionUpdateRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Update labels for a specific prompt version
         /// </summary>

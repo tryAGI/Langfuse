@@ -376,7 +376,6 @@ namespace Langfuse
                 }
             }
         }
-
         /// <summary>
         /// **OpenTelemetry Traces Ingestion Endpoint**<br/>
         /// This endpoint implements the OTLP/HTTP specification for trace ingestion, providing native OpenTelemetry integration for Langfuse Observability.<br/>

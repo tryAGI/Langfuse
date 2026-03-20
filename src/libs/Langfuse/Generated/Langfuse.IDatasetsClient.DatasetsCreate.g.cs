@@ -14,7 +14,6 @@ namespace Langfuse
 
             global::Langfuse.CreateDatasetRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create a dataset
         /// </summary>

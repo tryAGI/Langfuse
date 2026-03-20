@@ -14,7 +14,6 @@ namespace Langfuse
 
             global::Langfuse.CreatePromptRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create a new version for the prompt with the given `name`
         /// </summary>

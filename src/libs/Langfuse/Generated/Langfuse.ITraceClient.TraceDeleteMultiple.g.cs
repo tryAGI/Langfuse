@@ -14,7 +14,6 @@ namespace Langfuse
 
             global::Langfuse.TraceDeleteMultipleRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Delete multiple traces
         /// </summary>

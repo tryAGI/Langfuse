@@ -14,7 +14,6 @@ namespace Langfuse
 
             global::Langfuse.CreateScoreConfigRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create a score configuration (config). Score configs are used to define the structure of scores
         /// </summary>

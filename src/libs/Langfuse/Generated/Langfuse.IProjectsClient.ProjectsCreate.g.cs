@@ -14,7 +14,6 @@ namespace Langfuse
 
             global::Langfuse.ProjectsCreateRequest request,
             global::System.Threading.CancellationToken cancellationToken = default);
-
         /// <summary>
         /// Create a new project (requires organization-scoped API key)
         /// </summary>

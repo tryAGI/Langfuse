@@ -360,7 +360,6 @@ namespace Langfuse
                 }
             }
         }
-
         /// <summary>
         /// Patch a media record
         /// </summary>

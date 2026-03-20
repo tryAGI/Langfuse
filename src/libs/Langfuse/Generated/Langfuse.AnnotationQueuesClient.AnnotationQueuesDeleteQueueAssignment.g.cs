@@ -375,7 +375,6 @@ namespace Langfuse
                 }
             }
         }
-
         /// <summary>
         /// Delete an assignment for a user to an annotation queue
         /// </summary>
