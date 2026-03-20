@@ -2,6 +2,13 @@ site_name: Langfuse .NET Documentation
 nav:
 - Overview: index.md
 # EXAMPLES:START
+- Examples:
+  - Health Check: examples/health-check.md
+  - Traces: examples/traces.md
+  - Prompts: examples/prompts.md
+  - Ingestion: examples/ingestion.md
+  - Projects: examples/projects.md
+  - Scores: examples/scores.md
 # EXAMPLES:END
         
 theme:
