@@ -139,7 +139,7 @@ namespace Langfuse
                 .AddOptionalParameter("expandMetadata", expandMetadata)
                 .AddOptionalParameter("limit", limit?.ToString())
                 .AddOptionalParameter("cursor", cursor)
-                .AddOptionalParameter("parseIoAsJson", parseIoAsJson?.ToString())
+                .AddOptionalParameter("parseIoAsJson", parseIoAsJson?.ToString().ToLowerInvariant())
                 .AddOptionalParameter("name", name)
                 .AddOptionalParameter("userId", userId)
                 .AddOptionalParameter("type", type)

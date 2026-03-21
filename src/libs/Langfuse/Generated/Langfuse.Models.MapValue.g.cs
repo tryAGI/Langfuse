@@ -183,7 +183,7 @@ namespace Langfuse
             Value1?.ToString() ??
             Value2?.ToString() ??
             Value3?.ToString() ??
-            Value4?.ToString() ??
+            Value4?.ToString().ToLowerInvariant() ??
             Value5?.ToString() 
             ;
 
