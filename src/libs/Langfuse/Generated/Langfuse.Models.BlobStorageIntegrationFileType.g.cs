@@ -11,11 +11,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        Json,
+        Csv,
         /// <summary>
         /// 
         /// </summary>
-        Csv,
+        Json,
         /// <summary>
         /// 
         /// </summary>
@@ -34,8 +34,8 @@ namespace Langfuse
         {
             return value switch
             {
-                BlobStorageIntegrationFileType.Json => "JSON",
                 BlobStorageIntegrationFileType.Csv => "CSV",
+                BlobStorageIntegrationFileType.Json => "JSON",
                 BlobStorageIntegrationFileType.Jsonl => "JSONL",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -47,8 +47,8 @@ namespace Langfuse
         {
             return value switch
             {
-                "JSON" => BlobStorageIntegrationFileType.Json,
                 "CSV" => BlobStorageIntegrationFileType.Csv,
+                "JSON" => BlobStorageIntegrationFileType.Json,
                 "JSONL" => BlobStorageIntegrationFileType.Jsonl,
                 _ => null,
             };

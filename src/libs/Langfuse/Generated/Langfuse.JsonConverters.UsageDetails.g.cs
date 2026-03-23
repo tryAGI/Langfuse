@@ -28,17 +28,17 @@ namespace Langfuse.JsonConverters
 
             var __score0 = 0;
             var __score1 = 0;
-            if (__jsonProps.Contains("prompt_tokens")) __score1++;
             if (__jsonProps.Contains("completion_tokens")) __score1++;
-            if (__jsonProps.Contains("total_tokens")) __score1++;
-            if (__jsonProps.Contains("prompt_tokens_details")) __score1++;
             if (__jsonProps.Contains("completion_tokens_details")) __score1++;
+            if (__jsonProps.Contains("prompt_tokens")) __score1++;
+            if (__jsonProps.Contains("prompt_tokens_details")) __score1++;
+            if (__jsonProps.Contains("total_tokens")) __score1++;
             var __score2 = 0;
             if (__jsonProps.Contains("input_tokens")) __score2++;
-            if (__jsonProps.Contains("output_tokens")) __score2++;
-            if (__jsonProps.Contains("total_tokens")) __score2++;
             if (__jsonProps.Contains("input_tokens_details")) __score2++;
+            if (__jsonProps.Contains("output_tokens")) __score2++;
             if (__jsonProps.Contains("output_tokens_details")) __score2++;
+            if (__jsonProps.Contains("total_tokens")) __score2++;
             var __bestScore = 0;
             var __bestIndex = -1;
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }

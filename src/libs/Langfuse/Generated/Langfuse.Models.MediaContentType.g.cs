@@ -11,7 +11,131 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        ImagePng,
+        ApplicationGzip,
+        /// <summary>
+        /// 
+        /// </summary>
+        ApplicationJavascript,
+        /// <summary>
+        /// 
+        /// </summary>
+        ApplicationJson,
+        /// <summary>
+        /// 
+        /// </summary>
+        ApplicationMsword,
+        /// <summary>
+        /// 
+        /// </summary>
+        ApplicationOctetStream,
+        /// <summary>
+        /// 
+        /// </summary>
+        ApplicationPdf,
+        /// <summary>
+        /// 
+        /// </summary>
+        ApplicationRtf,
+        /// <summary>
+        /// 
+        /// </summary>
+        ApplicationVndApacheParquet,
+        /// <summary>
+        /// 
+        /// </summary>
+        ApplicationVndMsExcel,
+        /// <summary>
+        /// 
+        /// </summary>
+        ApplicationVndOpenxmlformatsOfficedocumentPresentationmlPresentation,
+        /// <summary>
+        /// 
+        /// </summary>
+        ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet,
+        /// <summary>
+        /// 
+        /// </summary>
+        ApplicationVndOpenxmlformatsOfficedocumentWordprocessingmlDocument,
+        /// <summary>
+        /// 
+        /// </summary>
+        ApplicationX7zCompressed,
+        /// <summary>
+        /// 
+        /// </summary>
+        ApplicationXNdjson,
+        /// <summary>
+        /// 
+        /// </summary>
+        ApplicationXTar,
+        /// <summary>
+        /// 
+        /// </summary>
+        ApplicationXYaml,
+        /// <summary>
+        /// 
+        /// </summary>
+        ApplicationXml,
+        /// <summary>
+        /// 
+        /// </summary>
+        ApplicationZip,
+        /// <summary>
+        /// 
+        /// </summary>
+        AudioAac,
+        /// <summary>
+        /// 
+        /// </summary>
+        AudioFlac,
+        /// <summary>
+        /// 
+        /// </summary>
+        AudioMp3,
+        /// <summary>
+        /// 
+        /// </summary>
+        AudioMp4,
+        /// <summary>
+        /// 
+        /// </summary>
+        AudioMpeg,
+        /// <summary>
+        /// 
+        /// </summary>
+        AudioOga,
+        /// <summary>
+        /// 
+        /// </summary>
+        AudioOgg,
+        /// <summary>
+        /// 
+        /// </summary>
+        AudioOpus,
+        /// <summary>
+        /// 
+        /// </summary>
+        AudioWav,
+        /// <summary>
+        /// 
+        /// </summary>
+        AudioWebm,
+        /// <summary>
+        /// 
+        /// </summary>
+        ImageAvif,
+        /// <summary>
+        /// 
+        /// </summary>
+        ImageBmp,
+        /// <summary>
+        /// 
+        /// </summary>
+        ImageGif,
+        /// <summary>
+        /// 
+        /// </summary>
+        ImageHeic,
         /// <summary>
         /// 
         /// </summary>
@@ -23,11 +147,7 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        ImageWebp,
-        /// <summary>
-        /// 
-        /// </summary>
-        ImageGif,
+        ImagePng,
         /// <summary>
         /// 
         /// </summary>
@@ -39,91 +159,7 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        ImageBmp,
-        /// <summary>
-        /// 
-        /// </summary>
-        ImageAvif,
-        /// <summary>
-        /// 
-        /// </summary>
-        ImageHeic,
-        /// <summary>
-        /// 
-        /// </summary>
-        AudioMpeg,
-        /// <summary>
-        /// 
-        /// </summary>
-        AudioMp3,
-        /// <summary>
-        /// 
-        /// </summary>
-        AudioWav,
-        /// <summary>
-        /// 
-        /// </summary>
-        AudioOgg,
-        /// <summary>
-        /// 
-        /// </summary>
-        AudioOga,
-        /// <summary>
-        /// 
-        /// </summary>
-        AudioAac,
-        /// <summary>
-        /// 
-        /// </summary>
-        AudioMp4,
-        /// <summary>
-        /// 
-        /// </summary>
-        AudioFlac,
-        /// <summary>
-        /// 
-        /// </summary>
-        AudioOpus,
-        /// <summary>
-        /// 
-        /// </summary>
-        AudioWebm,
-        /// <summary>
-        /// 
-        /// </summary>
-        VideoMp4,
-        /// <summary>
-        /// 
-        /// </summary>
-        VideoWebm,
-        /// <summary>
-        /// 
-        /// </summary>
-        VideoOgg,
-        /// <summary>
-        /// 
-        /// </summary>
-        VideoMpeg,
-        /// <summary>
-        /// 
-        /// </summary>
-        VideoQuicktime,
-        /// <summary>
-        /// 
-        /// </summary>
-        VideoXMsvideo,
-        /// <summary>
-        /// 
-        /// </summary>
-        VideoXMatroska,
-        /// <summary>
-        /// 
-        /// </summary>
-        TextPlain,
-        /// <summary>
-        /// 
-        /// </summary>
-        TextHtml,
+        ImageWebp,
         /// <summary>
         /// 
         /// </summary>
@@ -135,7 +171,15 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        TextHtml,
+        /// <summary>
+        /// 
+        /// </summary>
         TextMarkdown,
+        /// <summary>
+        /// 
+        /// </summary>
+        TextPlain,
         /// <summary>
         /// 
         /// </summary>
@@ -143,79 +187,35 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        ApplicationJavascript,
-        /// <summary>
-        /// 
-        /// </summary>
         TextXTypescript,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationXYaml,
+        VideoMp4,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationPdf,
+        VideoMpeg,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationMsword,
+        VideoOgg,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndMsExcel,
+        VideoQuicktime,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet,
+        VideoWebm,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationZip,
+        VideoXMatroska,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationJson,
-        /// <summary>
-        /// 
-        /// </summary>
-        ApplicationXml,
-        /// <summary>
-        /// 
-        /// </summary>
-        ApplicationOctetStream,
-        /// <summary>
-        /// 
-        /// </summary>
-        ApplicationVndOpenxmlformatsOfficedocumentWordprocessingmlDocument,
-        /// <summary>
-        /// 
-        /// </summary>
-        ApplicationVndOpenxmlformatsOfficedocumentPresentationmlPresentation,
-        /// <summary>
-        /// 
-        /// </summary>
-        ApplicationRtf,
-        /// <summary>
-        /// 
-        /// </summary>
-        ApplicationXNdjson,
-        /// <summary>
-        /// 
-        /// </summary>
-        ApplicationVndApacheParquet,
-        /// <summary>
-        /// 
-        /// </summary>
-        ApplicationGzip,
-        /// <summary>
-        /// 
-        /// </summary>
-        ApplicationXTar,
-        /// <summary>
-        /// 
-        /// </summary>
-        ApplicationX7zCompressed,
+        VideoXMsvideo,
     }
 
     /// <summary>
@@ -230,58 +230,58 @@ namespace Langfuse
         {
             return value switch
             {
-                MediaContentType.ImagePng => "image/png",
+                MediaContentType.ApplicationGzip => "application/gzip",
+                MediaContentType.ApplicationJavascript => "application/javascript",
+                MediaContentType.ApplicationJson => "application/json",
+                MediaContentType.ApplicationMsword => "application/msword",
+                MediaContentType.ApplicationOctetStream => "application/octet-stream",
+                MediaContentType.ApplicationPdf => "application/pdf",
+                MediaContentType.ApplicationRtf => "application/rtf",
+                MediaContentType.ApplicationVndApacheParquet => "application/vnd.apache.parquet",
+                MediaContentType.ApplicationVndMsExcel => "application/vnd.ms-excel",
+                MediaContentType.ApplicationVndOpenxmlformatsOfficedocumentPresentationmlPresentation => "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                MediaContentType.ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet => "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                MediaContentType.ApplicationVndOpenxmlformatsOfficedocumentWordprocessingmlDocument => "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                MediaContentType.ApplicationX7zCompressed => "application/x-7z-compressed",
+                MediaContentType.ApplicationXNdjson => "application/x-ndjson",
+                MediaContentType.ApplicationXTar => "application/x-tar",
+                MediaContentType.ApplicationXYaml => "application/x-yaml",
+                MediaContentType.ApplicationXml => "application/xml",
+                MediaContentType.ApplicationZip => "application/zip",
+                MediaContentType.AudioAac => "audio/aac",
+                MediaContentType.AudioFlac => "audio/flac",
+                MediaContentType.AudioMp3 => "audio/mp3",
+                MediaContentType.AudioMp4 => "audio/mp4",
+                MediaContentType.AudioMpeg => "audio/mpeg",
+                MediaContentType.AudioOga => "audio/oga",
+                MediaContentType.AudioOgg => "audio/ogg",
+                MediaContentType.AudioOpus => "audio/opus",
+                MediaContentType.AudioWav => "audio/wav",
+                MediaContentType.AudioWebm => "audio/webm",
+                MediaContentType.ImageAvif => "image/avif",
+                MediaContentType.ImageBmp => "image/bmp",
+                MediaContentType.ImageGif => "image/gif",
+                MediaContentType.ImageHeic => "image/heic",
                 MediaContentType.ImageJpeg => "image/jpeg",
                 MediaContentType.ImageJpg => "image/jpg",
-                MediaContentType.ImageWebp => "image/webp",
-                MediaContentType.ImageGif => "image/gif",
+                MediaContentType.ImagePng => "image/png",
                 MediaContentType.ImageSvgPlusxml => "image/svg+xml",
                 MediaContentType.ImageTiff => "image/tiff",
-                MediaContentType.ImageBmp => "image/bmp",
-                MediaContentType.ImageAvif => "image/avif",
-                MediaContentType.ImageHeic => "image/heic",
-                MediaContentType.AudioMpeg => "audio/mpeg",
-                MediaContentType.AudioMp3 => "audio/mp3",
-                MediaContentType.AudioWav => "audio/wav",
-                MediaContentType.AudioOgg => "audio/ogg",
-                MediaContentType.AudioOga => "audio/oga",
-                MediaContentType.AudioAac => "audio/aac",
-                MediaContentType.AudioMp4 => "audio/mp4",
-                MediaContentType.AudioFlac => "audio/flac",
-                MediaContentType.AudioOpus => "audio/opus",
-                MediaContentType.AudioWebm => "audio/webm",
-                MediaContentType.VideoMp4 => "video/mp4",
-                MediaContentType.VideoWebm => "video/webm",
-                MediaContentType.VideoOgg => "video/ogg",
-                MediaContentType.VideoMpeg => "video/mpeg",
-                MediaContentType.VideoQuicktime => "video/quicktime",
-                MediaContentType.VideoXMsvideo => "video/x-msvideo",
-                MediaContentType.VideoXMatroska => "video/x-matroska",
-                MediaContentType.TextPlain => "text/plain",
-                MediaContentType.TextHtml => "text/html",
+                MediaContentType.ImageWebp => "image/webp",
                 MediaContentType.TextCss => "text/css",
                 MediaContentType.TextCsv => "text/csv",
+                MediaContentType.TextHtml => "text/html",
                 MediaContentType.TextMarkdown => "text/markdown",
+                MediaContentType.TextPlain => "text/plain",
                 MediaContentType.TextXPython => "text/x-python",
-                MediaContentType.ApplicationJavascript => "application/javascript",
                 MediaContentType.TextXTypescript => "text/x-typescript",
-                MediaContentType.ApplicationXYaml => "application/x-yaml",
-                MediaContentType.ApplicationPdf => "application/pdf",
-                MediaContentType.ApplicationMsword => "application/msword",
-                MediaContentType.ApplicationVndMsExcel => "application/vnd.ms-excel",
-                MediaContentType.ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet => "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                MediaContentType.ApplicationZip => "application/zip",
-                MediaContentType.ApplicationJson => "application/json",
-                MediaContentType.ApplicationXml => "application/xml",
-                MediaContentType.ApplicationOctetStream => "application/octet-stream",
-                MediaContentType.ApplicationVndOpenxmlformatsOfficedocumentWordprocessingmlDocument => "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                MediaContentType.ApplicationVndOpenxmlformatsOfficedocumentPresentationmlPresentation => "application/vnd.openxmlformats-officedocument.presentationml.presentation",
-                MediaContentType.ApplicationRtf => "application/rtf",
-                MediaContentType.ApplicationXNdjson => "application/x-ndjson",
-                MediaContentType.ApplicationVndApacheParquet => "application/vnd.apache.parquet",
-                MediaContentType.ApplicationGzip => "application/gzip",
-                MediaContentType.ApplicationXTar => "application/x-tar",
-                MediaContentType.ApplicationX7zCompressed => "application/x-7z-compressed",
+                MediaContentType.VideoMp4 => "video/mp4",
+                MediaContentType.VideoMpeg => "video/mpeg",
+                MediaContentType.VideoOgg => "video/ogg",
+                MediaContentType.VideoQuicktime => "video/quicktime",
+                MediaContentType.VideoWebm => "video/webm",
+                MediaContentType.VideoXMatroska => "video/x-matroska",
+                MediaContentType.VideoXMsvideo => "video/x-msvideo",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -292,58 +292,58 @@ namespace Langfuse
         {
             return value switch
             {
-                "image/png" => MediaContentType.ImagePng,
+                "application/gzip" => MediaContentType.ApplicationGzip,
+                "application/javascript" => MediaContentType.ApplicationJavascript,
+                "application/json" => MediaContentType.ApplicationJson,
+                "application/msword" => MediaContentType.ApplicationMsword,
+                "application/octet-stream" => MediaContentType.ApplicationOctetStream,
+                "application/pdf" => MediaContentType.ApplicationPdf,
+                "application/rtf" => MediaContentType.ApplicationRtf,
+                "application/vnd.apache.parquet" => MediaContentType.ApplicationVndApacheParquet,
+                "application/vnd.ms-excel" => MediaContentType.ApplicationVndMsExcel,
+                "application/vnd.openxmlformats-officedocument.presentationml.presentation" => MediaContentType.ApplicationVndOpenxmlformatsOfficedocumentPresentationmlPresentation,
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" => MediaContentType.ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet,
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.document" => MediaContentType.ApplicationVndOpenxmlformatsOfficedocumentWordprocessingmlDocument,
+                "application/x-7z-compressed" => MediaContentType.ApplicationX7zCompressed,
+                "application/x-ndjson" => MediaContentType.ApplicationXNdjson,
+                "application/x-tar" => MediaContentType.ApplicationXTar,
+                "application/x-yaml" => MediaContentType.ApplicationXYaml,
+                "application/xml" => MediaContentType.ApplicationXml,
+                "application/zip" => MediaContentType.ApplicationZip,
+                "audio/aac" => MediaContentType.AudioAac,
+                "audio/flac" => MediaContentType.AudioFlac,
+                "audio/mp3" => MediaContentType.AudioMp3,
+                "audio/mp4" => MediaContentType.AudioMp4,
+                "audio/mpeg" => MediaContentType.AudioMpeg,
+                "audio/oga" => MediaContentType.AudioOga,
+                "audio/ogg" => MediaContentType.AudioOgg,
+                "audio/opus" => MediaContentType.AudioOpus,
+                "audio/wav" => MediaContentType.AudioWav,
+                "audio/webm" => MediaContentType.AudioWebm,
+                "image/avif" => MediaContentType.ImageAvif,
+                "image/bmp" => MediaContentType.ImageBmp,
+                "image/gif" => MediaContentType.ImageGif,
+                "image/heic" => MediaContentType.ImageHeic,
                 "image/jpeg" => MediaContentType.ImageJpeg,
                 "image/jpg" => MediaContentType.ImageJpg,
-                "image/webp" => MediaContentType.ImageWebp,
-                "image/gif" => MediaContentType.ImageGif,
+                "image/png" => MediaContentType.ImagePng,
                 "image/svg+xml" => MediaContentType.ImageSvgPlusxml,
                 "image/tiff" => MediaContentType.ImageTiff,
-                "image/bmp" => MediaContentType.ImageBmp,
-                "image/avif" => MediaContentType.ImageAvif,
-                "image/heic" => MediaContentType.ImageHeic,
-                "audio/mpeg" => MediaContentType.AudioMpeg,
-                "audio/mp3" => MediaContentType.AudioMp3,
-                "audio/wav" => MediaContentType.AudioWav,
-                "audio/ogg" => MediaContentType.AudioOgg,
-                "audio/oga" => MediaContentType.AudioOga,
-                "audio/aac" => MediaContentType.AudioAac,
-                "audio/mp4" => MediaContentType.AudioMp4,
-                "audio/flac" => MediaContentType.AudioFlac,
-                "audio/opus" => MediaContentType.AudioOpus,
-                "audio/webm" => MediaContentType.AudioWebm,
-                "video/mp4" => MediaContentType.VideoMp4,
-                "video/webm" => MediaContentType.VideoWebm,
-                "video/ogg" => MediaContentType.VideoOgg,
-                "video/mpeg" => MediaContentType.VideoMpeg,
-                "video/quicktime" => MediaContentType.VideoQuicktime,
-                "video/x-msvideo" => MediaContentType.VideoXMsvideo,
-                "video/x-matroska" => MediaContentType.VideoXMatroska,
-                "text/plain" => MediaContentType.TextPlain,
-                "text/html" => MediaContentType.TextHtml,
+                "image/webp" => MediaContentType.ImageWebp,
                 "text/css" => MediaContentType.TextCss,
                 "text/csv" => MediaContentType.TextCsv,
+                "text/html" => MediaContentType.TextHtml,
                 "text/markdown" => MediaContentType.TextMarkdown,
+                "text/plain" => MediaContentType.TextPlain,
                 "text/x-python" => MediaContentType.TextXPython,
-                "application/javascript" => MediaContentType.ApplicationJavascript,
                 "text/x-typescript" => MediaContentType.TextXTypescript,
-                "application/x-yaml" => MediaContentType.ApplicationXYaml,
-                "application/pdf" => MediaContentType.ApplicationPdf,
-                "application/msword" => MediaContentType.ApplicationMsword,
-                "application/vnd.ms-excel" => MediaContentType.ApplicationVndMsExcel,
-                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" => MediaContentType.ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet,
-                "application/zip" => MediaContentType.ApplicationZip,
-                "application/json" => MediaContentType.ApplicationJson,
-                "application/xml" => MediaContentType.ApplicationXml,
-                "application/octet-stream" => MediaContentType.ApplicationOctetStream,
-                "application/vnd.openxmlformats-officedocument.wordprocessingml.document" => MediaContentType.ApplicationVndOpenxmlformatsOfficedocumentWordprocessingmlDocument,
-                "application/vnd.openxmlformats-officedocument.presentationml.presentation" => MediaContentType.ApplicationVndOpenxmlformatsOfficedocumentPresentationmlPresentation,
-                "application/rtf" => MediaContentType.ApplicationRtf,
-                "application/x-ndjson" => MediaContentType.ApplicationXNdjson,
-                "application/vnd.apache.parquet" => MediaContentType.ApplicationVndApacheParquet,
-                "application/gzip" => MediaContentType.ApplicationGzip,
-                "application/x-tar" => MediaContentType.ApplicationXTar,
-                "application/x-7z-compressed" => MediaContentType.ApplicationX7zCompressed,
+                "video/mp4" => MediaContentType.VideoMp4,
+                "video/mpeg" => MediaContentType.VideoMpeg,
+                "video/ogg" => MediaContentType.VideoOgg,
+                "video/quicktime" => MediaContentType.VideoQuicktime,
+                "video/webm" => MediaContentType.VideoWebm,
+                "video/x-matroska" => MediaContentType.VideoXMatroska,
+                "video/x-msvideo" => MediaContentType.VideoXMsvideo,
                 _ => null,
             };
         }

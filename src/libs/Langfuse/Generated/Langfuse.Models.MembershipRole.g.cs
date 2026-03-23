@@ -11,15 +11,15 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        Owner,
-        /// <summary>
-        /// 
-        /// </summary>
         Admin,
         /// <summary>
         /// 
         /// </summary>
         Member,
+        /// <summary>
+        /// 
+        /// </summary>
+        Owner,
         /// <summary>
         /// 
         /// </summary>
@@ -38,9 +38,9 @@ namespace Langfuse
         {
             return value switch
             {
-                MembershipRole.Owner => "OWNER",
                 MembershipRole.Admin => "ADMIN",
                 MembershipRole.Member => "MEMBER",
+                MembershipRole.Owner => "OWNER",
                 MembershipRole.Viewer => "VIEWER",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -52,9 +52,9 @@ namespace Langfuse
         {
             return value switch
             {
-                "OWNER" => MembershipRole.Owner,
                 "ADMIN" => MembershipRole.Admin,
                 "MEMBER" => MembershipRole.Member,
+                "OWNER" => MembershipRole.Owner,
                 "VIEWER" => MembershipRole.Viewer,
                 _ => null,
             };

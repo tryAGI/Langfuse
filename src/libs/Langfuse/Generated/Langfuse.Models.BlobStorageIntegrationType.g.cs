@@ -11,15 +11,15 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        AzureBlobStorage,
+        /// <summary>
+        /// 
+        /// </summary>
         S3,
         /// <summary>
         /// 
         /// </summary>
         S3Compatible,
-        /// <summary>
-        /// 
-        /// </summary>
-        AzureBlobStorage,
     }
 
     /// <summary>
@@ -34,9 +34,9 @@ namespace Langfuse
         {
             return value switch
             {
+                BlobStorageIntegrationType.AzureBlobStorage => "AZURE_BLOB_STORAGE",
                 BlobStorageIntegrationType.S3 => "S3",
                 BlobStorageIntegrationType.S3Compatible => "S3_COMPATIBLE",
-                BlobStorageIntegrationType.AzureBlobStorage => "AZURE_BLOB_STORAGE",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -47,9 +47,9 @@ namespace Langfuse
         {
             return value switch
             {
+                "AZURE_BLOB_STORAGE" => BlobStorageIntegrationType.AzureBlobStorage,
                 "S3" => BlobStorageIntegrationType.S3,
                 "S3_COMPATIBLE" => BlobStorageIntegrationType.S3Compatible,
-                "AZURE_BLOB_STORAGE" => BlobStorageIntegrationType.AzureBlobStorage,
                 _ => null,
             };
         }

@@ -11,23 +11,7 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        Span,
-        /// <summary>
-        /// 
-        /// </summary>
-        Generation,
-        /// <summary>
-        /// 
-        /// </summary>
-        Event,
-        /// <summary>
-        /// 
-        /// </summary>
         Agent,
-        /// <summary>
-        /// 
-        /// </summary>
-        Tool,
         /// <summary>
         /// 
         /// </summary>
@@ -35,7 +19,7 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        Retriever,
+        Embedding,
         /// <summary>
         /// 
         /// </summary>
@@ -43,11 +27,27 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        Embedding,
+        Event,
+        /// <summary>
+        /// 
+        /// </summary>
+        Generation,
         /// <summary>
         /// 
         /// </summary>
         Guardrail,
+        /// <summary>
+        /// 
+        /// </summary>
+        Retriever,
+        /// <summary>
+        /// 
+        /// </summary>
+        Span,
+        /// <summary>
+        /// 
+        /// </summary>
+        Tool,
     }
 
     /// <summary>
@@ -62,16 +62,16 @@ namespace Langfuse
         {
             return value switch
             {
-                ObservationType.Span => "SPAN",
-                ObservationType.Generation => "GENERATION",
-                ObservationType.Event => "EVENT",
                 ObservationType.Agent => "AGENT",
-                ObservationType.Tool => "TOOL",
                 ObservationType.Chain => "CHAIN",
-                ObservationType.Retriever => "RETRIEVER",
-                ObservationType.Evaluator => "EVALUATOR",
                 ObservationType.Embedding => "EMBEDDING",
+                ObservationType.Evaluator => "EVALUATOR",
+                ObservationType.Event => "EVENT",
+                ObservationType.Generation => "GENERATION",
                 ObservationType.Guardrail => "GUARDRAIL",
+                ObservationType.Retriever => "RETRIEVER",
+                ObservationType.Span => "SPAN",
+                ObservationType.Tool => "TOOL",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -82,16 +82,16 @@ namespace Langfuse
         {
             return value switch
             {
-                "SPAN" => ObservationType.Span,
-                "GENERATION" => ObservationType.Generation,
-                "EVENT" => ObservationType.Event,
                 "AGENT" => ObservationType.Agent,
-                "TOOL" => ObservationType.Tool,
                 "CHAIN" => ObservationType.Chain,
-                "RETRIEVER" => ObservationType.Retriever,
-                "EVALUATOR" => ObservationType.Evaluator,
                 "EMBEDDING" => ObservationType.Embedding,
+                "EVALUATOR" => ObservationType.Evaluator,
+                "EVENT" => ObservationType.Event,
+                "GENERATION" => ObservationType.Generation,
                 "GUARDRAIL" => ObservationType.Guardrail,
+                "RETRIEVER" => ObservationType.Retriever,
+                "SPAN" => ObservationType.Span,
+                "TOOL" => ObservationType.Tool,
                 _ => null,
             };
         }

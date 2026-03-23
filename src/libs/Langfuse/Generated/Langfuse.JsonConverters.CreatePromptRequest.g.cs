@@ -27,21 +27,21 @@ namespace Langfuse.JsonConverters
             }
 
             var __score0 = 0;
+            if (__jsonProps.Contains("commitMessage")) __score0++;
+            if (__jsonProps.Contains("config")) __score0++;
+            if (__jsonProps.Contains("labels")) __score0++;
             if (__jsonProps.Contains("name")) __score0++;
             if (__jsonProps.Contains("prompt")) __score0++;
-            if (__jsonProps.Contains("config")) __score0++;
-            if (__jsonProps.Contains("type")) __score0++;
-            if (__jsonProps.Contains("labels")) __score0++;
             if (__jsonProps.Contains("tags")) __score0++;
-            if (__jsonProps.Contains("commitMessage")) __score0++;
+            if (__jsonProps.Contains("type")) __score0++;
             var __score1 = 0;
+            if (__jsonProps.Contains("commitMessage")) __score1++;
+            if (__jsonProps.Contains("config")) __score1++;
+            if (__jsonProps.Contains("labels")) __score1++;
             if (__jsonProps.Contains("name")) __score1++;
             if (__jsonProps.Contains("prompt")) __score1++;
-            if (__jsonProps.Contains("config")) __score1++;
-            if (__jsonProps.Contains("type")) __score1++;
-            if (__jsonProps.Contains("labels")) __score1++;
             if (__jsonProps.Contains("tags")) __score1++;
-            if (__jsonProps.Contains("commitMessage")) __score1++;
+            if (__jsonProps.Contains("type")) __score1++;
             var __bestScore = 0;
             var __bestIndex = -1;
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }

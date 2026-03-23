@@ -11,11 +11,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        Pending,
+        Completed,
         /// <summary>
         /// 
         /// </summary>
-        Completed,
+        Pending,
     }
 
     /// <summary>
@@ -30,8 +30,8 @@ namespace Langfuse
         {
             return value switch
             {
-                AnnotationQueueStatus.Pending => "PENDING",
                 AnnotationQueueStatus.Completed => "COMPLETED",
+                AnnotationQueueStatus.Pending => "PENDING",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -42,8 +42,8 @@ namespace Langfuse
         {
             return value switch
             {
-                "PENDING" => AnnotationQueueStatus.Pending,
                 "COMPLETED" => AnnotationQueueStatus.Completed,
+                "PENDING" => AnnotationQueueStatus.Pending,
                 _ => null,
             };
         }
