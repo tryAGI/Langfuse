@@ -11,11 +11,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        Hourly,
+        Daily,
         /// <summary>
         /// 
         /// </summary>
-        Daily,
+        Hourly,
         /// <summary>
         /// 
         /// </summary>
@@ -34,8 +34,8 @@ namespace Langfuse
         {
             return value switch
             {
-                BlobStorageExportFrequency.Hourly => "hourly",
                 BlobStorageExportFrequency.Daily => "daily",
+                BlobStorageExportFrequency.Hourly => "hourly",
                 BlobStorageExportFrequency.Weekly => "weekly",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -47,8 +47,8 @@ namespace Langfuse
         {
             return value switch
             {
-                "hourly" => BlobStorageExportFrequency.Hourly,
                 "daily" => BlobStorageExportFrequency.Daily,
+                "hourly" => BlobStorageExportFrequency.Hourly,
                 "weekly" => BlobStorageExportFrequency.Weekly,
                 _ => null,
             };

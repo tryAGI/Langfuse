@@ -19,6 +19,14 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        Disabled,
+        /// <summary>
+        /// 
+        /// </summary>
+        Error,
+        /// <summary>
+        /// 
+        /// </summary>
         Idle,
         /// <summary>
         /// 
@@ -28,14 +36,6 @@ namespace Langfuse
         /// poll this endpoint and check for `up_to_date` status. Compare `lastSyncAt` against your
         /// </summary>
         UpToDate,
-        /// <summary>
-        /// 
-        /// </summary>
-        Disabled,
-        /// <summary>
-        /// 
-        /// </summary>
-        Error,
     }
 
     /// <summary>
@@ -50,11 +50,11 @@ namespace Langfuse
         {
             return value switch
             {
+                BlobStorageSyncStatus.Disabled => "disabled",
+                BlobStorageSyncStatus.Error => "error",
                 BlobStorageSyncStatus.Idle => "idle",
                 BlobStorageSyncStatus.Queued => "queued",
                 BlobStorageSyncStatus.UpToDate => "up_to_date",
-                BlobStorageSyncStatus.Disabled => "disabled",
-                BlobStorageSyncStatus.Error => "error",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -65,11 +65,11 @@ namespace Langfuse
         {
             return value switch
             {
+                "disabled" => BlobStorageSyncStatus.Disabled,
+                "error" => BlobStorageSyncStatus.Error,
                 "idle" => BlobStorageSyncStatus.Idle,
                 "queued" => BlobStorageSyncStatus.Queued,
                 "up_to_date" => BlobStorageSyncStatus.UpToDate,
-                "disabled" => BlobStorageSyncStatus.Disabled,
-                "error" => BlobStorageSyncStatus.Error,
                 _ => null,
             };
         }

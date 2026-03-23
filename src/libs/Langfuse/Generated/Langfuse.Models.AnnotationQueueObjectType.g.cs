@@ -11,15 +11,15 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        Trace,
-        /// <summary>
-        /// 
-        /// </summary>
         Observation,
         /// <summary>
         /// 
         /// </summary>
         Session,
+        /// <summary>
+        /// 
+        /// </summary>
+        Trace,
     }
 
     /// <summary>
@@ -34,9 +34,9 @@ namespace Langfuse
         {
             return value switch
             {
-                AnnotationQueueObjectType.Trace => "TRACE",
                 AnnotationQueueObjectType.Observation => "OBSERVATION",
                 AnnotationQueueObjectType.Session => "SESSION",
+                AnnotationQueueObjectType.Trace => "TRACE",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -47,9 +47,9 @@ namespace Langfuse
         {
             return value switch
             {
-                "TRACE" => AnnotationQueueObjectType.Trace,
                 "OBSERVATION" => AnnotationQueueObjectType.Observation,
                 "SESSION" => AnnotationQueueObjectType.Session,
+                "TRACE" => AnnotationQueueObjectType.Trace,
                 _ => null,
             };
         }

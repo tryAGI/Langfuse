@@ -15,10 +15,6 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        Openai,
-        /// <summary>
-        /// 
-        /// </summary>
         Azure,
         /// <summary>
         /// 
@@ -27,11 +23,15 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        GoogleAiStudio,
+        /// <summary>
+        /// 
+        /// </summary>
         GoogleVertexAi,
         /// <summary>
         /// 
         /// </summary>
-        GoogleAiStudio,
+        Openai,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Langfuse
             return value switch
             {
                 LlmAdapter.Anthropic => "anthropic",
-                LlmAdapter.Openai => "openai",
                 LlmAdapter.Azure => "azure",
                 LlmAdapter.Bedrock => "bedrock",
-                LlmAdapter.GoogleVertexAi => "google-vertex-ai",
                 LlmAdapter.GoogleAiStudio => "google-ai-studio",
+                LlmAdapter.GoogleVertexAi => "google-vertex-ai",
+                LlmAdapter.Openai => "openai",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Langfuse
             return value switch
             {
                 "anthropic" => LlmAdapter.Anthropic,
-                "openai" => LlmAdapter.Openai,
                 "azure" => LlmAdapter.Azure,
                 "bedrock" => LlmAdapter.Bedrock,
-                "google-vertex-ai" => LlmAdapter.GoogleVertexAi,
                 "google-ai-studio" => LlmAdapter.GoogleAiStudio,
+                "google-vertex-ai" => LlmAdapter.GoogleVertexAi,
+                "openai" => LlmAdapter.Openai,
                 _ => null,
             };
         }

@@ -19,11 +19,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        Warning,
+        Error,
         /// <summary>
         /// 
         /// </summary>
-        Error,
+        Warning,
     }
 
     /// <summary>
@@ -40,8 +40,8 @@ namespace Langfuse
             {
                 ObservationLevel.Debug => "DEBUG",
                 ObservationLevel.Default => "DEFAULT",
-                ObservationLevel.Warning => "WARNING",
                 ObservationLevel.Error => "ERROR",
+                ObservationLevel.Warning => "WARNING",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -54,8 +54,8 @@ namespace Langfuse
             {
                 "DEBUG" => ObservationLevel.Debug,
                 "DEFAULT" => ObservationLevel.Default,
-                "WARNING" => ObservationLevel.Warning,
                 "ERROR" => ObservationLevel.Error,
+                "WARNING" => ObservationLevel.Warning,
                 _ => null,
             };
         }

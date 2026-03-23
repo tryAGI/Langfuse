@@ -27,8 +27,8 @@ namespace Langfuse.JsonConverters
             }
 
             var __score0 = 0;
-            if (__jsonProps.Contains("role")) __score0++;
             if (__jsonProps.Contains("content")) __score0++;
+            if (__jsonProps.Contains("role")) __score0++;
             if (__jsonProps.Contains("type")) __score0++;
             var __score1 = 0;
             if (__jsonProps.Contains("name")) __score1++;

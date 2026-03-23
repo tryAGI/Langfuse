@@ -11,7 +11,7 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        FullHistory,
+        FromCustomDate,
         /// <summary>
         /// 
         /// </summary>
@@ -19,7 +19,7 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        FromCustomDate,
+        FullHistory,
     }
 
     /// <summary>
@@ -34,9 +34,9 @@ namespace Langfuse
         {
             return value switch
             {
-                BlobStorageExportMode.FullHistory => "FULL_HISTORY",
-                BlobStorageExportMode.FromToday => "FROM_TODAY",
                 BlobStorageExportMode.FromCustomDate => "FROM_CUSTOM_DATE",
+                BlobStorageExportMode.FromToday => "FROM_TODAY",
+                BlobStorageExportMode.FullHistory => "FULL_HISTORY",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -47,9 +47,9 @@ namespace Langfuse
         {
             return value switch
             {
-                "FULL_HISTORY" => BlobStorageExportMode.FullHistory,
-                "FROM_TODAY" => BlobStorageExportMode.FromToday,
                 "FROM_CUSTOM_DATE" => BlobStorageExportMode.FromCustomDate,
+                "FROM_TODAY" => BlobStorageExportMode.FromToday,
+                "FULL_HISTORY" => BlobStorageExportMode.FullHistory,
                 _ => null,
             };
         }

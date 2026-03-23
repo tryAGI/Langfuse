@@ -11,15 +11,15 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        Numeric,
-        /// <summary>
-        /// 
-        /// </summary>
         Boolean,
         /// <summary>
         /// 
         /// </summary>
         Categorical,
+        /// <summary>
+        /// 
+        /// </summary>
+        Numeric,
     }
 
     /// <summary>
@@ -34,9 +34,9 @@ namespace Langfuse
         {
             return value switch
             {
-                ScoreConfigDataType.Numeric => "NUMERIC",
                 ScoreConfigDataType.Boolean => "BOOLEAN",
                 ScoreConfigDataType.Categorical => "CATEGORICAL",
+                ScoreConfigDataType.Numeric => "NUMERIC",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -47,9 +47,9 @@ namespace Langfuse
         {
             return value switch
             {
-                "NUMERIC" => ScoreConfigDataType.Numeric,
                 "BOOLEAN" => ScoreConfigDataType.Boolean,
                 "CATEGORICAL" => ScoreConfigDataType.Categorical,
+                "NUMERIC" => ScoreConfigDataType.Numeric,
                 _ => null,
             };
         }

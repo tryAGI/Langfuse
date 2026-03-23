@@ -15,7 +15,7 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        Tokens,
+        Images,
         /// <summary>
         /// 
         /// </summary>
@@ -23,15 +23,15 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        Requests,
+        /// <summary>
+        /// 
+        /// </summary>
         Seconds,
         /// <summary>
         /// 
         /// </summary>
-        Images,
-        /// <summary>
-        /// 
-        /// </summary>
-        Requests,
+        Tokens,
     }
 
     /// <summary>
@@ -47,11 +47,11 @@ namespace Langfuse
             return value switch
             {
                 ModelUsageUnit.Characters => "CHARACTERS",
-                ModelUsageUnit.Tokens => "TOKENS",
-                ModelUsageUnit.Milliseconds => "MILLISECONDS",
-                ModelUsageUnit.Seconds => "SECONDS",
                 ModelUsageUnit.Images => "IMAGES",
+                ModelUsageUnit.Milliseconds => "MILLISECONDS",
                 ModelUsageUnit.Requests => "REQUESTS",
+                ModelUsageUnit.Seconds => "SECONDS",
+                ModelUsageUnit.Tokens => "TOKENS",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -63,11 +63,11 @@ namespace Langfuse
             return value switch
             {
                 "CHARACTERS" => ModelUsageUnit.Characters,
-                "TOKENS" => ModelUsageUnit.Tokens,
-                "MILLISECONDS" => ModelUsageUnit.Milliseconds,
-                "SECONDS" => ModelUsageUnit.Seconds,
                 "IMAGES" => ModelUsageUnit.Images,
+                "MILLISECONDS" => ModelUsageUnit.Milliseconds,
                 "REQUESTS" => ModelUsageUnit.Requests,
+                "SECONDS" => ModelUsageUnit.Seconds,
+                "TOKENS" => ModelUsageUnit.Tokens,
                 _ => null,
             };
         }

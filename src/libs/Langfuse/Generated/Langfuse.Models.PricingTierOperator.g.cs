@@ -11,6 +11,10 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        Eq,
+        /// <summary>
+        /// 
+        /// </summary>
         Gt,
         /// <summary>
         /// 
@@ -24,10 +28,6 @@ namespace Langfuse
         /// 
         /// </summary>
         Lte,
-        /// <summary>
-        /// 
-        /// </summary>
-        Eq,
         /// <summary>
         /// 
         /// </summary>
@@ -46,11 +46,11 @@ namespace Langfuse
         {
             return value switch
             {
+                PricingTierOperator.Eq => "eq",
                 PricingTierOperator.Gt => "gt",
                 PricingTierOperator.Gte => "gte",
                 PricingTierOperator.Lt => "lt",
                 PricingTierOperator.Lte => "lte",
-                PricingTierOperator.Eq => "eq",
                 PricingTierOperator.Neq => "neq",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -62,11 +62,11 @@ namespace Langfuse
         {
             return value switch
             {
+                "eq" => PricingTierOperator.Eq,
                 "gt" => PricingTierOperator.Gt,
                 "gte" => PricingTierOperator.Gte,
                 "lt" => PricingTierOperator.Lt,
                 "lte" => PricingTierOperator.Lte,
-                "eq" => PricingTierOperator.Eq,
                 "neq" => PricingTierOperator.Neq,
                 _ => null,
             };
