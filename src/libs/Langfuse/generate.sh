@@ -7,14 +7,12 @@ dotnet tool install --global autosdk.cli --prerelease
 rm -rf Generated
 curl --fail --silent --show-error --location https://cloud.langfuse.com/generated/api/openapi.yml -o openapi.yaml
 
-# Langfuse spec defines BasicAuth per-operation but not at top level.
-# AutoSDK reads top-level security for constructor generation.
-yq -i '.security = [{"BasicAuth": []}]' openapi.yaml
-
+# Auth: --security-scheme overrides per-operation BasicAuth with top-level HTTP Basic auth.
 autosdk generate openapi.yaml \
   --namespace Langfuse \
   --clientClassName LangfuseClient \
   --targetFramework net10.0 \
   --output Generated \
   --exclude-deprecated-operations \
-  --base-url https://cloud.langfuse.com
+  --base-url https://cloud.langfuse.com \
+  --security-scheme Http:Header:Basic
