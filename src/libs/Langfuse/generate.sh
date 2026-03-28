@@ -3,10 +3,9 @@ set -euo pipefail
 
 # OpenAPI spec: https://cloud.langfuse.com/generated/api/openapi.yml
 
-readonly openapi_url="https://cloud.langfuse.com/generated/api/openapi.yml"
 dotnet tool install --global autosdk.cli --prerelease
 rm -rf Generated
-curl --fail --silent --show-error --location "$openapi_url" -o openapi.yaml
+curl --fail --silent --show-error --location https://cloud.langfuse.com/generated/api/openapi.yml -o openapi.yaml
 
 # Langfuse spec defines BasicAuth per-operation but not at top level.
 # AutoSDK reads top-level security for constructor generation.
