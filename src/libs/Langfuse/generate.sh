@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
+
+# OpenAPI spec: https://cloud.langfuse.com/generated/api/openapi.yml
+
 readonly openapi_url="https://cloud.langfuse.com/generated/api/openapi.yml"
 dotnet tool install --global autosdk.cli --prerelease
 rm -rf Generated
