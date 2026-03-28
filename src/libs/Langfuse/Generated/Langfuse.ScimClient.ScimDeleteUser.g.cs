@@ -27,7 +27,7 @@ namespace Langfuse
         /// <param name="userId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<string> ScimDeleteUserAsync(
+        public async global::System.Threading.Tasks.Task<global::Langfuse.EmptyResponse> ScimDeleteUserAsync(
             string userId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -296,7 +296,9 @@ namespace Langfuse
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    return __content;
+                    return
+                        global::Langfuse.EmptyResponse.FromJson(__content, JsonSerializerContext) ??
+                        throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
                 }
                 catch (global::System.Exception __ex)
                 {
@@ -319,13 +321,15 @@ namespace Langfuse
                 {
                     __response.EnsureSuccessStatusCode();
 
-                    var __content = await __response.Content.ReadAsStringAsync(
+                    using var __content = await __response.Content.ReadAsStreamAsync(
 #if NET5_0_OR_GREATER
                         cancellationToken
 #endif
                     ).ConfigureAwait(false);
 
-                    return __content;
+                    return
+                        await global::Langfuse.EmptyResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                        throw new global::System.InvalidOperationException("Response deserialization failed.");
                 }
                 catch (global::System.Exception __ex)
                 {

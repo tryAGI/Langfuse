@@ -10,7 +10,7 @@ namespace Langfuse
         /// <param name="userId"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
-        global::System.Threading.Tasks.Task<string> ScimDeleteUserAsync(
+        global::System.Threading.Tasks.Task<global::Langfuse.EmptyResponse> ScimDeleteUserAsync(
             string userId,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
