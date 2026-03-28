@@ -17,7 +17,7 @@ namespace Langfuse
             Authorizations.Add(new global::Langfuse.EndPointAuthorization
             {
                 Type = "Http",
-                Location = "",
+                Location = "Header",
                 Name = "Basic",
                 Value = global::System.Convert.ToBase64String(
                     global::System.Text.Encoding.UTF8.GetBytes($"{username}:{password}")),
