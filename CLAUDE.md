@@ -26,7 +26,7 @@ Self-hosted instances: pass `baseUri` parameter.
 
 ## Key Files
 
-- `src/libs/Langfuse/generate.sh` — Regeneration script (downloads spec, injects top-level security, runs autosdk)
+- `src/libs/Langfuse/generate.sh` — Regeneration script (downloads spec, runs autosdk with `--security-scheme`)
 - `src/libs/Langfuse/Generated/` — **Never edit** — auto-generated code
 - `src/tests/IntegrationTests/Tests.cs` — Test helper with Basic Auth
 - `src/tests/IntegrationTests/Examples/` — Example tests (also generate docs)
@@ -34,5 +34,5 @@ Self-hosted instances: pass `baseUri` parameter.
 ## Spec Notes
 
 - OpenAPI spec: `https://cloud.langfuse.com/generated/api/openapi.yml`
-- Spec defines `BasicAuth` per-operation but not at top level; `generate.sh` injects `security: [{BasicAuth: []}]` via `yq`
+- Spec defines `BasicAuth` per-operation but not at top level; `--security-scheme Http:Header:Basic` overrides this at generation time
 - No `servers` section in spec; `--base-url https://cloud.langfuse.com` passed to autosdk
