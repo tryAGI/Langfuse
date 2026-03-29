@@ -30,11 +30,11 @@ namespace Langfuse
         /// <summary>
         /// Initializes a new instance of the <see cref="GetMediaUploadUrlResponse" /> class.
         /// </summary>
-        /// <param name="uploadUrl">
-        /// The presigned upload URL. If the asset is already uploaded, this will be null
-        /// </param>
         /// <param name="mediaId">
         /// The unique langfuse identifier of a media record
+        /// </param>
+        /// <param name="uploadUrl">
+        /// The presigned upload URL. If the asset is already uploaded, this will be null
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -43,8 +43,8 @@ namespace Langfuse
             string mediaId,
             string? uploadUrl)
         {
-            this.MediaId = mediaId ?? throw new global::System.ArgumentNullException(nameof(mediaId));
             this.UploadUrl = uploadUrl;
+            this.MediaId = mediaId ?? throw new global::System.ArgumentNullException(nameof(mediaId));
         }
 
         /// <summary>

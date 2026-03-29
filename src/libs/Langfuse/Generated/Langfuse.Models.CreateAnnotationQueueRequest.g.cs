@@ -38,8 +38,8 @@ namespace Langfuse
         /// Initializes a new instance of the <see cref="CreateAnnotationQueueRequest" /> class.
         /// </summary>
         /// <param name="name"></param>
-        /// <param name="description"></param>
         /// <param name="scoreConfigIds"></param>
+        /// <param name="description"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -49,8 +49,8 @@ namespace Langfuse
             string? description)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.ScoreConfigIds = scoreConfigIds ?? throw new global::System.ArgumentNullException(nameof(scoreConfigIds));
             this.Description = description;
+            this.ScoreConfigIds = scoreConfigIds ?? throw new global::System.ArgumentNullException(nameof(scoreConfigIds));
         }
 
         /// <summary>

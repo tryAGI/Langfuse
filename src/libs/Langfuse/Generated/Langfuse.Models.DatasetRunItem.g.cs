@@ -77,11 +77,11 @@ namespace Langfuse
         /// <param name="datasetRunName"></param>
         /// <param name="datasetItemId"></param>
         /// <param name="traceId"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
         /// <param name="observationId">
         /// The observation ID associated with this run item
         /// </param>
-        /// <param name="createdAt"></param>
-        /// <param name="updatedAt"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -100,9 +100,9 @@ namespace Langfuse
             this.DatasetRunName = datasetRunName ?? throw new global::System.ArgumentNullException(nameof(datasetRunName));
             this.DatasetItemId = datasetItemId ?? throw new global::System.ArgumentNullException(nameof(datasetItemId));
             this.TraceId = traceId ?? throw new global::System.ArgumentNullException(nameof(traceId));
+            this.ObservationId = observationId;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.ObservationId = observationId;
         }
 
         /// <summary>

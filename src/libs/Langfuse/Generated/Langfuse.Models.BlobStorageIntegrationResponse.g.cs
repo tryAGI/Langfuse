@@ -158,22 +158,22 @@ namespace Langfuse
         /// <param name="projectId"></param>
         /// <param name="type"></param>
         /// <param name="bucketName"></param>
-        /// <param name="endpoint"></param>
         /// <param name="region"></param>
-        /// <param name="accessKeyId"></param>
         /// <param name="prefix"></param>
         /// <param name="exportFrequency"></param>
         /// <param name="enabled"></param>
         /// <param name="forcePathStyle"></param>
         /// <param name="fileType"></param>
         /// <param name="exportMode"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="endpoint"></param>
+        /// <param name="accessKeyId"></param>
         /// <param name="exportStartDate"></param>
         /// <param name="nextSyncAt"></param>
         /// <param name="lastSyncAt"></param>
         /// <param name="lastError"></param>
         /// <param name="lastErrorAt"></param>
-        /// <param name="createdAt"></param>
-        /// <param name="updatedAt"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -203,22 +203,22 @@ namespace Langfuse
             this.ProjectId = projectId ?? throw new global::System.ArgumentNullException(nameof(projectId));
             this.Type = type;
             this.BucketName = bucketName ?? throw new global::System.ArgumentNullException(nameof(bucketName));
+            this.Endpoint = endpoint;
             this.Region = region ?? throw new global::System.ArgumentNullException(nameof(region));
+            this.AccessKeyId = accessKeyId;
             this.Prefix = prefix ?? throw new global::System.ArgumentNullException(nameof(prefix));
             this.ExportFrequency = exportFrequency;
             this.Enabled = enabled;
             this.ForcePathStyle = forcePathStyle;
             this.FileType = fileType;
             this.ExportMode = exportMode;
-            this.CreatedAt = createdAt;
-            this.UpdatedAt = updatedAt;
-            this.Endpoint = endpoint;
-            this.AccessKeyId = accessKeyId;
             this.ExportStartDate = exportStartDate;
             this.NextSyncAt = nextSyncAt;
             this.LastSyncAt = lastSyncAt;
             this.LastError = lastError;
             this.LastErrorAt = lastErrorAt;
+            this.CreatedAt = createdAt;
+            this.UpdatedAt = updatedAt;
         }
 
         /// <summary>

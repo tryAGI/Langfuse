@@ -121,20 +121,8 @@ namespace Langfuse
         /// <param name="bucketName">
         /// Name of the storage bucket
         /// </param>
-        /// <param name="endpoint">
-        /// Custom endpoint URL (required for S3_COMPATIBLE type)
-        /// </param>
         /// <param name="region">
         /// Storage region
-        /// </param>
-        /// <param name="accessKeyId">
-        /// Access key ID for authentication
-        /// </param>
-        /// <param name="secretAccessKey">
-        /// Secret access key for authentication (will be encrypted when stored)
-        /// </param>
-        /// <param name="prefix">
-        /// Path prefix for exported files (must end with forward slash if provided)
         /// </param>
         /// <param name="exportFrequency"></param>
         /// <param name="enabled">
@@ -145,6 +133,18 @@ namespace Langfuse
         /// </param>
         /// <param name="fileType"></param>
         /// <param name="exportMode"></param>
+        /// <param name="endpoint">
+        /// Custom endpoint URL (required for S3_COMPATIBLE type)
+        /// </param>
+        /// <param name="accessKeyId">
+        /// Access key ID for authentication
+        /// </param>
+        /// <param name="secretAccessKey">
+        /// Secret access key for authentication (will be encrypted when stored)
+        /// </param>
+        /// <param name="prefix">
+        /// Path prefix for exported files (must end with forward slash if provided)
+        /// </param>
         /// <param name="exportStartDate">
         /// Custom start date for exports (required when exportMode is FROM_CUSTOM_DATE)
         /// </param>
@@ -170,16 +170,16 @@ namespace Langfuse
             this.ProjectId = projectId ?? throw new global::System.ArgumentNullException(nameof(projectId));
             this.Type = type;
             this.BucketName = bucketName ?? throw new global::System.ArgumentNullException(nameof(bucketName));
+            this.Endpoint = endpoint;
             this.Region = region ?? throw new global::System.ArgumentNullException(nameof(region));
+            this.AccessKeyId = accessKeyId;
+            this.SecretAccessKey = secretAccessKey;
+            this.Prefix = prefix;
             this.ExportFrequency = exportFrequency;
             this.Enabled = enabled;
             this.ForcePathStyle = forcePathStyle;
             this.FileType = fileType;
             this.ExportMode = exportMode;
-            this.Endpoint = endpoint;
-            this.AccessKeyId = accessKeyId;
-            this.SecretAccessKey = secretAccessKey;
-            this.Prefix = prefix;
             this.ExportStartDate = exportStartDate;
         }
 

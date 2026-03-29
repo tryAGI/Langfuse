@@ -53,17 +53,17 @@ namespace Langfuse
         /// <param name="htmlPath">
         /// Path of trace in Langfuse UI
         /// </param>
-        /// <param name="latency">
-        /// Latency of trace in seconds
-        /// </param>
-        /// <param name="totalCost">
-        /// Cost of trace in USD
-        /// </param>
         /// <param name="observations">
         /// List of observations
         /// </param>
         /// <param name="scores">
         /// List of scores
+        /// </param>
+        /// <param name="latency">
+        /// Latency of trace in seconds
+        /// </param>
+        /// <param name="totalCost">
+        /// Cost of trace in USD
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -76,10 +76,10 @@ namespace Langfuse
             double? totalCost)
         {
             this.HtmlPath = htmlPath ?? throw new global::System.ArgumentNullException(nameof(htmlPath));
-            this.Observations = observations ?? throw new global::System.ArgumentNullException(nameof(observations));
-            this.Scores = scores ?? throw new global::System.ArgumentNullException(nameof(scores));
             this.Latency = latency;
             this.TotalCost = totalCost;
+            this.Observations = observations ?? throw new global::System.ArgumentNullException(nameof(observations));
+            this.Scores = scores ?? throw new global::System.ArgumentNullException(nameof(scores));
         }
 
         /// <summary>

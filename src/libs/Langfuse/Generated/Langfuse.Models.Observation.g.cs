@@ -159,35 +159,17 @@ namespace Langfuse
         /// <param name="id">
         /// The unique identifier of the observation
         /// </param>
-        /// <param name="traceId">
-        /// The trace ID associated with the observation
-        /// </param>
         /// <param name="type">
         /// The type of the observation
         /// </param>
-        /// <param name="name">
-        /// The name of the observation
-        /// </param>
         /// <param name="startTime">
         /// The start time of the observation
-        /// </param>
-        /// <param name="endTime">
-        /// The end time of the observation.
-        /// </param>
-        /// <param name="completionStartTime">
-        /// The completion start time of the observation
-        /// </param>
-        /// <param name="model">
-        /// The model used for the observation
         /// </param>
         /// <param name="modelParameters">
         /// The parameters of the model used for the observation
         /// </param>
         /// <param name="input">
         /// The input data of the observation
-        /// </param>
-        /// <param name="version">
-        /// The version of the observation
         /// </param>
         /// <param name="metadata">
         /// Additional metadata of the observation
@@ -199,15 +181,6 @@ namespace Langfuse
         /// (Deprecated. Use usageDetails and costDetails instead.) Standard interface for usage and cost
         /// </param>
         /// <param name="level"></param>
-        /// <param name="statusMessage">
-        /// The status message of the observation
-        /// </param>
-        /// <param name="parentObservationId">
-        /// The parent observation ID
-        /// </param>
-        /// <param name="promptId">
-        /// The prompt ID associated with the observation
-        /// </param>
         /// <param name="usageDetails">
         /// The usage details of the observation. Key is the name of the usage metric, value is the number of units consumed. The total key is the sum of all (non-total) usage metrics or the total value ingested.
         /// </param>
@@ -216,6 +189,33 @@ namespace Langfuse
         /// </param>
         /// <param name="environment">
         /// The environment from which this observation originated. Can be any lowercase alphanumeric string with hyphens and underscores that does not start with 'langfuse'.
+        /// </param>
+        /// <param name="traceId">
+        /// The trace ID associated with the observation
+        /// </param>
+        /// <param name="name">
+        /// The name of the observation
+        /// </param>
+        /// <param name="endTime">
+        /// The end time of the observation.
+        /// </param>
+        /// <param name="completionStartTime">
+        /// The completion start time of the observation
+        /// </param>
+        /// <param name="model">
+        /// The model used for the observation
+        /// </param>
+        /// <param name="version">
+        /// The version of the observation
+        /// </param>
+        /// <param name="statusMessage">
+        /// The status message of the observation
+        /// </param>
+        /// <param name="parentObservationId">
+        /// The parent observation ID
+        /// </param>
+        /// <param name="promptId">
+        /// The prompt ID associated with the observation
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -244,26 +244,26 @@ namespace Langfuse
             string? promptId)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.TraceId = traceId;
             this.Type = type ?? throw new global::System.ArgumentNullException(nameof(type));
+            this.Name = name;
             this.StartTime = startTime;
+            this.EndTime = endTime;
+            this.CompletionStartTime = completionStartTime;
+            this.Model = model;
             this.ModelParameters = modelParameters ?? throw new global::System.ArgumentNullException(nameof(modelParameters));
             this.Input = input ?? throw new global::System.ArgumentNullException(nameof(input));
+            this.Version = version;
             this.Metadata = metadata ?? throw new global::System.ArgumentNullException(nameof(metadata));
             this.Output = output ?? throw new global::System.ArgumentNullException(nameof(output));
             this.Usage = usage ?? throw new global::System.ArgumentNullException(nameof(usage));
             this.Level = level;
-            this.UsageDetails = usageDetails ?? throw new global::System.ArgumentNullException(nameof(usageDetails));
-            this.CostDetails = costDetails ?? throw new global::System.ArgumentNullException(nameof(costDetails));
-            this.Environment = environment ?? throw new global::System.ArgumentNullException(nameof(environment));
-            this.TraceId = traceId;
-            this.Name = name;
-            this.EndTime = endTime;
-            this.CompletionStartTime = completionStartTime;
-            this.Model = model;
-            this.Version = version;
             this.StatusMessage = statusMessage;
             this.ParentObservationId = parentObservationId;
             this.PromptId = promptId;
+            this.UsageDetails = usageDetails ?? throw new global::System.ArgumentNullException(nameof(usageDetails));
+            this.CostDetails = costDetails ?? throw new global::System.ArgumentNullException(nameof(costDetails));
+            this.Environment = environment ?? throw new global::System.ArgumentNullException(nameof(environment));
         }
 
         /// <summary>

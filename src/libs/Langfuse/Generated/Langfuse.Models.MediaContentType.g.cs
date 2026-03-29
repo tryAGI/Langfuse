@@ -11,211 +11,211 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        ApplicationGzip,
+        ApplicationDividegzip,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationJavascript,
+        ApplicationDividejavascript,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationJson,
+        ApplicationDividejson,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationMsword,
+        ApplicationDividemsword,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationOctetStream,
+        ApplicationDivideoctetStream,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationPdf,
+        ApplicationDividepdf,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationRtf,
+        ApplicationDividertf,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndApacheParquet,
+        ApplicationDividevndApacheParquet,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndMsExcel,
+        ApplicationDividevndMsExcel,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndOpenxmlformatsOfficedocumentPresentationmlPresentation,
+        ApplicationDividevndOpenxmlformatsOfficedocumentPresentationmlPresentation,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet,
+        ApplicationDividevndOpenxmlformatsOfficedocumentSpreadsheetmlSheet,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationVndOpenxmlformatsOfficedocumentWordprocessingmlDocument,
+        ApplicationDividevndOpenxmlformatsOfficedocumentWordprocessingmlDocument,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationX7zCompressed,
+        ApplicationDividex7zCompressed,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationXNdjson,
+        ApplicationDividexNdjson,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationXTar,
+        ApplicationDividexTar,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationXYaml,
+        ApplicationDividexYaml,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationXml,
+        ApplicationDividexml,
         /// <summary>
         /// 
         /// </summary>
-        ApplicationZip,
+        ApplicationDividezip,
         /// <summary>
         /// 
         /// </summary>
-        AudioAac,
+        AudioDivideaac,
         /// <summary>
         /// 
         /// </summary>
-        AudioFlac,
+        AudioDivideflac,
         /// <summary>
         /// 
         /// </summary>
-        AudioMp3,
+        AudioDividemp3,
         /// <summary>
         /// 
         /// </summary>
-        AudioMp4,
+        AudioDividemp4,
         /// <summary>
         /// 
         /// </summary>
-        AudioMpeg,
+        AudioDividempeg,
         /// <summary>
         /// 
         /// </summary>
-        AudioOga,
+        AudioDivideoga,
         /// <summary>
         /// 
         /// </summary>
-        AudioOgg,
+        AudioDivideogg,
         /// <summary>
         /// 
         /// </summary>
-        AudioOpus,
+        AudioDivideopus,
         /// <summary>
         /// 
         /// </summary>
-        AudioWav,
+        AudioDividewav,
         /// <summary>
         /// 
         /// </summary>
-        AudioWebm,
+        AudioDividewebm,
         /// <summary>
         /// 
         /// </summary>
-        ImageAvif,
+        ImageDivideavif,
         /// <summary>
         /// 
         /// </summary>
-        ImageBmp,
+        ImageDividebmp,
         /// <summary>
         /// 
         /// </summary>
-        ImageGif,
+        ImageDividegif,
         /// <summary>
         /// 
         /// </summary>
-        ImageHeic,
+        ImageDivideheic,
         /// <summary>
         /// 
         /// </summary>
-        ImageJpeg,
+        ImageDividejpeg,
         /// <summary>
         /// 
         /// </summary>
-        ImageJpg,
+        ImageDividejpg,
         /// <summary>
         /// 
         /// </summary>
-        ImagePng,
+        ImageDividepng,
         /// <summary>
         /// 
         /// </summary>
-        ImageSvgPlusxml,
+        ImageDividesvgPlusxml,
         /// <summary>
         /// 
         /// </summary>
-        ImageTiff,
+        ImageDividetiff,
         /// <summary>
         /// 
         /// </summary>
-        ImageWebp,
+        ImageDividewebp,
         /// <summary>
         /// 
         /// </summary>
-        TextCss,
+        TextDividecss,
         /// <summary>
         /// 
         /// </summary>
-        TextCsv,
+        TextDividecsv,
         /// <summary>
         /// 
         /// </summary>
-        TextHtml,
+        TextDividehtml,
         /// <summary>
         /// 
         /// </summary>
-        TextMarkdown,
+        TextDividemarkdown,
         /// <summary>
         /// 
         /// </summary>
-        TextPlain,
+        TextDivideplain,
         /// <summary>
         /// 
         /// </summary>
-        TextXPython,
+        TextDividexPython,
         /// <summary>
         /// 
         /// </summary>
-        TextXTypescript,
+        TextDividexTypescript,
         /// <summary>
         /// 
         /// </summary>
-        VideoMp4,
+        VideoDividemp4,
         /// <summary>
         /// 
         /// </summary>
-        VideoMpeg,
+        VideoDividempeg,
         /// <summary>
         /// 
         /// </summary>
-        VideoOgg,
+        VideoDivideogg,
         /// <summary>
         /// 
         /// </summary>
-        VideoQuicktime,
+        VideoDividequicktime,
         /// <summary>
         /// 
         /// </summary>
-        VideoWebm,
+        VideoDividewebm,
         /// <summary>
         /// 
         /// </summary>
-        VideoXMatroska,
+        VideoDividexMatroska,
         /// <summary>
         /// 
         /// </summary>
-        VideoXMsvideo,
+        VideoDividexMsvideo,
     }
 
     /// <summary>
@@ -230,58 +230,58 @@ namespace Langfuse
         {
             return value switch
             {
-                MediaContentType.ApplicationGzip => "application/gzip",
-                MediaContentType.ApplicationJavascript => "application/javascript",
-                MediaContentType.ApplicationJson => "application/json",
-                MediaContentType.ApplicationMsword => "application/msword",
-                MediaContentType.ApplicationOctetStream => "application/octet-stream",
-                MediaContentType.ApplicationPdf => "application/pdf",
-                MediaContentType.ApplicationRtf => "application/rtf",
-                MediaContentType.ApplicationVndApacheParquet => "application/vnd.apache.parquet",
-                MediaContentType.ApplicationVndMsExcel => "application/vnd.ms-excel",
-                MediaContentType.ApplicationVndOpenxmlformatsOfficedocumentPresentationmlPresentation => "application/vnd.openxmlformats-officedocument.presentationml.presentation",
-                MediaContentType.ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet => "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                MediaContentType.ApplicationVndOpenxmlformatsOfficedocumentWordprocessingmlDocument => "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                MediaContentType.ApplicationX7zCompressed => "application/x-7z-compressed",
-                MediaContentType.ApplicationXNdjson => "application/x-ndjson",
-                MediaContentType.ApplicationXTar => "application/x-tar",
-                MediaContentType.ApplicationXYaml => "application/x-yaml",
-                MediaContentType.ApplicationXml => "application/xml",
-                MediaContentType.ApplicationZip => "application/zip",
-                MediaContentType.AudioAac => "audio/aac",
-                MediaContentType.AudioFlac => "audio/flac",
-                MediaContentType.AudioMp3 => "audio/mp3",
-                MediaContentType.AudioMp4 => "audio/mp4",
-                MediaContentType.AudioMpeg => "audio/mpeg",
-                MediaContentType.AudioOga => "audio/oga",
-                MediaContentType.AudioOgg => "audio/ogg",
-                MediaContentType.AudioOpus => "audio/opus",
-                MediaContentType.AudioWav => "audio/wav",
-                MediaContentType.AudioWebm => "audio/webm",
-                MediaContentType.ImageAvif => "image/avif",
-                MediaContentType.ImageBmp => "image/bmp",
-                MediaContentType.ImageGif => "image/gif",
-                MediaContentType.ImageHeic => "image/heic",
-                MediaContentType.ImageJpeg => "image/jpeg",
-                MediaContentType.ImageJpg => "image/jpg",
-                MediaContentType.ImagePng => "image/png",
-                MediaContentType.ImageSvgPlusxml => "image/svg+xml",
-                MediaContentType.ImageTiff => "image/tiff",
-                MediaContentType.ImageWebp => "image/webp",
-                MediaContentType.TextCss => "text/css",
-                MediaContentType.TextCsv => "text/csv",
-                MediaContentType.TextHtml => "text/html",
-                MediaContentType.TextMarkdown => "text/markdown",
-                MediaContentType.TextPlain => "text/plain",
-                MediaContentType.TextXPython => "text/x-python",
-                MediaContentType.TextXTypescript => "text/x-typescript",
-                MediaContentType.VideoMp4 => "video/mp4",
-                MediaContentType.VideoMpeg => "video/mpeg",
-                MediaContentType.VideoOgg => "video/ogg",
-                MediaContentType.VideoQuicktime => "video/quicktime",
-                MediaContentType.VideoWebm => "video/webm",
-                MediaContentType.VideoXMatroska => "video/x-matroska",
-                MediaContentType.VideoXMsvideo => "video/x-msvideo",
+                MediaContentType.ApplicationDividegzip => "application/gzip",
+                MediaContentType.ApplicationDividejavascript => "application/javascript",
+                MediaContentType.ApplicationDividejson => "application/json",
+                MediaContentType.ApplicationDividemsword => "application/msword",
+                MediaContentType.ApplicationDivideoctetStream => "application/octet-stream",
+                MediaContentType.ApplicationDividepdf => "application/pdf",
+                MediaContentType.ApplicationDividertf => "application/rtf",
+                MediaContentType.ApplicationDividevndApacheParquet => "application/vnd.apache.parquet",
+                MediaContentType.ApplicationDividevndMsExcel => "application/vnd.ms-excel",
+                MediaContentType.ApplicationDividevndOpenxmlformatsOfficedocumentPresentationmlPresentation => "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+                MediaContentType.ApplicationDividevndOpenxmlformatsOfficedocumentSpreadsheetmlSheet => "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                MediaContentType.ApplicationDividevndOpenxmlformatsOfficedocumentWordprocessingmlDocument => "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                MediaContentType.ApplicationDividex7zCompressed => "application/x-7z-compressed",
+                MediaContentType.ApplicationDividexNdjson => "application/x-ndjson",
+                MediaContentType.ApplicationDividexTar => "application/x-tar",
+                MediaContentType.ApplicationDividexYaml => "application/x-yaml",
+                MediaContentType.ApplicationDividexml => "application/xml",
+                MediaContentType.ApplicationDividezip => "application/zip",
+                MediaContentType.AudioDivideaac => "audio/aac",
+                MediaContentType.AudioDivideflac => "audio/flac",
+                MediaContentType.AudioDividemp3 => "audio/mp3",
+                MediaContentType.AudioDividemp4 => "audio/mp4",
+                MediaContentType.AudioDividempeg => "audio/mpeg",
+                MediaContentType.AudioDivideoga => "audio/oga",
+                MediaContentType.AudioDivideogg => "audio/ogg",
+                MediaContentType.AudioDivideopus => "audio/opus",
+                MediaContentType.AudioDividewav => "audio/wav",
+                MediaContentType.AudioDividewebm => "audio/webm",
+                MediaContentType.ImageDivideavif => "image/avif",
+                MediaContentType.ImageDividebmp => "image/bmp",
+                MediaContentType.ImageDividegif => "image/gif",
+                MediaContentType.ImageDivideheic => "image/heic",
+                MediaContentType.ImageDividejpeg => "image/jpeg",
+                MediaContentType.ImageDividejpg => "image/jpg",
+                MediaContentType.ImageDividepng => "image/png",
+                MediaContentType.ImageDividesvgPlusxml => "image/svg+xml",
+                MediaContentType.ImageDividetiff => "image/tiff",
+                MediaContentType.ImageDividewebp => "image/webp",
+                MediaContentType.TextDividecss => "text/css",
+                MediaContentType.TextDividecsv => "text/csv",
+                MediaContentType.TextDividehtml => "text/html",
+                MediaContentType.TextDividemarkdown => "text/markdown",
+                MediaContentType.TextDivideplain => "text/plain",
+                MediaContentType.TextDividexPython => "text/x-python",
+                MediaContentType.TextDividexTypescript => "text/x-typescript",
+                MediaContentType.VideoDividemp4 => "video/mp4",
+                MediaContentType.VideoDividempeg => "video/mpeg",
+                MediaContentType.VideoDivideogg => "video/ogg",
+                MediaContentType.VideoDividequicktime => "video/quicktime",
+                MediaContentType.VideoDividewebm => "video/webm",
+                MediaContentType.VideoDividexMatroska => "video/x-matroska",
+                MediaContentType.VideoDividexMsvideo => "video/x-msvideo",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -292,58 +292,58 @@ namespace Langfuse
         {
             return value switch
             {
-                "application/gzip" => MediaContentType.ApplicationGzip,
-                "application/javascript" => MediaContentType.ApplicationJavascript,
-                "application/json" => MediaContentType.ApplicationJson,
-                "application/msword" => MediaContentType.ApplicationMsword,
-                "application/octet-stream" => MediaContentType.ApplicationOctetStream,
-                "application/pdf" => MediaContentType.ApplicationPdf,
-                "application/rtf" => MediaContentType.ApplicationRtf,
-                "application/vnd.apache.parquet" => MediaContentType.ApplicationVndApacheParquet,
-                "application/vnd.ms-excel" => MediaContentType.ApplicationVndMsExcel,
-                "application/vnd.openxmlformats-officedocument.presentationml.presentation" => MediaContentType.ApplicationVndOpenxmlformatsOfficedocumentPresentationmlPresentation,
-                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" => MediaContentType.ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet,
-                "application/vnd.openxmlformats-officedocument.wordprocessingml.document" => MediaContentType.ApplicationVndOpenxmlformatsOfficedocumentWordprocessingmlDocument,
-                "application/x-7z-compressed" => MediaContentType.ApplicationX7zCompressed,
-                "application/x-ndjson" => MediaContentType.ApplicationXNdjson,
-                "application/x-tar" => MediaContentType.ApplicationXTar,
-                "application/x-yaml" => MediaContentType.ApplicationXYaml,
-                "application/xml" => MediaContentType.ApplicationXml,
-                "application/zip" => MediaContentType.ApplicationZip,
-                "audio/aac" => MediaContentType.AudioAac,
-                "audio/flac" => MediaContentType.AudioFlac,
-                "audio/mp3" => MediaContentType.AudioMp3,
-                "audio/mp4" => MediaContentType.AudioMp4,
-                "audio/mpeg" => MediaContentType.AudioMpeg,
-                "audio/oga" => MediaContentType.AudioOga,
-                "audio/ogg" => MediaContentType.AudioOgg,
-                "audio/opus" => MediaContentType.AudioOpus,
-                "audio/wav" => MediaContentType.AudioWav,
-                "audio/webm" => MediaContentType.AudioWebm,
-                "image/avif" => MediaContentType.ImageAvif,
-                "image/bmp" => MediaContentType.ImageBmp,
-                "image/gif" => MediaContentType.ImageGif,
-                "image/heic" => MediaContentType.ImageHeic,
-                "image/jpeg" => MediaContentType.ImageJpeg,
-                "image/jpg" => MediaContentType.ImageJpg,
-                "image/png" => MediaContentType.ImagePng,
-                "image/svg+xml" => MediaContentType.ImageSvgPlusxml,
-                "image/tiff" => MediaContentType.ImageTiff,
-                "image/webp" => MediaContentType.ImageWebp,
-                "text/css" => MediaContentType.TextCss,
-                "text/csv" => MediaContentType.TextCsv,
-                "text/html" => MediaContentType.TextHtml,
-                "text/markdown" => MediaContentType.TextMarkdown,
-                "text/plain" => MediaContentType.TextPlain,
-                "text/x-python" => MediaContentType.TextXPython,
-                "text/x-typescript" => MediaContentType.TextXTypescript,
-                "video/mp4" => MediaContentType.VideoMp4,
-                "video/mpeg" => MediaContentType.VideoMpeg,
-                "video/ogg" => MediaContentType.VideoOgg,
-                "video/quicktime" => MediaContentType.VideoQuicktime,
-                "video/webm" => MediaContentType.VideoWebm,
-                "video/x-matroska" => MediaContentType.VideoXMatroska,
-                "video/x-msvideo" => MediaContentType.VideoXMsvideo,
+                "application/gzip" => MediaContentType.ApplicationDividegzip,
+                "application/javascript" => MediaContentType.ApplicationDividejavascript,
+                "application/json" => MediaContentType.ApplicationDividejson,
+                "application/msword" => MediaContentType.ApplicationDividemsword,
+                "application/octet-stream" => MediaContentType.ApplicationDivideoctetStream,
+                "application/pdf" => MediaContentType.ApplicationDividepdf,
+                "application/rtf" => MediaContentType.ApplicationDividertf,
+                "application/vnd.apache.parquet" => MediaContentType.ApplicationDividevndApacheParquet,
+                "application/vnd.ms-excel" => MediaContentType.ApplicationDividevndMsExcel,
+                "application/vnd.openxmlformats-officedocument.presentationml.presentation" => MediaContentType.ApplicationDividevndOpenxmlformatsOfficedocumentPresentationmlPresentation,
+                "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" => MediaContentType.ApplicationDividevndOpenxmlformatsOfficedocumentSpreadsheetmlSheet,
+                "application/vnd.openxmlformats-officedocument.wordprocessingml.document" => MediaContentType.ApplicationDividevndOpenxmlformatsOfficedocumentWordprocessingmlDocument,
+                "application/x-7z-compressed" => MediaContentType.ApplicationDividex7zCompressed,
+                "application/x-ndjson" => MediaContentType.ApplicationDividexNdjson,
+                "application/x-tar" => MediaContentType.ApplicationDividexTar,
+                "application/x-yaml" => MediaContentType.ApplicationDividexYaml,
+                "application/xml" => MediaContentType.ApplicationDividexml,
+                "application/zip" => MediaContentType.ApplicationDividezip,
+                "audio/aac" => MediaContentType.AudioDivideaac,
+                "audio/flac" => MediaContentType.AudioDivideflac,
+                "audio/mp3" => MediaContentType.AudioDividemp3,
+                "audio/mp4" => MediaContentType.AudioDividemp4,
+                "audio/mpeg" => MediaContentType.AudioDividempeg,
+                "audio/oga" => MediaContentType.AudioDivideoga,
+                "audio/ogg" => MediaContentType.AudioDivideogg,
+                "audio/opus" => MediaContentType.AudioDivideopus,
+                "audio/wav" => MediaContentType.AudioDividewav,
+                "audio/webm" => MediaContentType.AudioDividewebm,
+                "image/avif" => MediaContentType.ImageDivideavif,
+                "image/bmp" => MediaContentType.ImageDividebmp,
+                "image/gif" => MediaContentType.ImageDividegif,
+                "image/heic" => MediaContentType.ImageDivideheic,
+                "image/jpeg" => MediaContentType.ImageDividejpeg,
+                "image/jpg" => MediaContentType.ImageDividejpg,
+                "image/png" => MediaContentType.ImageDividepng,
+                "image/svg+xml" => MediaContentType.ImageDividesvgPlusxml,
+                "image/tiff" => MediaContentType.ImageDividetiff,
+                "image/webp" => MediaContentType.ImageDividewebp,
+                "text/css" => MediaContentType.TextDividecss,
+                "text/csv" => MediaContentType.TextDividecsv,
+                "text/html" => MediaContentType.TextDividehtml,
+                "text/markdown" => MediaContentType.TextDividemarkdown,
+                "text/plain" => MediaContentType.TextDivideplain,
+                "text/x-python" => MediaContentType.TextDividexPython,
+                "text/x-typescript" => MediaContentType.TextDividexTypescript,
+                "video/mp4" => MediaContentType.VideoDividemp4,
+                "video/mpeg" => MediaContentType.VideoDividempeg,
+                "video/ogg" => MediaContentType.VideoDivideogg,
+                "video/quicktime" => MediaContentType.VideoDividequicktime,
+                "video/webm" => MediaContentType.VideoDividewebm,
+                "video/x-matroska" => MediaContentType.VideoDividexMatroska,
+                "video/x-msvideo" => MediaContentType.VideoDividexMsvideo,
                 _ => null,
             };
         }

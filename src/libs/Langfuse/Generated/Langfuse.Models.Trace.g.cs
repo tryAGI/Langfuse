@@ -106,6 +106,15 @@ namespace Langfuse
         /// <param name="timestamp">
         /// The timestamp when the trace was created
         /// </param>
+        /// <param name="tags">
+        /// The tags associated with the trace.
+        /// </param>
+        /// <param name="public">
+        /// Public traces are accessible via url without login
+        /// </param>
+        /// <param name="environment">
+        /// The environment from which this trace originated. Can be any lowercase alphanumeric string with hyphens and underscores that does not start with 'langfuse'.
+        /// </param>
         /// <param name="name">
         /// The name of the trace
         /// </param>
@@ -130,15 +139,6 @@ namespace Langfuse
         /// <param name="metadata">
         /// The metadata associated with the trace. Can be any JSON.
         /// </param>
-        /// <param name="tags">
-        /// The tags associated with the trace.
-        /// </param>
-        /// <param name="public">
-        /// Public traces are accessible via url without login
-        /// </param>
-        /// <param name="environment">
-        /// The environment from which this trace originated. Can be any lowercase alphanumeric string with hyphens and underscores that does not start with 'langfuse'.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -159,9 +159,6 @@ namespace Langfuse
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Timestamp = timestamp;
-            this.Tags = tags ?? throw new global::System.ArgumentNullException(nameof(tags));
-            this.Public = @public;
-            this.Environment = environment ?? throw new global::System.ArgumentNullException(nameof(environment));
             this.Name = name;
             this.Input = input;
             this.Output = output;
@@ -170,6 +167,9 @@ namespace Langfuse
             this.Version = version;
             this.UserId = userId;
             this.Metadata = metadata;
+            this.Tags = tags ?? throw new global::System.ArgumentNullException(nameof(tags));
+            this.Public = @public;
+            this.Environment = environment ?? throw new global::System.ArgumentNullException(nameof(environment));
         }
 
         /// <summary>

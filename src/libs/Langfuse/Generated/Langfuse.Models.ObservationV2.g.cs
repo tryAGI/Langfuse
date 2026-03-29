@@ -230,23 +230,23 @@ namespace Langfuse
         /// <param name="id">
         /// The unique identifier of the observation
         /// </param>
-        /// <param name="traceId">
-        /// The trace ID associated with the observation
-        /// </param>
         /// <param name="startTime">
         /// The start time of the observation
-        /// </param>
-        /// <param name="endTime">
-        /// The end time of the observation
         /// </param>
         /// <param name="projectId">
         /// The project ID this observation belongs to
         /// </param>
-        /// <param name="parentObservationId">
-        /// The parent observation ID
-        /// </param>
         /// <param name="type">
         /// The type of the observation (e.g. GENERATION, SPAN, EVENT)
+        /// </param>
+        /// <param name="traceId">
+        /// The trace ID associated with the observation
+        /// </param>
+        /// <param name="endTime">
+        /// The end time of the observation
+        /// </param>
+        /// <param name="parentObservationId">
+        /// The parent observation ID
         /// </param>
         /// <param name="name">
         /// The name of the observation
@@ -367,12 +367,12 @@ namespace Langfuse
             string? modelId)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
-            this.StartTime = startTime;
-            this.ProjectId = projectId ?? throw new global::System.ArgumentNullException(nameof(projectId));
-            this.Type = type ?? throw new global::System.ArgumentNullException(nameof(type));
             this.TraceId = traceId;
+            this.StartTime = startTime;
             this.EndTime = endTime;
+            this.ProjectId = projectId ?? throw new global::System.ArgumentNullException(nameof(projectId));
             this.ParentObservationId = parentObservationId;
+            this.Type = type ?? throw new global::System.ArgumentNullException(nameof(type));
             this.Name = name;
             this.Level = level;
             this.StatusMessage = statusMessage;

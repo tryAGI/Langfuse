@@ -123,6 +123,17 @@ namespace Langfuse
         /// Initializes a new instance of the <see cref="BaseScore" /> class.
         /// </summary>
         /// <param name="id"></param>
+        /// <param name="name"></param>
+        /// <param name="source"></param>
+        /// <param name="timestamp"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="metadata">
+        /// Metadata associated with the score
+        /// </param>
+        /// <param name="environment">
+        /// The environment from which this score originated. Can be any lowercase alphanumeric string with hyphens and underscores that does not start with 'langfuse'.
+        /// </param>
         /// <param name="traceId">
         /// The trace ID associated with the score
         /// </param>
@@ -135,28 +146,17 @@ namespace Langfuse
         /// <param name="datasetRunId">
         /// The dataset run ID associated with the score
         /// </param>
-        /// <param name="name"></param>
-        /// <param name="source"></param>
-        /// <param name="timestamp"></param>
-        /// <param name="createdAt"></param>
-        /// <param name="updatedAt"></param>
         /// <param name="authorUserId">
         /// The user ID of the author
         /// </param>
         /// <param name="comment">
         /// Comment on the score
         /// </param>
-        /// <param name="metadata">
-        /// Metadata associated with the score
-        /// </param>
         /// <param name="configId">
         /// Reference a score config on a score. When set, config and score name must be equal and value must comply to optionally defined numerical range
         /// </param>
         /// <param name="queueId">
         /// The annotation queue referenced by the score. Indicates if score was initially created while processing annotation queue.
-        /// </param>
-        /// <param name="environment">
-        /// The environment from which this score originated. Can be any lowercase alphanumeric string with hyphens and underscores that does not start with 'langfuse'.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -180,21 +180,21 @@ namespace Langfuse
             string? queueId)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
+            this.TraceId = traceId;
+            this.SessionId = sessionId;
+            this.ObservationId = observationId;
+            this.DatasetRunId = datasetRunId;
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Source = source;
             this.Timestamp = timestamp;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.Metadata = metadata ?? throw new global::System.ArgumentNullException(nameof(metadata));
-            this.Environment = environment ?? throw new global::System.ArgumentNullException(nameof(environment));
-            this.TraceId = traceId;
-            this.SessionId = sessionId;
-            this.ObservationId = observationId;
-            this.DatasetRunId = datasetRunId;
             this.AuthorUserId = authorUserId;
             this.Comment = comment;
+            this.Metadata = metadata ?? throw new global::System.ArgumentNullException(nameof(metadata));
             this.ConfigId = configId;
             this.QueueId = queueId;
+            this.Environment = environment ?? throw new global::System.ArgumentNullException(nameof(environment));
         }
 
         /// <summary>
