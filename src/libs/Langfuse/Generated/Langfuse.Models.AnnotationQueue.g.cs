@@ -60,10 +60,10 @@ namespace Langfuse
         /// </summary>
         /// <param name="id"></param>
         /// <param name="name"></param>
-        /// <param name="description"></param>
         /// <param name="scoreConfigIds"></param>
         /// <param name="createdAt"></param>
         /// <param name="updatedAt"></param>
+        /// <param name="description"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -77,10 +77,10 @@ namespace Langfuse
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.Description = description;
             this.ScoreConfigIds = scoreConfigIds ?? throw new global::System.ArgumentNullException(nameof(scoreConfigIds));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.Description = description;
         }
 
         /// <summary>

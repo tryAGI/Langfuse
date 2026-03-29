@@ -79,9 +79,9 @@ namespace Langfuse
         /// <param name="objectId"></param>
         /// <param name="objectType"></param>
         /// <param name="status"></param>
-        /// <param name="completedAt"></param>
         /// <param name="createdAt"></param>
         /// <param name="updatedAt"></param>
+        /// <param name="completedAt"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -100,9 +100,9 @@ namespace Langfuse
             this.ObjectId = objectId ?? throw new global::System.ArgumentNullException(nameof(objectId));
             this.ObjectType = objectType;
             this.Status = status;
+            this.CompletedAt = completedAt;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.CompletedAt = completedAt;
         }
 
         /// <summary>

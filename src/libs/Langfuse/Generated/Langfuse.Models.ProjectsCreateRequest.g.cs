@@ -38,11 +38,11 @@ namespace Langfuse
         /// Initializes a new instance of the <see cref="ProjectsCreateRequest" /> class.
         /// </summary>
         /// <param name="name"></param>
-        /// <param name="metadata">
-        /// Optional metadata for the project
-        /// </param>
         /// <param name="retention">
         /// Number of days to retain data. Must be 0 or at least 3 days. Requires data-retention entitlement for non-zero values. Optional.
+        /// </param>
+        /// <param name="metadata">
+        /// Optional metadata for the project
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -53,8 +53,8 @@ namespace Langfuse
             object? metadata)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Retention = retention;
             this.Metadata = metadata;
+            this.Retention = retention;
         }
 
         /// <summary>

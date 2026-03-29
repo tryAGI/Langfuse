@@ -71,13 +71,13 @@ namespace Langfuse
         /// Initializes a new instance of the <see cref="CreateDatasetRunItemRequest" /> class.
         /// </summary>
         /// <param name="runName"></param>
+        /// <param name="datasetItemId"></param>
         /// <param name="runDescription">
         /// Description of the run. If run exists, description will be updated.
         /// </param>
         /// <param name="metadata">
         /// Metadata of the dataset run, updates run if run already exists
         /// </param>
-        /// <param name="datasetItemId"></param>
         /// <param name="observationId"></param>
         /// <param name="traceId">
         /// traceId should always be provided. For compatibility with older SDK versions it can also be inferred from the provided observationId.
@@ -105,9 +105,9 @@ namespace Langfuse
             global::System.DateTime? createdAt)
         {
             this.RunName = runName ?? throw new global::System.ArgumentNullException(nameof(runName));
-            this.DatasetItemId = datasetItemId ?? throw new global::System.ArgumentNullException(nameof(datasetItemId));
             this.RunDescription = runDescription;
             this.Metadata = metadata;
+            this.DatasetItemId = datasetItemId ?? throw new global::System.ArgumentNullException(nameof(datasetItemId));
             this.ObservationId = observationId;
             this.TraceId = traceId;
             this.DatasetVersion = datasetVersion;

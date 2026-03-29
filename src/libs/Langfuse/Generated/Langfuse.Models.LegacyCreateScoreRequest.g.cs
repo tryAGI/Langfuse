@@ -100,17 +100,17 @@ namespace Langfuse
         /// <summary>
         /// Initializes a new instance of the <see cref="LegacyCreateScoreRequest" /> class.
         /// </summary>
-        /// <param name="id"></param>
-        /// <param name="traceId"></param>
-        /// <param name="sessionId"></param>
-        /// <param name="observationId"></param>
-        /// <param name="datasetRunId"></param>
         /// <param name="name">
         /// Example: novelty
         /// </param>
         /// <param name="value">
         /// The value of the score. Must be passed as string for categorical scores, and numeric for boolean and numeric scores
         /// </param>
+        /// <param name="id"></param>
+        /// <param name="traceId"></param>
+        /// <param name="sessionId"></param>
+        /// <param name="observationId"></param>
+        /// <param name="datasetRunId"></param>
         /// <param name="comment"></param>
         /// <param name="metadata"></param>
         /// <param name="environment">
@@ -141,13 +141,13 @@ namespace Langfuse
             global::Langfuse.ScoreDataType? dataType,
             string? configId)
         {
-            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Value = value;
             this.Id = id;
             this.TraceId = traceId;
             this.SessionId = sessionId;
             this.ObservationId = observationId;
             this.DatasetRunId = datasetRunId;
+            this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.Value = value;
             this.Comment = comment;
             this.Metadata = metadata;
             this.Environment = environment;

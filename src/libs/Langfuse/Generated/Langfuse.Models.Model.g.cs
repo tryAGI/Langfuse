@@ -130,24 +130,6 @@ namespace Langfuse
         /// <param name="matchPattern">
         /// Regex pattern which matches this model definition to generation.model. Useful in case of fine-tuned models. If you want to exact match, use `(?i)^modelname$`
         /// </param>
-        /// <param name="startDate">
-        /// Apply only to generations which are newer than this ISO date.
-        /// </param>
-        /// <param name="unit">
-        /// Unit of usage in Langfuse
-        /// </param>
-        /// <param name="inputPrice">
-        /// Deprecated. See 'prices' instead. Price (USD) per input unit
-        /// </param>
-        /// <param name="outputPrice">
-        /// Deprecated. See 'prices' instead. Price (USD) per output unit
-        /// </param>
-        /// <param name="totalPrice">
-        /// Deprecated. See 'prices' instead. Price (USD) per total unit. Cannot be set if input or output price is set.
-        /// </param>
-        /// <param name="tokenizerId">
-        /// Optional. Tokenizer to be applied to observations which match to this model. See docs for more details.
-        /// </param>
         /// <param name="tokenizerConfig">
         /// Optional. Configuration for the selected tokenizer. Needs to be JSON. See docs for more details.
         /// </param>
@@ -167,6 +149,24 @@ namespace Langfuse
         /// Each model must have exactly one default tier (isDefault=true, priority=0) that serves as a fallback.<br/>
         /// Additional conditional tiers can be defined with specific matching criteria.<br/>
         /// If this array is empty, the model uses legacy flat pricing from the inputPrice/outputPrice/totalPrice fields.
+        /// </param>
+        /// <param name="startDate">
+        /// Apply only to generations which are newer than this ISO date.
+        /// </param>
+        /// <param name="unit">
+        /// Unit of usage in Langfuse
+        /// </param>
+        /// <param name="inputPrice">
+        /// Deprecated. See 'prices' instead. Price (USD) per input unit
+        /// </param>
+        /// <param name="outputPrice">
+        /// Deprecated. See 'prices' instead. Price (USD) per output unit
+        /// </param>
+        /// <param name="totalPrice">
+        /// Deprecated. See 'prices' instead. Price (USD) per total unit. Cannot be set if input or output price is set.
+        /// </param>
+        /// <param name="tokenizerId">
+        /// Optional. Tokenizer to be applied to observations which match to this model. See docs for more details.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -190,17 +190,17 @@ namespace Langfuse
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.ModelName = modelName ?? throw new global::System.ArgumentNullException(nameof(modelName));
             this.MatchPattern = matchPattern ?? throw new global::System.ArgumentNullException(nameof(matchPattern));
-            this.TokenizerConfig = tokenizerConfig ?? throw new global::System.ArgumentNullException(nameof(tokenizerConfig));
-            this.IsLangfuseManaged = isLangfuseManaged;
-            this.CreatedAt = createdAt;
-            this.Prices = prices ?? throw new global::System.ArgumentNullException(nameof(prices));
-            this.PricingTiers = pricingTiers ?? throw new global::System.ArgumentNullException(nameof(pricingTiers));
             this.StartDate = startDate;
             this.Unit = unit;
             this.InputPrice = inputPrice;
             this.OutputPrice = outputPrice;
             this.TotalPrice = totalPrice;
             this.TokenizerId = tokenizerId;
+            this.TokenizerConfig = tokenizerConfig ?? throw new global::System.ArgumentNullException(nameof(tokenizerConfig));
+            this.IsLangfuseManaged = isLangfuseManaged;
+            this.CreatedAt = createdAt;
+            this.Prices = prices ?? throw new global::System.ArgumentNullException(nameof(prices));
+            this.PricingTiers = pricingTiers ?? throw new global::System.ArgumentNullException(nameof(pricingTiers));
         }
 
         /// <summary>

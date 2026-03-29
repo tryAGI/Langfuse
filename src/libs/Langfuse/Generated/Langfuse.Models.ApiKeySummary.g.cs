@@ -65,11 +65,11 @@ namespace Langfuse
         /// </summary>
         /// <param name="id"></param>
         /// <param name="createdAt"></param>
+        /// <param name="publicKey"></param>
+        /// <param name="displaySecretKey"></param>
         /// <param name="expiresAt"></param>
         /// <param name="lastUsedAt"></param>
         /// <param name="note"></param>
-        /// <param name="publicKey"></param>
-        /// <param name="displaySecretKey"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -84,11 +84,11 @@ namespace Langfuse
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.CreatedAt = createdAt;
-            this.PublicKey = publicKey ?? throw new global::System.ArgumentNullException(nameof(publicKey));
-            this.DisplaySecretKey = displaySecretKey ?? throw new global::System.ArgumentNullException(nameof(displaySecretKey));
             this.ExpiresAt = expiresAt;
             this.LastUsedAt = lastUsedAt;
             this.Note = note;
+            this.PublicKey = publicKey ?? throw new global::System.ArgumentNullException(nameof(publicKey));
+            this.DisplaySecretKey = displaySecretKey ?? throw new global::System.ArgumentNullException(nameof(displaySecretKey));
         }
 
         /// <summary>

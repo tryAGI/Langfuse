@@ -102,9 +102,6 @@ namespace Langfuse
         /// <param name="displaySecretKey">
         /// Masked version of the secret key for display purposes
         /// </param>
-        /// <param name="baseURL">
-        /// Custom base URL for the LLM API
-        /// </param>
         /// <param name="customModels">
         /// List of custom model names available for this connection
         /// </param>
@@ -114,11 +111,14 @@ namespace Langfuse
         /// <param name="extraHeaderKeys">
         /// Keys of extra headers sent with requests (values excluded for security)
         /// </param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
+        /// <param name="baseURL">
+        /// Custom base URL for the LLM API
+        /// </param>
         /// <param name="config">
         /// Adapter-specific configuration. Required for Bedrock (`{"region":"us-east-1"}`), optional for VertexAI (`{"location":"us-central1"}`), not used by other adapters.
         /// </param>
-        /// <param name="createdAt"></param>
-        /// <param name="updatedAt"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -139,13 +139,13 @@ namespace Langfuse
             this.Provider = provider ?? throw new global::System.ArgumentNullException(nameof(provider));
             this.Adapter = adapter ?? throw new global::System.ArgumentNullException(nameof(adapter));
             this.DisplaySecretKey = displaySecretKey ?? throw new global::System.ArgumentNullException(nameof(displaySecretKey));
+            this.BaseURL = baseURL;
             this.CustomModels = customModels ?? throw new global::System.ArgumentNullException(nameof(customModels));
             this.WithDefaultModels = withDefaultModels;
             this.ExtraHeaderKeys = extraHeaderKeys ?? throw new global::System.ArgumentNullException(nameof(extraHeaderKeys));
+            this.Config = config;
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.BaseURL = baseURL;
-            this.Config = config;
         }
 
         /// <summary>

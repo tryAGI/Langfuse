@@ -128,9 +128,9 @@ namespace Langfuse
         /// <summary>
         /// Initializes a new instance of the <see cref="ObservationBody" /> class.
         /// </summary>
+        /// <param name="type"></param>
         /// <param name="id"></param>
         /// <param name="traceId"></param>
-        /// <param name="type"></param>
         /// <param name="name"></param>
         /// <param name="startTime"></param>
         /// <param name="endTime"></param>
@@ -171,9 +171,9 @@ namespace Langfuse
             string? parentObservationId,
             string? environment)
         {
-            this.Type = type;
             this.Id = id;
             this.TraceId = traceId;
+            this.Type = type;
             this.Name = name;
             this.StartTime = startTime;
             this.EndTime = endTime;

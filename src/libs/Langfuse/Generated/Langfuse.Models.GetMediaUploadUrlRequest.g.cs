@@ -62,9 +62,6 @@ namespace Langfuse
         /// <param name="traceId">
         /// The trace ID associated with the media record
         /// </param>
-        /// <param name="observationId">
-        /// The observation ID associated with the media record. If the media record is associated directly with a trace, this will be null.
-        /// </param>
         /// <param name="contentType">
         /// The MIME type of the media record
         /// </param>
@@ -76,6 +73,9 @@ namespace Langfuse
         /// </param>
         /// <param name="field">
         /// The trace / observation field the media record is associated with. This can be one of `input`, `output`, `metadata`
+        /// </param>
+        /// <param name="observationId">
+        /// The observation ID associated with the media record. If the media record is associated directly with a trace, this will be null.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -89,11 +89,11 @@ namespace Langfuse
             string? observationId)
         {
             this.TraceId = traceId ?? throw new global::System.ArgumentNullException(nameof(traceId));
+            this.ObservationId = observationId;
             this.ContentType = contentType;
             this.ContentLength = contentLength;
             this.Sha256Hash = sha256Hash ?? throw new global::System.ArgumentNullException(nameof(sha256Hash));
             this.Field = field ?? throw new global::System.ArgumentNullException(nameof(field));
-            this.ObservationId = observationId;
         }
 
         /// <summary>

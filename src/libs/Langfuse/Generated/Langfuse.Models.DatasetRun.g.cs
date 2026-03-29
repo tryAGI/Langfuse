@@ -78,9 +78,6 @@ namespace Langfuse
         /// <param name="name">
         /// Name of the dataset run
         /// </param>
-        /// <param name="description">
-        /// Description of the run
-        /// </param>
         /// <param name="metadata">
         /// Metadata of the dataset run
         /// </param>
@@ -95,6 +92,9 @@ namespace Langfuse
         /// </param>
         /// <param name="updatedAt">
         /// The date and time when the dataset run was last updated
+        /// </param>
+        /// <param name="description">
+        /// Description of the run
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -111,12 +111,12 @@ namespace Langfuse
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
+            this.Description = description;
             this.Metadata = metadata ?? throw new global::System.ArgumentNullException(nameof(metadata));
             this.DatasetId = datasetId ?? throw new global::System.ArgumentNullException(nameof(datasetId));
             this.DatasetName = datasetName ?? throw new global::System.ArgumentNullException(nameof(datasetName));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.Description = description;
         }
 
         /// <summary>

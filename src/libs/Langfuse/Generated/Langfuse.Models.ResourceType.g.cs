@@ -72,7 +72,6 @@ namespace Langfuse
         /// <summary>
         /// Initializes a new instance of the <see cref="ResourceType" /> class.
         /// </summary>
-        /// <param name="schemas"></param>
         /// <param name="id"></param>
         /// <param name="name"></param>
         /// <param name="endpoint"></param>
@@ -80,6 +79,7 @@ namespace Langfuse
         /// <param name="schema"></param>
         /// <param name="schemaExtensions"></param>
         /// <param name="meta"></param>
+        /// <param name="schemas"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -93,6 +93,7 @@ namespace Langfuse
             global::Langfuse.ResourceMeta meta,
             global::System.Collections.Generic.IList<string>? schemas)
         {
+            this.Schemas = schemas;
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Endpoint = endpoint ?? throw new global::System.ArgumentNullException(nameof(endpoint));
@@ -100,7 +101,6 @@ namespace Langfuse
             this.Schema = schema ?? throw new global::System.ArgumentNullException(nameof(schema));
             this.SchemaExtensions = schemaExtensions ?? throw new global::System.ArgumentNullException(nameof(schemaExtensions));
             this.Meta = meta ?? throw new global::System.ArgumentNullException(nameof(meta));
-            this.Schemas = schemas;
         }
 
         /// <summary>

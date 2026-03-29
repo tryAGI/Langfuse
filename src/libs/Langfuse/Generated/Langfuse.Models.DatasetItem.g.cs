@@ -104,16 +104,16 @@ namespace Langfuse
         /// <param name="metadata">
         /// Metadata associated with the dataset item
         /// </param>
+        /// <param name="datasetId"></param>
+        /// <param name="datasetName"></param>
+        /// <param name="createdAt"></param>
+        /// <param name="updatedAt"></param>
         /// <param name="sourceTraceId">
         /// The trace ID that sourced this dataset item
         /// </param>
         /// <param name="sourceObservationId">
         /// The observation ID that sourced this dataset item
         /// </param>
-        /// <param name="datasetId"></param>
-        /// <param name="datasetName"></param>
-        /// <param name="createdAt"></param>
-        /// <param name="updatedAt"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -135,12 +135,12 @@ namespace Langfuse
             this.Input = input ?? throw new global::System.ArgumentNullException(nameof(input));
             this.ExpectedOutput = expectedOutput ?? throw new global::System.ArgumentNullException(nameof(expectedOutput));
             this.Metadata = metadata ?? throw new global::System.ArgumentNullException(nameof(metadata));
+            this.SourceTraceId = sourceTraceId;
+            this.SourceObservationId = sourceObservationId;
             this.DatasetId = datasetId ?? throw new global::System.ArgumentNullException(nameof(datasetId));
             this.DatasetName = datasetName ?? throw new global::System.ArgumentNullException(nameof(datasetName));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
-            this.SourceTraceId = sourceTraceId;
-            this.SourceObservationId = sourceObservationId;
         }
 
         /// <summary>
