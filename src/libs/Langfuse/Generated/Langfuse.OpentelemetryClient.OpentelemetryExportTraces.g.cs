@@ -403,7 +403,6 @@ namespace Langfuse
             global::System.Collections.Generic.IList<global::Langfuse.OtelResourceSpan> resourceSpans,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Langfuse.OpentelemetryExportTracesRequest
             {
                 ResourceSpans = resourceSpans,

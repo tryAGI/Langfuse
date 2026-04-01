@@ -375,7 +375,6 @@ namespace Langfuse
         public async global::System.Threading.Tasks.Task<global::Langfuse.Prompt> PromptsCreateAsync(
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Langfuse.CreatePromptRequest
             {
             };

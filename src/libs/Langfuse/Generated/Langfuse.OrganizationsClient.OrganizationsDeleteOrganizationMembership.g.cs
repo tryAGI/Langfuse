@@ -379,7 +379,6 @@ namespace Langfuse
             string userId,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Langfuse.DeleteMembershipRequest
             {
                 UserId = userId,

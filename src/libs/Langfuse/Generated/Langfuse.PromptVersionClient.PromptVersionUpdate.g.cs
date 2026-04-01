@@ -397,7 +397,6 @@ namespace Langfuse
             global::System.Collections.Generic.IList<string> newLabels,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Langfuse.PromptVersionUpdateRequest
             {
                 NewLabels = newLabels,
