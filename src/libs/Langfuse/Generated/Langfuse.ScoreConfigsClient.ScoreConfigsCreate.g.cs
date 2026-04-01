@@ -397,7 +397,6 @@ namespace Langfuse
             string? description = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Langfuse.CreateScoreConfigRequest
             {
                 Name = name,

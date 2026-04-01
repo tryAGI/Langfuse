@@ -381,7 +381,6 @@ namespace Langfuse
             global::System.Collections.Generic.IList<string> traceIds,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-
             var __request = new global::Langfuse.TraceDeleteMultipleRequest
             {
                 TraceIds = traceIds,
