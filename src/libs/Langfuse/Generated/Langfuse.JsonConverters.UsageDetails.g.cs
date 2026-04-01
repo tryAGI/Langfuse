@@ -163,19 +163,19 @@ namespace Langfuse.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.Collections.Generic.Dictionary<string, int>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.Collections.Generic.Dictionary<string, int>?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.Collections.Generic.Dictionary<string, int>).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value1, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value1!, typeInfo);
             }
             else if (value.IsOpenAICompletionUsageSchema)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.OpenAICompletionUsageSchema), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.OpenAICompletionUsageSchema?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.OpenAICompletionUsageSchema).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.OpenAICompletionUsageSchema, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.OpenAICompletionUsageSchema!, typeInfo);
             }
             else if (value.IsOpenAIResponseUsageSchema)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.OpenAIResponseUsageSchema), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.OpenAIResponseUsageSchema?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.OpenAIResponseUsageSchema).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.OpenAIResponseUsageSchema, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.OpenAIResponseUsageSchema!, typeInfo);
             }
         }
     }

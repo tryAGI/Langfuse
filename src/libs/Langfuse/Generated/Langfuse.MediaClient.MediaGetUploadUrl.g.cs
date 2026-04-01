@@ -401,6 +401,7 @@ namespace Langfuse
             string? observationId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Langfuse.GetMediaUploadUrlRequest
             {
                 TraceId = traceId,

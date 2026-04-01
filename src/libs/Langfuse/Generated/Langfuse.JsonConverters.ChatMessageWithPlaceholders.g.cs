@@ -125,13 +125,13 @@ namespace Langfuse.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.ChatMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.ChatMessage?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.ChatMessage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ChatMessage, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.ChatMessage!, typeInfo);
             }
             else if (value.IsPlaceholderMessage)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.PlaceholderMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.PlaceholderMessage?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.PlaceholderMessage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PlaceholderMessage, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PlaceholderMessage!, typeInfo);
             }
         }
     }
