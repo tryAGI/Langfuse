@@ -397,6 +397,7 @@ namespace Langfuse
             string? authorUserId = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+
             var __request = new global::Langfuse.CreateCommentRequest
             {
                 ProjectId = projectId,

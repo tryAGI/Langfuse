@@ -130,13 +130,13 @@ namespace Langfuse.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.Usage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.Usage?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.Usage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Usage, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Usage!, typeInfo);
             }
             else if (value.IsOpenAIUsage)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.OpenAIUsage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.OpenAIUsage?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.OpenAIUsage).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.OpenAIUsage, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.OpenAIUsage!, typeInfo);
             }
         }
     }
