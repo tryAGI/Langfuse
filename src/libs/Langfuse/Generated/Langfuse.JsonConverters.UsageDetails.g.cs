@@ -45,7 +45,7 @@ namespace Langfuse.JsonConverters
             if (__score1 > __bestScore) { __bestScore = __score1; __bestIndex = 1; }
             if (__score2 > __bestScore) { __bestScore = __score2; __bestIndex = 2; }
 
-            global::System.Collections.Generic.Dictionary<string, int>? value1 = default;
+            global::System.Collections.Generic.Dictionary<string, int>? usageDetailsVariant1 = default;
             global::Langfuse.OpenAICompletionUsageSchema? openAICompletionUsageSchema = default;
             global::Langfuse.OpenAIResponseUsageSchema? openAIResponseUsageSchema = default;
             if (__bestIndex >= 0)
@@ -56,7 +56,7 @@ namespace Langfuse.JsonConverters
                     {
                         var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.Collections.Generic.Dictionary<string, int>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.Collections.Generic.Dictionary<string, int>> ??
                                        throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.Collections.Generic.Dictionary<string, int>).Name}");
-                        value1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        usageDetailsVariant1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -97,13 +97,13 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (value1 == null && openAICompletionUsageSchema == null && openAIResponseUsageSchema == null)
+            if (usageDetailsVariant1 == null && openAICompletionUsageSchema == null && openAIResponseUsageSchema == null)
             {
                 try
                 {
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.Collections.Generic.Dictionary<string, int>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.Collections.Generic.Dictionary<string, int>> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.Collections.Generic.Dictionary<string, int>).Name}");
-                    value1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    usageDetailsVariant1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -140,7 +140,7 @@ namespace Langfuse.JsonConverters
             }
 
             var __value = new global::Langfuse.UsageDetails(
-                value1,
+                usageDetailsVariant1,
 
                 openAICompletionUsageSchema,
 
@@ -159,11 +159,11 @@ namespace Langfuse.JsonConverters
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));
             var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
-            if (value.IsValue1)
+            if (value.IsUsageDetailsVariant1)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.Collections.Generic.Dictionary<string, int>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.Collections.Generic.Dictionary<string, int>?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.Collections.Generic.Dictionary<string, int>).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.Value1!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UsageDetailsVariant1!, typeInfo);
             }
             else if (value.IsOpenAICompletionUsageSchema)
             {
