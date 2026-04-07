@@ -24,6 +24,10 @@ namespace Langfuse
         /// 
         /// </summary>
         Numeric,
+        /// <summary>
+        /// 
+        /// </summary>
+        Text,
     }
 
     /// <summary>
@@ -42,6 +46,7 @@ namespace Langfuse
                 ScoreDataType.Categorical => "CATEGORICAL",
                 ScoreDataType.Correction => "CORRECTION",
                 ScoreDataType.Numeric => "NUMERIC",
+                ScoreDataType.Text => "TEXT",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -56,6 +61,7 @@ namespace Langfuse
                 "CATEGORICAL" => ScoreDataType.Categorical,
                 "CORRECTION" => ScoreDataType.Correction,
                 "NUMERIC" => ScoreDataType.Numeric,
+                "TEXT" => ScoreDataType.Text,
                 _ => null,
             };
         }

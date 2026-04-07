@@ -60,7 +60,7 @@ namespace Langfuse
         public string? QueueId { get; set; }
 
         /// <summary>
-        /// The value of the score. Must be passed as string for categorical scores, and numeric for boolean and numeric scores
+        /// The value of the score. Must be passed as string for categorical and text scores, and numeric for boolean and numeric scores
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.CreateScoreValueJsonConverter))]
@@ -106,7 +106,7 @@ namespace Langfuse
         /// Example: novelty
         /// </param>
         /// <param name="value">
-        /// The value of the score. Must be passed as string for categorical scores, and numeric for boolean and numeric scores
+        /// The value of the score. Must be passed as string for categorical and text scores, and numeric for boolean and numeric scores
         /// </param>
         /// <param name="id"></param>
         /// <param name="traceId"></param>

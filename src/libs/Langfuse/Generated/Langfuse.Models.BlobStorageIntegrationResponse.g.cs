@@ -110,6 +110,13 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("compressed")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required bool Compressed { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("nextSyncAt")]
         public global::System.DateTime? NextSyncAt { get; set; }
 
@@ -165,6 +172,7 @@ namespace Langfuse
         /// <param name="forcePathStyle"></param>
         /// <param name="fileType"></param>
         /// <param name="exportMode"></param>
+        /// <param name="compressed"></param>
         /// <param name="createdAt"></param>
         /// <param name="updatedAt"></param>
         /// <param name="endpoint"></param>
@@ -189,6 +197,7 @@ namespace Langfuse
             bool forcePathStyle,
             global::Langfuse.BlobStorageIntegrationFileType fileType,
             global::Langfuse.BlobStorageExportMode exportMode,
+            bool compressed,
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
             string? endpoint,
@@ -213,6 +222,7 @@ namespace Langfuse
             this.FileType = fileType;
             this.ExportMode = exportMode;
             this.ExportStartDate = exportStartDate;
+            this.Compressed = compressed;
             this.NextSyncAt = nextSyncAt;
             this.LastSyncAt = lastSyncAt;
             this.LastError = lastError;
