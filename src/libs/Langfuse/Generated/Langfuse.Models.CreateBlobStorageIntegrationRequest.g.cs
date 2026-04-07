@@ -106,6 +106,12 @@ namespace Langfuse
         public global::System.DateTime? ExportStartDate { get; set; }
 
         /// <summary>
+        /// Enable gzip compression for exported files (.csv.gz, .json.gz, .jsonl.gz). Defaults to true.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("compressed")]
+        public bool? Compressed { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -148,6 +154,9 @@ namespace Langfuse
         /// <param name="exportStartDate">
         /// Custom start date for exports (required when exportMode is FROM_CUSTOM_DATE)
         /// </param>
+        /// <param name="compressed">
+        /// Enable gzip compression for exported files (.csv.gz, .json.gz, .jsonl.gz). Defaults to true.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -165,7 +174,8 @@ namespace Langfuse
             string? accessKeyId,
             string? secretAccessKey,
             string? prefix,
-            global::System.DateTime? exportStartDate)
+            global::System.DateTime? exportStartDate,
+            bool? compressed)
         {
             this.ProjectId = projectId ?? throw new global::System.ArgumentNullException(nameof(projectId));
             this.Type = type;
@@ -181,6 +191,7 @@ namespace Langfuse
             this.FileType = fileType;
             this.ExportMode = exportMode;
             this.ExportStartDate = exportStartDate;
+            this.Compressed = compressed;
         }
 
         /// <summary>

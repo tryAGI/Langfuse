@@ -51,6 +51,9 @@ namespace Langfuse
         /// <param name="exportStartDate">
         /// Custom start date for exports (required when exportMode is FROM_CUSTOM_DATE)
         /// </param>
+        /// <param name="compressed">
+        /// Enable gzip compression for exported files (.csv.gz, .json.gz, .jsonl.gz). Defaults to true.
+        /// </param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Langfuse.BlobStorageIntegrationResponse> BlobStorageIntegrationsUpsertBlobStorageIntegrationAsync(
@@ -68,6 +71,7 @@ namespace Langfuse
             string? secretAccessKey = default,
             string? prefix = default,
             global::System.DateTime? exportStartDate = default,
+            bool? compressed = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

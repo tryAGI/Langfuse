@@ -76,6 +76,23 @@ namespace Langfuse
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(GetScoresResponseDataVariant4))]
 #endif
         public bool IsGetScoresResponseDataVariant4 => GetScoresResponseDataVariant4 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+#if NET6_0_OR_GREATER
+        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText>? GetScoresResponseDataVariant5 { get; init; }
+#else
+        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText>? GetScoresResponseDataVariant5 { get; }
+#endif
+
+        /// <summary>
+        /// 
+        /// </summary>
+#if NET6_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(GetScoresResponseDataVariant5))]
+#endif
+        public bool IsGetScoresResponseDataVariant5 => GetScoresResponseDataVariant5 != null;
         /// <summary>
         /// 
         /// </summary>
@@ -151,23 +168,44 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static implicit operator GetScoresResponseData(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText> value) => new GetScoresResponseData((global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText>?)value);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText>?(GetScoresResponseData @this) => @this.GetScoresResponseDataVariant5;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public GetScoresResponseData(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText>? value)
+        {
+            GetScoresResponseDataVariant5 = value;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public GetScoresResponseData(
             global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant12, global::Langfuse.GetScoresResponseDataNumeric>? getScoresResponseDataVariant1,
             global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant22, global::Langfuse.GetScoresResponseDataCategorical>? getScoresResponseDataVariant2,
             global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant32, global::Langfuse.GetScoresResponseDataBoolean>? getScoresResponseDataVariant3,
-            global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant42, global::Langfuse.GetScoresResponseDataCorrection>? getScoresResponseDataVariant4
+            global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant42, global::Langfuse.GetScoresResponseDataCorrection>? getScoresResponseDataVariant4,
+            global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText>? getScoresResponseDataVariant5
             )
         {
             GetScoresResponseDataVariant1 = getScoresResponseDataVariant1;
             GetScoresResponseDataVariant2 = getScoresResponseDataVariant2;
             GetScoresResponseDataVariant3 = getScoresResponseDataVariant3;
             GetScoresResponseDataVariant4 = getScoresResponseDataVariant4;
+            GetScoresResponseDataVariant5 = getScoresResponseDataVariant5;
         }
 
         /// <summary>
         /// 
         /// </summary>
         public object? Object =>
+            GetScoresResponseDataVariant5 as object ??
             GetScoresResponseDataVariant4 as object ??
             GetScoresResponseDataVariant3 as object ??
             GetScoresResponseDataVariant2 as object ??
@@ -181,7 +219,8 @@ namespace Langfuse
             GetScoresResponseDataVariant1?.ToString() ??
             GetScoresResponseDataVariant2?.ToString() ??
             GetScoresResponseDataVariant3?.ToString() ??
-            GetScoresResponseDataVariant4?.ToString() 
+            GetScoresResponseDataVariant4?.ToString() ??
+            GetScoresResponseDataVariant5?.ToString() 
             ;
 
         /// <summary>
@@ -189,7 +228,7 @@ namespace Langfuse
         /// </summary>
         public bool Validate()
         {
-            return IsGetScoresResponseDataVariant1 && !IsGetScoresResponseDataVariant2 && !IsGetScoresResponseDataVariant3 && !IsGetScoresResponseDataVariant4 || !IsGetScoresResponseDataVariant1 && IsGetScoresResponseDataVariant2 && !IsGetScoresResponseDataVariant3 && !IsGetScoresResponseDataVariant4 || !IsGetScoresResponseDataVariant1 && !IsGetScoresResponseDataVariant2 && IsGetScoresResponseDataVariant3 && !IsGetScoresResponseDataVariant4 || !IsGetScoresResponseDataVariant1 && !IsGetScoresResponseDataVariant2 && !IsGetScoresResponseDataVariant3 && IsGetScoresResponseDataVariant4;
+            return IsGetScoresResponseDataVariant1 && !IsGetScoresResponseDataVariant2 && !IsGetScoresResponseDataVariant3 && !IsGetScoresResponseDataVariant4 && !IsGetScoresResponseDataVariant5 || !IsGetScoresResponseDataVariant1 && IsGetScoresResponseDataVariant2 && !IsGetScoresResponseDataVariant3 && !IsGetScoresResponseDataVariant4 && !IsGetScoresResponseDataVariant5 || !IsGetScoresResponseDataVariant1 && !IsGetScoresResponseDataVariant2 && IsGetScoresResponseDataVariant3 && !IsGetScoresResponseDataVariant4 && !IsGetScoresResponseDataVariant5 || !IsGetScoresResponseDataVariant1 && !IsGetScoresResponseDataVariant2 && !IsGetScoresResponseDataVariant3 && IsGetScoresResponseDataVariant4 && !IsGetScoresResponseDataVariant5 || !IsGetScoresResponseDataVariant1 && !IsGetScoresResponseDataVariant2 && !IsGetScoresResponseDataVariant3 && !IsGetScoresResponseDataVariant4 && IsGetScoresResponseDataVariant5;
         }
 
         /// <summary>
@@ -200,6 +239,7 @@ namespace Langfuse
             global::System.Func<global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant22, global::Langfuse.GetScoresResponseDataCategorical>?, TResult>? getScoresResponseDataVariant2 = null,
             global::System.Func<global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant32, global::Langfuse.GetScoresResponseDataBoolean>?, TResult>? getScoresResponseDataVariant3 = null,
             global::System.Func<global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant42, global::Langfuse.GetScoresResponseDataCorrection>?, TResult>? getScoresResponseDataVariant4 = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText>?, TResult>? getScoresResponseDataVariant5 = null,
             bool validate = true)
         {
             if (validate)
@@ -223,6 +263,10 @@ namespace Langfuse
             {
                 return getScoresResponseDataVariant4(GetScoresResponseDataVariant4!);
             }
+            else if (IsGetScoresResponseDataVariant5 && getScoresResponseDataVariant5 != null)
+            {
+                return getScoresResponseDataVariant5(GetScoresResponseDataVariant5!);
+            }
 
             return default(TResult);
         }
@@ -235,6 +279,7 @@ namespace Langfuse
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant22, global::Langfuse.GetScoresResponseDataCategorical>?>? getScoresResponseDataVariant2 = null,
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant32, global::Langfuse.GetScoresResponseDataBoolean>?>? getScoresResponseDataVariant3 = null,
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant42, global::Langfuse.GetScoresResponseDataCorrection>?>? getScoresResponseDataVariant4 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText>?>? getScoresResponseDataVariant5 = null,
             bool validate = true)
         {
             if (validate)
@@ -258,6 +303,10 @@ namespace Langfuse
             {
                 getScoresResponseDataVariant4?.Invoke(GetScoresResponseDataVariant4!);
             }
+            else if (IsGetScoresResponseDataVariant5)
+            {
+                getScoresResponseDataVariant5?.Invoke(GetScoresResponseDataVariant5!);
+            }
         }
 
         /// <summary>
@@ -275,6 +324,8 @@ namespace Langfuse
                 typeof(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant32, global::Langfuse.GetScoresResponseDataBoolean>),
                 GetScoresResponseDataVariant4,
                 typeof(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant42, global::Langfuse.GetScoresResponseDataCorrection>),
+                GetScoresResponseDataVariant5,
+                typeof(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText>),
             };
             const int offset = unchecked((int)2166136261);
             const int prime = 16777619;
@@ -294,7 +345,8 @@ namespace Langfuse
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant12, global::Langfuse.GetScoresResponseDataNumeric>?>.Default.Equals(GetScoresResponseDataVariant1, other.GetScoresResponseDataVariant1) &&
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant22, global::Langfuse.GetScoresResponseDataCategorical>?>.Default.Equals(GetScoresResponseDataVariant2, other.GetScoresResponseDataVariant2) &&
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant32, global::Langfuse.GetScoresResponseDataBoolean>?>.Default.Equals(GetScoresResponseDataVariant3, other.GetScoresResponseDataVariant3) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant42, global::Langfuse.GetScoresResponseDataCorrection>?>.Default.Equals(GetScoresResponseDataVariant4, other.GetScoresResponseDataVariant4) 
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant42, global::Langfuse.GetScoresResponseDataCorrection>?>.Default.Equals(GetScoresResponseDataVariant4, other.GetScoresResponseDataVariant4) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText>?>.Default.Equals(GetScoresResponseDataVariant5, other.GetScoresResponseDataVariant5) 
                 ;
         }
 

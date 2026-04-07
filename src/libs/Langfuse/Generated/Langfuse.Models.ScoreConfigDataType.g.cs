@@ -20,6 +20,10 @@ namespace Langfuse
         /// 
         /// </summary>
         Numeric,
+        /// <summary>
+        /// 
+        /// </summary>
+        Text,
     }
 
     /// <summary>
@@ -37,6 +41,7 @@ namespace Langfuse
                 ScoreConfigDataType.Boolean => "BOOLEAN",
                 ScoreConfigDataType.Categorical => "CATEGORICAL",
                 ScoreConfigDataType.Numeric => "NUMERIC",
+                ScoreConfigDataType.Text => "TEXT",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -50,6 +55,7 @@ namespace Langfuse
                 "BOOLEAN" => ScoreConfigDataType.Boolean,
                 "CATEGORICAL" => ScoreConfigDataType.Categorical,
                 "NUMERIC" => ScoreConfigDataType.Numeric,
+                "TEXT" => ScoreConfigDataType.Text,
                 _ => null,
             };
         }
