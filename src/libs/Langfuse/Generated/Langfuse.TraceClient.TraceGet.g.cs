@@ -7,11 +7,13 @@ namespace Langfuse
     {
         partial void PrepareTraceGetArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string traceId);
+            ref string traceId,
+            ref string? fields);
         partial void PrepareTraceGetRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string traceId);
+            string traceId,
+            string? fields);
         partial void ProcessTraceGetResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -25,21 +27,27 @@ namespace Langfuse
         /// Get a specific trace
         /// </summary>
         /// <param name="traceId"></param>
+        /// <param name="fields"></param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Langfuse.TraceWithFullDetails> TraceGetAsync(
             string traceId,
+            string? fields = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
             PrepareTraceGetArguments(
                 httpClient: HttpClient,
-                traceId: ref traceId);
+                traceId: ref traceId,
+                fields: ref fields);
 
             var __pathBuilder = new global::Langfuse.PathBuilder(
                 path: $"/api/public/traces/{traceId}",
                 baseUri: HttpClient.BaseAddress); 
+            __pathBuilder
+                .AddOptionalParameter("fields", fields) 
+                ; 
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -71,7 +79,8 @@ namespace Langfuse
             PrepareTraceGetRequest(
                 httpClient: HttpClient,
                 httpRequestMessage: __httpRequest,
-                traceId: traceId);
+                traceId: traceId,
+                fields: fields);
 
             using var __response = await HttpClient.SendAsync(
                 request: __httpRequest,
