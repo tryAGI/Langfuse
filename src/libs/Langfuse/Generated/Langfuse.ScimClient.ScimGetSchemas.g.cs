@@ -5,6 +5,25 @@ namespace Langfuse
 {
     public partial class ScimClient
     {
+
+
+        private static readonly global::Langfuse.EndPointSecurityRequirement s_ScimGetSchemasSecurityRequirement0 =
+            new global::Langfuse.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Langfuse.EndPointAuthorizationRequirement[]
+                {                    new global::Langfuse.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Basic",
+                        FriendlyName = "Basic",
+                    },
+                },
+            };
+        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_ScimGetSchemasSecurityRequirements =
+            new global::Langfuse.EndPointSecurityRequirement[]
+            {                s_ScimGetSchemasSecurityRequirement0,
+            };
         partial void PrepareScimGetSchemasArguments(
             global::System.Net.Http.HttpClient httpClient);
         partial void PrepareScimGetSchemasRequest(
@@ -32,9 +51,15 @@ namespace Langfuse
             PrepareScimGetSchemasArguments(
                 httpClient: HttpClient);
 
+
+            var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ScimGetSchemasSecurityRequirements,
+                operationName: "ScimGetSchemasAsync");
+
             var __pathBuilder = new global::Langfuse.PathBuilder(
                 path: "/api/public/scim/Schemas",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -44,7 +69,7 @@ namespace Langfuse
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

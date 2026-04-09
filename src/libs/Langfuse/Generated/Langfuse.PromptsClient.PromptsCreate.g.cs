@@ -5,6 +5,25 @@ namespace Langfuse
 {
     public partial class PromptsClient
     {
+
+
+        private static readonly global::Langfuse.EndPointSecurityRequirement s_PromptsCreateSecurityRequirement0 =
+            new global::Langfuse.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Langfuse.EndPointAuthorizationRequirement[]
+                {                    new global::Langfuse.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Basic",
+                        FriendlyName = "Basic",
+                    },
+                },
+            };
+        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_PromptsCreateSecurityRequirements =
+            new global::Langfuse.EndPointSecurityRequirement[]
+            {                s_PromptsCreateSecurityRequirement0,
+            };
         partial void PreparePromptsCreateArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::Langfuse.CreatePromptRequest request);
@@ -38,9 +57,15 @@ namespace Langfuse
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_PromptsCreateSecurityRequirements,
+                operationName: "PromptsCreateAsync");
+
             var __pathBuilder = new global::Langfuse.PathBuilder(
                 path: "/api/public/v2/prompts",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -50,7 +75,7 @@ namespace Langfuse
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

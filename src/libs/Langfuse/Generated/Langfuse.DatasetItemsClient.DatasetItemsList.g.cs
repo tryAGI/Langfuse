@@ -5,6 +5,25 @@ namespace Langfuse
 {
     public partial class DatasetItemsClient
     {
+
+
+        private static readonly global::Langfuse.EndPointSecurityRequirement s_DatasetItemsListSecurityRequirement0 =
+            new global::Langfuse.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Langfuse.EndPointAuthorizationRequirement[]
+                {                    new global::Langfuse.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Basic",
+                        FriendlyName = "Basic",
+                    },
+                },
+            };
+        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_DatasetItemsListSecurityRequirements =
+            new global::Langfuse.EndPointSecurityRequirement[]
+            {                s_DatasetItemsListSecurityRequirement0,
+            };
         partial void PrepareDatasetItemsListArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string? datasetName,
@@ -63,6 +82,12 @@ namespace Langfuse
                 page: ref page,
                 limit: ref limit);
 
+
+            var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_DatasetItemsListSecurityRequirements,
+                operationName: "DatasetItemsListAsync");
+
             var __pathBuilder = new global::Langfuse.PathBuilder(
                 path: "/api/public/dataset-items",
                 baseUri: HttpClient.BaseAddress); 
@@ -73,7 +98,7 @@ namespace Langfuse
                 .AddOptionalParameter("version", version?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                 .AddOptionalParameter("page", page?.ToString())
                 .AddOptionalParameter("limit", limit?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -83,7 +108,7 @@ namespace Langfuse
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

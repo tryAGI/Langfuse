@@ -5,6 +5,25 @@ namespace Langfuse
 {
     public partial class ProjectsClient
     {
+
+
+        private static readonly global::Langfuse.EndPointSecurityRequirement s_ProjectsDeleteApiKeySecurityRequirement0 =
+            new global::Langfuse.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Langfuse.EndPointAuthorizationRequirement[]
+                {                    new global::Langfuse.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Basic",
+                        FriendlyName = "Basic",
+                    },
+                },
+            };
+        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_ProjectsDeleteApiKeySecurityRequirements =
+            new global::Langfuse.EndPointSecurityRequirement[]
+            {                s_ProjectsDeleteApiKeySecurityRequirement0,
+            };
         partial void PrepareProjectsDeleteApiKeyArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string projectId,
@@ -42,9 +61,15 @@ namespace Langfuse
                 projectId: ref projectId,
                 apiKeyId: ref apiKeyId);
 
+
+            var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ProjectsDeleteApiKeySecurityRequirements,
+                operationName: "ProjectsDeleteApiKeyAsync");
+
             var __pathBuilder = new global::Langfuse.PathBuilder(
                 path: $"/api/public/projects/{projectId}/apiKeys/{apiKeyId}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -54,7 +79,7 @@ namespace Langfuse
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

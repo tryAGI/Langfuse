@@ -12,7 +12,7 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        public const string DefaultBaseUrl = "https://cloud.langfuse.com";
+        public const string DefaultBaseUrl = "https://cloud.langfuse.com/";
 
         private bool _disposeHttpClient = true;
 

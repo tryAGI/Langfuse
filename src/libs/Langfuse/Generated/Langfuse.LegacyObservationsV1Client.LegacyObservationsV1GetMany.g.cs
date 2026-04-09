@@ -5,6 +5,25 @@ namespace Langfuse
 {
     public partial class LegacyObservationsV1Client
     {
+
+
+        private static readonly global::Langfuse.EndPointSecurityRequirement s_LegacyObservationsV1GetManySecurityRequirement0 =
+            new global::Langfuse.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Langfuse.EndPointAuthorizationRequirement[]
+                {                    new global::Langfuse.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Basic",
+                        FriendlyName = "Basic",
+                    },
+                },
+            };
+        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_LegacyObservationsV1GetManySecurityRequirements =
+            new global::Langfuse.EndPointSecurityRequirement[]
+            {                s_LegacyObservationsV1GetManySecurityRequirement0,
+            };
         partial void PrepareLegacyObservationsV1GetManyArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int? page,
@@ -98,6 +117,12 @@ namespace Langfuse
                 version: ref version,
                 filter: ref filter);
 
+
+            var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_LegacyObservationsV1GetManySecurityRequirements,
+                operationName: "LegacyObservationsV1GetManyAsync");
+
             var __pathBuilder = new global::Langfuse.PathBuilder(
                 path: "/api/public/observations",
                 baseUri: HttpClient.BaseAddress); 
@@ -115,7 +140,7 @@ namespace Langfuse
                 .AddOptionalParameter("toStartTime", toStartTime?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                 .AddOptionalParameter("version", version)
                 .AddOptionalParameter("filter", filter) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -125,7 +150,7 @@ namespace Langfuse
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
