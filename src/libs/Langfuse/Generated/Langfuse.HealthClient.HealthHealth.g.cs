@@ -5,6 +5,25 @@ namespace Langfuse
 {
     public partial class HealthClient
     {
+
+
+        private static readonly global::Langfuse.EndPointSecurityRequirement s_HealthHealthSecurityRequirement0 =
+            new global::Langfuse.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Langfuse.EndPointAuthorizationRequirement[]
+                {                    new global::Langfuse.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Basic",
+                        FriendlyName = "Basic",
+                    },
+                },
+            };
+        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_HealthHealthSecurityRequirements =
+            new global::Langfuse.EndPointSecurityRequirement[]
+            {                s_HealthHealthSecurityRequirement0,
+            };
         partial void PrepareHealthHealthArguments(
             global::System.Net.Http.HttpClient httpClient);
         partial void PrepareHealthHealthRequest(
@@ -32,9 +51,15 @@ namespace Langfuse
             PrepareHealthHealthArguments(
                 httpClient: HttpClient);
 
+
+            var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_HealthHealthSecurityRequirements,
+                operationName: "HealthHealthAsync");
+
             var __pathBuilder = new global::Langfuse.PathBuilder(
                 path: "/api/public/health",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -44,7 +69,7 @@ namespace Langfuse
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

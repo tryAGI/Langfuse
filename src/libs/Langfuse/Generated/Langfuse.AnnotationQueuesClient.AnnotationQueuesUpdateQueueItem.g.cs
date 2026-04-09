@@ -5,6 +5,25 @@ namespace Langfuse
 {
     public partial class AnnotationQueuesClient
     {
+
+
+        private static readonly global::Langfuse.EndPointSecurityRequirement s_AnnotationQueuesUpdateQueueItemSecurityRequirement0 =
+            new global::Langfuse.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Langfuse.EndPointAuthorizationRequirement[]
+                {                    new global::Langfuse.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Basic",
+                        FriendlyName = "Basic",
+                    },
+                },
+            };
+        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_AnnotationQueuesUpdateQueueItemSecurityRequirements =
+            new global::Langfuse.EndPointSecurityRequirement[]
+            {                s_AnnotationQueuesUpdateQueueItemSecurityRequirement0,
+            };
         partial void PrepareAnnotationQueuesUpdateQueueItemArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string queueId,
@@ -50,9 +69,15 @@ namespace Langfuse
                 itemId: ref itemId,
                 request: request);
 
+
+            var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_AnnotationQueuesUpdateQueueItemSecurityRequirements,
+                operationName: "AnnotationQueuesUpdateQueueItemAsync");
+
             var __pathBuilder = new global::Langfuse.PathBuilder(
                 path: $"/api/public/annotation-queues/{queueId}/items/{itemId}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: new global::System.Net.Http.HttpMethod("PATCH"),
@@ -62,7 +87,7 @@ namespace Langfuse
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

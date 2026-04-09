@@ -5,6 +5,25 @@ namespace Langfuse
 {
     public partial class LlmConnectionsClient
     {
+
+
+        private static readonly global::Langfuse.EndPointSecurityRequirement s_LlmConnectionsListSecurityRequirement0 =
+            new global::Langfuse.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Langfuse.EndPointAuthorizationRequirement[]
+                {                    new global::Langfuse.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Basic",
+                        FriendlyName = "Basic",
+                    },
+                },
+            };
+        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_LlmConnectionsListSecurityRequirements =
+            new global::Langfuse.EndPointSecurityRequirement[]
+            {                s_LlmConnectionsListSecurityRequirement0,
+            };
         partial void PrepareLlmConnectionsListArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int? page,
@@ -42,13 +61,19 @@ namespace Langfuse
                 page: ref page,
                 limit: ref limit);
 
+
+            var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_LlmConnectionsListSecurityRequirements,
+                operationName: "LlmConnectionsListAsync");
+
             var __pathBuilder = new global::Langfuse.PathBuilder(
                 path: "/api/public/llm-connections",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("page", page?.ToString())
                 .AddOptionalParameter("limit", limit?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -58,7 +83,7 @@ namespace Langfuse
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

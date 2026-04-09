@@ -5,6 +5,25 @@ namespace Langfuse
 {
     public partial class PromptsClient
     {
+
+
+        private static readonly global::Langfuse.EndPointSecurityRequirement s_PromptsDeleteSecurityRequirement0 =
+            new global::Langfuse.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Langfuse.EndPointAuthorizationRequirement[]
+                {                    new global::Langfuse.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Basic",
+                        FriendlyName = "Basic",
+                    },
+                },
+            };
+        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_PromptsDeleteSecurityRequirements =
+            new global::Langfuse.EndPointSecurityRequirement[]
+            {                s_PromptsDeleteSecurityRequirement0,
+            };
         partial void PreparePromptsDeleteArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string promptName,
@@ -42,13 +61,19 @@ namespace Langfuse
                 label: ref label,
                 version: ref version);
 
+
+            var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_PromptsDeleteSecurityRequirements,
+                operationName: "PromptsDeleteAsync");
+
             var __pathBuilder = new global::Langfuse.PathBuilder(
                 path: $"/api/public/v2/prompts/{promptName}",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddOptionalParameter("label", label)
                 .AddOptionalParameter("version", version?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Delete,
@@ -58,7 +83,7 @@ namespace Langfuse
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

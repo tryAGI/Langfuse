@@ -5,6 +5,25 @@ namespace Langfuse
 {
     public partial class MediaClient
     {
+
+
+        private static readonly global::Langfuse.EndPointSecurityRequirement s_MediaPatchSecurityRequirement0 =
+            new global::Langfuse.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Langfuse.EndPointAuthorizationRequirement[]
+                {                    new global::Langfuse.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Basic",
+                        FriendlyName = "Basic",
+                    },
+                },
+            };
+        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_MediaPatchSecurityRequirements =
+            new global::Langfuse.EndPointSecurityRequirement[]
+            {                s_MediaPatchSecurityRequirement0,
+            };
         partial void PrepareMediaPatchArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string mediaId,
@@ -40,9 +59,15 @@ namespace Langfuse
                 mediaId: ref mediaId,
                 request: request);
 
+
+            var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_MediaPatchSecurityRequirements,
+                operationName: "MediaPatchAsync");
+
             var __pathBuilder = new global::Langfuse.PathBuilder(
                 path: $"/api/public/media/{mediaId}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: new global::System.Net.Http.HttpMethod("PATCH"),
@@ -52,7 +77,7 @@ namespace Langfuse
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

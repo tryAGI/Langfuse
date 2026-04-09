@@ -5,6 +5,25 @@ namespace Langfuse
 {
     public partial class ScoresClient
     {
+
+
+        private static readonly global::Langfuse.EndPointSecurityRequirement s_ScoresGetManySecurityRequirement0 =
+            new global::Langfuse.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Langfuse.EndPointAuthorizationRequirement[]
+                {                    new global::Langfuse.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Basic",
+                        FriendlyName = "Basic",
+                    },
+                },
+            };
+        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_ScoresGetManySecurityRequirements =
+            new global::Langfuse.EndPointSecurityRequirement[]
+            {                s_ScoresGetManySecurityRequirement0,
+            };
         partial void PrepareScoresGetManyArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref int? page,
@@ -137,6 +156,12 @@ namespace Langfuse
                 fields: ref fields,
                 filter: ref filter);
 
+
+            var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ScoresGetManySecurityRequirements,
+                operationName: "ScoresGetManyAsync");
+
             var __pathBuilder = new global::Langfuse.PathBuilder(
                 path: "/api/public/v2/scores",
                 baseUri: HttpClient.BaseAddress); 
@@ -162,7 +187,7 @@ namespace Langfuse
                 .AddOptionalParameter("traceTags", traceTags, delimiter: ",", explode: true)
                 .AddOptionalParameter("fields", fields)
                 .AddOptionalParameter("filter", filter) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -172,7 +197,7 @@ namespace Langfuse
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

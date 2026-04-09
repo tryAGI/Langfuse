@@ -5,6 +5,25 @@ namespace Langfuse
 {
     public partial class ScimClient
     {
+
+
+        private static readonly global::Langfuse.EndPointSecurityRequirement s_ScimListUsersSecurityRequirement0 =
+            new global::Langfuse.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Langfuse.EndPointAuthorizationRequirement[]
+                {                    new global::Langfuse.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Basic",
+                        FriendlyName = "Basic",
+                    },
+                },
+            };
+        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_ScimListUsersSecurityRequirements =
+            new global::Langfuse.EndPointSecurityRequirement[]
+            {                s_ScimListUsersSecurityRequirement0,
+            };
         partial void PrepareScimListUsersArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string? filter,
@@ -47,6 +66,12 @@ namespace Langfuse
                 startIndex: ref startIndex,
                 count: ref count);
 
+
+            var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_ScimListUsersSecurityRequirements,
+                operationName: "ScimListUsersAsync");
+
             var __pathBuilder = new global::Langfuse.PathBuilder(
                 path: "/api/public/scim/Users",
                 baseUri: HttpClient.BaseAddress); 
@@ -54,7 +79,7 @@ namespace Langfuse
                 .AddOptionalParameter("filter", filter)
                 .AddOptionalParameter("startIndex", startIndex?.ToString())
                 .AddOptionalParameter("count", count?.ToString()) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -64,7 +89,7 @@ namespace Langfuse
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

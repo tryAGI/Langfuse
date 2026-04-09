@@ -5,6 +5,25 @@ namespace Langfuse
 {
     public partial class LegacyMetricsV1Client
     {
+
+
+        private static readonly global::Langfuse.EndPointSecurityRequirement s_LegacyMetricsV1MetricsSecurityRequirement0 =
+            new global::Langfuse.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Langfuse.EndPointAuthorizationRequirement[]
+                {                    new global::Langfuse.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Basic",
+                        FriendlyName = "Basic",
+                    },
+                },
+            };
+        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_LegacyMetricsV1MetricsSecurityRequirements =
+            new global::Langfuse.EndPointSecurityRequirement[]
+            {                s_LegacyMetricsV1MetricsSecurityRequirement0,
+            };
         partial void PrepareLegacyMetricsV1MetricsArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string query);
@@ -39,12 +58,18 @@ namespace Langfuse
                 httpClient: HttpClient,
                 query: ref query);
 
+
+            var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_LegacyMetricsV1MetricsSecurityRequirements,
+                operationName: "LegacyMetricsV1MetricsAsync");
+
             var __pathBuilder = new global::Langfuse.PathBuilder(
                 path: "/api/public/metrics",
                 baseUri: HttpClient.BaseAddress); 
             __pathBuilder
                 .AddRequiredParameter("query", query) 
-                ; 
+                ;
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -54,7 +79,7 @@ namespace Langfuse
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

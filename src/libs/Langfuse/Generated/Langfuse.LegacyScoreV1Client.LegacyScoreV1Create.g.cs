@@ -5,6 +5,25 @@ namespace Langfuse
 {
     public partial class LegacyScoreV1Client
     {
+
+
+        private static readonly global::Langfuse.EndPointSecurityRequirement s_LegacyScoreV1CreateSecurityRequirement0 =
+            new global::Langfuse.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Langfuse.EndPointAuthorizationRequirement[]
+                {                    new global::Langfuse.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Basic",
+                        FriendlyName = "Basic",
+                    },
+                },
+            };
+        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_LegacyScoreV1CreateSecurityRequirements =
+            new global::Langfuse.EndPointSecurityRequirement[]
+            {                s_LegacyScoreV1CreateSecurityRequirement0,
+            };
         partial void PrepareLegacyScoreV1CreateArguments(
             global::System.Net.Http.HttpClient httpClient,
             global::Langfuse.LegacyCreateScoreRequest request);
@@ -40,9 +59,15 @@ namespace Langfuse
                 httpClient: HttpClient,
                 request: request);
 
+
+            var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_LegacyScoreV1CreateSecurityRequirements,
+                operationName: "LegacyScoreV1CreateAsync");
+
             var __pathBuilder = new global::Langfuse.PathBuilder(
                 path: "/api/public/scores",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Post,
@@ -52,7 +77,7 @@ namespace Langfuse
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")

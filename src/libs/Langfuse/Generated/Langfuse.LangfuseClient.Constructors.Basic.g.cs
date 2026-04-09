@@ -6,6 +6,7 @@ namespace Langfuse
     public sealed partial class LangfuseClient
     {
         /// <inheritdoc cref="LangfuseClient(global::System.Net.Http.HttpClient?, global::System.Uri?, global::System.Collections.Generic.List{global::Langfuse.EndPointAuthorization}?, bool)"/>
+
         public LangfuseClient(
             string username,
             string password,

@@ -5,6 +5,25 @@ namespace Langfuse
 {
     public partial class DatasetsClient
     {
+
+
+        private static readonly global::Langfuse.EndPointSecurityRequirement s_DatasetsGetRunSecurityRequirement0 =
+            new global::Langfuse.EndPointSecurityRequirement
+            {
+                Authorizations = new global::Langfuse.EndPointAuthorizationRequirement[]
+                {                    new global::Langfuse.EndPointAuthorizationRequirement
+                    {
+                        Type = "Http",
+                        Location = "Header",
+                        Name = "Basic",
+                        FriendlyName = "Basic",
+                    },
+                },
+            };
+        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_DatasetsGetRunSecurityRequirements =
+            new global::Langfuse.EndPointSecurityRequirement[]
+            {                s_DatasetsGetRunSecurityRequirement0,
+            };
         partial void PrepareDatasetsGetRunArguments(
             global::System.Net.Http.HttpClient httpClient,
             ref string datasetName,
@@ -42,9 +61,15 @@ namespace Langfuse
                 datasetName: ref datasetName,
                 runName: ref runName);
 
+
+            var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
+                availableAuthorizations: Authorizations,
+                securityRequirements: s_DatasetsGetRunSecurityRequirements,
+                operationName: "DatasetsGetRunAsync");
+
             var __pathBuilder = new global::Langfuse.PathBuilder(
                 path: $"/api/public/datasets/{datasetName}/runs/{runName}",
-                baseUri: HttpClient.BaseAddress); 
+                baseUri: HttpClient.BaseAddress);
             var __path = __pathBuilder.ToString();
             using var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
                 method: global::System.Net.Http.HttpMethod.Get,
@@ -54,7 +79,7 @@ namespace Langfuse
             __httpRequest.VersionPolicy = global::System.Net.Http.HttpVersionPolicy.RequestVersionOrHigher;
 #endif
 
-            foreach (var __authorization in Authorizations)
+            foreach (var __authorization in __authorizations)
             {
                 if (__authorization.Type == "Http" ||
                     __authorization.Type == "OAuth2")
