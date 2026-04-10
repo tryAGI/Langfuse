@@ -8,11 +8,13 @@ namespace Langfuse
         /// Create a model
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Langfuse.Model> ModelsCreateAsync(
 
             global::Langfuse.CreateModelRequest request,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a model
@@ -59,6 +61,7 @@ namespace Langfuse
         /// <param name="tokenizerConfig">
         /// Optional. Configuration for the selected tokenizer. Needs to be JSON. See docs for more details.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Langfuse.Model> ModelsCreateAsync(
@@ -72,6 +75,7 @@ namespace Langfuse
             global::System.Collections.Generic.IList<global::Langfuse.PricingTierInput>? pricingTiers = default,
             string? tokenizerId = default,
             object? tokenizerConfig = default,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

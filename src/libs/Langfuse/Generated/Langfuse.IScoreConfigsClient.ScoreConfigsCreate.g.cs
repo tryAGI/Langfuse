@@ -8,11 +8,13 @@ namespace Langfuse
         /// Create a score configuration (config). Score configs are used to define the structure of scores
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Langfuse.ScoreConfig> ScoreConfigsCreateAsync(
 
             global::Langfuse.CreateScoreConfigRequest request,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a score configuration (config). Score configs are used to define the structure of scores
@@ -31,6 +33,7 @@ namespace Langfuse
         /// <param name="description">
         /// Description is shown across the Langfuse UI and can be used to e.g. explain the config categories in detail, why a numeric range was set, or provide additional context on config name or usage
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Langfuse.ScoreConfig> ScoreConfigsCreateAsync(
@@ -40,6 +43,7 @@ namespace Langfuse
             double? minValue = default,
             double? maxValue = default,
             string? description = default,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

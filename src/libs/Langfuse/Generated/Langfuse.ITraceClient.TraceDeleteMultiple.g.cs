@@ -8,11 +8,13 @@ namespace Langfuse
         /// Delete multiple traces
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Langfuse.DeleteTraceResponse> TraceDeleteMultipleAsync(
 
             global::Langfuse.TraceDeleteMultipleRequest request,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Delete multiple traces
@@ -20,10 +22,12 @@ namespace Langfuse
         /// <param name="traceIds">
         /// List of trace IDs to delete
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Langfuse.DeleteTraceResponse> TraceDeleteMultipleAsync(
             global::System.Collections.Generic.IList<string> traceIds,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
