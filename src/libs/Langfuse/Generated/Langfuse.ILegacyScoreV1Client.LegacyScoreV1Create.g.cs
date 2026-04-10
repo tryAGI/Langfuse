@@ -8,11 +8,13 @@ namespace Langfuse
         /// Create a score (supports both trace and session scores)
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Langfuse.LegacyCreateScoreResponse> LegacyScoreV1CreateAsync(
 
             global::Langfuse.LegacyCreateScoreRequest request,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a score (supports both trace and session scores)
@@ -40,6 +42,7 @@ namespace Langfuse
         /// <param name="configId">
         /// Reference a score config on a score. The unique langfuse identifier of a score config. When passing this field, the dataType and stringValue fields are automatically populated.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Langfuse.LegacyCreateScoreResponse> LegacyScoreV1CreateAsync(
@@ -56,6 +59,7 @@ namespace Langfuse
             string? queueId = default,
             global::Langfuse.ScoreDataType? dataType = default,
             string? configId = default,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

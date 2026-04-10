@@ -9,12 +9,14 @@ namespace Langfuse
         /// </summary>
         /// <param name="configId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Langfuse.ScoreConfig> ScoreConfigsUpdateAsync(
             string configId,
 
             global::Langfuse.UpdateScoreConfigRequest request,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Update a score config
@@ -38,6 +40,7 @@ namespace Langfuse
         /// <param name="description">
         /// Description is shown across the Langfuse UI and can be used to e.g. explain the config categories in detail, why a numeric range was set, or provide additional context on config name or usage
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Langfuse.ScoreConfig> ScoreConfigsUpdateAsync(
@@ -48,6 +51,7 @@ namespace Langfuse
             double? minValue = default,
             double? maxValue = default,
             string? description = default,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

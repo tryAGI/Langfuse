@@ -8,11 +8,13 @@ namespace Langfuse
         /// Create a dataset item
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Langfuse.DatasetItem> DatasetItemsCreateAsync(
 
             global::Langfuse.CreateDatasetItemRequest request,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a dataset item
@@ -27,6 +29,7 @@ namespace Langfuse
         /// Dataset items are upserted on their id. Id needs to be unique (project-level) and cannot be reused across datasets.
         /// </param>
         /// <param name="status"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Langfuse.DatasetItem> DatasetItemsCreateAsync(
@@ -38,6 +41,7 @@ namespace Langfuse
             string? sourceObservationId = default,
             string? id = default,
             global::Langfuse.DatasetStatus? status = default,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

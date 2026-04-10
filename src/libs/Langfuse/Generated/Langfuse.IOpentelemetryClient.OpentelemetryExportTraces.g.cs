@@ -19,11 +19,13 @@ namespace Langfuse
         /// - Data model: https://langfuse.com/docs/observability/data-model
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Langfuse.OtelTraceResponse> OpentelemetryExportTracesAsync(
 
             global::Langfuse.OpentelemetryExportTracesRequest request,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// **OpenTelemetry Traces Ingestion Endpoint**<br/>
@@ -42,10 +44,12 @@ namespace Langfuse
         /// <param name="resourceSpans">
         /// Array of resource spans containing trace data as defined in the OTLP specification
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Langfuse.OtelTraceResponse> OpentelemetryExportTracesAsync(
             global::System.Collections.Generic.IList<global::Langfuse.OtelResourceSpan> resourceSpans,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

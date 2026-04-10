@@ -9,12 +9,14 @@ namespace Langfuse
         /// </summary>
         /// <param name="mediaId"></param>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
         global::System.Threading.Tasks.Task MediaPatchAsync(
             string mediaId,
 
             global::Langfuse.PatchMediaBody request,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Patch a media record
@@ -32,6 +34,7 @@ namespace Langfuse
         /// <param name="uploadTimeMs">
         /// The time in milliseconds it took to upload the media record
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task MediaPatchAsync(
@@ -40,6 +43,7 @@ namespace Langfuse
             int uploadHttpStatus,
             string? uploadHttpError = default,
             int? uploadTimeMs = default,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }

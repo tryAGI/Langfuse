@@ -27,6 +27,7 @@ namespace Langfuse
             Authorizations.Add(new global::Langfuse.EndPointAuthorization
             {
                 Type = "Http",
+                SchemeId = "HttpBasic",
                 Location = "Header",
                 Name = "Basic",
                 Value = global::System.Convert.ToBase64String(

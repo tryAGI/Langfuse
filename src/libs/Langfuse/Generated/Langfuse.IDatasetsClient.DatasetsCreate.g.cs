@@ -8,11 +8,13 @@ namespace Langfuse
         /// Create a dataset
         /// </summary>
         /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Langfuse.Dataset> DatasetsCreateAsync(
 
             global::Langfuse.CreateDatasetRequest request,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create a dataset
@@ -26,6 +28,7 @@ namespace Langfuse
         /// <param name="expectedOutputSchema">
         /// JSON Schema for validating dataset item expected outputs. When set, all new and existing dataset items will be validated against this schema.
         /// </param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
         global::System.Threading.Tasks.Task<global::Langfuse.Dataset> DatasetsCreateAsync(
@@ -34,6 +37,7 @@ namespace Langfuse
             object? metadata = default,
             object? inputSchema = default,
             object? expectedOutputSchema = default,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
 }
