@@ -24,7 +24,7 @@ namespace Langfuse
         public required global::Langfuse.BlobStorageIntegrationType Type { get; set; }
 
         /// <summary>
-        /// Name of the storage bucket
+        /// Name of the storage bucket. For AZURE_BLOB_STORAGE, must be a valid Azure container name (3-63 chars, lowercase letters, numbers, and hyphens only, must start and end with a letter or number, no consecutive hyphens).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("bucketName")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -125,7 +125,7 @@ namespace Langfuse
         /// </param>
         /// <param name="type"></param>
         /// <param name="bucketName">
-        /// Name of the storage bucket
+        /// Name of the storage bucket. For AZURE_BLOB_STORAGE, must be a valid Azure container name (3-63 chars, lowercase letters, numbers, and hyphens only, must start and end with a letter or number, no consecutive hyphens).
         /// </param>
         /// <param name="region">
         /// Storage region
