@@ -280,6 +280,24 @@ namespace Langfuse
         };
 
         /// <summary>
+        /// 
+        /// </summary>
+        public UnstableEvaluationRulesClient UnstableEvaluationRules => new UnstableEvaluationRulesClient(HttpClient, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public UnstableEvaluatorsClient UnstableEvaluators => new UnstableEvaluatorsClient(HttpClient, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
         /// Creates a new instance of the LangfuseClient.
         /// If no httpClient is provided, a new one will be created.
         /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.

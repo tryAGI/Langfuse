@@ -180,5 +180,15 @@ namespace Langfuse
         /// </summary>
         public TraceClient Trace { get; }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public UnstableEvaluationRulesClient UnstableEvaluationRules { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public UnstableEvaluatorsClient UnstableEvaluators { get; }
+
     }
 }
