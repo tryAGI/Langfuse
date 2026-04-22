@@ -1,0 +1,60 @@
+#nullable enable
+
+namespace Langfuse.JsonConverters
+{
+    /// <inheritdoc />
+    public sealed class UnstableEvaluationRuleNumberFilterOperatorNullableJsonConverter : global::System.Text.Json.Serialization.JsonConverter<global::Langfuse.UnstableEvaluationRuleNumberFilterOperator?>
+    {
+        /// <inheritdoc />
+        public override global::Langfuse.UnstableEvaluationRuleNumberFilterOperator? Read(
+            ref global::System.Text.Json.Utf8JsonReader reader,
+            global::System.Type typeToConvert,
+            global::System.Text.Json.JsonSerializerOptions options)
+        {
+            switch (reader.TokenType)
+            {
+                case global::System.Text.Json.JsonTokenType.String:
+                {
+                    var stringValue = reader.GetString();
+                    if (stringValue != null)
+                    {
+                        return global::Langfuse.UnstableEvaluationRuleNumberFilterOperatorExtensions.ToEnum(stringValue);
+                    }
+                    
+                    break;
+                }
+                case global::System.Text.Json.JsonTokenType.Number:
+                {
+                    var numValue = reader.GetInt32();
+                    return (global::Langfuse.UnstableEvaluationRuleNumberFilterOperator)numValue;
+                }
+                case global::System.Text.Json.JsonTokenType.Null:
+                {
+                    return default(global::Langfuse.UnstableEvaluationRuleNumberFilterOperator?);
+                }
+                default:
+                    throw new global::System.ArgumentOutOfRangeException(nameof(reader));
+            }
+
+            return default;
+        }
+
+        /// <inheritdoc />
+        public override void Write(
+            global::System.Text.Json.Utf8JsonWriter writer,
+            global::Langfuse.UnstableEvaluationRuleNumberFilterOperator? value,
+            global::System.Text.Json.JsonSerializerOptions options)
+        {
+            writer = writer ?? throw new global::System.ArgumentNullException(nameof(writer));
+
+            if (value == null)
+            {
+                writer.WriteNullValue();
+            }
+            else
+            {
+                writer.WriteStringValue(global::Langfuse.UnstableEvaluationRuleNumberFilterOperatorExtensions.ToValueString(value.Value));
+            }
+        }
+    }
+}
