@@ -92,6 +92,15 @@ namespace Langfuse
         public string? ConfigId { get; set; }
 
         /// <summary>
+        /// Source values accepted when creating a score via the public REST API.<br/>
+        /// EVAL is reserved for internal evaluator outputs and is intentionally not<br/>
+        /// exposed here — use commons.ScoreSource when reading scores.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("source")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.LegacyCreateScoreSourceJsonConverter))]
+        public global::Langfuse.LegacyCreateScoreSource? Source { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -123,6 +132,11 @@ namespace Langfuse
         /// <param name="configId">
         /// Reference a score config on a score. The unique langfuse identifier of a score config. When passing this field, the dataType and stringValue fields are automatically populated.
         /// </param>
+        /// <param name="source">
+        /// Source values accepted when creating a score via the public REST API.<br/>
+        /// EVAL is reserved for internal evaluator outputs and is intentionally not<br/>
+        /// exposed here — use commons.ScoreSource when reading scores.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -139,7 +153,8 @@ namespace Langfuse
             string? environment,
             string? queueId,
             global::Langfuse.ScoreDataType? dataType,
-            string? configId)
+            string? configId,
+            global::Langfuse.LegacyCreateScoreSource? source)
         {
             this.Id = id;
             this.TraceId = traceId;
@@ -154,6 +169,7 @@ namespace Langfuse
             this.QueueId = queueId;
             this.DataType = dataType;
             this.ConfigId = configId;
+            this.Source = source;
         }
 
         /// <summary>

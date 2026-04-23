@@ -42,6 +42,11 @@ namespace Langfuse
         /// <param name="configId">
         /// Reference a score config on a score. The unique langfuse identifier of a score config. When passing this field, the dataType and stringValue fields are automatically populated.
         /// </param>
+        /// <param name="source">
+        /// Source values accepted when creating a score via the public REST API.<br/>
+        /// EVAL is reserved for internal evaluator outputs and is intentionally not<br/>
+        /// exposed here — use commons.ScoreSource when reading scores.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -59,6 +64,7 @@ namespace Langfuse
             string? queueId = default,
             global::Langfuse.ScoreDataType? dataType = default,
             string? configId = default,
+            global::Langfuse.LegacyCreateScoreSource? source = default,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
