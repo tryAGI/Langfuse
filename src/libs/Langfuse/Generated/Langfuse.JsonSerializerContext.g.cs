@@ -153,6 +153,10 @@ namespace Langfuse
 
             typeof(global::Langfuse.JsonConverters.ObservationTypeNullableJsonConverter),
 
+            typeof(global::Langfuse.JsonConverters.LegacyCreateScoreSourceJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.LegacyCreateScoreSourceNullableJsonConverter),
+
             typeof(global::Langfuse.JsonConverters.LlmAdapterJsonConverter),
 
             typeof(global::Langfuse.JsonConverters.LlmAdapterNullableJsonConverter),
@@ -648,6 +652,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.Observation>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.LegacyObservationsViews))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.LegacyCreateScoreRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.LegacyCreateScoreSource), TypeInfoPropertyName = "LegacyCreateScoreSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.LegacyCreateScoreResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.LlmConnection))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PaginatedLlmConnections))]
