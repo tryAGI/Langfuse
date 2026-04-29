@@ -211,7 +211,7 @@ namespace Langfuse
                 PrepareMetricsMetricsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    query: query);
+                    query: query!);
 
                 return __httpRequest;
             }

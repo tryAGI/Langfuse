@@ -124,7 +124,7 @@ namespace Langfuse
                 PrepareMediaGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    mediaId: mediaId);
+                    mediaId: mediaId!);
 
                 return __httpRequest;
             }

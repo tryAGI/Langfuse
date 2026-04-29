@@ -132,7 +132,7 @@ namespace Langfuse
                 PrepareTraceGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    traceId: traceId,
+                    traceId: traceId!,
                     fields: fields);
 
                 return __httpRequest;

@@ -133,7 +133,7 @@ namespace Langfuse
                 PreparePromptsDeleteRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    promptName: promptName,
+                    promptName: promptName!,
                     label: label,
                     version: version);
 

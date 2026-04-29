@@ -124,7 +124,7 @@ namespace Langfuse
                 PrepareScoreConfigsGetByIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    configId: configId);
+                    configId: configId!);
 
                 return __httpRequest;
             }

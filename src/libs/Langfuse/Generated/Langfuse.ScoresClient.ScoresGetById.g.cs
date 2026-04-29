@@ -124,7 +124,7 @@ namespace Langfuse
                 PrepareScoresGetByIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    scoreId: scoreId);
+                    scoreId: scoreId!);
 
                 return __httpRequest;
             }

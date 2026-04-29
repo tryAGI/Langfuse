@@ -145,8 +145,8 @@ namespace Langfuse
                 PrepareDatasetRunItemsListRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    datasetId: datasetId,
-                    runName: runName,
+                    datasetId: datasetId!,
+                    runName: runName!,
                     page: page,
                     limit: limit);
 

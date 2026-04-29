@@ -125,7 +125,7 @@ namespace Langfuse
                 PrepareUnstableEvaluationRulesDeleteRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    evaluationRuleId: evaluationRuleId);
+                    evaluationRuleId: evaluationRuleId!);
 
                 return __httpRequest;
             }
