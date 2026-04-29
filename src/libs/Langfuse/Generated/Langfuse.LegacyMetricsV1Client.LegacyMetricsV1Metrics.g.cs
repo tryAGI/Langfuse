@@ -129,7 +129,7 @@ namespace Langfuse
                 PrepareLegacyMetricsV1MetricsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    query: query);
+                    query: query!);
 
                 return __httpRequest;
             }

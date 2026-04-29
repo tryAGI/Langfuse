@@ -154,7 +154,7 @@ namespace Langfuse
                 PrepareUnstableEvaluationRulesUpdateRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    evaluationRuleId: evaluationRuleId,
+                    evaluationRuleId: evaluationRuleId!,
                     request: request);
 
                 return __httpRequest;

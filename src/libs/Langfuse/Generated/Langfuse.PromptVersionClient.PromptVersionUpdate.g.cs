@@ -143,8 +143,8 @@ namespace Langfuse
                 PreparePromptVersionUpdateRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    name: name,
-                    version: version,
+                    name: name!,
+                    version: version!,
                     request: request);
 
                 return __httpRequest;

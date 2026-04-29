@@ -125,7 +125,7 @@ namespace Langfuse
                 PrepareUnstableEvaluatorsGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    evaluatorId: evaluatorId);
+                    evaluatorId: evaluatorId!);
 
                 return __httpRequest;
             }

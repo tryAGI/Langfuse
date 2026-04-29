@@ -124,7 +124,7 @@ namespace Langfuse
                 PrepareBlobStorageIntegrationsDeleteBlobStorageIntegrationRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    id: id);
+                    id: id!);
 
                 return __httpRequest;
             }

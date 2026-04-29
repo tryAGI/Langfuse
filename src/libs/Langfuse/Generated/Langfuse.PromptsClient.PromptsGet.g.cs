@@ -144,7 +144,7 @@ namespace Langfuse
                 PreparePromptsGetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    promptName: promptName,
+                    promptName: promptName!,
                     version: version,
                     label: label,
                     resolve: resolve);

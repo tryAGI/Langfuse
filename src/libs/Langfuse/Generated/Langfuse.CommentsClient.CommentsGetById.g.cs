@@ -124,7 +124,7 @@ namespace Langfuse
                 PrepareCommentsGetByIdRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    commentId: commentId);
+                    commentId: commentId!);
 
                 return __httpRequest;
             }

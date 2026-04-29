@@ -129,8 +129,8 @@ namespace Langfuse
                 PrepareProjectsDeleteApiKeyRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    projectId: projectId,
-                    apiKeyId: apiKeyId);
+                    projectId: projectId!,
+                    apiKeyId: apiKeyId!);
 
                 return __httpRequest;
             }

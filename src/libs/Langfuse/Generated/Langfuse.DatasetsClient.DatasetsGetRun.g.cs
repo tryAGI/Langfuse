@@ -129,8 +129,8 @@ namespace Langfuse
                 PrepareDatasetsGetRunRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    datasetName: datasetName,
-                    runName: runName);
+                    datasetName: datasetName!,
+                    runName: runName!);
 
                 return __httpRequest;
             }

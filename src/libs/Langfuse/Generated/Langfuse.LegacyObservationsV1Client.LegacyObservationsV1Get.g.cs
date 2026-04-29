@@ -124,7 +124,7 @@ namespace Langfuse
                 PrepareLegacyObservationsV1GetRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    observationId: observationId);
+                    observationId: observationId!);
 
                 return __httpRequest;
             }

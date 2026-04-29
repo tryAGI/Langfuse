@@ -133,7 +133,7 @@ namespace Langfuse
                 PrepareMediaPatchRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    mediaId: mediaId,
+                    mediaId: mediaId!,
                     request: request);
 
                 return __httpRequest;

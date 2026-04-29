@@ -144,7 +144,7 @@ namespace Langfuse
                 PrepareAnnotationQueuesListQueueItemsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    queueId: queueId,
+                    queueId: queueId!,
                     status: status,
                     page: page,
                     limit: limit);

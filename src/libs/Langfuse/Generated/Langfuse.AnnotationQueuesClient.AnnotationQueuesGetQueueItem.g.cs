@@ -129,8 +129,8 @@ namespace Langfuse
                 PrepareAnnotationQueuesGetQueueItemRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    queueId: queueId,
-                    itemId: itemId);
+                    queueId: queueId!,
+                    itemId: itemId!);
 
                 return __httpRequest;
             }
