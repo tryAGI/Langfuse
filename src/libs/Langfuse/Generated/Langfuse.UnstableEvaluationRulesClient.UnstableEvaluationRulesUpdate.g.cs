@@ -74,6 +74,47 @@ namespace Langfuse
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            var __response = await UnstableEvaluationRulesUpdateAsResponseAsync(
+                evaluationRuleId: evaluationRuleId,
+
+                request: request,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+
+            return __response.Body;
+        }
+        /// <summary>
+        /// Update an evaluation rule.<br/>
+        /// Typical uses:<br/>
+        /// - enable or disable live execution<br/>
+        /// - switch to another evaluator<br/>
+        /// - adjust sampling<br/>
+        /// - change filters<br/>
+        /// - update variable mappings<br/>
+        /// Important behavior:<br/>
+        /// - provide only the fields you want to change<br/>
+        /// - if you provide `evaluator`, Langfuse resolves that evaluator family to its latest version before saving<br/>
+        /// - changing `target`, `filter`, or `mapping` must still produce a valid target-specific configuration<br/>
+        /// - if you change `target`, also send a compatible `filter` and `mapping` in the same request unless the existing ones are still valid for the new target<br/>
+        /// - if the resulting config is enabled, Langfuse re-validates that the selected evaluator can run<br/>
+        /// - if the update would move a non-active evaluation rule into the active state and the project already has 50 active evaluation rules, the API returns `409`<br/>
+        /// Recovery guidance:<br/>
+        /// - if the update fails with `missing_variable_mapping` or `invalid_variable_mapping` after changing `evaluator` or `target`, resend the request with a complete new `mapping`<br/>
+        /// - if the update fails with `invalid_filter_value` after changing `target`, resend the request with a target-compatible `filter`
+        /// </summary>
+        /// <param name="evaluationRuleId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Langfuse.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.UnstableEvaluationRule>> UnstableEvaluationRulesUpdateAsResponseAsync(
+            string evaluationRuleId,
+
+            global::Langfuse.UnstableUpdateEvaluationRuleRequest request,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             request = request ?? throw new global::System.ArgumentNullException(nameof(request));
 
             PrepareArguments(
@@ -105,6 +146,7 @@ namespace Langfuse
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Langfuse.PathBuilder(
                                 path: $"/api/public/unstable/evaluation-rules/{evaluationRuleId}",
                                 baseUri: HttpClient.BaseAddress);
@@ -185,6 +227,8 @@ namespace Langfuse
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -195,6 +239,11 @@ namespace Langfuse
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Langfuse.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -212,6 +261,8 @@ namespace Langfuse
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -221,8 +272,7 @@ namespace Langfuse
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Langfuse.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -231,6 +281,11 @@ namespace Langfuse
                         __attempt < __maxAttempts &&
                         global::Langfuse.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Langfuse.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -247,14 +302,15 @@ namespace Langfuse
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Langfuse.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -294,6 +350,8 @@ namespace Langfuse
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -314,6 +372,8 @@ namespace Langfuse
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // 
@@ -642,9 +702,13 @@ namespace Langfuse
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    return
-                                        global::Langfuse.UnstableEvaluationRule.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Langfuse.UnstableEvaluationRule.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
+                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.UnstableEvaluationRule>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Langfuse.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -672,9 +736,13 @@ namespace Langfuse
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    return
-                                        await global::Langfuse.UnstableEvaluationRule.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Langfuse.UnstableEvaluationRule.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
+                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.UnstableEvaluationRule>(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Langfuse.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri,
+                                        body: __value);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

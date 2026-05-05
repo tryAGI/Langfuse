@@ -19,6 +19,18 @@ namespace Langfuse
         /// <summary>
         /// Create or update an LLM connection. The connection is upserted on provider.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Langfuse.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.LlmConnection>> LlmConnectionsUpsertAsResponseAsync(
+
+            global::Langfuse.UpsertLlmConnectionRequest request,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create or update an LLM connection. The connection is upserted on provider.
+        /// </summary>
         /// <param name="provider">
         /// Provider name (e.g., 'openai', 'my-gateway'). Must be unique in project, used for upserting.
         /// </param>
