@@ -499,7 +499,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.Observation))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.Usage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ObservationLevel), TypeInfoPropertyName = "ObservationLevel2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, int>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, int>), TypeInfoPropertyName = "DictionaryStringInt32_System_Collections_Generic_Dictionary_string_int")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, double>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ObservationV2))]
@@ -644,7 +644,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.IngestionSuccess>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.IngestionError>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.OpenAICompletionUsageSchema))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, int?>), TypeInfoPropertyName = "DictionaryStringInt32_System_Collections_Generic_Dictionary_string_int")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, int?>), TypeInfoPropertyName = "DictionaryStringInt32_System_Collections_Generic_Dictionary_string_int_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.OpenAIResponseUsageSchema))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.LegacyMetricsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<object>))]
@@ -947,12 +947,717 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.TraceWithDetails>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstablePublicApiValidationIssue>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableEvaluationRuleFilter>))]
+    internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+
+    /// <summary>
+    /// 
+    /// </summary>
+    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+        Converters = new global::System.Type[]
+        {
+            typeof(global::Langfuse.JsonConverters.AnnotationQueueStatusJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.AnnotationQueueStatusNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.AnnotationQueueObjectTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.AnnotationQueueObjectTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.BlobStorageIntegrationTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.BlobStorageIntegrationTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.BlobStorageIntegrationFileTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.BlobStorageIntegrationFileTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.BlobStorageExportModeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.BlobStorageExportModeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.BlobStorageExportFrequencyJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.BlobStorageExportFrequencyNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.BlobStorageSyncStatusJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.BlobStorageSyncStatusNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreV1Variant1DataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreV1Variant1DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreV1Variant2DataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreV1Variant2DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreV1Variant3DataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreV1Variant3DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreV1Variant4DataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreV1Variant4DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreVariant1DataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreVariant1DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreVariant2DataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreVariant2DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreVariant3DataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreVariant3DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreVariant4DataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreVariant4DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreVariant5DataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreVariant5DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.PricingTierOperatorJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.PricingTierOperatorNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ModelUsageUnitJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ModelUsageUnitNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ObservationLevelJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ObservationLevelNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.CommentObjectTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.CommentObjectTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.DatasetStatusJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.DatasetStatusNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreSourceJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreSourceNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreConfigDataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreConfigDataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreDataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreDataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventVariant1TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventVariant1TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventVariant2TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventVariant2TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventVariant3TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventVariant3TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventVariant4TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventVariant4TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventVariant5TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventVariant5TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventVariant6TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventVariant6TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventVariant7TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventVariant7TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventVariant8TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventVariant8TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventVariant9TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventVariant9TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventVariant10TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventVariant10TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ObservationTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ObservationTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.LegacyCreateScoreSourceJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.LegacyCreateScoreSourceNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.LlmAdapterJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.LlmAdapterNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.MediaContentTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.MediaContentTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.MembershipRoleJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.MembershipRoleNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.PromptVariant1TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.PromptVariant1TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.PromptVariant2TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.PromptVariant2TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.PromptTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.PromptTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ChatMessageTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ChatMessageTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.PlaceholderMessageTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.PlaceholderMessageTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.CreateChatPromptTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.CreateChatPromptTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.CreateTextPromptTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.CreateTextPromptTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.GetScoresResponseDataVariant1DataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.GetScoresResponseDataVariant1DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.GetScoresResponseDataVariant2DataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.GetScoresResponseDataVariant2DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.GetScoresResponseDataVariant3DataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.GetScoresResponseDataVariant3DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.GetScoresResponseDataVariant4DataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.GetScoresResponseDataVariant4DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.GetScoresResponseDataVariant5DataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.GetScoresResponseDataVariant5DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluatorTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluatorTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluatorScopeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluatorScopeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleTargetJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleTargetNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleStatusJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleStatusNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleMappingSourceJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleMappingSourceNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluatorOutputDataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluatorOutputDataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluatorOutputDefinitionVariant1DataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluatorOutputDefinitionVariant1DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluatorOutputDefinitionVariant2DataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluatorOutputDefinitionVariant2DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluatorOutputDefinitionVariant3DataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluatorOutputDefinitionVariant3DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstablePublicEvaluatorOutputDefinitionVariant1DataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstablePublicEvaluatorOutputDefinitionVariant1DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstablePublicEvaluatorOutputDefinitionVariant2DataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstablePublicEvaluatorOutputDefinitionVariant2DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstablePublicEvaluatorOutputDefinitionVariant3DataTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstablePublicEvaluatorOutputDefinitionVariant3DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleStringFilterOperatorJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleStringFilterOperatorNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleNumberFilterOperatorJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleNumberFilterOperatorNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleOptionsFilterOperatorJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleOptionsFilterOperatorNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleArrayOptionsFilterOperatorJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleArrayOptionsFilterOperatorNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleBooleanFilterOperatorJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleBooleanFilterOperatorNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleNullFilterOperatorJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleNullFilterOperatorNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant1TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant1TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant2TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant2TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant3TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant3TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant4TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant4TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant5TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant5TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant6TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant6TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant7TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant7TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant8TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant8TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant9TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant9TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant10TypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant10TypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstablePublicApiErrorCodeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstablePublicApiErrorCodeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreV1JsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ScoreJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.CreateScoreValueJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.MapValueJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionEventJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.IngestionUsageJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UsageDetailsJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.CreatePromptRequestJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.PromptJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.ChatMessageWithPlaceholdersJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.GetScoresResponseDataJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluatorOutputDefinitionJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstablePublicEvaluatorOutputDefinitionJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreV1Variant12, global::Langfuse.NumericScoreV1>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreV1Variant22, global::Langfuse.CategoricalScoreV1>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreV1Variant32, global::Langfuse.BooleanScoreV1>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreV1Variant42, global::Langfuse.TextScoreV1>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreVariant12, global::Langfuse.NumericScore>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreVariant22, global::Langfuse.CategoricalScore>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreVariant32, global::Langfuse.BooleanScore>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreVariant42, global::Langfuse.CorrectionScore>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreVariant52, global::Langfuse.TextScore>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.PromptVariant12, global::Langfuse.ChatPrompt>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.GetScoresResponseDataVariant12, global::Langfuse.GetScoresResponseDataNumeric>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.GetScoresResponseDataVariant22, global::Langfuse.GetScoresResponseDataCategorical>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.GetScoresResponseDataVariant32, global::Langfuse.GetScoresResponseDataBoolean>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.GetScoresResponseDataVariant42, global::Langfuse.GetScoresResponseDataCorrection>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluationRuleFilterVariant12, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluationRuleFilterVariant22, global::Langfuse.UnstableStringEvaluationRuleFilter>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluationRuleFilterVariant32, global::Langfuse.UnstableNumberEvaluationRuleFilter>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluationRuleFilterVariant42, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluationRuleFilterVariant52, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluationRuleFilterVariant62, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluationRuleFilterVariant72, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluationRuleFilterVariant82, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluationRuleFilterVariant92, global::Langfuse.UnstableBooleanEvaluationRuleFilter>),
+
+            typeof(global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluationRuleFilterVariant102, global::Langfuse.UnstableNullEvaluationRuleFilter>),
+
+            typeof(global::Langfuse.JsonConverters.UnixTimestampJsonConverter),
+        })]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableEvaluationRuleMapping>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableEvaluationRule>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableEvaluator>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.IngestionEvent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.OtelResourceSpan>))]
+    internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+    /// <summary>
+    /// 
+    /// </summary>
     public sealed partial class SourceGenerationContext : global::System.Text.Json.Serialization.JsonSerializerContext
     {
+        private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = global::System.Text.Json.Serialization.Metadata.JsonTypeInfoResolver.Combine(
+            SourceGenerationContextChunk0.Default,
+
+            SourceGenerationContextChunk1.Default
+            );
+
+        private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static SourceGenerationContext Default { get; } = new(DefaultOptions);
+
+        private SourceGenerationContext(global::System.Text.Json.JsonSerializerOptions options)
+            : base(options)
+        {
+        }
+
+        /// <inheritdoc />
+        protected override global::System.Text.Json.JsonSerializerOptions? GeneratedSerializerOptions => DefaultOptions;
+
+        /// <inheritdoc />
+        public override global::System.Text.Json.Serialization.Metadata.JsonTypeInfo? GetTypeInfo(global::System.Type type)
+        {
+            return Resolver.GetTypeInfo(type, Options);
+        }
+
+        private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
+        {
+            var options = new global::System.Text.Json.JsonSerializerOptions
+            {
+                DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+                TypeInfoResolver = Resolver,
+            };
+            options.Converters.Add(new global::Langfuse.JsonConverters.AnnotationQueueStatusJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AnnotationQueueStatusNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AnnotationQueueObjectTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AnnotationQueueObjectTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageIntegrationTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageIntegrationTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageIntegrationFileTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageIntegrationFileTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageExportModeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageExportModeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageExportFrequencyJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageExportFrequencyNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageSyncStatusJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageSyncStatusNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreV1Variant1DataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreV1Variant1DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreV1Variant2DataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreV1Variant2DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreV1Variant3DataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreV1Variant3DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreV1Variant4DataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreV1Variant4DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreVariant1DataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreVariant1DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreVariant2DataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreVariant2DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreVariant3DataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreVariant3DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreVariant4DataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreVariant4DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreVariant5DataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreVariant5DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.PricingTierOperatorJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.PricingTierOperatorNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ModelUsageUnitJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ModelUsageUnitNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ObservationLevelJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ObservationLevelNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.CommentObjectTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.CommentObjectTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.DatasetStatusJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.DatasetStatusNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreSourceJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreSourceNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreConfigDataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreConfigDataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreDataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreDataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant1TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant1TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant2TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant2TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant3TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant3TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant4TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant4TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant5TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant5TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant6TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant6TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant7TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant7TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant8TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant8TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant9TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant9TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant10TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant10TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ObservationTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ObservationTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.LegacyCreateScoreSourceJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.LegacyCreateScoreSourceNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.LlmAdapterJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.LlmAdapterNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.MediaContentTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.MediaContentTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.MembershipRoleJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.MembershipRoleNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.PromptVariant1TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.PromptVariant1TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.PromptVariant2TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.PromptVariant2TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.PromptTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.PromptTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ChatMessageTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ChatMessageTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.PlaceholderMessageTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.PlaceholderMessageTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.CreateChatPromptTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.CreateChatPromptTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.CreateTextPromptTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.CreateTextPromptTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.GetScoresResponseDataVariant1DataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.GetScoresResponseDataVariant1DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.GetScoresResponseDataVariant2DataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.GetScoresResponseDataVariant2DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.GetScoresResponseDataVariant3DataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.GetScoresResponseDataVariant3DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.GetScoresResponseDataVariant4DataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.GetScoresResponseDataVariant4DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.GetScoresResponseDataVariant5DataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.GetScoresResponseDataVariant5DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluatorTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluatorTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluatorScopeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluatorScopeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleTargetJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleTargetNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleStatusJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleStatusNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleMappingSourceJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleMappingSourceNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluatorOutputDataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluatorOutputDataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluatorOutputDefinitionVariant1DataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluatorOutputDefinitionVariant1DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluatorOutputDefinitionVariant2DataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluatorOutputDefinitionVariant2DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluatorOutputDefinitionVariant3DataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluatorOutputDefinitionVariant3DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstablePublicEvaluatorOutputDefinitionVariant1DataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstablePublicEvaluatorOutputDefinitionVariant1DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstablePublicEvaluatorOutputDefinitionVariant2DataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstablePublicEvaluatorOutputDefinitionVariant2DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstablePublicEvaluatorOutputDefinitionVariant3DataTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstablePublicEvaluatorOutputDefinitionVariant3DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleStringFilterOperatorJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleStringFilterOperatorNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleNumberFilterOperatorJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleNumberFilterOperatorNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleOptionsFilterOperatorJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleOptionsFilterOperatorNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleArrayOptionsFilterOperatorJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleArrayOptionsFilterOperatorNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleBooleanFilterOperatorJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleBooleanFilterOperatorNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleNullFilterOperatorJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleNullFilterOperatorNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant1TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant1TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant2TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant2TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant3TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant3TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant4TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant4TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant5TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant5TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant6TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant6TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant7TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant7TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant8TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant8TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant9TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant9TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant10TypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant10TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstablePublicApiErrorCodeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstablePublicApiErrorCodeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreV1JsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.CreateScoreValueJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.MapValueJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionUsageJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UsageDetailsJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.CreatePromptRequestJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.PromptJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.ChatMessageWithPlaceholdersJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.GetScoresResponseDataJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluatorOutputDefinitionJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstablePublicEvaluatorOutputDefinitionJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreV1Variant12, global::Langfuse.NumericScoreV1>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreV1Variant22, global::Langfuse.CategoricalScoreV1>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreV1Variant32, global::Langfuse.BooleanScoreV1>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreV1Variant42, global::Langfuse.TextScoreV1>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreVariant12, global::Langfuse.NumericScore>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreVariant22, global::Langfuse.CategoricalScore>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreVariant32, global::Langfuse.BooleanScore>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreVariant42, global::Langfuse.CorrectionScore>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreVariant52, global::Langfuse.TextScore>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.PromptVariant12, global::Langfuse.ChatPrompt>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.GetScoresResponseDataVariant12, global::Langfuse.GetScoresResponseDataNumeric>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.GetScoresResponseDataVariant22, global::Langfuse.GetScoresResponseDataCategorical>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.GetScoresResponseDataVariant32, global::Langfuse.GetScoresResponseDataBoolean>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.GetScoresResponseDataVariant42, global::Langfuse.GetScoresResponseDataCorrection>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluationRuleFilterVariant12, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluationRuleFilterVariant22, global::Langfuse.UnstableStringEvaluationRuleFilter>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluationRuleFilterVariant32, global::Langfuse.UnstableNumberEvaluationRuleFilter>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluationRuleFilterVariant42, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluationRuleFilterVariant52, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluationRuleFilterVariant62, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluationRuleFilterVariant72, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluationRuleFilterVariant82, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluationRuleFilterVariant92, global::Langfuse.UnstableBooleanEvaluationRuleFilter>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableEvaluationRuleFilterVariant102, global::Langfuse.UnstableNullEvaluationRuleFilter>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnixTimestampJsonConverter());
+
+            return options;
+        }
     }
 }
