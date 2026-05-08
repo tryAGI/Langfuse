@@ -29,6 +29,19 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickScoreVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.AllOf<global::Langfuse.ScoreVariant12, global::Langfuse.NumericScore>? value)
+        {
+            value = ScoreVariant1;
+            return IsScoreVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.ScoreVariant22, global::Langfuse.CategoricalScore>? ScoreVariant2 { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace Langfuse
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ScoreVariant2))]
 #endif
         public bool IsScoreVariant2 => ScoreVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickScoreVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.AllOf<global::Langfuse.ScoreVariant22, global::Langfuse.CategoricalScore>? value)
+        {
+            value = ScoreVariant2;
+            return IsScoreVariant2;
+        }
 
         /// <summary>
         /// 
@@ -63,6 +89,19 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickScoreVariant3(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.AllOf<global::Langfuse.ScoreVariant32, global::Langfuse.BooleanScore>? value)
+        {
+            value = ScoreVariant3;
+            return IsScoreVariant3;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.ScoreVariant42, global::Langfuse.CorrectionScore>? ScoreVariant4 { get; init; }
 #else
@@ -80,6 +119,19 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickScoreVariant4(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.AllOf<global::Langfuse.ScoreVariant42, global::Langfuse.CorrectionScore>? value)
+        {
+            value = ScoreVariant4;
+            return IsScoreVariant4;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.ScoreVariant52, global::Langfuse.TextScore>? ScoreVariant5 { get; init; }
 #else
@@ -93,6 +145,19 @@ namespace Langfuse
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ScoreVariant5))]
 #endif
         public bool IsScoreVariant5 => ScoreVariant5 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickScoreVariant5(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.AllOf<global::Langfuse.ScoreVariant52, global::Langfuse.TextScore>? value)
+        {
+            value = ScoreVariant5;
+            return IsScoreVariant5;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -275,6 +340,48 @@ namespace Langfuse
         /// 
         /// </summary>
         public void Match(
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.ScoreVariant12, global::Langfuse.NumericScore>?>? scoreVariant1 = null,
+
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.ScoreVariant22, global::Langfuse.CategoricalScore>?>? scoreVariant2 = null,
+
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.ScoreVariant32, global::Langfuse.BooleanScore>?>? scoreVariant3 = null,
+
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.ScoreVariant42, global::Langfuse.CorrectionScore>?>? scoreVariant4 = null,
+
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.ScoreVariant52, global::Langfuse.TextScore>?>? scoreVariant5 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsScoreVariant1)
+            {
+                scoreVariant1?.Invoke(ScoreVariant1!);
+            }
+            else if (IsScoreVariant2)
+            {
+                scoreVariant2?.Invoke(ScoreVariant2!);
+            }
+            else if (IsScoreVariant3)
+            {
+                scoreVariant3?.Invoke(ScoreVariant3!);
+            }
+            else if (IsScoreVariant4)
+            {
+                scoreVariant4?.Invoke(ScoreVariant4!);
+            }
+            else if (IsScoreVariant5)
+            {
+                scoreVariant5?.Invoke(ScoreVariant5!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.ScoreVariant12, global::Langfuse.NumericScore>?>? scoreVariant1 = null,
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.ScoreVariant22, global::Langfuse.CategoricalScore>?>? scoreVariant2 = null,
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.ScoreVariant32, global::Langfuse.BooleanScore>?>? scoreVariant3 = null,

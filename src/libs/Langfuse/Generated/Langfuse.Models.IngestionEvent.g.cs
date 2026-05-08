@@ -29,6 +29,19 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickIngestionEventVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>? value)
+        {
+            value = IngestionEventVariant1;
+            return IsIngestionEventVariant1;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>? IngestionEventVariant2 { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace Langfuse
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IngestionEventVariant2))]
 #endif
         public bool IsIngestionEventVariant2 => IngestionEventVariant2 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickIngestionEventVariant2(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>? value)
+        {
+            value = IngestionEventVariant2;
+            return IsIngestionEventVariant2;
+        }
 
         /// <summary>
         /// 
@@ -63,6 +89,19 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickIngestionEventVariant3(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent>? value)
+        {
+            value = IngestionEventVariant3;
+            return IsIngestionEventVariant3;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>? IngestionEventVariant4 { get; init; }
 #else
@@ -76,6 +115,19 @@ namespace Langfuse
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IngestionEventVariant4))]
 #endif
         public bool IsIngestionEventVariant4 => IngestionEventVariant4 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickIngestionEventVariant4(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>? value)
+        {
+            value = IngestionEventVariant4;
+            return IsIngestionEventVariant4;
+        }
 
         /// <summary>
         /// 
@@ -97,6 +149,19 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickIngestionEventVariant5(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent>? value)
+        {
+            value = IngestionEventVariant5;
+            return IsIngestionEventVariant5;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>? IngestionEventVariant6 { get; init; }
 #else
@@ -110,6 +175,19 @@ namespace Langfuse
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IngestionEventVariant6))]
 #endif
         public bool IsIngestionEventVariant6 => IngestionEventVariant6 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickIngestionEventVariant6(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>? value)
+        {
+            value = IngestionEventVariant6;
+            return IsIngestionEventVariant6;
+        }
 
         /// <summary>
         /// 
@@ -131,6 +209,19 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickIngestionEventVariant7(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent>? value)
+        {
+            value = IngestionEventVariant7;
+            return IsIngestionEventVariant7;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>? IngestionEventVariant8 { get; init; }
 #else
@@ -144,6 +235,19 @@ namespace Langfuse
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IngestionEventVariant8))]
 #endif
         public bool IsIngestionEventVariant8 => IngestionEventVariant8 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickIngestionEventVariant8(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>? value)
+        {
+            value = IngestionEventVariant8;
+            return IsIngestionEventVariant8;
+        }
 
         /// <summary>
         /// 
@@ -165,6 +269,19 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickIngestionEventVariant9(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent>? value)
+        {
+            value = IngestionEventVariant9;
+            return IsIngestionEventVariant9;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>? IngestionEventVariant10 { get; init; }
 #else
@@ -178,6 +295,19 @@ namespace Langfuse
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IngestionEventVariant10))]
 #endif
         public bool IsIngestionEventVariant10 => IngestionEventVariant10 != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickIngestionEventVariant10(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>? value)
+        {
+            value = IngestionEventVariant10;
+            return IsIngestionEventVariant10;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -495,6 +625,78 @@ namespace Langfuse
         /// 
         /// </summary>
         public void Match(
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>?>? ingestionEventVariant1 = null,
+
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>?>? ingestionEventVariant2 = null,
+
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent>?>? ingestionEventVariant3 = null,
+
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>?>? ingestionEventVariant4 = null,
+
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent>?>? ingestionEventVariant5 = null,
+
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>?>? ingestionEventVariant6 = null,
+
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent>?>? ingestionEventVariant7 = null,
+
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>?>? ingestionEventVariant8 = null,
+
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent>?>? ingestionEventVariant9 = null,
+
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>?>? ingestionEventVariant10 = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsIngestionEventVariant1)
+            {
+                ingestionEventVariant1?.Invoke(IngestionEventVariant1!);
+            }
+            else if (IsIngestionEventVariant2)
+            {
+                ingestionEventVariant2?.Invoke(IngestionEventVariant2!);
+            }
+            else if (IsIngestionEventVariant3)
+            {
+                ingestionEventVariant3?.Invoke(IngestionEventVariant3!);
+            }
+            else if (IsIngestionEventVariant4)
+            {
+                ingestionEventVariant4?.Invoke(IngestionEventVariant4!);
+            }
+            else if (IsIngestionEventVariant5)
+            {
+                ingestionEventVariant5?.Invoke(IngestionEventVariant5!);
+            }
+            else if (IsIngestionEventVariant6)
+            {
+                ingestionEventVariant6?.Invoke(IngestionEventVariant6!);
+            }
+            else if (IsIngestionEventVariant7)
+            {
+                ingestionEventVariant7?.Invoke(IngestionEventVariant7!);
+            }
+            else if (IsIngestionEventVariant8)
+            {
+                ingestionEventVariant8?.Invoke(IngestionEventVariant8!);
+            }
+            else if (IsIngestionEventVariant9)
+            {
+                ingestionEventVariant9?.Invoke(IngestionEventVariant9!);
+            }
+            else if (IsIngestionEventVariant10)
+            {
+                ingestionEventVariant10?.Invoke(IngestionEventVariant10!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>?>? ingestionEventVariant1 = null,
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>?>? ingestionEventVariant2 = null,
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent>?>? ingestionEventVariant3 = null,
