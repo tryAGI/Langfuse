@@ -147,5 +147,6 @@ namespace Langfuse
         public ScoreConfig()
         {
         }
+
     }
 }

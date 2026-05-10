@@ -58,5 +58,6 @@ namespace Langfuse
         public HealthResponse()
         {
         }
+
     }
 }

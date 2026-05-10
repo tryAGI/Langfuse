@@ -54,5 +54,6 @@ namespace Langfuse
         public CategoricalScore()
         {
         }
+
     }
 }

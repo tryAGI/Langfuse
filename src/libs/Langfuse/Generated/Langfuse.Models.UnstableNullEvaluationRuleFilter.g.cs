@@ -64,5 +64,6 @@ namespace Langfuse
         public UnstableNullEvaluationRuleFilter()
         {
         }
+
     }
 }

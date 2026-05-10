@@ -46,5 +46,6 @@ namespace Langfuse
         public LegacyMetricsResponse()
         {
         }
+
     }
 }

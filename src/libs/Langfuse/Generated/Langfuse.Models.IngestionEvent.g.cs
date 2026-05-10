@@ -42,6 +42,13 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent> PickIngestionEventVariant1() => IsIngestionEventVariant1
+            ? IngestionEventVariant1!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'IngestionEventVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>? IngestionEventVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Langfuse
             value = IngestionEventVariant2;
             return IsIngestionEventVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent> PickIngestionEventVariant2() => IsIngestionEventVariant2
+            ? IngestionEventVariant2!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'IngestionEventVariant2' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -102,6 +116,13 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent> PickIngestionEventVariant3() => IsIngestionEventVariant3
+            ? IngestionEventVariant3!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'IngestionEventVariant3' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>? IngestionEventVariant4 { get; init; }
 #else
@@ -128,6 +149,13 @@ namespace Langfuse
             value = IngestionEventVariant4;
             return IsIngestionEventVariant4;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent> PickIngestionEventVariant4() => IsIngestionEventVariant4
+            ? IngestionEventVariant4!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'IngestionEventVariant4' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -162,6 +190,13 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent> PickIngestionEventVariant5() => IsIngestionEventVariant5
+            ? IngestionEventVariant5!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'IngestionEventVariant5' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>? IngestionEventVariant6 { get; init; }
 #else
@@ -188,6 +223,13 @@ namespace Langfuse
             value = IngestionEventVariant6;
             return IsIngestionEventVariant6;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent> PickIngestionEventVariant6() => IsIngestionEventVariant6
+            ? IngestionEventVariant6!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'IngestionEventVariant6' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -222,6 +264,13 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent> PickIngestionEventVariant7() => IsIngestionEventVariant7
+            ? IngestionEventVariant7!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'IngestionEventVariant7' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>? IngestionEventVariant8 { get; init; }
 #else
@@ -248,6 +297,13 @@ namespace Langfuse
             value = IngestionEventVariant8;
             return IsIngestionEventVariant8;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent> PickIngestionEventVariant8() => IsIngestionEventVariant8
+            ? IngestionEventVariant8!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'IngestionEventVariant8' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -282,6 +338,13 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent> PickIngestionEventVariant9() => IsIngestionEventVariant9
+            ? IngestionEventVariant9!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'IngestionEventVariant9' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>? IngestionEventVariant10 { get; init; }
 #else
@@ -308,6 +371,13 @@ namespace Langfuse
             value = IngestionEventVariant10;
             return IsIngestionEventVariant10;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent> PickIngestionEventVariant10() => IsIngestionEventVariant10
+            ? IngestionEventVariant10!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'IngestionEventVariant10' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

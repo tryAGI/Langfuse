@@ -202,5 +202,6 @@ namespace Langfuse
         public UnstablePublicApiErrorDetails()
         {
         }
+
     }
 }

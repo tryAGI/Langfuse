@@ -242,5 +242,6 @@ namespace Langfuse
         public UnstableEvaluationRule()
         {
         }
+
     }
 }

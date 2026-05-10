@@ -52,5 +52,6 @@ namespace Langfuse
         public OtelAttribute()
         {
         }
+
     }
 }

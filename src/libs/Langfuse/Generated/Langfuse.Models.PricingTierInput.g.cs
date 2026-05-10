@@ -124,5 +124,6 @@ namespace Langfuse
         public PricingTierInput()
         {
         }
+
     }
 }

@@ -203,5 +203,6 @@ namespace Langfuse
         public BaseScore()
         {
         }
+
     }
 }

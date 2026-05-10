@@ -40,5 +40,6 @@ namespace Langfuse
         public ScoreV1Variant12()
         {
         }
+
     }
 }

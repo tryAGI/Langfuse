@@ -106,5 +106,6 @@ namespace Langfuse
         public BasePrompt()
         {
         }
+
     }
 }
