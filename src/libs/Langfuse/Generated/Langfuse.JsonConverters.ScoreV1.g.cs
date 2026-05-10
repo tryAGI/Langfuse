@@ -168,7 +168,10 @@ namespace Langfuse.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (scoreV1Variant1 == null && scoreV1Variant2 == null && scoreV1Variant3 == null && scoreV1Variant4 == null)
+            {
                 try
                 {
 
@@ -182,7 +185,10 @@ namespace Langfuse.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (scoreV1Variant1 == null && scoreV1Variant2 == null && scoreV1Variant3 == null && scoreV1Variant4 == null)
+            {
                 try
                 {
 
@@ -196,7 +202,10 @@ namespace Langfuse.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (scoreV1Variant1 == null && scoreV1Variant2 == null && scoreV1Variant3 == null && scoreV1Variant4 == null)
+            {
                 try
                 {
 

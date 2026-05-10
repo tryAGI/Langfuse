@@ -348,7 +348,10 @@ namespace Langfuse.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (unstableEvaluationRuleFilterVariant1 == null && unstableEvaluationRuleFilterVariant2 == null && unstableEvaluationRuleFilterVariant3 == null && unstableEvaluationRuleFilterVariant4 == null && unstableEvaluationRuleFilterVariant5 == null && unstableEvaluationRuleFilterVariant6 == null && unstableEvaluationRuleFilterVariant7 == null && unstableEvaluationRuleFilterVariant8 == null && unstableEvaluationRuleFilterVariant9 == null && unstableEvaluationRuleFilterVariant10 == null)
+            {
                 try
                 {
 
@@ -362,7 +365,10 @@ namespace Langfuse.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (unstableEvaluationRuleFilterVariant1 == null && unstableEvaluationRuleFilterVariant2 == null && unstableEvaluationRuleFilterVariant3 == null && unstableEvaluationRuleFilterVariant4 == null && unstableEvaluationRuleFilterVariant5 == null && unstableEvaluationRuleFilterVariant6 == null && unstableEvaluationRuleFilterVariant7 == null && unstableEvaluationRuleFilterVariant8 == null && unstableEvaluationRuleFilterVariant9 == null && unstableEvaluationRuleFilterVariant10 == null)
+            {
                 try
                 {
 
@@ -376,7 +382,10 @@ namespace Langfuse.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (unstableEvaluationRuleFilterVariant1 == null && unstableEvaluationRuleFilterVariant2 == null && unstableEvaluationRuleFilterVariant3 == null && unstableEvaluationRuleFilterVariant4 == null && unstableEvaluationRuleFilterVariant5 == null && unstableEvaluationRuleFilterVariant6 == null && unstableEvaluationRuleFilterVariant7 == null && unstableEvaluationRuleFilterVariant8 == null && unstableEvaluationRuleFilterVariant9 == null && unstableEvaluationRuleFilterVariant10 == null)
+            {
                 try
                 {
 
@@ -390,7 +399,10 @@ namespace Langfuse.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (unstableEvaluationRuleFilterVariant1 == null && unstableEvaluationRuleFilterVariant2 == null && unstableEvaluationRuleFilterVariant3 == null && unstableEvaluationRuleFilterVariant4 == null && unstableEvaluationRuleFilterVariant5 == null && unstableEvaluationRuleFilterVariant6 == null && unstableEvaluationRuleFilterVariant7 == null && unstableEvaluationRuleFilterVariant8 == null && unstableEvaluationRuleFilterVariant9 == null && unstableEvaluationRuleFilterVariant10 == null)
+            {
                 try
                 {
 
@@ -404,7 +416,10 @@ namespace Langfuse.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (unstableEvaluationRuleFilterVariant1 == null && unstableEvaluationRuleFilterVariant2 == null && unstableEvaluationRuleFilterVariant3 == null && unstableEvaluationRuleFilterVariant4 == null && unstableEvaluationRuleFilterVariant5 == null && unstableEvaluationRuleFilterVariant6 == null && unstableEvaluationRuleFilterVariant7 == null && unstableEvaluationRuleFilterVariant8 == null && unstableEvaluationRuleFilterVariant9 == null && unstableEvaluationRuleFilterVariant10 == null)
+            {
                 try
                 {
 
@@ -418,7 +433,10 @@ namespace Langfuse.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (unstableEvaluationRuleFilterVariant1 == null && unstableEvaluationRuleFilterVariant2 == null && unstableEvaluationRuleFilterVariant3 == null && unstableEvaluationRuleFilterVariant4 == null && unstableEvaluationRuleFilterVariant5 == null && unstableEvaluationRuleFilterVariant6 == null && unstableEvaluationRuleFilterVariant7 == null && unstableEvaluationRuleFilterVariant8 == null && unstableEvaluationRuleFilterVariant9 == null && unstableEvaluationRuleFilterVariant10 == null)
+            {
                 try
                 {
 
@@ -432,7 +450,10 @@ namespace Langfuse.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (unstableEvaluationRuleFilterVariant1 == null && unstableEvaluationRuleFilterVariant2 == null && unstableEvaluationRuleFilterVariant3 == null && unstableEvaluationRuleFilterVariant4 == null && unstableEvaluationRuleFilterVariant5 == null && unstableEvaluationRuleFilterVariant6 == null && unstableEvaluationRuleFilterVariant7 == null && unstableEvaluationRuleFilterVariant8 == null && unstableEvaluationRuleFilterVariant9 == null && unstableEvaluationRuleFilterVariant10 == null)
+            {
                 try
                 {
 
@@ -446,7 +467,10 @@ namespace Langfuse.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (unstableEvaluationRuleFilterVariant1 == null && unstableEvaluationRuleFilterVariant2 == null && unstableEvaluationRuleFilterVariant3 == null && unstableEvaluationRuleFilterVariant4 == null && unstableEvaluationRuleFilterVariant5 == null && unstableEvaluationRuleFilterVariant6 == null && unstableEvaluationRuleFilterVariant7 == null && unstableEvaluationRuleFilterVariant8 == null && unstableEvaluationRuleFilterVariant9 == null && unstableEvaluationRuleFilterVariant10 == null)
+            {
                 try
                 {
 
@@ -460,7 +484,10 @@ namespace Langfuse.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (unstableEvaluationRuleFilterVariant1 == null && unstableEvaluationRuleFilterVariant2 == null && unstableEvaluationRuleFilterVariant3 == null && unstableEvaluationRuleFilterVariant4 == null && unstableEvaluationRuleFilterVariant5 == null && unstableEvaluationRuleFilterVariant6 == null && unstableEvaluationRuleFilterVariant7 == null && unstableEvaluationRuleFilterVariant8 == null && unstableEvaluationRuleFilterVariant9 == null && unstableEvaluationRuleFilterVariant10 == null)
+            {
                 try
                 {
 
