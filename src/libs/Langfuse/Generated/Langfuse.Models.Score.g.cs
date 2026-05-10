@@ -179,6 +179,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static Score FromScoreVariant1(global::Langfuse.AllOf<global::Langfuse.ScoreVariant12, global::Langfuse.NumericScore>? value) => new Score(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Score(global::Langfuse.AllOf<global::Langfuse.ScoreVariant22, global::Langfuse.CategoricalScore> value) => new Score((global::Langfuse.AllOf<global::Langfuse.ScoreVariant22, global::Langfuse.CategoricalScore>?)value);
 
         /// <summary>
@@ -193,6 +198,11 @@ namespace Langfuse
         {
             ScoreVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Score FromScoreVariant2(global::Langfuse.AllOf<global::Langfuse.ScoreVariant22, global::Langfuse.CategoricalScore>? value) => new Score(value);
 
         /// <summary>
         /// 
@@ -215,6 +225,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static Score FromScoreVariant3(global::Langfuse.AllOf<global::Langfuse.ScoreVariant32, global::Langfuse.BooleanScore>? value) => new Score(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Score(global::Langfuse.AllOf<global::Langfuse.ScoreVariant42, global::Langfuse.CorrectionScore> value) => new Score((global::Langfuse.AllOf<global::Langfuse.ScoreVariant42, global::Langfuse.CorrectionScore>?)value);
 
         /// <summary>
@@ -233,6 +248,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static Score FromScoreVariant4(global::Langfuse.AllOf<global::Langfuse.ScoreVariant42, global::Langfuse.CorrectionScore>? value) => new Score(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Score(global::Langfuse.AllOf<global::Langfuse.ScoreVariant52, global::Langfuse.TextScore> value) => new Score((global::Langfuse.AllOf<global::Langfuse.ScoreVariant52, global::Langfuse.TextScore>?)value);
 
         /// <summary>
@@ -247,6 +267,11 @@ namespace Langfuse
         {
             ScoreVariant5 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Score FromScoreVariant5(global::Langfuse.AllOf<global::Langfuse.ScoreVariant52, global::Langfuse.TextScore>? value) => new Score(value);
 
         /// <summary>
         /// 

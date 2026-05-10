@@ -179,6 +179,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static GetScoresResponseData FromGetScoresResponseDataVariant1(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant12, global::Langfuse.GetScoresResponseDataNumeric>? value) => new GetScoresResponseData(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator GetScoresResponseData(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant22, global::Langfuse.GetScoresResponseDataCategorical> value) => new GetScoresResponseData((global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant22, global::Langfuse.GetScoresResponseDataCategorical>?)value);
 
         /// <summary>
@@ -193,6 +198,11 @@ namespace Langfuse
         {
             GetScoresResponseDataVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static GetScoresResponseData FromGetScoresResponseDataVariant2(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant22, global::Langfuse.GetScoresResponseDataCategorical>? value) => new GetScoresResponseData(value);
 
         /// <summary>
         /// 
@@ -215,6 +225,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static GetScoresResponseData FromGetScoresResponseDataVariant3(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant32, global::Langfuse.GetScoresResponseDataBoolean>? value) => new GetScoresResponseData(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator GetScoresResponseData(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant42, global::Langfuse.GetScoresResponseDataCorrection> value) => new GetScoresResponseData((global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant42, global::Langfuse.GetScoresResponseDataCorrection>?)value);
 
         /// <summary>
@@ -233,6 +248,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static GetScoresResponseData FromGetScoresResponseDataVariant4(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant42, global::Langfuse.GetScoresResponseDataCorrection>? value) => new GetScoresResponseData(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator GetScoresResponseData(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText> value) => new GetScoresResponseData((global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText>?)value);
 
         /// <summary>
@@ -247,6 +267,11 @@ namespace Langfuse
         {
             GetScoresResponseDataVariant5 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static GetScoresResponseData FromGetScoresResponseDataVariant5(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText>? value) => new GetScoresResponseData(value);
 
         /// <summary>
         /// 

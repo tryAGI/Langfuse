@@ -89,6 +89,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static CreateScoreValue FromCreateScoreValueVariant1(double? value) => new CreateScoreValue(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CreateScoreValue(string value) => new CreateScoreValue((string?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace Langfuse
         {
             CreateScoreValueVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CreateScoreValue FromCreateScoreValueVariant2(string? value) => new CreateScoreValue(value);
 
         /// <summary>
         /// 

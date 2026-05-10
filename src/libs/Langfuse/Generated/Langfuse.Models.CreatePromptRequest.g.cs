@@ -89,6 +89,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static CreatePromptRequest FromCreateChatPromptRequest(global::Langfuse.CreateChatPromptRequest? value) => new CreatePromptRequest(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CreatePromptRequest(global::Langfuse.CreateTextPromptRequest value) => new CreatePromptRequest((global::Langfuse.CreateTextPromptRequest?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace Langfuse
         {
             CreateTextPromptRequest = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CreatePromptRequest FromCreateTextPromptRequest(global::Langfuse.CreateTextPromptRequest? value) => new CreatePromptRequest(value);
 
         /// <summary>
         /// 

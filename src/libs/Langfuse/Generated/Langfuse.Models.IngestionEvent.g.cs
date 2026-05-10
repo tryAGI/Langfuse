@@ -329,6 +329,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static IngestionEvent FromIngestionEventVariant1(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>? value) => new IngestionEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>?)value);
 
         /// <summary>
@@ -343,6 +348,11 @@ namespace Langfuse
         {
             IngestionEventVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static IngestionEvent FromIngestionEventVariant2(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>? value) => new IngestionEvent(value);
 
         /// <summary>
         /// 
@@ -365,6 +375,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static IngestionEvent FromIngestionEventVariant3(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent>? value) => new IngestionEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>?)value);
 
         /// <summary>
@@ -379,6 +394,11 @@ namespace Langfuse
         {
             IngestionEventVariant4 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static IngestionEvent FromIngestionEventVariant4(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>? value) => new IngestionEvent(value);
 
         /// <summary>
         /// 
@@ -401,6 +421,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static IngestionEvent FromIngestionEventVariant5(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent>? value) => new IngestionEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>?)value);
 
         /// <summary>
@@ -415,6 +440,11 @@ namespace Langfuse
         {
             IngestionEventVariant6 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static IngestionEvent FromIngestionEventVariant6(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>? value) => new IngestionEvent(value);
 
         /// <summary>
         /// 
@@ -437,6 +467,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static IngestionEvent FromIngestionEventVariant7(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent>? value) => new IngestionEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>?)value);
 
         /// <summary>
@@ -451,6 +486,11 @@ namespace Langfuse
         {
             IngestionEventVariant8 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static IngestionEvent FromIngestionEventVariant8(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>? value) => new IngestionEvent(value);
 
         /// <summary>
         /// 
@@ -473,6 +513,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static IngestionEvent FromIngestionEventVariant9(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent>? value) => new IngestionEvent(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>?)value);
 
         /// <summary>
@@ -487,6 +532,11 @@ namespace Langfuse
         {
             IngestionEventVariant10 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static IngestionEvent FromIngestionEventVariant10(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>? value) => new IngestionEvent(value);
 
         /// <summary>
         /// 

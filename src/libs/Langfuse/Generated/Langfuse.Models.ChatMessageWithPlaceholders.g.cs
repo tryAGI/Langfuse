@@ -89,6 +89,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static ChatMessageWithPlaceholders FromChatMessage(global::Langfuse.ChatMessage? value) => new ChatMessageWithPlaceholders(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator ChatMessageWithPlaceholders(global::Langfuse.PlaceholderMessage value) => new ChatMessageWithPlaceholders((global::Langfuse.PlaceholderMessage?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace Langfuse
         {
             PlaceholderMessage = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static ChatMessageWithPlaceholders FromPlaceholderMessage(global::Langfuse.PlaceholderMessage? value) => new ChatMessageWithPlaceholders(value);
 
         /// <summary>
         /// 

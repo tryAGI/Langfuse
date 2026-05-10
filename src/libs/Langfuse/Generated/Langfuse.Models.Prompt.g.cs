@@ -89,6 +89,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static Prompt FromPromptVariant1(global::Langfuse.AllOf<global::Langfuse.PromptVariant12, global::Langfuse.ChatPrompt>? value) => new Prompt(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Prompt(global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt> value) => new Prompt((global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt>?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace Langfuse
         {
             PromptVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Prompt FromPromptVariant2(global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt>? value) => new Prompt(value);
 
         /// <summary>
         /// 

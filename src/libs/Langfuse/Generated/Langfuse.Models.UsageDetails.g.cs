@@ -119,6 +119,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static UsageDetails FromUsageDetailsVariant1(global::System.Collections.Generic.Dictionary<string, int>? value) => new UsageDetails(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator UsageDetails(global::Langfuse.OpenAICompletionUsageSchema value) => new UsageDetails((global::Langfuse.OpenAICompletionUsageSchema?)value);
 
         /// <summary>
@@ -137,6 +142,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static UsageDetails FromOpenAICompletionUsageSchema(global::Langfuse.OpenAICompletionUsageSchema? value) => new UsageDetails(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator UsageDetails(global::Langfuse.OpenAIResponseUsageSchema value) => new UsageDetails((global::Langfuse.OpenAIResponseUsageSchema?)value);
 
         /// <summary>
@@ -151,6 +161,11 @@ namespace Langfuse
         {
             OpenAIResponseUsageSchema = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static UsageDetails FromOpenAIResponseUsageSchema(global::Langfuse.OpenAIResponseUsageSchema? value) => new UsageDetails(value);
 
         /// <summary>
         /// 
