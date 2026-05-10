@@ -138,7 +138,10 @@ namespace Langfuse.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (unstableEvaluatorOutputDefinitionVariant1 == null && unstableEvaluatorOutputDefinitionVariant2 == null && unstableEvaluatorOutputDefinitionVariant3 == null)
+            {
                 try
                 {
 
@@ -152,7 +155,10 @@ namespace Langfuse.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (unstableEvaluatorOutputDefinitionVariant1 == null && unstableEvaluatorOutputDefinitionVariant2 == null && unstableEvaluatorOutputDefinitionVariant3 == null)
+            {
                 try
                 {
 
