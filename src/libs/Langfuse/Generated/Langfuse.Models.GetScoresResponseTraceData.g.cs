@@ -74,5 +74,6 @@ namespace Langfuse
         public GetScoresResponseTraceData()
         {
         }
+
     }
 }

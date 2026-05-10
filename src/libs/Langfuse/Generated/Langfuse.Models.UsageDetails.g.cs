@@ -40,6 +40,13 @@ namespace Langfuse
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.Dictionary<string, int> PickUsageDetailsVariant1() => IsUsageDetailsVariant1
+            ? UsageDetailsVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UsageDetailsVariant1' but the value was {ToString()}.");
+
+        /// <summary>
         /// OpenAI Usage schema from (Chat-)Completion APIs
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -70,6 +77,13 @@ namespace Langfuse
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.OpenAICompletionUsageSchema PickOpenAICompletionUsageSchema() => IsOpenAICompletionUsageSchema
+            ? OpenAICompletionUsageSchema!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'OpenAICompletionUsageSchema' but the value was {ToString()}.");
+
+        /// <summary>
         /// OpenAI Usage schema from Response API
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -98,6 +112,13 @@ namespace Langfuse
             value = OpenAIResponseUsageSchema;
             return IsOpenAIResponseUsageSchema;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.OpenAIResponseUsageSchema PickOpenAIResponseUsageSchema() => IsOpenAIResponseUsageSchema
+            ? OpenAIResponseUsageSchema!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'OpenAIResponseUsageSchema' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

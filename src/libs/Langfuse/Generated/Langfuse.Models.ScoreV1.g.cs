@@ -42,6 +42,13 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.ScoreV1Variant12, global::Langfuse.NumericScoreV1> PickScoreV1Variant1() => IsScoreV1Variant1
+            ? ScoreV1Variant1!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ScoreV1Variant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.ScoreV1Variant22, global::Langfuse.CategoricalScoreV1>? ScoreV1Variant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Langfuse
             value = ScoreV1Variant2;
             return IsScoreV1Variant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.ScoreV1Variant22, global::Langfuse.CategoricalScoreV1> PickScoreV1Variant2() => IsScoreV1Variant2
+            ? ScoreV1Variant2!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ScoreV1Variant2' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -102,6 +116,13 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.ScoreV1Variant32, global::Langfuse.BooleanScoreV1> PickScoreV1Variant3() => IsScoreV1Variant3
+            ? ScoreV1Variant3!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ScoreV1Variant3' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.ScoreV1Variant42, global::Langfuse.TextScoreV1>? ScoreV1Variant4 { get; init; }
 #else
@@ -128,6 +149,13 @@ namespace Langfuse
             value = ScoreV1Variant4;
             return IsScoreV1Variant4;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.ScoreV1Variant42, global::Langfuse.TextScoreV1> PickScoreV1Variant4() => IsScoreV1Variant4
+            ? ScoreV1Variant4!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ScoreV1Variant4' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

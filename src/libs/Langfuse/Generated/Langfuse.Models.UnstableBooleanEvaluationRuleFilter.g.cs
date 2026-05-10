@@ -63,5 +63,6 @@ namespace Langfuse
         public UnstableBooleanEvaluationRuleFilter()
         {
         }
+
     }
 }

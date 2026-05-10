@@ -96,5 +96,6 @@ namespace Langfuse
         public UpdateScoreConfigRequest()
         {
         }
+
     }
 }

@@ -75,5 +75,6 @@ namespace Langfuse
         public UnstableCategoryOptionsEvaluationRuleFilter()
         {
         }
+
     }
 }

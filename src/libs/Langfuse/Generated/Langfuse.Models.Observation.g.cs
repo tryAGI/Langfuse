@@ -272,5 +272,6 @@ namespace Langfuse
         public Observation()
         {
         }
+
     }
 }

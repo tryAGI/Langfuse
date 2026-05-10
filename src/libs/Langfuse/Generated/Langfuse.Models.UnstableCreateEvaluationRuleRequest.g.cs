@@ -150,5 +150,6 @@ namespace Langfuse
         public UnstableCreateEvaluationRuleRequest()
         {
         }
+
     }
 }

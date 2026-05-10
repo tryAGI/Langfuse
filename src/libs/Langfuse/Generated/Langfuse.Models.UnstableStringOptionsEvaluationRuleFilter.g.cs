@@ -65,5 +65,6 @@ namespace Langfuse
         public UnstableStringOptionsEvaluationRuleFilter()
         {
         }
+
     }
 }

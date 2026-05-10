@@ -88,5 +88,6 @@ namespace Langfuse
         public TraceWithFullDetails()
         {
         }
+
     }
 }

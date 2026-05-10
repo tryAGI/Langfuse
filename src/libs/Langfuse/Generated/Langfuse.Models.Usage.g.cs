@@ -110,5 +110,6 @@ namespace Langfuse
         public Usage()
         {
         }
+
     }
 }

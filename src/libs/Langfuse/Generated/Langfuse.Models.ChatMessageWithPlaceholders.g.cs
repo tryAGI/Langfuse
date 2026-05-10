@@ -42,6 +42,13 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public global::Langfuse.ChatMessage PickChatMessage() => IsChatMessage
+            ? ChatMessage!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ChatMessage' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.PlaceholderMessage? PlaceholderMessage { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Langfuse
             value = PlaceholderMessage;
             return IsPlaceholderMessage;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.PlaceholderMessage PickPlaceholderMessage() => IsPlaceholderMessage
+            ? PlaceholderMessage!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PlaceholderMessage' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>

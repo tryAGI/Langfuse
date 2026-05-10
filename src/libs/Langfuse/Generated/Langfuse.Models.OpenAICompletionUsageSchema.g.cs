@@ -78,5 +78,6 @@ namespace Langfuse
         public OpenAICompletionUsageSchema()
         {
         }
+
     }
 }

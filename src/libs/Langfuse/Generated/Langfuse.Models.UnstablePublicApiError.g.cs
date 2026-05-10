@@ -92,5 +92,6 @@ namespace Langfuse
         public UnstablePublicApiError()
         {
         }
+
     }
 }

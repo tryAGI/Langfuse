@@ -61,5 +61,6 @@ namespace Langfuse
         public CreateAnnotationQueueItemRequest()
         {
         }
+
     }
 }
