@@ -89,6 +89,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static IngestionUsage FromUsage(global::Langfuse.Usage? value) => new IngestionUsage(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator IngestionUsage(global::Langfuse.OpenAIUsage value) => new IngestionUsage((global::Langfuse.OpenAIUsage?)value);
 
         /// <summary>
@@ -103,6 +108,11 @@ namespace Langfuse
         {
             OpenAIUsage = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static IngestionUsage FromOpenAIUsage(global::Langfuse.OpenAIUsage? value) => new IngestionUsage(value);
 
         /// <summary>
         /// 

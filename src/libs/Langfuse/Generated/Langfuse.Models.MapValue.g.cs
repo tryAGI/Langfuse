@@ -179,6 +179,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static MapValue FromMapValueVariant1(string? value) => new MapValue(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator MapValue(int value) => new MapValue((int?)value);
 
         /// <summary>
@@ -197,6 +202,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static MapValue FromMapValueVariant2(int? value) => new MapValue(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator MapValue(bool value) => new MapValue((bool?)value);
 
         /// <summary>
@@ -211,6 +221,11 @@ namespace Langfuse
         {
             MapValueVariant4 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static MapValue FromMapValueVariant4(bool? value) => new MapValue(value);
 
         /// <summary>
         /// 
