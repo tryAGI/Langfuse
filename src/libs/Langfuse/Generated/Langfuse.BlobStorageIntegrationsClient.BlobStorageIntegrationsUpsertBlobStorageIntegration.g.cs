@@ -665,6 +665,19 @@ namespace Langfuse
         /// <param name="compressed">
         /// Enable gzip compression for exported files (.csv.gz, .json.gz, .jsonl.gz). Defaults to true.
         /// </param>
+        /// <param name="exportSource">
+        /// What data the integration exports.<br/>
+        /// - `TRACES_OBSERVATIONS`: legacy traces + observations + scores tables with a fixed column set. The `exportFieldGroups` field is not applicable.<br/>
+        /// - `EVENTS`: enriched observations_v2 events; columns are controlled by `exportFieldGroups`.<br/>
+        /// - `TRACES_OBSERVATIONS_EVENTS`: both sets. For the `EVENTS` portion, columns are controlled by `exportFieldGroups`.<br/>
+        /// **Note:** `EVENTS` and the events portion of `TRACES_OBSERVATIONS_EVENTS` rely on the observations_v2 events table (Langfuse Fast Preview / v4), which is currently available on Langfuse Cloud only. See https://langfuse.com/docs/v4.
+        /// </param>
+        /// <param name="exportFieldGroups">
+        /// Field groups to include in each exported row.<br/>
+        /// For exportSource `EVENTS` or `TRACES_OBSERVATIONS_EVENTS`: must include `core` if provided. When omitted on create, the column default (all groups) applies. When omitted on update, the existing value is preserved.<br/>
+        /// For exportSource `TRACES_OBSERVATIONS`: this field must be omitted or null. Sending an array (including an empty array) returns 400, because that source uses a fixed column set and does not honor field groups.<br/>
+        /// `exportFieldGroups` requires `exportSource` to be provided in the same request.
+        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -684,6 +697,8 @@ namespace Langfuse
             string? prefix = default,
             global::System.DateTime? exportStartDate = default,
             bool? compressed = default,
+            global::Langfuse.BlobStorageExportSource? exportSource = default,
+            global::System.Collections.Generic.IList<global::Langfuse.BlobStorageExportFieldGroup>? exportFieldGroups = default,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -704,6 +719,8 @@ namespace Langfuse
                 ExportMode = exportMode,
                 ExportStartDate = exportStartDate,
                 Compressed = compressed,
+                ExportSource = exportSource,
+                ExportFieldGroups = exportFieldGroups,
             };
 
             return await BlobStorageIntegrationsUpsertBlobStorageIntegrationAsync(
