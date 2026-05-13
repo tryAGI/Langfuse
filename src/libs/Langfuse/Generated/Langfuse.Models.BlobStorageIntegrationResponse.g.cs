@@ -115,6 +115,24 @@ namespace Langfuse
         public required bool Compressed { get; set; }
 
         /// <summary>
+        /// What data the integration exports.<br/>
+        /// - `TRACES_OBSERVATIONS`: legacy traces + observations + scores tables with a fixed column set. The `exportFieldGroups` field is not applicable.<br/>
+        /// - `EVENTS`: enriched observations_v2 events; columns are controlled by `exportFieldGroups`.<br/>
+        /// - `TRACES_OBSERVATIONS_EVENTS`: both sets. For the `EVENTS` portion, columns are controlled by `exportFieldGroups`.<br/>
+        /// **Note:** `EVENTS` and the events portion of `TRACES_OBSERVATIONS_EVENTS` rely on the observations_v2 events table (Langfuse Fast Preview / v4), which is currently available on Langfuse Cloud only. See https://langfuse.com/docs/v4.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exportSource")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.BlobStorageExportSourceJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Langfuse.BlobStorageExportSource ExportSource { get; set; }
+
+        /// <summary>
+        /// Field groups included in each exported row for `EVENTS` / `TRACES_OBSERVATIONS_EVENTS` sources. Always `null` when exportSource is `TRACES_OBSERVATIONS` (the field does not apply to that source; any legacy DB value is hidden from the public surface).
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exportFieldGroups")]
+        public global::System.Collections.Generic.IList<global::Langfuse.BlobStorageExportFieldGroup>? ExportFieldGroups { get; set; }
+
+        /// <summary>
         /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("nextSyncAt")]
@@ -173,11 +191,21 @@ namespace Langfuse
         /// <param name="fileType"></param>
         /// <param name="exportMode"></param>
         /// <param name="compressed"></param>
+        /// <param name="exportSource">
+        /// What data the integration exports.<br/>
+        /// - `TRACES_OBSERVATIONS`: legacy traces + observations + scores tables with a fixed column set. The `exportFieldGroups` field is not applicable.<br/>
+        /// - `EVENTS`: enriched observations_v2 events; columns are controlled by `exportFieldGroups`.<br/>
+        /// - `TRACES_OBSERVATIONS_EVENTS`: both sets. For the `EVENTS` portion, columns are controlled by `exportFieldGroups`.<br/>
+        /// **Note:** `EVENTS` and the events portion of `TRACES_OBSERVATIONS_EVENTS` rely on the observations_v2 events table (Langfuse Fast Preview / v4), which is currently available on Langfuse Cloud only. See https://langfuse.com/docs/v4.
+        /// </param>
         /// <param name="createdAt"></param>
         /// <param name="updatedAt"></param>
         /// <param name="endpoint"></param>
         /// <param name="accessKeyId"></param>
         /// <param name="exportStartDate"></param>
+        /// <param name="exportFieldGroups">
+        /// Field groups included in each exported row for `EVENTS` / `TRACES_OBSERVATIONS_EVENTS` sources. Always `null` when exportSource is `TRACES_OBSERVATIONS` (the field does not apply to that source; any legacy DB value is hidden from the public surface).
+        /// </param>
         /// <param name="nextSyncAt"></param>
         /// <param name="lastSyncAt"></param>
         /// <param name="lastError"></param>
@@ -198,11 +226,13 @@ namespace Langfuse
             global::Langfuse.BlobStorageIntegrationFileType fileType,
             global::Langfuse.BlobStorageExportMode exportMode,
             bool compressed,
+            global::Langfuse.BlobStorageExportSource exportSource,
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
             string? endpoint,
             string? accessKeyId,
             global::System.DateTime? exportStartDate,
+            global::System.Collections.Generic.IList<global::Langfuse.BlobStorageExportFieldGroup>? exportFieldGroups,
             global::System.DateTime? nextSyncAt,
             global::System.DateTime? lastSyncAt,
             string? lastError,
@@ -223,6 +253,8 @@ namespace Langfuse
             this.ExportMode = exportMode;
             this.ExportStartDate = exportStartDate;
             this.Compressed = compressed;
+            this.ExportSource = exportSource;
+            this.ExportFieldGroups = exportFieldGroups;
             this.NextSyncAt = nextSyncAt;
             this.LastSyncAt = lastSyncAt;
             this.LastError = lastError;

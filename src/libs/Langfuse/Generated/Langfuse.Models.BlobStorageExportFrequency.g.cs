@@ -15,6 +15,10 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        Every20Minutes,
+        /// <summary>
+        /// 
+        /// </summary>
         Hourly,
         /// <summary>
         /// 
@@ -35,6 +39,7 @@ namespace Langfuse
             return value switch
             {
                 BlobStorageExportFrequency.Daily => "daily",
+                BlobStorageExportFrequency.Every20Minutes => "every_20_minutes",
                 BlobStorageExportFrequency.Hourly => "hourly",
                 BlobStorageExportFrequency.Weekly => "weekly",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -48,6 +53,7 @@ namespace Langfuse
             return value switch
             {
                 "daily" => BlobStorageExportFrequency.Daily,
+                "every_20_minutes" => BlobStorageExportFrequency.Every20Minutes,
                 "hourly" => BlobStorageExportFrequency.Hourly,
                 "weekly" => BlobStorageExportFrequency.Weekly,
                 _ => null,

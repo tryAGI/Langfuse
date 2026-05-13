@@ -112,6 +112,26 @@ namespace Langfuse
         public bool? Compressed { get; set; }
 
         /// <summary>
+        /// What data the integration exports.<br/>
+        /// - `TRACES_OBSERVATIONS`: legacy traces + observations + scores tables with a fixed column set. The `exportFieldGroups` field is not applicable.<br/>
+        /// - `EVENTS`: enriched observations_v2 events; columns are controlled by `exportFieldGroups`.<br/>
+        /// - `TRACES_OBSERVATIONS_EVENTS`: both sets. For the `EVENTS` portion, columns are controlled by `exportFieldGroups`.<br/>
+        /// **Note:** `EVENTS` and the events portion of `TRACES_OBSERVATIONS_EVENTS` rely on the observations_v2 events table (Langfuse Fast Preview / v4), which is currently available on Langfuse Cloud only. See https://langfuse.com/docs/v4.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exportSource")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.BlobStorageExportSourceJsonConverter))]
+        public global::Langfuse.BlobStorageExportSource? ExportSource { get; set; }
+
+        /// <summary>
+        /// Field groups to include in each exported row.<br/>
+        /// For exportSource `EVENTS` or `TRACES_OBSERVATIONS_EVENTS`: must include `core` if provided. When omitted on create, the column default (all groups) applies. When omitted on update, the existing value is preserved.<br/>
+        /// For exportSource `TRACES_OBSERVATIONS`: this field must be omitted or null. Sending an array (including an empty array) returns 400, because that source uses a fixed column set and does not honor field groups.<br/>
+        /// `exportFieldGroups` requires `exportSource` to be provided in the same request.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("exportFieldGroups")]
+        public global::System.Collections.Generic.IList<global::Langfuse.BlobStorageExportFieldGroup>? ExportFieldGroups { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -157,6 +177,19 @@ namespace Langfuse
         /// <param name="compressed">
         /// Enable gzip compression for exported files (.csv.gz, .json.gz, .jsonl.gz). Defaults to true.
         /// </param>
+        /// <param name="exportSource">
+        /// What data the integration exports.<br/>
+        /// - `TRACES_OBSERVATIONS`: legacy traces + observations + scores tables with a fixed column set. The `exportFieldGroups` field is not applicable.<br/>
+        /// - `EVENTS`: enriched observations_v2 events; columns are controlled by `exportFieldGroups`.<br/>
+        /// - `TRACES_OBSERVATIONS_EVENTS`: both sets. For the `EVENTS` portion, columns are controlled by `exportFieldGroups`.<br/>
+        /// **Note:** `EVENTS` and the events portion of `TRACES_OBSERVATIONS_EVENTS` rely on the observations_v2 events table (Langfuse Fast Preview / v4), which is currently available on Langfuse Cloud only. See https://langfuse.com/docs/v4.
+        /// </param>
+        /// <param name="exportFieldGroups">
+        /// Field groups to include in each exported row.<br/>
+        /// For exportSource `EVENTS` or `TRACES_OBSERVATIONS_EVENTS`: must include `core` if provided. When omitted on create, the column default (all groups) applies. When omitted on update, the existing value is preserved.<br/>
+        /// For exportSource `TRACES_OBSERVATIONS`: this field must be omitted or null. Sending an array (including an empty array) returns 400, because that source uses a fixed column set and does not honor field groups.<br/>
+        /// `exportFieldGroups` requires `exportSource` to be provided in the same request.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -175,7 +208,9 @@ namespace Langfuse
             string? secretAccessKey,
             string? prefix,
             global::System.DateTime? exportStartDate,
-            bool? compressed)
+            bool? compressed,
+            global::Langfuse.BlobStorageExportSource? exportSource,
+            global::System.Collections.Generic.IList<global::Langfuse.BlobStorageExportFieldGroup>? exportFieldGroups)
         {
             this.ProjectId = projectId ?? throw new global::System.ArgumentNullException(nameof(projectId));
             this.Type = type;
@@ -192,6 +227,8 @@ namespace Langfuse
             this.ExportMode = exportMode;
             this.ExportStartDate = exportStartDate;
             this.Compressed = compressed;
+            this.ExportSource = exportSource;
+            this.ExportFieldGroups = exportFieldGroups;
         }
 
         /// <summary>

@@ -37,6 +37,14 @@ namespace Langfuse
 
             typeof(global::Langfuse.JsonConverters.BlobStorageExportFrequencyNullableJsonConverter),
 
+            typeof(global::Langfuse.JsonConverters.BlobStorageExportSourceJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.BlobStorageExportSourceNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.BlobStorageExportFieldGroupJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.BlobStorageExportFieldGroupNullableJsonConverter),
+
             typeof(global::Langfuse.JsonConverters.BlobStorageSyncStatusJsonConverter),
 
             typeof(global::Langfuse.JsonConverters.BlobStorageSyncStatusNullableJsonConverter),
@@ -472,7 +480,10 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageIntegrationFileType), TypeInfoPropertyName = "BlobStorageIntegrationFileType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageExportMode), TypeInfoPropertyName = "BlobStorageExportMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageExportFrequency), TypeInfoPropertyName = "BlobStorageExportFrequency2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageExportSource), TypeInfoPropertyName = "BlobStorageExportSource2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageExportFieldGroup), TypeInfoPropertyName = "BlobStorageExportFieldGroup2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateBlobStorageIntegrationRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.BlobStorageExportFieldGroup>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageIntegrationResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageIntegrationsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.BlobStorageIntegrationResponse>))]
@@ -904,6 +915,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.AnnotationQueue>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.AnnotationQueueItem>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.BlobStorageExportFieldGroup>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.BlobStorageIntegrationResponse>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.Comment>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.ObservationsView>))]
@@ -943,10 +955,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.ScimEmail>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.ScoreConfig>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.GetScoresResponseData>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.Session>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.TraceWithDetails>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstablePublicApiValidationIssue>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableEvaluationRuleFilter>))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -981,6 +989,14 @@ namespace Langfuse
             typeof(global::Langfuse.JsonConverters.BlobStorageExportFrequencyJsonConverter),
 
             typeof(global::Langfuse.JsonConverters.BlobStorageExportFrequencyNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.BlobStorageExportSourceJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.BlobStorageExportSourceNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.BlobStorageExportFieldGroupJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.BlobStorageExportFieldGroupNullableJsonConverter),
 
             typeof(global::Langfuse.JsonConverters.BlobStorageSyncStatusJsonConverter),
 
@@ -1392,6 +1408,10 @@ namespace Langfuse
 
             typeof(global::Langfuse.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.Session>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.TraceWithDetails>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstablePublicApiValidationIssue>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableEvaluationRuleFilter>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableEvaluationRuleMapping>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableEvaluationRule>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableEvaluator>))]
@@ -1451,6 +1471,10 @@ namespace Langfuse
             options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageExportModeNullableJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageExportFrequencyJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageExportFrequencyNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageExportSourceJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageExportSourceNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageExportFieldGroupJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageExportFieldGroupNullableJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageSyncStatusJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageSyncStatusNullableJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.ScoreV1Variant1DataTypeJsonConverter());
