@@ -18,7 +18,7 @@ namespace Langfuse
         /// - `io` - input, output<br/>
         /// - `metadata` - metadata (truncated to 200 chars by default, use `expandMetadata` to get full values)<br/>
         /// - `model` - providedModelName, internalModelId, modelParameters<br/>
-        /// - `usage` - usageDetails, costDetails, totalCost<br/>
+        /// - `usage` - usageDetails, costDetails, totalCost, usagePricingTierName<br/>
         /// - `prompt` - promptId, promptName, promptVersion<br/>
         /// - `metrics` - latency, timeToFirstToken<br/>
         /// If not specified, `core` and `basic` field groups are returned.<br/>
@@ -78,7 +78,7 @@ namespace Langfuse
         /// - `io` - input, output<br/>
         /// - `metadata` - metadata (truncated to 200 chars by default, use `expandMetadata` to get full values)<br/>
         /// - `model` - providedModelName, internalModelId, modelParameters<br/>
-        /// - `usage` - usageDetails, costDetails, totalCost<br/>
+        /// - `usage` - usageDetails, costDetails, totalCost, usagePricingTierName<br/>
         /// - `prompt` - promptId, promptName, promptVersion<br/>
         /// - `metrics` - latency, timeToFirstToken<br/>
         /// If not specified, `core` and `basic` field groups are returned.<br/>

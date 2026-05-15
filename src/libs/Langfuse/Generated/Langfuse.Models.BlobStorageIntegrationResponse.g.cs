@@ -116,10 +116,10 @@ namespace Langfuse
 
         /// <summary>
         /// What data the integration exports.<br/>
-        /// - `TRACES_OBSERVATIONS`: legacy traces + observations + scores tables with a fixed column set. The `exportFieldGroups` field is not applicable.<br/>
-        /// - `EVENTS`: enriched observations_v2 events; columns are controlled by `exportFieldGroups`.<br/>
-        /// - `TRACES_OBSERVATIONS_EVENTS`: both sets. For the `EVENTS` portion, columns are controlled by `exportFieldGroups`.<br/>
-        /// **Note:** `EVENTS` and the events portion of `TRACES_OBSERVATIONS_EVENTS` rely on the observations_v2 events table (Langfuse Fast Preview / v4), which is currently available on Langfuse Cloud only. See https://langfuse.com/docs/v4.
+        /// - `LEGACY_TRACES_OBSERVATIONS`: traces, observations, and scores tables with a fixed column set. The `exportFieldGroups` field is not applicable.<br/>
+        /// - `OBSERVATIONS_V2`: same data model as the `/api/public/v2/observations` endpoint, plus scores. Columns are controlled by `exportFieldGroups`.<br/>
+        /// - `LEGACY_TRACES_AND_ENRICHED_OBSERVATIONS`: both sets. For the `OBSERVATIONS_V2` portion, columns are controlled by `exportFieldGroups`.<br/>
+        /// **Note:** `OBSERVATIONS_V2` and the enriched-observations portion of `LEGACY_TRACES_AND_ENRICHED_OBSERVATIONS` rely on the enriched observations table (Langfuse Fast Preview / v4), which is currently available on Langfuse Cloud only. See https://langfuse.com/docs/v4.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("exportSource")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.BlobStorageExportSourceJsonConverter))]
@@ -127,7 +127,7 @@ namespace Langfuse
         public required global::Langfuse.BlobStorageExportSource ExportSource { get; set; }
 
         /// <summary>
-        /// Field groups included in each exported row for `EVENTS` / `TRACES_OBSERVATIONS_EVENTS` sources. Always `null` when exportSource is `TRACES_OBSERVATIONS` (the field does not apply to that source; any legacy DB value is hidden from the public surface).
+        /// Field groups included in each exported row for `OBSERVATIONS_V2` / `LEGACY_TRACES_AND_ENRICHED_OBSERVATIONS` sources. Always `null` when exportSource is `LEGACY_TRACES_OBSERVATIONS` (the field does not apply to that source; any legacy DB value is hidden from the public surface).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("exportFieldGroups")]
         public global::System.Collections.Generic.IList<global::Langfuse.BlobStorageExportFieldGroup>? ExportFieldGroups { get; set; }
@@ -193,10 +193,10 @@ namespace Langfuse
         /// <param name="compressed"></param>
         /// <param name="exportSource">
         /// What data the integration exports.<br/>
-        /// - `TRACES_OBSERVATIONS`: legacy traces + observations + scores tables with a fixed column set. The `exportFieldGroups` field is not applicable.<br/>
-        /// - `EVENTS`: enriched observations_v2 events; columns are controlled by `exportFieldGroups`.<br/>
-        /// - `TRACES_OBSERVATIONS_EVENTS`: both sets. For the `EVENTS` portion, columns are controlled by `exportFieldGroups`.<br/>
-        /// **Note:** `EVENTS` and the events portion of `TRACES_OBSERVATIONS_EVENTS` rely on the observations_v2 events table (Langfuse Fast Preview / v4), which is currently available on Langfuse Cloud only. See https://langfuse.com/docs/v4.
+        /// - `LEGACY_TRACES_OBSERVATIONS`: traces, observations, and scores tables with a fixed column set. The `exportFieldGroups` field is not applicable.<br/>
+        /// - `OBSERVATIONS_V2`: same data model as the `/api/public/v2/observations` endpoint, plus scores. Columns are controlled by `exportFieldGroups`.<br/>
+        /// - `LEGACY_TRACES_AND_ENRICHED_OBSERVATIONS`: both sets. For the `OBSERVATIONS_V2` portion, columns are controlled by `exportFieldGroups`.<br/>
+        /// **Note:** `OBSERVATIONS_V2` and the enriched-observations portion of `LEGACY_TRACES_AND_ENRICHED_OBSERVATIONS` rely on the enriched observations table (Langfuse Fast Preview / v4), which is currently available on Langfuse Cloud only. See https://langfuse.com/docs/v4.
         /// </param>
         /// <param name="createdAt"></param>
         /// <param name="updatedAt"></param>
@@ -204,7 +204,7 @@ namespace Langfuse
         /// <param name="accessKeyId"></param>
         /// <param name="exportStartDate"></param>
         /// <param name="exportFieldGroups">
-        /// Field groups included in each exported row for `EVENTS` / `TRACES_OBSERVATIONS_EVENTS` sources. Always `null` when exportSource is `TRACES_OBSERVATIONS` (the field does not apply to that source; any legacy DB value is hidden from the public surface).
+        /// Field groups included in each exported row for `OBSERVATIONS_V2` / `LEGACY_TRACES_AND_ENRICHED_OBSERVATIONS` sources. Always `null` when exportSource is `LEGACY_TRACES_OBSERVATIONS` (the field does not apply to that source; any legacy DB value is hidden from the public surface).
         /// </param>
         /// <param name="nextSyncAt"></param>
         /// <param name="lastSyncAt"></param>

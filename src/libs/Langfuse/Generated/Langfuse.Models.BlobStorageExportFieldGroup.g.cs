@@ -4,7 +4,7 @@
 namespace Langfuse
 {
     /// <summary>
-    /// Field group for the EVENTS export.
+    /// Field group for the OBSERVATIONS_V2 and LEGACY_TRACES_AND_ENRICHED_OBSERVATIONS export.
     /// </summary>
     public enum BlobStorageExportFieldGroup
     {
