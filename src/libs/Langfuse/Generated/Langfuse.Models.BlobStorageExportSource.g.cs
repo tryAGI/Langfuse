@@ -5,25 +5,25 @@ namespace Langfuse
 {
     /// <summary>
     /// What data the integration exports.<br/>
-    /// - `TRACES_OBSERVATIONS`: legacy traces + observations + scores tables with a fixed column set. The `exportFieldGroups` field is not applicable.<br/>
-    /// - `EVENTS`: enriched observations_v2 events; columns are controlled by `exportFieldGroups`.<br/>
-    /// - `TRACES_OBSERVATIONS_EVENTS`: both sets. For the `EVENTS` portion, columns are controlled by `exportFieldGroups`.<br/>
-    /// **Note:** `EVENTS` and the events portion of `TRACES_OBSERVATIONS_EVENTS` rely on the observations_v2 events table (Langfuse Fast Preview / v4), which is currently available on Langfuse Cloud only. See https://langfuse.com/docs/v4.
+    /// - `LEGACY_TRACES_OBSERVATIONS`: traces, observations, and scores tables with a fixed column set. The `exportFieldGroups` field is not applicable.<br/>
+    /// - `OBSERVATIONS_V2`: same data model as the `/api/public/v2/observations` endpoint, plus scores. Columns are controlled by `exportFieldGroups`.<br/>
+    /// - `LEGACY_TRACES_AND_ENRICHED_OBSERVATIONS`: both sets. For the `OBSERVATIONS_V2` portion, columns are controlled by `exportFieldGroups`.<br/>
+    /// **Note:** `OBSERVATIONS_V2` and the enriched-observations portion of `LEGACY_TRACES_AND_ENRICHED_OBSERVATIONS` rely on the enriched observations table (Langfuse Fast Preview / v4), which is currently available on Langfuse Cloud only. See https://langfuse.com/docs/v4.
     /// </summary>
     public enum BlobStorageExportSource
     {
         /// <summary>
-        /// enriched observations_v2 events; columns are controlled by `exportFieldGroups`.
+        /// both sets. For the `OBSERVATIONS_V2` portion, columns are controlled by `exportFieldGroups`.
         /// </summary>
-        Events,
+        LegacyTracesAndEnrichedObservations,
         /// <summary>
-        /// legacy traces + observations + scores tables with a fixed column set. The `exportFieldGroups` field is not applicable.
+        /// traces, observations, and scores tables with a fixed column set. The `exportFieldGroups` field is not applicable.
         /// </summary>
-        TracesObservations,
+        LegacyTracesObservations,
         /// <summary>
-        /// both sets. For the `EVENTS` portion, columns are controlled by `exportFieldGroups`.
+        /// same data model as the `/api/public/v2/observations` endpoint, plus scores. Columns are controlled by `exportFieldGroups`.
         /// </summary>
-        TracesObservationsEvents,
+        ObservationsV2,
     }
 
     /// <summary>
@@ -38,9 +38,9 @@ namespace Langfuse
         {
             return value switch
             {
-                BlobStorageExportSource.Events => "EVENTS",
-                BlobStorageExportSource.TracesObservations => "TRACES_OBSERVATIONS",
-                BlobStorageExportSource.TracesObservationsEvents => "TRACES_OBSERVATIONS_EVENTS",
+                BlobStorageExportSource.LegacyTracesAndEnrichedObservations => "LEGACY_TRACES_AND_ENRICHED_OBSERVATIONS",
+                BlobStorageExportSource.LegacyTracesObservations => "LEGACY_TRACES_OBSERVATIONS",
+                BlobStorageExportSource.ObservationsV2 => "OBSERVATIONS_V2",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -51,9 +51,9 @@ namespace Langfuse
         {
             return value switch
             {
-                "EVENTS" => BlobStorageExportSource.Events,
-                "TRACES_OBSERVATIONS" => BlobStorageExportSource.TracesObservations,
-                "TRACES_OBSERVATIONS_EVENTS" => BlobStorageExportSource.TracesObservationsEvents,
+                "LEGACY_TRACES_AND_ENRICHED_OBSERVATIONS" => BlobStorageExportSource.LegacyTracesAndEnrichedObservations,
+                "LEGACY_TRACES_OBSERVATIONS" => BlobStorageExportSource.LegacyTracesObservations,
+                "OBSERVATIONS_V2" => BlobStorageExportSource.ObservationsV2,
                 _ => null,
             };
         }

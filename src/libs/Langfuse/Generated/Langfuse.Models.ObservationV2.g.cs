@@ -183,6 +183,12 @@ namespace Langfuse
         public double? TotalCost { get; set; }
 
         /// <summary>
+        /// The name of the pricing tier applied to this observation's usage costs
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("usagePricingTierName")]
+        public string? UsagePricingTierName { get; set; }
+
+        /// <summary>
         /// The prompt ID associated with the observation
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("promptId")]
@@ -309,6 +315,9 @@ namespace Langfuse
         /// <param name="totalCost">
         /// The total cost of the observation in USD
         /// </param>
+        /// <param name="usagePricingTierName">
+        /// The name of the pricing tier applied to this observation's usage costs
+        /// </param>
         /// <param name="promptId">
         /// The prompt ID associated with the observation
         /// </param>
@@ -359,6 +368,7 @@ namespace Langfuse
             global::System.Collections.Generic.Dictionary<string, int>? usageDetails,
             global::System.Collections.Generic.Dictionary<string, double>? costDetails,
             double? totalCost,
+            string? usagePricingTierName,
             string? promptId,
             string? promptName,
             int? promptVersion,
@@ -394,6 +404,7 @@ namespace Langfuse
             this.UsageDetails = usageDetails;
             this.CostDetails = costDetails;
             this.TotalCost = totalCost;
+            this.UsagePricingTierName = usagePricingTierName;
             this.PromptId = promptId;
             this.PromptName = promptName;
             this.PromptVersion = promptVersion;
