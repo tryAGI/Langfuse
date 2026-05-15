@@ -225,6 +225,24 @@ namespace Langfuse
         public string? ModelId { get; set; }
 
         /// <summary>
+        /// The name of the parent trace
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("traceName")]
+        public string? TraceName { get; set; }
+
+        /// <summary>
+        /// Tags from the parent trace (denormalized onto the observation)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        public global::System.Collections.Generic.IList<string>? Tags { get; set; }
+
+        /// <summary>
+        /// The release version of the parent trace
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("release")]
+        public string? Release { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -336,6 +354,15 @@ namespace Langfuse
         /// <param name="modelId">
         /// The matched model ID
         /// </param>
+        /// <param name="traceName">
+        /// The name of the parent trace
+        /// </param>
+        /// <param name="tags">
+        /// Tags from the parent trace (denormalized onto the observation)
+        /// </param>
+        /// <param name="release">
+        /// The release version of the parent trace
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -374,7 +401,10 @@ namespace Langfuse
             int? promptVersion,
             double? latency,
             double? timeToFirstToken,
-            string? modelId)
+            string? modelId,
+            string? traceName,
+            global::System.Collections.Generic.IList<string>? tags,
+            string? release)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.TraceId = traceId;
@@ -411,6 +441,9 @@ namespace Langfuse
             this.Latency = latency;
             this.TimeToFirstToken = timeToFirstToken;
             this.ModelId = modelId;
+            this.TraceName = traceName;
+            this.Tags = tags;
+            this.Release = release;
         }
 
         /// <summary>
