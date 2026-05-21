@@ -8,7 +8,7 @@ namespace Langfuse
     /// Choose the target first, because it changes both the valid filter columns and the valid variable-mapping sources:<br/>
     /// - `observation` evaluates live-ingested observations such as generations, spans, and events.<br/>
     ///   It supports mapping from `input`, `output`, and `metadata`.<br/>
-    /// - `experiment` evaluates live experiment executions and can additionally map `expected_output`.<br/>
+    /// - `experiment` evaluates live experiment executions and can additionally map `expected_output` and `experiment_item_metadata`.<br/>
     ///   It currently supports filtering by `datasetId`.<br/>
     ///   Discover valid dataset IDs with `GET /api/public/v2/datasets`, then use the returned dataset `id` values in your filter.
     /// </summary>

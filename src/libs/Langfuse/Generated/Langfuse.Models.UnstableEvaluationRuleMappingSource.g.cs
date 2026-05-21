@@ -8,12 +8,13 @@ namespace Langfuse
     /// Use these values when mapping evaluator prompt variables to live data.<br/>
     /// Target-specific rules:<br/>
     /// - `target=observation` supports `input`, `output`, and `metadata`<br/>
-    /// - `target=experiment` supports `input`, `output`, `metadata`, and `expected_output`<br/>
+    /// - `target=experiment` supports `input`, `output`, `metadata`, `expected_output`, and `experiment_item_metadata`<br/>
     /// Source semantics:<br/>
     /// - `input`: the observation or experiment input payload<br/>
     /// - `output`: the observation or experiment output payload<br/>
     /// - `metadata`: the metadata object for the target. Combine with `jsonPath` when you need one nested field instead of the whole object.<br/>
-    /// - `expected_output`: the experiment item's expected output. Only valid for `target=experiment`.
+    /// - `expected_output`: the experiment item's expected output. Only valid for `target=experiment`.<br/>
+    /// - `experiment_item_metadata`: the experiment item's metadata object. Only valid for `target=experiment`.
     /// </summary>
     public enum UnstableEvaluationRuleMappingSource
     {
@@ -21,6 +22,10 @@ namespace Langfuse
         /// the experiment item's expected output. Only valid for `target=experiment`.
         /// </summary>
         ExpectedOutput,
+        /// <summary>
+        /// the experiment item's metadata object. Only valid for `target=experiment`.
+        /// </summary>
+        ExperimentItemMetadata,
         /// <summary>
         /// the observation or experiment input payload
         /// </summary>
@@ -48,6 +53,7 @@ namespace Langfuse
             return value switch
             {
                 UnstableEvaluationRuleMappingSource.ExpectedOutput => "expected_output",
+                UnstableEvaluationRuleMappingSource.ExperimentItemMetadata => "experiment_item_metadata",
                 UnstableEvaluationRuleMappingSource.Input => "input",
                 UnstableEvaluationRuleMappingSource.Metadata => "metadata",
                 UnstableEvaluationRuleMappingSource.Output => "output",
@@ -62,6 +68,7 @@ namespace Langfuse
             return value switch
             {
                 "expected_output" => UnstableEvaluationRuleMappingSource.ExpectedOutput,
+                "experiment_item_metadata" => UnstableEvaluationRuleMappingSource.ExperimentItemMetadata,
                 "input" => UnstableEvaluationRuleMappingSource.Input,
                 "metadata" => UnstableEvaluationRuleMappingSource.Metadata,
                 "output" => UnstableEvaluationRuleMappingSource.Output,

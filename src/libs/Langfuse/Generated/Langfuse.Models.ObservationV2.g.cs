@@ -219,10 +219,28 @@ namespace Langfuse
         public double? TimeToFirstToken { get; set; }
 
         /// <summary>
-        /// The matched model ID
+        /// The matched model ID. Null when the `model` field group is not requested.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("modelId")]
         public string? ModelId { get; set; }
+
+        /// <summary>
+        /// The input token price (USD per unit) from the matched model, serialized as a decimal string (e.g. "0.0001"). Null when the `model` field group is not requested.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("inputPrice")]
+        public string? InputPrice { get; set; }
+
+        /// <summary>
+        /// The output token price (USD per unit) from the matched model, serialized as a decimal string (e.g. "0.0001"). Null when the `model` field group is not requested.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("outputPrice")]
+        public string? OutputPrice { get; set; }
+
+        /// <summary>
+        /// The total token price (USD per unit) from the matched model, serialized as a decimal string (e.g. "0.0001"). Null when the `model` field group is not requested.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("totalPrice")]
+        public string? TotalPrice { get; set; }
 
         /// <summary>
         /// The name of the parent trace
@@ -352,7 +370,16 @@ namespace Langfuse
         /// The time to first token in seconds
         /// </param>
         /// <param name="modelId">
-        /// The matched model ID
+        /// The matched model ID. Null when the `model` field group is not requested.
+        /// </param>
+        /// <param name="inputPrice">
+        /// The input token price (USD per unit) from the matched model, serialized as a decimal string (e.g. "0.0001"). Null when the `model` field group is not requested.
+        /// </param>
+        /// <param name="outputPrice">
+        /// The output token price (USD per unit) from the matched model, serialized as a decimal string (e.g. "0.0001"). Null when the `model` field group is not requested.
+        /// </param>
+        /// <param name="totalPrice">
+        /// The total token price (USD per unit) from the matched model, serialized as a decimal string (e.g. "0.0001"). Null when the `model` field group is not requested.
         /// </param>
         /// <param name="traceName">
         /// The name of the parent trace
@@ -402,6 +429,9 @@ namespace Langfuse
             double? latency,
             double? timeToFirstToken,
             string? modelId,
+            string? inputPrice,
+            string? outputPrice,
+            string? totalPrice,
             string? traceName,
             global::System.Collections.Generic.IList<string>? tags,
             string? release)
@@ -441,6 +471,9 @@ namespace Langfuse
             this.Latency = latency;
             this.TimeToFirstToken = timeToFirstToken;
             this.ModelId = modelId;
+            this.InputPrice = inputPrice;
+            this.OutputPrice = outputPrice;
+            this.TotalPrice = totalPrice;
             this.TraceName = traceName;
             this.Tags = tags;
             this.Release = release;
