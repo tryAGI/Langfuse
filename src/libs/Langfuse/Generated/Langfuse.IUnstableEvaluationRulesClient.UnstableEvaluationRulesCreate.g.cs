@@ -15,7 +15,7 @@ namespace Langfuse
         /// - Langfuse resolves that family to its latest version before saving the evaluation rule<br/>
         /// - for `target=experiment`, use dataset `id` values from `GET /api/public/v2/datasets` when filtering by `datasetId`<br/>
         /// - every evaluator prompt variable must be mapped exactly once<br/>
-        /// - `expected_output` mappings are only valid for `target=experiment`<br/>
+        /// - `expected_output` and `experiment_item_metadata` mappings are only valid for `target=experiment`<br/>
         /// - if `enabled=true`, Langfuse validates that the referenced evaluator can currently run<br/>
         /// - at most 50 evaluation rules can be effectively active in one project at the same time<br/>
         /// If an evaluation rule with the same `name` already exists in the project, the API returns `409`.<br/>
@@ -54,7 +54,7 @@ namespace Langfuse
         /// - Langfuse resolves that family to its latest version before saving the evaluation rule<br/>
         /// - for `target=experiment`, use dataset `id` values from `GET /api/public/v2/datasets` when filtering by `datasetId`<br/>
         /// - every evaluator prompt variable must be mapped exactly once<br/>
-        /// - `expected_output` mappings are only valid for `target=experiment`<br/>
+        /// - `expected_output` and `experiment_item_metadata` mappings are only valid for `target=experiment`<br/>
         /// - if `enabled=true`, Langfuse validates that the referenced evaluator can currently run<br/>
         /// - at most 50 evaluation rules can be effectively active in one project at the same time<br/>
         /// If an evaluation rule with the same `name` already exists in the project, the API returns `409`.<br/>
@@ -93,7 +93,7 @@ namespace Langfuse
         /// - Langfuse resolves that family to its latest version before saving the evaluation rule<br/>
         /// - for `target=experiment`, use dataset `id` values from `GET /api/public/v2/datasets` when filtering by `datasetId`<br/>
         /// - every evaluator prompt variable must be mapped exactly once<br/>
-        /// - `expected_output` mappings are only valid for `target=experiment`<br/>
+        /// - `expected_output` and `experiment_item_metadata` mappings are only valid for `target=experiment`<br/>
         /// - if `enabled=true`, Langfuse validates that the referenced evaluator can currently run<br/>
         /// - at most 50 evaluation rules can be effectively active in one project at the same time<br/>
         /// If an evaluation rule with the same `name` already exists in the project, the API returns `409`.<br/>
@@ -125,7 +125,7 @@ namespace Langfuse
         /// Choose the target first, because it changes both the valid filter columns and the valid variable-mapping sources:<br/>
         /// - `observation` evaluates live-ingested observations such as generations, spans, and events.<br/>
         ///   It supports mapping from `input`, `output`, and `metadata`.<br/>
-        /// - `experiment` evaluates live experiment executions and can additionally map `expected_output`.<br/>
+        /// - `experiment` evaluates live experiment executions and can additionally map `expected_output` and `experiment_item_metadata`.<br/>
         ///   It currently supports filtering by `datasetId`.<br/>
         ///   Discover valid dataset IDs with `GET /api/public/v2/datasets`, then use the returned dataset `id` values in your filter.
         /// </param>
