@@ -178,5 +178,6 @@ namespace Langfuse
         public Trace()
         {
         }
+
     }
 }

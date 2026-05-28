@@ -129,5 +129,6 @@ namespace Langfuse
         public OtelSpan()
         {
         }
+
     }
 }

@@ -41,5 +41,6 @@ namespace Langfuse
         public ObservationsV2Meta()
         {
         }
+
     }
 }

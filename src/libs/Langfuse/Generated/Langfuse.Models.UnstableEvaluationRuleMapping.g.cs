@@ -35,12 +35,13 @@ namespace Langfuse
         /// Use these values when mapping evaluator prompt variables to live data.<br/>
         /// Target-specific rules:<br/>
         /// - `target=observation` supports `input`, `output`, and `metadata`<br/>
-        /// - `target=experiment` supports `input`, `output`, `metadata`, and `expected_output`<br/>
+        /// - `target=experiment` supports `input`, `output`, `metadata`, `expected_output`, and `experiment_item_metadata`<br/>
         /// Source semantics:<br/>
         /// - `input`: the observation or experiment input payload<br/>
         /// - `output`: the observation or experiment output payload<br/>
         /// - `metadata`: the metadata object for the target. Combine with `jsonPath` when you need one nested field instead of the whole object.<br/>
-        /// - `expected_output`: the experiment item's expected output. Only valid for `target=experiment`.
+        /// - `expected_output`: the experiment item's expected output. Only valid for `target=experiment`.<br/>
+        /// - `experiment_item_metadata`: the experiment item's metadata object. Only valid for `target=experiment`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("source")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleMappingSourceJsonConverter))]
@@ -76,12 +77,13 @@ namespace Langfuse
         /// Use these values when mapping evaluator prompt variables to live data.<br/>
         /// Target-specific rules:<br/>
         /// - `target=observation` supports `input`, `output`, and `metadata`<br/>
-        /// - `target=experiment` supports `input`, `output`, `metadata`, and `expected_output`<br/>
+        /// - `target=experiment` supports `input`, `output`, `metadata`, `expected_output`, and `experiment_item_metadata`<br/>
         /// Source semantics:<br/>
         /// - `input`: the observation or experiment input payload<br/>
         /// - `output`: the observation or experiment output payload<br/>
         /// - `metadata`: the metadata object for the target. Combine with `jsonPath` when you need one nested field instead of the whole object.<br/>
-        /// - `expected_output`: the experiment item's expected output. Only valid for `target=experiment`.
+        /// - `expected_output`: the experiment item's expected output. Only valid for `target=experiment`.<br/>
+        /// - `experiment_item_metadata`: the experiment item's metadata object. Only valid for `target=experiment`.
         /// </param>
         /// <param name="jsonPath">
         /// Optional JSONPath selector applied to the selected source before it is passed to the evaluator prompt.<br/>
@@ -109,5 +111,6 @@ namespace Langfuse
         public UnstableEvaluationRuleMapping()
         {
         }
+
     }
 }

@@ -30,8 +30,8 @@ namespace Langfuse
         /// - `queued` — next export is overdue (`nextSyncAt` is in the past) and waiting to be picked up by the worker<br/>
         /// - `up_to_date` — all available data has been exported; next export is scheduled for the future<br/>
         /// **ETL usage**: poll this endpoint and check for `up_to_date` status. Compare `lastSyncAt` against your<br/>
-        /// ETL bookmark to determine if new data is available. Note that exports run with a 30-minute lag buffer,<br/>
-        /// so `lastSyncAt` will always be at least 30 minutes behind real-time.
+        /// ETL bookmark to determine if new data is available. Note that exports run with a 20-minute lag buffer,<br/>
+        /// so `lastSyncAt` will always be at least 20 minutes behind real-time.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("syncStatus")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.BlobStorageSyncStatusJsonConverter))]
@@ -88,8 +88,8 @@ namespace Langfuse
         /// - `queued` — next export is overdue (`nextSyncAt` is in the past) and waiting to be picked up by the worker<br/>
         /// - `up_to_date` — all available data has been exported; next export is scheduled for the future<br/>
         /// **ETL usage**: poll this endpoint and check for `up_to_date` status. Compare `lastSyncAt` against your<br/>
-        /// ETL bookmark to determine if new data is available. Note that exports run with a 30-minute lag buffer,<br/>
-        /// so `lastSyncAt` will always be at least 30 minutes behind real-time.
+        /// ETL bookmark to determine if new data is available. Note that exports run with a 20-minute lag buffer,<br/>
+        /// so `lastSyncAt` will always be at least 20 minutes behind real-time.
         /// </param>
         /// <param name="enabled"></param>
         /// <param name="lastSyncAt">
@@ -133,5 +133,6 @@ namespace Langfuse
         public BlobStorageIntegrationStatusResponse()
         {
         }
+
     }
 }

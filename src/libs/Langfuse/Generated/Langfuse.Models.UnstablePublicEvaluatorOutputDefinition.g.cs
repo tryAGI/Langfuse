@@ -48,6 +48,13 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition> PickUnstablePublicEvaluatorOutputDefinitionVariant1() => IsUnstablePublicEvaluatorOutputDefinitionVariant1
+            ? UnstablePublicEvaluatorOutputDefinitionVariant1!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstablePublicEvaluatorOutputDefinitionVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>? UnstablePublicEvaluatorOutputDefinitionVariant2 { get; init; }
 #else
@@ -78,6 +85,13 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition> PickUnstablePublicEvaluatorOutputDefinitionVariant2() => IsUnstablePublicEvaluatorOutputDefinitionVariant2
+            ? UnstablePublicEvaluatorOutputDefinitionVariant2!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstablePublicEvaluatorOutputDefinitionVariant2' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>? UnstablePublicEvaluatorOutputDefinitionVariant3 { get; init; }
 #else
@@ -104,6 +118,13 @@ namespace Langfuse
             value = UnstablePublicEvaluatorOutputDefinitionVariant3;
             return IsUnstablePublicEvaluatorOutputDefinitionVariant3;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition> PickUnstablePublicEvaluatorOutputDefinitionVariant3() => IsUnstablePublicEvaluatorOutputDefinitionVariant3
+            ? UnstablePublicEvaluatorOutputDefinitionVariant3!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstablePublicEvaluatorOutputDefinitionVariant3' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -121,6 +142,11 @@ namespace Langfuse
         {
             UnstablePublicEvaluatorOutputDefinitionVariant1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static UnstablePublicEvaluatorOutputDefinition FromUnstablePublicEvaluatorOutputDefinitionVariant1(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>? value) => new UnstablePublicEvaluatorOutputDefinition(value);
 
         /// <summary>
         /// 
@@ -143,6 +169,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static UnstablePublicEvaluatorOutputDefinition FromUnstablePublicEvaluatorOutputDefinitionVariant2(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>? value) => new UnstablePublicEvaluatorOutputDefinition(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator UnstablePublicEvaluatorOutputDefinition(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition> value) => new UnstablePublicEvaluatorOutputDefinition((global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>?)value);
 
         /// <summary>
@@ -157,6 +188,11 @@ namespace Langfuse
         {
             UnstablePublicEvaluatorOutputDefinitionVariant3 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static UnstablePublicEvaluatorOutputDefinition FromUnstablePublicEvaluatorOutputDefinitionVariant3(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>? value) => new UnstablePublicEvaluatorOutputDefinition(value);
 
         /// <summary>
         /// 

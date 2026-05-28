@@ -51,5 +51,6 @@ namespace Langfuse
         public MembershipRequest()
         {
         }
+
     }
 }

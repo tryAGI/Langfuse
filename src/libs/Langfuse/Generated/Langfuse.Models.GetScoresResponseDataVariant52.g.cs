@@ -40,5 +40,6 @@ namespace Langfuse
         public GetScoresResponseDataVariant52()
         {
         }
+
     }
 }

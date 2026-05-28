@@ -120,5 +120,6 @@ namespace Langfuse
         public UpsertLlmConnectionRequest()
         {
         }
+
     }
 }

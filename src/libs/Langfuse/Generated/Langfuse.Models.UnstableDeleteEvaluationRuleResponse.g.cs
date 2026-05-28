@@ -42,5 +42,6 @@ namespace Langfuse
         public UnstableDeleteEvaluationRuleResponse()
         {
         }
+
     }
 }

@@ -73,5 +73,6 @@ namespace Langfuse
         public UnstableEvaluationRuleEvaluator()
         {
         }
+
     }
 }

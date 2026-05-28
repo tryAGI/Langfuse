@@ -183,6 +183,12 @@ namespace Langfuse
         public double? TotalCost { get; set; }
 
         /// <summary>
+        /// The name of the pricing tier applied to this observation's usage costs
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("usagePricingTierName")]
+        public string? UsagePricingTierName { get; set; }
+
+        /// <summary>
         /// The prompt ID associated with the observation
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("promptId")]
@@ -213,10 +219,46 @@ namespace Langfuse
         public double? TimeToFirstToken { get; set; }
 
         /// <summary>
-        /// The matched model ID
+        /// The matched model ID. Null when the `model` field group is not requested.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("modelId")]
         public string? ModelId { get; set; }
+
+        /// <summary>
+        /// The input token price (USD per unit) from the matched model, serialized as a decimal string (e.g. "0.0001"). Null when the `model` field group is not requested.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("inputPrice")]
+        public string? InputPrice { get; set; }
+
+        /// <summary>
+        /// The output token price (USD per unit) from the matched model, serialized as a decimal string (e.g. "0.0001"). Null when the `model` field group is not requested.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("outputPrice")]
+        public string? OutputPrice { get; set; }
+
+        /// <summary>
+        /// The total token price (USD per unit) from the matched model, serialized as a decimal string (e.g. "0.0001"). Null when the `model` field group is not requested.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("totalPrice")]
+        public string? TotalPrice { get; set; }
+
+        /// <summary>
+        /// The name of the parent trace
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("traceName")]
+        public string? TraceName { get; set; }
+
+        /// <summary>
+        /// Tags from the parent trace (denormalized onto the observation)
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("tags")]
+        public global::System.Collections.Generic.IList<string>? Tags { get; set; }
+
+        /// <summary>
+        /// The release version of the parent trace
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("release")]
+        public string? Release { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -309,6 +351,9 @@ namespace Langfuse
         /// <param name="totalCost">
         /// The total cost of the observation in USD
         /// </param>
+        /// <param name="usagePricingTierName">
+        /// The name of the pricing tier applied to this observation's usage costs
+        /// </param>
         /// <param name="promptId">
         /// The prompt ID associated with the observation
         /// </param>
@@ -325,7 +370,25 @@ namespace Langfuse
         /// The time to first token in seconds
         /// </param>
         /// <param name="modelId">
-        /// The matched model ID
+        /// The matched model ID. Null when the `model` field group is not requested.
+        /// </param>
+        /// <param name="inputPrice">
+        /// The input token price (USD per unit) from the matched model, serialized as a decimal string (e.g. "0.0001"). Null when the `model` field group is not requested.
+        /// </param>
+        /// <param name="outputPrice">
+        /// The output token price (USD per unit) from the matched model, serialized as a decimal string (e.g. "0.0001"). Null when the `model` field group is not requested.
+        /// </param>
+        /// <param name="totalPrice">
+        /// The total token price (USD per unit) from the matched model, serialized as a decimal string (e.g. "0.0001"). Null when the `model` field group is not requested.
+        /// </param>
+        /// <param name="traceName">
+        /// The name of the parent trace
+        /// </param>
+        /// <param name="tags">
+        /// Tags from the parent trace (denormalized onto the observation)
+        /// </param>
+        /// <param name="release">
+        /// The release version of the parent trace
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -359,12 +422,19 @@ namespace Langfuse
             global::System.Collections.Generic.Dictionary<string, int>? usageDetails,
             global::System.Collections.Generic.Dictionary<string, double>? costDetails,
             double? totalCost,
+            string? usagePricingTierName,
             string? promptId,
             string? promptName,
             int? promptVersion,
             double? latency,
             double? timeToFirstToken,
-            string? modelId)
+            string? modelId,
+            string? inputPrice,
+            string? outputPrice,
+            string? totalPrice,
+            string? traceName,
+            global::System.Collections.Generic.IList<string>? tags,
+            string? release)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.TraceId = traceId;
@@ -394,12 +464,19 @@ namespace Langfuse
             this.UsageDetails = usageDetails;
             this.CostDetails = costDetails;
             this.TotalCost = totalCost;
+            this.UsagePricingTierName = usagePricingTierName;
             this.PromptId = promptId;
             this.PromptName = promptName;
             this.PromptVersion = promptVersion;
             this.Latency = latency;
             this.TimeToFirstToken = timeToFirstToken;
             this.ModelId = modelId;
+            this.InputPrice = inputPrice;
+            this.OutputPrice = outputPrice;
+            this.TotalPrice = totalPrice;
+            this.TraceName = traceName;
+            this.Tags = tags;
+            this.Release = release;
         }
 
         /// <summary>
@@ -408,5 +485,6 @@ namespace Langfuse
         public ObservationV2()
         {
         }
+
     }
 }

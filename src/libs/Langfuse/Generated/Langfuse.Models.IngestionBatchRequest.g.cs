@@ -53,5 +53,6 @@ namespace Langfuse
         public IngestionBatchRequest()
         {
         }
+
     }
 }

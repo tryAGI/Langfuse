@@ -42,6 +42,13 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.PromptVariant12, global::Langfuse.ChatPrompt> PickPromptVariant1() => IsPromptVariant1
+            ? PromptVariant1!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PromptVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt>? PromptVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Langfuse
             value = PromptVariant2;
             return IsPromptVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt> PickPromptVariant2() => IsPromptVariant2
+            ? PromptVariant2!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PromptVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -89,6 +103,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static Prompt FromPromptVariant1(global::Langfuse.AllOf<global::Langfuse.PromptVariant12, global::Langfuse.ChatPrompt>? value) => new Prompt(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator Prompt(global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt> value) => new Prompt((global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt>?)value);
 
         /// <summary>
@@ -103,6 +122,11 @@ namespace Langfuse
         {
             PromptVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static Prompt FromPromptVariant2(global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt>? value) => new Prompt(value);
 
         /// <summary>
         /// 

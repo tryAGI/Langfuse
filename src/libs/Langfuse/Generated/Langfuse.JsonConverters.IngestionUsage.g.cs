@@ -84,6 +84,7 @@ namespace Langfuse.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.Usage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.Usage> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.Usage).Name}");
                     usage = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -94,9 +95,13 @@ namespace Langfuse.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (usage == null && openAIUsage == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.OpenAIUsage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.OpenAIUsage> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.OpenAIUsage).Name}");
                     openAIUsage = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

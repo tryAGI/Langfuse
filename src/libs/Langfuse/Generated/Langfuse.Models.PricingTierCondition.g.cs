@@ -98,5 +98,6 @@ namespace Langfuse
         public PricingTierCondition()
         {
         }
+
     }
 }

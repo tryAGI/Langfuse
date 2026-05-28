@@ -40,6 +40,13 @@ namespace Langfuse
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.Usage PickUsage() => IsUsage
+            ? Usage!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Usage' but the value was {ToString()}.");
+
+        /// <summary>
         /// Usage interface of OpenAI for improved compatibility.
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -68,6 +75,13 @@ namespace Langfuse
             value = OpenAIUsage;
             return IsOpenAIUsage;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.OpenAIUsage PickOpenAIUsage() => IsOpenAIUsage
+            ? OpenAIUsage!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'OpenAIUsage' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -89,6 +103,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static IngestionUsage FromUsage(global::Langfuse.Usage? value) => new IngestionUsage(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator IngestionUsage(global::Langfuse.OpenAIUsage value) => new IngestionUsage((global::Langfuse.OpenAIUsage?)value);
 
         /// <summary>
@@ -103,6 +122,11 @@ namespace Langfuse
         {
             OpenAIUsage = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static IngestionUsage FromOpenAIUsage(global::Langfuse.OpenAIUsage? value) => new IngestionUsage(value);
 
         /// <summary>
         /// 

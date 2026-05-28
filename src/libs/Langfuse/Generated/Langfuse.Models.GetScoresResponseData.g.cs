@@ -42,6 +42,13 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant12, global::Langfuse.GetScoresResponseDataNumeric> PickGetScoresResponseDataVariant1() => IsGetScoresResponseDataVariant1
+            ? GetScoresResponseDataVariant1!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'GetScoresResponseDataVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant22, global::Langfuse.GetScoresResponseDataCategorical>? GetScoresResponseDataVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Langfuse
             value = GetScoresResponseDataVariant2;
             return IsGetScoresResponseDataVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant22, global::Langfuse.GetScoresResponseDataCategorical> PickGetScoresResponseDataVariant2() => IsGetScoresResponseDataVariant2
+            ? GetScoresResponseDataVariant2!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'GetScoresResponseDataVariant2' but the value was {ToString()}.");
 
         /// <summary>
         /// 
@@ -102,6 +116,13 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant32, global::Langfuse.GetScoresResponseDataBoolean> PickGetScoresResponseDataVariant3() => IsGetScoresResponseDataVariant3
+            ? GetScoresResponseDataVariant3!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'GetScoresResponseDataVariant3' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant42, global::Langfuse.GetScoresResponseDataCorrection>? GetScoresResponseDataVariant4 { get; init; }
 #else
@@ -132,6 +153,13 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant42, global::Langfuse.GetScoresResponseDataCorrection> PickGetScoresResponseDataVariant4() => IsGetScoresResponseDataVariant4
+            ? GetScoresResponseDataVariant4!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'GetScoresResponseDataVariant4' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText>? GetScoresResponseDataVariant5 { get; init; }
 #else
@@ -158,6 +186,13 @@ namespace Langfuse
             value = GetScoresResponseDataVariant5;
             return IsGetScoresResponseDataVariant5;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText> PickGetScoresResponseDataVariant5() => IsGetScoresResponseDataVariant5
+            ? GetScoresResponseDataVariant5!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'GetScoresResponseDataVariant5' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -175,6 +210,11 @@ namespace Langfuse
         {
             GetScoresResponseDataVariant1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static GetScoresResponseData FromGetScoresResponseDataVariant1(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant12, global::Langfuse.GetScoresResponseDataNumeric>? value) => new GetScoresResponseData(value);
 
         /// <summary>
         /// 
@@ -197,6 +237,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static GetScoresResponseData FromGetScoresResponseDataVariant2(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant22, global::Langfuse.GetScoresResponseDataCategorical>? value) => new GetScoresResponseData(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator GetScoresResponseData(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant32, global::Langfuse.GetScoresResponseDataBoolean> value) => new GetScoresResponseData((global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant32, global::Langfuse.GetScoresResponseDataBoolean>?)value);
 
         /// <summary>
@@ -211,6 +256,11 @@ namespace Langfuse
         {
             GetScoresResponseDataVariant3 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static GetScoresResponseData FromGetScoresResponseDataVariant3(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant32, global::Langfuse.GetScoresResponseDataBoolean>? value) => new GetScoresResponseData(value);
 
         /// <summary>
         /// 
@@ -233,6 +283,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static GetScoresResponseData FromGetScoresResponseDataVariant4(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant42, global::Langfuse.GetScoresResponseDataCorrection>? value) => new GetScoresResponseData(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator GetScoresResponseData(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText> value) => new GetScoresResponseData((global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText>?)value);
 
         /// <summary>
@@ -247,6 +302,11 @@ namespace Langfuse
         {
             GetScoresResponseDataVariant5 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static GetScoresResponseData FromGetScoresResponseDataVariant5(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataVariant52, global::Langfuse.GetScoresResponseDataText>? value) => new GetScoresResponseData(value);
 
         /// <summary>
         /// 

@@ -40,6 +40,13 @@ namespace Langfuse
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::System.Collections.Generic.Dictionary<string, int> PickUsageDetailsVariant1() => IsUsageDetailsVariant1
+            ? UsageDetailsVariant1!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UsageDetailsVariant1' but the value was {ToString()}.");
+
+        /// <summary>
         /// OpenAI Usage schema from (Chat-)Completion APIs
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -70,6 +77,13 @@ namespace Langfuse
         }
 
         /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.OpenAICompletionUsageSchema PickOpenAICompletionUsageSchema() => IsOpenAICompletionUsageSchema
+            ? OpenAICompletionUsageSchema!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'OpenAICompletionUsageSchema' but the value was {ToString()}.");
+
+        /// <summary>
         /// OpenAI Usage schema from Response API
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -98,6 +112,13 @@ namespace Langfuse
             value = OpenAIResponseUsageSchema;
             return IsOpenAIResponseUsageSchema;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.OpenAIResponseUsageSchema PickOpenAIResponseUsageSchema() => IsOpenAIResponseUsageSchema
+            ? OpenAIResponseUsageSchema!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'OpenAIResponseUsageSchema' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -115,6 +136,11 @@ namespace Langfuse
         {
             UsageDetailsVariant1 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static UsageDetails FromUsageDetailsVariant1(global::System.Collections.Generic.Dictionary<string, int>? value) => new UsageDetails(value);
 
         /// <summary>
         /// 
@@ -137,6 +163,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static UsageDetails FromOpenAICompletionUsageSchema(global::Langfuse.OpenAICompletionUsageSchema? value) => new UsageDetails(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator UsageDetails(global::Langfuse.OpenAIResponseUsageSchema value) => new UsageDetails((global::Langfuse.OpenAIResponseUsageSchema?)value);
 
         /// <summary>
@@ -151,6 +182,11 @@ namespace Langfuse
         {
             OpenAIResponseUsageSchema = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static UsageDetails FromOpenAIResponseUsageSchema(global::Langfuse.OpenAIResponseUsageSchema? value) => new UsageDetails(value);
 
         /// <summary>
         /// 

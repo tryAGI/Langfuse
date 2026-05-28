@@ -102,5 +102,6 @@ namespace Langfuse
         public CreateTextPromptRequest()
         {
         }
+
     }
 }

@@ -79,6 +79,7 @@ namespace Langfuse.JsonConverters
             {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.ChatMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.ChatMessage> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.ChatMessage).Name}");
                     chatMessage = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -89,9 +90,13 @@ namespace Langfuse.JsonConverters
                 catch (global::System.InvalidOperationException)
                 {
                 }
+            }
 
+            if (chatMessage == null && placeholderMessage == null)
+            {
                 try
                 {
+
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.PlaceholderMessage), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.PlaceholderMessage> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.PlaceholderMessage).Name}");
                     placeholderMessage = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);

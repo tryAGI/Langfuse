@@ -144,5 +144,6 @@ namespace Langfuse
         public PricingTier()
         {
         }
+
     }
 }

@@ -18,9 +18,10 @@ namespace Langfuse
         /// - `io` - input, output<br/>
         /// - `metadata` - metadata (truncated to 200 chars by default, use `expandMetadata` to get full values)<br/>
         /// - `model` - providedModelName, internalModelId, modelParameters<br/>
-        /// - `usage` - usageDetails, costDetails, totalCost<br/>
+        /// - `usage` - usageDetails, costDetails, totalCost, usagePricingTierName<br/>
         /// - `prompt` - promptId, promptName, promptVersion<br/>
         /// - `metrics` - latency, timeToFirstToken<br/>
+        /// - `trace_context` - tags, release, traceName<br/>
         /// If not specified, `core` and `basic` field groups are returned.<br/>
         /// ## Filters<br/>
         /// Multiple filtering options are available via query parameters or the structured `filter` parameter.<br/>
@@ -78,9 +79,10 @@ namespace Langfuse
         /// - `io` - input, output<br/>
         /// - `metadata` - metadata (truncated to 200 chars by default, use `expandMetadata` to get full values)<br/>
         /// - `model` - providedModelName, internalModelId, modelParameters<br/>
-        /// - `usage` - usageDetails, costDetails, totalCost<br/>
+        /// - `usage` - usageDetails, costDetails, totalCost, usagePricingTierName<br/>
         /// - `prompt` - promptId, promptName, promptVersion<br/>
         /// - `metrics` - latency, timeToFirstToken<br/>
+        /// - `trace_context` - tags, release, traceName<br/>
         /// If not specified, `core` and `basic` field groups are returned.<br/>
         /// ## Filters<br/>
         /// Multiple filtering options are available via query parameters or the structured `filter` parameter.<br/>

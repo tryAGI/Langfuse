@@ -42,6 +42,13 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public double PickCreateScoreValueVariant1() => IsCreateScoreValueVariant1
+            ? CreateScoreValueVariant1!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CreateScoreValueVariant1' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public string? CreateScoreValueVariant2 { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Langfuse
             value = CreateScoreValueVariant2;
             return IsCreateScoreValueVariant2;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string PickCreateScoreValueVariant2() => IsCreateScoreValueVariant2
+            ? CreateScoreValueVariant2!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CreateScoreValueVariant2' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -89,6 +103,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static CreateScoreValue FromCreateScoreValueVariant1(double? value) => new CreateScoreValue(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CreateScoreValue(string value) => new CreateScoreValue((string?)value);
 
         /// <summary>
@@ -103,6 +122,11 @@ namespace Langfuse
         {
             CreateScoreValueVariant2 = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CreateScoreValue FromCreateScoreValueVariant2(string? value) => new CreateScoreValue(value);
 
         /// <summary>
         /// 

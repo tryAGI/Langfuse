@@ -42,6 +42,13 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public global::Langfuse.CreateChatPromptRequest PickCreateChatPromptRequest() => IsCreateChatPromptRequest
+            ? CreateChatPromptRequest!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CreateChatPromptRequest' but the value was {ToString()}.");
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.CreateTextPromptRequest? CreateTextPromptRequest { get; init; }
 #else
@@ -68,6 +75,13 @@ namespace Langfuse
             value = CreateTextPromptRequest;
             return IsCreateTextPromptRequest;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.CreateTextPromptRequest PickCreateTextPromptRequest() => IsCreateTextPromptRequest
+            ? CreateTextPromptRequest!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CreateTextPromptRequest' but the value was {ToString()}.");
         /// <summary>
         /// 
         /// </summary>
@@ -89,6 +103,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static CreatePromptRequest FromCreateChatPromptRequest(global::Langfuse.CreateChatPromptRequest? value) => new CreatePromptRequest(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator CreatePromptRequest(global::Langfuse.CreateTextPromptRequest value) => new CreatePromptRequest((global::Langfuse.CreateTextPromptRequest?)value);
 
         /// <summary>
@@ -103,6 +122,11 @@ namespace Langfuse
         {
             CreateTextPromptRequest = value;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static CreatePromptRequest FromCreateTextPromptRequest(global::Langfuse.CreateTextPromptRequest? value) => new CreatePromptRequest(value);
 
         /// <summary>
         /// 
