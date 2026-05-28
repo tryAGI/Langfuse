@@ -27,6 +27,19 @@ namespace Langfuse
         public bool IsUsageDetailsVariant1 => UsageDetailsVariant1 != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickUsageDetailsVariant1(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::System.Collections.Generic.Dictionary<string, int>? value)
+        {
+            value = UsageDetailsVariant1;
+            return IsUsageDetailsVariant1;
+        }
+
+        /// <summary>
         /// OpenAI Usage schema from (Chat-)Completion APIs
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -44,6 +57,19 @@ namespace Langfuse
         public bool IsOpenAICompletionUsageSchema => OpenAICompletionUsageSchema != null;
 
         /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickOpenAICompletionUsageSchema(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.OpenAICompletionUsageSchema? value)
+        {
+            value = OpenAICompletionUsageSchema;
+            return IsOpenAICompletionUsageSchema;
+        }
+
+        /// <summary>
         /// OpenAI Usage schema from Response API
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -59,6 +85,19 @@ namespace Langfuse
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(OpenAIResponseUsageSchema))]
 #endif
         public bool IsOpenAIResponseUsageSchema => OpenAIResponseUsageSchema != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickOpenAIResponseUsageSchema(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.OpenAIResponseUsageSchema? value)
+        {
+            value = OpenAIResponseUsageSchema;
+            return IsOpenAIResponseUsageSchema;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -157,9 +196,9 @@ namespace Langfuse
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::System.Collections.Generic.Dictionary<string, int>?, TResult>? usageDetailsVariant1 = null,
-            global::System.Func<global::Langfuse.OpenAICompletionUsageSchema?, TResult>? openAICompletionUsageSchema = null,
-            global::System.Func<global::Langfuse.OpenAIResponseUsageSchema?, TResult>? openAIResponseUsageSchema = null,
+            global::System.Func<global::System.Collections.Generic.Dictionary<string, int>, TResult>? usageDetailsVariant1 = null,
+            global::System.Func<global::Langfuse.OpenAICompletionUsageSchema, TResult>? openAICompletionUsageSchema = null,
+            global::System.Func<global::Langfuse.OpenAIResponseUsageSchema, TResult>? openAIResponseUsageSchema = null,
             bool validate = true)
         {
             if (validate)
@@ -187,9 +226,39 @@ namespace Langfuse
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::System.Collections.Generic.Dictionary<string, int>?>? usageDetailsVariant1 = null,
-            global::System.Action<global::Langfuse.OpenAICompletionUsageSchema?>? openAICompletionUsageSchema = null,
-            global::System.Action<global::Langfuse.OpenAIResponseUsageSchema?>? openAIResponseUsageSchema = null,
+            global::System.Action<global::System.Collections.Generic.Dictionary<string, int>>? usageDetailsVariant1 = null,
+
+            global::System.Action<global::Langfuse.OpenAICompletionUsageSchema>? openAICompletionUsageSchema = null,
+
+            global::System.Action<global::Langfuse.OpenAIResponseUsageSchema>? openAIResponseUsageSchema = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsUsageDetailsVariant1)
+            {
+                usageDetailsVariant1?.Invoke(UsageDetailsVariant1!);
+            }
+            else if (IsOpenAICompletionUsageSchema)
+            {
+                openAICompletionUsageSchema?.Invoke(OpenAICompletionUsageSchema!);
+            }
+            else if (IsOpenAIResponseUsageSchema)
+            {
+                openAIResponseUsageSchema?.Invoke(OpenAIResponseUsageSchema!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::System.Collections.Generic.Dictionary<string, int>>? usageDetailsVariant1 = null,
+            global::System.Action<global::Langfuse.OpenAICompletionUsageSchema>? openAICompletionUsageSchema = null,
+            global::System.Action<global::Langfuse.OpenAIResponseUsageSchema>? openAIResponseUsageSchema = null,
             bool validate = true)
         {
             if (validate)

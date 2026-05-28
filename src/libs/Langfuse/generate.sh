@@ -15,4 +15,6 @@ autosdk generate openapi.yaml \
   --output Generated \
   --exclude-deprecated-operations \
   --base-url https://cloud.langfuse.com \
-  --security-scheme Http:Header:Basic
+  --security-scheme Http:Header:Basic \
+  --auth-env-var LANGFUSE_PUBLIC_KEY \
+  --auth-env-var LANGFUSE_SECRET_KEY

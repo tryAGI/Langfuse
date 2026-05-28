@@ -56,6 +56,30 @@ namespace Langfuse
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            await PromptsDeleteAsResponseAsync(
+                promptName: promptName,
+                label: label,
+                version: version,
+                requestOptions: requestOptions,
+                cancellationToken: cancellationToken
+            ).ConfigureAwait(false);
+        }
+        /// <summary>
+        /// Delete prompt versions. If neither version nor label is specified, all versions of the prompt are deleted.
+        /// </summary>
+        /// <param name="promptName"></param>
+        /// <param name="label"></param>
+        /// <param name="version"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Langfuse.ApiException"></exception>
+        public async global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse> PromptsDeleteAsResponseAsync(
+            string promptName,
+            string? label = default,
+            int? version = default,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default)
+        {
             PrepareArguments(
                 client: HttpClient);
             PreparePromptsDeleteArguments(
@@ -86,12 +110,13 @@ namespace Langfuse
 
             global::System.Net.Http.HttpRequestMessage __CreateHttpRequest()
             {
+
                             var __pathBuilder = new global::Langfuse.PathBuilder(
                                 path: $"/api/public/v2/prompts/{promptName}",
-                                baseUri: HttpClient.BaseAddress); 
+                                baseUri: HttpClient.BaseAddress);
                             __pathBuilder
                                 .AddOptionalParameter("label", label)
-                                .AddOptionalParameter("version", version?.ToString()) 
+                                .AddOptionalParameter("version", version?.ToString())
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Langfuse.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -165,6 +190,8 @@ namespace Langfuse
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                     try
                     {
@@ -175,6 +202,11 @@ namespace Langfuse
                     }
                     catch (global::System.Net.Http.HttpRequestException __exception)
                     {
+                        var __retryDelay = global::Langfuse.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: null,
+                            attempt: __attempt);
                         var __willRetry = __attempt < __maxAttempts && !__effectiveCancellationToken.IsCancellationRequested;
                         await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
@@ -192,6 +224,8 @@ namespace Langfuse
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: __willRetry,
+                                retryDelay: __willRetry ? __retryDelay : (global::System.TimeSpan?)null,
+                                retryReason: "exception",
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         if (!__willRetry)
                         {
@@ -201,8 +235,7 @@ namespace Langfuse
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Langfuse.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -211,6 +244,11 @@ namespace Langfuse
                         __attempt < __maxAttempts &&
                         global::Langfuse.AutoSDKRequestOptionsSupport.ShouldRetryStatusCode(__response.StatusCode))
                     {
+                        var __retryDelay = global::Langfuse.AutoSDKRequestOptionsSupport.GetRetryDelay(
+                            clientOptions: Options,
+                            requestOptions: requestOptions,
+                            response: __response,
+                            attempt: __attempt);
                         await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
@@ -227,14 +265,15 @@ namespace Langfuse
                                 attempt: __attempt,
                                 maxAttempts: __maxAttempts,
                                 willRetry: true,
+                                retryDelay: __retryDelay,
+                                retryReason: "status:" + ((int)__response.StatusCode).ToString(global::System.Globalization.CultureInfo.InvariantCulture),
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                         __response.Dispose();
                         __response = null;
                         __httpRequest.Dispose();
                         __httpRequest = null;
                         await global::Langfuse.AutoSDKRequestOptionsSupport.DelayBeforeRetryAsync(
-                            clientOptions: Options,
-                            requestOptions: requestOptions,
+                            retryDelay: __retryDelay,
                             cancellationToken: __effectiveCancellationToken).ConfigureAwait(false);
                         continue;
                     }
@@ -274,6 +313,8 @@ namespace Langfuse
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                 else
@@ -294,6 +335,8 @@ namespace Langfuse
                                 attempt: __attemptNumber,
                                 maxAttempts: __maxAttempts,
                                 willRetry: false,
+                                retryDelay: null,
+                                retryReason: global::System.String.Empty,
                                 cancellationToken: __effectiveCancellationToken)).ConfigureAwait(false);
                 }
                             // 
@@ -504,6 +547,10 @@ namespace Langfuse
                                 {
                                     __response.EnsureSuccessStatusCode();
 
+                return new global::Langfuse.AutoSDKHttpResponse(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Langfuse.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {
@@ -525,6 +572,10 @@ namespace Langfuse
                                 try
                                 {
                                     __response.EnsureSuccessStatusCode();
+                                    return new global::Langfuse.AutoSDKHttpResponse(
+                                        statusCode: __response.StatusCode,
+                                        headers: global::Langfuse.AutoSDKHttpResponse.CreateHeaders(__response),
+                                        requestUri: __response.RequestMessage?.RequestUri);
                                 }
                                 catch (global::System.Exception __ex)
                                 {

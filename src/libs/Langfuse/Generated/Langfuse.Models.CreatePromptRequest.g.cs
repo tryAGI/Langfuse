@@ -29,6 +29,19 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickCreateChatPromptRequest(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.CreateChatPromptRequest? value)
+        {
+            value = CreateChatPromptRequest;
+            return IsCreateChatPromptRequest;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.CreateTextPromptRequest? CreateTextPromptRequest { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace Langfuse
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CreateTextPromptRequest))]
 #endif
         public bool IsCreateTextPromptRequest => CreateTextPromptRequest != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickCreateTextPromptRequest(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.CreateTextPromptRequest? value)
+        {
+            value = CreateTextPromptRequest;
+            return IsCreateTextPromptRequest;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -118,8 +144,8 @@ namespace Langfuse
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Langfuse.CreateChatPromptRequest?, TResult>? createChatPromptRequest = null,
-            global::System.Func<global::Langfuse.CreateTextPromptRequest?, TResult>? createTextPromptRequest = null,
+            global::System.Func<global::Langfuse.CreateChatPromptRequest, TResult>? createChatPromptRequest = null,
+            global::System.Func<global::Langfuse.CreateTextPromptRequest, TResult>? createTextPromptRequest = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +169,32 @@ namespace Langfuse
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Langfuse.CreateChatPromptRequest?>? createChatPromptRequest = null,
-            global::System.Action<global::Langfuse.CreateTextPromptRequest?>? createTextPromptRequest = null,
+            global::System.Action<global::Langfuse.CreateChatPromptRequest>? createChatPromptRequest = null,
+
+            global::System.Action<global::Langfuse.CreateTextPromptRequest>? createTextPromptRequest = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsCreateChatPromptRequest)
+            {
+                createChatPromptRequest?.Invoke(CreateChatPromptRequest!);
+            }
+            else if (IsCreateTextPromptRequest)
+            {
+                createTextPromptRequest?.Invoke(CreateTextPromptRequest!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Langfuse.CreateChatPromptRequest>? createChatPromptRequest = null,
+            global::System.Action<global::Langfuse.CreateTextPromptRequest>? createTextPromptRequest = null,
             bool validate = true)
         {
             if (validate)

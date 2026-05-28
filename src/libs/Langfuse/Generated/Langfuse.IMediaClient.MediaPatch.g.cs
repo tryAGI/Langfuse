@@ -22,6 +22,20 @@ namespace Langfuse
         /// Patch a media record
         /// </summary>
         /// <param name="mediaId"></param>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Langfuse.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse> MediaPatchAsResponseAsync(
+            string mediaId,
+
+            global::Langfuse.PatchMediaBody request,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Patch a media record
+        /// </summary>
+        /// <param name="mediaId"></param>
         /// <param name="uploadedAt">
         /// The date and time when the media record was uploaded
         /// </param>

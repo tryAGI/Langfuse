@@ -29,6 +29,19 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public bool TryPickChatMessage(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.ChatMessage? value)
+        {
+            value = ChatMessage;
+            return IsChatMessage;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.PlaceholderMessage? PlaceholderMessage { get; init; }
 #else
@@ -42,6 +55,19 @@ namespace Langfuse
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PlaceholderMessage))]
 #endif
         public bool IsPlaceholderMessage => PlaceholderMessage != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickPlaceholderMessage(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.PlaceholderMessage? value)
+        {
+            value = PlaceholderMessage;
+            return IsPlaceholderMessage;
+        }
         /// <summary>
         /// 
         /// </summary>
@@ -118,8 +144,8 @@ namespace Langfuse
         /// 
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Langfuse.ChatMessage?, TResult>? chatMessage = null,
-            global::System.Func<global::Langfuse.PlaceholderMessage?, TResult>? placeholderMessage = null,
+            global::System.Func<global::Langfuse.ChatMessage, TResult>? chatMessage = null,
+            global::System.Func<global::Langfuse.PlaceholderMessage, TResult>? placeholderMessage = null,
             bool validate = true)
         {
             if (validate)
@@ -143,8 +169,32 @@ namespace Langfuse
         /// 
         /// </summary>
         public void Match(
-            global::System.Action<global::Langfuse.ChatMessage?>? chatMessage = null,
-            global::System.Action<global::Langfuse.PlaceholderMessage?>? placeholderMessage = null,
+            global::System.Action<global::Langfuse.ChatMessage>? chatMessage = null,
+
+            global::System.Action<global::Langfuse.PlaceholderMessage>? placeholderMessage = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsChatMessage)
+            {
+                chatMessage?.Invoke(ChatMessage!);
+            }
+            else if (IsPlaceholderMessage)
+            {
+                placeholderMessage?.Invoke(PlaceholderMessage!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Langfuse.ChatMessage>? chatMessage = null,
+            global::System.Action<global::Langfuse.PlaceholderMessage>? placeholderMessage = null,
             bool validate = true)
         {
             if (validate)

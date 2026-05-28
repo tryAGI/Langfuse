@@ -51,6 +51,34 @@ namespace Langfuse
         /// Unstable API note:<br/>
         /// - This surface may evolve while the underlying evaluation data model is being redesigned.
         /// </summary>
+        /// <param name="request"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Langfuse.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.UnstableEvaluator>> UnstableEvaluatorsCreateAsResponseAsync(
+
+            global::Langfuse.UnstableCreateEvaluatorRequest request,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// Create an evaluator in the authenticated project.<br/>
+        /// Use evaluators to define **how** Langfuse should score data: the prompt, the expected structured output, and the optional model configuration.<br/>
+        /// Naming behavior:<br/>
+        /// - If this is a new evaluator name in your project, Langfuse creates version `1`.<br/>
+        /// - If the name already exists in your project, Langfuse creates the next version and returns it.<br/>
+        /// - When a new project version is created, existing evaluation rules in that project automatically move to the newest version for that evaluator name.<br/>
+        /// Recommended workflow:<br/>
+        /// 1. Create the evaluator.<br/>
+        /// 2. Read the returned `variables` array.<br/>
+        /// 3. Read the returned `outputDefinition.dataType` so the client knows whether future scores will be numeric, boolean, or categorical.<br/>
+        /// 4. Create one or more evaluation rules that reference the returned evaluator family using `name` and `scope`.<br/>
+        /// Recovery guidance:<br/>
+        /// - `422` with `code=evaluator_preflight_failed`: the evaluator cannot run with the resolved model configuration. Add a valid explicit `modelConfig`, or configure the project's default evaluation model, then retry the same request.<br/>
+        /// - `400` with `code=invalid_body`: the request shape is malformed. Use the structured `details.issues` array to fix the specific fields and retry.<br/>
+        /// - `400` with `code=invalid_body` on `outputDefinition`: send `dataType`, `reasoning.description`, and `score.description`. Do not send `version`; it is not part of the public request shape.<br/>
+        /// Unstable API note:<br/>
+        /// - This surface may evolve while the underlying evaluation data model is being redesigned.
+        /// </summary>
         /// <param name="name">
         /// Evaluator name within the authenticated project.<br/>
         /// Example: answer-correctness
