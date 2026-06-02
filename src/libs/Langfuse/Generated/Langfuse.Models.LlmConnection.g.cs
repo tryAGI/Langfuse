@@ -64,7 +64,7 @@ namespace Langfuse
         public required global::System.Collections.Generic.IList<string> ExtraHeaderKeys { get; set; }
 
         /// <summary>
-        /// Adapter-specific configuration. Required for Bedrock (`{"region":"us-east-1"}`), optional for VertexAI (`{"location":"us-central1"}`), not used by other adapters.
+        /// Adapter-specific configuration. Required for Bedrock (`{"region":"us-east-1"}`), optional for OpenAI (`{"useResponsesApi":true}`), optional for VertexAI (`{"location":"us-central1"}`), not used by other adapters.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("config")]
         public object? Config { get; set; }
@@ -117,7 +117,7 @@ namespace Langfuse
         /// Custom base URL for the LLM API
         /// </param>
         /// <param name="config">
-        /// Adapter-specific configuration. Required for Bedrock (`{"region":"us-east-1"}`), optional for VertexAI (`{"location":"us-central1"}`), not used by other adapters.
+        /// Adapter-specific configuration. Required for Bedrock (`{"region":"us-east-1"}`), optional for OpenAI (`{"useResponsesApi":true}`), optional for VertexAI (`{"location":"us-central1"}`), not used by other adapters.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

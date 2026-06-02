@@ -4,7 +4,7 @@
 namespace Langfuse
 {
     /// <summary>
-    /// Adapter-specific configuration. Required for Bedrock (`{"region":"us-east-1"}`), optional for VertexAI (`{"location":"us-central1"}`), not used by other adapters.
+    /// Adapter-specific configuration. Required for Bedrock (`{"region":"us-east-1"}`), optional for OpenAI (`{"useResponsesApi":true}`), optional for VertexAI (`{"location":"us-central1"}`), not used by other adapters.
     /// </summary>
     public sealed partial class LlmConnectionConfig
     {
