@@ -9,8 +9,9 @@ namespace Langfuse
     /// An empty body is rejected.<br/>
     /// Practical guidance:<br/>
     /// - If you only want to rename the rule or change sampling, send just those fields.<br/>
-    /// - If you change `evaluator`, send a fresh `mapping` unless you are certain the existing mapping still matches the evaluator variables.<br/>
-    /// - If you change `target`, usually send both `filter` and `mapping` in the same request.<br/>
+    /// - If you change to an LLM-as-judge `evaluator`, send a fresh `mapping` unless you are certain the existing mapping still matches the evaluator variables.<br/>
+    /// - If you change `target` for an LLM-as-judge rule, usually send both `filter` and `mapping` in the same request.<br/>
+    /// - For code evaluator rules, omit `mapping`; Langfuse stores the fixed code runtime mapping automatically.<br/>
     /// - If you change an experiment `datasetId` filter, call `GET /api/public/v2/datasets` and use dataset `id` values from that response.
     /// </summary>
     public sealed partial class UnstableUpdateEvaluationRuleRequest
@@ -22,8 +23,9 @@ namespace Langfuse
         public string? Name { get; set; }
 
         /// <summary>
-        /// Evaluator family reference used when creating or updating an evaluation rule.<br/>
-        /// `name` and `scope` are enough to identify the evaluator family in the authenticated project context.
+        /// Evaluator family reference used when updating an evaluation rule.<br/>
+        /// `name` and `scope` identify the evaluator family in the authenticated project context.<br/>
+        /// A rule's evaluator type cannot be changed, so this reference does not accept a `type`; the family must match the rule's current evaluator type.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluator")]
         public global::Langfuse.UnstableEvaluationRuleEvaluatorReference? Evaluator { get; set; }
@@ -61,7 +63,8 @@ namespace Langfuse
         public global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleFilter>? Filter { get; set; }
 
         /// <summary>
-        /// Updated variable mappings.
+        /// Updated LLM-as-judge variable mappings.<br/>
+        /// Do not send this field for code evaluator rules. Langfuse stores the fixed code runtime mapping automatically and returns it in the response.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mapping")]
         public global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleMapping>? Mapping { get; set; }
@@ -79,8 +82,9 @@ namespace Langfuse
         /// Updated deployment name.
         /// </param>
         /// <param name="evaluator">
-        /// Evaluator family reference used when creating or updating an evaluation rule.<br/>
-        /// `name` and `scope` are enough to identify the evaluator family in the authenticated project context.
+        /// Evaluator family reference used when updating an evaluation rule.<br/>
+        /// `name` and `scope` identify the evaluator family in the authenticated project context.<br/>
+        /// A rule's evaluator type cannot be changed, so this reference does not accept a `type`; the family must match the rule's current evaluator type.
         /// </param>
         /// <param name="target">
         /// The ingestion object type that should trigger evaluation runs.<br/>
@@ -102,7 +106,8 @@ namespace Langfuse
         /// For `target=experiment`, `column=datasetId` expects dataset `id` values from `GET /api/public/v2/datasets`, not dataset names.
         /// </param>
         /// <param name="mapping">
-        /// Updated variable mappings.
+        /// Updated LLM-as-judge variable mappings.<br/>
+        /// Do not send this field for code evaluator rules. Langfuse stores the fixed code runtime mapping automatically and returns it in the response.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

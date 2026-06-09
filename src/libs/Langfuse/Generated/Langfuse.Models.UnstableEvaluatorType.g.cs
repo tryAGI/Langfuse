@@ -5,10 +5,14 @@ namespace Langfuse
 {
     /// <summary>
     /// The evaluator engine type.<br/>
-    /// The unstable public API currently supports only LLM-as-a-judge evaluators.
+    /// The unstable public API supports LLM-as-a-judge and code evaluators.
     /// </summary>
     public enum UnstableEvaluatorType
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        Code,
         /// <summary>
         /// 
         /// </summary>
@@ -27,6 +31,7 @@ namespace Langfuse
         {
             return value switch
             {
+                UnstableEvaluatorType.Code => "code",
                 UnstableEvaluatorType.LlmAsJudge => "llm_as_judge",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -38,6 +43,7 @@ namespace Langfuse
         {
             return value switch
             {
+                "code" => UnstableEvaluatorType.Code,
                 "llm_as_judge" => UnstableEvaluatorType.LlmAsJudge,
                 _ => null,
             };

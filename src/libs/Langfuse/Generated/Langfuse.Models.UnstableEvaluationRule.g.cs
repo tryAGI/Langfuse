@@ -39,7 +39,7 @@ namespace Langfuse
         /// <summary>
         /// Resolved evaluator currently used by the evaluation rule.<br/>
         /// `id` is the exact active evaluator version.<br/>
-        /// `name` and `scope` identify the evaluator family conceptually.
+        /// `name`, `scope`, and `type` identify the evaluator family conceptually.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluator")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -111,7 +111,7 @@ namespace Langfuse
         public required global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleFilter> Filter { get; set; }
 
         /// <summary>
-        /// Variable mappings used to populate the evaluator prompt from the live target object.
+        /// Variable mappings used to populate evaluator runtime variables from the live target object.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mapping")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -155,7 +155,7 @@ namespace Langfuse
         /// <param name="evaluator">
         /// Resolved evaluator currently used by the evaluation rule.<br/>
         /// `id` is the exact active evaluator version.<br/>
-        /// `name` and `scope` identify the evaluator family conceptually.
+        /// `name`, `scope`, and `type` identify the evaluator family conceptually.
         /// </param>
         /// <param name="target">
         /// The ingestion object type that should trigger evaluation runs.<br/>
@@ -187,7 +187,7 @@ namespace Langfuse
         /// List of filter conditions used to decide whether a target should be evaluated.
         /// </param>
         /// <param name="mapping">
-        /// Variable mappings used to populate the evaluator prompt from the live target object.
+        /// Variable mappings used to populate evaluator runtime variables from the live target object.
         /// </param>
         /// <param name="createdAt">
         /// Timestamp when the evaluation rule was created.<br/>
