@@ -173,6 +173,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public ScoresV3Client ScoresV3 { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public SessionsClient Sessions { get; }
 
         /// <summary>
