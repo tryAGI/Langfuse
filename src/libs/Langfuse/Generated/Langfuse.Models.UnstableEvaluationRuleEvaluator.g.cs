@@ -6,7 +6,7 @@ namespace Langfuse
     /// <summary>
     /// Resolved evaluator currently used by the evaluation rule.<br/>
     /// `id` is the exact active evaluator version.<br/>
-    /// `name` and `scope` identify the evaluator family conceptually.
+    /// `name`, `scope`, and `type` identify the evaluator family conceptually.
     /// </summary>
     public sealed partial class UnstableEvaluationRuleEvaluator
     {
@@ -35,6 +35,15 @@ namespace Langfuse
         public required global::Langfuse.UnstableEvaluatorScope Scope { get; set; }
 
         /// <summary>
+        /// The evaluator engine type.<br/>
+        /// The unstable public API supports LLM-as-a-judge and code evaluators.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("type")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.UnstableEvaluatorTypeJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Langfuse.UnstableEvaluatorType Type { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -54,17 +63,23 @@ namespace Langfuse
         /// - `project`: created in your project<br/>
         /// - `managed`: provided by Langfuse
         /// </param>
+        /// <param name="type">
+        /// The evaluator engine type.<br/>
+        /// The unstable public API supports LLM-as-a-judge and code evaluators.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UnstableEvaluationRuleEvaluator(
             string id,
             string name,
-            global::Langfuse.UnstableEvaluatorScope scope)
+            global::Langfuse.UnstableEvaluatorScope scope,
+            global::Langfuse.UnstableEvaluatorType type)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Scope = scope;
+            this.Type = type;
         }
 
         /// <summary>
