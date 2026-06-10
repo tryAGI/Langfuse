@@ -3,11 +3,11 @@
 
 namespace Langfuse
 {
-    public partial class ScoresClient
+    public partial class ScoresV3Client
     {
 
 
-        private static readonly global::Langfuse.EndPointSecurityRequirement s_ScoresGetManySecurityRequirement0 =
+        private static readonly global::Langfuse.EndPointSecurityRequirement s_ScoresV3GetManyV3SecurityRequirement0 =
             new global::Langfuse.EndPointSecurityRequirement
             {
                 Authorizations = new global::Langfuse.EndPointAuthorizationRequirement[]
@@ -21,142 +21,148 @@ namespace Langfuse
                     },
                 },
             };
-        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_ScoresGetManySecurityRequirements =
+        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_ScoresV3GetManyV3SecurityRequirements =
             new global::Langfuse.EndPointSecurityRequirement[]
-            {                s_ScoresGetManySecurityRequirement0,
+            {                s_ScoresV3GetManyV3SecurityRequirement0,
             };
-        partial void PrepareScoresGetManyArguments(
+        partial void PrepareScoresV3GetManyV3Arguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref int? page,
             ref int? limit,
-            ref string? userId,
-            ref string? name,
-            ref global::System.DateTime? fromTimestamp,
-            ref global::System.DateTime? toTimestamp,
-            global::System.Collections.Generic.IList<string>? environment,
-            ref global::Langfuse.ScoreSource? source,
-            ref string? @operator,
-            ref double? value,
-            ref string? scoreIds,
-            ref string? configId,
-            ref string? sessionId,
-            ref string? datasetRunId,
-            ref string? traceId,
-            ref string? observationId,
-            ref string? queueId,
-            ref global::Langfuse.ScoreDataType? dataType,
-            global::System.Collections.Generic.IList<string>? traceTags,
+            ref string? cursor,
             ref string? fields,
-            ref string? filter);
-        partial void PrepareScoresGetManyRequest(
+            ref string? id,
+            ref string? name,
+            ref string? source,
+            ref string? dataType,
+            ref string? environment,
+            ref string? configId,
+            ref string? queueId,
+            ref string? authorUserId,
+            ref string? value,
+            ref double? valueMin,
+            ref double? valueMax,
+            ref string? traceId,
+            ref string? sessionId,
+            ref string? observationId,
+            ref string? experimentId,
+            ref global::System.DateTime? fromTimestamp,
+            ref global::System.DateTime? toTimestamp);
+        partial void PrepareScoresV3GetManyV3Request(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            int? page,
             int? limit,
-            string? userId,
-            string? name,
-            global::System.DateTime? fromTimestamp,
-            global::System.DateTime? toTimestamp,
-            global::System.Collections.Generic.IList<string>? environment,
-            global::Langfuse.ScoreSource? source,
-            string? @operator,
-            double? value,
-            string? scoreIds,
-            string? configId,
-            string? sessionId,
-            string? datasetRunId,
-            string? traceId,
-            string? observationId,
-            string? queueId,
-            global::Langfuse.ScoreDataType? dataType,
-            global::System.Collections.Generic.IList<string>? traceTags,
+            string? cursor,
             string? fields,
-            string? filter);
-        partial void ProcessScoresGetManyResponse(
+            string? id,
+            string? name,
+            string? source,
+            string? dataType,
+            string? environment,
+            string? configId,
+            string? queueId,
+            string? authorUserId,
+            string? value,
+            double? valueMin,
+            double? valueMax,
+            string? traceId,
+            string? sessionId,
+            string? observationId,
+            string? experimentId,
+            global::System.DateTime? fromTimestamp,
+            global::System.DateTime? toTimestamp);
+        partial void ProcessScoresV3GetManyV3Response(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessScoresGetManyResponseContent(
+        partial void ProcessScoresV3GetManyV3ResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// **Deprecated.** Use `GET /api/public/v3/scores` instead. This endpoint<br/>
-        /// is no longer available on Langfuse v4 and later.<br/>
-        /// Get a list of scores (supports both trace and session scores)
+        /// Get a list of scores with a polymorphic `value` field (v3).<br/>
+        /// The `value` field type depends on `dataType`:<br/>
+        /// - `NUMERIC` → number<br/>
+        /// - `BOOLEAN` → boolean<br/>
+        /// - `CATEGORICAL`, `TEXT`, `CORRECTION` → string<br/>
+        /// The response always includes the core fields: id, projectId, name,<br/>
+        /// value, dataType, source, timestamp, environment, createdAt, updatedAt.<br/>
+        /// Additional field groups can be requested via the `fields` parameter:<br/>
+        /// - `details` — adds comment, configId, metadata<br/>
+        /// - `subject` — adds the subject object describing the entity the score<br/>
+        ///   is attached to: kind (trace, observation, session, or experiment),<br/>
+        ///   id, and traceId for observation-level scores<br/>
+        /// - `annotation` — adds authorUserId, queueId<br/>
+        /// Unknown group names return HTTP 400.
         /// </summary>
-        /// <param name="page"></param>
         /// <param name="limit"></param>
-        /// <param name="userId"></param>
+        /// <param name="cursor"></param>
+        /// <param name="fields"></param>
+        /// <param name="id"></param>
         /// <param name="name"></param>
+        /// <param name="source"></param>
+        /// <param name="dataType"></param>
+        /// <param name="environment"></param>
+        /// <param name="configId"></param>
+        /// <param name="queueId"></param>
+        /// <param name="authorUserId"></param>
+        /// <param name="value"></param>
+        /// <param name="valueMin"></param>
+        /// <param name="valueMax"></param>
+        /// <param name="traceId"></param>
+        /// <param name="sessionId"></param>
+        /// <param name="observationId"></param>
+        /// <param name="experimentId"></param>
         /// <param name="fromTimestamp"></param>
         /// <param name="toTimestamp"></param>
-        /// <param name="environment"></param>
-        /// <param name="source"></param>
-        /// <param name="operator"></param>
-        /// <param name="value"></param>
-        /// <param name="scoreIds"></param>
-        /// <param name="configId"></param>
-        /// <param name="sessionId"></param>
-        /// <param name="datasetRunId"></param>
-        /// <param name="traceId"></param>
-        /// <param name="observationId"></param>
-        /// <param name="queueId"></param>
-        /// <param name="dataType"></param>
-        /// <param name="traceTags"></param>
-        /// <param name="fields"></param>
-        /// <param name="filter"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Langfuse.GetScoresResponse> ScoresGetManyAsync(
-            int? page = default,
+        public async global::System.Threading.Tasks.Task<global::Langfuse.GetScoresV3Response> ScoresV3GetManyV3Async(
             int? limit = default,
-            string? userId = default,
+            string? cursor = default,
+            string? fields = default,
+            string? id = default,
             string? name = default,
+            string? source = default,
+            string? dataType = default,
+            string? environment = default,
+            string? configId = default,
+            string? queueId = default,
+            string? authorUserId = default,
+            string? value = default,
+            double? valueMin = default,
+            double? valueMax = default,
+            string? traceId = default,
+            string? sessionId = default,
+            string? observationId = default,
+            string? experimentId = default,
             global::System.DateTime? fromTimestamp = default,
             global::System.DateTime? toTimestamp = default,
-            global::System.Collections.Generic.IList<string>? environment = default,
-            global::Langfuse.ScoreSource? source = default,
-            string? @operator = default,
-            double? value = default,
-            string? scoreIds = default,
-            string? configId = default,
-            string? sessionId = default,
-            string? datasetRunId = default,
-            string? traceId = default,
-            string? observationId = default,
-            string? queueId = default,
-            global::Langfuse.ScoreDataType? dataType = default,
-            global::System.Collections.Generic.IList<string>? traceTags = default,
-            string? fields = default,
-            string? filter = default,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await ScoresGetManyAsResponseAsync(
-                page: page,
+            var __response = await ScoresV3GetManyV3AsResponseAsync(
                 limit: limit,
-                userId: userId,
+                cursor: cursor,
+                fields: fields,
+                id: id,
                 name: name,
+                source: source,
+                dataType: dataType,
+                environment: environment,
+                configId: configId,
+                queueId: queueId,
+                authorUserId: authorUserId,
+                value: value,
+                valueMin: valueMin,
+                valueMax: valueMax,
+                traceId: traceId,
+                sessionId: sessionId,
+                observationId: observationId,
+                experimentId: experimentId,
                 fromTimestamp: fromTimestamp,
                 toTimestamp: toTimestamp,
-                environment: environment,
-                source: source,
-                @operator: @operator,
-                value: value,
-                scoreIds: scoreIds,
-                configId: configId,
-                sessionId: sessionId,
-                datasetRunId: datasetRunId,
-                traceId: traceId,
-                observationId: observationId,
-                queueId: queueId,
-                dataType: dataType,
-                traceTags: traceTags,
-                fields: fields,
-                filter: filter,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -164,90 +170,98 @@ namespace Langfuse
             return __response.Body;
         }
         /// <summary>
-        /// **Deprecated.** Use `GET /api/public/v3/scores` instead. This endpoint<br/>
-        /// is no longer available on Langfuse v4 and later.<br/>
-        /// Get a list of scores (supports both trace and session scores)
+        /// Get a list of scores with a polymorphic `value` field (v3).<br/>
+        /// The `value` field type depends on `dataType`:<br/>
+        /// - `NUMERIC` → number<br/>
+        /// - `BOOLEAN` → boolean<br/>
+        /// - `CATEGORICAL`, `TEXT`, `CORRECTION` → string<br/>
+        /// The response always includes the core fields: id, projectId, name,<br/>
+        /// value, dataType, source, timestamp, environment, createdAt, updatedAt.<br/>
+        /// Additional field groups can be requested via the `fields` parameter:<br/>
+        /// - `details` — adds comment, configId, metadata<br/>
+        /// - `subject` — adds the subject object describing the entity the score<br/>
+        ///   is attached to: kind (trace, observation, session, or experiment),<br/>
+        ///   id, and traceId for observation-level scores<br/>
+        /// - `annotation` — adds authorUserId, queueId<br/>
+        /// Unknown group names return HTTP 400.
         /// </summary>
-        /// <param name="page"></param>
         /// <param name="limit"></param>
-        /// <param name="userId"></param>
+        /// <param name="cursor"></param>
+        /// <param name="fields"></param>
+        /// <param name="id"></param>
         /// <param name="name"></param>
+        /// <param name="source"></param>
+        /// <param name="dataType"></param>
+        /// <param name="environment"></param>
+        /// <param name="configId"></param>
+        /// <param name="queueId"></param>
+        /// <param name="authorUserId"></param>
+        /// <param name="value"></param>
+        /// <param name="valueMin"></param>
+        /// <param name="valueMax"></param>
+        /// <param name="traceId"></param>
+        /// <param name="sessionId"></param>
+        /// <param name="observationId"></param>
+        /// <param name="experimentId"></param>
         /// <param name="fromTimestamp"></param>
         /// <param name="toTimestamp"></param>
-        /// <param name="environment"></param>
-        /// <param name="source"></param>
-        /// <param name="operator"></param>
-        /// <param name="value"></param>
-        /// <param name="scoreIds"></param>
-        /// <param name="configId"></param>
-        /// <param name="sessionId"></param>
-        /// <param name="datasetRunId"></param>
-        /// <param name="traceId"></param>
-        /// <param name="observationId"></param>
-        /// <param name="queueId"></param>
-        /// <param name="dataType"></param>
-        /// <param name="traceTags"></param>
-        /// <param name="fields"></param>
-        /// <param name="filter"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.GetScoresResponse>> ScoresGetManyAsResponseAsync(
-            int? page = default,
+        public async global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.GetScoresV3Response>> ScoresV3GetManyV3AsResponseAsync(
             int? limit = default,
-            string? userId = default,
+            string? cursor = default,
+            string? fields = default,
+            string? id = default,
             string? name = default,
+            string? source = default,
+            string? dataType = default,
+            string? environment = default,
+            string? configId = default,
+            string? queueId = default,
+            string? authorUserId = default,
+            string? value = default,
+            double? valueMin = default,
+            double? valueMax = default,
+            string? traceId = default,
+            string? sessionId = default,
+            string? observationId = default,
+            string? experimentId = default,
             global::System.DateTime? fromTimestamp = default,
             global::System.DateTime? toTimestamp = default,
-            global::System.Collections.Generic.IList<string>? environment = default,
-            global::Langfuse.ScoreSource? source = default,
-            string? @operator = default,
-            double? value = default,
-            string? scoreIds = default,
-            string? configId = default,
-            string? sessionId = default,
-            string? datasetRunId = default,
-            string? traceId = default,
-            string? observationId = default,
-            string? queueId = default,
-            global::Langfuse.ScoreDataType? dataType = default,
-            global::System.Collections.Generic.IList<string>? traceTags = default,
-            string? fields = default,
-            string? filter = default,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareScoresGetManyArguments(
+            PrepareScoresV3GetManyV3Arguments(
                 httpClient: HttpClient,
-                page: ref page,
                 limit: ref limit,
-                userId: ref userId,
-                name: ref name,
-                fromTimestamp: ref fromTimestamp,
-                toTimestamp: ref toTimestamp,
-                environment: environment,
-                source: ref source,
-                @operator: ref @operator,
-                value: ref value,
-                scoreIds: ref scoreIds,
-                configId: ref configId,
-                sessionId: ref sessionId,
-                datasetRunId: ref datasetRunId,
-                traceId: ref traceId,
-                observationId: ref observationId,
-                queueId: ref queueId,
-                dataType: ref dataType,
-                traceTags: traceTags,
+                cursor: ref cursor,
                 fields: ref fields,
-                filter: ref filter);
+                id: ref id,
+                name: ref name,
+                source: ref source,
+                dataType: ref dataType,
+                environment: ref environment,
+                configId: ref configId,
+                queueId: ref queueId,
+                authorUserId: ref authorUserId,
+                value: ref value,
+                valueMin: ref valueMin,
+                valueMax: ref valueMax,
+                traceId: ref traceId,
+                sessionId: ref sessionId,
+                observationId: ref observationId,
+                experimentId: ref experimentId,
+                fromTimestamp: ref fromTimestamp,
+                toTimestamp: ref toTimestamp);
 
 
             var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_ScoresGetManySecurityRequirements,
-                operationName: "ScoresGetManyAsync");
+                securityRequirements: s_ScoresV3GetManyV3SecurityRequirements,
+                operationName: "ScoresV3GetManyV3Async");
 
             using var __timeoutCancellationTokenSource = global::Langfuse.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -267,30 +281,29 @@ namespace Langfuse
             {
 
                             var __pathBuilder = new global::Langfuse.PathBuilder(
-                                path: "/api/public/v2/scores",
+                                path: "/api/public/v3/scores",
                                 baseUri: HttpClient.BaseAddress);
                             __pathBuilder
-                                .AddOptionalParameter("page", page?.ToString())
                                 .AddOptionalParameter("limit", limit?.ToString())
-                                .AddOptionalParameter("userId", userId)
+                                .AddOptionalParameter("cursor", cursor)
+                                .AddOptionalParameter("fields", fields)
+                                .AddOptionalParameter("id", id)
                                 .AddOptionalParameter("name", name)
+                                .AddOptionalParameter("source", source)
+                                .AddOptionalParameter("dataType", dataType)
+                                .AddOptionalParameter("environment", environment)
+                                .AddOptionalParameter("configId", configId)
+                                .AddOptionalParameter("queueId", queueId)
+                                .AddOptionalParameter("authorUserId", authorUserId)
+                                .AddOptionalParameter("value", value)
+                                .AddOptionalParameter("valueMin", valueMin?.ToString())
+                                .AddOptionalParameter("valueMax", valueMax?.ToString())
+                                .AddOptionalParameter("traceId", traceId)
+                                .AddOptionalParameter("sessionId", sessionId)
+                                .AddOptionalParameter("observationId", observationId)
+                                .AddOptionalParameter("experimentId", experimentId)
                                 .AddOptionalParameter("fromTimestamp", fromTimestamp?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("toTimestamp", toTimestamp?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
-                                .AddOptionalParameter("environment", environment, delimiter: ",", explode: true)
-                                .AddOptionalParameter("source", source?.ToValueString())
-                                .AddOptionalParameter("operator", @operator)
-                                .AddOptionalParameter("value", value?.ToString())
-                                .AddOptionalParameter("scoreIds", scoreIds)
-                                .AddOptionalParameter("configId", configId)
-                                .AddOptionalParameter("sessionId", sessionId)
-                                .AddOptionalParameter("datasetRunId", datasetRunId)
-                                .AddOptionalParameter("traceId", traceId)
-                                .AddOptionalParameter("observationId", observationId)
-                                .AddOptionalParameter("queueId", queueId)
-                                .AddOptionalParameter("dataType", dataType?.ToValueString())
-                                .AddOptionalParameter("traceTags", traceTags, delimiter: ",", explode: true)
-                                .AddOptionalParameter("fields", fields)
-                                .AddOptionalParameter("filter", filter)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Langfuse.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -329,30 +342,29 @@ namespace Langfuse
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareScoresGetManyRequest(
+                PrepareScoresV3GetManyV3Request(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    page: page,
                     limit: limit,
-                    userId: userId,
-                    name: name,
-                    fromTimestamp: fromTimestamp,
-                    toTimestamp: toTimestamp,
-                    environment: environment,
-                    source: source,
-                    @operator: @operator,
-                    value: value,
-                    scoreIds: scoreIds,
-                    configId: configId,
-                    sessionId: sessionId,
-                    datasetRunId: datasetRunId,
-                    traceId: traceId,
-                    observationId: observationId,
-                    queueId: queueId,
-                    dataType: dataType,
-                    traceTags: traceTags,
+                    cursor: cursor,
                     fields: fields,
-                    filter: filter);
+                    id: id,
+                    name: name,
+                    source: source,
+                    dataType: dataType,
+                    environment: environment,
+                    configId: configId,
+                    queueId: queueId,
+                    authorUserId: authorUserId,
+                    value: value,
+                    valueMin: valueMin,
+                    valueMax: valueMax,
+                    traceId: traceId,
+                    sessionId: sessionId,
+                    observationId: observationId,
+                    experimentId: experimentId,
+                    fromTimestamp: fromTimestamp,
+                    toTimestamp: toTimestamp);
 
                 return __httpRequest;
             }
@@ -369,9 +381,9 @@ namespace Langfuse
                     await global::Langfuse.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ScoresGetMany",
-                                methodName: "ScoresGetManyAsync",
-                                pathTemplate: "\"/api/public/v2/scores\"",
+                                operationId: "ScoresV3GetManyV3",
+                                methodName: "ScoresV3GetManyV3Async",
+                                pathTemplate: "\"/api/public/v3/scores\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -403,9 +415,9 @@ namespace Langfuse
                         await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ScoresGetMany",
-                                methodName: "ScoresGetManyAsync",
-                                pathTemplate: "\"/api/public/v2/scores\"",
+                                operationId: "ScoresV3GetManyV3",
+                                methodName: "ScoresV3GetManyV3Async",
+                                pathTemplate: "\"/api/public/v3/scores\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -444,9 +456,9 @@ namespace Langfuse
                         await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ScoresGetMany",
-                                methodName: "ScoresGetManyAsync",
-                                pathTemplate: "\"/api/public/v2/scores\"",
+                                operationId: "ScoresV3GetManyV3",
+                                methodName: "ScoresV3GetManyV3Async",
+                                pathTemplate: "\"/api/public/v3/scores\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -484,7 +496,7 @@ namespace Langfuse
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessScoresGetManyResponse(
+                ProcessScoresV3GetManyV3Response(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -492,9 +504,9 @@ namespace Langfuse
                     await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ScoresGetMany",
-                                methodName: "ScoresGetManyAsync",
-                                pathTemplate: "\"/api/public/v2/scores\"",
+                                operationId: "ScoresV3GetManyV3",
+                                methodName: "ScoresV3GetManyV3Async",
+                                pathTemplate: "\"/api/public/v3/scores\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -514,9 +526,9 @@ namespace Langfuse
                     await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ScoresGetMany",
-                                methodName: "ScoresGetManyAsync",
-                                pathTemplate: "\"/api/public/v2/scores\"",
+                                operationId: "ScoresV3GetManyV3",
+                                methodName: "ScoresV3GetManyV3Async",
+                                pathTemplate: "\"/api/public/v3/scores\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -729,7 +741,7 @@ namespace Langfuse
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessScoresGetManyResponseContent(
+                                ProcessScoresV3GetManyV3ResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -738,9 +750,9 @@ namespace Langfuse
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Langfuse.GetScoresResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Langfuse.GetScoresV3Response.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.GetScoresResponse>(
+                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.GetScoresV3Response>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Langfuse.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -770,9 +782,9 @@ namespace Langfuse
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Langfuse.GetScoresResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Langfuse.GetScoresV3Response.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.GetScoresResponse>(
+                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.GetScoresV3Response>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Langfuse.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
