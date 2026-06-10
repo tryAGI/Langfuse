@@ -5,115 +5,109 @@ namespace Langfuse
     public partial interface IScoresClient
     {
         /// <summary>
-        /// Get a list of scores with a polymorphic `value` field (v3).<br/>
-        /// This endpoint requires Langfuse v4 or later.<br/>
-        /// The `value` field type depends on `dataType`:<br/>
-        /// - `NUMERIC` → number<br/>
-        /// - `BOOLEAN` → boolean<br/>
-        /// - `CATEGORICAL`, `TEXT`, `CORRECTION` → string<br/>
-        /// Use the `fields` parameter to include optional field groups beyond the<br/>
-        /// default `core`. Unknown group names return HTTP 400.
+        /// **Deprecated.** Use `GET /api/public/v3/scores` instead. This endpoint<br/>
+        /// is no longer available on Langfuse v4 and later.<br/>
+        /// Get a list of scores (supports both trace and session scores)
         /// </summary>
+        /// <param name="page"></param>
         /// <param name="limit"></param>
-        /// <param name="cursor"></param>
-        /// <param name="fields"></param>
-        /// <param name="id"></param>
+        /// <param name="userId"></param>
         /// <param name="name"></param>
-        /// <param name="source"></param>
-        /// <param name="dataType"></param>
-        /// <param name="environment"></param>
-        /// <param name="configId"></param>
-        /// <param name="queueId"></param>
-        /// <param name="authorUserId"></param>
-        /// <param name="value"></param>
-        /// <param name="valueMin"></param>
-        /// <param name="valueMax"></param>
-        /// <param name="traceId"></param>
-        /// <param name="sessionId"></param>
-        /// <param name="observationId"></param>
-        /// <param name="experimentId"></param>
         /// <param name="fromTimestamp"></param>
         /// <param name="toTimestamp"></param>
+        /// <param name="environment"></param>
+        /// <param name="source"></param>
+        /// <param name="operator"></param>
+        /// <param name="value"></param>
+        /// <param name="scoreIds"></param>
+        /// <param name="configId"></param>
+        /// <param name="sessionId"></param>
+        /// <param name="datasetRunId"></param>
+        /// <param name="traceId"></param>
+        /// <param name="observationId"></param>
+        /// <param name="queueId"></param>
+        /// <param name="dataType"></param>
+        /// <param name="traceTags"></param>
+        /// <param name="fields"></param>
+        /// <param name="filter"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Langfuse.GetScoresResponse> ScoresGetManyAsync(
+            int? page = default,
             int? limit = default,
-            string? cursor = default,
-            string? fields = default,
-            string? id = default,
+            string? userId = default,
             string? name = default,
-            string? source = default,
-            string? dataType = default,
-            string? environment = default,
-            string? configId = default,
-            string? queueId = default,
-            string? authorUserId = default,
-            string? value = default,
-            double? valueMin = default,
-            double? valueMax = default,
-            string? traceId = default,
-            string? sessionId = default,
-            string? observationId = default,
-            string? experimentId = default,
             global::System.DateTime? fromTimestamp = default,
             global::System.DateTime? toTimestamp = default,
+            global::System.Collections.Generic.IList<string>? environment = default,
+            global::Langfuse.ScoreSource? source = default,
+            string? @operator = default,
+            double? value = default,
+            string? scoreIds = default,
+            string? configId = default,
+            string? sessionId = default,
+            string? datasetRunId = default,
+            string? traceId = default,
+            string? observationId = default,
+            string? queueId = default,
+            global::Langfuse.ScoreDataType? dataType = default,
+            global::System.Collections.Generic.IList<string>? traceTags = default,
+            string? fields = default,
+            string? filter = default,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Get a list of scores with a polymorphic `value` field (v3).<br/>
-        /// This endpoint requires Langfuse v4 or later.<br/>
-        /// The `value` field type depends on `dataType`:<br/>
-        /// - `NUMERIC` → number<br/>
-        /// - `BOOLEAN` → boolean<br/>
-        /// - `CATEGORICAL`, `TEXT`, `CORRECTION` → string<br/>
-        /// Use the `fields` parameter to include optional field groups beyond the<br/>
-        /// default `core`. Unknown group names return HTTP 400.
+        /// **Deprecated.** Use `GET /api/public/v3/scores` instead. This endpoint<br/>
+        /// is no longer available on Langfuse v4 and later.<br/>
+        /// Get a list of scores (supports both trace and session scores)
         /// </summary>
+        /// <param name="page"></param>
         /// <param name="limit"></param>
-        /// <param name="cursor"></param>
-        /// <param name="fields"></param>
-        /// <param name="id"></param>
+        /// <param name="userId"></param>
         /// <param name="name"></param>
-        /// <param name="source"></param>
-        /// <param name="dataType"></param>
-        /// <param name="environment"></param>
-        /// <param name="configId"></param>
-        /// <param name="queueId"></param>
-        /// <param name="authorUserId"></param>
-        /// <param name="value"></param>
-        /// <param name="valueMin"></param>
-        /// <param name="valueMax"></param>
-        /// <param name="traceId"></param>
-        /// <param name="sessionId"></param>
-        /// <param name="observationId"></param>
-        /// <param name="experimentId"></param>
         /// <param name="fromTimestamp"></param>
         /// <param name="toTimestamp"></param>
+        /// <param name="environment"></param>
+        /// <param name="source"></param>
+        /// <param name="operator"></param>
+        /// <param name="value"></param>
+        /// <param name="scoreIds"></param>
+        /// <param name="configId"></param>
+        /// <param name="sessionId"></param>
+        /// <param name="datasetRunId"></param>
+        /// <param name="traceId"></param>
+        /// <param name="observationId"></param>
+        /// <param name="queueId"></param>
+        /// <param name="dataType"></param>
+        /// <param name="traceTags"></param>
+        /// <param name="fields"></param>
+        /// <param name="filter"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
         global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.GetScoresResponse>> ScoresGetManyAsResponseAsync(
+            int? page = default,
             int? limit = default,
-            string? cursor = default,
-            string? fields = default,
-            string? id = default,
+            string? userId = default,
             string? name = default,
-            string? source = default,
-            string? dataType = default,
-            string? environment = default,
-            string? configId = default,
-            string? queueId = default,
-            string? authorUserId = default,
-            string? value = default,
-            double? valueMin = default,
-            double? valueMax = default,
-            string? traceId = default,
-            string? sessionId = default,
-            string? observationId = default,
-            string? experimentId = default,
             global::System.DateTime? fromTimestamp = default,
             global::System.DateTime? toTimestamp = default,
+            global::System.Collections.Generic.IList<string>? environment = default,
+            global::Langfuse.ScoreSource? source = default,
+            string? @operator = default,
+            double? value = default,
+            string? scoreIds = default,
+            string? configId = default,
+            string? sessionId = default,
+            string? datasetRunId = default,
+            string? traceId = default,
+            string? observationId = default,
+            string? queueId = default,
+            global::Langfuse.ScoreDataType? dataType = default,
+            global::System.Collections.Generic.IList<string>? traceTags = default,
+            string? fields = default,
+            string? filter = default,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

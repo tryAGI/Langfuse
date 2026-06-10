@@ -99,8 +99,8 @@ namespace Langfuse
         /// A reference to the entity this score is attached to. Discriminated by "kind" — one of trace, observation, session, or experiment.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("subject")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.ScoreSubjectJsonConverter))]
-        public global::Langfuse.ScoreSubject? Subject { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.ScoreSubjectV3JsonConverter))]
+        public global::Langfuse.ScoreSubjectV3? Subject { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -156,7 +156,7 @@ namespace Langfuse
             object? metadata,
             string? authorUserId,
             string? queueId,
-            global::Langfuse.ScoreSubject? subject)
+            global::Langfuse.ScoreSubjectV3? subject)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.ProjectId = projectId ?? throw new global::System.ArgumentNullException(nameof(projectId));
