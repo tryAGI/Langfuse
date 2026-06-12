@@ -38,7 +38,7 @@ namespace Langfuse
         /// <param name="sourceTraceId"></param>
         /// <param name="sourceObservationId"></param>
         /// <param name="id">
-        /// Dataset items are upserted on their id. Id needs to be unique (project-level) and cannot be reused across datasets.
+        /// Dataset items are upserted on their id. Id needs to be unique (project-level), cannot be reused across datasets, and must be at most 255 characters.
         /// </param>
         /// <param name="status"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>

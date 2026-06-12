@@ -46,7 +46,7 @@ namespace Langfuse
         public string? SourceObservationId { get; set; }
 
         /// <summary>
-        /// Dataset items are upserted on their id. Id needs to be unique (project-level) and cannot be reused across datasets.
+        /// Dataset items are upserted on their id. Id needs to be unique (project-level), cannot be reused across datasets, and must be at most 255 characters.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         public string? Id { get; set; }
@@ -74,7 +74,7 @@ namespace Langfuse
         /// <param name="sourceTraceId"></param>
         /// <param name="sourceObservationId"></param>
         /// <param name="id">
-        /// Dataset items are upserted on their id. Id needs to be unique (project-level) and cannot be reused across datasets.
+        /// Dataset items are upserted on their id. Id needs to be unique (project-level), cannot be reused across datasets, and must be at most 255 characters.
         /// </param>
         /// <param name="status"></param>
 #if NET7_0_OR_GREATER
