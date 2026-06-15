@@ -1980,127 +1980,131 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.UnstableEvaluator? Type488 { get; set; }
+        public global::Langfuse.UnstableDeleteEvaluatorResponse? Type488 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant12, global::Langfuse.UnstableLlmAsJudgeEvaluator>? Type489 { get; set; }
+        public global::Langfuse.UnstableEvaluator? Type489 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.UnstableEvaluatorVariant12? Type490 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant12, global::Langfuse.UnstableLlmAsJudgeEvaluator>? Type490 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.UnstableEvaluatorVariant1Type? Type491 { get; set; }
+        public global::Langfuse.UnstableEvaluatorVariant12? Type491 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.UnstableLlmAsJudgeEvaluator? Type492 { get; set; }
+        public global::Langfuse.UnstableEvaluatorVariant1Type? Type492 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant22, global::Langfuse.UnstableCodeEvaluator>? Type493 { get; set; }
+        public global::Langfuse.UnstableLlmAsJudgeEvaluator? Type493 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.UnstableEvaluatorVariant22? Type494 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant22, global::Langfuse.UnstableCodeEvaluator>? Type494 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.UnstableEvaluatorVariant2Type? Type495 { get; set; }
+        public global::Langfuse.UnstableEvaluatorVariant22? Type495 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.UnstableCodeEvaluator? Type496 { get; set; }
+        public global::Langfuse.UnstableEvaluatorVariant2Type? Type496 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.UnstableEvaluatorBase? Type497 { get; set; }
+        public global::Langfuse.UnstableCodeEvaluator? Type497 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.UnstableEvaluators? Type498 { get; set; }
+        public global::Langfuse.UnstableEvaluatorBase? Type498 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluator>? Type499 { get; set; }
+        public global::Langfuse.UnstableEvaluators? Type499 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.UnstableCreateEvaluatorRequest? Type500 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluator>? Type500 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>? Type501 { get; set; }
+        public global::Langfuse.UnstableCreateEvaluatorRequest? Type501 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.UnstableCreateEvaluatorRequestVariant12? Type502 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>? Type502 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.UnstableCreateEvaluatorRequestVariant1Type? Type503 { get; set; }
+        public global::Langfuse.UnstableCreateEvaluatorRequestVariant12? Type503 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest? Type504 { get; set; }
+        public global::Langfuse.UnstableCreateEvaluatorRequestVariant1Type? Type504 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest>? Type505 { get; set; }
+        public global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest? Type505 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.UnstableCreateEvaluatorRequestVariant22? Type506 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest>? Type506 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.UnstableCreateEvaluatorRequestVariant2Type? Type507 { get; set; }
+        public global::Langfuse.UnstableCreateEvaluatorRequestVariant22? Type507 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.UnstableCreateCodeEvaluatorRequest? Type508 { get; set; }
+        public global::Langfuse.UnstableCreateEvaluatorRequestVariant2Type? Type508 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.IngestionBatchRequest? Type509 { get; set; }
+        public global::Langfuse.UnstableCreateCodeEvaluatorRequest? Type509 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.IngestionEvent>? Type510 { get; set; }
+        public global::Langfuse.IngestionBatchRequest? Type510 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.OpentelemetryExportTracesRequest? Type511 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.IngestionEvent>? Type511 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.OtelResourceSpan>? Type512 { get; set; }
+        public global::Langfuse.OpentelemetryExportTracesRequest? Type512 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.ProjectsCreateRequest? Type513 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.OtelResourceSpan>? Type513 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.ProjectsUpdateRequest? Type514 { get; set; }
+        public global::Langfuse.ProjectsCreateRequest? Type514 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.ProjectsCreateApiKeyRequest? Type515 { get; set; }
+        public global::Langfuse.ProjectsUpdateRequest? Type515 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.PromptVersionUpdateRequest? Type516 { get; set; }
+        public global::Langfuse.ProjectsCreateApiKeyRequest? Type516 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.ScimCreateUserRequest? Type517 { get; set; }
+        public global::Langfuse.PromptVersionUpdateRequest? Type517 { get; set; }
         /// <summary>
         /// 
         /// </summary>
-        public global::Langfuse.TraceDeleteMultipleRequest? Type518 { get; set; }
+        public global::Langfuse.ScimCreateUserRequest? Type518 { get; set; }
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.TraceDeleteMultipleRequest? Type519 { get; set; }
 
         /// <summary>
         /// 
