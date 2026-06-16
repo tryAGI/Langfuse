@@ -36,9 +36,7 @@ namespace Langfuse
         /// <param name="sessionId"></param>
         /// <param name="observationId"></param>
         /// <param name="datasetRunId"></param>
-        /// <param name="name">
-        /// Example: novelty
-        /// </param>
+        /// <param name="name"></param>
         /// <param name="value">
         /// The value of the score. Must be passed as string for categorical and text scores, and numeric for boolean and numeric scores
         /// </param>

@@ -39,7 +39,8 @@ namespace Langfuse
         /// - If evaluator creation returns `422` with `code=evaluator_preflight_failed`, either provide a valid explicit `modelConfig` here or configure the project's default evaluation model, then retry the same request.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("modelConfig")]
-        public global::Langfuse.UnstableEvaluatorModelConfig? ModelConfig { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Langfuse.UnstableEvaluatorModelConfig ModelConfig { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -77,11 +78,11 @@ namespace Langfuse
         public UnstableLlmAsJudgeEvaluator(
             string prompt,
             global::Langfuse.UnstablePublicEvaluatorOutputDefinition outputDefinition,
-            global::Langfuse.UnstableEvaluatorModelConfig? modelConfig)
+            global::Langfuse.UnstableEvaluatorModelConfig modelConfig)
         {
             this.Prompt = prompt ?? throw new global::System.ArgumentNullException(nameof(prompt));
             this.OutputDefinition = outputDefinition;
-            this.ModelConfig = modelConfig;
+            this.ModelConfig = modelConfig ?? throw new global::System.ArgumentNullException(nameof(modelConfig));
         }
 
         /// <summary>

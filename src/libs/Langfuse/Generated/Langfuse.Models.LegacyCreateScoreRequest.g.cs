@@ -39,9 +39,8 @@ namespace Langfuse
         public string? DatasetRunId { get; set; }
 
         /// <summary>
-        /// Example: novelty
+        /// 
         /// </summary>
-        /// <example>novelty</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
@@ -109,9 +108,7 @@ namespace Langfuse
         /// <summary>
         /// Initializes a new instance of the <see cref="LegacyCreateScoreRequest" /> class.
         /// </summary>
-        /// <param name="name">
-        /// Example: novelty
-        /// </param>
+        /// <param name="name"></param>
         /// <param name="value">
         /// The value of the score. Must be passed as string for categorical and text scores, and numeric for boolean and numeric scores
         /// </param>

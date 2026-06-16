@@ -9,18 +9,15 @@ namespace Langfuse
     public sealed partial class HealthResponse
     {
         /// <summary>
-        /// Langfuse server version<br/>
-        /// Example: 1.25.0
+        /// Langfuse server version
         /// </summary>
-        /// <example>1.25.0</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("version")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Version { get; set; }
 
         /// <summary>
-        /// Example: OK
+        /// 
         /// </summary>
-        /// <example>OK</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("status")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Status { get; set; }
@@ -35,12 +32,9 @@ namespace Langfuse
         /// Initializes a new instance of the <see cref="HealthResponse" /> class.
         /// </summary>
         /// <param name="version">
-        /// Langfuse server version<br/>
-        /// Example: 1.25.0
+        /// Langfuse server version
         /// </param>
-        /// <param name="status">
-        /// Example: OK
-        /// </param>
+        /// <param name="status"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif

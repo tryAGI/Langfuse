@@ -23,10 +23,8 @@ namespace Langfuse
     {
         /// <summary>
         /// Prompt variable name without braces.<br/>
-        /// Example: for the prompt `Judge {{input}} against {{output}}`, use `input` and `output`.<br/>
-        /// Example: input
+        /// Example: for the prompt `Judge {{input}} against {{output}}`, use `input` and `output`.
         /// </summary>
-        /// <example>input</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("variable")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Variable { get; set; }
@@ -70,8 +68,7 @@ namespace Langfuse
         /// </summary>
         /// <param name="variable">
         /// Prompt variable name without braces.<br/>
-        /// Example: for the prompt `Judge {{input}} against {{output}}`, use `input` and `output`.<br/>
-        /// Example: input
+        /// Example: for the prompt `Judge {{input}} against {{output}}`, use `input` and `output`.
         /// </param>
         /// <param name="source">
         /// Source field used to populate a prompt variable.<br/>

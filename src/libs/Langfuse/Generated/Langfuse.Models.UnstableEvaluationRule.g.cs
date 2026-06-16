@@ -19,19 +19,15 @@ namespace Langfuse
     public sealed partial class UnstableEvaluationRule
     {
         /// <summary>
-        /// Stable evaluation rule identifier.<br/>
-        /// Example: erule_123
+        /// Stable evaluation rule identifier.
         /// </summary>
-        /// <example>erule_123</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Id { get; set; }
 
         /// <summary>
-        /// Human-readable deployment name. This is independent from the evaluator name.<br/>
-        /// Example: answer-correctness-live
+        /// Human-readable deployment name. This is independent from the evaluator name.
         /// </summary>
-        /// <example>answer-correctness-live</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
@@ -60,10 +56,8 @@ namespace Langfuse
         public required global::Langfuse.UnstableEvaluationRuleTarget Target { get; set; }
 
         /// <summary>
-        /// Desired enabled state configured by the client.<br/>
-        /// Example: true
+        /// Desired enabled state configured by the client.
         /// </summary>
-        /// <example>true</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("enabled")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Enabled { get; set; }
@@ -95,10 +89,8 @@ namespace Langfuse
         /// Fraction of matching target objects that should be evaluated.<br/>
         /// Must be greater than `0` and less than or equal to `1`.<br/>
         /// - `1` means evaluate every matching target.<br/>
-        /// - `0.25` means evaluate approximately 25% of matching targets.<br/>
-        /// Example: 1
+        /// - `0.25` means evaluate approximately 25% of matching targets.
         /// </summary>
-        /// <example>1</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("sampling")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required double Sampling { get; set; }
@@ -118,19 +110,15 @@ namespace Langfuse
         public required global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleMapping> Mapping { get; set; }
 
         /// <summary>
-        /// Timestamp when the evaluation rule was created.<br/>
-        /// Example: 2026-03-30T09:20:00.000Z
+        /// Timestamp when the evaluation rule was created.
         /// </summary>
-        /// <example>2026-03-30T09:20:00.000Z</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("createdAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime CreatedAt { get; set; }
 
         /// <summary>
-        /// Timestamp when the evaluation rule was last updated.<br/>
-        /// Example: 2026-03-30T09:20:00.000Z
+        /// Timestamp when the evaluation rule was last updated.
         /// </summary>
-        /// <example>2026-03-30T09:20:00.000Z</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("updatedAt")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::System.DateTime UpdatedAt { get; set; }
@@ -145,12 +133,10 @@ namespace Langfuse
         /// Initializes a new instance of the <see cref="UnstableEvaluationRule" /> class.
         /// </summary>
         /// <param name="id">
-        /// Stable evaluation rule identifier.<br/>
-        /// Example: erule_123
+        /// Stable evaluation rule identifier.
         /// </param>
         /// <param name="name">
-        /// Human-readable deployment name. This is independent from the evaluator name.<br/>
-        /// Example: answer-correctness-live
+        /// Human-readable deployment name. This is independent from the evaluator name.
         /// </param>
         /// <param name="evaluator">
         /// Resolved evaluator currently used by the evaluation rule.<br/>
@@ -167,8 +153,7 @@ namespace Langfuse
         ///   Discover valid dataset IDs with `GET /api/public/v2/datasets`, then use the returned dataset `id` values in your filter.
         /// </param>
         /// <param name="enabled">
-        /// Desired enabled state configured by the client.<br/>
-        /// Example: true
+        /// Desired enabled state configured by the client.
         /// </param>
         /// <param name="status">
         /// Effective runtime status of the evaluation rule.<br/>
@@ -180,8 +165,7 @@ namespace Langfuse
         /// Fraction of matching target objects that should be evaluated.<br/>
         /// Must be greater than `0` and less than or equal to `1`.<br/>
         /// - `1` means evaluate every matching target.<br/>
-        /// - `0.25` means evaluate approximately 25% of matching targets.<br/>
-        /// Example: 1
+        /// - `0.25` means evaluate approximately 25% of matching targets.
         /// </param>
         /// <param name="filter">
         /// List of filter conditions used to decide whether a target should be evaluated.
@@ -190,12 +174,10 @@ namespace Langfuse
         /// Variable mappings used to populate evaluator runtime variables from the live target object.
         /// </param>
         /// <param name="createdAt">
-        /// Timestamp when the evaluation rule was created.<br/>
-        /// Example: 2026-03-30T09:20:00.000Z
+        /// Timestamp when the evaluation rule was created.
         /// </param>
         /// <param name="updatedAt">
-        /// Timestamp when the evaluation rule was last updated.<br/>
-        /// Example: 2026-03-30T09:20:00.000Z
+        /// Timestamp when the evaluation rule was last updated.
         /// </param>
         /// <param name="pausedReason">
         /// Machine-readable reason when `status=paused`, otherwise `null`.
