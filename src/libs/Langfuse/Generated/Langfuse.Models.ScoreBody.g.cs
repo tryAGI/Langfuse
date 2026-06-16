@@ -39,10 +39,8 @@ namespace Langfuse
         public string? DatasetRunId { get; set; }
 
         /// <summary>
-        /// The name of the score. Always overrides "output" for correction scores.<br/>
-        /// Example: novelty
+        /// The name of the score. Always overrides "output" for correction scores.
         /// </summary>
-        /// <example>novelty</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
@@ -102,8 +100,7 @@ namespace Langfuse
         /// Initializes a new instance of the <see cref="ScoreBody" /> class.
         /// </summary>
         /// <param name="name">
-        /// The name of the score. Always overrides "output" for correction scores.<br/>
-        /// Example: novelty
+        /// The name of the score. Always overrides "output" for correction scores.
         /// </param>
         /// <param name="value">
         /// The value of the score. Must be passed as string for categorical and text scores, and numeric for boolean and numeric scores

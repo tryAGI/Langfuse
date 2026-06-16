@@ -4,7 +4,8 @@
 namespace Langfuse
 {
     /// <summary>
-    /// Maps one evaluator prompt variable to one source field from the target object.<br/>
+    /// Maps one evaluator variable to one source field from the target object.<br/>
+    /// Manual mappings are used for `llm_as_judge` evaluators. `code` evaluators use a fixed runtime mapping managed by Langfuse.<br/>
     /// How to build a valid mapping list:<br/>
     /// 1. Create the evaluator or fetch it with `GET /evaluators/{id}`.<br/>
     /// 2. Read the evaluator `variables` array.<br/>
@@ -14,7 +15,7 @@ namespace Langfuse
     /// `jsonPath` is optional. Use it only when the selected source is a JSON object and you want to extract one nested field before inserting it into the evaluator prompt.<br/>
     /// Recovery guidance:<br/>
     /// - `invalid_variable_mapping`: the variable name is unknown for this evaluator, or the selected `source` is not valid for the chosen `target`<br/>
-    /// - `missing_variable_mapping`: one or more evaluator variables are not mapped yet<br/>
+    /// - `missing_variable_mapping`: one or more LLM-as-judge evaluator variables are not mapped yet<br/>
     /// - `duplicate_variable_mapping`: the same evaluator variable appears more than once<br/>
     /// - `invalid_json_path`: the JSONPath expression is malformed. Remove it or correct it.
     /// </summary>
@@ -22,10 +23,8 @@ namespace Langfuse
     {
         /// <summary>
         /// Prompt variable name without braces.<br/>
-        /// Example: for the prompt `Judge {{input}} against {{output}}`, use `input` and `output`.<br/>
-        /// Example: input
+        /// Example: for the prompt `Judge {{input}} against {{output}}`, use `input` and `output`.
         /// </summary>
-        /// <example>input</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("variable")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Variable { get; set; }
@@ -69,8 +68,7 @@ namespace Langfuse
         /// </summary>
         /// <param name="variable">
         /// Prompt variable name without braces.<br/>
-        /// Example: for the prompt `Judge {{input}} against {{output}}`, use `input` and `output`.<br/>
-        /// Example: input
+        /// Example: for the prompt `Judge {{input}} against {{output}}`, use `input` and `output`.
         /// </param>
         /// <param name="source">
         /// Source field used to populate a prompt variable.<br/>

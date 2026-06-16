@@ -5,6 +5,8 @@ namespace Langfuse
     public partial interface IScoresClient
     {
         /// <summary>
+        /// **Deprecated.** Use `GET /api/public/v3/scores` with the `id` filter<br/>
+        /// instead. This endpoint is no longer available on Langfuse v4 and later.<br/>
         /// Get a score (supports both trace and session scores)
         /// </summary>
         /// <param name="scoreId"></param>
@@ -16,6 +18,8 @@ namespace Langfuse
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
+        /// **Deprecated.** Use `GET /api/public/v3/scores` with the `id` filter<br/>
+        /// instead. This endpoint is no longer available on Langfuse v4 and later.<br/>
         /// Get a score (supports both trace and session scores)
         /// </summary>
         /// <param name="scoreId"></param>

@@ -82,6 +82,8 @@ namespace Langfuse
             ref string content);
 
         /// <summary>
+        /// **Deprecated.** Use `GET /api/public/v3/scores` instead. This endpoint<br/>
+        /// is no longer available on Langfuse v4 and later.<br/>
         /// Get a list of scores (supports both trace and session scores)
         /// </summary>
         /// <param name="page"></param>
@@ -162,6 +164,8 @@ namespace Langfuse
             return __response.Body;
         }
         /// <summary>
+        /// **Deprecated.** Use `GET /api/public/v3/scores` instead. This endpoint<br/>
+        /// is no longer available on Langfuse v4 and later.<br/>
         /// Get a list of scores (supports both trace and session scores)
         /// </summary>
         /// <param name="page"></param>

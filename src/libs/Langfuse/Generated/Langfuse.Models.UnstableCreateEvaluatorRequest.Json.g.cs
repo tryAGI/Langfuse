@@ -2,7 +2,7 @@
 
 namespace Langfuse
 {
-    public sealed partial class UnstableCreateEvaluatorRequest
+    public readonly partial struct UnstableCreateEvaluatorRequest
     {
         /// <summary>
         /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
@@ -41,7 +41,7 @@ namespace Langfuse
             return global::System.Text.Json.JsonSerializer.Deserialize(
                 json,
                 typeof(global::Langfuse.UnstableCreateEvaluatorRequest),
-                jsonSerializerContext) as global::Langfuse.UnstableCreateEvaluatorRequest;
+                jsonSerializerContext) as global::Langfuse.UnstableCreateEvaluatorRequest?;
         }
 
         /// <summary>
@@ -70,7 +70,7 @@ namespace Langfuse
             return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
                 jsonStream,
                 typeof(global::Langfuse.UnstableCreateEvaluatorRequest),
-                jsonSerializerContext).ConfigureAwait(false)) as global::Langfuse.UnstableCreateEvaluatorRequest;
+                jsonSerializerContext).ConfigureAwait(false)) as global::Langfuse.UnstableCreateEvaluatorRequest?;
         }
 
         /// <summary>
