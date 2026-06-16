@@ -87,9 +87,9 @@ namespace Langfuse
         /// 
         /// </summary>
 #if NET6_0_OR_GREATER
-        public int? MapValueVariant3 { get; init; }
+        public float? MapValueVariant3 { get; init; }
 #else
-        public int? MapValueVariant3 { get; }
+        public float? MapValueVariant3 { get; }
 #endif
 
         /// <summary>
@@ -107,7 +107,7 @@ namespace Langfuse
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out int? value)
+            out float? value)
         {
             value = MapValueVariant3;
             return IsMapValueVariant3;
@@ -116,7 +116,7 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        public int PickMapValueVariant3() => IsMapValueVariant3
+        public float PickMapValueVariant3() => IsMapValueVariant3
             ? MapValueVariant3!.Value
             : throw new global::System.InvalidOperationException($"Expected union variant 'MapValueVariant3' but the value was {ToString()}.");
 
@@ -242,6 +242,29 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public static implicit operator MapValue(float value) => new MapValue((float?)value);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static implicit operator float?(MapValue @this) => @this.MapValueVariant3;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public MapValue(float? value)
+        {
+            MapValueVariant3 = value;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static MapValue FromMapValueVariant3(float? value) => new MapValue(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
         public static implicit operator MapValue(bool value) => new MapValue((bool?)value);
 
         /// <summary>
@@ -268,7 +291,7 @@ namespace Langfuse
         public MapValue(
             string? mapValueVariant1,
             int? mapValueVariant2,
-            int? mapValueVariant3,
+            float? mapValueVariant3,
             bool? mapValueVariant4,
             global::System.Collections.Generic.IList<string>? mapValueVariant5
             )
@@ -316,7 +339,7 @@ namespace Langfuse
         public TResult? Match<TResult>(
             global::System.Func<string, TResult>? mapValueVariant1 = null,
             global::System.Func<int?, TResult>? mapValueVariant2 = null,
-            global::System.Func<int?, TResult>? mapValueVariant3 = null,
+            global::System.Func<float?, TResult>? mapValueVariant3 = null,
             global::System.Func<bool?, TResult>? mapValueVariant4 = null,
             global::System.Func<global::System.Collections.Generic.IList<string>, TResult>? mapValueVariant5 = null,
             bool validate = true)
@@ -358,7 +381,7 @@ namespace Langfuse
 
             global::System.Action<int?>? mapValueVariant2 = null,
 
-            global::System.Action<int?>? mapValueVariant3 = null,
+            global::System.Action<float?>? mapValueVariant3 = null,
 
             global::System.Action<bool?>? mapValueVariant4 = null,
 
@@ -398,7 +421,7 @@ namespace Langfuse
         public void Switch(
             global::System.Action<string>? mapValueVariant1 = null,
             global::System.Action<int?>? mapValueVariant2 = null,
-            global::System.Action<int?>? mapValueVariant3 = null,
+            global::System.Action<float?>? mapValueVariant3 = null,
             global::System.Action<bool?>? mapValueVariant4 = null,
             global::System.Action<global::System.Collections.Generic.IList<string>>? mapValueVariant5 = null,
             bool validate = true)
@@ -442,7 +465,7 @@ namespace Langfuse
                 MapValueVariant2,
                 typeof(int),
                 MapValueVariant3,
-                typeof(int),
+                typeof(float),
                 MapValueVariant4,
                 typeof(bool),
                 MapValueVariant5,
@@ -465,7 +488,7 @@ namespace Langfuse
             return
                 global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(MapValueVariant1, other.MapValueVariant1) &&
                 global::System.Collections.Generic.EqualityComparer<int?>.Default.Equals(MapValueVariant2, other.MapValueVariant2) &&
-                global::System.Collections.Generic.EqualityComparer<int?>.Default.Equals(MapValueVariant3, other.MapValueVariant3) &&
+                global::System.Collections.Generic.EqualityComparer<float?>.Default.Equals(MapValueVariant3, other.MapValueVariant3) &&
                 global::System.Collections.Generic.EqualityComparer<bool?>.Default.Equals(MapValueVariant4, other.MapValueVariant4) &&
                 global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<string>?>.Default.Equals(MapValueVariant5, other.MapValueVariant5) 
                 ;

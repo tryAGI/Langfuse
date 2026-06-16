@@ -16,19 +16,15 @@ namespace Langfuse
     {
         /// <summary>
         /// Provider identifier to use for this evaluator, for example `openai` or `anthropic`.<br/>
-        /// To discover valid values for the current project, call `GET /api/public/llm-connections` and use one of the returned `provider` values.<br/>
-        /// Example: openai
+        /// To discover valid values for the current project, call `GET /api/public/llm-connections` and use one of the returned `provider` values.
         /// </summary>
-        /// <example>openai</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("provider")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Provider { get; set; }
 
         /// <summary>
-        /// Model identifier exposed by the provider, for example `gpt-4.1-mini`.<br/>
-        /// Example: gpt-4.1-mini
+        /// Model identifier exposed by the provider, for example `gpt-4.1-mini`.
         /// </summary>
-        /// <example>gpt-4.1-mini</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("model")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Model { get; set; }
@@ -44,12 +40,10 @@ namespace Langfuse
         /// </summary>
         /// <param name="provider">
         /// Provider identifier to use for this evaluator, for example `openai` or `anthropic`.<br/>
-        /// To discover valid values for the current project, call `GET /api/public/llm-connections` and use one of the returned `provider` values.<br/>
-        /// Example: openai
+        /// To discover valid values for the current project, call `GET /api/public/llm-connections` and use one of the returned `provider` values.
         /// </param>
         /// <param name="model">
-        /// Model identifier exposed by the provider, for example `gpt-4.1-mini`.<br/>
-        /// Example: gpt-4.1-mini
+        /// Model identifier exposed by the provider, for example `gpt-4.1-mini`.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

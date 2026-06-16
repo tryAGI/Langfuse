@@ -14,10 +14,8 @@ namespace Langfuse
     public sealed partial class UnstablePublicApiError
     {
         /// <summary>
-        /// Human-readable description of the failure.<br/>
-        /// Example: Filter column "type" contains unsupported value(s): INVALID
+        /// Human-readable description of the failure.
         /// </summary>
-        /// <example>Filter column "type" contains unsupported value(s): INVALID</example>
         [global::System.Text.Json.Serialization.JsonPropertyName("message")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Message { get; set; }
@@ -55,8 +53,7 @@ namespace Langfuse
         /// Initializes a new instance of the <see cref="UnstablePublicApiError" /> class.
         /// </summary>
         /// <param name="message">
-        /// Human-readable description of the failure.<br/>
-        /// Example: Filter column "type" contains unsupported value(s): INVALID
+        /// Human-readable description of the failure.
         /// </param>
         /// <param name="code">
         /// Machine-readable error code returned by the unstable evaluators API.<br/>

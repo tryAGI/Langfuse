@@ -51,7 +51,7 @@ namespace Langfuse.JsonConverters
             }
             var __score2 = 0;
             {
-                var __ti = typeInfoResolver.GetTypeInfo(typeof(int), options);
+                var __ti = typeInfoResolver.GetTypeInfo(typeof(float), options);
                 if (__ti != null && __ti.Kind == global::System.Text.Json.Serialization.Metadata.JsonTypeInfoKind.Object)
                 {
                     foreach (var __prop in __ti.Properties)
@@ -92,7 +92,7 @@ namespace Langfuse.JsonConverters
 
             string? mapValueVariant1 = default;
             int? mapValueVariant2 = default;
-            int? mapValueVariant3 = default;
+            float? mapValueVariant3 = default;
             bool? mapValueVariant4 = default;
             global::System.Collections.Generic.IList<string>? mapValueVariant5 = default;
             if (__bestIndex >= 0)
@@ -136,8 +136,8 @@ namespace Langfuse.JsonConverters
                     try
                     {
 
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(int), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<int> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(int).Name}");
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(float), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<float> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(float).Name}");
                         mapValueVariant3 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
@@ -222,8 +222,8 @@ namespace Langfuse.JsonConverters
                 try
                 {
 
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(int), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<int> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(int).Name}");
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(float), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<float> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(float).Name}");
                     mapValueVariant3 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
@@ -306,8 +306,8 @@ namespace Langfuse.JsonConverters
             }
             else if (value.IsMapValueVariant3)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(int), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<int> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(int).Name}");
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(float), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<float> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(float).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.MapValueVariant3!.Value, typeInfo);
             }
             else if (value.IsMapValueVariant4)
