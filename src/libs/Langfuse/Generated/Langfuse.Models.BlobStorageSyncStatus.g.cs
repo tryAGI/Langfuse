@@ -7,8 +7,9 @@ namespace Langfuse
     /// Sync status of the blob storage integration:<br/>
     /// - `disabled` — integration is not enabled<br/>
     /// - `error` — last export failed (see `lastError` for details)<br/>
-    /// - `idle` — enabled but has never exported yet<br/>
+    /// - `running` — an export job is currently being processed<br/>
     /// - `queued` — next export is overdue (`nextSyncAt` is in the past) and waiting to be picked up by the worker<br/>
+    /// - `idle` — enabled but has never exported yet and no export is queued<br/>
     /// - `up_to_date` — all available data has been exported; next export is scheduled for the future<br/>
     /// **ETL usage**: poll this endpoint and check for `up_to_date` status. Compare `lastSyncAt` against your<br/>
     /// ETL bookmark to determine if new data is available. Note that exports run with a 20-minute lag buffer,<br/>
@@ -33,6 +34,10 @@ namespace Langfuse
         /// </summary>
         Queued,
         /// <summary>
+        /// 
+        /// </summary>
+        Running,
+        /// <summary>
         /// poll this endpoint and check for `up_to_date` status. Compare `lastSyncAt` against your
         /// </summary>
         UpToDate,
@@ -54,6 +59,7 @@ namespace Langfuse
                 BlobStorageSyncStatus.Error => "error",
                 BlobStorageSyncStatus.Idle => "idle",
                 BlobStorageSyncStatus.Queued => "queued",
+                BlobStorageSyncStatus.Running => "running",
                 BlobStorageSyncStatus.UpToDate => "up_to_date",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -69,6 +75,7 @@ namespace Langfuse
                 "error" => BlobStorageSyncStatus.Error,
                 "idle" => BlobStorageSyncStatus.Idle,
                 "queued" => BlobStorageSyncStatus.Queued,
+                "running" => BlobStorageSyncStatus.Running,
                 "up_to_date" => BlobStorageSyncStatus.UpToDate,
                 _ => null,
             };

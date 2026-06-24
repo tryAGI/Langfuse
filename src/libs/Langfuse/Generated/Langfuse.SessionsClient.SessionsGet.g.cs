@@ -42,7 +42,11 @@ namespace Langfuse
             ref string content);
 
         /// <summary>
-        /// Get a session. Please note that `traces` on this endpoint are not paginated, if you plan to fetch large sessions, consider `GET /api/public/traces?sessionId=&lt;sessionId&gt;`
+        /// Get a session.<br/>
+        /// Please note that `traces` on this endpoint are not paginated. For large<br/>
+        /// sessions or new data extraction workflows, use the v2 observations endpoint<br/>
+        /// with a URL-encoded `sessionId` filter and a bounded time range:<br/>
+        /// `GET /api/public/v2/observations?filter=&lt;sessionId filter&gt;&amp;fromStartTime=&lt;from&gt;&amp;toStartTime=&lt;to&gt;`.
         /// </summary>
         /// <param name="sessionId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -62,7 +66,11 @@ namespace Langfuse
             return __response.Body;
         }
         /// <summary>
-        /// Get a session. Please note that `traces` on this endpoint are not paginated, if you plan to fetch large sessions, consider `GET /api/public/traces?sessionId=&lt;sessionId&gt;`
+        /// Get a session.<br/>
+        /// Please note that `traces` on this endpoint are not paginated. For large<br/>
+        /// sessions or new data extraction workflows, use the v2 observations endpoint<br/>
+        /// with a URL-encoded `sessionId` filter and a bounded time range:<br/>
+        /// `GET /api/public/v2/observations?filter=&lt;sessionId filter&gt;&amp;fromStartTime=&lt;from&gt;&amp;toStartTime=&lt;to&gt;`.
         /// </summary>
         /// <param name="sessionId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>

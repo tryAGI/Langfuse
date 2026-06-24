@@ -5,7 +5,11 @@ namespace Langfuse
     public partial interface ISessionsClient
     {
         /// <summary>
-        /// Get sessions
+        /// Get sessions.<br/>
+        /// This legacy endpoint is not recommended for new data extraction workflows.<br/>
+        /// Use the v2 observations endpoint with a bounded time range and group rows by<br/>
+        /// `sessionId` instead:<br/>
+        /// `GET /api/public/v2/observations?fromStartTime=&lt;from&gt;&amp;toStartTime=&lt;to&gt;`.
         /// </summary>
         /// <param name="page"></param>
         /// <param name="limit"></param>
@@ -24,7 +28,11 @@ namespace Langfuse
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Get sessions
+        /// Get sessions.<br/>
+        /// This legacy endpoint is not recommended for new data extraction workflows.<br/>
+        /// Use the v2 observations endpoint with a bounded time range and group rows by<br/>
+        /// `sessionId` instead:<br/>
+        /// `GET /api/public/v2/observations?fromStartTime=&lt;from&gt;&amp;toStartTime=&lt;to&gt;`.
         /// </summary>
         /// <param name="page"></param>
         /// <param name="limit"></param>

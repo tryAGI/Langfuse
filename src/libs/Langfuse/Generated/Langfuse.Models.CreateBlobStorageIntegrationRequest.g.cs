@@ -100,7 +100,7 @@ namespace Langfuse
         public required global::Langfuse.BlobStorageExportMode ExportMode { get; set; }
 
         /// <summary>
-        /// Custom start date for exports (required when exportMode is FROM_CUSTOM_DATE)
+        /// Custom start date for exports (required when exportMode is FROM_CUSTOM_DATE). Must not be in the future (27 h tolerance for timezone differences).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("exportStartDate")]
         public global::System.DateTime? ExportStartDate { get; set; }
@@ -170,7 +170,7 @@ namespace Langfuse
         /// Path prefix for exported files (must end with forward slash if provided)
         /// </param>
         /// <param name="exportStartDate">
-        /// Custom start date for exports (required when exportMode is FROM_CUSTOM_DATE)
+        /// Custom start date for exports (required when exportMode is FROM_CUSTOM_DATE). Must not be in the future (27 h tolerance for timezone differences).
         /// </param>
         /// <param name="compressed">
         /// Enable gzip compression for exported files (.csv.gz, .json.gz, .jsonl.gz). Defaults to true.
