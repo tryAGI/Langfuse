@@ -29,6 +29,10 @@ namespace Langfuse
 
             typeof(global::Langfuse.JsonConverters.BlobStorageIntegrationFileTypeNullableJsonConverter),
 
+            typeof(global::Langfuse.JsonConverters.BlobStorageIntegrationFileTypeResponseJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.BlobStorageIntegrationFileTypeResponseNullableJsonConverter),
+
             typeof(global::Langfuse.JsonConverters.BlobStorageExportModeJsonConverter),
 
             typeof(global::Langfuse.JsonConverters.BlobStorageExportModeNullableJsonConverter),
@@ -84,6 +88,10 @@ namespace Langfuse
             typeof(global::Langfuse.JsonConverters.ScoreVariant5DataTypeJsonConverter),
 
             typeof(global::Langfuse.JsonConverters.ScoreVariant5DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.DatasetItemMediaReferenceFieldJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.DatasetItemMediaReferenceFieldNullableJsonConverter),
 
             typeof(global::Langfuse.JsonConverters.PricingTierOperatorJsonConverter),
 
@@ -377,6 +385,22 @@ namespace Langfuse
 
             typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant10TypeNullableJsonConverter),
 
+            typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetViewJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetViewNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetChartTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetChartTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetMetricAggregationJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetMetricAggregationNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetSortOrderJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetSortOrderNullableJsonConverter),
+
             typeof(global::Langfuse.JsonConverters.UnstablePublicApiErrorCodeJsonConverter),
 
             typeof(global::Langfuse.JsonConverters.UnstablePublicApiErrorCodeNullableJsonConverter),
@@ -574,6 +598,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateAnnotationQueueAssignmentResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageIntegrationType), TypeInfoPropertyName = "BlobStorageIntegrationType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageIntegrationFileType), TypeInfoPropertyName = "BlobStorageIntegrationFileType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageIntegrationFileTypeResponse), TypeInfoPropertyName = "BlobStorageIntegrationFileTypeResponse2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageExportMode), TypeInfoPropertyName = "BlobStorageExportMode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageExportFrequency), TypeInfoPropertyName = "BlobStorageExportFrequency2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageExportSource), TypeInfoPropertyName = "BlobStorageExportSource2")]
@@ -659,6 +684,11 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.Dataset))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DatasetItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DatasetStatus), TypeInfoPropertyName = "DatasetStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.DatasetItemMediaReference>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DatasetItemMediaReference))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DatasetItemMediaReferenceField), TypeInfoPropertyName = "DatasetItemMediaReferenceField2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DatasetItemMediaReferenceMedia))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(long))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DatasetRunItem))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DatasetRun))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DatasetRunWithItems))]
@@ -770,7 +800,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DeleteLlmConnectionResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetMediaResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(long))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PatchMediaBody))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetMediaUploadUrlRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.MediaContentType), TypeInfoPropertyName = "MediaContentType2")]
@@ -1023,6 +1052,20 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant102, global::Langfuse.UnstableNullEvaluationRuleFilter>), TypeInfoPropertyName = "AllOfUnstableEvaluationRuleFilterVariant102UnstableNullEvaluationRuleFilter2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluationRuleFilterVariant102))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluationRuleFilterVariant10Type), TypeInfoPropertyName = "UnstableEvaluationRuleFilterVariant10Type2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetView), TypeInfoPropertyName = "UnstableDashboardWidgetView2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetChartType), TypeInfoPropertyName = "UnstableDashboardWidgetChartType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetMetricAggregation), TypeInfoPropertyName = "UnstableDashboardWidgetMetricAggregation2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetDimension))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetMetric))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetFilter))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetChartConfig))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetDefaultSort))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetSortOrder), TypeInfoPropertyName = "UnstableDashboardWidgetSortOrder2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableCreateDashboardWidgetRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetDimension>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetMetric>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetFilter>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidget))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstablePublicApiErrorCode), TypeInfoPropertyName = "UnstablePublicApiErrorCode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstablePublicApiValidationIssue))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstablePublicApiErrorDetails))]
@@ -1032,25 +1075,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluationRuleEvaluator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleFilter>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleMapping>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluationRules))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRule>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableCreateEvaluationRuleRequest), TypeInfoPropertyName = "UnstableCreateEvaluationRuleRequest2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableCreateLlmAsJudgeEvaluationRuleRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableCreateCodeEvaluationRuleRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableLlmAsJudgeEvaluationRuleEvaluatorReference))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableCodeEvaluationRuleEvaluatorReference))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableUpdateEvaluationRuleRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluationRuleEvaluatorReference))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDeleteEvaluationRuleResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableLlmAsJudgeEvaluatorType), TypeInfoPropertyName = "UnstableLlmAsJudgeEvaluatorType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDeleteEvaluatorResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluator), TypeInfoPropertyName = "UnstableEvaluator2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant12, global::Langfuse.UnstableLlmAsJudgeEvaluator>), TypeInfoPropertyName = "AllOfUnstableEvaluatorVariant12UnstableLlmAsJudgeEvaluator2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluatorVariant12))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluatorVariant1Type), TypeInfoPropertyName = "UnstableEvaluatorVariant1Type2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableLlmAsJudgeEvaluator))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant22, global::Langfuse.UnstableCodeEvaluator>), TypeInfoPropertyName = "AllOfUnstableEvaluatorVariant22UnstableCodeEvaluator2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluatorVariant22))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1077,6 +1101,10 @@ namespace Langfuse
             typeof(global::Langfuse.JsonConverters.BlobStorageIntegrationFileTypeJsonConverter),
 
             typeof(global::Langfuse.JsonConverters.BlobStorageIntegrationFileTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.BlobStorageIntegrationFileTypeResponseJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.BlobStorageIntegrationFileTypeResponseNullableJsonConverter),
 
             typeof(global::Langfuse.JsonConverters.BlobStorageExportModeJsonConverter),
 
@@ -1133,6 +1161,10 @@ namespace Langfuse
             typeof(global::Langfuse.JsonConverters.ScoreVariant5DataTypeJsonConverter),
 
             typeof(global::Langfuse.JsonConverters.ScoreVariant5DataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.DatasetItemMediaReferenceFieldJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.DatasetItemMediaReferenceFieldNullableJsonConverter),
 
             typeof(global::Langfuse.JsonConverters.PricingTierOperatorJsonConverter),
 
@@ -1426,6 +1458,22 @@ namespace Langfuse
 
             typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant10TypeNullableJsonConverter),
 
+            typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetViewJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetViewNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetChartTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetChartTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetMetricAggregationJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetMetricAggregationNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetSortOrderJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetSortOrderNullableJsonConverter),
+
             typeof(global::Langfuse.JsonConverters.UnstablePublicApiErrorCodeJsonConverter),
 
             typeof(global::Langfuse.JsonConverters.UnstablePublicApiErrorCodeNullableJsonConverter),
@@ -1600,6 +1648,25 @@ namespace Langfuse
 
             typeof(global::Langfuse.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluationRules))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRule>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableCreateEvaluationRuleRequest), TypeInfoPropertyName = "UnstableCreateEvaluationRuleRequest2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableCreateLlmAsJudgeEvaluationRuleRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableCreateCodeEvaluationRuleRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableLlmAsJudgeEvaluationRuleEvaluatorReference))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableCodeEvaluationRuleEvaluatorReference))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableUpdateEvaluationRuleRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluationRuleEvaluatorReference))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDeleteEvaluationRuleResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableLlmAsJudgeEvaluatorType), TypeInfoPropertyName = "UnstableLlmAsJudgeEvaluatorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDeleteEvaluatorResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluator), TypeInfoPropertyName = "UnstableEvaluator2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant12, global::Langfuse.UnstableLlmAsJudgeEvaluator>), TypeInfoPropertyName = "AllOfUnstableEvaluatorVariant12UnstableLlmAsJudgeEvaluator2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluatorVariant12))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluatorVariant1Type), TypeInfoPropertyName = "UnstableEvaluatorVariant1Type2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableLlmAsJudgeEvaluator))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant22, global::Langfuse.UnstableCodeEvaluator>), TypeInfoPropertyName = "AllOfUnstableEvaluatorVariant22UnstableCodeEvaluator2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluatorVariant22))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluatorVariant2Type), TypeInfoPropertyName = "UnstableEvaluatorVariant2Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableCodeEvaluator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluatorBase))]
@@ -1634,6 +1701,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.ScoreV1>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.Trace>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.ConfigCategory>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.DatasetItemMediaReference>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.DatasetRunItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.PricingTier>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.PricingTierCondition>))]
@@ -1670,6 +1738,9 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.GetScoresResponseData>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.Session>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.TraceWithDetails>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableDashboardWidgetDimension>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableDashboardWidgetMetric>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableDashboardWidgetFilter>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstablePublicApiValidationIssue>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableEvaluationRuleFilter>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableEvaluationRuleMapping>))]
@@ -1727,6 +1798,8 @@ namespace Langfuse
             options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageIntegrationTypeNullableJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageIntegrationFileTypeJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageIntegrationFileTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageIntegrationFileTypeResponseJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageIntegrationFileTypeResponseNullableJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageExportModeJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageExportModeNullableJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.BlobStorageExportFrequencyJsonConverter());
@@ -1755,6 +1828,8 @@ namespace Langfuse
             options.Converters.Add(new global::Langfuse.JsonConverters.ScoreVariant4DataTypeNullableJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.ScoreVariant5DataTypeJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.ScoreVariant5DataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.DatasetItemMediaReferenceFieldJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.DatasetItemMediaReferenceFieldNullableJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.PricingTierOperatorJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.PricingTierOperatorNullableJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.ModelUsageUnitJsonConverter());
@@ -1901,6 +1976,14 @@ namespace Langfuse
             options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant9TypeNullableJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant10TypeJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant10TypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableDashboardWidgetViewJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableDashboardWidgetViewNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableDashboardWidgetChartTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableDashboardWidgetChartTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableDashboardWidgetMetricAggregationJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableDashboardWidgetMetricAggregationNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableDashboardWidgetSortOrderJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableDashboardWidgetSortOrderNullableJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnstablePublicApiErrorCodeJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnstablePublicApiErrorCodeNullableJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnstableLlmAsJudgeEvaluatorTypeJsonConverter());

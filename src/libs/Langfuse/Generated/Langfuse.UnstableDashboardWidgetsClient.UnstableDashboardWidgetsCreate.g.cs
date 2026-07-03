@@ -3,11 +3,11 @@
 
 namespace Langfuse
 {
-    public partial class MediaClient
+    public partial class UnstableDashboardWidgetsClient
     {
 
 
-        private static readonly global::Langfuse.EndPointSecurityRequirement s_MediaGetUploadUrlSecurityRequirement0 =
+        private static readonly global::Langfuse.EndPointSecurityRequirement s_UnstableDashboardWidgetsCreateSecurityRequirement0 =
             new global::Langfuse.EndPointSecurityRequirement
             {
                 Authorizations = new global::Langfuse.EndPointAuthorizationRequirement[]
@@ -21,40 +21,45 @@ namespace Langfuse
                     },
                 },
             };
-        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_MediaGetUploadUrlSecurityRequirements =
+        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_UnstableDashboardWidgetsCreateSecurityRequirements =
             new global::Langfuse.EndPointSecurityRequirement[]
-            {                s_MediaGetUploadUrlSecurityRequirement0,
+            {                s_UnstableDashboardWidgetsCreateSecurityRequirement0,
             };
-        partial void PrepareMediaGetUploadUrlArguments(
+        partial void PrepareUnstableDashboardWidgetsCreateArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Langfuse.GetMediaUploadUrlRequest request);
-        partial void PrepareMediaGetUploadUrlRequest(
+            global::Langfuse.UnstableCreateDashboardWidgetRequest request);
+        partial void PrepareUnstableDashboardWidgetsCreateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Langfuse.GetMediaUploadUrlRequest request);
-        partial void ProcessMediaGetUploadUrlResponse(
+            global::Langfuse.UnstableCreateDashboardWidgetRequest request);
+        partial void ProcessUnstableDashboardWidgetsCreateResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessMediaGetUploadUrlResponseContent(
+        partial void ProcessUnstableDashboardWidgetsCreateResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Get a presigned upload URL for a media record
+        /// Create a reusable dashboard widget.<br/>
+        /// This endpoint creates the widget. It does not place the widget on a dashboard grid, this has to be done in the UI.<br/>
+        /// Supported views are `observations`, `scores-numeric`, and `scores-categorical`.<br/>
+        /// The legacy `traces` view is not supported by this unstable API, `minVersion` defaults to `2`; values below `2` are rejected.<br/>
+        /// Unstable API note:<br/>
+        /// - This surface may evolve while dashboard/widget APIs are being finalized.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Langfuse.GetMediaUploadUrlResponse> MediaGetUploadUrlAsync(
+        public async global::System.Threading.Tasks.Task<global::Langfuse.UnstableDashboardWidget> UnstableDashboardWidgetsCreateAsync(
 
-            global::Langfuse.GetMediaUploadUrlRequest request,
+            global::Langfuse.UnstableCreateDashboardWidgetRequest request,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await MediaGetUploadUrlAsResponseAsync(
+            var __response = await UnstableDashboardWidgetsCreateAsResponseAsync(
 
                 request: request,
                 requestOptions: requestOptions,
@@ -64,15 +69,20 @@ namespace Langfuse
             return __response.Body;
         }
         /// <summary>
-        /// Get a presigned upload URL for a media record
+        /// Create a reusable dashboard widget.<br/>
+        /// This endpoint creates the widget. It does not place the widget on a dashboard grid, this has to be done in the UI.<br/>
+        /// Supported views are `observations`, `scores-numeric`, and `scores-categorical`.<br/>
+        /// The legacy `traces` view is not supported by this unstable API, `minVersion` defaults to `2`; values below `2` are rejected.<br/>
+        /// Unstable API note:<br/>
+        /// - This surface may evolve while dashboard/widget APIs are being finalized.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.GetMediaUploadUrlResponse>> MediaGetUploadUrlAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.UnstableDashboardWidget>> UnstableDashboardWidgetsCreateAsResponseAsync(
 
-            global::Langfuse.GetMediaUploadUrlRequest request,
+            global::Langfuse.UnstableCreateDashboardWidgetRequest request,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -80,15 +90,15 @@ namespace Langfuse
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareMediaGetUploadUrlArguments(
+            PrepareUnstableDashboardWidgetsCreateArguments(
                 httpClient: HttpClient,
                 request: request);
 
 
             var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_MediaGetUploadUrlSecurityRequirements,
-                operationName: "MediaGetUploadUrlAsync");
+                securityRequirements: s_UnstableDashboardWidgetsCreateSecurityRequirements,
+                operationName: "UnstableDashboardWidgetsCreateAsync");
 
             using var __timeoutCancellationTokenSource = global::Langfuse.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -108,7 +118,7 @@ namespace Langfuse
             {
 
                             var __pathBuilder = new global::Langfuse.PathBuilder(
-                                path: "/api/public/media",
+                                path: "/api/public/unstable/dashboard-widgets",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::Langfuse.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -153,7 +163,7 @@ namespace Langfuse
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareMediaGetUploadUrlRequest(
+                PrepareUnstableDashboardWidgetsCreateRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     request: request);
@@ -173,9 +183,9 @@ namespace Langfuse
                     await global::Langfuse.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "MediaGetUploadUrl",
-                                methodName: "MediaGetUploadUrlAsync",
-                                pathTemplate: "\"/api/public/media\"",
+                                operationId: "UnstableDashboardWidgetsCreate",
+                                methodName: "UnstableDashboardWidgetsCreateAsync",
+                                pathTemplate: "\"/api/public/unstable/dashboard-widgets\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -207,9 +217,9 @@ namespace Langfuse
                         await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "MediaGetUploadUrl",
-                                methodName: "MediaGetUploadUrlAsync",
-                                pathTemplate: "\"/api/public/media\"",
+                                operationId: "UnstableDashboardWidgetsCreate",
+                                methodName: "UnstableDashboardWidgetsCreateAsync",
+                                pathTemplate: "\"/api/public/unstable/dashboard-widgets\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -248,9 +258,9 @@ namespace Langfuse
                         await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "MediaGetUploadUrl",
-                                methodName: "MediaGetUploadUrlAsync",
-                                pathTemplate: "\"/api/public/media\"",
+                                operationId: "UnstableDashboardWidgetsCreate",
+                                methodName: "UnstableDashboardWidgetsCreateAsync",
+                                pathTemplate: "\"/api/public/unstable/dashboard-widgets\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -288,7 +298,7 @@ namespace Langfuse
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessMediaGetUploadUrlResponse(
+                ProcessUnstableDashboardWidgetsCreateResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -296,9 +306,9 @@ namespace Langfuse
                     await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "MediaGetUploadUrl",
-                                methodName: "MediaGetUploadUrlAsync",
-                                pathTemplate: "\"/api/public/media\"",
+                                operationId: "UnstableDashboardWidgetsCreate",
+                                methodName: "UnstableDashboardWidgetsCreateAsync",
+                                pathTemplate: "\"/api/public/unstable/dashboard-widgets\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -318,9 +328,9 @@ namespace Langfuse
                     await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "MediaGetUploadUrl",
-                                methodName: "MediaGetUploadUrlAsync",
-                                pathTemplate: "\"/api/public/media\"",
+                                operationId: "UnstableDashboardWidgetsCreate",
+                                methodName: "UnstableDashboardWidgetsCreateAsync",
+                                pathTemplate: "\"/api/public/unstable/dashboard-widgets\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
@@ -520,6 +530,80 @@ namespace Langfuse
                                         h => h.Key,
                                         h => h.Value));
                             }
+                            // 
+                            if ((int)__response.StatusCode == 429)
+                            {
+                                string? __content_429 = null;
+                                global::System.Exception? __exception_429 = null;
+                                global::Langfuse.UnstablePublicApiError? __value_429 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_429 = global::Langfuse.UnstablePublicApiError.FromJson(__content_429, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_429 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_429 = global::Langfuse.UnstablePublicApiError.FromJson(__content_429, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_429 = __ex;
+                                }
+
+
+                                throw global::Langfuse.ApiException<global::Langfuse.UnstablePublicApiError>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_429 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_429,
+                                    responseBody: __content_429,
+                                    responseObject: __value_429,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
+                            // 
+                            if ((int)__response.StatusCode == 500)
+                            {
+                                string? __content_500 = null;
+                                global::System.Exception? __exception_500 = null;
+                                global::Langfuse.UnstablePublicApiError? __value_500 = null;
+                                try
+                                {
+                                    if (__effectiveReadResponseAsString)
+                                    {
+                                        __content_500 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+                                        __value_500 = global::Langfuse.UnstablePublicApiError.FromJson(__content_500, JsonSerializerContext);
+                                    }
+                                    else
+                                    {
+                                        __content_500 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
+
+                                        __value_500 = global::Langfuse.UnstablePublicApiError.FromJson(__content_500, JsonSerializerContext);
+                                    }
+                                }
+                                catch (global::System.Exception __ex)
+                                {
+                                    __exception_500 = __ex;
+                                }
+
+
+                                throw global::Langfuse.ApiException<global::Langfuse.UnstablePublicApiError>.Create(
+                                    statusCode: __response.StatusCode,
+                                    message: __content_500 ?? __response.ReasonPhrase ?? string.Empty,
+                                    innerException: __exception_500,
+                                    responseBody: __content_500,
+                                    responseObject: __value_500,
+                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
+                                        __response.Headers,
+                                        h => h.Key,
+                                        h => h.Value));
+                            }
 
                             if (__effectiveReadResponseAsString)
                             {
@@ -533,7 +617,7 @@ namespace Langfuse
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessMediaGetUploadUrlResponseContent(
+                                ProcessUnstableDashboardWidgetsCreateResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -542,9 +626,9 @@ namespace Langfuse
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Langfuse.GetMediaUploadUrlResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Langfuse.UnstableDashboardWidget.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.GetMediaUploadUrlResponse>(
+                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.UnstableDashboardWidget>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Langfuse.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -574,9 +658,9 @@ namespace Langfuse
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Langfuse.GetMediaUploadUrlResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Langfuse.UnstableDashboardWidget.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.GetMediaUploadUrlResponse>(
+                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.UnstableDashboardWidget>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Langfuse.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -617,60 +701,58 @@ namespace Langfuse
             }
         }
         /// <summary>
-        /// Get a presigned upload URL for a media record
+        /// Create a reusable dashboard widget.<br/>
+        /// This endpoint creates the widget. It does not place the widget on a dashboard grid, this has to be done in the UI.<br/>
+        /// Supported views are `observations`, `scores-numeric`, and `scores-categorical`.<br/>
+        /// The legacy `traces` view is not supported by this unstable API, `minVersion` defaults to `2`; values below `2` are rejected.<br/>
+        /// Unstable API note:<br/>
+        /// - This surface may evolve while dashboard/widget APIs are being finalized.
         /// </summary>
-        /// <param name="traceId">
-        /// The trace the media is associated with. Null for dataset item media uploads.
+        /// <param name="name"></param>
+        /// <param name="description"></param>
+        /// <param name="view"></param>
+        /// <param name="dimensions"></param>
+        /// <param name="metrics"></param>
+        /// <param name="filters"></param>
+        /// <param name="chartType"></param>
+        /// <param name="chartConfig">
+        /// Chart-specific widget configuration.<br/>
+        /// `type` must match the top-level `chartType`.<br/>
+        /// `row_limit` applies to total-value charts and pivot tables.<br/>
+        /// `bins` applies to histograms.<br/>
+        /// `defaultSort` applies to pivot tables.
         /// </param>
-        /// <param name="observationId">
-        /// The observation ID associated with the media record. If the media record is associated directly with a trace, this will be null.
-        /// </param>
-        /// <param name="datasetId">
-        /// The dataset the media belongs to. Null for trace/observation media uploads.
-        /// </param>
-        /// <param name="datasetItemId">
-        /// The dataset item the media is associated with (need not exist yet). Null for trace/observation media uploads.
-        /// </param>
-        /// <param name="contentType">
-        /// The MIME type of the media record
-        /// </param>
-        /// <param name="contentLength">
-        /// The size of the media record in bytes
-        /// </param>
-        /// <param name="sha256Hash">
-        /// The SHA-256 hash of the media record
-        /// </param>
-        /// <param name="field">
-        /// The item field the media is in: `input`/`output`/`metadata` (trace) or `input`/`expectedOutput`/`metadata` (dataset item).
-        /// </param>
+        /// <param name="minVersion"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Langfuse.GetMediaUploadUrlResponse> MediaGetUploadUrlAsync(
-            global::Langfuse.MediaContentType contentType,
-            long contentLength,
-            string sha256Hash,
-            string field,
-            string? traceId = default,
-            string? observationId = default,
-            string? datasetId = default,
-            string? datasetItemId = default,
+        public async global::System.Threading.Tasks.Task<global::Langfuse.UnstableDashboardWidget> UnstableDashboardWidgetsCreateAsync(
+            string name,
+            string description,
+            global::Langfuse.UnstableDashboardWidgetView view,
+            global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetDimension> dimensions,
+            global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetMetric> metrics,
+            global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetFilter> filters,
+            global::Langfuse.UnstableDashboardWidgetChartType chartType,
+            global::Langfuse.UnstableDashboardWidgetChartConfig chartConfig,
+            int? minVersion = default,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Langfuse.GetMediaUploadUrlRequest
+            var __request = new global::Langfuse.UnstableCreateDashboardWidgetRequest
             {
-                TraceId = traceId,
-                ObservationId = observationId,
-                DatasetId = datasetId,
-                DatasetItemId = datasetItemId,
-                ContentType = contentType,
-                ContentLength = contentLength,
-                Sha256Hash = sha256Hash,
-                Field = field,
+                Name = name,
+                Description = description,
+                View = view,
+                Dimensions = dimensions,
+                Metrics = metrics,
+                Filters = filters,
+                ChartType = chartType,
+                ChartConfig = chartConfig,
+                MinVersion = minVersion,
             };
 
-            return await MediaGetUploadUrlAsync(
+            return await UnstableDashboardWidgetsCreateAsync(
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);

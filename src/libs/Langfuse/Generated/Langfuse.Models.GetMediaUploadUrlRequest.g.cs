@@ -4,22 +4,33 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    /// Request a presigned media upload URL. Provide exactly one context: a trace (traceId, optionally observationId) or a dataset item (datasetId + datasetItemId). field is required and must match the chosen context.
     /// </summary>
     public sealed partial class GetMediaUploadUrlRequest
     {
         /// <summary>
-        /// The trace ID associated with the media record
+        /// The trace the media is associated with. Null for dataset item media uploads.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("traceId")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string TraceId { get; set; }
+        public string? TraceId { get; set; }
 
         /// <summary>
         /// The observation ID associated with the media record. If the media record is associated directly with a trace, this will be null.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("observationId")]
         public string? ObservationId { get; set; }
+
+        /// <summary>
+        /// The dataset the media belongs to. Null for trace/observation media uploads.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("datasetId")]
+        public string? DatasetId { get; set; }
+
+        /// <summary>
+        /// The dataset item the media is associated with (need not exist yet). Null for trace/observation media uploads.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("datasetItemId")]
+        public string? DatasetItemId { get; set; }
 
         /// <summary>
         /// The MIME type of the media record
@@ -44,7 +55,7 @@ namespace Langfuse
         public required string Sha256Hash { get; set; }
 
         /// <summary>
-        /// The trace / observation field the media record is associated with. This can be one of `input`, `output`, `metadata`
+        /// The item field the media is in: `input`/`output`/`metadata` (trace) or `input`/`expectedOutput`/`metadata` (dataset item).
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("field")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -59,9 +70,6 @@ namespace Langfuse
         /// <summary>
         /// Initializes a new instance of the <see cref="GetMediaUploadUrlRequest" /> class.
         /// </summary>
-        /// <param name="traceId">
-        /// The trace ID associated with the media record
-        /// </param>
         /// <param name="contentType">
         /// The MIME type of the media record
         /// </param>
@@ -72,24 +80,37 @@ namespace Langfuse
         /// The SHA-256 hash of the media record
         /// </param>
         /// <param name="field">
-        /// The trace / observation field the media record is associated with. This can be one of `input`, `output`, `metadata`
+        /// The item field the media is in: `input`/`output`/`metadata` (trace) or `input`/`expectedOutput`/`metadata` (dataset item).
+        /// </param>
+        /// <param name="traceId">
+        /// The trace the media is associated with. Null for dataset item media uploads.
         /// </param>
         /// <param name="observationId">
         /// The observation ID associated with the media record. If the media record is associated directly with a trace, this will be null.
+        /// </param>
+        /// <param name="datasetId">
+        /// The dataset the media belongs to. Null for trace/observation media uploads.
+        /// </param>
+        /// <param name="datasetItemId">
+        /// The dataset item the media is associated with (need not exist yet). Null for trace/observation media uploads.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public GetMediaUploadUrlRequest(
-            string traceId,
             global::Langfuse.MediaContentType contentType,
             long contentLength,
             string sha256Hash,
             string field,
-            string? observationId)
+            string? traceId,
+            string? observationId,
+            string? datasetId,
+            string? datasetItemId)
         {
-            this.TraceId = traceId ?? throw new global::System.ArgumentNullException(nameof(traceId));
+            this.TraceId = traceId;
             this.ObservationId = observationId;
+            this.DatasetId = datasetId;
+            this.DatasetItemId = datasetItemId;
             this.ContentType = contentType;
             this.ContentLength = contentLength;
             this.Sha256Hash = sha256Hash ?? throw new global::System.ArgumentNullException(nameof(sha256Hash));

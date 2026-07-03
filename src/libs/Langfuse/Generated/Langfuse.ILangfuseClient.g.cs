@@ -188,6 +188,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public UnstableDashboardWidgetsClient UnstableDashboardWidgets { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public UnstableEvaluationRulesClient UnstableEvaluationRules { get; }
 
         /// <summary>
