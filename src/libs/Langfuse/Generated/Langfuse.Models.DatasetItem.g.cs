@@ -85,6 +85,13 @@ namespace Langfuse
         public required global::System.DateTime UpdatedAt { get; set; }
 
         /// <summary>
+        /// Resolved Langfuse media references found in input, expectedOutput, and metadata.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mediaReferences")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Langfuse.DatasetItemMediaReference> MediaReferences { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -108,6 +115,9 @@ namespace Langfuse
         /// <param name="datasetName"></param>
         /// <param name="createdAt"></param>
         /// <param name="updatedAt"></param>
+        /// <param name="mediaReferences">
+        /// Resolved Langfuse media references found in input, expectedOutput, and metadata.
+        /// </param>
         /// <param name="sourceTraceId">
         /// The trace ID that sourced this dataset item
         /// </param>
@@ -127,6 +137,7 @@ namespace Langfuse
             string datasetName,
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
+            global::System.Collections.Generic.IList<global::Langfuse.DatasetItemMediaReference> mediaReferences,
             string? sourceTraceId,
             string? sourceObservationId)
         {
@@ -141,6 +152,7 @@ namespace Langfuse
             this.DatasetName = datasetName ?? throw new global::System.ArgumentNullException(nameof(datasetName));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
+            this.MediaReferences = mediaReferences ?? throw new global::System.ArgumentNullException(nameof(mediaReferences));
         }
 
         /// <summary>
