@@ -83,6 +83,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public ExperimentsClient Experiments { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public HealthClient Health { get; }
 
         /// <summary>
