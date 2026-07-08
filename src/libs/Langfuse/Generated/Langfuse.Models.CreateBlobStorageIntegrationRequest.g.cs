@@ -84,7 +84,7 @@ namespace Langfuse
         public required bool ForcePathStyle { get; set; }
 
         /// <summary>
-        /// 
+        /// File format for exported data. `PARQUET` is a columnar binary format encoded and compressed by the storage engine; gzip compression does not apply to it. Note that the model-price columns (`input_price`, `output_price`, `total_price`) are not included in Parquet observation exports.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fileType")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.BlobStorageIntegrationFileTypeJsonConverter))]
@@ -155,7 +155,9 @@ namespace Langfuse
         /// <param name="forcePathStyle">
         /// Use path-style URLs for S3 requests
         /// </param>
-        /// <param name="fileType"></param>
+        /// <param name="fileType">
+        /// File format for exported data. `PARQUET` is a columnar binary format encoded and compressed by the storage engine; gzip compression does not apply to it. Note that the model-price columns (`input_price`, `output_price`, `total_price`) are not included in Parquet observation exports.
+        /// </param>
         /// <param name="exportMode"></param>
         /// <param name="endpoint">
         /// Custom endpoint URL (required for S3_COMPATIBLE type)

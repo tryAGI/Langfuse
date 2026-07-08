@@ -4,7 +4,7 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    /// File format for exported data. `PARQUET` is a columnar binary format encoded and compressed by the storage engine; gzip compression does not apply to it. Note that the model-price columns (`input_price`, `output_price`, `total_price`) are not included in Parquet observation exports.
     /// </summary>
     public enum BlobStorageIntegrationFileType
     {
@@ -20,6 +20,10 @@ namespace Langfuse
         /// 
         /// </summary>
         Jsonl,
+        /// <summary>
+        /// 
+        /// </summary>
+        Parquet,
     }
 
     /// <summary>
@@ -37,6 +41,7 @@ namespace Langfuse
                 BlobStorageIntegrationFileType.Csv => "CSV",
                 BlobStorageIntegrationFileType.Json => "JSON",
                 BlobStorageIntegrationFileType.Jsonl => "JSONL",
+                BlobStorageIntegrationFileType.Parquet => "PARQUET",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
@@ -50,6 +55,7 @@ namespace Langfuse
                 "CSV" => BlobStorageIntegrationFileType.Csv,
                 "JSON" => BlobStorageIntegrationFileType.Json,
                 "JSONL" => BlobStorageIntegrationFileType.Jsonl,
+                "PARQUET" => BlobStorageIntegrationFileType.Parquet,
                 _ => null,
             };
         }
