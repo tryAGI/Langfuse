@@ -86,7 +86,7 @@ namespace Langfuse
         public required bool ForcePathStyle { get; set; }
 
         /// <summary>
-        /// File type reported for an existing integration. Includes `PARQUET`, which a project may enable through the Langfuse UI but cannot yet be set via this API (the request `fileType` omits it).
+        /// File type reported for an existing integration.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("fileType")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.BlobStorageIntegrationFileTypeResponseJsonConverter))]
@@ -189,7 +189,7 @@ namespace Langfuse
         /// <param name="enabled"></param>
         /// <param name="forcePathStyle"></param>
         /// <param name="fileType">
-        /// File type reported for an existing integration. Includes `PARQUET`, which a project may enable through the Langfuse UI but cannot yet be set via this API (the request `fileType` omits it).
+        /// File type reported for an existing integration.
         /// </param>
         /// <param name="exportMode"></param>
         /// <param name="compressed"></param>
