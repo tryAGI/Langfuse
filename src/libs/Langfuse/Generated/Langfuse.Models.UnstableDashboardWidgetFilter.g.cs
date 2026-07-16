@@ -4,9 +4,21 @@
 namespace Langfuse
 {
     /// <summary>
-    /// A dashboard widget filter in Langfuse filter-state shape.<br/>
-    /// Filter shapes depend on `type`, for example string filters use a string `value`,<br/>
-    /// option filters use a list of strings, and object filters include `key`.
+    /// A filter in Langfuse filter-state shape. The `value` shape and the<br/>
+    /// allowed operators depend on `type`:<br/>
+    /// | `type` | `value` | operators |<br/>
+    /// |---|---|---|<br/>
+    /// | `string` | string | `=`, `contains`, `does not contain`, `starts with`, `ends with` |<br/>
+    /// | `number` | number | `=`, `&gt;`, `&lt;`, `&gt;=`, `&lt;=` |<br/>
+    /// | `datetime` | ISO datetime string | `&gt;`, `&lt;`, `&gt;=`, `&lt;=` |<br/>
+    /// | `boolean` | boolean | `=`, `&lt;&gt;` |<br/>
+    /// | `null` | `""` | `is null`, `is not null` |<br/>
+    /// | `stringOptions` | list of strings | `any of`, `none of` |<br/>
+    /// | `arrayOptions` | list of strings | `any of`, `none of`, `all of` |<br/>
+    /// | `categoryOptions` | list of strings (requires `key`) | `any of`, `none of` |<br/>
+    /// | `stringObject` | string (requires `key`, e.g. a metadata key) | same as `string` |<br/>
+    /// | `numberObject` | number (requires `key`, e.g. a score name) | same as `number` |<br/>
+    /// | `booleanObject` | boolean (requires `key`) | `=`, `&lt;&gt;` |
     /// </summary>
     public sealed partial class UnstableDashboardWidgetFilter
     {

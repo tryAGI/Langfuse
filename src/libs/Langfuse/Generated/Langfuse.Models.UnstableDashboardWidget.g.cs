@@ -92,13 +92,6 @@ namespace Langfuse
         public required global::Langfuse.UnstableDashboardWidgetChartConfig ChartConfig { get; set; }
 
         /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("minVersion")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required int MinVersion { get; set; }
-
-        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -124,7 +117,6 @@ namespace Langfuse
         /// `bins` applies to histograms.<br/>
         /// `defaultSort` applies to pivot tables.
         /// </param>
-        /// <param name="minVersion"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -139,8 +131,7 @@ namespace Langfuse
             global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetMetric> metrics,
             global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetFilter> filters,
             global::Langfuse.UnstableDashboardWidgetChartType chartType,
-            global::Langfuse.UnstableDashboardWidgetChartConfig chartConfig,
-            int minVersion)
+            global::Langfuse.UnstableDashboardWidgetChartConfig chartConfig)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.CreatedAt = createdAt;
@@ -153,7 +144,6 @@ namespace Langfuse
             this.Filters = filters ?? throw new global::System.ArgumentNullException(nameof(filters));
             this.ChartType = chartType;
             this.ChartConfig = chartConfig ?? throw new global::System.ArgumentNullException(nameof(chartConfig));
-            this.MinVersion = minVersion;
         }
 
         /// <summary>

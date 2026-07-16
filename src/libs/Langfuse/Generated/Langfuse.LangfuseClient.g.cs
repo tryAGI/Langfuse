@@ -309,6 +309,15 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public UnstableDashboardsClient UnstableDashboards => new UnstableDashboardsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// 
+        /// </summary>
         public UnstableEvaluationRulesClient UnstableEvaluationRules => new UnstableEvaluationRulesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,

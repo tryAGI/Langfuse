@@ -198,6 +198,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public UnstableDashboardsClient UnstableDashboards { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public UnstableEvaluationRulesClient UnstableEvaluationRules { get; }
 
         /// <summary>
