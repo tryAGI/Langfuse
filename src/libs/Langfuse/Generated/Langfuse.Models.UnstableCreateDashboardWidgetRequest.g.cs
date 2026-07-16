@@ -16,11 +16,10 @@ namespace Langfuse
         public required string Name { get; set; }
 
         /// <summary>
-        /// 
+        /// Defaults to an empty string.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("description")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Description { get; set; }
+        public string? Description { get; set; }
 
         /// <summary>
         /// 
@@ -60,21 +59,11 @@ namespace Langfuse
         public required global::Langfuse.UnstableDashboardWidgetChartType ChartType { get; set; }
 
         /// <summary>
-        /// Chart-specific widget configuration.<br/>
-        /// `type` must match the top-level `chartType`.<br/>
-        /// `row_limit` applies to total-value charts and pivot tables.<br/>
-        /// `bins` applies to histograms.<br/>
-        /// `defaultSort` applies to pivot tables.
+        /// Input-side chart config. `type` is optional and defaults to the<br/>
+        /// widget's `chartType`; when given it must match.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("chartConfig")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Langfuse.UnstableDashboardWidgetChartConfig ChartConfig { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("minVersion")]
-        public int? MinVersion { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetChartConfigInput? ChartConfig { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -86,43 +75,39 @@ namespace Langfuse
         /// Initializes a new instance of the <see cref="UnstableCreateDashboardWidgetRequest" /> class.
         /// </summary>
         /// <param name="name"></param>
-        /// <param name="description"></param>
         /// <param name="view"></param>
         /// <param name="dimensions"></param>
         /// <param name="metrics"></param>
         /// <param name="filters"></param>
         /// <param name="chartType"></param>
-        /// <param name="chartConfig">
-        /// Chart-specific widget configuration.<br/>
-        /// `type` must match the top-level `chartType`.<br/>
-        /// `row_limit` applies to total-value charts and pivot tables.<br/>
-        /// `bins` applies to histograms.<br/>
-        /// `defaultSort` applies to pivot tables.
+        /// <param name="description">
+        /// Defaults to an empty string.
         /// </param>
-        /// <param name="minVersion"></param>
+        /// <param name="chartConfig">
+        /// Input-side chart config. `type` is optional and defaults to the<br/>
+        /// widget's `chartType`; when given it must match.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UnstableCreateDashboardWidgetRequest(
             string name,
-            string description,
             global::Langfuse.UnstableDashboardWidgetView view,
             global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetDimension> dimensions,
             global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetMetric> metrics,
             global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetFilter> filters,
             global::Langfuse.UnstableDashboardWidgetChartType chartType,
-            global::Langfuse.UnstableDashboardWidgetChartConfig chartConfig,
-            int? minVersion)
+            string? description,
+            global::Langfuse.UnstableDashboardWidgetChartConfigInput? chartConfig)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
+            this.Description = description;
             this.View = view;
             this.Dimensions = dimensions ?? throw new global::System.ArgumentNullException(nameof(dimensions));
             this.Metrics = metrics ?? throw new global::System.ArgumentNullException(nameof(metrics));
             this.Filters = filters ?? throw new global::System.ArgumentNullException(nameof(filters));
             this.ChartType = chartType;
-            this.ChartConfig = chartConfig ?? throw new global::System.ArgumentNullException(nameof(chartConfig));
-            this.MinVersion = minVersion;
+            this.ChartConfig = chartConfig;
         }
 
         /// <summary>
