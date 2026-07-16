@@ -44,12 +44,13 @@ namespace Langfuse
         public required string Description { get; set; }
 
         /// <summary>
-        /// 
+        /// Widget data view. Responses may include the legacy `traces` value for<br/>
+        /// widgets created before this API existed.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("view")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetViewJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetViewWithLegacyJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Langfuse.UnstableDashboardWidgetView View { get; set; }
+        public required global::Langfuse.UnstableDashboardWidgetViewWithLegacy View { get; set; }
 
         /// <summary>
         /// 
@@ -105,7 +106,10 @@ namespace Langfuse
         /// <param name="updatedAt"></param>
         /// <param name="name"></param>
         /// <param name="description"></param>
-        /// <param name="view"></param>
+        /// <param name="view">
+        /// Widget data view. Responses may include the legacy `traces` value for<br/>
+        /// widgets created before this API existed.
+        /// </param>
         /// <param name="dimensions"></param>
         /// <param name="metrics"></param>
         /// <param name="filters"></param>
@@ -126,7 +130,7 @@ namespace Langfuse
             global::System.DateTime updatedAt,
             string name,
             string description,
-            global::Langfuse.UnstableDashboardWidgetView view,
+            global::Langfuse.UnstableDashboardWidgetViewWithLegacy view,
             global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetDimension> dimensions,
             global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetMetric> metrics,
             global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetFilter> filters,

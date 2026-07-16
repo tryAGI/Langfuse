@@ -5,7 +5,8 @@ namespace Langfuse
     public partial interface IUnstableDashboardWidgetsClient
     {
         /// <summary>
-        /// Get a dashboard widget by id.
+        /// Get a dashboard widget by id.<br/>
+        /// The response may use `view: traces` for legacy widgets.
         /// </summary>
         /// <param name="widgetId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -16,7 +17,8 @@ namespace Langfuse
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Get a dashboard widget by id.
+        /// Get a dashboard widget by id.<br/>
+        /// The response may use `view: traces` for legacy widgets.
         /// </summary>
         /// <param name="widgetId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
