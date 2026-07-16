@@ -45,7 +45,9 @@ namespace Langfuse
 
         /// <summary>
         /// List dashboard widgets in the project, ordered by most recently<br/>
-        /// updated first.
+        /// updated first.<br/>
+        /// Responses may include legacy `traces` widgets created before this<br/>
+        /// API existed. New widgets cannot be created with `view: traces`.
         /// </summary>
         /// <param name="page"></param>
         /// <param name="limit"></param>
@@ -69,7 +71,9 @@ namespace Langfuse
         }
         /// <summary>
         /// List dashboard widgets in the project, ordered by most recently<br/>
-        /// updated first.
+        /// updated first.<br/>
+        /// Responses may include legacy `traces` widgets created before this<br/>
+        /// API existed. New widgets cannot be created with `view: traces`.
         /// </summary>
         /// <param name="page"></param>
         /// <param name="limit"></param>

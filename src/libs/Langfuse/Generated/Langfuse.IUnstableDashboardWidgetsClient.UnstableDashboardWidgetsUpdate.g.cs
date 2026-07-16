@@ -9,7 +9,9 @@ namespace Langfuse
         /// All fields are optional; at least one field is required.<br/>
         /// Changing `chartType` without sending `chartConfig` resets the config<br/>
         /// to the new chart type's defaults. When `chartConfig.type` is given<br/>
-        /// it must match the widget's (possibly updated) `chartType`.
+        /// it must match the widget's (possibly updated) `chartType`.<br/>
+        /// `view` cannot be changed to the legacy `traces` value. Existing<br/>
+        /// `traces` widgets may be updated on other fields.
         /// </summary>
         /// <param name="widgetId"></param>
         /// <param name="request"></param>
@@ -27,7 +29,9 @@ namespace Langfuse
         /// All fields are optional; at least one field is required.<br/>
         /// Changing `chartType` without sending `chartConfig` resets the config<br/>
         /// to the new chart type's defaults. When `chartConfig.type` is given<br/>
-        /// it must match the widget's (possibly updated) `chartType`.
+        /// it must match the widget's (possibly updated) `chartType`.<br/>
+        /// `view` cannot be changed to the legacy `traces` value. Existing<br/>
+        /// `traces` widgets may be updated on other fields.
         /// </summary>
         /// <param name="widgetId"></param>
         /// <param name="request"></param>
@@ -45,7 +49,9 @@ namespace Langfuse
         /// All fields are optional; at least one field is required.<br/>
         /// Changing `chartType` without sending `chartConfig` resets the config<br/>
         /// to the new chart type's defaults. When `chartConfig.type` is given<br/>
-        /// it must match the widget's (possibly updated) `chartType`.
+        /// it must match the widget's (possibly updated) `chartType`.<br/>
+        /// `view` cannot be changed to the legacy `traces` value. Existing<br/>
+        /// `traces` widgets may be updated on other fields.
         /// </summary>
         /// <param name="widgetId"></param>
         /// <param name="name"></param>

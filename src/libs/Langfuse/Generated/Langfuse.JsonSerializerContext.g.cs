@@ -389,6 +389,10 @@ namespace Langfuse
 
             typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetViewNullableJsonConverter),
 
+            typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetViewWithLegacyJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetViewWithLegacyNullableJsonConverter),
+
             typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetChartTypeJsonConverter),
 
             typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetChartTypeNullableJsonConverter),
@@ -1089,6 +1093,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluationRuleFilterVariant102))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluationRuleFilterVariant10Type), TypeInfoPropertyName = "UnstableEvaluationRuleFilterVariant10Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetView), TypeInfoPropertyName = "UnstableDashboardWidgetView2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetViewWithLegacy), TypeInfoPropertyName = "UnstableDashboardWidgetViewWithLegacy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetChartType), TypeInfoPropertyName = "UnstableDashboardWidgetChartType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetMetricAggregation), TypeInfoPropertyName = "UnstableDashboardWidgetMetricAggregation2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetDimension))]
@@ -1102,7 +1107,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetDimension>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetMetric>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetFilter>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableUpdateDashboardWidgetRequest))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1490,6 +1494,10 @@ namespace Langfuse
 
             typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetViewNullableJsonConverter),
 
+            typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetViewWithLegacyJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetViewWithLegacyNullableJsonConverter),
+
             typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetChartTypeJsonConverter),
 
             typeof(global::Langfuse.JsonConverters.UnstableDashboardWidgetChartTypeNullableJsonConverter),
@@ -1704,6 +1712,7 @@ namespace Langfuse
 
             typeof(global::Langfuse.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableUpdateDashboardWidgetRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetList))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidget>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidget))]
@@ -1955,6 +1964,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant102, global::Langfuse.UnstableNullEvaluationRuleFilter>?), TypeInfoPropertyName = "NullableAllOfUnstableEvaluationRuleFilterVariant102UnstableNullEvaluationRuleFilter2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluationRuleFilterVariant10Type?), TypeInfoPropertyName = "NullableUnstableEvaluationRuleFilterVariant10Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetView?), TypeInfoPropertyName = "NullableUnstableDashboardWidgetView2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetViewWithLegacy?), TypeInfoPropertyName = "NullableUnstableDashboardWidgetViewWithLegacy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetChartType?), TypeInfoPropertyName = "NullableUnstableDashboardWidgetChartType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetMetricAggregation?), TypeInfoPropertyName = "NullableUnstableDashboardWidgetMetricAggregation2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetSortOrder?), TypeInfoPropertyName = "NullableUnstableDashboardWidgetSortOrder2")]
@@ -2273,6 +2283,8 @@ namespace Langfuse
             options.Converters.Add(new global::Langfuse.JsonConverters.UnstableEvaluationRuleFilterVariant10TypeNullableJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnstableDashboardWidgetViewJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnstableDashboardWidgetViewNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableDashboardWidgetViewWithLegacyJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.UnstableDashboardWidgetViewWithLegacyNullableJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnstableDashboardWidgetChartTypeJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnstableDashboardWidgetChartTypeNullableJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnstableDashboardWidgetMetricAggregationJsonConverter());
