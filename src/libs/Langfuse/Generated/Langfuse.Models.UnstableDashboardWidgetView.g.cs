@@ -15,6 +15,10 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        ScoresBoolean,
+        /// <summary>
+        /// 
+        /// </summary>
         ScoresCategorical,
         /// <summary>
         /// 
@@ -35,6 +39,7 @@ namespace Langfuse
             return value switch
             {
                 UnstableDashboardWidgetView.Observations => "observations",
+                UnstableDashboardWidgetView.ScoresBoolean => "scores-boolean",
                 UnstableDashboardWidgetView.ScoresCategorical => "scores-categorical",
                 UnstableDashboardWidgetView.ScoresNumeric => "scores-numeric",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -48,6 +53,7 @@ namespace Langfuse
             return value switch
             {
                 "observations" => UnstableDashboardWidgetView.Observations,
+                "scores-boolean" => UnstableDashboardWidgetView.ScoresBoolean,
                 "scores-categorical" => UnstableDashboardWidgetView.ScoresCategorical,
                 "scores-numeric" => UnstableDashboardWidgetView.ScoresNumeric,
                 _ => null,
