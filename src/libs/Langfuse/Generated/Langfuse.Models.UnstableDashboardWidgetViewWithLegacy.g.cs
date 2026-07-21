@@ -16,6 +16,10 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        ScoresBoolean,
+        /// <summary>
+        /// 
+        /// </summary>
         ScoresCategorical,
         /// <summary>
         /// 
@@ -40,6 +44,7 @@ namespace Langfuse
             return value switch
             {
                 UnstableDashboardWidgetViewWithLegacy.Observations => "observations",
+                UnstableDashboardWidgetViewWithLegacy.ScoresBoolean => "scores-boolean",
                 UnstableDashboardWidgetViewWithLegacy.ScoresCategorical => "scores-categorical",
                 UnstableDashboardWidgetViewWithLegacy.ScoresNumeric => "scores-numeric",
                 UnstableDashboardWidgetViewWithLegacy.Traces => "traces",
@@ -54,6 +59,7 @@ namespace Langfuse
             return value switch
             {
                 "observations" => UnstableDashboardWidgetViewWithLegacy.Observations,
+                "scores-boolean" => UnstableDashboardWidgetViewWithLegacy.ScoresBoolean,
                 "scores-categorical" => UnstableDashboardWidgetViewWithLegacy.ScoresCategorical,
                 "scores-numeric" => UnstableDashboardWidgetViewWithLegacy.ScoresNumeric,
                 "traces" => UnstableDashboardWidgetViewWithLegacy.Traces,

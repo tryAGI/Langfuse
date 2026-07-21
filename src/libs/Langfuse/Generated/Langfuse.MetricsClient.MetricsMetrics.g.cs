@@ -44,7 +44,7 @@ namespace Langfuse
         /// <summary>
         /// Get metrics from the Langfuse project using a query object. V2 endpoint with optimized performance.<br/>
         /// ## V2 Differences<br/>
-        /// - Supports `observations`, `scores-numeric`, and `scores-categorical` views only (traces view not supported)<br/>
+        /// - Supports `observations`, `scores-numeric`, `scores-boolean`, and `scores-categorical` views only (traces view not supported)<br/>
         /// - Direct access to tags and release fields on observations<br/>
         /// - Backwards-compatible: traceName, traceRelease, traceVersion dimensions are still available on observations view<br/>
         /// - High cardinality dimensions are not supported and will return a 400 error (see below)<br/>
@@ -103,6 +103,13 @@ namespace Langfuse
         /// **Measures:**<br/>
         /// - `count` - Total number of scores<br/>
         /// - `value` - Score value (for aggregations)<br/>
+        /// ### scores-boolean<br/>
+        /// Query boolean score data. It has the same score and parent trace/observation dimensions as scores-numeric, plus:<br/>
+        /// **Dimensions:**<br/>
+        /// - `booleanValue` - Boolean value for true/false grouping and filtering<br/>
+        /// **Measures:**<br/>
+        /// - `count` - Total number of boolean scores<br/>
+        /// - `value` - Numeric 0/1 score value; `avg` returns the true-rate<br/>
         /// ### scores-categorical<br/>
         /// Query categorical score data. Same dimensions as scores-numeric except uses `stringValue` instead of `value`.<br/>
         /// **Measures:**<br/>
@@ -116,7 +123,7 @@ namespace Langfuse
         /// - `userId` - Use userId filter instead<br/>
         /// - `sessionId` - Use sessionId filter instead<br/>
         /// - `parentObservationId` - Use parentObservationId filter instead<br/>
-        /// **scores-numeric / scores-categorical views:**<br/>
+        /// **scores-numeric / scores-boolean / scores-categorical views:**<br/>
         /// - `id` - Use specific filters to narrow down results<br/>
         /// - `traceId` - Use traceId filter instead<br/>
         /// - `userId` - Use userId filter instead<br/>
@@ -148,7 +155,7 @@ namespace Langfuse
         /// <summary>
         /// Get metrics from the Langfuse project using a query object. V2 endpoint with optimized performance.<br/>
         /// ## V2 Differences<br/>
-        /// - Supports `observations`, `scores-numeric`, and `scores-categorical` views only (traces view not supported)<br/>
+        /// - Supports `observations`, `scores-numeric`, `scores-boolean`, and `scores-categorical` views only (traces view not supported)<br/>
         /// - Direct access to tags and release fields on observations<br/>
         /// - Backwards-compatible: traceName, traceRelease, traceVersion dimensions are still available on observations view<br/>
         /// - High cardinality dimensions are not supported and will return a 400 error (see below)<br/>
@@ -207,6 +214,13 @@ namespace Langfuse
         /// **Measures:**<br/>
         /// - `count` - Total number of scores<br/>
         /// - `value` - Score value (for aggregations)<br/>
+        /// ### scores-boolean<br/>
+        /// Query boolean score data. It has the same score and parent trace/observation dimensions as scores-numeric, plus:<br/>
+        /// **Dimensions:**<br/>
+        /// - `booleanValue` - Boolean value for true/false grouping and filtering<br/>
+        /// **Measures:**<br/>
+        /// - `count` - Total number of boolean scores<br/>
+        /// - `value` - Numeric 0/1 score value; `avg` returns the true-rate<br/>
         /// ### scores-categorical<br/>
         /// Query categorical score data. Same dimensions as scores-numeric except uses `stringValue` instead of `value`.<br/>
         /// **Measures:**<br/>
@@ -220,7 +234,7 @@ namespace Langfuse
         /// - `userId` - Use userId filter instead<br/>
         /// - `sessionId` - Use sessionId filter instead<br/>
         /// - `parentObservationId` - Use parentObservationId filter instead<br/>
-        /// **scores-numeric / scores-categorical views:**<br/>
+        /// **scores-numeric / scores-boolean / scores-categorical views:**<br/>
         /// - `id` - Use specific filters to narrow down results<br/>
         /// - `traceId` - Use traceId filter instead<br/>
         /// - `userId` - Use userId filter instead<br/>

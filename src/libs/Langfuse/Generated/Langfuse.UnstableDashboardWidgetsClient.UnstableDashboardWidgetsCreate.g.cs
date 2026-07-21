@@ -46,7 +46,7 @@ namespace Langfuse
         /// any dashboard).<br/>
         /// This endpoint creates the widget only; place it on a dashboard via<br/>
         /// `POST /dashboards/{dashboardId}/placements`.<br/>
-        /// Supported views are `observations`, `scores-numeric`, and `scores-categorical`.<br/>
+        /// Supported views are `observations`, `scores-numeric`, `scores-boolean`, and `scores-categorical`.<br/>
         /// The legacy `traces` view is not supported by this unstable API.<br/>
         /// Widgets are created as v2 internally.<br/>
         /// `chartConfig` is optional and defaults to the plain config for<br/>
@@ -79,7 +79,7 @@ namespace Langfuse
         /// any dashboard).<br/>
         /// This endpoint creates the widget only; place it on a dashboard via<br/>
         /// `POST /dashboards/{dashboardId}/placements`.<br/>
-        /// Supported views are `observations`, `scores-numeric`, and `scores-categorical`.<br/>
+        /// Supported views are `observations`, `scores-numeric`, `scores-boolean`, and `scores-categorical`.<br/>
         /// The legacy `traces` view is not supported by this unstable API.<br/>
         /// Widgets are created as v2 internally.<br/>
         /// `chartConfig` is optional and defaults to the plain config for<br/>
@@ -717,7 +717,7 @@ namespace Langfuse
         /// any dashboard).<br/>
         /// This endpoint creates the widget only; place it on a dashboard via<br/>
         /// `POST /dashboards/{dashboardId}/placements`.<br/>
-        /// Supported views are `observations`, `scores-numeric`, and `scores-categorical`.<br/>
+        /// Supported views are `observations`, `scores-numeric`, `scores-boolean`, and `scores-categorical`.<br/>
         /// The legacy `traces` view is not supported by this unstable API.<br/>
         /// Widgets are created as v2 internally.<br/>
         /// `chartConfig` is optional and defaults to the plain config for<br/>
