@@ -111,6 +111,15 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public FeedbackClient Feedback => new FeedbackClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContext = JsonSerializerContext,
+        };
+
+        /// <summary>
+        /// 
+        /// </summary>
         public HealthClient Health => new HealthClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
