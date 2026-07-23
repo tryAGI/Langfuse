@@ -125,6 +125,10 @@ namespace Langfuse
 
             typeof(global::Langfuse.JsonConverters.ScoreDataTypeNullableJsonConverter),
 
+            typeof(global::Langfuse.JsonConverters.FeedbackTargetTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.FeedbackTargetTypeNullableJsonConverter),
+
             typeof(global::Langfuse.JsonConverters.IngestionEventVariant1TypeJsonConverter),
 
             typeof(global::Langfuse.JsonConverters.IngestionEventVariant1TypeNullableJsonConverter),
@@ -761,6 +765,9 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ExperimentItemsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.ExperimentItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ExperimentItem))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.FeedbackTargetType), TypeInfoPropertyName = "FeedbackTargetType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SubmitFeedbackRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SubmitFeedbackResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.HealthResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEvent), TypeInfoPropertyName = "IngestionEvent2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>), TypeInfoPropertyName = "AllOfIngestionEventVariant12TraceEvent2")]
@@ -1104,9 +1111,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetSortOrder), TypeInfoPropertyName = "UnstableDashboardWidgetSortOrder2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetChartConfigInput))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableCreateDashboardWidgetRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetDimension>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetMetric>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetFilter>))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1229,6 +1233,10 @@ namespace Langfuse
             typeof(global::Langfuse.JsonConverters.ScoreDataTypeJsonConverter),
 
             typeof(global::Langfuse.JsonConverters.ScoreDataTypeNullableJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.FeedbackTargetTypeJsonConverter),
+
+            typeof(global::Langfuse.JsonConverters.FeedbackTargetTypeNullableJsonConverter),
 
             typeof(global::Langfuse.JsonConverters.IngestionEventVariant1TypeJsonConverter),
 
@@ -1712,6 +1720,9 @@ namespace Langfuse
 
             typeof(global::Langfuse.JsonConverters.UnixTimestampJsonConverter),
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetDimension>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetMetric>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetFilter>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableUpdateDashboardWidgetRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetList))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidget>))]
@@ -1845,6 +1856,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(float?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreDataType?), TypeInfoPropertyName = "NullableScoreDataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV3?), TypeInfoPropertyName = "NullableScoreV32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.FeedbackTargetType?), TypeInfoPropertyName = "NullableFeedbackTargetType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEvent?), TypeInfoPropertyName = "NullableIngestionEvent2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>?), TypeInfoPropertyName = "NullableAllOfIngestionEventVariant12TraceEvent2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventVariant1Type?), TypeInfoPropertyName = "NullableIngestionEventVariant1Type2")]
@@ -2151,6 +2163,8 @@ namespace Langfuse
             options.Converters.Add(new global::Langfuse.JsonConverters.ScoreConfigDataTypeNullableJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.ScoreDataTypeJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.ScoreDataTypeNullableJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.FeedbackTargetTypeJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.FeedbackTargetTypeNullableJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant1TypeJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant1TypeNullableJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventVariant2TypeJsonConverter());

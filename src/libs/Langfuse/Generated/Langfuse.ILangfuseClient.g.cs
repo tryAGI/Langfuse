@@ -88,6 +88,11 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
+        public FeedbackClient Feedback { get; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public HealthClient Health { get; }
 
         /// <summary>
