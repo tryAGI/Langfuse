@@ -6,7 +6,7 @@ namespace Langfuse
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class LegacyScoreV1CreateResponse3
+    public sealed partial class CreateScoreRequestMetadata
     {
 
         /// <summary>

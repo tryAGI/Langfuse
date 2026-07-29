@@ -43,13 +43,13 @@ namespace Langfuse
 
         /// <summary>
         /// Get one evaluation rule by its identifier.<br/>
-        /// Use this endpoint to inspect the current evaluator, target, mapping, filters, and effective runtime status.
+        /// Use this endpoint to inspect the current evaluator, target, mapping, filters, execution timing, and effective runtime status. Legacy `trace` and `dataset` rules are returned for migration and are read-only through this API.
         /// </summary>
         /// <param name="evaluationRuleId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Langfuse.UnstableEvaluationRule> UnstableEvaluationRulesGetAsync(
+        public async global::System.Threading.Tasks.Task<global::Langfuse.UnstableReadableEvaluationRule> UnstableEvaluationRulesGetAsync(
             string evaluationRuleId,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -64,13 +64,13 @@ namespace Langfuse
         }
         /// <summary>
         /// Get one evaluation rule by its identifier.<br/>
-        /// Use this endpoint to inspect the current evaluator, target, mapping, filters, and effective runtime status.
+        /// Use this endpoint to inspect the current evaluator, target, mapping, filters, execution timing, and effective runtime status. Legacy `trace` and `dataset` rules are returned for migration and are read-only through this API.
         /// </summary>
         /// <param name="evaluationRuleId"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.UnstableEvaluationRule>> UnstableEvaluationRulesGetAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.UnstableReadableEvaluationRule>> UnstableEvaluationRulesGetAsResponseAsync(
             string evaluationRuleId,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -607,9 +607,9 @@ namespace Langfuse
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Langfuse.UnstableEvaluationRule.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Langfuse.UnstableReadableEvaluationRule.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.UnstableEvaluationRule>(
+                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.UnstableReadableEvaluationRule>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Langfuse.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -639,9 +639,9 @@ namespace Langfuse
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Langfuse.UnstableEvaluationRule.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Langfuse.UnstableReadableEvaluationRule.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.UnstableEvaluationRule>(
+                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.UnstableReadableEvaluationRule>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Langfuse.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,

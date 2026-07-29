@@ -6,15 +6,8 @@ namespace Langfuse
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class DatasetRunWithItems
+    public sealed partial class ObservationsViewSingle
     {
-        /// <summary>
-        /// 
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("datasetRunItems")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::Langfuse.DatasetRunItem> DatasetRunItems { get; set; }
-
         /// <summary>
         /// Migration signal returned by deprecated endpoints. Optional fields are omitted when they have no value.
         /// </summary>
@@ -28,27 +21,24 @@ namespace Langfuse
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DatasetRunWithItems" /> class.
+        /// Initializes a new instance of the <see cref="ObservationsViewSingle" /> class.
         /// </summary>
-        /// <param name="datasetRunItems"></param>
         /// <param name="deprecation">
         /// Migration signal returned by deprecated endpoints. Optional fields are omitted when they have no value.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public DatasetRunWithItems(
-            global::System.Collections.Generic.IList<global::Langfuse.DatasetRunItem> datasetRunItems,
+        public ObservationsViewSingle(
             global::Langfuse.Deprecation? deprecation)
         {
-            this.DatasetRunItems = datasetRunItems ?? throw new global::System.ArgumentNullException(nameof(datasetRunItems));
             this.Deprecation = deprecation;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="DatasetRunWithItems" /> class.
+        /// Initializes a new instance of the <see cref="ObservationsViewSingle" /> class.
         /// </summary>
-        public DatasetRunWithItems()
+        public ObservationsViewSingle()
         {
         }
 

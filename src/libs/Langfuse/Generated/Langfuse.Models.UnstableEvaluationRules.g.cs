@@ -13,7 +13,7 @@ namespace Langfuse
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("data")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRule> Data { get; set; }
+        public required global::System.Collections.Generic.IList<global::Langfuse.UnstableReadableEvaluationRule> Data { get; set; }
 
         /// <summary>
         /// 
@@ -39,7 +39,7 @@ namespace Langfuse
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UnstableEvaluationRules(
-            global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRule> data,
+            global::System.Collections.Generic.IList<global::Langfuse.UnstableReadableEvaluationRule> data,
             global::Langfuse.UtilsMetaResponse meta)
         {
             this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));

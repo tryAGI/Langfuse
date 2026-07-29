@@ -3,11 +3,11 @@
 
 namespace Langfuse
 {
-    public partial class LegacyScoreV1Client
+    public partial class ScoresClient
     {
 
 
-        private static readonly global::Langfuse.EndPointSecurityRequirement s_LegacyScoreV1CreateSecurityRequirement0 =
+        private static readonly global::Langfuse.EndPointSecurityRequirement s_ScoresCreateSecurityRequirement0 =
             new global::Langfuse.EndPointSecurityRequirement
             {
                 Authorizations = new global::Langfuse.EndPointAuthorizationRequirement[]
@@ -21,40 +21,40 @@ namespace Langfuse
                     },
                 },
             };
-        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_LegacyScoreV1CreateSecurityRequirements =
+        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_ScoresCreateSecurityRequirements =
             new global::Langfuse.EndPointSecurityRequirement[]
-            {                s_LegacyScoreV1CreateSecurityRequirement0,
+            {                s_ScoresCreateSecurityRequirement0,
             };
-        partial void PrepareLegacyScoreV1CreateArguments(
+        partial void PrepareScoresCreateArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Langfuse.LegacyCreateScoreRequest request);
-        partial void PrepareLegacyScoreV1CreateRequest(
+            global::Langfuse.CreateScoreRequest request);
+        partial void PrepareScoresCreateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Langfuse.LegacyCreateScoreRequest request);
-        partial void ProcessLegacyScoreV1CreateResponse(
+            global::Langfuse.CreateScoreRequest request);
+        partial void ProcessScoresCreateResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessLegacyScoreV1CreateResponseContent(
+        partial void ProcessScoresCreateResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Create a score (supports both trace and session scores)
+        /// Create a score (supports trace, observation, session, and dataset run scores)
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Langfuse.LegacyCreateScoreResponse> LegacyScoreV1CreateAsync(
+        public async global::System.Threading.Tasks.Task<global::Langfuse.CreateScoreResponse> ScoresCreateAsync(
 
-            global::Langfuse.LegacyCreateScoreRequest request,
+            global::Langfuse.CreateScoreRequest request,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await LegacyScoreV1CreateAsResponseAsync(
+            var __response = await ScoresCreateAsResponseAsync(
 
                 request: request,
                 requestOptions: requestOptions,
@@ -64,15 +64,15 @@ namespace Langfuse
             return __response.Body;
         }
         /// <summary>
-        /// Create a score (supports both trace and session scores)
+        /// Create a score (supports trace, observation, session, and dataset run scores)
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.LegacyCreateScoreResponse>> LegacyScoreV1CreateAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.CreateScoreResponse>> ScoresCreateAsResponseAsync(
 
-            global::Langfuse.LegacyCreateScoreRequest request,
+            global::Langfuse.CreateScoreRequest request,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -80,15 +80,15 @@ namespace Langfuse
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareLegacyScoreV1CreateArguments(
+            PrepareScoresCreateArguments(
                 httpClient: HttpClient,
                 request: request);
 
 
             var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_LegacyScoreV1CreateSecurityRequirements,
-                operationName: "LegacyScoreV1CreateAsync");
+                securityRequirements: s_ScoresCreateSecurityRequirements,
+                operationName: "ScoresCreateAsync");
 
             using var __timeoutCancellationTokenSource = global::Langfuse.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -153,7 +153,7 @@ namespace Langfuse
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareLegacyScoreV1CreateRequest(
+                PrepareScoresCreateRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
                     request: request);
@@ -173,8 +173,8 @@ namespace Langfuse
                     await global::Langfuse.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "LegacyScoreV1Create",
-                                methodName: "LegacyScoreV1CreateAsync",
+                                operationId: "ScoresCreate",
+                                methodName: "ScoresCreateAsync",
                                 pathTemplate: "\"/api/public/scores\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
@@ -207,8 +207,8 @@ namespace Langfuse
                         await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "LegacyScoreV1Create",
-                                methodName: "LegacyScoreV1CreateAsync",
+                                operationId: "ScoresCreate",
+                                methodName: "ScoresCreateAsync",
                                 pathTemplate: "\"/api/public/scores\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
@@ -248,8 +248,8 @@ namespace Langfuse
                         await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "LegacyScoreV1Create",
-                                methodName: "LegacyScoreV1CreateAsync",
+                                operationId: "ScoresCreate",
+                                methodName: "ScoresCreateAsync",
                                 pathTemplate: "\"/api/public/scores\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
@@ -288,7 +288,7 @@ namespace Langfuse
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessLegacyScoreV1CreateResponse(
+                ProcessScoresCreateResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -296,8 +296,8 @@ namespace Langfuse
                     await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "LegacyScoreV1Create",
-                                methodName: "LegacyScoreV1CreateAsync",
+                                operationId: "ScoresCreate",
+                                methodName: "ScoresCreateAsync",
                                 pathTemplate: "\"/api/public/scores\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
@@ -318,8 +318,8 @@ namespace Langfuse
                     await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "LegacyScoreV1Create",
-                                methodName: "LegacyScoreV1CreateAsync",
+                                operationId: "ScoresCreate",
+                                methodName: "ScoresCreateAsync",
                                 pathTemplate: "\"/api/public/scores\"",
                                 httpMethod: "POST",
                                 baseUri: BaseUri,
@@ -533,7 +533,7 @@ namespace Langfuse
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessLegacyScoreV1CreateResponseContent(
+                                ProcessScoresCreateResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -542,9 +542,9 @@ namespace Langfuse
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Langfuse.LegacyCreateScoreResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Langfuse.CreateScoreResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.LegacyCreateScoreResponse>(
+                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.CreateScoreResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Langfuse.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -574,9 +574,9 @@ namespace Langfuse
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Langfuse.LegacyCreateScoreResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Langfuse.CreateScoreResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.LegacyCreateScoreResponse>(
+                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.CreateScoreResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Langfuse.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -617,7 +617,7 @@ namespace Langfuse
             }
         }
         /// <summary>
-        /// Create a score (supports both trace and session scores)
+        /// Create a score (supports trace, observation, session, and dataset run scores)
         /// </summary>
         /// <param name="id"></param>
         /// <param name="traceId"></param>
@@ -648,7 +648,7 @@ namespace Langfuse
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Langfuse.LegacyCreateScoreResponse> LegacyScoreV1CreateAsync(
+        public async global::System.Threading.Tasks.Task<global::Langfuse.CreateScoreResponse> ScoresCreateAsync(
             string name,
             global::Langfuse.CreateScoreValue value,
             string? id = default,
@@ -662,11 +662,11 @@ namespace Langfuse
             string? queueId = default,
             global::Langfuse.ScoreDataType? dataType = default,
             string? configId = default,
-            global::Langfuse.LegacyCreateScoreSource? source = default,
+            global::Langfuse.CreateScoreSource? source = default,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __request = new global::Langfuse.LegacyCreateScoreRequest
+            var __request = new global::Langfuse.CreateScoreRequest
             {
                 Id = id,
                 TraceId = traceId,
@@ -684,7 +684,7 @@ namespace Langfuse
                 Source = source,
             };
 
-            return await LegacyScoreV1CreateAsync(
+            return await ScoresCreateAsync(
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);

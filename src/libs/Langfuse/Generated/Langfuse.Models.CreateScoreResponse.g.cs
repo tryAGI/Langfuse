@@ -6,7 +6,7 @@ namespace Langfuse
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class LegacyCreateScoreResponse
+    public sealed partial class CreateScoreResponse
     {
         /// <summary>
         /// The id of the created object in Langfuse
@@ -22,7 +22,7 @@ namespace Langfuse
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="LegacyCreateScoreResponse" /> class.
+        /// Initializes a new instance of the <see cref="CreateScoreResponse" /> class.
         /// </summary>
         /// <param name="id">
         /// The id of the created object in Langfuse
@@ -30,16 +30,16 @@ namespace Langfuse
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public LegacyCreateScoreResponse(
+        public CreateScoreResponse(
             string id)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="LegacyCreateScoreResponse" /> class.
+        /// Initializes a new instance of the <see cref="CreateScoreResponse" /> class.
         /// </summary>
-        public LegacyCreateScoreResponse()
+        public CreateScoreResponse()
         {
         }
 

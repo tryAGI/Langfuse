@@ -6,7 +6,7 @@ namespace Langfuse
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class LegacyScoreV1CreateResponse5
+    public sealed partial class ScoresCreateResponse5
     {
 
         /// <summary>
