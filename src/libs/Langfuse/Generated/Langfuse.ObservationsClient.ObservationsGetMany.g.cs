@@ -38,6 +38,7 @@ namespace Langfuse
             ref string? traceId,
             ref global::Langfuse.ObservationLevel? level,
             ref string? parentObservationId,
+            ref bool? isRootObservation,
             global::System.Collections.Generic.IList<string>? environment,
             ref global::System.DateTime? fromStartTime,
             ref global::System.DateTime? toStartTime,
@@ -57,6 +58,7 @@ namespace Langfuse
             string? traceId,
             global::Langfuse.ObservationLevel? level,
             string? parentObservationId,
+            bool? isRootObservation,
             global::System.Collections.Generic.IList<string>? environment,
             global::System.DateTime? fromStartTime,
             global::System.DateTime? toStartTime,
@@ -80,7 +82,7 @@ namespace Langfuse
         /// ## Field Selection<br/>
         /// Use the `fields` parameter to control which observation fields are returned:<br/>
         /// - `core` - Always included: id, traceId, startTime, endTime, projectId, parentObservationId, type<br/>
-        /// - `basic` - name, level, statusMessage, version, environment, bookmarked, public, userId, sessionId<br/>
+        /// - `basic` - name, level, statusMessage, version, environment, bookmarked, public, userId, sessionId, isRootObservation<br/>
         /// - `time` - completionStartTime, createdAt, updatedAt<br/>
         /// - `io` - input, output<br/>
         /// - `metadata` - metadata (truncated to 200 chars by default, use `expandMetadata` to get full values)<br/>
@@ -105,6 +107,7 @@ namespace Langfuse
         /// <param name="traceId"></param>
         /// <param name="level"></param>
         /// <param name="parentObservationId"></param>
+        /// <param name="isRootObservation"></param>
         /// <param name="environment"></param>
         /// <param name="fromStartTime"></param>
         /// <param name="toStartTime"></param>
@@ -125,6 +128,7 @@ namespace Langfuse
             string? traceId = default,
             global::Langfuse.ObservationLevel? level = default,
             string? parentObservationId = default,
+            bool? isRootObservation = default,
             global::System.Collections.Generic.IList<string>? environment = default,
             global::System.DateTime? fromStartTime = default,
             global::System.DateTime? toStartTime = default,
@@ -145,6 +149,7 @@ namespace Langfuse
                 traceId: traceId,
                 level: level,
                 parentObservationId: parentObservationId,
+                isRootObservation: isRootObservation,
                 environment: environment,
                 fromStartTime: fromStartTime,
                 toStartTime: toStartTime,
@@ -165,7 +170,7 @@ namespace Langfuse
         /// ## Field Selection<br/>
         /// Use the `fields` parameter to control which observation fields are returned:<br/>
         /// - `core` - Always included: id, traceId, startTime, endTime, projectId, parentObservationId, type<br/>
-        /// - `basic` - name, level, statusMessage, version, environment, bookmarked, public, userId, sessionId<br/>
+        /// - `basic` - name, level, statusMessage, version, environment, bookmarked, public, userId, sessionId, isRootObservation<br/>
         /// - `time` - completionStartTime, createdAt, updatedAt<br/>
         /// - `io` - input, output<br/>
         /// - `metadata` - metadata (truncated to 200 chars by default, use `expandMetadata` to get full values)<br/>
@@ -190,6 +195,7 @@ namespace Langfuse
         /// <param name="traceId"></param>
         /// <param name="level"></param>
         /// <param name="parentObservationId"></param>
+        /// <param name="isRootObservation"></param>
         /// <param name="environment"></param>
         /// <param name="fromStartTime"></param>
         /// <param name="toStartTime"></param>
@@ -210,6 +216,7 @@ namespace Langfuse
             string? traceId = default,
             global::Langfuse.ObservationLevel? level = default,
             string? parentObservationId = default,
+            bool? isRootObservation = default,
             global::System.Collections.Generic.IList<string>? environment = default,
             global::System.DateTime? fromStartTime = default,
             global::System.DateTime? toStartTime = default,
@@ -233,6 +240,7 @@ namespace Langfuse
                 traceId: ref traceId,
                 level: ref level,
                 parentObservationId: ref parentObservationId,
+                isRootObservation: ref isRootObservation,
                 environment: environment,
                 fromStartTime: ref fromStartTime,
                 toStartTime: ref toStartTime,
@@ -277,6 +285,7 @@ namespace Langfuse
                                 .AddOptionalParameter("traceId", traceId)
                                 .AddOptionalParameter("level", level?.ToValueString())
                                 .AddOptionalParameter("parentObservationId", parentObservationId)
+                                .AddOptionalParameter("isRootObservation", isRootObservation?.ToString().ToLowerInvariant())
                                 .AddOptionalParameter("environment", environment, delimiter: ",", explode: true)
                                 .AddOptionalParameter("fromStartTime", fromStartTime?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("toStartTime", toStartTime?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
@@ -334,6 +343,7 @@ namespace Langfuse
                     traceId: traceId,
                     level: level,
                     parentObservationId: parentObservationId,
+                    isRootObservation: isRootObservation,
                     environment: environment,
                     fromStartTime: fromStartTime,
                     toStartTime: toStartTime,

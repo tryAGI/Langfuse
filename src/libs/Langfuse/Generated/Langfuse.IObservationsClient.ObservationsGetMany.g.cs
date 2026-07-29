@@ -13,7 +13,7 @@ namespace Langfuse
         /// ## Field Selection<br/>
         /// Use the `fields` parameter to control which observation fields are returned:<br/>
         /// - `core` - Always included: id, traceId, startTime, endTime, projectId, parentObservationId, type<br/>
-        /// - `basic` - name, level, statusMessage, version, environment, bookmarked, public, userId, sessionId<br/>
+        /// - `basic` - name, level, statusMessage, version, environment, bookmarked, public, userId, sessionId, isRootObservation<br/>
         /// - `time` - completionStartTime, createdAt, updatedAt<br/>
         /// - `io` - input, output<br/>
         /// - `metadata` - metadata (truncated to 200 chars by default, use `expandMetadata` to get full values)<br/>
@@ -38,6 +38,7 @@ namespace Langfuse
         /// <param name="traceId"></param>
         /// <param name="level"></param>
         /// <param name="parentObservationId"></param>
+        /// <param name="isRootObservation"></param>
         /// <param name="environment"></param>
         /// <param name="fromStartTime"></param>
         /// <param name="toStartTime"></param>
@@ -58,6 +59,7 @@ namespace Langfuse
             string? traceId = default,
             global::Langfuse.ObservationLevel? level = default,
             string? parentObservationId = default,
+            bool? isRootObservation = default,
             global::System.Collections.Generic.IList<string>? environment = default,
             global::System.DateTime? fromStartTime = default,
             global::System.DateTime? toStartTime = default,
@@ -74,7 +76,7 @@ namespace Langfuse
         /// ## Field Selection<br/>
         /// Use the `fields` parameter to control which observation fields are returned:<br/>
         /// - `core` - Always included: id, traceId, startTime, endTime, projectId, parentObservationId, type<br/>
-        /// - `basic` - name, level, statusMessage, version, environment, bookmarked, public, userId, sessionId<br/>
+        /// - `basic` - name, level, statusMessage, version, environment, bookmarked, public, userId, sessionId, isRootObservation<br/>
         /// - `time` - completionStartTime, createdAt, updatedAt<br/>
         /// - `io` - input, output<br/>
         /// - `metadata` - metadata (truncated to 200 chars by default, use `expandMetadata` to get full values)<br/>
@@ -99,6 +101,7 @@ namespace Langfuse
         /// <param name="traceId"></param>
         /// <param name="level"></param>
         /// <param name="parentObservationId"></param>
+        /// <param name="isRootObservation"></param>
         /// <param name="environment"></param>
         /// <param name="fromStartTime"></param>
         /// <param name="toStartTime"></param>
@@ -119,6 +122,7 @@ namespace Langfuse
             string? traceId = default,
             global::Langfuse.ObservationLevel? level = default,
             string? parentObservationId = default,
+            bool? isRootObservation = default,
             global::System.Collections.Generic.IList<string>? environment = default,
             global::System.DateTime? fromStartTime = default,
             global::System.DateTime? toStartTime = default,

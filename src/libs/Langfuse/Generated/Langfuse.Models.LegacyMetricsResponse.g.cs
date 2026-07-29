@@ -18,6 +18,12 @@ namespace Langfuse
         public required global::System.Collections.Generic.IList<object> Data { get; set; }
 
         /// <summary>
+        /// Migration signal returned by deprecated endpoints. Optional fields are omitted when they have no value.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("_deprecation")]
+        public global::Langfuse.Deprecation? Deprecation { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -31,13 +37,18 @@ namespace Langfuse
         /// Format varies based on the query parameters.<br/>
         /// Histograms will return an array with [lower, upper, height] tuples.
         /// </param>
+        /// <param name="deprecation">
+        /// Migration signal returned by deprecated endpoints. Optional fields are omitted when they have no value.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public LegacyMetricsResponse(
-            global::System.Collections.Generic.IList<object> data)
+            global::System.Collections.Generic.IList<object> data,
+            global::Langfuse.Deprecation? deprecation)
         {
             this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
+            this.Deprecation = deprecation;
         }
 
         /// <summary>

@@ -2,34 +2,34 @@
 
 namespace Langfuse
 {
-    public partial interface ILegacyScoreV1Client
+    public partial interface IScoresClient
     {
         /// <summary>
-        /// Create a score (supports both trace and session scores)
+        /// Create a score (supports trace, observation, session, and dataset run scores)
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Langfuse.LegacyCreateScoreResponse> LegacyScoreV1CreateAsync(
+        global::System.Threading.Tasks.Task<global::Langfuse.CreateScoreResponse> ScoresCreateAsync(
 
-            global::Langfuse.LegacyCreateScoreRequest request,
+            global::Langfuse.CreateScoreRequest request,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Create a score (supports both trace and session scores)
+        /// Create a score (supports trace, observation, session, and dataset run scores)
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.LegacyCreateScoreResponse>> LegacyScoreV1CreateAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.CreateScoreResponse>> ScoresCreateAsResponseAsync(
 
-            global::Langfuse.LegacyCreateScoreRequest request,
+            global::Langfuse.CreateScoreRequest request,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Create a score (supports both trace and session scores)
+        /// Create a score (supports trace, observation, session, and dataset run scores)
         /// </summary>
         /// <param name="id"></param>
         /// <param name="traceId"></param>
@@ -60,7 +60,7 @@ namespace Langfuse
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Langfuse.LegacyCreateScoreResponse> LegacyScoreV1CreateAsync(
+        global::System.Threading.Tasks.Task<global::Langfuse.CreateScoreResponse> ScoresCreateAsync(
             string name,
             global::Langfuse.CreateScoreValue value,
             string? id = default,
@@ -74,7 +74,7 @@ namespace Langfuse
             string? queueId = default,
             global::Langfuse.ScoreDataType? dataType = default,
             string? configId = default,
-            global::Langfuse.LegacyCreateScoreSource? source = default,
+            global::Langfuse.CreateScoreSource? source = default,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }

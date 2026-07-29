@@ -43,7 +43,8 @@ namespace Langfuse
         public required string ProjectId { get; set; }
 
         /// <summary>
-        /// The parent observation ID
+        /// The physical parent observation ID, if present.<br/>
+        /// Observations marked as app roots by the SDK may retain a non-null parent ID.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("parentObservationId")]
         public string? ParentObservationId { get; set; }
@@ -54,6 +55,13 @@ namespace Langfuse
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Type { get; set; }
+
+        /// <summary>
+        /// Whether this observation is a logical root.<br/>
+        /// This is true for observations without a physical parent and observations marked as app roots by the SDK.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("isRootObservation")]
+        public bool? IsRootObservation { get; set; }
 
         /// <summary>
         /// The name of the observation
@@ -288,7 +296,12 @@ namespace Langfuse
         /// The end time of the observation
         /// </param>
         /// <param name="parentObservationId">
-        /// The parent observation ID
+        /// The physical parent observation ID, if present.<br/>
+        /// Observations marked as app roots by the SDK may retain a non-null parent ID.
+        /// </param>
+        /// <param name="isRootObservation">
+        /// Whether this observation is a logical root.<br/>
+        /// This is true for observations without a physical parent and observations marked as app roots by the SDK.
         /// </param>
         /// <param name="name">
         /// The name of the observation
@@ -401,6 +414,7 @@ namespace Langfuse
             string? traceId,
             global::System.DateTime? endTime,
             string? parentObservationId,
+            bool? isRootObservation,
             string? name,
             global::Langfuse.ObservationLevel? level,
             string? statusMessage,
@@ -443,6 +457,7 @@ namespace Langfuse
             this.ProjectId = projectId ?? throw new global::System.ArgumentNullException(nameof(projectId));
             this.ParentObservationId = parentObservationId;
             this.Type = type ?? throw new global::System.ArgumentNullException(nameof(type));
+            this.IsRootObservation = isRootObservation;
             this.Name = name;
             this.Level = level;
             this.StatusMessage = statusMessage;

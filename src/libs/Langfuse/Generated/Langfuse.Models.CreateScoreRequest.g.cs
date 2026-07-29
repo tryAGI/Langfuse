@@ -6,7 +6,7 @@ namespace Langfuse
     /// <summary>
     /// 
     /// </summary>
-    public sealed partial class LegacyCreateScoreRequest
+    public sealed partial class CreateScoreRequest
     {
         /// <summary>
         /// 
@@ -96,8 +96,8 @@ namespace Langfuse
         /// exposed here — use commons.ScoreSource when reading scores.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("source")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.LegacyCreateScoreSourceJsonConverter))]
-        public global::Langfuse.LegacyCreateScoreSource? Source { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.CreateScoreSourceJsonConverter))]
+        public global::Langfuse.CreateScoreSource? Source { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -106,7 +106,7 @@ namespace Langfuse
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="LegacyCreateScoreRequest" /> class.
+        /// Initializes a new instance of the <see cref="CreateScoreRequest" /> class.
         /// </summary>
         /// <param name="name"></param>
         /// <param name="value">
@@ -137,7 +137,7 @@ namespace Langfuse
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public LegacyCreateScoreRequest(
+        public CreateScoreRequest(
             string name,
             global::Langfuse.CreateScoreValue value,
             string? id,
@@ -151,7 +151,7 @@ namespace Langfuse
             string? queueId,
             global::Langfuse.ScoreDataType? dataType,
             string? configId,
-            global::Langfuse.LegacyCreateScoreSource? source)
+            global::Langfuse.CreateScoreSource? source)
         {
             this.Id = id;
             this.TraceId = traceId;
@@ -170,9 +170,9 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="LegacyCreateScoreRequest" /> class.
+        /// Initializes a new instance of the <see cref="CreateScoreRequest" /> class.
         /// </summary>
-        public LegacyCreateScoreRequest()
+        public CreateScoreRequest()
         {
         }
 

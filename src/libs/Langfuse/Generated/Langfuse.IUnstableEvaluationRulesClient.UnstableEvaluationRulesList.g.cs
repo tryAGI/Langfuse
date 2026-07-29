@@ -6,7 +6,7 @@ namespace Langfuse
     {
         /// <summary>
         /// List evaluation rules in the authenticated project.<br/>
-        /// Each item describes one live evaluation rule and its effective runtime status.
+        /// This includes legacy `trace` and `dataset` rules so they can be inspected and migrated to v4 rules. Legacy rules are read-only through this API; create, update, and delete continue to support only `observation` and `experiment` rules.
         /// </summary>
         /// <param name="page"></param>
         /// <param name="limit"></param>
@@ -20,7 +20,7 @@ namespace Langfuse
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// List evaluation rules in the authenticated project.<br/>
-        /// Each item describes one live evaluation rule and its effective runtime status.
+        /// This includes legacy `trace` and `dataset` rules so they can be inspected and migrated to v4 rules. Legacy rules are read-only through this API; create, update, and delete continue to support only `observation` and `experiment` rules.
         /// </summary>
         /// <param name="page"></param>
         /// <param name="limit"></param>

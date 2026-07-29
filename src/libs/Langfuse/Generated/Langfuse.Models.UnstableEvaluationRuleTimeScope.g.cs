@@ -4,48 +4,46 @@
 namespace Langfuse
 {
     /// <summary>
-    /// Source values accepted when creating a score via the public REST API.<br/>
-    /// EVAL is reserved for internal evaluator outputs and is intentionally not<br/>
-    /// exposed here — use commons.ScoreSource when reading scores.
+    /// 
     /// </summary>
-    public enum LegacyCreateScoreSource
+    public enum UnstableEvaluationRuleTimeScope
     {
         /// <summary>
         /// 
         /// </summary>
-        Annotation,
+        Existing,
         /// <summary>
         /// 
         /// </summary>
-        Api,
+        New,
     }
 
     /// <summary>
     /// Enum extensions to do fast conversions without the reflection.
     /// </summary>
-    public static class LegacyCreateScoreSourceExtensions
+    public static class UnstableEvaluationRuleTimeScopeExtensions
     {
         /// <summary>
         /// Converts an enum to a string.
         /// </summary>
-        public static string ToValueString(this LegacyCreateScoreSource value)
+        public static string ToValueString(this UnstableEvaluationRuleTimeScope value)
         {
             return value switch
             {
-                LegacyCreateScoreSource.Annotation => "ANNOTATION",
-                LegacyCreateScoreSource.Api => "API",
+                UnstableEvaluationRuleTimeScope.Existing => "EXISTING",
+                UnstableEvaluationRuleTimeScope.New => "NEW",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
         }
         /// <summary>
         /// Converts an string to a enum.
         /// </summary>
-        public static LegacyCreateScoreSource? ToEnum(string value)
+        public static UnstableEvaluationRuleTimeScope? ToEnum(string value)
         {
             return value switch
             {
-                "ANNOTATION" => LegacyCreateScoreSource.Annotation,
-                "API" => LegacyCreateScoreSource.Api,
+                "EXISTING" => UnstableEvaluationRuleTimeScope.Existing,
+                "NEW" => UnstableEvaluationRuleTimeScope.New,
                 _ => null,
             };
         }

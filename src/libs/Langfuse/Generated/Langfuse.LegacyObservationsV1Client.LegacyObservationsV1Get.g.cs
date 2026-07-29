@@ -48,7 +48,7 @@ namespace Langfuse
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Langfuse.ObservationsView> LegacyObservationsV1GetAsync(
+        public async global::System.Threading.Tasks.Task<global::Langfuse.ObservationsViewSingle> LegacyObservationsV1GetAsync(
             string observationId,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -68,7 +68,7 @@ namespace Langfuse
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.ObservationsView>> LegacyObservationsV1GetAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.ObservationsViewSingle>> LegacyObservationsV1GetAsResponseAsync(
             string observationId,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
@@ -531,9 +531,9 @@ namespace Langfuse
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Langfuse.ObservationsView.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Langfuse.ObservationsViewSingle.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.ObservationsView>(
+                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.ObservationsViewSingle>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Langfuse.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -563,9 +563,9 @@ namespace Langfuse
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Langfuse.ObservationsView.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Langfuse.ObservationsViewSingle.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.ObservationsView>(
+                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.ObservationsViewSingle>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Langfuse.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,

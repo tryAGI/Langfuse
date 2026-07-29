@@ -42,6 +42,12 @@ namespace Langfuse
         public required global::System.Collections.Generic.IList<global::Langfuse.ScoreV1> Scores { get; set; }
 
         /// <summary>
+        /// Migration signal returned by deprecated endpoints. Optional fields are omitted when they have no value.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("_deprecation")]
+        public global::Langfuse.Deprecation? Deprecation { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -65,6 +71,9 @@ namespace Langfuse
         /// <param name="totalCost">
         /// Cost of trace in USD
         /// </param>
+        /// <param name="deprecation">
+        /// Migration signal returned by deprecated endpoints. Optional fields are omitted when they have no value.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -73,13 +82,15 @@ namespace Langfuse
             global::System.Collections.Generic.IList<global::Langfuse.ObservationsView> observations,
             global::System.Collections.Generic.IList<global::Langfuse.ScoreV1> scores,
             double? latency,
-            double? totalCost)
+            double? totalCost,
+            global::Langfuse.Deprecation? deprecation)
         {
             this.HtmlPath = htmlPath ?? throw new global::System.ArgumentNullException(nameof(htmlPath));
             this.Latency = latency;
             this.TotalCost = totalCost;
             this.Observations = observations ?? throw new global::System.ArgumentNullException(nameof(observations));
             this.Scores = scores ?? throw new global::System.ArgumentNullException(nameof(scores));
+            this.Deprecation = deprecation;
         }
 
         /// <summary>
