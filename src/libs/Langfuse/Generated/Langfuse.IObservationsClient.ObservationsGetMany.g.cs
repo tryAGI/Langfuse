@@ -34,6 +34,7 @@ namespace Langfuse
         /// <param name="parseIoAsJson"></param>
         /// <param name="name"></param>
         /// <param name="userId"></param>
+        /// <param name="sessionId"></param>
         /// <param name="type"></param>
         /// <param name="traceId"></param>
         /// <param name="level"></param>
@@ -55,6 +56,7 @@ namespace Langfuse
             bool? parseIoAsJson = default,
             string? name = default,
             string? userId = default,
+            string? sessionId = default,
             string? type = default,
             string? traceId = default,
             global::Langfuse.ObservationLevel? level = default,
@@ -97,6 +99,7 @@ namespace Langfuse
         /// <param name="parseIoAsJson"></param>
         /// <param name="name"></param>
         /// <param name="userId"></param>
+        /// <param name="sessionId"></param>
         /// <param name="type"></param>
         /// <param name="traceId"></param>
         /// <param name="level"></param>
@@ -118,6 +121,7 @@ namespace Langfuse
             bool? parseIoAsJson = default,
             string? name = default,
             string? userId = default,
+            string? sessionId = default,
             string? type = default,
             string? traceId = default,
             global::Langfuse.ObservationLevel? level = default,
