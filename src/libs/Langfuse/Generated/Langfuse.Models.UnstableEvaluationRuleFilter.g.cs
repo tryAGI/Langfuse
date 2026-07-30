@@ -19,6 +19,7 @@ namespace Langfuse
     /// - `stringOptions`: `any of`, `none of`<br/>
     /// - `arrayOptions`: `any of`, `none of`, `all of`<br/>
     /// - `stringObject`: same operators as `string`<br/>
+    /// - `boolean`: `"="`, `"&lt;&gt;"`<br/>
     /// - `null`: `is null`, `is not null`<br/>
     /// Supported columns by target:<br/>
     /// - `target=observation`<br/>
@@ -32,6 +33,7 @@ namespace Langfuse
     ///   - `sessionId`: `string`<br/>
     ///   - `tags`: `arrayOptions`, operators `any of` / `none of` / `all of`<br/>
     ///   - `metadata`: `stringObject` with `key`<br/>
+    ///   - `isRootObservation`: `boolean`, operators `=` / `&lt;&gt;`; true when the observation has no parent or is explicitly marked as an application root<br/>
     ///   - `parentObservationId`: `null`, operators `is null` / `is not null`<br/>
     ///   - `calledToolNames`: `arrayOptions`, operators `any of` / `none of` / `all of`<br/>
     ///   - `toolCalls`: `number`<br/>
