@@ -9,6 +9,7 @@ namespace Langfuse
         /// ## V2 Differences<br/>
         /// - Supports `observations`, `scores-numeric`, `scores-boolean`, and `scores-categorical` views only (traces view not supported)<br/>
         /// - Direct access to tags and release fields on observations<br/>
+        /// - Semantic-root filtering and grouping through the v2-only `isRootObservation` dimension<br/>
         /// - Backwards-compatible: traceName, traceRelease, traceVersion dimensions are still available on observations view<br/>
         /// - High cardinality dimensions are not supported and will return a 400 error (see below)<br/>
         /// For more details, see the [Metrics API documentation](https://langfuse.com/docs/metrics/features/metrics-api).<br/>
@@ -29,6 +30,7 @@ namespace Langfuse
         /// - `providedModelName` - Name of the model used<br/>
         /// - `promptName` - Name of the prompt used<br/>
         /// - `promptVersion` - Version of the prompt used<br/>
+        /// - `isRootObservation` - Boolean semantic-root status. `true` includes physical roots and app roots whose SDK parent is external (so `parentObservationId` may be non-null).<br/>
         /// - `startTimeMonth` - Month of start_time in YYYY-MM format<br/>
         /// **Measures:**<br/>
         /// - `count` - Total number of observations<br/>
@@ -111,6 +113,7 @@ namespace Langfuse
         /// ## V2 Differences<br/>
         /// - Supports `observations`, `scores-numeric`, `scores-boolean`, and `scores-categorical` views only (traces view not supported)<br/>
         /// - Direct access to tags and release fields on observations<br/>
+        /// - Semantic-root filtering and grouping through the v2-only `isRootObservation` dimension<br/>
         /// - Backwards-compatible: traceName, traceRelease, traceVersion dimensions are still available on observations view<br/>
         /// - High cardinality dimensions are not supported and will return a 400 error (see below)<br/>
         /// For more details, see the [Metrics API documentation](https://langfuse.com/docs/metrics/features/metrics-api).<br/>
@@ -131,6 +134,7 @@ namespace Langfuse
         /// - `providedModelName` - Name of the model used<br/>
         /// - `promptName` - Name of the prompt used<br/>
         /// - `promptVersion` - Version of the prompt used<br/>
+        /// - `isRootObservation` - Boolean semantic-root status. `true` includes physical roots and app roots whose SDK parent is external (so `parentObservationId` may be non-null).<br/>
         /// - `startTimeMonth` - Month of start_time in YYYY-MM format<br/>
         /// **Measures:**<br/>
         /// - `count` - Total number of observations<br/>
