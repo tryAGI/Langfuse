@@ -632,7 +632,7 @@ namespace Langfuse
         /// The content of the comment. May include markdown. Currently limited to 5000 characters.
         /// </param>
         /// <param name="authorUserId">
-        /// The id of the user who created the comment.
+        /// The id of the user who created the comment. Must be a member of the organization that owns the project, otherwise an error will be thrown.
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
