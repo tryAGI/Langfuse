@@ -37,7 +37,7 @@ namespace Langfuse
         public required string Content { get; set; }
 
         /// <summary>
-        /// The id of the user who created the comment.
+        /// The id of the user who created the comment. Must be a member of the organization that owns the project, otherwise an error will be thrown.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("authorUserId")]
         public string? AuthorUserId { get; set; }
@@ -64,7 +64,7 @@ namespace Langfuse
         /// The content of the comment. May include markdown. Currently limited to 5000 characters.
         /// </param>
         /// <param name="authorUserId">
-        /// The id of the user who created the comment.
+        /// The id of the user who created the comment. Must be a member of the organization that owns the project, otherwise an error will be thrown.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
