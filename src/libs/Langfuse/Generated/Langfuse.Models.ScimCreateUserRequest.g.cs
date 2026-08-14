@@ -35,7 +35,7 @@ namespace Langfuse
         public bool? Active { get; set; }
 
         /// <summary>
-        /// Initial password for the user
+        /// Ignored. Accepted only for compatibility with identity providers that always send a password on user creation (Okta sends a placeholder value even when password sync is disabled). No credential is created for the user; provisioned users authenticate via SSO or set a password themselves through the password reset flow.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("password")]
         public string? Password { get; set; }
@@ -60,7 +60,7 @@ namespace Langfuse
         /// Whether the user is active
         /// </param>
         /// <param name="password">
-        /// Initial password for the user
+        /// Ignored. Accepted only for compatibility with identity providers that always send a password on user creation (Okta sends a placeholder value even when password sync is disabled). No credential is created for the user; provisioned users authenticate via SSO or set a password themselves through the password reset flow.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

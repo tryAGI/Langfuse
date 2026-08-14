@@ -73,11 +73,6 @@ namespace Langfuse
         /// <summary>
         /// 
         /// </summary>
-        public DatasetRunItemsClient DatasetRunItems { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
         public DatasetsClient Datasets { get; }
 
         /// <summary>
@@ -94,21 +89,6 @@ namespace Langfuse
         /// 
         /// </summary>
         public HealthClient Health { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public IngestionClient Ingestion { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public LegacyMetricsV1Client LegacyMetricsV1 { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public LegacyObservationsV1Client LegacyObservationsV1 { get; }
 
         /// <summary>
         /// 
@@ -184,11 +164,6 @@ namespace Langfuse
         /// 
         /// </summary>
         public ScoresV3Client ScoresV3 { get; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        public SessionsClient Sessions { get; }
 
         /// <summary>
         /// 
