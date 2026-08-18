@@ -47,7 +47,7 @@ namespace Langfuse
         /// Array of conditions that must ALL be met for this tier to match (AND logic).<br/>
         /// The default tier must have an empty array (conditions=[]).<br/>
         /// Conditional tiers should define one or more conditions that specify when this tier's pricing applies.<br/>
-        /// Each condition specifies a regex pattern, operator, and threshold value for matching against usage details.
+        /// Conditions can compare summed matching usage details to a numeric threshold, or exactly match a top-level model parameter or metadata value.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("conditions")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -93,7 +93,7 @@ namespace Langfuse
         /// Array of conditions that must ALL be met for this tier to match (AND logic).<br/>
         /// The default tier must have an empty array (conditions=[]).<br/>
         /// Conditional tiers should define one or more conditions that specify when this tier's pricing applies.<br/>
-        /// Each condition specifies a regex pattern, operator, and threshold value for matching against usage details.
+        /// Conditions can compare summed matching usage details to a numeric threshold, or exactly match a top-level model parameter or metadata value.
         /// </param>
         /// <param name="prices">
         /// Prices (USD) by usage type for this tier. At least one price must be defined.<br/>
