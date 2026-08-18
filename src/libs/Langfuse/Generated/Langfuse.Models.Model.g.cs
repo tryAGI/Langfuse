@@ -7,7 +7,7 @@ namespace Langfuse
     /// Model definition used for transforming usage into USD cost and/or tokenization.<br/>
     /// Models can have either simple flat pricing or tiered pricing:<br/>
     /// - Flat pricing: Single price per usage type (legacy, but still supported)<br/>
-    /// - Tiered pricing: Multiple pricing tiers with conditional matching based on usage patterns<br/>
+    /// - Tiered pricing: Multiple pricing tiers with conditional matching based on usage patterns or observation attributes<br/>
     /// The pricing tiers approach is recommended for models with usage-based pricing variations.<br/>
     /// When using tiered pricing, the flat price fields (inputPrice, outputPrice, prices) are populated<br/>
     /// from the default tier for backward compatibility.
@@ -103,9 +103,9 @@ namespace Langfuse
         public required global::System.Collections.Generic.Dictionary<string, global::Langfuse.ModelPrice> Prices { get; set; }
 
         /// <summary>
-        /// Array of pricing tiers with conditional pricing based on usage thresholds.<br/>
+        /// Array of pricing tiers with conditional pricing based on usage thresholds or observation attributes.<br/>
         /// Pricing tiers enable accurate cost tracking for models that charge different rates based on usage patterns<br/>
-        /// (e.g., different rates for high-volume usage, large context windows, or cached tokens).<br/>
+        /// or request attributes (e.g., high-volume usage, large context windows, cached tokens, or service tiers).<br/>
         /// Each model must have exactly one default tier (isDefault=true, priority=0) that serves as a fallback.<br/>
         /// Additional conditional tiers can be defined with specific matching criteria.<br/>
         /// If this array is empty, the model uses legacy flat pricing from the inputPrice/outputPrice/totalPrice fields.
@@ -143,9 +143,9 @@ namespace Langfuse
         /// If the model uses tiered pricing, this field will be populated from the default tier's prices.
         /// </param>
         /// <param name="pricingTiers">
-        /// Array of pricing tiers with conditional pricing based on usage thresholds.<br/>
+        /// Array of pricing tiers with conditional pricing based on usage thresholds or observation attributes.<br/>
         /// Pricing tiers enable accurate cost tracking for models that charge different rates based on usage patterns<br/>
-        /// (e.g., different rates for high-volume usage, large context windows, or cached tokens).<br/>
+        /// or request attributes (e.g., high-volume usage, large context windows, cached tokens, or service tiers).<br/>
         /// Each model must have exactly one default tier (isDefault=true, priority=0) that serves as a fallback.<br/>
         /// Additional conditional tiers can be defined with specific matching criteria.<br/>
         /// If this array is empty, the model uses legacy flat pricing from the inputPrice/outputPrice/totalPrice fields.

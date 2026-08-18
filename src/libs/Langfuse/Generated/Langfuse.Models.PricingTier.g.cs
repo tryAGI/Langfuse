@@ -4,9 +4,9 @@
 namespace Langfuse
 {
     /// <summary>
-    /// Pricing tier definition with conditional pricing based on usage thresholds.<br/>
-    /// Pricing tiers enable accurate cost tracking for LLM providers that charge different rates based on usage patterns.<br/>
-    /// For example, some providers charge higher rates when context size exceeds certain thresholds.<br/>
+    /// Pricing tier definition with conditional pricing based on usage thresholds or observation attributes.<br/>
+    /// Pricing tiers enable accurate cost tracking for LLM providers that charge different rates based on usage patterns or request attributes.<br/>
+    /// For example, some providers charge higher rates when context size exceeds certain thresholds or when an accelerated service tier is selected.<br/>
     /// How tier matching works:<br/>
     /// 1. Tiers are evaluated in ascending priority order (priority 1 before priority 2, etc.)<br/>
     /// 2. The first tier where ALL conditions match is selected<br/>

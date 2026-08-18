@@ -1,103 +1,296 @@
+#pragma warning disable CS0618 // Type or member is obsolete
 
 #nullable enable
 
 namespace Langfuse
 {
     /// <summary>
-    /// Condition for matching a pricing tier based on usage details. Used to implement tiered pricing models where costs vary based on usage thresholds.<br/>
-    /// How it works:<br/>
-    /// 1. The regex pattern matches against usage detail keys (e.g., "input_tokens", "input_cached")<br/>
-    /// 2. Values of all matching keys are summed together<br/>
-    /// 3. The sum is compared against the threshold value using the specified operator<br/>
-    /// 4. All conditions in a tier must be met (AND logic) for the tier to match<br/>
-    /// Common use cases:<br/>
-    /// - Threshold-based pricing: Match when accumulated usage exceeds a certain amount<br/>
-    /// - Usage-type-specific pricing: Different rates for cached vs non-cached tokens, or input vs output<br/>
-    /// - Volume-based pricing: Different rates based on total request or token count
+    /// Condition for matching a pricing tier against usage details or observation attributes.<br/>
+    /// Usage-detail conditions treat usageDetailPattern as a regex, sum all matching usage values, and compare the sum to the numeric value. Model-parameter and metadata conditions match an exact top-level key against one or more string values.
     /// </summary>
-    public sealed partial class PricingTierCondition
+    public readonly partial struct PricingTierCondition : global::System.IEquatable<PricingTierCondition>
     {
         /// <summary>
-        /// Regex pattern to match against usage detail keys. All matching keys' values are summed for threshold comparison.<br/>
-        /// Examples:<br/>
-        /// - "^input" matches "input", "input_tokens", "input_cached", etc.<br/>
-        /// - "^(input|prompt)" matches both "input_tokens" and "prompt_tokens"<br/>
-        /// - "_cache$" matches "input_cache", "output_cache", etc.<br/>
-        /// The pattern is case-insensitive by default. If no keys match, the sum is treated as zero.
+        /// Condition that sums usage details whose keys match a regex.
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("usageDetailPattern")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required string UsageDetailPattern { get; set; }
-
-        /// <summary>
-        /// Comparison operators for pricing tier conditions
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("operator")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.PricingTierOperatorJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Langfuse.PricingTierOperator Operator { get; set; }
-
-        /// <summary>
-        /// Threshold value for comparison. For token-based pricing, this is typically the token count threshold (e.g., 200000 for a 200K token threshold).
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("value")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required double Value { get; set; }
-
-        /// <summary>
-        /// Whether the regex pattern matching is case-sensitive. Default is false (case-insensitive matching).
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("caseSensitive")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool CaseSensitive { get; set; }
-
-        /// <summary>
-        /// Additional properties that are not explicitly defined in the schema
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonExtensionData]
-        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="PricingTierCondition" /> class.
-        /// </summary>
-        /// <param name="usageDetailPattern">
-        /// Regex pattern to match against usage detail keys. All matching keys' values are summed for threshold comparison.<br/>
-        /// Examples:<br/>
-        /// - "^input" matches "input", "input_tokens", "input_cached", etc.<br/>
-        /// - "^(input|prompt)" matches both "input_tokens" and "prompt_tokens"<br/>
-        /// - "_cache$" matches "input_cache", "output_cache", etc.<br/>
-        /// The pattern is case-insensitive by default. If no keys match, the sum is treated as zero.
-        /// </param>
-        /// <param name="operator">
-        /// Comparison operators for pricing tier conditions
-        /// </param>
-        /// <param name="value">
-        /// Threshold value for comparison. For token-based pricing, this is typically the token count threshold (e.g., 200000 for a 200K token threshold).
-        /// </param>
-        /// <param name="caseSensitive">
-        /// Whether the regex pattern matching is case-sensitive. Default is false (case-insensitive matching).
-        /// </param>
-#if NET7_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#if NET6_0_OR_GREATER
+        public global::Langfuse.PricingTierUsageCondition? PricingTierUsageCondition { get; init; }
+#else
+        public global::Langfuse.PricingTierUsageCondition? PricingTierUsageCondition { get; }
 #endif
-        public PricingTierCondition(
-            string usageDetailPattern,
-            global::Langfuse.PricingTierOperator @operator,
-            double value,
-            bool caseSensitive)
+
+        /// <summary>
+        /// 
+        /// </summary>
+#if NET6_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PricingTierUsageCondition))]
+#endif
+        public bool IsPricingTierUsageCondition => PricingTierUsageCondition != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickPricingTierUsageCondition(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.PricingTierUsageCondition? value)
         {
-            this.UsageDetailPattern = usageDetailPattern ?? throw new global::System.ArgumentNullException(nameof(usageDetailPattern));
-            this.Operator = @operator;
-            this.Value = value;
-            this.CaseSensitive = caseSensitive;
+            value = PricingTierUsageCondition;
+            return IsPricingTierUsageCondition;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="PricingTierCondition" /> class.
+        /// 
         /// </summary>
-        public PricingTierCondition()
+        public global::Langfuse.PricingTierUsageCondition PickPricingTierUsageCondition() => IsPricingTierUsageCondition
+            ? PricingTierUsageCondition!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PricingTierUsageCondition' but the value was {ToString()}.");
+
+        /// <summary>
+        /// Condition that matches any configured value for a top-level observation attribute.
+        /// </summary>
+#if NET6_0_OR_GREATER
+        public global::Langfuse.PricingTierAttributeCondition? PricingTierAttributeCondition { get; init; }
+#else
+        public global::Langfuse.PricingTierAttributeCondition? PricingTierAttributeCondition { get; }
+#endif
+
+        /// <summary>
+        /// 
+        /// </summary>
+#if NET6_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PricingTierAttributeCondition))]
+#endif
+        public bool IsPricingTierAttributeCondition => PricingTierAttributeCondition != null;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool TryPickPricingTierAttributeCondition(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.PricingTierAttributeCondition? value)
         {
+            value = PricingTierAttributeCondition;
+            return IsPricingTierAttributeCondition;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public global::Langfuse.PricingTierAttributeCondition PickPricingTierAttributeCondition() => IsPricingTierAttributeCondition
+            ? PricingTierAttributeCondition!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'PricingTierAttributeCondition' but the value was {ToString()}.");
+        /// <summary>
+        /// 
+        /// </summary>
+        public static implicit operator PricingTierCondition(global::Langfuse.PricingTierUsageCondition value) => new PricingTierCondition((global::Langfuse.PricingTierUsageCondition?)value);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static implicit operator global::Langfuse.PricingTierUsageCondition?(PricingTierCondition @this) => @this.PricingTierUsageCondition;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public PricingTierCondition(global::Langfuse.PricingTierUsageCondition? value)
+        {
+            PricingTierUsageCondition = value;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PricingTierCondition FromPricingTierUsageCondition(global::Langfuse.PricingTierUsageCondition? value) => new PricingTierCondition(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static implicit operator PricingTierCondition(global::Langfuse.PricingTierAttributeCondition value) => new PricingTierCondition((global::Langfuse.PricingTierAttributeCondition?)value);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static implicit operator global::Langfuse.PricingTierAttributeCondition?(PricingTierCondition @this) => @this.PricingTierAttributeCondition;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public PricingTierCondition(global::Langfuse.PricingTierAttributeCondition? value)
+        {
+            PricingTierAttributeCondition = value;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static PricingTierCondition FromPricingTierAttributeCondition(global::Langfuse.PricingTierAttributeCondition? value) => new PricingTierCondition(value);
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public PricingTierCondition(
+            global::Langfuse.PricingTierUsageCondition? pricingTierUsageCondition,
+            global::Langfuse.PricingTierAttributeCondition? pricingTierAttributeCondition
+            )
+        {
+            PricingTierUsageCondition = pricingTierUsageCondition;
+            PricingTierAttributeCondition = pricingTierAttributeCondition;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public object? Object =>
+            PricingTierAttributeCondition as object ??
+            PricingTierUsageCondition as object 
+            ;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public override string? ToString() =>
+            PricingTierUsageCondition?.ToString() ??
+            PricingTierAttributeCondition?.ToString() 
+            ;
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool Validate()
+        {
+            return IsPricingTierUsageCondition && !IsPricingTierAttributeCondition || !IsPricingTierUsageCondition && IsPricingTierAttributeCondition;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public TResult? Match<TResult>(
+            global::System.Func<global::Langfuse.PricingTierUsageCondition, TResult>? pricingTierUsageCondition = null,
+            global::System.Func<global::Langfuse.PricingTierAttributeCondition, TResult>? pricingTierAttributeCondition = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsPricingTierUsageCondition && pricingTierUsageCondition != null)
+            {
+                return pricingTierUsageCondition(PricingTierUsageCondition!);
+            }
+            else if (IsPricingTierAttributeCondition && pricingTierAttributeCondition != null)
+            {
+                return pricingTierAttributeCondition(PricingTierAttributeCondition!);
+            }
+
+            return default(TResult);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Match(
+            global::System.Action<global::Langfuse.PricingTierUsageCondition>? pricingTierUsageCondition = null,
+
+            global::System.Action<global::Langfuse.PricingTierAttributeCondition>? pricingTierAttributeCondition = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsPricingTierUsageCondition)
+            {
+                pricingTierUsageCondition?.Invoke(PricingTierUsageCondition!);
+            }
+            else if (IsPricingTierAttributeCondition)
+            {
+                pricingTierAttributeCondition?.Invoke(PricingTierAttributeCondition!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public void Switch(
+            global::System.Action<global::Langfuse.PricingTierUsageCondition>? pricingTierUsageCondition = null,
+            global::System.Action<global::Langfuse.PricingTierAttributeCondition>? pricingTierAttributeCondition = null,
+            bool validate = true)
+        {
+            if (validate)
+            {
+                Validate();
+            }
+
+            if (IsPricingTierUsageCondition)
+            {
+                pricingTierUsageCondition?.Invoke(PricingTierUsageCondition!);
+            }
+            else if (IsPricingTierAttributeCondition)
+            {
+                pricingTierAttributeCondition?.Invoke(PricingTierAttributeCondition!);
+            }
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public override int GetHashCode()
+        {
+            var fields = new object?[]
+            {
+                PricingTierUsageCondition,
+                typeof(global::Langfuse.PricingTierUsageCondition),
+                PricingTierAttributeCondition,
+                typeof(global::Langfuse.PricingTierAttributeCondition),
+            };
+            const int offset = unchecked((int)2166136261);
+            const int prime = 16777619;
+            static int HashCodeAggregator(int hashCode, object? value) => value == null
+                ? (hashCode ^ 0) * prime
+                : (hashCode ^ value.GetHashCode()) * prime;
+
+            return global::System.Linq.Enumerable.Aggregate(fields, offset, HashCodeAggregator);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public bool Equals(PricingTierCondition other)
+        {
+            return
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.PricingTierUsageCondition?>.Default.Equals(PricingTierUsageCondition, other.PricingTierUsageCondition) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.PricingTierAttributeCondition?>.Default.Equals(PricingTierAttributeCondition, other.PricingTierAttributeCondition) 
+                ;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static bool operator ==(PricingTierCondition obj1, PricingTierCondition obj2)
+        {
+            return global::System.Collections.Generic.EqualityComparer<PricingTierCondition>.Default.Equals(obj1, obj2);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static bool operator !=(PricingTierCondition obj1, PricingTierCondition obj2)
+        {
+            return !(obj1 == obj2);
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public override bool Equals(object? obj)
+        {
+            return obj is PricingTierCondition o && Equals(o);
+        }
     }
 }
