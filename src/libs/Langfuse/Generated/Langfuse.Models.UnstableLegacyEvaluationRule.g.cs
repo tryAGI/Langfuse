@@ -5,10 +5,17 @@ namespace Langfuse
 {
     /// <summary>
     /// Legacy trace- or dataset-level evaluation rule returned by list and get for migration.<br/>
-    /// This resource is read-only through the unstable public API. Its mapping preserves the trace, dataset item, or named observation that each evaluator variable previously read from. Its filters use the persisted legacy filter format so migration clients can read the configuration without losing information.
+    /// This resource is read-only through the unstable public API. Its mapping preserves the trace, dataset item, or named observation selected for each evaluator variable.
     /// </summary>
     public sealed partial class UnstableLegacyEvaluationRule
     {
+        /// <summary>
+        /// Evaluators attached to this rule in deterministic assignment order.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("evaluators")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Langfuse.UnstableLegacyEvaluationRuleEvaluatorAssignment> Evaluators { get; set; }
+
         /// <summary>
         /// 
         /// </summary>
@@ -54,6 +61,9 @@ namespace Langfuse
         /// <summary>
         /// Initializes a new instance of the <see cref="UnstableLegacyEvaluationRule" /> class.
         /// </summary>
+        /// <param name="evaluators">
+        /// Evaluators attached to this rule in deterministic assignment order.
+        /// </param>
         /// <param name="target"></param>
         /// <param name="delay">
         /// Delay in milliseconds before the legacy evaluation job runs.
@@ -71,12 +81,14 @@ namespace Langfuse
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public UnstableLegacyEvaluationRule(
+            global::System.Collections.Generic.IList<global::Langfuse.UnstableLegacyEvaluationRuleEvaluatorAssignment> evaluators,
             global::Langfuse.UnstableLegacyEvaluationRuleTarget target,
             int delay,
             global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleTimeScope> timeScope,
             global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleFilter> filter,
             global::System.Collections.Generic.IList<global::Langfuse.UnstableLegacyEvaluationRuleMapping> mapping)
         {
+            this.Evaluators = evaluators ?? throw new global::System.ArgumentNullException(nameof(evaluators));
             this.Target = target;
             this.Delay = delay;
             this.TimeScope = timeScope ?? throw new global::System.ArgumentNullException(nameof(timeScope));

@@ -28,11 +28,13 @@ namespace Langfuse.JsonConverters
             }
 
             var __score0 = 0;
+            if (__jsonProps.Contains("evaluators")) __score0++;
             if (__jsonProps.Contains("filter")) __score0++;
             if (__jsonProps.Contains("mapping")) __score0++;
             if (__jsonProps.Contains("target")) __score0++;
             var __score1 = 0;
             if (__jsonProps.Contains("delay")) __score1++;
+            if (__jsonProps.Contains("evaluators")) __score1++;
             if (__jsonProps.Contains("filter")) __score1++;
             if (__jsonProps.Contains("mapping")) __score1++;
             if (__jsonProps.Contains("target")) __score1++;

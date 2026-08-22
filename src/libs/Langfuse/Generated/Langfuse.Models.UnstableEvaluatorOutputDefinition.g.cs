@@ -10,6 +10,7 @@ namespace Langfuse
     /// - `dataType` is required.<br/>
     /// - Do not send `version`; that is an internal storage detail and is not part of the public request contract.<br/>
     /// - For `NUMERIC` and `BOOLEAN`, provide `reasoning.description` and `score.description`.<br/>
+    /// - For `NUMERIC`, `score.minValue` and `score.maxValue` optionally define inclusive bounds. If both are set, `minValue` must not exceed `maxValue`.<br/>
     /// - For `CATEGORICAL`, also provide `score.categories` and `score.shouldAllowMultipleMatches`.
     /// </summary>
     public readonly partial struct UnstableEvaluatorOutputDefinition : global::System.IEquatable<UnstableEvaluatorOutputDefinition>

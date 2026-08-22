@@ -32,7 +32,7 @@ namespace Langfuse
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("score")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Langfuse.UnstableEvaluatorOutputFieldDefinition Score { get; set; }
+        public required global::Langfuse.UnstablePublicNumericEvaluatorOutputScoreDefinition Score { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -58,7 +58,7 @@ namespace Langfuse
         public UnstablePublicNumericEvaluatorOutputDefinition(
             global::Langfuse.UnstableEvaluatorOutputDataType dataType,
             global::Langfuse.UnstableEvaluatorOutputFieldDefinition reasoning,
-            global::Langfuse.UnstableEvaluatorOutputFieldDefinition score)
+            global::Langfuse.UnstablePublicNumericEvaluatorOutputScoreDefinition score)
         {
             this.DataType = dataType;
             this.Reasoning = reasoning ?? throw new global::System.ArgumentNullException(nameof(reasoning));

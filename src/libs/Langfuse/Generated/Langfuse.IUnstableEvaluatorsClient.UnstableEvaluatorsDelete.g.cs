@@ -7,9 +7,8 @@ namespace Langfuse
         /// <summary>
         /// Delete an evaluator.<br/>
         /// Important behavior:<br/>
-        /// - This deletes the evaluator including all of its stored versions; `evaluatorId` may reference any version.<br/>
-        /// - The API returns `409` while evaluation rules still reference the evaluator. Delete those evaluation rules first.<br/>
-        /// - Langfuse-managed evaluators (`scope=managed`) cannot be deleted; the API returns `403`.<br/>
+        /// - This deletes the evaluator including all of its stored versions.<br/>
+        /// - Evaluation rule assignments referencing the evaluator are also deleted.<br/>
         /// - Scores already produced by the evaluator are not deleted.
         /// </summary>
         /// <param name="evaluatorId"></param>
@@ -23,9 +22,8 @@ namespace Langfuse
         /// <summary>
         /// Delete an evaluator.<br/>
         /// Important behavior:<br/>
-        /// - This deletes the evaluator including all of its stored versions; `evaluatorId` may reference any version.<br/>
-        /// - The API returns `409` while evaluation rules still reference the evaluator. Delete those evaluation rules first.<br/>
-        /// - Langfuse-managed evaluators (`scope=managed`) cannot be deleted; the API returns `403`.<br/>
+        /// - This deletes the evaluator including all of its stored versions.<br/>
+        /// - Evaluation rule assignments referencing the evaluator are also deleted.<br/>
         /// - Scores already produced by the evaluator are not deleted.
         /// </summary>
         /// <param name="evaluatorId"></param>

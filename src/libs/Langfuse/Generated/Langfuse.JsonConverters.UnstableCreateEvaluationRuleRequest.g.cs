@@ -38,7 +38,6 @@ namespace Langfuse.JsonConverters
             if (__jsonProps.Contains("enabled")) __score0++;
             if (__jsonProps.Contains("evaluator")) __score0++;
             if (__jsonProps.Contains("evaluator.name")) __score0++;
-            if (__jsonProps.Contains("evaluator.scope")) __score0++;
             if (__jsonProps.Contains("evaluator.type")) __score0++;
             if (__jsonProps.Contains("filter")) __score0++;
             if (__jsonProps.Contains("mapping")) __score0++;
@@ -49,19 +48,27 @@ namespace Langfuse.JsonConverters
             if (__jsonProps.Contains("enabled")) __score1++;
             if (__jsonProps.Contains("evaluator")) __score1++;
             if (__jsonProps.Contains("evaluator.name")) __score1++;
-            if (__jsonProps.Contains("evaluator.scope")) __score1++;
             if (__jsonProps.Contains("evaluator.type")) __score1++;
             if (__jsonProps.Contains("filter")) __score1++;
             if (__jsonProps.Contains("name")) __score1++;
             if (__jsonProps.Contains("sampling")) __score1++;
             if (__jsonProps.Contains("target")) __score1++;
+            var __score2 = 0;
+            if (__jsonProps.Contains("enabled")) __score2++;
+            if (__jsonProps.Contains("evaluators")) __score2++;
+            if (__jsonProps.Contains("filter")) __score2++;
+            if (__jsonProps.Contains("name")) __score2++;
+            if (__jsonProps.Contains("sampling")) __score2++;
+            if (__jsonProps.Contains("target")) __score2++;
             var __bestScore = 0;
             var __bestIndex = -1;
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
             if (__score1 > __bestScore) { __bestScore = __score1; __bestIndex = 1; }
+            if (__score2 > __bestScore) { __bestScore = __score2; __bestIndex = 2; }
 
             global::Langfuse.UnstableCreateLlmAsJudgeEvaluationRuleRequest? unstableCreateLlmAsJudgeEvaluationRuleRequest = default;
             global::Langfuse.UnstableCreateCodeEvaluationRuleRequest? unstableCreateCodeEvaluationRuleRequest = default;
+            global::Langfuse.UnstableCreateEvaluationRuleWithEvaluatorsRequest? unstableCreateEvaluationRuleWithEvaluatorsRequest = default;
             if (__bestIndex >= 0)
             {
                 if (__bestIndex == 0)
@@ -94,9 +101,24 @@ namespace Langfuse.JsonConverters
                     {
                     }
                 }
+                else if (__bestIndex == 2)
+                {
+                    try
+                    {
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.UnstableCreateEvaluationRuleWithEvaluatorsRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.UnstableCreateEvaluationRuleWithEvaluatorsRequest> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.UnstableCreateEvaluationRuleWithEvaluatorsRequest).Name}");
+                        unstableCreateEvaluationRuleWithEvaluatorsRequest = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    }
+                    catch (global::System.Text.Json.JsonException)
+                    {
+                    }
+                    catch (global::System.InvalidOperationException)
+                    {
+                    }
+                }
             }
 
-            if (unstableCreateLlmAsJudgeEvaluationRuleRequest == null && unstableCreateCodeEvaluationRuleRequest == null)
+            if (unstableCreateLlmAsJudgeEvaluationRuleRequest == null && unstableCreateCodeEvaluationRuleRequest == null && unstableCreateEvaluationRuleWithEvaluatorsRequest == null)
             {
                 try
                 {
@@ -113,7 +135,7 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (unstableCreateLlmAsJudgeEvaluationRuleRequest == null && unstableCreateCodeEvaluationRuleRequest == null)
+            if (unstableCreateLlmAsJudgeEvaluationRuleRequest == null && unstableCreateCodeEvaluationRuleRequest == null && unstableCreateEvaluationRuleWithEvaluatorsRequest == null)
             {
                 try
                 {
@@ -130,10 +152,29 @@ namespace Langfuse.JsonConverters
                 }
             }
 
+            if (unstableCreateLlmAsJudgeEvaluationRuleRequest == null && unstableCreateCodeEvaluationRuleRequest == null && unstableCreateEvaluationRuleWithEvaluatorsRequest == null)
+            {
+                try
+                {
+
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.UnstableCreateEvaluationRuleWithEvaluatorsRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.UnstableCreateEvaluationRuleWithEvaluatorsRequest> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.UnstableCreateEvaluationRuleWithEvaluatorsRequest).Name}");
+                    unstableCreateEvaluationRuleWithEvaluatorsRequest = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                }
+                catch (global::System.Text.Json.JsonException)
+                {
+                }
+                catch (global::System.InvalidOperationException)
+                {
+                }
+            }
+
             var __value = new global::Langfuse.UnstableCreateEvaluationRuleRequest(
                 unstableCreateLlmAsJudgeEvaluationRuleRequest,
 
-                unstableCreateCodeEvaluationRuleRequest
+                unstableCreateCodeEvaluationRuleRequest,
+
+                unstableCreateEvaluationRuleWithEvaluatorsRequest
                 );
 
             return __value;
@@ -159,6 +200,12 @@ namespace Langfuse.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.UnstableCreateCodeEvaluationRuleRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.UnstableCreateCodeEvaluationRuleRequest?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.UnstableCreateCodeEvaluationRuleRequest).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.UnstableCreateCodeEvaluationRuleRequest!, typeInfo);
+            }
+            else if (value.IsUnstableCreateEvaluationRuleWithEvaluatorsRequest)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.UnstableCreateEvaluationRuleWithEvaluatorsRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.UnstableCreateEvaluationRuleWithEvaluatorsRequest?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.UnstableCreateEvaluationRuleWithEvaluatorsRequest).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UnstableCreateEvaluationRuleWithEvaluatorsRequest!, typeInfo);
             }
         }
     }

@@ -58,7 +58,7 @@ namespace Langfuse
         /// - if you change `target` for an LLM-as-judge rule, also send a compatible `filter` and `mapping` in the same request unless the existing ones are still valid for the new target<br/>
         /// - for `code` evaluator rules, omit `mapping`; Langfuse stores the fixed code runtime mapping automatically<br/>
         /// - if the resulting config is enabled, Langfuse re-validates that the selected evaluator can run<br/>
-        /// - if the update would move a non-active evaluation rule into the active state and the project already has 50 active evaluation rules, the API returns `409`<br/>
+        /// - if the update would move a non-active evaluation rule into the active state and the project already has 500 active evaluation rules, the API returns `409`<br/>
         /// Recovery guidance:<br/>
         /// - if an LLM-as-judge update fails with `missing_variable_mapping` or `invalid_variable_mapping` after changing `evaluator` or `target`, resend the request with a complete new `mapping`<br/>
         /// - if the update fails with `invalid_filter_value` after changing `target`, resend the request with a target-compatible `filter`
@@ -100,7 +100,7 @@ namespace Langfuse
         /// - if you change `target` for an LLM-as-judge rule, also send a compatible `filter` and `mapping` in the same request unless the existing ones are still valid for the new target<br/>
         /// - for `code` evaluator rules, omit `mapping`; Langfuse stores the fixed code runtime mapping automatically<br/>
         /// - if the resulting config is enabled, Langfuse re-validates that the selected evaluator can run<br/>
-        /// - if the update would move a non-active evaluation rule into the active state and the project already has 50 active evaluation rules, the API returns `409`<br/>
+        /// - if the update would move a non-active evaluation rule into the active state and the project already has 500 active evaluation rules, the API returns `409`<br/>
         /// Recovery guidance:<br/>
         /// - if an LLM-as-judge update fails with `missing_variable_mapping` or `invalid_variable_mapping` after changing `evaluator` or `target`, resend the request with a complete new `mapping`<br/>
         /// - if the update fails with `invalid_filter_value` after changing `target`, resend the request with a target-compatible `filter`
@@ -785,7 +785,7 @@ namespace Langfuse
         /// - if you change `target` for an LLM-as-judge rule, also send a compatible `filter` and `mapping` in the same request unless the existing ones are still valid for the new target<br/>
         /// - for `code` evaluator rules, omit `mapping`; Langfuse stores the fixed code runtime mapping automatically<br/>
         /// - if the resulting config is enabled, Langfuse re-validates that the selected evaluator can run<br/>
-        /// - if the update would move a non-active evaluation rule into the active state and the project already has 50 active evaluation rules, the API returns `409`<br/>
+        /// - if the update would move a non-active evaluation rule into the active state and the project already has 500 active evaluation rules, the API returns `409`<br/>
         /// Recovery guidance:<br/>
         /// - if an LLM-as-judge update fails with `missing_variable_mapping` or `invalid_variable_mapping` after changing `evaluator` or `target`, resend the request with a complete new `mapping`<br/>
         /// - if the update fails with `invalid_filter_value` after changing `target`, resend the request with a target-compatible `filter`
@@ -794,9 +794,14 @@ namespace Langfuse
         /// <param name="name">
         /// Updated deployment name.
         /// </param>
+        /// <param name="evaluators">
+        /// Full replacement of the rule's evaluator assignments: entries that are<br/>
+        /// not listed are detached.<br/>
+        /// Mutually exclusive with the deprecated `evaluator` and `mapping` fields.
+        /// </param>
         /// <param name="evaluator">
         /// Evaluator family reference used when updating an evaluation rule.<br/>
-        /// `name` and `scope` identify the evaluator family in the authenticated project context.<br/>
+        /// `name` identifies the evaluator family in the authenticated project context.<br/>
         /// A rule's evaluator type cannot be changed, so this reference does not accept a `type`; the family must match the rule's current evaluator type.
         /// </param>
         /// <param name="target">
@@ -828,6 +833,7 @@ namespace Langfuse
         public async global::System.Threading.Tasks.Task<global::Langfuse.UnstableEvaluationRule> UnstableEvaluationRulesUpdateAsync(
             string evaluationRuleId,
             string? name = default,
+            global::System.Collections.Generic.IList<global::Langfuse.UnstableCreateEvaluationRuleEvaluatorAssignment>? evaluators = default,
             global::Langfuse.UnstableEvaluationRuleEvaluatorReference? evaluator = default,
             global::Langfuse.UnstableEvaluationRuleTarget? target = default,
             bool? enabled = default,
@@ -840,6 +846,7 @@ namespace Langfuse
             var __request = new global::Langfuse.UnstableUpdateEvaluationRuleRequest
             {
                 Name = name,
+                Evaluators = evaluators,
                 Evaluator = evaluator,
                 Target = target,
                 Enabled = enabled,

@@ -34,8 +34,8 @@ namespace Langfuse
 
         /// <summary>
         /// Resolved evaluator currently used by the evaluation rule.<br/>
-        /// `id` is the exact active evaluator version.<br/>
-        /// `name`, `scope`, and `type` identify the evaluator family conceptually.
+        /// `id` identifies the evaluator family. Evaluation runs automatically use<br/>
+        /// the latest available evaluator version.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluator")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -112,8 +112,8 @@ namespace Langfuse
         /// </param>
         /// <param name="evaluator">
         /// Resolved evaluator currently used by the evaluation rule.<br/>
-        /// `id` is the exact active evaluator version.<br/>
-        /// `name`, `scope`, and `type` identify the evaluator family conceptually.
+        /// `id` identifies the evaluator family. Evaluation runs automatically use<br/>
+        /// the latest available evaluator version.
         /// </param>
         /// <param name="enabled">
         /// Desired enabled state configured by the client.

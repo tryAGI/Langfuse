@@ -48,7 +48,7 @@ namespace Langfuse
 
         /// <summary>
         /// Legacy trace- or dataset-level evaluation rule returned by list and get for migration.<br/>
-        /// This resource is read-only through the unstable public API. Its mapping preserves the trace, dataset item, or named observation that each evaluator variable previously read from. Its filters use the persisted legacy filter format so migration clients can read the configuration without losing information.
+        /// This resource is read-only through the unstable public API. Its mapping preserves the trace, dataset item, or named observation selected for each evaluator variable.
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.UnstableLegacyEvaluationRule? UnstableLegacyEvaluationRule { get; init; }

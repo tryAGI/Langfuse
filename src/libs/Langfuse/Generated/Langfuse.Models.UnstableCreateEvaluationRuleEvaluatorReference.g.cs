@@ -4,23 +4,24 @@
 namespace Langfuse
 {
     /// <summary>
-    /// LLM-as-judge evaluator family reference used when creating an evaluation rule.
+    /// 
     /// </summary>
-    public sealed partial class UnstableLlmAsJudgeEvaluationRuleEvaluatorReference
+    public sealed partial class UnstableCreateEvaluationRuleEvaluatorReference
     {
         /// <summary>
-        /// Evaluator family name.
+        /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
 
         /// <summary>
-        /// 
+        /// The evaluator engine type.<br/>
+        /// The unstable public API supports LLM-as-a-judge and code evaluators.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.UnstableLlmAsJudgeEvaluatorTypeJsonConverter))]
-        public global::Langfuse.UnstableLlmAsJudgeEvaluatorType? Type { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.UnstableEvaluatorTypeJsonConverter))]
+        public global::Langfuse.UnstableEvaluatorType? Type { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -29,27 +30,28 @@ namespace Langfuse
         public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UnstableLlmAsJudgeEvaluationRuleEvaluatorReference" /> class.
+        /// Initializes a new instance of the <see cref="UnstableCreateEvaluationRuleEvaluatorReference" /> class.
         /// </summary>
-        /// <param name="name">
-        /// Evaluator family name.
+        /// <param name="name"></param>
+        /// <param name="type">
+        /// The evaluator engine type.<br/>
+        /// The unstable public API supports LLM-as-a-judge and code evaluators.
         /// </param>
-        /// <param name="type"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
-        public UnstableLlmAsJudgeEvaluationRuleEvaluatorReference(
+        public UnstableCreateEvaluationRuleEvaluatorReference(
             string name,
-            global::Langfuse.UnstableLlmAsJudgeEvaluatorType? type)
+            global::Langfuse.UnstableEvaluatorType? type)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Type = type;
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UnstableLlmAsJudgeEvaluationRuleEvaluatorReference" /> class.
+        /// Initializes a new instance of the <see cref="UnstableCreateEvaluationRuleEvaluatorReference" /> class.
         /// </summary>
-        public UnstableLlmAsJudgeEvaluationRuleEvaluatorReference()
+        public UnstableCreateEvaluationRuleEvaluatorReference()
         {
         }
 
