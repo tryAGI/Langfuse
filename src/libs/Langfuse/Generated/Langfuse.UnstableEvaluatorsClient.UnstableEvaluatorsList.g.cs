@@ -47,8 +47,7 @@ namespace Langfuse
         /// List the evaluators available to the authenticated project.<br/>
         /// Important behavior:<br/>
         /// - This endpoint returns the latest version of each available evaluator.<br/>
-        /// - Results can include evaluators from your project and Langfuse-managed evaluators.<br/>
-        /// - If the same evaluator name exists in both places, both are returned as separate items with different `scope` values.
+        /// - Every evaluator is owned by the authenticated project.
         /// </summary>
         /// <param name="page"></param>
         /// <param name="limit"></param>
@@ -74,8 +73,7 @@ namespace Langfuse
         /// List the evaluators available to the authenticated project.<br/>
         /// Important behavior:<br/>
         /// - This endpoint returns the latest version of each available evaluator.<br/>
-        /// - Results can include evaluators from your project and Langfuse-managed evaluators.<br/>
-        /// - If the same evaluator name exists in both places, both are returned as separate items with different `scope` values.
+        /// - Every evaluator is owned by the authenticated project.
         /// </summary>
         /// <param name="page"></param>
         /// <param name="limit"></param>

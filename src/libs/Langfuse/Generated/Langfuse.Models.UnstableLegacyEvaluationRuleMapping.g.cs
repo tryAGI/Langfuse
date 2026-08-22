@@ -9,7 +9,7 @@ namespace Langfuse
     public sealed partial class UnstableLegacyEvaluationRuleMapping
     {
         /// <summary>
-        /// Evaluator prompt variable populated by this mapping.
+        /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("variable")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -30,14 +30,14 @@ namespace Langfuse
         public string? ObjectName { get; set; }
 
         /// <summary>
-        /// Stored field selected from the trace, dataset item, or observation.
+        /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("source")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Source { get; set; }
 
         /// <summary>
-        /// Optional JSONPath selector applied to the selected field.
+        /// 
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("jsonPath")]
         public string? JsonPath { get; set; }
@@ -51,19 +51,13 @@ namespace Langfuse
         /// <summary>
         /// Initializes a new instance of the <see cref="UnstableLegacyEvaluationRuleMapping" /> class.
         /// </summary>
-        /// <param name="variable">
-        /// Evaluator prompt variable populated by this mapping.
-        /// </param>
+        /// <param name="variable"></param>
         /// <param name="langfuseObject"></param>
-        /// <param name="source">
-        /// Stored field selected from the trace, dataset item, or observation.
-        /// </param>
+        /// <param name="source"></param>
         /// <param name="objectName">
         /// Observation name to match, or `null` when `langfuseObject` is `trace` or `dataset_item`.
         /// </param>
-        /// <param name="jsonPath">
-        /// Optional JSONPath selector applied to the selected field.
-        /// </param>
+        /// <param name="jsonPath"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif

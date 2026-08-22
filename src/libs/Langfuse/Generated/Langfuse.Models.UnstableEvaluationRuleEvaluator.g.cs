@@ -5,8 +5,8 @@ namespace Langfuse
 {
     /// <summary>
     /// Resolved evaluator currently used by the evaluation rule.<br/>
-    /// `id` is the exact active evaluator version.<br/>
-    /// `name`, `scope`, and `type` identify the evaluator family conceptually.
+    /// `id` identifies the evaluator family. Evaluation runs automatically use<br/>
+    /// the latest available evaluator version.
     /// </summary>
     public sealed partial class UnstableEvaluationRuleEvaluator
     {
@@ -23,16 +23,6 @@ namespace Langfuse
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Name { get; set; }
-
-        /// <summary>
-        /// Where an evaluator comes from.<br/>
-        /// - `project`: created in your project<br/>
-        /// - `managed`: provided by Langfuse
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("scope")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.UnstableEvaluatorScopeJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Langfuse.UnstableEvaluatorScope Scope { get; set; }
 
         /// <summary>
         /// The evaluator engine type.<br/>
@@ -58,11 +48,6 @@ namespace Langfuse
         /// <param name="name">
         /// Evaluator family name.
         /// </param>
-        /// <param name="scope">
-        /// Where an evaluator comes from.<br/>
-        /// - `project`: created in your project<br/>
-        /// - `managed`: provided by Langfuse
-        /// </param>
         /// <param name="type">
         /// The evaluator engine type.<br/>
         /// The unstable public API supports LLM-as-a-judge and code evaluators.
@@ -73,12 +58,10 @@ namespace Langfuse
         public UnstableEvaluationRuleEvaluator(
             string id,
             string name,
-            global::Langfuse.UnstableEvaluatorScope scope,
             global::Langfuse.UnstableEvaluatorType type)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Scope = scope;
             this.Type = type;
         }
 

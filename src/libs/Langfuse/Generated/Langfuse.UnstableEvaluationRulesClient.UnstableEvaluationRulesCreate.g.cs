@@ -48,17 +48,19 @@ namespace Langfuse
         /// Key rules:<br/>
         /// - `name` must be unique within the project for public evaluation rules<br/>
         /// - `target` must be `observation` or `experiment`<br/>
-        /// - `evaluator.name` + `evaluator.scope` must identify an existing evaluator family returned by the evaluator endpoints<br/>
+        /// - provide either the compatibility `evaluator` field or the new `evaluators` array, never both<br/>
+        /// - each evaluator `name` + `type` must identify an existing evaluator family returned by the evaluator endpoints<br/>
         /// - Langfuse resolves that family to its latest version before saving the evaluation rule<br/>
         /// - for `target=experiment`, use dataset `id` values from `GET /api/public/v2/datasets` when filtering by `datasetId`<br/>
-        /// - for `llm_as_judge` evaluators, every evaluator prompt variable must be mapped exactly once<br/>
+        /// - an omitted LLM-as-judge assignment mapping inherits the evaluator version's default mapping<br/>
+        /// - the effective mapping must map every evaluator prompt variable exactly once<br/>
         /// - for `code` evaluators, Langfuse uses the fixed code runtime mapping; omit `mapping` in create and update requests<br/>
         /// - for user-provided `llm_as_judge` mappings, `expected_output` and `experiment_item_metadata` are only valid for `target=experiment`<br/>
         /// - if `enabled=true`, Langfuse validates that the referenced evaluator can currently run<br/>
-        /// - at most 50 evaluation rules can be effectively active in one project at the same time<br/>
+        /// - at most 500 evaluation rules can be effectively active in one project at the same time (enforced identically by the API, the MCP tools, and the app)<br/>
         /// If an evaluation rule with the same `name` already exists in the project, the API returns `409`.<br/>
         /// In that case, update the existing resource with `PATCH /api/public/unstable/evaluation-rules/{evaluationRuleId}` instead of creating a second one.<br/>
-        /// If enabling this resource would exceed the 50-active limit, the API also returns `409`.<br/>
+        /// If enabling this resource would exceed the 500-active limit, the API also returns `409`.<br/>
         /// In that case, disable or pause another active evaluation rule before enabling a new one.<br/>
         /// Current scope:<br/>
         /// - evaluation rules are live-ingestion rules only<br/>
@@ -98,17 +100,19 @@ namespace Langfuse
         /// Key rules:<br/>
         /// - `name` must be unique within the project for public evaluation rules<br/>
         /// - `target` must be `observation` or `experiment`<br/>
-        /// - `evaluator.name` + `evaluator.scope` must identify an existing evaluator family returned by the evaluator endpoints<br/>
+        /// - provide either the compatibility `evaluator` field or the new `evaluators` array, never both<br/>
+        /// - each evaluator `name` + `type` must identify an existing evaluator family returned by the evaluator endpoints<br/>
         /// - Langfuse resolves that family to its latest version before saving the evaluation rule<br/>
         /// - for `target=experiment`, use dataset `id` values from `GET /api/public/v2/datasets` when filtering by `datasetId`<br/>
-        /// - for `llm_as_judge` evaluators, every evaluator prompt variable must be mapped exactly once<br/>
+        /// - an omitted LLM-as-judge assignment mapping inherits the evaluator version's default mapping<br/>
+        /// - the effective mapping must map every evaluator prompt variable exactly once<br/>
         /// - for `code` evaluators, Langfuse uses the fixed code runtime mapping; omit `mapping` in create and update requests<br/>
         /// - for user-provided `llm_as_judge` mappings, `expected_output` and `experiment_item_metadata` are only valid for `target=experiment`<br/>
         /// - if `enabled=true`, Langfuse validates that the referenced evaluator can currently run<br/>
-        /// - at most 50 evaluation rules can be effectively active in one project at the same time<br/>
+        /// - at most 500 evaluation rules can be effectively active in one project at the same time (enforced identically by the API, the MCP tools, and the app)<br/>
         /// If an evaluation rule with the same `name` already exists in the project, the API returns `409`.<br/>
         /// In that case, update the existing resource with `PATCH /api/public/unstable/evaluation-rules/{evaluationRuleId}` instead of creating a second one.<br/>
-        /// If enabling this resource would exceed the 50-active limit, the API also returns `409`.<br/>
+        /// If enabling this resource would exceed the 500-active limit, the API also returns `409`.<br/>
         /// In that case, disable or pause another active evaluation rule before enabling a new one.<br/>
         /// Current scope:<br/>
         /// - evaluation rules are live-ingestion rules only<br/>
@@ -825,17 +829,19 @@ namespace Langfuse
         /// Key rules:<br/>
         /// - `name` must be unique within the project for public evaluation rules<br/>
         /// - `target` must be `observation` or `experiment`<br/>
-        /// - `evaluator.name` + `evaluator.scope` must identify an existing evaluator family returned by the evaluator endpoints<br/>
+        /// - provide either the compatibility `evaluator` field or the new `evaluators` array, never both<br/>
+        /// - each evaluator `name` + `type` must identify an existing evaluator family returned by the evaluator endpoints<br/>
         /// - Langfuse resolves that family to its latest version before saving the evaluation rule<br/>
         /// - for `target=experiment`, use dataset `id` values from `GET /api/public/v2/datasets` when filtering by `datasetId`<br/>
-        /// - for `llm_as_judge` evaluators, every evaluator prompt variable must be mapped exactly once<br/>
+        /// - an omitted LLM-as-judge assignment mapping inherits the evaluator version's default mapping<br/>
+        /// - the effective mapping must map every evaluator prompt variable exactly once<br/>
         /// - for `code` evaluators, Langfuse uses the fixed code runtime mapping; omit `mapping` in create and update requests<br/>
         /// - for user-provided `llm_as_judge` mappings, `expected_output` and `experiment_item_metadata` are only valid for `target=experiment`<br/>
         /// - if `enabled=true`, Langfuse validates that the referenced evaluator can currently run<br/>
-        /// - at most 50 evaluation rules can be effectively active in one project at the same time<br/>
+        /// - at most 500 evaluation rules can be effectively active in one project at the same time (enforced identically by the API, the MCP tools, and the app)<br/>
         /// If an evaluation rule with the same `name` already exists in the project, the API returns `409`.<br/>
         /// In that case, update the existing resource with `PATCH /api/public/unstable/evaluation-rules/{evaluationRuleId}` instead of creating a second one.<br/>
-        /// If enabling this resource would exceed the 50-active limit, the API also returns `409`.<br/>
+        /// If enabling this resource would exceed the 500-active limit, the API also returns `409`.<br/>
         /// In that case, disable or pause another active evaluation rule before enabling a new one.<br/>
         /// Current scope:<br/>
         /// - evaluation rules are live-ingestion rules only<br/>

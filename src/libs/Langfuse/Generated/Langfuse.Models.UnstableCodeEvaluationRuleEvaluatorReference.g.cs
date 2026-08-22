@@ -16,16 +16,6 @@ namespace Langfuse
         public required string Name { get; set; }
 
         /// <summary>
-        /// Where an evaluator comes from.<br/>
-        /// - `project`: created in your project<br/>
-        /// - `managed`: provided by Langfuse
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("scope")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.UnstableEvaluatorScopeJsonConverter))]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Langfuse.UnstableEvaluatorScope Scope { get; set; }
-
-        /// <summary>
         /// Must be `code`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
@@ -44,11 +34,6 @@ namespace Langfuse
         /// <param name="name">
         /// Evaluator family name.
         /// </param>
-        /// <param name="scope">
-        /// Where an evaluator comes from.<br/>
-        /// - `project`: created in your project<br/>
-        /// - `managed`: provided by Langfuse
-        /// </param>
         /// <param name="type">
         /// Must be `code`.
         /// </param>
@@ -57,11 +42,9 @@ namespace Langfuse
 #endif
         public UnstableCodeEvaluationRuleEvaluatorReference(
             string name,
-            global::Langfuse.UnstableEvaluatorScope scope,
             string type)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
-            this.Scope = scope;
             this.Type = type ?? throw new global::System.ArgumentNullException(nameof(type));
         }
 

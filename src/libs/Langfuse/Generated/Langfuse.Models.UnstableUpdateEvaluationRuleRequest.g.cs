@@ -9,6 +9,8 @@ namespace Langfuse
     /// An empty body is rejected.<br/>
     /// Practical guidance:<br/>
     /// - If you only want to rename the rule or change sampling, send just those fields.<br/>
+    /// - To add, remove, or remap evaluators, send `evaluators`. It replaces the whole assignment set, so include every evaluator the rule should keep.<br/>
+    /// - `evaluators` cannot be combined with the deprecated `evaluator`/`mapping` pair, which only ever addressed the first assignment.<br/>
     /// - If you change to an LLM-as-judge `evaluator`, send a fresh `mapping` unless you are certain the existing mapping still matches the evaluator variables.<br/>
     /// - If you change `target` for an LLM-as-judge rule, usually send both `filter` and `mapping` in the same request.<br/>
     /// - For code evaluator rules, omit `mapping`; Langfuse stores the fixed code runtime mapping automatically.<br/>
@@ -23,8 +25,16 @@ namespace Langfuse
         public string? Name { get; set; }
 
         /// <summary>
+        /// Full replacement of the rule's evaluator assignments: entries that are<br/>
+        /// not listed are detached.<br/>
+        /// Mutually exclusive with the deprecated `evaluator` and `mapping` fields.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("evaluators")]
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableCreateEvaluationRuleEvaluatorAssignment>? Evaluators { get; set; }
+
+        /// <summary>
         /// Evaluator family reference used when updating an evaluation rule.<br/>
-        /// `name` and `scope` identify the evaluator family in the authenticated project context.<br/>
+        /// `name` identifies the evaluator family in the authenticated project context.<br/>
         /// A rule's evaluator type cannot be changed, so this reference does not accept a `type`; the family must match the rule's current evaluator type.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("evaluator")]
@@ -81,9 +91,14 @@ namespace Langfuse
         /// <param name="name">
         /// Updated deployment name.
         /// </param>
+        /// <param name="evaluators">
+        /// Full replacement of the rule's evaluator assignments: entries that are<br/>
+        /// not listed are detached.<br/>
+        /// Mutually exclusive with the deprecated `evaluator` and `mapping` fields.
+        /// </param>
         /// <param name="evaluator">
         /// Evaluator family reference used when updating an evaluation rule.<br/>
-        /// `name` and `scope` identify the evaluator family in the authenticated project context.<br/>
+        /// `name` identifies the evaluator family in the authenticated project context.<br/>
         /// A rule's evaluator type cannot be changed, so this reference does not accept a `type`; the family must match the rule's current evaluator type.
         /// </param>
         /// <param name="target">
@@ -114,6 +129,7 @@ namespace Langfuse
 #endif
         public UnstableUpdateEvaluationRuleRequest(
             string? name,
+            global::System.Collections.Generic.IList<global::Langfuse.UnstableCreateEvaluationRuleEvaluatorAssignment>? evaluators,
             global::Langfuse.UnstableEvaluationRuleEvaluatorReference? evaluator,
             global::Langfuse.UnstableEvaluationRuleTarget? target,
             bool? enabled,
@@ -122,6 +138,7 @@ namespace Langfuse
             global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleMapping>? mapping)
         {
             this.Name = name;
+            this.Evaluators = evaluators;
             this.Evaluator = evaluator;
             this.Target = target;
             this.Enabled = enabled;

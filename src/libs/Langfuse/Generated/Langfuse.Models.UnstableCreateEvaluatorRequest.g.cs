@@ -7,7 +7,7 @@ namespace Langfuse
     /// <summary>
     /// Request body for creating an evaluator.<br/>
     /// If the same `name` already exists in your project, Langfuse creates the next version and returns it.<br/>
-    /// Existing evaluation rules in the same project are then moved to that new latest version automatically.<br/>
+    /// Existing evaluation rules automatically use the latest evaluator version.<br/>
     /// If `type` is omitted, Langfuse defaults it to `llm_as_judge` for backwards compatibility.
     /// </summary>
     public readonly partial struct UnstableCreateEvaluatorRequest : global::System.IEquatable<UnstableCreateEvaluatorRequest>

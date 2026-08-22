@@ -12,12 +12,13 @@ namespace Langfuse
         /// Naming behavior:<br/>
         /// - If this is a new evaluator name in your project, Langfuse creates version `1`.<br/>
         /// - If the name already exists in your project, Langfuse creates the next version and returns it.<br/>
-        /// - When a new project version is created, existing evaluation rules in that project automatically move to the newest version for that evaluator name.<br/>
+        /// - The evaluator `id` remains stable across versions.<br/>
+        /// - Existing evaluation rules automatically use the latest evaluator version; no rule update is required.<br/>
         /// Recommended workflow:<br/>
         /// 1. Create the evaluator.<br/>
         /// 2. Read the returned `variables` array.<br/>
         /// 3. Read the returned `outputDefinition.dataType` so the client knows whether future scores will be numeric, boolean, or categorical.<br/>
-        /// 4. Create one or more evaluation rules that reference the returned evaluator family using `name` and `scope`.<br/>
+        /// 4. Create one or more evaluation rules that reference the returned evaluator family using `name` and `type`.<br/>
         /// Code evaluator validation:<br/>
         /// - At creation, Langfuse only validates the request shape<br/>
         /// - The `sourceCode` itself is not executed here. It is first run (preflight-tested against a sample observation) when you link the evaluator to an evaluation rule, so runtime errors in the code surface at evaluation-rule creation, not at evaluator creation.<br/>
@@ -46,12 +47,13 @@ namespace Langfuse
         /// Naming behavior:<br/>
         /// - If this is a new evaluator name in your project, Langfuse creates version `1`.<br/>
         /// - If the name already exists in your project, Langfuse creates the next version and returns it.<br/>
-        /// - When a new project version is created, existing evaluation rules in that project automatically move to the newest version for that evaluator name.<br/>
+        /// - The evaluator `id` remains stable across versions.<br/>
+        /// - Existing evaluation rules automatically use the latest evaluator version; no rule update is required.<br/>
         /// Recommended workflow:<br/>
         /// 1. Create the evaluator.<br/>
         /// 2. Read the returned `variables` array.<br/>
         /// 3. Read the returned `outputDefinition.dataType` so the client knows whether future scores will be numeric, boolean, or categorical.<br/>
-        /// 4. Create one or more evaluation rules that reference the returned evaluator family using `name` and `scope`.<br/>
+        /// 4. Create one or more evaluation rules that reference the returned evaluator family using `name` and `type`.<br/>
         /// Code evaluator validation:<br/>
         /// - At creation, Langfuse only validates the request shape<br/>
         /// - The `sourceCode` itself is not executed here. It is first run (preflight-tested against a sample observation) when you link the evaluator to an evaluation rule, so runtime errors in the code surface at evaluation-rule creation, not at evaluator creation.<br/>
@@ -80,12 +82,13 @@ namespace Langfuse
         /// Naming behavior:<br/>
         /// - If this is a new evaluator name in your project, Langfuse creates version `1`.<br/>
         /// - If the name already exists in your project, Langfuse creates the next version and returns it.<br/>
-        /// - When a new project version is created, existing evaluation rules in that project automatically move to the newest version for that evaluator name.<br/>
+        /// - The evaluator `id` remains stable across versions.<br/>
+        /// - Existing evaluation rules automatically use the latest evaluator version; no rule update is required.<br/>
         /// Recommended workflow:<br/>
         /// 1. Create the evaluator.<br/>
         /// 2. Read the returned `variables` array.<br/>
         /// 3. Read the returned `outputDefinition.dataType` so the client knows whether future scores will be numeric, boolean, or categorical.<br/>
-        /// 4. Create one or more evaluation rules that reference the returned evaluator family using `name` and `scope`.<br/>
+        /// 4. Create one or more evaluation rules that reference the returned evaluator family using `name` and `type`.<br/>
         /// Code evaluator validation:<br/>
         /// - At creation, Langfuse only validates the request shape<br/>
         /// - The `sourceCode` itself is not executed here. It is first run (preflight-tested against a sample observation) when you link the evaluator to an evaluation rule, so runtime errors in the code surface at evaluation-rule creation, not at evaluator creation.<br/>

@@ -28,6 +28,7 @@ namespace Langfuse
         /// - `dataType` is required.<br/>
         /// - Do not send `version`; that is an internal storage detail and is not part of the public request contract.<br/>
         /// - For `NUMERIC` and `BOOLEAN`, provide `reasoning.description` and `score.description`.<br/>
+        /// - For `NUMERIC`, `score.minValue` and `score.maxValue` optionally define inclusive bounds. If both are set, `minValue` must not exceed `maxValue`.<br/>
         /// - For `CATEGORICAL`, also provide `score.categories` and `score.shouldAllowMultipleMatches`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("outputDefinition")]
@@ -46,6 +47,12 @@ namespace Langfuse
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("modelConfig")]
         public global::Langfuse.UnstableEvaluatorModelConfig? ModelConfig { get; set; }
+
+        /// <summary>
+        /// Optional default variable mapping inherited by rule assignments that do not provide an override.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mapping")]
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleMapping>? Mapping { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -68,6 +75,7 @@ namespace Langfuse
         /// - `dataType` is required.<br/>
         /// - Do not send `version`; that is an internal storage detail and is not part of the public request contract.<br/>
         /// - For `NUMERIC` and `BOOLEAN`, provide `reasoning.description` and `score.description`.<br/>
+        /// - For `NUMERIC`, `score.minValue` and `score.maxValue` optionally define inclusive bounds. If both are set, `minValue` must not exceed `maxValue`.<br/>
         /// - For `CATEGORICAL`, also provide `score.categories` and `score.shouldAllowMultipleMatches`.
         /// </param>
         /// <param name="modelConfig">
@@ -79,6 +87,9 @@ namespace Langfuse
         /// Recovery guidance:<br/>
         /// - If evaluator creation returns `422` with `code=evaluator_preflight_failed`, either provide a valid explicit `modelConfig` here or configure the project's default evaluation model, then retry the same request.
         /// </param>
+        /// <param name="mapping">
+        /// Optional default variable mapping inherited by rule assignments that do not provide an override.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -86,12 +97,14 @@ namespace Langfuse
             string name,
             string prompt,
             global::Langfuse.UnstableEvaluatorOutputDefinition outputDefinition,
-            global::Langfuse.UnstableEvaluatorModelConfig? modelConfig)
+            global::Langfuse.UnstableEvaluatorModelConfig? modelConfig,
+            global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleMapping>? mapping)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Prompt = prompt ?? throw new global::System.ArgumentNullException(nameof(prompt));
             this.OutputDefinition = outputDefinition;
             this.ModelConfig = modelConfig;
+            this.Mapping = mapping;
         }
 
         /// <summary>

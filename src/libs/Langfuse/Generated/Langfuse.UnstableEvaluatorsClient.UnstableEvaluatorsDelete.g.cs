@@ -44,9 +44,8 @@ namespace Langfuse
         /// <summary>
         /// Delete an evaluator.<br/>
         /// Important behavior:<br/>
-        /// - This deletes the evaluator including all of its stored versions; `evaluatorId` may reference any version.<br/>
-        /// - The API returns `409` while evaluation rules still reference the evaluator. Delete those evaluation rules first.<br/>
-        /// - Langfuse-managed evaluators (`scope=managed`) cannot be deleted; the API returns `403`.<br/>
+        /// - This deletes the evaluator including all of its stored versions.<br/>
+        /// - Evaluation rule assignments referencing the evaluator are also deleted.<br/>
         /// - Scores already produced by the evaluator are not deleted.
         /// </summary>
         /// <param name="evaluatorId"></param>
@@ -69,9 +68,8 @@ namespace Langfuse
         /// <summary>
         /// Delete an evaluator.<br/>
         /// Important behavior:<br/>
-        /// - This deletes the evaluator including all of its stored versions; `evaluatorId` may reference any version.<br/>
-        /// - The API returns `409` while evaluation rules still reference the evaluator. Delete those evaluation rules first.<br/>
-        /// - Langfuse-managed evaluators (`scope=managed`) cannot be deleted; the API returns `403`.<br/>
+        /// - This deletes the evaluator including all of its stored versions.<br/>
+        /// - Evaluation rule assignments referencing the evaluator are also deleted.<br/>
         /// - Scores already produced by the evaluator are not deleted.
         /// </summary>
         /// <param name="evaluatorId"></param>
@@ -514,43 +512,6 @@ namespace Langfuse
                                     innerException: __exception_405,
                                     responseBody: __content_405,
                                     responseObject: __value_405,
-                                    responseHeaders: global::System.Linq.Enumerable.ToDictionary(
-                                        __response.Headers,
-                                        h => h.Key,
-                                        h => h.Value));
-                            }
-                            // 
-                            if ((int)__response.StatusCode == 409)
-                            {
-                                string? __content_409 = null;
-                                global::System.Exception? __exception_409 = null;
-                                global::Langfuse.UnstablePublicApiError? __value_409 = null;
-                                try
-                                {
-                                    if (__effectiveReadResponseAsString)
-                                    {
-                                        __content_409 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_409 = global::Langfuse.UnstablePublicApiError.FromJson(__content_409, JsonSerializerContext);
-                                    }
-                                    else
-                                    {
-                                        __content_409 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-
-                                        __value_409 = global::Langfuse.UnstablePublicApiError.FromJson(__content_409, JsonSerializerContext);
-                                    }
-                                }
-                                catch (global::System.Exception __ex)
-                                {
-                                    __exception_409 = __ex;
-                                }
-
-
-                                throw global::Langfuse.ApiException<global::Langfuse.UnstablePublicApiError>.Create(
-                                    statusCode: __response.StatusCode,
-                                    message: __content_409 ?? __response.ReasonPhrase ?? string.Empty,
-                                    innerException: __exception_409,
-                                    responseBody: __content_409,
-                                    responseObject: __value_409,
                                     responseHeaders: global::System.Linq.Enumerable.ToDictionary(
                                         __response.Headers,
                                         h => h.Key,

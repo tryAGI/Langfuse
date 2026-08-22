@@ -13,7 +13,8 @@ namespace Langfuse
     /// - `variables`: for LLM evaluators, use these exact names when building the evaluation-rule `mapping` array. LLM evaluators require every variable to be mapped. Code evaluators always expose the fixed runtime payload fields and Langfuse maps them automatically.<br/>
     /// Versioning behavior:<br/>
     /// - `GET /evaluators` returns the latest version of each available evaluator.<br/>
-    /// - `GET /evaluators/{id}` can return an older version.<br/>
+    /// - `GET /evaluators/{id}` returns the latest version.<br/>
+    /// - `id` identifies the evaluator family and remains stable when a new version is created.<br/>
     /// - Evaluation rules always run against the latest version for the selected evaluator name within the same source (`project` or `managed`).
     /// </summary>
     public readonly partial struct UnstableEvaluator : global::System.IEquatable<UnstableEvaluator>
