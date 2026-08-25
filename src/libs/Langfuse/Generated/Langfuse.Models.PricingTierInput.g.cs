@@ -28,11 +28,10 @@ namespace Langfuse
         /// - Must have isDefault=true<br/>
         /// - Must have priority=0<br/>
         /// - Must have empty conditions array (conditions=[])<br/>
-        /// The default tier acts as a fallback when no conditional tiers match.
+        /// The default tier acts as a fallback when no conditional tiers match. Defaults to false when omitted.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isDefault")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required bool IsDefault { get; set; }
+        public bool? IsDefault { get; set; }
 
         /// <summary>
         /// Priority for tier matching evaluation. Lower numbers = higher priority (evaluated first).<br/>
@@ -51,7 +50,7 @@ namespace Langfuse
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("conditions")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::Langfuse.PricingTierCondition> Conditions { get; set; }
+        public required global::System.Collections.Generic.IList<global::Langfuse.PricingTierConditionInput> Conditions { get; set; }
 
         /// <summary>
         /// Prices (USD) by usage type for this tier. At least one price must be defined.<br/>
@@ -76,14 +75,6 @@ namespace Langfuse
         /// Name of the pricing tier for display and identification purposes.<br/>
         /// Must be unique within the model. Common patterns: "Standard", "High Volume Tier", "Extended Context"
         /// </param>
-        /// <param name="isDefault">
-        /// Whether this is the default tier. Exactly one tier per model must be marked as default.<br/>
-        /// Requirements for default tier:<br/>
-        /// - Must have isDefault=true<br/>
-        /// - Must have priority=0<br/>
-        /// - Must have empty conditions array (conditions=[])<br/>
-        /// The default tier acts as a fallback when no conditional tiers match.
-        /// </param>
         /// <param name="priority">
         /// Priority for tier matching evaluation. Lower numbers = higher priority (evaluated first).<br/>
         /// Must be unique within the model. The default tier must have priority=0.<br/>
@@ -101,15 +92,23 @@ namespace Langfuse
         /// Prices are in USD per unit (e.g., per token).<br/>
         /// Example: {"input": 0.000003, "output": 0.000015} represents $3 per million input tokens and $15 per million output tokens.
         /// </param>
+        /// <param name="isDefault">
+        /// Whether this is the default tier. Exactly one tier per model must be marked as default.<br/>
+        /// Requirements for default tier:<br/>
+        /// - Must have isDefault=true<br/>
+        /// - Must have priority=0<br/>
+        /// - Must have empty conditions array (conditions=[])<br/>
+        /// The default tier acts as a fallback when no conditional tiers match. Defaults to false when omitted.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PricingTierInput(
             string name,
-            bool isDefault,
             int priority,
-            global::System.Collections.Generic.IList<global::Langfuse.PricingTierCondition> conditions,
-            global::System.Collections.Generic.Dictionary<string, double> prices)
+            global::System.Collections.Generic.IList<global::Langfuse.PricingTierConditionInput> conditions,
+            global::System.Collections.Generic.Dictionary<string, double> prices,
+            bool? isDefault)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.IsDefault = isDefault;

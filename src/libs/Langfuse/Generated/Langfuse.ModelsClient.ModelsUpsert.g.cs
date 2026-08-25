@@ -7,7 +7,7 @@ namespace Langfuse
     {
 
 
-        private static readonly global::Langfuse.EndPointSecurityRequirement s_ModelsCreateSecurityRequirement0 =
+        private static readonly global::Langfuse.EndPointSecurityRequirement s_ModelsUpsertSecurityRequirement0 =
             new global::Langfuse.EndPointSecurityRequirement
             {
                 Authorizations = new global::Langfuse.EndPointAuthorizationRequirement[]
@@ -21,40 +21,45 @@ namespace Langfuse
                     },
                 },
             };
-        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_ModelsCreateSecurityRequirements =
+        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_ModelsUpsertSecurityRequirements =
             new global::Langfuse.EndPointSecurityRequirement[]
-            {                s_ModelsCreateSecurityRequirement0,
+            {                s_ModelsUpsertSecurityRequirement0,
             };
-        partial void PrepareModelsCreateArguments(
+        partial void PrepareModelsUpsertArguments(
             global::System.Net.Http.HttpClient httpClient,
+            ref string id,
             global::Langfuse.CreateModelRequest request);
-        partial void PrepareModelsCreateRequest(
+        partial void PrepareModelsUpsertRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
+            string id,
             global::Langfuse.CreateModelRequest request);
-        partial void ProcessModelsCreateResponse(
+        partial void ProcessModelsUpsertResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessModelsCreateResponseContent(
+        partial void ProcessModelsUpsertResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Create a model
+        /// Create or replace a project-owned model using its id. Built-in models cannot be modified.
         /// </summary>
+        /// <param name="id"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Langfuse.Model> ModelsCreateAsync(
+        public async global::System.Threading.Tasks.Task<global::Langfuse.Model> ModelsUpsertAsync(
+            string id,
 
             global::Langfuse.CreateModelRequest request,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await ModelsCreateAsResponseAsync(
+            var __response = await ModelsUpsertAsResponseAsync(
+                id: id,
 
                 request: request,
                 requestOptions: requestOptions,
@@ -64,13 +69,15 @@ namespace Langfuse
             return __response.Body;
         }
         /// <summary>
-        /// Create a model
+        /// Create or replace a project-owned model using its id. Built-in models cannot be modified.
         /// </summary>
+        /// <param name="id"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.Model>> ModelsCreateAsResponseAsync(
+        public async global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.Model>> ModelsUpsertAsResponseAsync(
+            string id,
 
             global::Langfuse.CreateModelRequest request,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
@@ -80,15 +87,16 @@ namespace Langfuse
 
             PrepareArguments(
                 client: HttpClient);
-            PrepareModelsCreateArguments(
+            PrepareModelsUpsertArguments(
                 httpClient: HttpClient,
+                id: ref id,
                 request: request);
 
 
             var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_ModelsCreateSecurityRequirements,
-                operationName: "ModelsCreateAsync");
+                securityRequirements: s_ModelsUpsertSecurityRequirements,
+                operationName: "ModelsUpsertAsync");
 
             using var __timeoutCancellationTokenSource = global::Langfuse.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -108,7 +116,7 @@ namespace Langfuse
             {
 
                             var __pathBuilder = new global::Langfuse.PathBuilder(
-                                path: "/api/public/models",
+                                path: $"/api/public/models/{id}",
                                 baseUri: HttpClient.BaseAddress);
                             var __path = __pathBuilder.ToString();
                 __path = global::Langfuse.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -116,7 +124,7 @@ namespace Langfuse
                     clientParameters: Options.QueryParameters,
                     requestParameters: requestOptions?.QueryParameters);
                 var __httpRequest = new global::System.Net.Http.HttpRequestMessage(
-                    method: global::System.Net.Http.HttpMethod.Post,
+                    method: global::System.Net.Http.HttpMethod.Put,
                     requestUri: new global::System.Uri(__path, global::System.UriKind.RelativeOrAbsolute));
 #if NET6_0_OR_GREATER
                 __httpRequest.Version = global::System.Net.HttpVersion.Version11;
@@ -153,9 +161,10 @@ namespace Langfuse
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareModelsCreateRequest(
+                PrepareModelsUpsertRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
+                    id: id!,
                     request: request);
 
                 return __httpRequest;
@@ -173,10 +182,10 @@ namespace Langfuse
                     await global::Langfuse.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ModelsCreate",
-                                methodName: "ModelsCreateAsync",
-                                pathTemplate: "\"/api/public/models\"",
-                                httpMethod: "POST",
+                                operationId: "ModelsUpsert",
+                                methodName: "ModelsUpsertAsync",
+                                pathTemplate: "$\"/api/public/models/{id}\"",
+                                httpMethod: "PUT",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -207,10 +216,10 @@ namespace Langfuse
                         await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ModelsCreate",
-                                methodName: "ModelsCreateAsync",
-                                pathTemplate: "\"/api/public/models\"",
-                                httpMethod: "POST",
+                                operationId: "ModelsUpsert",
+                                methodName: "ModelsUpsertAsync",
+                                pathTemplate: "$\"/api/public/models/{id}\"",
+                                httpMethod: "PUT",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: null,
@@ -248,10 +257,10 @@ namespace Langfuse
                         await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ModelsCreate",
-                                methodName: "ModelsCreateAsync",
-                                pathTemplate: "\"/api/public/models\"",
-                                httpMethod: "POST",
+                                operationId: "ModelsUpsert",
+                                methodName: "ModelsUpsertAsync",
+                                pathTemplate: "$\"/api/public/models/{id}\"",
+                                httpMethod: "PUT",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -288,7 +297,7 @@ namespace Langfuse
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessModelsCreateResponse(
+                ProcessModelsUpsertResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -296,10 +305,10 @@ namespace Langfuse
                     await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ModelsCreate",
-                                methodName: "ModelsCreateAsync",
-                                pathTemplate: "\"/api/public/models\"",
-                                httpMethod: "POST",
+                                operationId: "ModelsUpsert",
+                                methodName: "ModelsUpsertAsync",
+                                pathTemplate: "$\"/api/public/models/{id}\"",
+                                httpMethod: "PUT",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -318,10 +327,10 @@ namespace Langfuse
                     await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "ModelsCreate",
-                                methodName: "ModelsCreateAsync",
-                                pathTemplate: "\"/api/public/models\"",
-                                httpMethod: "POST",
+                                operationId: "ModelsUpsert",
+                                methodName: "ModelsUpsertAsync",
+                                pathTemplate: "$\"/api/public/models/{id}\"",
+                                httpMethod: "PUT",
                                 baseUri: BaseUri,
                                 request: __httpRequest!,
                                 response: __response,
@@ -533,7 +542,7 @@ namespace Langfuse
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessModelsCreateResponseContent(
+                                ProcessModelsUpsertResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -617,8 +626,9 @@ namespace Langfuse
             }
         }
         /// <summary>
-        /// Create a model
+        /// Create or replace a project-owned model using its id. Built-in models cannot be modified.
         /// </summary>
+        /// <param name="id"></param>
         /// <param name="modelName">
         /// Name of the model definition. If multiple with the same name exist, they are applied in the following order: (1) custom over built-in, (2) newest according to startTime where model.startTime&lt;observation.startTime
         /// </param>
@@ -664,7 +674,8 @@ namespace Langfuse
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Langfuse.Model> ModelsCreateAsync(
+        public async global::System.Threading.Tasks.Task<global::Langfuse.Model> ModelsUpsertAsync(
+            string id,
             string modelName,
             string matchPattern,
             global::Langfuse.ModelUsageUnit unit,
@@ -692,7 +703,8 @@ namespace Langfuse
                 TokenizerConfig = tokenizerConfig,
             };
 
-            return await ModelsCreateAsync(
+            return await ModelsUpsertAsync(
+                id: id,
                 request: __request,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken).ConfigureAwait(false);

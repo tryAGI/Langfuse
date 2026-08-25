@@ -5,32 +5,37 @@ namespace Langfuse
     public partial interface IModelsClient
     {
         /// <summary>
-        /// Create a model
+        /// Create or replace a project-owned model using its id. Built-in models cannot be modified.
         /// </summary>
+        /// <param name="id"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Langfuse.Model> ModelsCreateAsync(
+        global::System.Threading.Tasks.Task<global::Langfuse.Model> ModelsUpsertAsync(
+            string id,
 
             global::Langfuse.CreateModelRequest request,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Create a model
+        /// Create or replace a project-owned model using its id. Built-in models cannot be modified.
         /// </summary>
+        /// <param name="id"></param>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
-        global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.Model>> ModelsCreateAsResponseAsync(
+        global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.Model>> ModelsUpsertAsResponseAsync(
+            string id,
 
             global::Langfuse.CreateModelRequest request,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
-        /// Create a model
+        /// Create or replace a project-owned model using its id. Built-in models cannot be modified.
         /// </summary>
+        /// <param name="id"></param>
         /// <param name="modelName">
         /// Name of the model definition. If multiple with the same name exist, they are applied in the following order: (1) custom over built-in, (2) newest according to startTime where model.startTime&lt;observation.startTime
         /// </param>
@@ -76,7 +81,8 @@ namespace Langfuse
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
-        global::System.Threading.Tasks.Task<global::Langfuse.Model> ModelsCreateAsync(
+        global::System.Threading.Tasks.Task<global::Langfuse.Model> ModelsUpsertAsync(
+            string id,
             string modelName,
             string matchPattern,
             global::Langfuse.ModelUsageUnit unit,

@@ -147,8 +147,11 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PricingTierAttributeCondition))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PricingTierOperator), TypeInfoPropertyName = "PricingTierOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PricingTierAttributeSource), TypeInfoPropertyName = "PricingTierAttributeSource2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PricingTierConditionInput), TypeInfoPropertyName = "PricingTierConditionInput2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PricingTierUsageConditionInput))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.PricingTierCondition>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PricingTierInput))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.PricingTierConditionInput>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.MapValue), TypeInfoPropertyName = "MapValue2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(float))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreDataType), TypeInfoPropertyName = "ScoreDataType2")]
@@ -259,6 +262,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.MediaContentType), TypeInfoPropertyName = "MediaContentType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetMediaUploadUrlResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.MetricsV2Response))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ModelTokenizerId), TypeInfoPropertyName = "ModelTokenizerId2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PaginatedModels))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.Model>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateModelRequest))]
@@ -510,10 +514,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluationRuleFilterVariant10Type), TypeInfoPropertyName = "UnstableEvaluationRuleFilterVariant10Type2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetView), TypeInfoPropertyName = "UnstableDashboardWidgetView2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetViewWithLegacy), TypeInfoPropertyName = "UnstableDashboardWidgetViewWithLegacy2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetChartType), TypeInfoPropertyName = "UnstableDashboardWidgetChartType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetMetricAggregation), TypeInfoPropertyName = "UnstableDashboardWidgetMetricAggregation2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetDimension))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetMetric))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -526,6 +526,10 @@ namespace Langfuse
         Converters = new global::System.Type[]
         {
         })]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetChartType), TypeInfoPropertyName = "UnstableDashboardWidgetChartType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetMetricAggregation), TypeInfoPropertyName = "UnstableDashboardWidgetMetricAggregation2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetDimension))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetMetric))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetFilter))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetChartConfig))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetDefaultSort))]
@@ -683,6 +687,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PricingTierCondition?), TypeInfoPropertyName = "NullablePricingTierCondition2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PricingTierOperator?), TypeInfoPropertyName = "NullablePricingTierOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PricingTierAttributeSource?), TypeInfoPropertyName = "NullablePricingTierAttributeSource2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PricingTierConditionInput?), TypeInfoPropertyName = "NullablePricingTierConditionInput2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.MapValue?), TypeInfoPropertyName = "NullableMapValue2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(float?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreDataType?), TypeInfoPropertyName = "NullableScoreDataType2")]
@@ -714,6 +719,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UsageDetails?), TypeInfoPropertyName = "NullableUsageDetails2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.LlmAdapter?), TypeInfoPropertyName = "NullableLlmAdapter2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.MediaContentType?), TypeInfoPropertyName = "NullableMediaContentType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ModelTokenizerId?), TypeInfoPropertyName = "NullableModelTokenizerId2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.MembershipRole?), TypeInfoPropertyName = "NullableMembershipRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PromptType?), TypeInfoPropertyName = "NullablePromptType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreatePromptRequest?), TypeInfoPropertyName = "NullableCreatePromptRequest2")]
@@ -851,6 +857,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.DatasetRunItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.PricingTier>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.PricingTierCondition>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.PricingTierConditionInput>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.DatasetItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.Dataset>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.DatasetRun>))]
@@ -946,6 +953,7 @@ namespace Langfuse
             options.Converters.Add(new global::Langfuse.JsonConverters.ScoreV1JsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.CreateScoreValueJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.PricingTierConditionJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.PricingTierConditionInputJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.MapValueJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.IngestionUsageJsonConverter());
@@ -1208,6 +1216,10 @@ namespace Langfuse
                     || typeToConvert == typeof(global::Langfuse.MediaContentType)
 
                     || typeToConvert == typeof(global::Langfuse.MediaContentType?)
+
+                    || typeToConvert == typeof(global::Langfuse.ModelTokenizerId)
+
+                    || typeToConvert == typeof(global::Langfuse.ModelTokenizerId?)
 
                     || typeToConvert == typeof(global::Langfuse.MembershipRole)
 
@@ -1918,6 +1930,16 @@ namespace Langfuse
                 if (typeToConvert == typeof(global::Langfuse.MediaContentType?))
                 {
                     return new global::Langfuse.JsonConverters.MediaContentTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.ModelTokenizerId))
+                {
+                    return new global::Langfuse.JsonConverters.ModelTokenizerIdJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.ModelTokenizerId?))
+                {
+                    return new global::Langfuse.JsonConverters.ModelTokenizerIdNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Langfuse.MembershipRole))

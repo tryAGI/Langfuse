@@ -33,7 +33,8 @@ namespace Langfuse
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("unit")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.ModelUsageUnitJsonConverter))]
-        public global::Langfuse.ModelUsageUnit? Unit { get; set; }
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Langfuse.ModelUsageUnit Unit { get; set; }
 
         /// <summary>
         /// Deprecated. Use 'pricingTiers' instead. Price (USD) per input unit. Creates a default tier if pricingTiers not provided.
@@ -72,10 +73,11 @@ namespace Langfuse
         public global::System.Collections.Generic.IList<global::Langfuse.PricingTierInput>? PricingTiers { get; set; }
 
         /// <summary>
-        /// Optional. Tokenizer to be applied to observations which match to this model. See docs for more details.
+        /// Tokenizer supported by Langfuse for model usage inference.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tokenizerId")]
-        public string? TokenizerId { get; set; }
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.ModelTokenizerIdJsonConverter))]
+        public global::Langfuse.ModelTokenizerId? TokenizerId { get; set; }
 
         /// <summary>
         /// Optional. Configuration for the selected tokenizer. Needs to be JSON. See docs for more details.
@@ -98,11 +100,11 @@ namespace Langfuse
         /// <param name="matchPattern">
         /// Regex pattern which matches this model definition to generation.model. Useful in case of fine-tuned models. If you want to exact match, use `(?i)^modelname$`
         /// </param>
-        /// <param name="startDate">
-        /// Apply only to generations which are newer than this ISO date.
-        /// </param>
         /// <param name="unit">
         /// Unit of usage in Langfuse
+        /// </param>
+        /// <param name="startDate">
+        /// Apply only to generations which are newer than this ISO date.
         /// </param>
         /// <param name="inputPrice">
         /// Deprecated. Use 'pricingTiers' instead. Price (USD) per input unit. Creates a default tier if pricingTiers not provided.
@@ -129,7 +131,7 @@ namespace Langfuse
         /// which will automatically create a single default tier named "Standard".
         /// </param>
         /// <param name="tokenizerId">
-        /// Optional. Tokenizer to be applied to observations which match to this model. See docs for more details.
+        /// Tokenizer supported by Langfuse for model usage inference.
         /// </param>
         /// <param name="tokenizerConfig">
         /// Optional. Configuration for the selected tokenizer. Needs to be JSON. See docs for more details.
@@ -140,13 +142,13 @@ namespace Langfuse
         public CreateModelRequest(
             string modelName,
             string matchPattern,
+            global::Langfuse.ModelUsageUnit unit,
             global::System.DateTime? startDate,
-            global::Langfuse.ModelUsageUnit? unit,
             double? inputPrice,
             double? outputPrice,
             double? totalPrice,
             global::System.Collections.Generic.IList<global::Langfuse.PricingTierInput>? pricingTiers,
-            string? tokenizerId,
+            global::Langfuse.ModelTokenizerId? tokenizerId,
             object? tokenizerConfig)
         {
             this.ModelName = modelName ?? throw new global::System.ArgumentNullException(nameof(modelName));
