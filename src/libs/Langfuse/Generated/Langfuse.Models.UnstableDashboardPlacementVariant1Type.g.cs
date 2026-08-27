@@ -4,12 +4,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UnstableDashboardPlacementVariant1Type
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Widget,
     }

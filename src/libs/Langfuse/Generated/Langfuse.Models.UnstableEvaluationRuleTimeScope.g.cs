@@ -4,16 +4,16 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UnstableEvaluationRuleTimeScope
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Existing,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         New,
     }

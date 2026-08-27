@@ -9,7 +9,7 @@ namespace Langfuse
     public sealed partial class PricingTierAttributeCondition
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("source")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.PricingTierAttributeSourceJsonConverter))]

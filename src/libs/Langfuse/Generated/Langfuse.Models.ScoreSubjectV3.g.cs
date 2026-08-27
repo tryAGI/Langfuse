@@ -10,7 +10,7 @@ namespace Langfuse
     public readonly partial struct ScoreSubjectV3 : global::System.IEquatable<ScoreSubjectV3>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant12, global::Langfuse.ScoreSubjectTraceV3>? ScoreSubjectV3Variant1 { get; init; }
@@ -19,7 +19,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ScoreSubjectV3Variant1))]
@@ -27,7 +27,7 @@ namespace Langfuse
         public bool IsScoreSubjectV3Variant1 => ScoreSubjectV3Variant1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickScoreSubjectV3Variant1(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant12, global::Langfuse.ScoreSubjectTraceV3> PickScoreSubjectV3Variant1() => IsScoreSubjectV3Variant1
             ? ScoreSubjectV3Variant1!.Value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ScoreSubjectV3Variant1' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant22, global::Langfuse.ScoreSubjectObservationV3>? ScoreSubjectV3Variant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ScoreSubjectV3Variant2))]
@@ -64,7 +64,7 @@ namespace Langfuse
         public bool IsScoreSubjectV3Variant2 => ScoreSubjectV3Variant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickScoreSubjectV3Variant2(
 #if NET6_0_OR_GREATER
@@ -77,14 +77,14 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant22, global::Langfuse.ScoreSubjectObservationV3> PickScoreSubjectV3Variant2() => IsScoreSubjectV3Variant2
             ? ScoreSubjectV3Variant2!.Value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ScoreSubjectV3Variant2' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant32, global::Langfuse.ScoreSubjectSessionV3>? ScoreSubjectV3Variant3 { get; init; }
@@ -93,7 +93,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ScoreSubjectV3Variant3))]
@@ -101,7 +101,7 @@ namespace Langfuse
         public bool IsScoreSubjectV3Variant3 => ScoreSubjectV3Variant3 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickScoreSubjectV3Variant3(
 #if NET6_0_OR_GREATER
@@ -114,14 +114,14 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant32, global::Langfuse.ScoreSubjectSessionV3> PickScoreSubjectV3Variant3() => IsScoreSubjectV3Variant3
             ? ScoreSubjectV3Variant3!.Value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ScoreSubjectV3Variant3' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant42, global::Langfuse.ScoreSubjectExperimentV3>? ScoreSubjectV3Variant4 { get; init; }
@@ -130,7 +130,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ScoreSubjectV3Variant4))]
@@ -138,7 +138,7 @@ namespace Langfuse
         public bool IsScoreSubjectV3Variant4 => ScoreSubjectV3Variant4 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickScoreSubjectV3Variant4(
 #if NET6_0_OR_GREATER
@@ -151,23 +151,23 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant42, global::Langfuse.ScoreSubjectExperimentV3> PickScoreSubjectV3Variant4() => IsScoreSubjectV3Variant4
             ? ScoreSubjectV3Variant4!.Value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ScoreSubjectV3Variant4' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ScoreSubjectV3(global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant12, global::Langfuse.ScoreSubjectTraceV3> value) => new ScoreSubjectV3((global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant12, global::Langfuse.ScoreSubjectTraceV3>?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant12, global::Langfuse.ScoreSubjectTraceV3>?(ScoreSubjectV3 @this) => @this.ScoreSubjectV3Variant1;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScoreSubjectV3(global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant12, global::Langfuse.ScoreSubjectTraceV3>? value)
         {
@@ -175,22 +175,22 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ScoreSubjectV3 FromScoreSubjectV3Variant1(global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant12, global::Langfuse.ScoreSubjectTraceV3>? value) => new ScoreSubjectV3(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ScoreSubjectV3(global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant22, global::Langfuse.ScoreSubjectObservationV3> value) => new ScoreSubjectV3((global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant22, global::Langfuse.ScoreSubjectObservationV3>?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant22, global::Langfuse.ScoreSubjectObservationV3>?(ScoreSubjectV3 @this) => @this.ScoreSubjectV3Variant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScoreSubjectV3(global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant22, global::Langfuse.ScoreSubjectObservationV3>? value)
         {
@@ -198,22 +198,22 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ScoreSubjectV3 FromScoreSubjectV3Variant2(global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant22, global::Langfuse.ScoreSubjectObservationV3>? value) => new ScoreSubjectV3(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ScoreSubjectV3(global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant32, global::Langfuse.ScoreSubjectSessionV3> value) => new ScoreSubjectV3((global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant32, global::Langfuse.ScoreSubjectSessionV3>?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant32, global::Langfuse.ScoreSubjectSessionV3>?(ScoreSubjectV3 @this) => @this.ScoreSubjectV3Variant3;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScoreSubjectV3(global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant32, global::Langfuse.ScoreSubjectSessionV3>? value)
         {
@@ -221,22 +221,22 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ScoreSubjectV3 FromScoreSubjectV3Variant3(global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant32, global::Langfuse.ScoreSubjectSessionV3>? value) => new ScoreSubjectV3(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ScoreSubjectV3(global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant42, global::Langfuse.ScoreSubjectExperimentV3> value) => new ScoreSubjectV3((global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant42, global::Langfuse.ScoreSubjectExperimentV3>?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant42, global::Langfuse.ScoreSubjectExperimentV3>?(ScoreSubjectV3 @this) => @this.ScoreSubjectV3Variant4;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScoreSubjectV3(global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant42, global::Langfuse.ScoreSubjectExperimentV3>? value)
         {
@@ -244,12 +244,12 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ScoreSubjectV3 FromScoreSubjectV3Variant4(global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant42, global::Langfuse.ScoreSubjectExperimentV3>? value) => new ScoreSubjectV3(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScoreSubjectV3(
             global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant12, global::Langfuse.ScoreSubjectTraceV3>? scoreSubjectV3Variant1,
@@ -265,27 +265,27 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             ScoreSubjectV3Variant4 as object ??
             ScoreSubjectV3Variant3 as object ??
             ScoreSubjectV3Variant2 as object ??
-            ScoreSubjectV3Variant1 as object 
+            ScoreSubjectV3Variant1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             ScoreSubjectV3Variant1?.ToString() ??
             ScoreSubjectV3Variant2?.ToString() ??
             ScoreSubjectV3Variant3?.ToString() ??
-            ScoreSubjectV3Variant4?.ToString() 
+            ScoreSubjectV3Variant4?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -293,7 +293,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant12, global::Langfuse.ScoreSubjectTraceV3>?, TResult>? scoreSubjectV3Variant1 = null,
@@ -328,7 +328,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant12, global::Langfuse.ScoreSubjectTraceV3>?>? scoreSubjectV3Variant1 = null,
@@ -364,7 +364,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant12, global::Langfuse.ScoreSubjectTraceV3>?>? scoreSubjectV3Variant1 = null,
@@ -397,7 +397,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -422,7 +422,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(ScoreSubjectV3 other)
         {
@@ -430,12 +430,12 @@ namespace Langfuse
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant12, global::Langfuse.ScoreSubjectTraceV3>?>.Default.Equals(ScoreSubjectV3Variant1, other.ScoreSubjectV3Variant1) &&
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant22, global::Langfuse.ScoreSubjectObservationV3>?>.Default.Equals(ScoreSubjectV3Variant2, other.ScoreSubjectV3Variant2) &&
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant32, global::Langfuse.ScoreSubjectSessionV3>?>.Default.Equals(ScoreSubjectV3Variant3, other.ScoreSubjectV3Variant3) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant42, global::Langfuse.ScoreSubjectExperimentV3>?>.Default.Equals(ScoreSubjectV3Variant4, other.ScoreSubjectV3Variant4) 
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3Variant42, global::Langfuse.ScoreSubjectExperimentV3>?>.Default.Equals(ScoreSubjectV3Variant4, other.ScoreSubjectV3Variant4)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(ScoreSubjectV3 obj1, ScoreSubjectV3 obj2)
         {
@@ -443,7 +443,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(ScoreSubjectV3 obj1, ScoreSubjectV3 obj2)
         {
@@ -451,7 +451,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

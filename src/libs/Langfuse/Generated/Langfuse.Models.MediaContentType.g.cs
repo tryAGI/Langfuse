@@ -9,211 +9,211 @@ namespace Langfuse
     public enum MediaContentType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationGzip,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationJavascript,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationJson,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationMsword,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationOctetStream,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationPdf,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationRtf,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndApacheParquet,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndMsExcel,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndOpenxmlformatsOfficedocumentPresentationmlPresentation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndOpenxmlformatsOfficedocumentSpreadsheetmlSheet,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationVndOpenxmlformatsOfficedocumentWordprocessingmlDocument,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationX7zCompressed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationXNdjson,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationXTar,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationXYaml,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationXml,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ApplicationZip,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioAac,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioFlac,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioMp3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioMp4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioMpeg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioOga,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioOgg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioOpus,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioWav,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AudioWebm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageAvif,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageBmp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageGif,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageHeic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageJpeg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageJpg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImagePng,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageSvgPlusxml,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageTiff,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ImageWebp,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextCss,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextCsv,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextHtml,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextMarkdown,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextPlain,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextXPython,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TextXTypescript,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VideoMp4,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VideoMpeg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VideoOgg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VideoQuicktime,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VideoWebm,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VideoXMatroska,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VideoXMsvideo,
     }

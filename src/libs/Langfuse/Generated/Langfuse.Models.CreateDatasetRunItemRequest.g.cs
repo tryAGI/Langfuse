@@ -4,12 +4,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class CreateDatasetRunItemRequest
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("runName")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -28,14 +28,14 @@ namespace Langfuse
         public object? Metadata { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("datasetItemId")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string DatasetItemId { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("observationId")]
         public string? ObservationId { get; set; }

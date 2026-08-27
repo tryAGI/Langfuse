@@ -4,7 +4,7 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class UnstableCreateWidgetPlacement
     {
@@ -15,7 +15,7 @@ namespace Langfuse
         public string? Id { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("widgetId")]
         [global::System.Text.Json.Serialization.JsonRequired]

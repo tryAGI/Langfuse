@@ -4,20 +4,20 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum BlobStorageExportMode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FromCustomDate,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FromToday,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         FullHistory,
     }

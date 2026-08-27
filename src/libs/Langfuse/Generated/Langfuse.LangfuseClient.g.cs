@@ -16,7 +16,7 @@ namespace Langfuse
     public sealed partial class LangfuseClient : global::Langfuse.ILangfuseClient, global::System.IDisposable
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public const string DefaultBaseUrl = "https://cloud.langfuse.com/";
 
@@ -43,7 +43,7 @@ namespace Langfuse
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Langfuse.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {
@@ -53,7 +53,7 @@ namespace Langfuse
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AnnotationQueuesClient AnnotationQueues => new AnnotationQueuesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -62,7 +62,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public BlobStorageIntegrationsClient BlobStorageIntegrations => new BlobStorageIntegrationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -71,7 +71,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CommentsClient Comments => new CommentsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -80,7 +80,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DatasetItemsClient DatasetItems => new DatasetItemsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -89,7 +89,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DatasetsClient Datasets => new DatasetsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -98,7 +98,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ExperimentsClient Experiments => new ExperimentsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -107,7 +107,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FeedbackClient Feedback => new FeedbackClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -116,7 +116,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public HealthClient Health => new HealthClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -125,7 +125,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public LegacyScoreV1Client LegacyScoreV1 => new LegacyScoreV1Client(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -134,7 +134,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public LlmConnectionsClient LlmConnections => new LlmConnectionsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -143,7 +143,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MediaClient Media => new MediaClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -152,7 +152,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MetricsClient Metrics => new MetricsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -161,7 +161,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ModelsClient Models => new ModelsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -170,7 +170,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ObservationsClient Observations => new ObservationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -179,7 +179,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OpentelemetryClient Opentelemetry => new OpentelemetryClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -188,7 +188,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OrganizationsClient Organizations => new OrganizationsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -197,7 +197,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ProjectsClient Projects => new ProjectsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -206,7 +206,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PromptVersionClient PromptVersion => new PromptVersionClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -215,7 +215,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PromptsClient Prompts => new PromptsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -224,7 +224,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScimClient Scim => new ScimClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -233,7 +233,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScoreConfigsClient ScoreConfigs => new ScoreConfigsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -242,7 +242,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScoresClient Scores => new ScoresClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -251,7 +251,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScoresV3Client ScoresV3 => new ScoresV3Client(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -260,7 +260,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TraceClient Trace => new TraceClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -269,7 +269,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableDashboardWidgetsClient UnstableDashboardWidgets => new UnstableDashboardWidgetsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -278,7 +278,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableDashboardsClient UnstableDashboards => new UnstableDashboardsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -287,7 +287,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableEvaluationRulesClient UnstableEvaluationRules => new UnstableEvaluationRulesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
@@ -296,7 +296,7 @@ namespace Langfuse
         };
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableEvaluatorsClient UnstableEvaluators => new UnstableEvaluatorsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {

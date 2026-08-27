@@ -4,16 +4,16 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UnstableEvaluationRuleOptionsFilterOperator
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AnyOf,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NoneOf,
     }

@@ -18,7 +18,7 @@ namespace Langfuse
     public readonly partial struct UnstableCreateEvaluationRuleRequest : global::System.IEquatable<UnstableCreateEvaluationRuleRequest>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.UnstableCreateLlmAsJudgeEvaluationRuleRequest? UnstableCreateLlmAsJudgeEvaluationRuleRequest { get; init; }
@@ -27,7 +27,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableCreateLlmAsJudgeEvaluationRuleRequest))]
@@ -35,7 +35,7 @@ namespace Langfuse
         public bool IsUnstableCreateLlmAsJudgeEvaluationRuleRequest => UnstableCreateLlmAsJudgeEvaluationRuleRequest != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickUnstableCreateLlmAsJudgeEvaluationRuleRequest(
 #if NET6_0_OR_GREATER
@@ -48,14 +48,14 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.UnstableCreateLlmAsJudgeEvaluationRuleRequest PickUnstableCreateLlmAsJudgeEvaluationRuleRequest() => IsUnstableCreateLlmAsJudgeEvaluationRuleRequest
             ? UnstableCreateLlmAsJudgeEvaluationRuleRequest!
             : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableCreateLlmAsJudgeEvaluationRuleRequest' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.UnstableCreateCodeEvaluationRuleRequest? UnstableCreateCodeEvaluationRuleRequest { get; init; }
@@ -64,7 +64,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableCreateCodeEvaluationRuleRequest))]
@@ -72,7 +72,7 @@ namespace Langfuse
         public bool IsUnstableCreateCodeEvaluationRuleRequest => UnstableCreateCodeEvaluationRuleRequest != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickUnstableCreateCodeEvaluationRuleRequest(
 #if NET6_0_OR_GREATER
@@ -85,14 +85,14 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.UnstableCreateCodeEvaluationRuleRequest PickUnstableCreateCodeEvaluationRuleRequest() => IsUnstableCreateCodeEvaluationRuleRequest
             ? UnstableCreateCodeEvaluationRuleRequest!
             : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableCreateCodeEvaluationRuleRequest' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.UnstableCreateEvaluationRuleWithEvaluatorsRequest? UnstableCreateEvaluationRuleWithEvaluatorsRequest { get; init; }
@@ -101,7 +101,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableCreateEvaluationRuleWithEvaluatorsRequest))]
@@ -109,7 +109,7 @@ namespace Langfuse
         public bool IsUnstableCreateEvaluationRuleWithEvaluatorsRequest => UnstableCreateEvaluationRuleWithEvaluatorsRequest != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickUnstableCreateEvaluationRuleWithEvaluatorsRequest(
 #if NET6_0_OR_GREATER
@@ -122,23 +122,23 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.UnstableCreateEvaluationRuleWithEvaluatorsRequest PickUnstableCreateEvaluationRuleWithEvaluatorsRequest() => IsUnstableCreateEvaluationRuleWithEvaluatorsRequest
             ? UnstableCreateEvaluationRuleWithEvaluatorsRequest!
             : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableCreateEvaluationRuleWithEvaluatorsRequest' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator UnstableCreateEvaluationRuleRequest(global::Langfuse.UnstableCreateLlmAsJudgeEvaluationRuleRequest value) => new UnstableCreateEvaluationRuleRequest((global::Langfuse.UnstableCreateLlmAsJudgeEvaluationRuleRequest?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.UnstableCreateLlmAsJudgeEvaluationRuleRequest?(UnstableCreateEvaluationRuleRequest @this) => @this.UnstableCreateLlmAsJudgeEvaluationRuleRequest;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableCreateEvaluationRuleRequest(global::Langfuse.UnstableCreateLlmAsJudgeEvaluationRuleRequest? value)
         {
@@ -146,22 +146,22 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static UnstableCreateEvaluationRuleRequest FromUnstableCreateLlmAsJudgeEvaluationRuleRequest(global::Langfuse.UnstableCreateLlmAsJudgeEvaluationRuleRequest? value) => new UnstableCreateEvaluationRuleRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator UnstableCreateEvaluationRuleRequest(global::Langfuse.UnstableCreateCodeEvaluationRuleRequest value) => new UnstableCreateEvaluationRuleRequest((global::Langfuse.UnstableCreateCodeEvaluationRuleRequest?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.UnstableCreateCodeEvaluationRuleRequest?(UnstableCreateEvaluationRuleRequest @this) => @this.UnstableCreateCodeEvaluationRuleRequest;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableCreateEvaluationRuleRequest(global::Langfuse.UnstableCreateCodeEvaluationRuleRequest? value)
         {
@@ -169,22 +169,22 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static UnstableCreateEvaluationRuleRequest FromUnstableCreateCodeEvaluationRuleRequest(global::Langfuse.UnstableCreateCodeEvaluationRuleRequest? value) => new UnstableCreateEvaluationRuleRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator UnstableCreateEvaluationRuleRequest(global::Langfuse.UnstableCreateEvaluationRuleWithEvaluatorsRequest value) => new UnstableCreateEvaluationRuleRequest((global::Langfuse.UnstableCreateEvaluationRuleWithEvaluatorsRequest?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.UnstableCreateEvaluationRuleWithEvaluatorsRequest?(UnstableCreateEvaluationRuleRequest @this) => @this.UnstableCreateEvaluationRuleWithEvaluatorsRequest;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableCreateEvaluationRuleRequest(global::Langfuse.UnstableCreateEvaluationRuleWithEvaluatorsRequest? value)
         {
@@ -192,12 +192,12 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static UnstableCreateEvaluationRuleRequest FromUnstableCreateEvaluationRuleWithEvaluatorsRequest(global::Langfuse.UnstableCreateEvaluationRuleWithEvaluatorsRequest? value) => new UnstableCreateEvaluationRuleRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableCreateEvaluationRuleRequest(
             global::Langfuse.UnstableCreateLlmAsJudgeEvaluationRuleRequest? unstableCreateLlmAsJudgeEvaluationRuleRequest,
@@ -211,25 +211,25 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             UnstableCreateEvaluationRuleWithEvaluatorsRequest as object ??
             UnstableCreateCodeEvaluationRuleRequest as object ??
-            UnstableCreateLlmAsJudgeEvaluationRuleRequest as object 
+            UnstableCreateLlmAsJudgeEvaluationRuleRequest as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             UnstableCreateLlmAsJudgeEvaluationRuleRequest?.ToString() ??
             UnstableCreateCodeEvaluationRuleRequest?.ToString() ??
-            UnstableCreateEvaluationRuleWithEvaluatorsRequest?.ToString() 
+            UnstableCreateEvaluationRuleWithEvaluatorsRequest?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -237,7 +237,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Langfuse.UnstableCreateLlmAsJudgeEvaluationRuleRequest, TResult>? unstableCreateLlmAsJudgeEvaluationRuleRequest = null,
@@ -267,7 +267,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Langfuse.UnstableCreateLlmAsJudgeEvaluationRuleRequest>? unstableCreateLlmAsJudgeEvaluationRuleRequest = null,
@@ -297,7 +297,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Langfuse.UnstableCreateLlmAsJudgeEvaluationRuleRequest>? unstableCreateLlmAsJudgeEvaluationRuleRequest = null,
@@ -325,7 +325,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -348,19 +348,19 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(UnstableCreateEvaluationRuleRequest other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.UnstableCreateLlmAsJudgeEvaluationRuleRequest?>.Default.Equals(UnstableCreateLlmAsJudgeEvaluationRuleRequest, other.UnstableCreateLlmAsJudgeEvaluationRuleRequest) &&
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.UnstableCreateCodeEvaluationRuleRequest?>.Default.Equals(UnstableCreateCodeEvaluationRuleRequest, other.UnstableCreateCodeEvaluationRuleRequest) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.UnstableCreateEvaluationRuleWithEvaluatorsRequest?>.Default.Equals(UnstableCreateEvaluationRuleWithEvaluatorsRequest, other.UnstableCreateEvaluationRuleWithEvaluatorsRequest) 
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.UnstableCreateEvaluationRuleWithEvaluatorsRequest?>.Default.Equals(UnstableCreateEvaluationRuleWithEvaluatorsRequest, other.UnstableCreateEvaluationRuleWithEvaluatorsRequest)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(UnstableCreateEvaluationRuleRequest obj1, UnstableCreateEvaluationRuleRequest obj2)
         {
@@ -368,7 +368,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(UnstableCreateEvaluationRuleRequest obj1, UnstableCreateEvaluationRuleRequest obj2)
         {
@@ -376,7 +376,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

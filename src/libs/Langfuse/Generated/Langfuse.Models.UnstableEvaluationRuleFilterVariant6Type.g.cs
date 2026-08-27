@@ -4,12 +4,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UnstableEvaluationRuleFilterVariant6Type
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ArrayOptions,
     }

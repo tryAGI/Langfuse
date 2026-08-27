@@ -9,14 +9,14 @@ namespace Langfuse
     public sealed partial class UnstableLegacyEvaluationRuleMapping
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("variable")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Variable { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("langfuseObject")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.UnstableLegacyEvaluationObjectJsonConverter))]
@@ -30,14 +30,14 @@ namespace Langfuse
         public string? ObjectName { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("source")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Source { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("jsonPath")]
         public string? JsonPath { get; set; }

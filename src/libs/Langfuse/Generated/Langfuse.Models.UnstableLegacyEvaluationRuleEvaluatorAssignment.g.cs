@@ -4,7 +4,7 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class UnstableLegacyEvaluationRuleEvaluatorAssignment
     {
@@ -18,7 +18,7 @@ namespace Langfuse
         public required global::Langfuse.UnstableEvaluationRuleEvaluator Evaluator { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mapping")]
         public global::System.Collections.Generic.IList<global::Langfuse.UnstableLegacyEvaluationRuleMapping>? Mapping { get; set; }

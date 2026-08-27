@@ -10,7 +10,7 @@ namespace Langfuse
     public sealed partial class MetricsClient : global::Langfuse.IMetricsClient, global::System.IDisposable
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public const string DefaultBaseUrl = "https://cloud.langfuse.com/";
 
@@ -37,7 +37,7 @@ namespace Langfuse
         internal global::System.Lazy<global::System.Text.Json.Serialization.JsonSerializerContext> JsonSerializerContextProvider { get; set; } = new(() => global::Langfuse.SourceGenerationContext.Default);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext
         {

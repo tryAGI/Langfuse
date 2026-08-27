@@ -4,32 +4,32 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum FeedbackTargetType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Cli,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Docs,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         McpTool,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Other,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PublicApi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Skill,
     }

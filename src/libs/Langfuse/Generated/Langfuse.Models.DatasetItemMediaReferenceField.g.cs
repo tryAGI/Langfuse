@@ -4,20 +4,20 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum DatasetItemMediaReferenceField
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ExpectedOutput,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Input,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Metadata,
     }

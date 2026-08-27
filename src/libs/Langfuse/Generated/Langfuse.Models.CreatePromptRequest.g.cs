@@ -5,12 +5,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct CreatePromptRequest : global::System.IEquatable<CreatePromptRequest>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.CreateChatPromptRequest? CreateChatPromptRequest { get; init; }
@@ -19,7 +19,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CreateChatPromptRequest))]
@@ -27,7 +27,7 @@ namespace Langfuse
         public bool IsCreateChatPromptRequest => CreateChatPromptRequest != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickCreateChatPromptRequest(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.CreateChatPromptRequest PickCreateChatPromptRequest() => IsCreateChatPromptRequest
             ? CreateChatPromptRequest!
             : throw new global::System.InvalidOperationException($"Expected union variant 'CreateChatPromptRequest' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.CreateTextPromptRequest? CreateTextPromptRequest { get; init; }
@@ -56,7 +56,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CreateTextPromptRequest))]
@@ -64,7 +64,7 @@ namespace Langfuse
         public bool IsCreateTextPromptRequest => CreateTextPromptRequest != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickCreateTextPromptRequest(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.CreateTextPromptRequest PickCreateTextPromptRequest() => IsCreateTextPromptRequest
             ? CreateTextPromptRequest!
             : throw new global::System.InvalidOperationException($"Expected union variant 'CreateTextPromptRequest' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator CreatePromptRequest(global::Langfuse.CreateChatPromptRequest value) => new CreatePromptRequest((global::Langfuse.CreateChatPromptRequest?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.CreateChatPromptRequest?(CreatePromptRequest @this) => @this.CreateChatPromptRequest;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CreatePromptRequest(global::Langfuse.CreateChatPromptRequest? value)
         {
@@ -101,22 +101,22 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static CreatePromptRequest FromCreateChatPromptRequest(global::Langfuse.CreateChatPromptRequest? value) => new CreatePromptRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator CreatePromptRequest(global::Langfuse.CreateTextPromptRequest value) => new CreatePromptRequest((global::Langfuse.CreateTextPromptRequest?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.CreateTextPromptRequest?(CreatePromptRequest @this) => @this.CreateTextPromptRequest;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CreatePromptRequest(global::Langfuse.CreateTextPromptRequest? value)
         {
@@ -124,12 +124,12 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static CreatePromptRequest FromCreateTextPromptRequest(global::Langfuse.CreateTextPromptRequest? value) => new CreatePromptRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CreatePromptRequest(
             global::Langfuse.CreateChatPromptRequest? createChatPromptRequest,
@@ -141,23 +141,23 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             CreateTextPromptRequest as object ??
-            CreateChatPromptRequest as object 
+            CreateChatPromptRequest as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             CreateChatPromptRequest?.ToString() ??
-            CreateTextPromptRequest?.ToString() 
+            CreateTextPromptRequest?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Langfuse.CreateChatPromptRequest, TResult>? createChatPromptRequest = null,
@@ -190,7 +190,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Langfuse.CreateChatPromptRequest>? createChatPromptRequest = null,
@@ -214,7 +214,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Langfuse.CreateChatPromptRequest>? createChatPromptRequest = null,
@@ -237,7 +237,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(CreatePromptRequest other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.CreateChatPromptRequest?>.Default.Equals(CreateChatPromptRequest, other.CreateChatPromptRequest) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.CreateTextPromptRequest?>.Default.Equals(CreateTextPromptRequest, other.CreateTextPromptRequest) 
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.CreateTextPromptRequest?>.Default.Equals(CreateTextPromptRequest, other.CreateTextPromptRequest)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(CreatePromptRequest obj1, CreatePromptRequest obj2)
         {
@@ -277,7 +277,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(CreatePromptRequest obj1, CreatePromptRequest obj2)
         {
@@ -285,7 +285,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

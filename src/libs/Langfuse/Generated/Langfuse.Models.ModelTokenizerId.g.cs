@@ -9,11 +9,11 @@ namespace Langfuse
     public enum ModelTokenizerId
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Claude,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Openai,
     }

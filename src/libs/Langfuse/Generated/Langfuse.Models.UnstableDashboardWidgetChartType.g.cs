@@ -4,44 +4,44 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UnstableDashboardWidgetChartType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AreaTimeSeries,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         BarTimeSeries,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Histogram,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         HorizontalBar,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LineTimeSeries,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Number,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Pie,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         PivotTable,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         VerticalBar,
     }

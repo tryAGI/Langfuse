@@ -4,12 +4,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum IngestionEventVariant9Type
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ObservationCreate,
     }

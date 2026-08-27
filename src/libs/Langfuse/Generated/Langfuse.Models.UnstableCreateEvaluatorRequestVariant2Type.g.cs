@@ -4,12 +4,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UnstableCreateEvaluatorRequestVariant2Type
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Code,
     }

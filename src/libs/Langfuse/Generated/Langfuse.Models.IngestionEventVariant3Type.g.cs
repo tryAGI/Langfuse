@@ -4,12 +4,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum IngestionEventVariant3Type
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         SpanCreate,
     }

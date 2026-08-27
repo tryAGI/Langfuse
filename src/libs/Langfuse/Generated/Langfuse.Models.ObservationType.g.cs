@@ -4,48 +4,48 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ObservationType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Agent,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Chain,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Embedding,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Evaluator,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Event,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Generation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Guardrail,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Retriever,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Span,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tool,
     }

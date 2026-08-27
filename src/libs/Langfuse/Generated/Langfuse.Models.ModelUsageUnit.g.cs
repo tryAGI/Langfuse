@@ -9,27 +9,27 @@ namespace Langfuse
     public enum ModelUsageUnit
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Characters,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Images,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Milliseconds,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Requests,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Seconds,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Tokens,
     }

@@ -5,12 +5,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct UsageDetails : global::System.IEquatable<UsageDetails>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.Dictionary<string, int>? UsageDetailsVariant1 { get; init; }
@@ -19,7 +19,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UsageDetailsVariant1))]
@@ -27,7 +27,7 @@ namespace Langfuse
         public bool IsUsageDetailsVariant1 => UsageDetailsVariant1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickUsageDetailsVariant1(
 #if NET6_0_OR_GREATER
@@ -40,7 +40,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Collections.Generic.Dictionary<string, int> PickUsageDetailsVariant1() => IsUsageDetailsVariant1
             ? UsageDetailsVariant1!
@@ -56,7 +56,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(OpenAICompletionUsageSchema))]
@@ -64,7 +64,7 @@ namespace Langfuse
         public bool IsOpenAICompletionUsageSchema => OpenAICompletionUsageSchema != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickOpenAICompletionUsageSchema(
 #if NET6_0_OR_GREATER
@@ -77,7 +77,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.OpenAICompletionUsageSchema PickOpenAICompletionUsageSchema() => IsOpenAICompletionUsageSchema
             ? OpenAICompletionUsageSchema!
@@ -93,7 +93,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(OpenAIResponseUsageSchema))]
@@ -101,7 +101,7 @@ namespace Langfuse
         public bool IsOpenAIResponseUsageSchema => OpenAIResponseUsageSchema != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickOpenAIResponseUsageSchema(
 #if NET6_0_OR_GREATER
@@ -114,23 +114,23 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.OpenAIResponseUsageSchema PickOpenAIResponseUsageSchema() => IsOpenAIResponseUsageSchema
             ? OpenAIResponseUsageSchema!
             : throw new global::System.InvalidOperationException($"Expected union variant 'OpenAIResponseUsageSchema' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator UsageDetails(global::System.Collections.Generic.Dictionary<string, int> value) => new UsageDetails((global::System.Collections.Generic.Dictionary<string, int>?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::System.Collections.Generic.Dictionary<string, int>?(UsageDetails @this) => @this.UsageDetailsVariant1;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UsageDetails(global::System.Collections.Generic.Dictionary<string, int>? value)
         {
@@ -138,22 +138,22 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static UsageDetails FromUsageDetailsVariant1(global::System.Collections.Generic.Dictionary<string, int>? value) => new UsageDetails(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator UsageDetails(global::Langfuse.OpenAICompletionUsageSchema value) => new UsageDetails((global::Langfuse.OpenAICompletionUsageSchema?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.OpenAICompletionUsageSchema?(UsageDetails @this) => @this.OpenAICompletionUsageSchema;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UsageDetails(global::Langfuse.OpenAICompletionUsageSchema? value)
         {
@@ -161,22 +161,22 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static UsageDetails FromOpenAICompletionUsageSchema(global::Langfuse.OpenAICompletionUsageSchema? value) => new UsageDetails(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator UsageDetails(global::Langfuse.OpenAIResponseUsageSchema value) => new UsageDetails((global::Langfuse.OpenAIResponseUsageSchema?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.OpenAIResponseUsageSchema?(UsageDetails @this) => @this.OpenAIResponseUsageSchema;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UsageDetails(global::Langfuse.OpenAIResponseUsageSchema? value)
         {
@@ -184,12 +184,12 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static UsageDetails FromOpenAIResponseUsageSchema(global::Langfuse.OpenAIResponseUsageSchema? value) => new UsageDetails(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UsageDetails(
             global::System.Collections.Generic.Dictionary<string, int>? usageDetailsVariant1,
@@ -203,25 +203,25 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             OpenAIResponseUsageSchema as object ??
             OpenAICompletionUsageSchema as object ??
-            UsageDetailsVariant1 as object 
+            UsageDetailsVariant1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             UsageDetailsVariant1?.ToString() ??
             OpenAICompletionUsageSchema?.ToString() ??
-            OpenAIResponseUsageSchema?.ToString() 
+            OpenAIResponseUsageSchema?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -229,7 +229,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::System.Collections.Generic.Dictionary<string, int>, TResult>? usageDetailsVariant1 = null,
@@ -259,7 +259,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::System.Collections.Generic.Dictionary<string, int>>? usageDetailsVariant1 = null,
@@ -289,7 +289,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::System.Collections.Generic.Dictionary<string, int>>? usageDetailsVariant1 = null,
@@ -317,7 +317,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -340,19 +340,19 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(UsageDetails other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.Dictionary<string, int>?>.Default.Equals(UsageDetailsVariant1, other.UsageDetailsVariant1) &&
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.OpenAICompletionUsageSchema?>.Default.Equals(OpenAICompletionUsageSchema, other.OpenAICompletionUsageSchema) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.OpenAIResponseUsageSchema?>.Default.Equals(OpenAIResponseUsageSchema, other.OpenAIResponseUsageSchema) 
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.OpenAIResponseUsageSchema?>.Default.Equals(OpenAIResponseUsageSchema, other.OpenAIResponseUsageSchema)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(UsageDetails obj1, UsageDetails obj2)
         {
@@ -360,7 +360,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(UsageDetails obj1, UsageDetails obj2)
         {
@@ -368,7 +368,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

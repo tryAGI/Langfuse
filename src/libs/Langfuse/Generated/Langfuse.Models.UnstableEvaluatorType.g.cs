@@ -10,11 +10,11 @@ namespace Langfuse
     public enum UnstableEvaluatorType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Code,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LlmAsJudge,
     }

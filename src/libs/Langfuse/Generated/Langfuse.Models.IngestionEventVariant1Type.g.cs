@@ -4,12 +4,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum IngestionEventVariant1Type
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         TraceCreate,
     }

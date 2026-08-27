@@ -4,56 +4,56 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UnstableDashboardWidgetMetricAggregation
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Avg,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Count,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Histogram,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Max,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Min,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         P50,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         P75,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         P90,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         P95,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         P99,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Sum,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Uniq,
     }

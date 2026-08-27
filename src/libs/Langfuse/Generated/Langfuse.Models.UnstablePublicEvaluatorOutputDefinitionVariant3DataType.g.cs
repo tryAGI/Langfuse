@@ -4,12 +4,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UnstablePublicEvaluatorOutputDefinitionVariant3DataType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Categorical,
     }

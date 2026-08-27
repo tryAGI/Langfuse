@@ -11,75 +11,75 @@ namespace Langfuse
     public enum UnstablePublicApiErrorCode
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AccessDenied,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AuthenticationFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Conflict,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DuplicateVariableMapping,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EvaluatorPreflightFailed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InternalError,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InvalidBody,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InvalidFilterValue,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InvalidJsonPath,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InvalidQuery,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InvalidRequest,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         InvalidVariableMapping,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MethodNotAllowed,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         MissingVariableMapping,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         NameConflict,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         RateLimited,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ResourceNotFound,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         UnprocessableContent,
     }
