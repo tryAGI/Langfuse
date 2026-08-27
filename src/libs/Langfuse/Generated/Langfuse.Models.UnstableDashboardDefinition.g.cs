@@ -4,12 +4,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class UnstableDashboardDefinition
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("widgets")]
         [global::System.Text.Json.Serialization.JsonRequired]

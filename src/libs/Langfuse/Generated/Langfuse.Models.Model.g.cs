@@ -15,7 +15,7 @@ namespace Langfuse
     public sealed partial class Model
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("id")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -80,7 +80,7 @@ namespace Langfuse
         public required object TokenizerConfig { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("isLangfuseManaged")]
         [global::System.Text.Json.Serialization.JsonRequired]

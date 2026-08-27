@@ -4,20 +4,20 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum AnnotationQueueObjectType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Observation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Session,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Trace,
     }

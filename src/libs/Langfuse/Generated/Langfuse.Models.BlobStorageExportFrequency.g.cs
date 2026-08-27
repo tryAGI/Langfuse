@@ -4,24 +4,24 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum BlobStorageExportFrequency
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Daily,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Every20Minutes,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Hourly,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Weekly,
     }

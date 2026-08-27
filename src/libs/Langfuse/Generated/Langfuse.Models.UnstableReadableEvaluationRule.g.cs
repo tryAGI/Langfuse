@@ -10,7 +10,7 @@ namespace Langfuse
     public readonly partial struct UnstableReadableEvaluationRule : global::System.IEquatable<UnstableReadableEvaluationRule>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.UnstableEvaluationRule? UnstableEvaluationRule { get; init; }
@@ -19,7 +19,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableEvaluationRule))]
@@ -27,7 +27,7 @@ namespace Langfuse
         public bool IsUnstableEvaluationRule => UnstableEvaluationRule != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickUnstableEvaluationRule(
 #if NET6_0_OR_GREATER
@@ -40,7 +40,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.UnstableEvaluationRule PickUnstableEvaluationRule() => IsUnstableEvaluationRule
             ? UnstableEvaluationRule!
@@ -57,7 +57,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableLegacyEvaluationRule))]
@@ -65,7 +65,7 @@ namespace Langfuse
         public bool IsUnstableLegacyEvaluationRule => UnstableLegacyEvaluationRule != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickUnstableLegacyEvaluationRule(
 #if NET6_0_OR_GREATER
@@ -78,23 +78,23 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.UnstableLegacyEvaluationRule PickUnstableLegacyEvaluationRule() => IsUnstableLegacyEvaluationRule
             ? UnstableLegacyEvaluationRule!
             : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableLegacyEvaluationRule' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator UnstableReadableEvaluationRule(global::Langfuse.UnstableEvaluationRule value) => new UnstableReadableEvaluationRule((global::Langfuse.UnstableEvaluationRule?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.UnstableEvaluationRule?(UnstableReadableEvaluationRule @this) => @this.UnstableEvaluationRule;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableReadableEvaluationRule(global::Langfuse.UnstableEvaluationRule? value)
         {
@@ -102,22 +102,22 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static UnstableReadableEvaluationRule FromUnstableEvaluationRule(global::Langfuse.UnstableEvaluationRule? value) => new UnstableReadableEvaluationRule(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator UnstableReadableEvaluationRule(global::Langfuse.UnstableLegacyEvaluationRule value) => new UnstableReadableEvaluationRule((global::Langfuse.UnstableLegacyEvaluationRule?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.UnstableLegacyEvaluationRule?(UnstableReadableEvaluationRule @this) => @this.UnstableLegacyEvaluationRule;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableReadableEvaluationRule(global::Langfuse.UnstableLegacyEvaluationRule? value)
         {
@@ -125,12 +125,12 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static UnstableReadableEvaluationRule FromUnstableLegacyEvaluationRule(global::Langfuse.UnstableLegacyEvaluationRule? value) => new UnstableReadableEvaluationRule(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableReadableEvaluationRule(
             global::Langfuse.UnstableEvaluationRule? unstableEvaluationRule,
@@ -142,23 +142,23 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             UnstableLegacyEvaluationRule as object ??
-            UnstableEvaluationRule as object 
+            UnstableEvaluationRule as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             UnstableEvaluationRule?.ToString() ??
-            UnstableLegacyEvaluationRule?.ToString() 
+            UnstableLegacyEvaluationRule?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -166,7 +166,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Langfuse.UnstableEvaluationRule, TResult>? unstableEvaluationRule = null,
@@ -191,7 +191,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Langfuse.UnstableEvaluationRule>? unstableEvaluationRule = null,
@@ -215,7 +215,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Langfuse.UnstableEvaluationRule>? unstableEvaluationRule = null,
@@ -238,7 +238,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -259,18 +259,18 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(UnstableReadableEvaluationRule other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.UnstableEvaluationRule?>.Default.Equals(UnstableEvaluationRule, other.UnstableEvaluationRule) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.UnstableLegacyEvaluationRule?>.Default.Equals(UnstableLegacyEvaluationRule, other.UnstableLegacyEvaluationRule) 
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.UnstableLegacyEvaluationRule?>.Default.Equals(UnstableLegacyEvaluationRule, other.UnstableLegacyEvaluationRule)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(UnstableReadableEvaluationRule obj1, UnstableReadableEvaluationRule obj2)
         {
@@ -278,7 +278,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(UnstableReadableEvaluationRule obj1, UnstableReadableEvaluationRule obj2)
         {
@@ -286,7 +286,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

@@ -20,7 +20,7 @@ namespace Langfuse.JsonConverters
                     {
                         return global::Langfuse.BlobStorageIntegrationFileTypeResponseExtensions.ToEnum(stringValue);
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

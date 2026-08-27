@@ -4,24 +4,24 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UnstableDashboardWidgetView
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Observations,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ScoresBoolean,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ScoresCategorical,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ScoresNumeric,
     }

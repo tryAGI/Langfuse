@@ -20,7 +20,7 @@ namespace Langfuse.JsonConverters
                     {
                         return global::Langfuse.UnstableEvaluationRuleFilterVariant6TypeExtensions.ToEnum(stringValue) ?? default;
                     }
-                    
+
                     break;
                 }
                 case global::System.Text.Json.JsonTokenType.Number:

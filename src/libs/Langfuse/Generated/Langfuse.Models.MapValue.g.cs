@@ -5,12 +5,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct MapValue : global::System.IEquatable<MapValue>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public string? MapValueVariant1 { get; init; }
@@ -19,7 +19,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MapValueVariant1))]
@@ -27,7 +27,7 @@ namespace Langfuse
         public bool IsMapValueVariant1 => MapValueVariant1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickMapValueVariant1(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string PickMapValueVariant1() => IsMapValueVariant1
             ? MapValueVariant1!
             : throw new global::System.InvalidOperationException($"Expected union variant 'MapValueVariant1' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public int? MapValueVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MapValueVariant2))]
@@ -64,7 +64,7 @@ namespace Langfuse
         public bool IsMapValueVariant2 => MapValueVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickMapValueVariant2(
 #if NET6_0_OR_GREATER
@@ -77,14 +77,14 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public int PickMapValueVariant2() => IsMapValueVariant2
             ? MapValueVariant2!.Value
             : throw new global::System.InvalidOperationException($"Expected union variant 'MapValueVariant2' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public float? MapValueVariant3 { get; init; }
@@ -93,7 +93,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MapValueVariant3))]
@@ -101,7 +101,7 @@ namespace Langfuse
         public bool IsMapValueVariant3 => MapValueVariant3 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickMapValueVariant3(
 #if NET6_0_OR_GREATER
@@ -114,14 +114,14 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public float PickMapValueVariant3() => IsMapValueVariant3
             ? MapValueVariant3!.Value
             : throw new global::System.InvalidOperationException($"Expected union variant 'MapValueVariant3' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public bool? MapValueVariant4 { get; init; }
@@ -130,7 +130,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MapValueVariant4))]
@@ -138,7 +138,7 @@ namespace Langfuse
         public bool IsMapValueVariant4 => MapValueVariant4 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickMapValueVariant4(
 #if NET6_0_OR_GREATER
@@ -151,14 +151,14 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool PickMapValueVariant4() => IsMapValueVariant4
             ? MapValueVariant4!.Value
             : throw new global::System.InvalidOperationException($"Expected union variant 'MapValueVariant4' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<string>? MapValueVariant5 { get; init; }
@@ -167,7 +167,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MapValueVariant5))]
@@ -175,7 +175,7 @@ namespace Langfuse
         public bool IsMapValueVariant5 => MapValueVariant5 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickMapValueVariant5(
 #if NET6_0_OR_GREATER
@@ -188,23 +188,23 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::System.Collections.Generic.IList<string> PickMapValueVariant5() => IsMapValueVariant5
             ? MapValueVariant5!
             : throw new global::System.InvalidOperationException($"Expected union variant 'MapValueVariant5' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator MapValue(string value) => new MapValue((string?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator string?(MapValue @this) => @this.MapValueVariant1;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MapValue(string? value)
         {
@@ -212,22 +212,22 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static MapValue FromMapValueVariant1(string? value) => new MapValue(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator MapValue(int value) => new MapValue((int?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator int?(MapValue @this) => @this.MapValueVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MapValue(int? value)
         {
@@ -235,22 +235,22 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static MapValue FromMapValueVariant2(int? value) => new MapValue(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator MapValue(float value) => new MapValue((float?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator float?(MapValue @this) => @this.MapValueVariant3;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MapValue(float? value)
         {
@@ -258,22 +258,22 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static MapValue FromMapValueVariant3(float? value) => new MapValue(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator MapValue(bool value) => new MapValue((bool?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator bool?(MapValue @this) => @this.MapValueVariant4;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MapValue(bool? value)
         {
@@ -281,12 +281,12 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static MapValue FromMapValueVariant4(bool? value) => new MapValue(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MapValue(
             string? mapValueVariant1,
@@ -304,29 +304,29 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             MapValueVariant5 as object ??
             MapValueVariant4 as object ??
             MapValueVariant3 as object ??
             MapValueVariant2 as object ??
-            MapValueVariant1 as object 
+            MapValueVariant1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             MapValueVariant1?.ToString() ??
             MapValueVariant2?.ToString() ??
             MapValueVariant3?.ToString() ??
             MapValueVariant4?.ToString().ToLowerInvariant() ??
-            MapValueVariant5?.ToString() 
+            MapValueVariant5?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -334,7 +334,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<string, TResult>? mapValueVariant1 = null,
@@ -374,7 +374,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<string>? mapValueVariant1 = null,
@@ -416,7 +416,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<string>? mapValueVariant1 = null,
@@ -454,7 +454,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -481,7 +481,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(MapValue other)
         {
@@ -490,12 +490,12 @@ namespace Langfuse
                 global::System.Collections.Generic.EqualityComparer<int?>.Default.Equals(MapValueVariant2, other.MapValueVariant2) &&
                 global::System.Collections.Generic.EqualityComparer<float?>.Default.Equals(MapValueVariant3, other.MapValueVariant3) &&
                 global::System.Collections.Generic.EqualityComparer<bool?>.Default.Equals(MapValueVariant4, other.MapValueVariant4) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<string>?>.Default.Equals(MapValueVariant5, other.MapValueVariant5) 
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<string>?>.Default.Equals(MapValueVariant5, other.MapValueVariant5)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(MapValue obj1, MapValue obj2)
         {
@@ -503,7 +503,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(MapValue obj1, MapValue obj2)
         {
@@ -511,7 +511,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

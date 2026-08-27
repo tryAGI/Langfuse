@@ -5,12 +5,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct ChatMessageWithPlaceholders : global::System.IEquatable<ChatMessageWithPlaceholders>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.ChatMessage? ChatMessage { get; init; }
@@ -19,7 +19,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ChatMessage))]
@@ -27,7 +27,7 @@ namespace Langfuse
         public bool IsChatMessage => ChatMessage != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickChatMessage(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.ChatMessage PickChatMessage() => IsChatMessage
             ? ChatMessage!
             : throw new global::System.InvalidOperationException($"Expected union variant 'ChatMessage' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.PlaceholderMessage? PlaceholderMessage { get; init; }
@@ -56,7 +56,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PlaceholderMessage))]
@@ -64,7 +64,7 @@ namespace Langfuse
         public bool IsPlaceholderMessage => PlaceholderMessage != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickPlaceholderMessage(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.PlaceholderMessage PickPlaceholderMessage() => IsPlaceholderMessage
             ? PlaceholderMessage!
             : throw new global::System.InvalidOperationException($"Expected union variant 'PlaceholderMessage' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ChatMessageWithPlaceholders(global::Langfuse.ChatMessage value) => new ChatMessageWithPlaceholders((global::Langfuse.ChatMessage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.ChatMessage?(ChatMessageWithPlaceholders @this) => @this.ChatMessage;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatMessageWithPlaceholders(global::Langfuse.ChatMessage? value)
         {
@@ -101,22 +101,22 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ChatMessageWithPlaceholders FromChatMessage(global::Langfuse.ChatMessage? value) => new ChatMessageWithPlaceholders(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator ChatMessageWithPlaceholders(global::Langfuse.PlaceholderMessage value) => new ChatMessageWithPlaceholders((global::Langfuse.PlaceholderMessage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.PlaceholderMessage?(ChatMessageWithPlaceholders @this) => @this.PlaceholderMessage;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatMessageWithPlaceholders(global::Langfuse.PlaceholderMessage? value)
         {
@@ -124,12 +124,12 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static ChatMessageWithPlaceholders FromPlaceholderMessage(global::Langfuse.PlaceholderMessage? value) => new ChatMessageWithPlaceholders(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ChatMessageWithPlaceholders(
             global::Langfuse.ChatMessage? chatMessage,
@@ -141,23 +141,23 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             PlaceholderMessage as object ??
-            ChatMessage as object 
+            ChatMessage as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             ChatMessage?.ToString() ??
-            PlaceholderMessage?.ToString() 
+            PlaceholderMessage?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Langfuse.ChatMessage, TResult>? chatMessage = null,
@@ -190,7 +190,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Langfuse.ChatMessage>? chatMessage = null,
@@ -214,7 +214,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Langfuse.ChatMessage>? chatMessage = null,
@@ -237,7 +237,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(ChatMessageWithPlaceholders other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.ChatMessage?>.Default.Equals(ChatMessage, other.ChatMessage) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.PlaceholderMessage?>.Default.Equals(PlaceholderMessage, other.PlaceholderMessage) 
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.PlaceholderMessage?>.Default.Equals(PlaceholderMessage, other.PlaceholderMessage)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(ChatMessageWithPlaceholders obj1, ChatMessageWithPlaceholders obj2)
         {
@@ -277,7 +277,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(ChatMessageWithPlaceholders obj1, ChatMessageWithPlaceholders obj2)
         {
@@ -285,7 +285,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

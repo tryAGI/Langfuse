@@ -4,32 +4,32 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum LlmAdapter
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Anthropic,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Azure,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Bedrock,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GoogleAiStudio,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         GoogleVertexAi,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Openai,
     }

@@ -4,12 +4,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UnstablePublicEvaluatorOutputDefinitionVariant2DataType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Boolean,
     }

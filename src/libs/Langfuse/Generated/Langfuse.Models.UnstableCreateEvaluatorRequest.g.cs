@@ -13,7 +13,7 @@ namespace Langfuse
     public readonly partial struct UnstableCreateEvaluatorRequest : global::System.IEquatable<UnstableCreateEvaluatorRequest>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>? UnstableCreateEvaluatorRequestVariant1 { get; init; }
@@ -22,7 +22,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableCreateEvaluatorRequestVariant1))]
@@ -30,7 +30,7 @@ namespace Langfuse
         public bool IsUnstableCreateEvaluatorRequestVariant1 => UnstableCreateEvaluatorRequestVariant1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickUnstableCreateEvaluatorRequestVariant1(
 #if NET6_0_OR_GREATER
@@ -43,14 +43,14 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest> PickUnstableCreateEvaluatorRequestVariant1() => IsUnstableCreateEvaluatorRequestVariant1
             ? UnstableCreateEvaluatorRequestVariant1!.Value
             : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableCreateEvaluatorRequestVariant1' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest>? UnstableCreateEvaluatorRequestVariant2 { get; init; }
@@ -59,7 +59,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableCreateEvaluatorRequestVariant2))]
@@ -67,7 +67,7 @@ namespace Langfuse
         public bool IsUnstableCreateEvaluatorRequestVariant2 => UnstableCreateEvaluatorRequestVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickUnstableCreateEvaluatorRequestVariant2(
 #if NET6_0_OR_GREATER
@@ -80,23 +80,23 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest> PickUnstableCreateEvaluatorRequestVariant2() => IsUnstableCreateEvaluatorRequestVariant2
             ? UnstableCreateEvaluatorRequestVariant2!.Value
             : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableCreateEvaluatorRequestVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator UnstableCreateEvaluatorRequest(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest> value) => new UnstableCreateEvaluatorRequest((global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>?(UnstableCreateEvaluatorRequest @this) => @this.UnstableCreateEvaluatorRequestVariant1;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableCreateEvaluatorRequest(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>? value)
         {
@@ -104,22 +104,22 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static UnstableCreateEvaluatorRequest FromUnstableCreateEvaluatorRequestVariant1(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>? value) => new UnstableCreateEvaluatorRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator UnstableCreateEvaluatorRequest(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest> value) => new UnstableCreateEvaluatorRequest((global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest>?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest>?(UnstableCreateEvaluatorRequest @this) => @this.UnstableCreateEvaluatorRequestVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableCreateEvaluatorRequest(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest>? value)
         {
@@ -127,12 +127,12 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static UnstableCreateEvaluatorRequest FromUnstableCreateEvaluatorRequestVariant2(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest>? value) => new UnstableCreateEvaluatorRequest(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableCreateEvaluatorRequest(
             global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>? unstableCreateEvaluatorRequestVariant1,
@@ -144,23 +144,23 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             UnstableCreateEvaluatorRequestVariant2 as object ??
-            UnstableCreateEvaluatorRequestVariant1 as object 
+            UnstableCreateEvaluatorRequestVariant1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             UnstableCreateEvaluatorRequestVariant1?.ToString() ??
-            UnstableCreateEvaluatorRequestVariant2?.ToString() 
+            UnstableCreateEvaluatorRequestVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -168,7 +168,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>?, TResult>? unstableCreateEvaluatorRequestVariant1 = null,
@@ -193,7 +193,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>?>? unstableCreateEvaluatorRequestVariant1 = null,
@@ -217,7 +217,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>?>? unstableCreateEvaluatorRequestVariant1 = null,
@@ -240,7 +240,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -261,18 +261,18 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(UnstableCreateEvaluatorRequest other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>?>.Default.Equals(UnstableCreateEvaluatorRequestVariant1, other.UnstableCreateEvaluatorRequestVariant1) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest>?>.Default.Equals(UnstableCreateEvaluatorRequestVariant2, other.UnstableCreateEvaluatorRequestVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest>?>.Default.Equals(UnstableCreateEvaluatorRequestVariant2, other.UnstableCreateEvaluatorRequestVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(UnstableCreateEvaluatorRequest obj1, UnstableCreateEvaluatorRequest obj2)
         {
@@ -280,7 +280,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(UnstableCreateEvaluatorRequest obj1, UnstableCreateEvaluatorRequest obj2)
         {
@@ -288,7 +288,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

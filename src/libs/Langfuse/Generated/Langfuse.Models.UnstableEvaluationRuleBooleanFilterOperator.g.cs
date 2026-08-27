@@ -4,16 +4,16 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UnstableEvaluationRuleBooleanFilterOperator
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         x__,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eq,
     }

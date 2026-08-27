@@ -4,7 +4,7 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class ScoresV3GetManyV3Response2
     {

@@ -9,11 +9,11 @@ namespace Langfuse
     public enum UnstableCodeEvaluatorSourceCodeLanguage
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Python,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Typescript,
     }

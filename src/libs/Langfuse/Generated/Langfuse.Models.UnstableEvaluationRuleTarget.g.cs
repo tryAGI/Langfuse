@@ -15,11 +15,11 @@ namespace Langfuse
     public enum UnstableEvaluationRuleTarget
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Experiment,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Observation,
     }

@@ -4,12 +4,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UnstableDashboardPlacementVariant2Type
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Preset,
     }

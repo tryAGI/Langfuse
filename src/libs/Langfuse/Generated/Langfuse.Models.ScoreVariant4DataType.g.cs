@@ -4,12 +4,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ScoreVariant4DataType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Correction,
     }

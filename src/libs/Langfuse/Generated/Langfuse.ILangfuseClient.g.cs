@@ -45,148 +45,148 @@ namespace Langfuse
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         global::System.Text.Json.Serialization.JsonSerializerContext JsonSerializerContext { get; set; }
 
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public AnnotationQueuesClient AnnotationQueues { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public BlobStorageIntegrationsClient BlobStorageIntegrations { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CommentsClient Comments { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DatasetItemsClient DatasetItems { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public DatasetsClient Datasets { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ExperimentsClient Experiments { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public FeedbackClient Feedback { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public HealthClient Health { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public LegacyScoreV1Client LegacyScoreV1 { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public LlmConnectionsClient LlmConnections { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MediaClient Media { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public MetricsClient Metrics { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ModelsClient Models { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ObservationsClient Observations { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OpentelemetryClient Opentelemetry { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public OrganizationsClient Organizations { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ProjectsClient Projects { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PromptVersionClient PromptVersion { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PromptsClient Prompts { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScimClient Scim { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScoreConfigsClient ScoreConfigs { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScoresClient Scores { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public ScoresV3Client ScoresV3 { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TraceClient Trace { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableDashboardWidgetsClient UnstableDashboardWidgets { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableDashboardsClient UnstableDashboards { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableEvaluationRulesClient UnstableEvaluationRules { get; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableEvaluatorsClient UnstableEvaluators { get; }
 

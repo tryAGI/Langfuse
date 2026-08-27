@@ -10,23 +10,23 @@ namespace Langfuse
     public enum UnstableDashboardWidgetViewWithLegacy
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Observations,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ScoresBoolean,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ScoresCategorical,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         ScoresNumeric,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Traces,
     }

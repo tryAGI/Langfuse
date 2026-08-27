@@ -4,12 +4,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetScoresResponseDataVariant3DataType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Boolean,
     }

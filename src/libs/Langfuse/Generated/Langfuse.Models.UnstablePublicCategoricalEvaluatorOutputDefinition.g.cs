@@ -4,7 +4,7 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class UnstablePublicCategoricalEvaluatorOutputDefinition
     {
@@ -21,14 +21,14 @@ namespace Langfuse
         public required global::Langfuse.UnstableEvaluatorOutputDataType DataType { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("reasoning")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required global::Langfuse.UnstableEvaluatorOutputFieldDefinition Reasoning { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("score")]
         [global::System.Text.Json.Serialization.JsonRequired]

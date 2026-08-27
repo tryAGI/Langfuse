@@ -5,7 +5,7 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public readonly partial struct IngestionUsage : global::System.IEquatable<IngestionUsage>
     {
@@ -19,7 +19,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Usage))]
@@ -27,7 +27,7 @@ namespace Langfuse
         public bool IsUsage => Usage != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickUsage(
 #if NET6_0_OR_GREATER
@@ -40,7 +40,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.Usage PickUsage() => IsUsage
             ? Usage!
@@ -56,7 +56,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(OpenAIUsage))]
@@ -64,7 +64,7 @@ namespace Langfuse
         public bool IsOpenAIUsage => OpenAIUsage != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickOpenAIUsage(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.OpenAIUsage PickOpenAIUsage() => IsOpenAIUsage
             ? OpenAIUsage!
             : throw new global::System.InvalidOperationException($"Expected union variant 'OpenAIUsage' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator IngestionUsage(global::Langfuse.Usage value) => new IngestionUsage((global::Langfuse.Usage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.Usage?(IngestionUsage @this) => @this.Usage;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IngestionUsage(global::Langfuse.Usage? value)
         {
@@ -101,22 +101,22 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IngestionUsage FromUsage(global::Langfuse.Usage? value) => new IngestionUsage(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator IngestionUsage(global::Langfuse.OpenAIUsage value) => new IngestionUsage((global::Langfuse.OpenAIUsage?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.OpenAIUsage?(IngestionUsage @this) => @this.OpenAIUsage;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IngestionUsage(global::Langfuse.OpenAIUsage? value)
         {
@@ -124,12 +124,12 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static IngestionUsage FromOpenAIUsage(global::Langfuse.OpenAIUsage? value) => new IngestionUsage(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public IngestionUsage(
             global::Langfuse.Usage? usage,
@@ -141,23 +141,23 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             OpenAIUsage as object ??
-            Usage as object 
+            Usage as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             Usage?.ToString() ??
-            OpenAIUsage?.ToString() 
+            OpenAIUsage?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Langfuse.Usage, TResult>? usage = null,
@@ -190,7 +190,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Langfuse.Usage>? usage = null,
@@ -214,7 +214,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Langfuse.Usage>? usage = null,
@@ -237,7 +237,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(IngestionUsage other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.Usage?>.Default.Equals(Usage, other.Usage) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.OpenAIUsage?>.Default.Equals(OpenAIUsage, other.OpenAIUsage) 
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.OpenAIUsage?>.Default.Equals(OpenAIUsage, other.OpenAIUsage)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(IngestionUsage obj1, IngestionUsage obj2)
         {
@@ -277,7 +277,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(IngestionUsage obj1, IngestionUsage obj2)
         {
@@ -285,7 +285,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

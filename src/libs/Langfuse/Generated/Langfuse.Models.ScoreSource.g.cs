@@ -4,20 +4,20 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ScoreSource
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Annotation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Api,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eval,
     }

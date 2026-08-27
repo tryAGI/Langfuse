@@ -16,7 +16,7 @@ namespace Langfuse
         public required global::System.Collections.Generic.IList<global::Langfuse.UnstableReadableEvaluationRule> Data { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
         [global::System.Text.Json.Serialization.JsonRequired]

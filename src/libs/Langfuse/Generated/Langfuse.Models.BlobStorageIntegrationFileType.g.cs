@@ -9,19 +9,19 @@ namespace Langfuse
     public enum BlobStorageIntegrationFileType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Csv,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Json,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Jsonl,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Parquet,
     }

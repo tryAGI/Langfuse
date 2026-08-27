@@ -4,28 +4,28 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UnstableEvaluationRuleStringFilterOperator
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Eq,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Contains,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         DoesNotContain,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         EndsWith,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         StartsWith,
     }

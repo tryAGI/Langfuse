@@ -4,12 +4,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum GetScoresResponseDataVariant2DataType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Categorical,
     }

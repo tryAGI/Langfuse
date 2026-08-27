@@ -20,7 +20,7 @@ namespace Langfuse
     public readonly partial struct UnstableEvaluator : global::System.IEquatable<UnstableEvaluator>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant12, global::Langfuse.UnstableLlmAsJudgeEvaluator>? UnstableEvaluatorVariant1 { get; init; }
@@ -29,7 +29,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableEvaluatorVariant1))]
@@ -37,7 +37,7 @@ namespace Langfuse
         public bool IsUnstableEvaluatorVariant1 => UnstableEvaluatorVariant1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickUnstableEvaluatorVariant1(
 #if NET6_0_OR_GREATER
@@ -50,14 +50,14 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant12, global::Langfuse.UnstableLlmAsJudgeEvaluator> PickUnstableEvaluatorVariant1() => IsUnstableEvaluatorVariant1
             ? UnstableEvaluatorVariant1!.Value
             : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableEvaluatorVariant1' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant22, global::Langfuse.UnstableCodeEvaluator>? UnstableEvaluatorVariant2 { get; init; }
@@ -66,7 +66,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableEvaluatorVariant2))]
@@ -74,7 +74,7 @@ namespace Langfuse
         public bool IsUnstableEvaluatorVariant2 => UnstableEvaluatorVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickUnstableEvaluatorVariant2(
 #if NET6_0_OR_GREATER
@@ -87,23 +87,23 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant22, global::Langfuse.UnstableCodeEvaluator> PickUnstableEvaluatorVariant2() => IsUnstableEvaluatorVariant2
             ? UnstableEvaluatorVariant2!.Value
             : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableEvaluatorVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator UnstableEvaluator(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant12, global::Langfuse.UnstableLlmAsJudgeEvaluator> value) => new UnstableEvaluator((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant12, global::Langfuse.UnstableLlmAsJudgeEvaluator>?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant12, global::Langfuse.UnstableLlmAsJudgeEvaluator>?(UnstableEvaluator @this) => @this.UnstableEvaluatorVariant1;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableEvaluator(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant12, global::Langfuse.UnstableLlmAsJudgeEvaluator>? value)
         {
@@ -111,22 +111,22 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static UnstableEvaluator FromUnstableEvaluatorVariant1(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant12, global::Langfuse.UnstableLlmAsJudgeEvaluator>? value) => new UnstableEvaluator(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator UnstableEvaluator(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant22, global::Langfuse.UnstableCodeEvaluator> value) => new UnstableEvaluator((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant22, global::Langfuse.UnstableCodeEvaluator>?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant22, global::Langfuse.UnstableCodeEvaluator>?(UnstableEvaluator @this) => @this.UnstableEvaluatorVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableEvaluator(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant22, global::Langfuse.UnstableCodeEvaluator>? value)
         {
@@ -134,12 +134,12 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static UnstableEvaluator FromUnstableEvaluatorVariant2(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant22, global::Langfuse.UnstableCodeEvaluator>? value) => new UnstableEvaluator(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public UnstableEvaluator(
             global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant12, global::Langfuse.UnstableLlmAsJudgeEvaluator>? unstableEvaluatorVariant1,
@@ -151,23 +151,23 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             UnstableEvaluatorVariant2 as object ??
-            UnstableEvaluatorVariant1 as object 
+            UnstableEvaluatorVariant1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             UnstableEvaluatorVariant1?.ToString() ??
-            UnstableEvaluatorVariant2?.ToString() 
+            UnstableEvaluatorVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -175,7 +175,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant12, global::Langfuse.UnstableLlmAsJudgeEvaluator>?, TResult>? unstableEvaluatorVariant1 = null,
@@ -200,7 +200,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant12, global::Langfuse.UnstableLlmAsJudgeEvaluator>?>? unstableEvaluatorVariant1 = null,
@@ -224,7 +224,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant12, global::Langfuse.UnstableLlmAsJudgeEvaluator>?>? unstableEvaluatorVariant1 = null,
@@ -247,7 +247,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -268,18 +268,18 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(UnstableEvaluator other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant12, global::Langfuse.UnstableLlmAsJudgeEvaluator>?>.Default.Equals(UnstableEvaluatorVariant1, other.UnstableEvaluatorVariant1) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant22, global::Langfuse.UnstableCodeEvaluator>?>.Default.Equals(UnstableEvaluatorVariant2, other.UnstableEvaluatorVariant2) 
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorVariant22, global::Langfuse.UnstableCodeEvaluator>?>.Default.Equals(UnstableEvaluatorVariant2, other.UnstableEvaluatorVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(UnstableEvaluator obj1, UnstableEvaluator obj2)
         {
@@ -287,7 +287,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(UnstableEvaluator obj1, UnstableEvaluator obj2)
         {
@@ -295,7 +295,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

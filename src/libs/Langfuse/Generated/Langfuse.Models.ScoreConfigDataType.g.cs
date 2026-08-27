@@ -4,24 +4,24 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ScoreConfigDataType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Boolean,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Categorical,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Numeric,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
     }

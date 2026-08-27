@@ -4,20 +4,20 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum BlobStorageIntegrationType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         AzureBlobStorage,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         S3,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         S3Compatible,
     }

@@ -11,11 +11,11 @@ namespace Langfuse
     public enum CreateScoreSource
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Annotation,
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Api,
     }

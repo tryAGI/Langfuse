@@ -4,12 +4,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum ScoreSubjectV3Variant3Kind
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Session,
     }

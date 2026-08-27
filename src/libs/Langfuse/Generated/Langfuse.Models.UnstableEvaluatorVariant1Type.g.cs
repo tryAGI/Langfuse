@@ -4,12 +4,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum UnstableEvaluatorVariant1Type
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         LlmAsJudge,
     }

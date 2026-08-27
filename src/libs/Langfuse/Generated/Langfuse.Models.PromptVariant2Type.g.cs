@@ -4,12 +4,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum PromptVariant2Type
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
     }

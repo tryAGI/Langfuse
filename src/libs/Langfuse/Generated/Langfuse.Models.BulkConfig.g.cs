@@ -4,26 +4,26 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public sealed partial class BulkConfig
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("supported")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Supported { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("maxOperations")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required int MaxOperations { get; set; }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("maxPayloadSize")]
         [global::System.Text.Json.Serialization.JsonRequired]

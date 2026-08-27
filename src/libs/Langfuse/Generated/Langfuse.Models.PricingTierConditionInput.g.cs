@@ -19,7 +19,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PricingTierUsageConditionInput))]
@@ -27,7 +27,7 @@ namespace Langfuse
         public bool IsPricingTierUsageConditionInput => PricingTierUsageConditionInput != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickPricingTierUsageConditionInput(
 #if NET6_0_OR_GREATER
@@ -40,7 +40,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.PricingTierUsageConditionInput PickPricingTierUsageConditionInput() => IsPricingTierUsageConditionInput
             ? PricingTierUsageConditionInput!
@@ -56,7 +56,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PricingTierAttributeCondition))]
@@ -64,7 +64,7 @@ namespace Langfuse
         public bool IsPricingTierAttributeCondition => PricingTierAttributeCondition != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickPricingTierAttributeCondition(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public global::Langfuse.PricingTierAttributeCondition PickPricingTierAttributeCondition() => IsPricingTierAttributeCondition
             ? PricingTierAttributeCondition!
             : throw new global::System.InvalidOperationException($"Expected union variant 'PricingTierAttributeCondition' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator PricingTierConditionInput(global::Langfuse.PricingTierUsageConditionInput value) => new PricingTierConditionInput((global::Langfuse.PricingTierUsageConditionInput?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.PricingTierUsageConditionInput?(PricingTierConditionInput @this) => @this.PricingTierUsageConditionInput;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PricingTierConditionInput(global::Langfuse.PricingTierUsageConditionInput? value)
         {
@@ -101,22 +101,22 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static PricingTierConditionInput FromPricingTierUsageConditionInput(global::Langfuse.PricingTierUsageConditionInput? value) => new PricingTierConditionInput(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator PricingTierConditionInput(global::Langfuse.PricingTierAttributeCondition value) => new PricingTierConditionInput((global::Langfuse.PricingTierAttributeCondition?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator global::Langfuse.PricingTierAttributeCondition?(PricingTierConditionInput @this) => @this.PricingTierAttributeCondition;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PricingTierConditionInput(global::Langfuse.PricingTierAttributeCondition? value)
         {
@@ -124,12 +124,12 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static PricingTierConditionInput FromPricingTierAttributeCondition(global::Langfuse.PricingTierAttributeCondition? value) => new PricingTierConditionInput(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public PricingTierConditionInput(
             global::Langfuse.PricingTierUsageConditionInput? pricingTierUsageConditionInput,
@@ -141,23 +141,23 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             PricingTierAttributeCondition as object ??
-            PricingTierUsageConditionInput as object 
+            PricingTierUsageConditionInput as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             PricingTierUsageConditionInput?.ToString() ??
-            PricingTierAttributeCondition?.ToString() 
+            PricingTierAttributeCondition?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Langfuse.PricingTierUsageConditionInput, TResult>? pricingTierUsageConditionInput = null,
@@ -190,7 +190,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<global::Langfuse.PricingTierUsageConditionInput>? pricingTierUsageConditionInput = null,
@@ -214,7 +214,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<global::Langfuse.PricingTierUsageConditionInput>? pricingTierUsageConditionInput = null,
@@ -237,7 +237,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(PricingTierConditionInput other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.PricingTierUsageConditionInput?>.Default.Equals(PricingTierUsageConditionInput, other.PricingTierUsageConditionInput) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.PricingTierAttributeCondition?>.Default.Equals(PricingTierAttributeCondition, other.PricingTierAttributeCondition) 
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.PricingTierAttributeCondition?>.Default.Equals(PricingTierAttributeCondition, other.PricingTierAttributeCondition)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(PricingTierConditionInput obj1, PricingTierConditionInput obj2)
         {
@@ -277,7 +277,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(PricingTierConditionInput obj1, PricingTierConditionInput obj2)
         {
@@ -285,7 +285,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

@@ -4,12 +4,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateChatPromptType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Chat,
     }

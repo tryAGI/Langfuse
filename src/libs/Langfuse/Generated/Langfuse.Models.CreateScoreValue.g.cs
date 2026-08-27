@@ -10,7 +10,7 @@ namespace Langfuse
     public readonly partial struct CreateScoreValue : global::System.IEquatable<CreateScoreValue>
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public double? CreateScoreValueVariant1 { get; init; }
@@ -19,7 +19,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CreateScoreValueVariant1))]
@@ -27,7 +27,7 @@ namespace Langfuse
         public bool IsCreateScoreValueVariant1 => CreateScoreValueVariant1 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickCreateScoreValueVariant1(
 #if NET6_0_OR_GREATER
@@ -40,14 +40,14 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public double PickCreateScoreValueVariant1() => IsCreateScoreValueVariant1
             ? CreateScoreValueVariant1!.Value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CreateScoreValueVariant1' but the value was {ToString()}.");
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         public string? CreateScoreValueVariant2 { get; init; }
@@ -56,7 +56,7 @@ namespace Langfuse
 #endif
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
 #if NET6_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CreateScoreValueVariant2))]
@@ -64,7 +64,7 @@ namespace Langfuse
         public bool IsCreateScoreValueVariant2 => CreateScoreValueVariant2 != null;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool TryPickCreateScoreValueVariant2(
 #if NET6_0_OR_GREATER
@@ -77,23 +77,23 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public string PickCreateScoreValueVariant2() => IsCreateScoreValueVariant2
             ? CreateScoreValueVariant2!
             : throw new global::System.InvalidOperationException($"Expected union variant 'CreateScoreValueVariant2' but the value was {ToString()}.");
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator CreateScoreValue(double value) => new CreateScoreValue((double?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator double?(CreateScoreValue @this) => @this.CreateScoreValueVariant1;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CreateScoreValue(double? value)
         {
@@ -101,22 +101,22 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static CreateScoreValue FromCreateScoreValueVariant1(double? value) => new CreateScoreValue(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator CreateScoreValue(string value) => new CreateScoreValue((string?)value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static implicit operator string?(CreateScoreValue @this) => @this.CreateScoreValueVariant2;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CreateScoreValue(string? value)
         {
@@ -124,12 +124,12 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static CreateScoreValue FromCreateScoreValueVariant2(string? value) => new CreateScoreValue(value);
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public CreateScoreValue(
             double? createScoreValueVariant1,
@@ -141,23 +141,23 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public object? Object =>
             CreateScoreValueVariant2 as object ??
-            CreateScoreValueVariant1 as object 
+            CreateScoreValueVariant1 as object
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override string? ToString() =>
             CreateScoreValueVariant1?.ToString() ??
-            CreateScoreValueVariant2?.ToString() 
+            CreateScoreValueVariant2?.ToString()
             ;
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Validate()
         {
@@ -165,7 +165,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<double?, TResult>? createScoreValueVariant1 = null,
@@ -190,7 +190,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Match(
             global::System.Action<double?>? createScoreValueVariant1 = null,
@@ -214,7 +214,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public void Switch(
             global::System.Action<double?>? createScoreValueVariant1 = null,
@@ -237,7 +237,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override int GetHashCode()
         {
@@ -258,18 +258,18 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public bool Equals(CreateScoreValue other)
         {
             return
                 global::System.Collections.Generic.EqualityComparer<double?>.Default.Equals(CreateScoreValueVariant1, other.CreateScoreValueVariant1) &&
-                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(CreateScoreValueVariant2, other.CreateScoreValueVariant2) 
+                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(CreateScoreValueVariant2, other.CreateScoreValueVariant2)
                 ;
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator ==(CreateScoreValue obj1, CreateScoreValue obj2)
         {
@@ -277,7 +277,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public static bool operator !=(CreateScoreValue obj1, CreateScoreValue obj2)
         {
@@ -285,7 +285,7 @@ namespace Langfuse
         }
 
         /// <summary>
-        /// 
+        ///
         /// </summary>
         public override bool Equals(object? obj)
         {

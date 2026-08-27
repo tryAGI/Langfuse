@@ -4,12 +4,12 @@
 namespace Langfuse
 {
     /// <summary>
-    /// 
+    ///
     /// </summary>
     public enum CreateTextPromptType
     {
         /// <summary>
-        /// 
+        ///
         /// </summary>
         Text,
     }
