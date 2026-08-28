@@ -11,7 +11,7 @@ namespace Langfuse
     /// - If you only want to rename the rule or change sampling, send just those fields.<br/>
     /// - To add, remove, or remap evaluators, send `evaluators`. It replaces the whole assignment set, so include every evaluator the rule should keep.<br/>
     /// - `evaluators` cannot be combined with the deprecated `evaluator`/`mapping` pair, which only ever addressed the first assignment.<br/>
-    /// - If you change to an LLM-as-judge `evaluator`, send a fresh `mapping` unless you are certain the existing mapping still matches the evaluator variables.<br/>
+    /// - If you change to an LLM-as-judge `evaluator`, send a fresh `mapping` unless you are certain the existing mapping still matches the prompt variables.<br/>
     /// - If you change `target` for an LLM-as-judge rule, usually send both `filter` and `mapping` in the same request.<br/>
     /// - For code evaluator rules, omit `mapping`; Langfuse stores the fixed code runtime mapping automatically.<br/>
     /// - If you change an experiment `datasetId` filter, call `GET /api/public/v2/datasets` and use dataset `id` values from that response.
@@ -77,7 +77,7 @@ namespace Langfuse
         /// Do not send this field for code evaluator rules. Langfuse stores the fixed code runtime mapping automatically and returns it in the response.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mapping")]
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleMapping>? Mapping { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstablePromptVariableMappingInput>? Mapping { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -135,7 +135,7 @@ namespace Langfuse
             bool? enabled,
             double? sampling,
             global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleFilter>? filter,
-            global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleMapping>? mapping)
+            global::System.Collections.Generic.IList<global::Langfuse.UnstablePromptVariableMappingInput>? mapping)
         {
             this.Name = name;
             this.Evaluators = evaluators;

@@ -4,7 +4,7 @@
 namespace Langfuse
 {
     /// <summary>
-    ///
+    /// **Deprecated:** Evaluator assignment on a legacy trace or dataset rule.
     /// </summary>
     public sealed partial class UnstableLegacyEvaluationRuleEvaluatorAssignment
     {
@@ -21,7 +21,7 @@ namespace Langfuse
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mapping")]
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableLegacyEvaluationRuleMapping>? Mapping { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableLegacyPromptVariableMapping>? Mapping { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -43,7 +43,7 @@ namespace Langfuse
 #endif
         public UnstableLegacyEvaluationRuleEvaluatorAssignment(
             global::Langfuse.UnstableEvaluationRuleEvaluator evaluator,
-            global::System.Collections.Generic.IList<global::Langfuse.UnstableLegacyEvaluationRuleMapping>? mapping)
+            global::System.Collections.Generic.IList<global::Langfuse.UnstableLegacyPromptVariableMapping>? mapping)
         {
             this.Evaluator = evaluator ?? throw new global::System.ArgumentNullException(nameof(evaluator));
             this.Mapping = mapping;

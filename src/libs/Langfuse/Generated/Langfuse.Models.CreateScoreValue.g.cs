@@ -13,75 +13,75 @@ namespace Langfuse
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public double? CreateScoreValueVariant1 { get; init; }
+        public double? DoubleNumber { get; init; }
 #else
-        public double? CreateScoreValueVariant1 { get; }
+        public double? DoubleNumber { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CreateScoreValueVariant1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(DoubleNumber))]
 #endif
-        public bool IsCreateScoreValueVariant1 => CreateScoreValueVariant1 != null;
+        public bool IsDoubleNumber => DoubleNumber != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickCreateScoreValueVariant1(
+        public bool TryPickDoubleNumber(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
             out double? value)
         {
-            value = CreateScoreValueVariant1;
-            return IsCreateScoreValueVariant1;
+            value = DoubleNumber;
+            return IsDoubleNumber;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public double PickCreateScoreValueVariant1() => IsCreateScoreValueVariant1
-            ? CreateScoreValueVariant1!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'CreateScoreValueVariant1' but the value was {ToString()}.");
+        public double PickDoubleNumber() => IsDoubleNumber
+            ? DoubleNumber!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'DoubleNumber' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public string? CreateScoreValueVariant2 { get; init; }
+        public string? String { get; init; }
 #else
-        public string? CreateScoreValueVariant2 { get; }
+        public string? String { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CreateScoreValueVariant2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(String))]
 #endif
-        public bool IsCreateScoreValueVariant2 => CreateScoreValueVariant2 != null;
+        public bool IsString => String != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickCreateScoreValueVariant2(
+        public bool TryPickString(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
             out string? value)
         {
-            value = CreateScoreValueVariant2;
-            return IsCreateScoreValueVariant2;
+            value = String;
+            return IsString;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public string PickCreateScoreValueVariant2() => IsCreateScoreValueVariant2
-            ? CreateScoreValueVariant2!
-            : throw new global::System.InvalidOperationException($"Expected union variant 'CreateScoreValueVariant2' but the value was {ToString()}.");
+        public string PickString() => IsString
+            ? String!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'String' but the value was {ToString()}.");
         /// <summary>
         ///
         /// </summary>
@@ -90,20 +90,20 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator double?(CreateScoreValue @this) => @this.CreateScoreValueVariant1;
+        public static implicit operator double?(CreateScoreValue @this) => @this.DoubleNumber;
 
         /// <summary>
         ///
         /// </summary>
         public CreateScoreValue(double? value)
         {
-            CreateScoreValueVariant1 = value;
+            DoubleNumber = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static CreateScoreValue FromCreateScoreValueVariant1(double? value) => new CreateScoreValue(value);
+        public static CreateScoreValue FromDoubleNumber(double? value) => new CreateScoreValue(value);
 
         /// <summary>
         ///
@@ -113,47 +113,47 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator string?(CreateScoreValue @this) => @this.CreateScoreValueVariant2;
+        public static implicit operator string?(CreateScoreValue @this) => @this.String;
 
         /// <summary>
         ///
         /// </summary>
         public CreateScoreValue(string? value)
         {
-            CreateScoreValueVariant2 = value;
+            String = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static CreateScoreValue FromCreateScoreValueVariant2(string? value) => new CreateScoreValue(value);
+        public static CreateScoreValue FromString(string? value) => new CreateScoreValue(value);
 
         /// <summary>
         ///
         /// </summary>
         public CreateScoreValue(
-            double? createScoreValueVariant1,
-            string? createScoreValueVariant2
+            double? doubleNumber,
+            string? @string
             )
         {
-            CreateScoreValueVariant1 = createScoreValueVariant1;
-            CreateScoreValueVariant2 = createScoreValueVariant2;
+            DoubleNumber = doubleNumber;
+            String = @string;
         }
 
         /// <summary>
         ///
         /// </summary>
         public object? Object =>
-            CreateScoreValueVariant2 as object ??
-            CreateScoreValueVariant1 as object
+            String as object ??
+            DoubleNumber as object
             ;
 
         /// <summary>
         ///
         /// </summary>
         public override string? ToString() =>
-            CreateScoreValueVariant1?.ToString() ??
-            CreateScoreValueVariant2?.ToString()
+            DoubleNumber?.ToString() ??
+            String?.ToString()
             ;
 
         /// <summary>
@@ -161,15 +161,15 @@ namespace Langfuse
         /// </summary>
         public bool Validate()
         {
-            return IsCreateScoreValueVariant1 && !IsCreateScoreValueVariant2 || !IsCreateScoreValueVariant1 && IsCreateScoreValueVariant2;
+            return IsDoubleNumber && !IsString || !IsDoubleNumber && IsString;
         }
 
         /// <summary>
         ///
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<double?, TResult>? createScoreValueVariant1 = null,
-            global::System.Func<string, TResult>? createScoreValueVariant2 = null,
+            global::System.Func<double?, TResult>? doubleNumber = null,
+            global::System.Func<string, TResult>? @string = null,
             bool validate = true)
         {
             if (validate)
@@ -177,13 +177,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsCreateScoreValueVariant1 && createScoreValueVariant1 != null)
+            if (IsDoubleNumber && doubleNumber != null)
             {
-                return createScoreValueVariant1(CreateScoreValueVariant1!);
+                return doubleNumber(DoubleNumber!);
             }
-            else if (IsCreateScoreValueVariant2 && createScoreValueVariant2 != null)
+            else if (IsString && @string != null)
             {
-                return createScoreValueVariant2(CreateScoreValueVariant2!);
+                return @string(String!);
             }
 
             return default(TResult);
@@ -193,9 +193,9 @@ namespace Langfuse
         ///
         /// </summary>
         public void Match(
-            global::System.Action<double?>? createScoreValueVariant1 = null,
+            global::System.Action<double?>? doubleNumber = null,
 
-            global::System.Action<string>? createScoreValueVariant2 = null,
+            global::System.Action<string>? @string = null,
             bool validate = true)
         {
             if (validate)
@@ -203,13 +203,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsCreateScoreValueVariant1)
+            if (IsDoubleNumber)
             {
-                createScoreValueVariant1?.Invoke(CreateScoreValueVariant1!);
+                doubleNumber?.Invoke(DoubleNumber!);
             }
-            else if (IsCreateScoreValueVariant2)
+            else if (IsString)
             {
-                createScoreValueVariant2?.Invoke(CreateScoreValueVariant2!);
+                @string?.Invoke(String!);
             }
         }
 
@@ -217,8 +217,8 @@ namespace Langfuse
         ///
         /// </summary>
         public void Switch(
-            global::System.Action<double?>? createScoreValueVariant1 = null,
-            global::System.Action<string>? createScoreValueVariant2 = null,
+            global::System.Action<double?>? doubleNumber = null,
+            global::System.Action<string>? @string = null,
             bool validate = true)
         {
             if (validate)
@@ -226,13 +226,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsCreateScoreValueVariant1)
+            if (IsDoubleNumber)
             {
-                createScoreValueVariant1?.Invoke(CreateScoreValueVariant1!);
+                doubleNumber?.Invoke(DoubleNumber!);
             }
-            else if (IsCreateScoreValueVariant2)
+            else if (IsString)
             {
-                createScoreValueVariant2?.Invoke(CreateScoreValueVariant2!);
+                @string?.Invoke(String!);
             }
         }
 
@@ -243,9 +243,9 @@ namespace Langfuse
         {
             var fields = new object?[]
             {
-                CreateScoreValueVariant1,
+                DoubleNumber,
                 typeof(double),
-                CreateScoreValueVariant2,
+                String,
                 typeof(string),
             };
             const int offset = unchecked((int)2166136261);
@@ -263,8 +263,8 @@ namespace Langfuse
         public bool Equals(CreateScoreValue other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<double?>.Default.Equals(CreateScoreValueVariant1, other.CreateScoreValueVariant1) &&
-                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(CreateScoreValueVariant2, other.CreateScoreValueVariant2)
+                global::System.Collections.Generic.EqualityComparer<double?>.Default.Equals(DoubleNumber, other.DoubleNumber) &&
+                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(String, other.String)
                 ;
         }
 

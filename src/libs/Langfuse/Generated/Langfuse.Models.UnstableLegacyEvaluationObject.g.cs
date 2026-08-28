@@ -4,7 +4,7 @@
 namespace Langfuse
 {
     /// <summary>
-    ///
+    /// **Deprecated:** Legacy Langfuse object used by a trace or dataset evaluation rule.
     /// </summary>
     public enum UnstableLegacyEvaluationObject
     {
@@ -53,7 +53,7 @@ namespace Langfuse
         /// </summary>
         Tool,
         /// <summary>
-        ///
+        /// ** Legacy Langfuse object used by a trace or dataset evaluation rule.
         /// </summary>
         Trace,
     }

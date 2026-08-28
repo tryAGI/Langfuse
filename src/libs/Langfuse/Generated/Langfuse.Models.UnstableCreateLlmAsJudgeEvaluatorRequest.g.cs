@@ -52,7 +52,7 @@ namespace Langfuse
         /// Optional default variable mapping inherited by rule assignments that do not provide an override.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mapping")]
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleMapping>? Mapping { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstablePromptVariableMappingInput>? Mapping { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -98,7 +98,7 @@ namespace Langfuse
             string prompt,
             global::Langfuse.UnstableEvaluatorOutputDefinition outputDefinition,
             global::Langfuse.UnstableEvaluatorModelConfig? modelConfig,
-            global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleMapping>? mapping)
+            global::System.Collections.Generic.IList<global::Langfuse.UnstablePromptVariableMappingInput>? mapping)
         {
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Prompt = prompt ?? throw new global::System.ArgumentNullException(nameof(prompt));

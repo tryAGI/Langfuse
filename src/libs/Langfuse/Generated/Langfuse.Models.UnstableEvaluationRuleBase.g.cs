@@ -9,7 +9,7 @@ namespace Langfuse
     /// - which evaluator should be used<br/>
     /// - which target objects should trigger scoring<br/>
     /// - how often scoring should run<br/>
-    /// - which target fields should populate each evaluator variable<br/>
+    /// - which target fields should populate each prompt variable<br/>
     /// - whether the deployment is active, inactive, or paused<br/>
     /// Important status semantics:<br/>
     /// - `enabled` is the desired on/off setting from the client<br/>

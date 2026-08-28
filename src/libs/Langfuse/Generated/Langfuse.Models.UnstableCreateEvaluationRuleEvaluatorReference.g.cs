@@ -16,7 +16,7 @@ namespace Langfuse
         public required string Name { get; set; }
 
         /// <summary>
-        /// The evaluator engine type.<br/>
+        /// The evaluator type.<br/>
         /// The unstable public API supports LLM-as-a-judge and code evaluators.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("type")]
@@ -34,7 +34,7 @@ namespace Langfuse
         /// </summary>
         /// <param name="name"></param>
         /// <param name="type">
-        /// The evaluator engine type.<br/>
+        /// The evaluator type.<br/>
         /// The unstable public API supports LLM-as-a-judge and code evaluators.
         /// </param>
 #if NET7_0_OR_GREATER

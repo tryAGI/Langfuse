@@ -13,147 +13,147 @@ namespace Langfuse
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.PromptVariant12, global::Langfuse.ChatPrompt>? PromptVariant1 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt>? ChatPrompt { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.PromptVariant12, global::Langfuse.ChatPrompt>? PromptVariant1 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt>? ChatPrompt { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PromptVariant1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ChatPrompt))]
 #endif
-        public bool IsPromptVariant1 => PromptVariant1 != null;
+        public bool IsChatPrompt => ChatPrompt != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickPromptVariant1(
+        public bool TryPickChatPrompt(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.PromptVariant12, global::Langfuse.ChatPrompt>? value)
+            out global::Langfuse.AllOf<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt>? value)
         {
-            value = PromptVariant1;
-            return IsPromptVariant1;
+            value = ChatPrompt;
+            return IsChatPrompt;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.PromptVariant12, global::Langfuse.ChatPrompt> PickPromptVariant1() => IsPromptVariant1
-            ? PromptVariant1!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'PromptVariant1' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt> PickChatPrompt() => IsChatPrompt
+            ? ChatPrompt!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ChatPrompt' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt>? PromptVariant2 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.PromptTextPrompt2, global::Langfuse.TextPrompt>? TextPrompt { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt>? PromptVariant2 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.PromptTextPrompt2, global::Langfuse.TextPrompt>? TextPrompt { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(PromptVariant2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(TextPrompt))]
 #endif
-        public bool IsPromptVariant2 => PromptVariant2 != null;
+        public bool IsTextPrompt => TextPrompt != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickPromptVariant2(
+        public bool TryPickTextPrompt(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt>? value)
+            out global::Langfuse.AllOf<global::Langfuse.PromptTextPrompt2, global::Langfuse.TextPrompt>? value)
         {
-            value = PromptVariant2;
-            return IsPromptVariant2;
+            value = TextPrompt;
+            return IsTextPrompt;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt> PickPromptVariant2() => IsPromptVariant2
-            ? PromptVariant2!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'PromptVariant2' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.PromptTextPrompt2, global::Langfuse.TextPrompt> PickTextPrompt() => IsTextPrompt
+            ? TextPrompt!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'TextPrompt' but the value was {ToString()}.");
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator Prompt(global::Langfuse.AllOf<global::Langfuse.PromptVariant12, global::Langfuse.ChatPrompt> value) => new Prompt((global::Langfuse.AllOf<global::Langfuse.PromptVariant12, global::Langfuse.ChatPrompt>?)value);
+        public static implicit operator Prompt(global::Langfuse.AllOf<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt> value) => new Prompt((global::Langfuse.AllOf<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.PromptVariant12, global::Langfuse.ChatPrompt>?(Prompt @this) => @this.PromptVariant1;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt>?(Prompt @this) => @this.ChatPrompt;
 
         /// <summary>
         ///
         /// </summary>
-        public Prompt(global::Langfuse.AllOf<global::Langfuse.PromptVariant12, global::Langfuse.ChatPrompt>? value)
+        public Prompt(global::Langfuse.AllOf<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt>? value)
         {
-            PromptVariant1 = value;
+            ChatPrompt = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static Prompt FromPromptVariant1(global::Langfuse.AllOf<global::Langfuse.PromptVariant12, global::Langfuse.ChatPrompt>? value) => new Prompt(value);
+        public static Prompt FromChatPrompt(global::Langfuse.AllOf<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt>? value) => new Prompt(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator Prompt(global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt> value) => new Prompt((global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt>?)value);
+        public static implicit operator Prompt(global::Langfuse.AllOf<global::Langfuse.PromptTextPrompt2, global::Langfuse.TextPrompt> value) => new Prompt((global::Langfuse.AllOf<global::Langfuse.PromptTextPrompt2, global::Langfuse.TextPrompt>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt>?(Prompt @this) => @this.PromptVariant2;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.PromptTextPrompt2, global::Langfuse.TextPrompt>?(Prompt @this) => @this.TextPrompt;
 
         /// <summary>
         ///
         /// </summary>
-        public Prompt(global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt>? value)
+        public Prompt(global::Langfuse.AllOf<global::Langfuse.PromptTextPrompt2, global::Langfuse.TextPrompt>? value)
         {
-            PromptVariant2 = value;
+            TextPrompt = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static Prompt FromPromptVariant2(global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt>? value) => new Prompt(value);
+        public static Prompt FromTextPrompt(global::Langfuse.AllOf<global::Langfuse.PromptTextPrompt2, global::Langfuse.TextPrompt>? value) => new Prompt(value);
 
         /// <summary>
         ///
         /// </summary>
         public Prompt(
-            global::Langfuse.AllOf<global::Langfuse.PromptVariant12, global::Langfuse.ChatPrompt>? promptVariant1,
-            global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt>? promptVariant2
+            global::Langfuse.AllOf<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt>? chatPrompt,
+            global::Langfuse.AllOf<global::Langfuse.PromptTextPrompt2, global::Langfuse.TextPrompt>? textPrompt
             )
         {
-            PromptVariant1 = promptVariant1;
-            PromptVariant2 = promptVariant2;
+            ChatPrompt = chatPrompt;
+            TextPrompt = textPrompt;
         }
 
         /// <summary>
         ///
         /// </summary>
         public object? Object =>
-            PromptVariant2 as object ??
-            PromptVariant1 as object
+            TextPrompt as object ??
+            ChatPrompt as object
             ;
 
         /// <summary>
         ///
         /// </summary>
         public override string? ToString() =>
-            PromptVariant1?.ToString() ??
-            PromptVariant2?.ToString()
+            ChatPrompt?.ToString() ??
+            TextPrompt?.ToString()
             ;
 
         /// <summary>
@@ -161,15 +161,15 @@ namespace Langfuse
         /// </summary>
         public bool Validate()
         {
-            return IsPromptVariant1 && !IsPromptVariant2 || !IsPromptVariant1 && IsPromptVariant2;
+            return IsChatPrompt && !IsTextPrompt || !IsChatPrompt && IsTextPrompt;
         }
 
         /// <summary>
         ///
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.PromptVariant12, global::Langfuse.ChatPrompt>?, TResult>? promptVariant1 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt>?, TResult>? promptVariant2 = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt>?, TResult>? chatPrompt = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.PromptTextPrompt2, global::Langfuse.TextPrompt>?, TResult>? textPrompt = null,
             bool validate = true)
         {
             if (validate)
@@ -177,13 +177,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsPromptVariant1 && promptVariant1 != null)
+            if (IsChatPrompt && chatPrompt != null)
             {
-                return promptVariant1(PromptVariant1!);
+                return chatPrompt(ChatPrompt!);
             }
-            else if (IsPromptVariant2 && promptVariant2 != null)
+            else if (IsTextPrompt && textPrompt != null)
             {
-                return promptVariant2(PromptVariant2!);
+                return textPrompt(TextPrompt!);
             }
 
             return default(TResult);
@@ -193,9 +193,9 @@ namespace Langfuse
         ///
         /// </summary>
         public void Match(
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.PromptVariant12, global::Langfuse.ChatPrompt>?>? promptVariant1 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt>?>? chatPrompt = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt>?>? promptVariant2 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.PromptTextPrompt2, global::Langfuse.TextPrompt>?>? textPrompt = null,
             bool validate = true)
         {
             if (validate)
@@ -203,13 +203,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsPromptVariant1)
+            if (IsChatPrompt)
             {
-                promptVariant1?.Invoke(PromptVariant1!);
+                chatPrompt?.Invoke(ChatPrompt!);
             }
-            else if (IsPromptVariant2)
+            else if (IsTextPrompt)
             {
-                promptVariant2?.Invoke(PromptVariant2!);
+                textPrompt?.Invoke(TextPrompt!);
             }
         }
 
@@ -217,8 +217,8 @@ namespace Langfuse
         ///
         /// </summary>
         public void Switch(
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.PromptVariant12, global::Langfuse.ChatPrompt>?>? promptVariant1 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt>?>? promptVariant2 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt>?>? chatPrompt = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.PromptTextPrompt2, global::Langfuse.TextPrompt>?>? textPrompt = null,
             bool validate = true)
         {
             if (validate)
@@ -226,13 +226,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsPromptVariant1)
+            if (IsChatPrompt)
             {
-                promptVariant1?.Invoke(PromptVariant1!);
+                chatPrompt?.Invoke(ChatPrompt!);
             }
-            else if (IsPromptVariant2)
+            else if (IsTextPrompt)
             {
-                promptVariant2?.Invoke(PromptVariant2!);
+                textPrompt?.Invoke(TextPrompt!);
             }
         }
 
@@ -243,10 +243,10 @@ namespace Langfuse
         {
             var fields = new object?[]
             {
-                PromptVariant1,
-                typeof(global::Langfuse.AllOf<global::Langfuse.PromptVariant12, global::Langfuse.ChatPrompt>),
-                PromptVariant2,
-                typeof(global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt>),
+                ChatPrompt,
+                typeof(global::Langfuse.AllOf<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt>),
+                TextPrompt,
+                typeof(global::Langfuse.AllOf<global::Langfuse.PromptTextPrompt2, global::Langfuse.TextPrompt>),
             };
             const int offset = unchecked((int)2166136261);
             const int prime = 16777619;
@@ -263,8 +263,8 @@ namespace Langfuse
         public bool Equals(Prompt other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.PromptVariant12, global::Langfuse.ChatPrompt>?>.Default.Equals(PromptVariant1, other.PromptVariant1) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.PromptVariant22, global::Langfuse.TextPrompt>?>.Default.Equals(PromptVariant2, other.PromptVariant2)
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt>?>.Default.Equals(ChatPrompt, other.ChatPrompt) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.PromptTextPrompt2, global::Langfuse.TextPrompt>?>.Default.Equals(TextPrompt, other.TextPrompt)
                 ;
         }
 

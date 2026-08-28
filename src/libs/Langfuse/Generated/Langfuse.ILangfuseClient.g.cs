@@ -78,6 +78,16 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
+        public EvaluationRulesClient EvaluationRules { get; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public EvaluatorsClient Evaluators { get; }
+
+        /// <summary>
+        ///
+        /// </summary>
         public ExperimentsClient Experiments { get; }
 
         /// <summary>
@@ -179,16 +189,6 @@ namespace Langfuse
         ///
         /// </summary>
         public UnstableDashboardsClient UnstableDashboards { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public UnstableEvaluationRulesClient UnstableEvaluationRules { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public UnstableEvaluatorsClient UnstableEvaluators { get; }
 
     }
 }

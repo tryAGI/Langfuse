@@ -44,7 +44,7 @@ namespace Langfuse
         /// rather than on any one rule.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mapping")]
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleReadMapping>? Mapping { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstablePromptVariableMappingRead>? Mapping { get; set; }
 
         /// <summary>
         /// Number of evaluation rules in the project that currently use this evaluator.
@@ -115,7 +115,7 @@ namespace Langfuse
             int evaluationRuleCount,
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
-            global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleReadMapping>? mapping)
+            global::System.Collections.Generic.IList<global::Langfuse.UnstablePromptVariableMappingRead>? mapping)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));

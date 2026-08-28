@@ -13,659 +13,659 @@ namespace Langfuse
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>? IngestionEventVariant1 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent>? TraceEvent { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>? IngestionEventVariant1 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent>? TraceEvent { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IngestionEventVariant1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(TraceEvent))]
 #endif
-        public bool IsIngestionEventVariant1 => IngestionEventVariant1 != null;
+        public bool IsTraceEvent => TraceEvent != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickIngestionEventVariant1(
+        public bool TryPickTraceEvent(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>? value)
+            out global::Langfuse.AllOf<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent>? value)
         {
-            value = IngestionEventVariant1;
-            return IsIngestionEventVariant1;
+            value = TraceEvent;
+            return IsTraceEvent;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent> PickIngestionEventVariant1() => IsIngestionEventVariant1
-            ? IngestionEventVariant1!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'IngestionEventVariant1' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent> PickTraceEvent() => IsTraceEvent
+            ? TraceEvent!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'TraceEvent' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>? IngestionEventVariant2 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent>? ScoreEvent { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>? IngestionEventVariant2 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent>? ScoreEvent { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IngestionEventVariant2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ScoreEvent))]
 #endif
-        public bool IsIngestionEventVariant2 => IngestionEventVariant2 != null;
+        public bool IsScoreEvent => ScoreEvent != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickIngestionEventVariant2(
+        public bool TryPickScoreEvent(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>? value)
+            out global::Langfuse.AllOf<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent>? value)
         {
-            value = IngestionEventVariant2;
-            return IsIngestionEventVariant2;
+            value = ScoreEvent;
+            return IsScoreEvent;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent> PickIngestionEventVariant2() => IsIngestionEventVariant2
-            ? IngestionEventVariant2!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'IngestionEventVariant2' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent> PickScoreEvent() => IsScoreEvent
+            ? ScoreEvent!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ScoreEvent' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent>? IngestionEventVariant3 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateSpanEvent2, global::Langfuse.CreateSpanEvent>? CreateSpanEvent { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent>? IngestionEventVariant3 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateSpanEvent2, global::Langfuse.CreateSpanEvent>? CreateSpanEvent { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IngestionEventVariant3))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CreateSpanEvent))]
 #endif
-        public bool IsIngestionEventVariant3 => IngestionEventVariant3 != null;
+        public bool IsCreateSpanEvent => CreateSpanEvent != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickIngestionEventVariant3(
+        public bool TryPickCreateSpanEvent(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent>? value)
+            out global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateSpanEvent2, global::Langfuse.CreateSpanEvent>? value)
         {
-            value = IngestionEventVariant3;
-            return IsIngestionEventVariant3;
+            value = CreateSpanEvent;
+            return IsCreateSpanEvent;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent> PickIngestionEventVariant3() => IsIngestionEventVariant3
-            ? IngestionEventVariant3!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'IngestionEventVariant3' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateSpanEvent2, global::Langfuse.CreateSpanEvent> PickCreateSpanEvent() => IsCreateSpanEvent
+            ? CreateSpanEvent!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CreateSpanEvent' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>? IngestionEventVariant4 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateSpanEvent2, global::Langfuse.UpdateSpanEvent>? UpdateSpanEvent { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>? IngestionEventVariant4 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateSpanEvent2, global::Langfuse.UpdateSpanEvent>? UpdateSpanEvent { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IngestionEventVariant4))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UpdateSpanEvent))]
 #endif
-        public bool IsIngestionEventVariant4 => IngestionEventVariant4 != null;
+        public bool IsUpdateSpanEvent => UpdateSpanEvent != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickIngestionEventVariant4(
+        public bool TryPickUpdateSpanEvent(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>? value)
+            out global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateSpanEvent2, global::Langfuse.UpdateSpanEvent>? value)
         {
-            value = IngestionEventVariant4;
-            return IsIngestionEventVariant4;
+            value = UpdateSpanEvent;
+            return IsUpdateSpanEvent;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent> PickIngestionEventVariant4() => IsIngestionEventVariant4
-            ? IngestionEventVariant4!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'IngestionEventVariant4' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateSpanEvent2, global::Langfuse.UpdateSpanEvent> PickUpdateSpanEvent() => IsUpdateSpanEvent
+            ? UpdateSpanEvent!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UpdateSpanEvent' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent>? IngestionEventVariant5 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>? CreateGenerationEvent { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent>? IngestionEventVariant5 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>? CreateGenerationEvent { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IngestionEventVariant5))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CreateGenerationEvent))]
 #endif
-        public bool IsIngestionEventVariant5 => IngestionEventVariant5 != null;
+        public bool IsCreateGenerationEvent => CreateGenerationEvent != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickIngestionEventVariant5(
+        public bool TryPickCreateGenerationEvent(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent>? value)
+            out global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>? value)
         {
-            value = IngestionEventVariant5;
-            return IsIngestionEventVariant5;
+            value = CreateGenerationEvent;
+            return IsCreateGenerationEvent;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent> PickIngestionEventVariant5() => IsIngestionEventVariant5
-            ? IngestionEventVariant5!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'IngestionEventVariant5' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent> PickCreateGenerationEvent() => IsCreateGenerationEvent
+            ? CreateGenerationEvent!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CreateGenerationEvent' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>? IngestionEventVariant6 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>? UpdateGenerationEvent { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>? IngestionEventVariant6 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>? UpdateGenerationEvent { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IngestionEventVariant6))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UpdateGenerationEvent))]
 #endif
-        public bool IsIngestionEventVariant6 => IngestionEventVariant6 != null;
+        public bool IsUpdateGenerationEvent => UpdateGenerationEvent != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickIngestionEventVariant6(
+        public bool TryPickUpdateGenerationEvent(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>? value)
+            out global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>? value)
         {
-            value = IngestionEventVariant6;
-            return IsIngestionEventVariant6;
+            value = UpdateGenerationEvent;
+            return IsUpdateGenerationEvent;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent> PickIngestionEventVariant6() => IsIngestionEventVariant6
-            ? IngestionEventVariant6!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'IngestionEventVariant6' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent> PickUpdateGenerationEvent() => IsUpdateGenerationEvent
+            ? UpdateGenerationEvent!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UpdateGenerationEvent' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent>? IngestionEventVariant7 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>? CreateEventEvent { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent>? IngestionEventVariant7 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>? CreateEventEvent { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IngestionEventVariant7))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CreateEventEvent))]
 #endif
-        public bool IsIngestionEventVariant7 => IngestionEventVariant7 != null;
+        public bool IsCreateEventEvent => CreateEventEvent != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickIngestionEventVariant7(
+        public bool TryPickCreateEventEvent(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent>? value)
+            out global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>? value)
         {
-            value = IngestionEventVariant7;
-            return IsIngestionEventVariant7;
+            value = CreateEventEvent;
+            return IsCreateEventEvent;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent> PickIngestionEventVariant7() => IsIngestionEventVariant7
-            ? IngestionEventVariant7!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'IngestionEventVariant7' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent> PickCreateEventEvent() => IsCreateEventEvent
+            ? CreateEventEvent!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CreateEventEvent' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>? IngestionEventVariant8 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>? SDKLogEvent { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>? IngestionEventVariant8 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>? SDKLogEvent { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IngestionEventVariant8))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(SDKLogEvent))]
 #endif
-        public bool IsIngestionEventVariant8 => IngestionEventVariant8 != null;
+        public bool IsSDKLogEvent => SDKLogEvent != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickIngestionEventVariant8(
+        public bool TryPickSDKLogEvent(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>? value)
+            out global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>? value)
         {
-            value = IngestionEventVariant8;
-            return IsIngestionEventVariant8;
+            value = SDKLogEvent;
+            return IsSDKLogEvent;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent> PickIngestionEventVariant8() => IsIngestionEventVariant8
-            ? IngestionEventVariant8!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'IngestionEventVariant8' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent> PickSDKLogEvent() => IsSDKLogEvent
+            ? SDKLogEvent!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'SDKLogEvent' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent>? IngestionEventVariant9 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>? CreateObservationEvent { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent>? IngestionEventVariant9 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>? CreateObservationEvent { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IngestionEventVariant9))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CreateObservationEvent))]
 #endif
-        public bool IsIngestionEventVariant9 => IngestionEventVariant9 != null;
+        public bool IsCreateObservationEvent => CreateObservationEvent != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickIngestionEventVariant9(
+        public bool TryPickCreateObservationEvent(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent>? value)
+            out global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>? value)
         {
-            value = IngestionEventVariant9;
-            return IsIngestionEventVariant9;
+            value = CreateObservationEvent;
+            return IsCreateObservationEvent;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent> PickIngestionEventVariant9() => IsIngestionEventVariant9
-            ? IngestionEventVariant9!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'IngestionEventVariant9' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent> PickCreateObservationEvent() => IsCreateObservationEvent
+            ? CreateObservationEvent!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CreateObservationEvent' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>? IngestionEventVariant10 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>? UpdateObservationEvent { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>? IngestionEventVariant10 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>? UpdateObservationEvent { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(IngestionEventVariant10))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UpdateObservationEvent))]
 #endif
-        public bool IsIngestionEventVariant10 => IngestionEventVariant10 != null;
+        public bool IsUpdateObservationEvent => UpdateObservationEvent != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickIngestionEventVariant10(
+        public bool TryPickUpdateObservationEvent(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>? value)
+            out global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>? value)
         {
-            value = IngestionEventVariant10;
-            return IsIngestionEventVariant10;
+            value = UpdateObservationEvent;
+            return IsUpdateObservationEvent;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent> PickIngestionEventVariant10() => IsIngestionEventVariant10
-            ? IngestionEventVariant10!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'IngestionEventVariant10' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent> PickUpdateObservationEvent() => IsUpdateObservationEvent
+            ? UpdateObservationEvent!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UpdateObservationEvent' but the value was {ToString()}.");
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>?)value);
+        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>?(IngestionEvent @this) => @this.IngestionEventVariant1;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent>?(IngestionEvent @this) => @this.TraceEvent;
 
         /// <summary>
         ///
         /// </summary>
-        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>? value)
+        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent>? value)
         {
-            IngestionEventVariant1 = value;
+            TraceEvent = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static IngestionEvent FromIngestionEventVariant1(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>? value) => new IngestionEvent(value);
+        public static IngestionEvent FromTraceEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent>? value) => new IngestionEvent(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>?)value);
+        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>?(IngestionEvent @this) => @this.IngestionEventVariant2;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent>?(IngestionEvent @this) => @this.ScoreEvent;
 
         /// <summary>
         ///
         /// </summary>
-        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>? value)
+        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent>? value)
         {
-            IngestionEventVariant2 = value;
+            ScoreEvent = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static IngestionEvent FromIngestionEventVariant2(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>? value) => new IngestionEvent(value);
+        public static IngestionEvent FromScoreEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent>? value) => new IngestionEvent(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent>?)value);
+        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateSpanEvent2, global::Langfuse.CreateSpanEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateSpanEvent2, global::Langfuse.CreateSpanEvent>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent>?(IngestionEvent @this) => @this.IngestionEventVariant3;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateSpanEvent2, global::Langfuse.CreateSpanEvent>?(IngestionEvent @this) => @this.CreateSpanEvent;
 
         /// <summary>
         ///
         /// </summary>
-        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent>? value)
+        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateSpanEvent2, global::Langfuse.CreateSpanEvent>? value)
         {
-            IngestionEventVariant3 = value;
+            CreateSpanEvent = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static IngestionEvent FromIngestionEventVariant3(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent>? value) => new IngestionEvent(value);
+        public static IngestionEvent FromCreateSpanEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateSpanEvent2, global::Langfuse.CreateSpanEvent>? value) => new IngestionEvent(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>?)value);
+        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateSpanEvent2, global::Langfuse.UpdateSpanEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateSpanEvent2, global::Langfuse.UpdateSpanEvent>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>?(IngestionEvent @this) => @this.IngestionEventVariant4;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateSpanEvent2, global::Langfuse.UpdateSpanEvent>?(IngestionEvent @this) => @this.UpdateSpanEvent;
 
         /// <summary>
         ///
         /// </summary>
-        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>? value)
+        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateSpanEvent2, global::Langfuse.UpdateSpanEvent>? value)
         {
-            IngestionEventVariant4 = value;
+            UpdateSpanEvent = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static IngestionEvent FromIngestionEventVariant4(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>? value) => new IngestionEvent(value);
+        public static IngestionEvent FromUpdateSpanEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateSpanEvent2, global::Langfuse.UpdateSpanEvent>? value) => new IngestionEvent(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent>?)value);
+        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent>?(IngestionEvent @this) => @this.IngestionEventVariant5;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>?(IngestionEvent @this) => @this.CreateGenerationEvent;
 
         /// <summary>
         ///
         /// </summary>
-        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent>? value)
+        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>? value)
         {
-            IngestionEventVariant5 = value;
+            CreateGenerationEvent = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static IngestionEvent FromIngestionEventVariant5(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent>? value) => new IngestionEvent(value);
+        public static IngestionEvent FromCreateGenerationEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>? value) => new IngestionEvent(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>?)value);
+        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>?(IngestionEvent @this) => @this.IngestionEventVariant6;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>?(IngestionEvent @this) => @this.UpdateGenerationEvent;
 
         /// <summary>
         ///
         /// </summary>
-        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>? value)
+        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>? value)
         {
-            IngestionEventVariant6 = value;
+            UpdateGenerationEvent = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static IngestionEvent FromIngestionEventVariant6(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>? value) => new IngestionEvent(value);
+        public static IngestionEvent FromUpdateGenerationEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>? value) => new IngestionEvent(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent>?)value);
+        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent>?(IngestionEvent @this) => @this.IngestionEventVariant7;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>?(IngestionEvent @this) => @this.CreateEventEvent;
 
         /// <summary>
         ///
         /// </summary>
-        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent>? value)
+        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>? value)
         {
-            IngestionEventVariant7 = value;
+            CreateEventEvent = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static IngestionEvent FromIngestionEventVariant7(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent>? value) => new IngestionEvent(value);
+        public static IngestionEvent FromCreateEventEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>? value) => new IngestionEvent(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>?)value);
+        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>?(IngestionEvent @this) => @this.IngestionEventVariant8;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>?(IngestionEvent @this) => @this.SDKLogEvent;
 
         /// <summary>
         ///
         /// </summary>
-        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>? value)
+        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>? value)
         {
-            IngestionEventVariant8 = value;
+            SDKLogEvent = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static IngestionEvent FromIngestionEventVariant8(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>? value) => new IngestionEvent(value);
+        public static IngestionEvent FromSDKLogEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>? value) => new IngestionEvent(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent>?)value);
+        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent>?(IngestionEvent @this) => @this.IngestionEventVariant9;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>?(IngestionEvent @this) => @this.CreateObservationEvent;
 
         /// <summary>
         ///
         /// </summary>
-        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent>? value)
+        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>? value)
         {
-            IngestionEventVariant9 = value;
+            CreateObservationEvent = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static IngestionEvent FromIngestionEventVariant9(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent>? value) => new IngestionEvent(value);
+        public static IngestionEvent FromCreateObservationEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>? value) => new IngestionEvent(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>?)value);
+        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>?(IngestionEvent @this) => @this.IngestionEventVariant10;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>?(IngestionEvent @this) => @this.UpdateObservationEvent;
 
         /// <summary>
         ///
         /// </summary>
-        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>? value)
+        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>? value)
         {
-            IngestionEventVariant10 = value;
+            UpdateObservationEvent = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static IngestionEvent FromIngestionEventVariant10(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>? value) => new IngestionEvent(value);
+        public static IngestionEvent FromUpdateObservationEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>? value) => new IngestionEvent(value);
 
         /// <summary>
         ///
         /// </summary>
         public IngestionEvent(
-            global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>? ingestionEventVariant1,
-            global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>? ingestionEventVariant2,
-            global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent>? ingestionEventVariant3,
-            global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>? ingestionEventVariant4,
-            global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent>? ingestionEventVariant5,
-            global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>? ingestionEventVariant6,
-            global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent>? ingestionEventVariant7,
-            global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>? ingestionEventVariant8,
-            global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent>? ingestionEventVariant9,
-            global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>? ingestionEventVariant10
+            global::Langfuse.AllOf<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent>? traceEvent,
+            global::Langfuse.AllOf<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent>? scoreEvent,
+            global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateSpanEvent2, global::Langfuse.CreateSpanEvent>? createSpanEvent,
+            global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateSpanEvent2, global::Langfuse.UpdateSpanEvent>? updateSpanEvent,
+            global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>? createGenerationEvent,
+            global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>? updateGenerationEvent,
+            global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>? createEventEvent,
+            global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>? sDKLogEvent,
+            global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>? createObservationEvent,
+            global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>? updateObservationEvent
             )
         {
-            IngestionEventVariant1 = ingestionEventVariant1;
-            IngestionEventVariant2 = ingestionEventVariant2;
-            IngestionEventVariant3 = ingestionEventVariant3;
-            IngestionEventVariant4 = ingestionEventVariant4;
-            IngestionEventVariant5 = ingestionEventVariant5;
-            IngestionEventVariant6 = ingestionEventVariant6;
-            IngestionEventVariant7 = ingestionEventVariant7;
-            IngestionEventVariant8 = ingestionEventVariant8;
-            IngestionEventVariant9 = ingestionEventVariant9;
-            IngestionEventVariant10 = ingestionEventVariant10;
+            TraceEvent = traceEvent;
+            ScoreEvent = scoreEvent;
+            CreateSpanEvent = createSpanEvent;
+            UpdateSpanEvent = updateSpanEvent;
+            CreateGenerationEvent = createGenerationEvent;
+            UpdateGenerationEvent = updateGenerationEvent;
+            CreateEventEvent = createEventEvent;
+            SDKLogEvent = sDKLogEvent;
+            CreateObservationEvent = createObservationEvent;
+            UpdateObservationEvent = updateObservationEvent;
         }
 
         /// <summary>
         ///
         /// </summary>
         public object? Object =>
-            IngestionEventVariant10 as object ??
-            IngestionEventVariant9 as object ??
-            IngestionEventVariant8 as object ??
-            IngestionEventVariant7 as object ??
-            IngestionEventVariant6 as object ??
-            IngestionEventVariant5 as object ??
-            IngestionEventVariant4 as object ??
-            IngestionEventVariant3 as object ??
-            IngestionEventVariant2 as object ??
-            IngestionEventVariant1 as object
+            UpdateObservationEvent as object ??
+            CreateObservationEvent as object ??
+            SDKLogEvent as object ??
+            CreateEventEvent as object ??
+            UpdateGenerationEvent as object ??
+            CreateGenerationEvent as object ??
+            UpdateSpanEvent as object ??
+            CreateSpanEvent as object ??
+            ScoreEvent as object ??
+            TraceEvent as object
             ;
 
         /// <summary>
         ///
         /// </summary>
         public override string? ToString() =>
-            IngestionEventVariant1?.ToString() ??
-            IngestionEventVariant2?.ToString() ??
-            IngestionEventVariant3?.ToString() ??
-            IngestionEventVariant4?.ToString() ??
-            IngestionEventVariant5?.ToString() ??
-            IngestionEventVariant6?.ToString() ??
-            IngestionEventVariant7?.ToString() ??
-            IngestionEventVariant8?.ToString() ??
-            IngestionEventVariant9?.ToString() ??
-            IngestionEventVariant10?.ToString()
+            TraceEvent?.ToString() ??
+            ScoreEvent?.ToString() ??
+            CreateSpanEvent?.ToString() ??
+            UpdateSpanEvent?.ToString() ??
+            CreateGenerationEvent?.ToString() ??
+            UpdateGenerationEvent?.ToString() ??
+            CreateEventEvent?.ToString() ??
+            SDKLogEvent?.ToString() ??
+            CreateObservationEvent?.ToString() ??
+            UpdateObservationEvent?.ToString()
             ;
 
         /// <summary>
@@ -673,23 +673,23 @@ namespace Langfuse
         /// </summary>
         public bool Validate()
         {
-            return IsIngestionEventVariant1 && !IsIngestionEventVariant2 && !IsIngestionEventVariant3 && !IsIngestionEventVariant4 && !IsIngestionEventVariant5 && !IsIngestionEventVariant6 && !IsIngestionEventVariant7 && !IsIngestionEventVariant8 && !IsIngestionEventVariant9 && !IsIngestionEventVariant10 || !IsIngestionEventVariant1 && IsIngestionEventVariant2 && !IsIngestionEventVariant3 && !IsIngestionEventVariant4 && !IsIngestionEventVariant5 && !IsIngestionEventVariant6 && !IsIngestionEventVariant7 && !IsIngestionEventVariant8 && !IsIngestionEventVariant9 && !IsIngestionEventVariant10 || !IsIngestionEventVariant1 && !IsIngestionEventVariant2 && IsIngestionEventVariant3 && !IsIngestionEventVariant4 && !IsIngestionEventVariant5 && !IsIngestionEventVariant6 && !IsIngestionEventVariant7 && !IsIngestionEventVariant8 && !IsIngestionEventVariant9 && !IsIngestionEventVariant10 || !IsIngestionEventVariant1 && !IsIngestionEventVariant2 && !IsIngestionEventVariant3 && IsIngestionEventVariant4 && !IsIngestionEventVariant5 && !IsIngestionEventVariant6 && !IsIngestionEventVariant7 && !IsIngestionEventVariant8 && !IsIngestionEventVariant9 && !IsIngestionEventVariant10 || !IsIngestionEventVariant1 && !IsIngestionEventVariant2 && !IsIngestionEventVariant3 && !IsIngestionEventVariant4 && IsIngestionEventVariant5 && !IsIngestionEventVariant6 && !IsIngestionEventVariant7 && !IsIngestionEventVariant8 && !IsIngestionEventVariant9 && !IsIngestionEventVariant10 || !IsIngestionEventVariant1 && !IsIngestionEventVariant2 && !IsIngestionEventVariant3 && !IsIngestionEventVariant4 && !IsIngestionEventVariant5 && IsIngestionEventVariant6 && !IsIngestionEventVariant7 && !IsIngestionEventVariant8 && !IsIngestionEventVariant9 && !IsIngestionEventVariant10 || !IsIngestionEventVariant1 && !IsIngestionEventVariant2 && !IsIngestionEventVariant3 && !IsIngestionEventVariant4 && !IsIngestionEventVariant5 && !IsIngestionEventVariant6 && IsIngestionEventVariant7 && !IsIngestionEventVariant8 && !IsIngestionEventVariant9 && !IsIngestionEventVariant10 || !IsIngestionEventVariant1 && !IsIngestionEventVariant2 && !IsIngestionEventVariant3 && !IsIngestionEventVariant4 && !IsIngestionEventVariant5 && !IsIngestionEventVariant6 && !IsIngestionEventVariant7 && IsIngestionEventVariant8 && !IsIngestionEventVariant9 && !IsIngestionEventVariant10 || !IsIngestionEventVariant1 && !IsIngestionEventVariant2 && !IsIngestionEventVariant3 && !IsIngestionEventVariant4 && !IsIngestionEventVariant5 && !IsIngestionEventVariant6 && !IsIngestionEventVariant7 && !IsIngestionEventVariant8 && IsIngestionEventVariant9 && !IsIngestionEventVariant10 || !IsIngestionEventVariant1 && !IsIngestionEventVariant2 && !IsIngestionEventVariant3 && !IsIngestionEventVariant4 && !IsIngestionEventVariant5 && !IsIngestionEventVariant6 && !IsIngestionEventVariant7 && !IsIngestionEventVariant8 && !IsIngestionEventVariant9 && IsIngestionEventVariant10;
+            return IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && !IsSDKLogEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && !IsSDKLogEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && !IsSDKLogEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && !IsSDKLogEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && !IsSDKLogEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && IsUpdateGenerationEvent && !IsCreateEventEvent && !IsSDKLogEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && IsCreateEventEvent && !IsSDKLogEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && IsSDKLogEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && !IsSDKLogEvent && IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && !IsSDKLogEvent && !IsCreateObservationEvent && IsUpdateObservationEvent;
         }
 
         /// <summary>
         ///
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>?, TResult>? ingestionEventVariant1 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>?, TResult>? ingestionEventVariant2 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent>?, TResult>? ingestionEventVariant3 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>?, TResult>? ingestionEventVariant4 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent>?, TResult>? ingestionEventVariant5 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>?, TResult>? ingestionEventVariant6 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent>?, TResult>? ingestionEventVariant7 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>?, TResult>? ingestionEventVariant8 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent>?, TResult>? ingestionEventVariant9 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>?, TResult>? ingestionEventVariant10 = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent>?, TResult>? traceEvent = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent>?, TResult>? scoreEvent = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateSpanEvent2, global::Langfuse.CreateSpanEvent>?, TResult>? createSpanEvent = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateSpanEvent2, global::Langfuse.UpdateSpanEvent>?, TResult>? updateSpanEvent = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>?, TResult>? createGenerationEvent = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>?, TResult>? updateGenerationEvent = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>?, TResult>? createEventEvent = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>?, TResult>? sDKLogEvent = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>?, TResult>? createObservationEvent = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>?, TResult>? updateObservationEvent = null,
             bool validate = true)
         {
             if (validate)
@@ -697,45 +697,45 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsIngestionEventVariant1 && ingestionEventVariant1 != null)
+            if (IsTraceEvent && traceEvent != null)
             {
-                return ingestionEventVariant1(IngestionEventVariant1!);
+                return traceEvent(TraceEvent!);
             }
-            else if (IsIngestionEventVariant2 && ingestionEventVariant2 != null)
+            else if (IsScoreEvent && scoreEvent != null)
             {
-                return ingestionEventVariant2(IngestionEventVariant2!);
+                return scoreEvent(ScoreEvent!);
             }
-            else if (IsIngestionEventVariant3 && ingestionEventVariant3 != null)
+            else if (IsCreateSpanEvent && createSpanEvent != null)
             {
-                return ingestionEventVariant3(IngestionEventVariant3!);
+                return createSpanEvent(CreateSpanEvent!);
             }
-            else if (IsIngestionEventVariant4 && ingestionEventVariant4 != null)
+            else if (IsUpdateSpanEvent && updateSpanEvent != null)
             {
-                return ingestionEventVariant4(IngestionEventVariant4!);
+                return updateSpanEvent(UpdateSpanEvent!);
             }
-            else if (IsIngestionEventVariant5 && ingestionEventVariant5 != null)
+            else if (IsCreateGenerationEvent && createGenerationEvent != null)
             {
-                return ingestionEventVariant5(IngestionEventVariant5!);
+                return createGenerationEvent(CreateGenerationEvent!);
             }
-            else if (IsIngestionEventVariant6 && ingestionEventVariant6 != null)
+            else if (IsUpdateGenerationEvent && updateGenerationEvent != null)
             {
-                return ingestionEventVariant6(IngestionEventVariant6!);
+                return updateGenerationEvent(UpdateGenerationEvent!);
             }
-            else if (IsIngestionEventVariant7 && ingestionEventVariant7 != null)
+            else if (IsCreateEventEvent && createEventEvent != null)
             {
-                return ingestionEventVariant7(IngestionEventVariant7!);
+                return createEventEvent(CreateEventEvent!);
             }
-            else if (IsIngestionEventVariant8 && ingestionEventVariant8 != null)
+            else if (IsSDKLogEvent && sDKLogEvent != null)
             {
-                return ingestionEventVariant8(IngestionEventVariant8!);
+                return sDKLogEvent(SDKLogEvent!);
             }
-            else if (IsIngestionEventVariant9 && ingestionEventVariant9 != null)
+            else if (IsCreateObservationEvent && createObservationEvent != null)
             {
-                return ingestionEventVariant9(IngestionEventVariant9!);
+                return createObservationEvent(CreateObservationEvent!);
             }
-            else if (IsIngestionEventVariant10 && ingestionEventVariant10 != null)
+            else if (IsUpdateObservationEvent && updateObservationEvent != null)
             {
-                return ingestionEventVariant10(IngestionEventVariant10!);
+                return updateObservationEvent(UpdateObservationEvent!);
             }
 
             return default(TResult);
@@ -745,25 +745,25 @@ namespace Langfuse
         ///
         /// </summary>
         public void Match(
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>?>? ingestionEventVariant1 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent>?>? traceEvent = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>?>? ingestionEventVariant2 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent>?>? scoreEvent = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent>?>? ingestionEventVariant3 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateSpanEvent2, global::Langfuse.CreateSpanEvent>?>? createSpanEvent = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>?>? ingestionEventVariant4 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateSpanEvent2, global::Langfuse.UpdateSpanEvent>?>? updateSpanEvent = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent>?>? ingestionEventVariant5 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>?>? createGenerationEvent = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>?>? ingestionEventVariant6 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>?>? updateGenerationEvent = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent>?>? ingestionEventVariant7 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>?>? createEventEvent = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>?>? ingestionEventVariant8 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>?>? sDKLogEvent = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent>?>? ingestionEventVariant9 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>?>? createObservationEvent = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>?>? ingestionEventVariant10 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>?>? updateObservationEvent = null,
             bool validate = true)
         {
             if (validate)
@@ -771,45 +771,45 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsIngestionEventVariant1)
+            if (IsTraceEvent)
             {
-                ingestionEventVariant1?.Invoke(IngestionEventVariant1!);
+                traceEvent?.Invoke(TraceEvent!);
             }
-            else if (IsIngestionEventVariant2)
+            else if (IsScoreEvent)
             {
-                ingestionEventVariant2?.Invoke(IngestionEventVariant2!);
+                scoreEvent?.Invoke(ScoreEvent!);
             }
-            else if (IsIngestionEventVariant3)
+            else if (IsCreateSpanEvent)
             {
-                ingestionEventVariant3?.Invoke(IngestionEventVariant3!);
+                createSpanEvent?.Invoke(CreateSpanEvent!);
             }
-            else if (IsIngestionEventVariant4)
+            else if (IsUpdateSpanEvent)
             {
-                ingestionEventVariant4?.Invoke(IngestionEventVariant4!);
+                updateSpanEvent?.Invoke(UpdateSpanEvent!);
             }
-            else if (IsIngestionEventVariant5)
+            else if (IsCreateGenerationEvent)
             {
-                ingestionEventVariant5?.Invoke(IngestionEventVariant5!);
+                createGenerationEvent?.Invoke(CreateGenerationEvent!);
             }
-            else if (IsIngestionEventVariant6)
+            else if (IsUpdateGenerationEvent)
             {
-                ingestionEventVariant6?.Invoke(IngestionEventVariant6!);
+                updateGenerationEvent?.Invoke(UpdateGenerationEvent!);
             }
-            else if (IsIngestionEventVariant7)
+            else if (IsCreateEventEvent)
             {
-                ingestionEventVariant7?.Invoke(IngestionEventVariant7!);
+                createEventEvent?.Invoke(CreateEventEvent!);
             }
-            else if (IsIngestionEventVariant8)
+            else if (IsSDKLogEvent)
             {
-                ingestionEventVariant8?.Invoke(IngestionEventVariant8!);
+                sDKLogEvent?.Invoke(SDKLogEvent!);
             }
-            else if (IsIngestionEventVariant9)
+            else if (IsCreateObservationEvent)
             {
-                ingestionEventVariant9?.Invoke(IngestionEventVariant9!);
+                createObservationEvent?.Invoke(CreateObservationEvent!);
             }
-            else if (IsIngestionEventVariant10)
+            else if (IsUpdateObservationEvent)
             {
-                ingestionEventVariant10?.Invoke(IngestionEventVariant10!);
+                updateObservationEvent?.Invoke(UpdateObservationEvent!);
             }
         }
 
@@ -817,16 +817,16 @@ namespace Langfuse
         ///
         /// </summary>
         public void Switch(
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>?>? ingestionEventVariant1 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>?>? ingestionEventVariant2 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent>?>? ingestionEventVariant3 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>?>? ingestionEventVariant4 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent>?>? ingestionEventVariant5 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>?>? ingestionEventVariant6 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent>?>? ingestionEventVariant7 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>?>? ingestionEventVariant8 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent>?>? ingestionEventVariant9 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>?>? ingestionEventVariant10 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent>?>? traceEvent = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent>?>? scoreEvent = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateSpanEvent2, global::Langfuse.CreateSpanEvent>?>? createSpanEvent = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateSpanEvent2, global::Langfuse.UpdateSpanEvent>?>? updateSpanEvent = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>?>? createGenerationEvent = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>?>? updateGenerationEvent = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>?>? createEventEvent = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>?>? sDKLogEvent = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>?>? createObservationEvent = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>?>? updateObservationEvent = null,
             bool validate = true)
         {
             if (validate)
@@ -834,45 +834,45 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsIngestionEventVariant1)
+            if (IsTraceEvent)
             {
-                ingestionEventVariant1?.Invoke(IngestionEventVariant1!);
+                traceEvent?.Invoke(TraceEvent!);
             }
-            else if (IsIngestionEventVariant2)
+            else if (IsScoreEvent)
             {
-                ingestionEventVariant2?.Invoke(IngestionEventVariant2!);
+                scoreEvent?.Invoke(ScoreEvent!);
             }
-            else if (IsIngestionEventVariant3)
+            else if (IsCreateSpanEvent)
             {
-                ingestionEventVariant3?.Invoke(IngestionEventVariant3!);
+                createSpanEvent?.Invoke(CreateSpanEvent!);
             }
-            else if (IsIngestionEventVariant4)
+            else if (IsUpdateSpanEvent)
             {
-                ingestionEventVariant4?.Invoke(IngestionEventVariant4!);
+                updateSpanEvent?.Invoke(UpdateSpanEvent!);
             }
-            else if (IsIngestionEventVariant5)
+            else if (IsCreateGenerationEvent)
             {
-                ingestionEventVariant5?.Invoke(IngestionEventVariant5!);
+                createGenerationEvent?.Invoke(CreateGenerationEvent!);
             }
-            else if (IsIngestionEventVariant6)
+            else if (IsUpdateGenerationEvent)
             {
-                ingestionEventVariant6?.Invoke(IngestionEventVariant6!);
+                updateGenerationEvent?.Invoke(UpdateGenerationEvent!);
             }
-            else if (IsIngestionEventVariant7)
+            else if (IsCreateEventEvent)
             {
-                ingestionEventVariant7?.Invoke(IngestionEventVariant7!);
+                createEventEvent?.Invoke(CreateEventEvent!);
             }
-            else if (IsIngestionEventVariant8)
+            else if (IsSDKLogEvent)
             {
-                ingestionEventVariant8?.Invoke(IngestionEventVariant8!);
+                sDKLogEvent?.Invoke(SDKLogEvent!);
             }
-            else if (IsIngestionEventVariant9)
+            else if (IsCreateObservationEvent)
             {
-                ingestionEventVariant9?.Invoke(IngestionEventVariant9!);
+                createObservationEvent?.Invoke(CreateObservationEvent!);
             }
-            else if (IsIngestionEventVariant10)
+            else if (IsUpdateObservationEvent)
             {
-                ingestionEventVariant10?.Invoke(IngestionEventVariant10!);
+                updateObservationEvent?.Invoke(UpdateObservationEvent!);
             }
         }
 
@@ -883,26 +883,26 @@ namespace Langfuse
         {
             var fields = new object?[]
             {
-                IngestionEventVariant1,
-                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>),
-                IngestionEventVariant2,
-                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>),
-                IngestionEventVariant3,
-                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent>),
-                IngestionEventVariant4,
-                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>),
-                IngestionEventVariant5,
-                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent>),
-                IngestionEventVariant6,
-                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>),
-                IngestionEventVariant7,
-                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent>),
-                IngestionEventVariant8,
-                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>),
-                IngestionEventVariant9,
-                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent>),
-                IngestionEventVariant10,
-                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>),
+                TraceEvent,
+                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent>),
+                ScoreEvent,
+                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent>),
+                CreateSpanEvent,
+                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateSpanEvent2, global::Langfuse.CreateSpanEvent>),
+                UpdateSpanEvent,
+                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateSpanEvent2, global::Langfuse.UpdateSpanEvent>),
+                CreateGenerationEvent,
+                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>),
+                UpdateGenerationEvent,
+                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>),
+                CreateEventEvent,
+                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>),
+                SDKLogEvent,
+                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>),
+                CreateObservationEvent,
+                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>),
+                UpdateObservationEvent,
+                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>),
             };
             const int offset = unchecked((int)2166136261);
             const int prime = 16777619;
@@ -919,16 +919,16 @@ namespace Langfuse
         public bool Equals(IngestionEvent other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant12, global::Langfuse.TraceEvent>?>.Default.Equals(IngestionEventVariant1, other.IngestionEventVariant1) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant22, global::Langfuse.ScoreEvent>?>.Default.Equals(IngestionEventVariant2, other.IngestionEventVariant2) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant32, global::Langfuse.CreateSpanEvent>?>.Default.Equals(IngestionEventVariant3, other.IngestionEventVariant3) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant42, global::Langfuse.UpdateSpanEvent>?>.Default.Equals(IngestionEventVariant4, other.IngestionEventVariant4) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant52, global::Langfuse.CreateGenerationEvent>?>.Default.Equals(IngestionEventVariant5, other.IngestionEventVariant5) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant62, global::Langfuse.UpdateGenerationEvent>?>.Default.Equals(IngestionEventVariant6, other.IngestionEventVariant6) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant72, global::Langfuse.CreateEventEvent>?>.Default.Equals(IngestionEventVariant7, other.IngestionEventVariant7) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant82, global::Langfuse.SDKLogEvent>?>.Default.Equals(IngestionEventVariant8, other.IngestionEventVariant8) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant92, global::Langfuse.CreateObservationEvent>?>.Default.Equals(IngestionEventVariant9, other.IngestionEventVariant9) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventVariant102, global::Langfuse.UpdateObservationEvent>?>.Default.Equals(IngestionEventVariant10, other.IngestionEventVariant10)
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent>?>.Default.Equals(TraceEvent, other.TraceEvent) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent>?>.Default.Equals(ScoreEvent, other.ScoreEvent) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateSpanEvent2, global::Langfuse.CreateSpanEvent>?>.Default.Equals(CreateSpanEvent, other.CreateSpanEvent) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateSpanEvent2, global::Langfuse.UpdateSpanEvent>?>.Default.Equals(UpdateSpanEvent, other.UpdateSpanEvent) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>?>.Default.Equals(CreateGenerationEvent, other.CreateGenerationEvent) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>?>.Default.Equals(UpdateGenerationEvent, other.UpdateGenerationEvent) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>?>.Default.Equals(CreateEventEvent, other.CreateEventEvent) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>?>.Default.Equals(SDKLogEvent, other.SDKLogEvent) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>?>.Default.Equals(CreateObservationEvent, other.CreateObservationEvent) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>?>.Default.Equals(UpdateObservationEvent, other.UpdateObservationEvent)
                 ;
         }
 

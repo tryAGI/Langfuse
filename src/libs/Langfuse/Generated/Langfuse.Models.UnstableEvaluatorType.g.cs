@@ -4,7 +4,7 @@
 namespace Langfuse
 {
     /// <summary>
-    /// The evaluator engine type.<br/>
+    /// The evaluator type.<br/>
     /// The unstable public API supports LLM-as-a-judge and code evaluators.
     /// </summary>
     public enum UnstableEvaluatorType
