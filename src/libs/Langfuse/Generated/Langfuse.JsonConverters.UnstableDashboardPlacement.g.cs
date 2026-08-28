@@ -29,7 +29,7 @@ namespace Langfuse.JsonConverters
 
             var __score0 = 0;
             {
-                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant12, global::Langfuse.UnstableWidgetPlacement>), options);
+                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2, global::Langfuse.UnstableWidgetPlacement>), options);
                 if (__ti != null && __ti.Kind == global::System.Text.Json.Serialization.Metadata.JsonTypeInfoKind.Object)
                 {
                     foreach (var __prop in __ti.Properties)
@@ -40,7 +40,7 @@ namespace Langfuse.JsonConverters
             }
             var __score1 = 0;
             {
-                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant22, global::Langfuse.UnstablePresetPlacement>), options);
+                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2, global::Langfuse.UnstablePresetPlacement>), options);
                 if (__ti != null && __ti.Kind == global::System.Text.Json.Serialization.Metadata.JsonTypeInfoKind.Object)
                 {
                     foreach (var __prop in __ti.Properties)
@@ -54,8 +54,8 @@ namespace Langfuse.JsonConverters
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
             if (__score1 > __bestScore) { __bestScore = __score1; __bestIndex = 1; }
 
-            global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant12, global::Langfuse.UnstableWidgetPlacement>? unstableDashboardPlacementVariant1 = default;
-            global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant22, global::Langfuse.UnstablePresetPlacement>? unstableDashboardPlacementVariant2 = default;
+            global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2, global::Langfuse.UnstableWidgetPlacement>? unstableWidgetPlacement = default;
+            global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2, global::Langfuse.UnstablePresetPlacement>? unstablePresetPlacement = default;
             if (__bestIndex >= 0)
             {
                 if (__bestIndex == 0)
@@ -63,9 +63,9 @@ namespace Langfuse.JsonConverters
                     try
                     {
 
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant12, global::Langfuse.UnstableWidgetPlacement>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant12, global::Langfuse.UnstableWidgetPlacement>> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant12, global::Langfuse.UnstableWidgetPlacement>).Name}");
-                        unstableDashboardPlacementVariant1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2, global::Langfuse.UnstableWidgetPlacement>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2, global::Langfuse.UnstableWidgetPlacement>> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2, global::Langfuse.UnstableWidgetPlacement>).Name}");
+                        unstableWidgetPlacement = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -80,9 +80,9 @@ namespace Langfuse.JsonConverters
                     try
                     {
 
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant22, global::Langfuse.UnstablePresetPlacement>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant22, global::Langfuse.UnstablePresetPlacement>> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant22, global::Langfuse.UnstablePresetPlacement>).Name}");
-                        unstableDashboardPlacementVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2, global::Langfuse.UnstablePresetPlacement>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2, global::Langfuse.UnstablePresetPlacement>> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2, global::Langfuse.UnstablePresetPlacement>).Name}");
+                        unstablePresetPlacement = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -93,14 +93,14 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (unstableDashboardPlacementVariant1 == null && unstableDashboardPlacementVariant2 == null)
+            if (unstableWidgetPlacement == null && unstablePresetPlacement == null)
             {
                 try
                 {
 
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant12, global::Langfuse.UnstableWidgetPlacement>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant12, global::Langfuse.UnstableWidgetPlacement>> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant12, global::Langfuse.UnstableWidgetPlacement>).Name}");
-                    unstableDashboardPlacementVariant1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2, global::Langfuse.UnstableWidgetPlacement>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2, global::Langfuse.UnstableWidgetPlacement>> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2, global::Langfuse.UnstableWidgetPlacement>).Name}");
+                    unstableWidgetPlacement = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -110,14 +110,14 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (unstableDashboardPlacementVariant1 == null && unstableDashboardPlacementVariant2 == null)
+            if (unstableWidgetPlacement == null && unstablePresetPlacement == null)
             {
                 try
                 {
 
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant22, global::Langfuse.UnstablePresetPlacement>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant22, global::Langfuse.UnstablePresetPlacement>> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant22, global::Langfuse.UnstablePresetPlacement>).Name}");
-                    unstableDashboardPlacementVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2, global::Langfuse.UnstablePresetPlacement>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2, global::Langfuse.UnstablePresetPlacement>> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2, global::Langfuse.UnstablePresetPlacement>).Name}");
+                    unstablePresetPlacement = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -128,9 +128,9 @@ namespace Langfuse.JsonConverters
             }
 
             var __value = new global::Langfuse.UnstableDashboardPlacement(
-                unstableDashboardPlacementVariant1,
+                unstableWidgetPlacement,
 
-                unstableDashboardPlacementVariant2
+                unstablePresetPlacement
                 );
 
             return __value;
@@ -145,17 +145,17 @@ namespace Langfuse.JsonConverters
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));
             var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
-            if (value.IsUnstableDashboardPlacementVariant1)
+            if (value.IsUnstableWidgetPlacement)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant12, global::Langfuse.UnstableWidgetPlacement>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant12, global::Langfuse.UnstableWidgetPlacement>> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant12, global::Langfuse.UnstableWidgetPlacement>).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UnstableDashboardPlacementVariant1!.Value, typeInfo);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2, global::Langfuse.UnstableWidgetPlacement>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2, global::Langfuse.UnstableWidgetPlacement>> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2, global::Langfuse.UnstableWidgetPlacement>).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UnstableWidgetPlacement!.Value, typeInfo);
             }
-            else if (value.IsUnstableDashboardPlacementVariant2)
+            else if (value.IsUnstablePresetPlacement)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant22, global::Langfuse.UnstablePresetPlacement>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant22, global::Langfuse.UnstablePresetPlacement>> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementVariant22, global::Langfuse.UnstablePresetPlacement>).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UnstableDashboardPlacementVariant2!.Value, typeInfo);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2, global::Langfuse.UnstablePresetPlacement>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2, global::Langfuse.UnstablePresetPlacement>> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2, global::Langfuse.UnstablePresetPlacement>).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UnstablePresetPlacement!.Value, typeInfo);
             }
         }
     }

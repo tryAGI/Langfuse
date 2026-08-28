@@ -29,7 +29,7 @@ namespace Langfuse.JsonConverters
 
             var __score0 = 0;
             {
-                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>), options);
+                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>), options);
                 if (__ti != null && __ti.Kind == global::System.Text.Json.Serialization.Metadata.JsonTypeInfoKind.Object)
                 {
                     foreach (var __prop in __ti.Properties)
@@ -40,7 +40,7 @@ namespace Langfuse.JsonConverters
             }
             var __score1 = 0;
             {
-                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest>), options);
+                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateCodeEvaluatorRequest2, global::Langfuse.UnstableCreateCodeEvaluatorRequest>), options);
                 if (__ti != null && __ti.Kind == global::System.Text.Json.Serialization.Metadata.JsonTypeInfoKind.Object)
                 {
                     foreach (var __prop in __ti.Properties)
@@ -54,8 +54,8 @@ namespace Langfuse.JsonConverters
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
             if (__score1 > __bestScore) { __bestScore = __score1; __bestIndex = 1; }
 
-            global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>? unstableCreateEvaluatorRequestVariant1 = default;
-            global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest>? unstableCreateEvaluatorRequestVariant2 = default;
+            global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>? unstableCreateLlmAsJudgeEvaluatorRequest = default;
+            global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateCodeEvaluatorRequest2, global::Langfuse.UnstableCreateCodeEvaluatorRequest>? unstableCreateCodeEvaluatorRequest = default;
             if (__bestIndex >= 0)
             {
                 if (__bestIndex == 0)
@@ -63,9 +63,9 @@ namespace Langfuse.JsonConverters
                     try
                     {
 
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>).Name}");
-                        unstableCreateEvaluatorRequestVariant1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>).Name}");
+                        unstableCreateLlmAsJudgeEvaluatorRequest = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -80,9 +80,9 @@ namespace Langfuse.JsonConverters
                     try
                     {
 
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest>> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest>).Name}");
-                        unstableCreateEvaluatorRequestVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateCodeEvaluatorRequest2, global::Langfuse.UnstableCreateCodeEvaluatorRequest>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateCodeEvaluatorRequest2, global::Langfuse.UnstableCreateCodeEvaluatorRequest>> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateCodeEvaluatorRequest2, global::Langfuse.UnstableCreateCodeEvaluatorRequest>).Name}");
+                        unstableCreateCodeEvaluatorRequest = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -93,14 +93,14 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (unstableCreateEvaluatorRequestVariant1 == null && unstableCreateEvaluatorRequestVariant2 == null)
+            if (unstableCreateLlmAsJudgeEvaluatorRequest == null && unstableCreateCodeEvaluatorRequest == null)
             {
                 try
                 {
 
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>).Name}");
-                    unstableCreateEvaluatorRequestVariant1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>).Name}");
+                    unstableCreateLlmAsJudgeEvaluatorRequest = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -110,14 +110,14 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (unstableCreateEvaluatorRequestVariant1 == null && unstableCreateEvaluatorRequestVariant2 == null)
+            if (unstableCreateLlmAsJudgeEvaluatorRequest == null && unstableCreateCodeEvaluatorRequest == null)
             {
                 try
                 {
 
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest>> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest>).Name}");
-                    unstableCreateEvaluatorRequestVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateCodeEvaluatorRequest2, global::Langfuse.UnstableCreateCodeEvaluatorRequest>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateCodeEvaluatorRequest2, global::Langfuse.UnstableCreateCodeEvaluatorRequest>> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateCodeEvaluatorRequest2, global::Langfuse.UnstableCreateCodeEvaluatorRequest>).Name}");
+                    unstableCreateCodeEvaluatorRequest = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -128,9 +128,9 @@ namespace Langfuse.JsonConverters
             }
 
             var __value = new global::Langfuse.UnstableCreateEvaluatorRequest(
-                unstableCreateEvaluatorRequestVariant1,
+                unstableCreateLlmAsJudgeEvaluatorRequest,
 
-                unstableCreateEvaluatorRequestVariant2
+                unstableCreateCodeEvaluatorRequest
                 );
 
             return __value;
@@ -145,17 +145,17 @@ namespace Langfuse.JsonConverters
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));
             var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
-            if (value.IsUnstableCreateEvaluatorRequestVariant1)
+            if (value.IsUnstableCreateLlmAsJudgeEvaluatorRequest)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant12, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UnstableCreateEvaluatorRequestVariant1!.Value, typeInfo);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UnstableCreateLlmAsJudgeEvaluatorRequest!.Value, typeInfo);
             }
-            else if (value.IsUnstableCreateEvaluatorRequestVariant2)
+            else if (value.IsUnstableCreateCodeEvaluatorRequest)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest>> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestVariant22, global::Langfuse.UnstableCreateCodeEvaluatorRequest>).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UnstableCreateEvaluatorRequestVariant2!.Value, typeInfo);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateCodeEvaluatorRequest2, global::Langfuse.UnstableCreateCodeEvaluatorRequest>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateCodeEvaluatorRequest2, global::Langfuse.UnstableCreateCodeEvaluatorRequest>> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateCodeEvaluatorRequest2, global::Langfuse.UnstableCreateCodeEvaluatorRequest>).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UnstableCreateCodeEvaluatorRequest!.Value, typeInfo);
             }
         }
     }

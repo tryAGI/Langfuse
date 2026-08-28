@@ -54,8 +54,8 @@ namespace Langfuse.JsonConverters
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
             if (__score1 > __bestScore) { __bestScore = __score1; __bestIndex = 1; }
 
-            double? createScoreValueVariant1 = default;
-            string? createScoreValueVariant2 = default;
+            double? doubleNumber = default;
+            string? @string = default;
             if (__bestIndex >= 0)
             {
                 if (__bestIndex == 0)
@@ -65,7 +65,7 @@ namespace Langfuse.JsonConverters
 
                         var typeInfo = typeInfoResolver.GetTypeInfo(typeof(double), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<double> ??
                                        throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(double).Name}");
-                        createScoreValueVariant1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        doubleNumber = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -82,7 +82,7 @@ namespace Langfuse.JsonConverters
 
                         var typeInfo = typeInfoResolver.GetTypeInfo(typeof(string), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<string> ??
                                        throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(string).Name}");
-                        createScoreValueVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        @string = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -93,14 +93,14 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (createScoreValueVariant1 == null && createScoreValueVariant2 == null)
+            if (doubleNumber == null && @string == null)
             {
                 try
                 {
 
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(double), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<double> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(double).Name}");
-                    createScoreValueVariant1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    doubleNumber = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -110,14 +110,14 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (createScoreValueVariant1 == null && createScoreValueVariant2 == null)
+            if (doubleNumber == null && @string == null)
             {
                 try
                 {
 
                     var typeInfo = typeInfoResolver.GetTypeInfo(typeof(string), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<string> ??
                                    throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(string).Name}");
-                    createScoreValueVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    @string = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -128,9 +128,9 @@ namespace Langfuse.JsonConverters
             }
 
             var __value = new global::Langfuse.CreateScoreValue(
-                createScoreValueVariant1,
+                doubleNumber,
 
-                createScoreValueVariant2
+                @string
                 );
 
             return __value;
@@ -145,17 +145,17 @@ namespace Langfuse.JsonConverters
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));
             var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
-            if (value.IsCreateScoreValueVariant1)
+            if (value.IsDoubleNumber)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(double), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<double> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(double).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.CreateScoreValueVariant1!.Value, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.DoubleNumber!.Value, typeInfo);
             }
-            else if (value.IsCreateScoreValueVariant2)
+            else if (value.IsString)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(string), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<string?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(string).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.CreateScoreValueVariant2!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.String!, typeInfo);
             }
         }
     }

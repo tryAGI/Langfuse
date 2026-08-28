@@ -29,7 +29,7 @@ namespace Langfuse.JsonConverters
 
             var __score0 = 0;
             {
-                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>), options);
+                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>), options);
                 if (__ti != null && __ti.Kind == global::System.Text.Json.Serialization.Metadata.JsonTypeInfoKind.Object)
                 {
                     foreach (var __prop in __ti.Properties)
@@ -40,7 +40,7 @@ namespace Langfuse.JsonConverters
             }
             var __score1 = 0;
             {
-                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>), options);
+                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>), options);
                 if (__ti != null && __ti.Kind == global::System.Text.Json.Serialization.Metadata.JsonTypeInfoKind.Object)
                 {
                     foreach (var __prop in __ti.Properties)
@@ -51,7 +51,7 @@ namespace Langfuse.JsonConverters
             }
             var __score2 = 0;
             {
-                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>), options);
+                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>), options);
                 if (__ti != null && __ti.Kind == global::System.Text.Json.Serialization.Metadata.JsonTypeInfoKind.Object)
                 {
                     foreach (var __prop in __ti.Properties)
@@ -66,9 +66,9 @@ namespace Langfuse.JsonConverters
             if (__score1 > __bestScore) { __bestScore = __score1; __bestIndex = 1; }
             if (__score2 > __bestScore) { __bestScore = __score2; __bestIndex = 2; }
 
-            global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>? unstablePublicEvaluatorOutputDefinitionVariant1 = default;
-            global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>? unstablePublicEvaluatorOutputDefinitionVariant2 = default;
-            global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>? unstablePublicEvaluatorOutputDefinitionVariant3 = default;
+            global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>? unstablePublicNumericEvaluatorOutputDefinition = default;
+            global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>? unstablePublicBooleanEvaluatorOutputDefinition = default;
+            global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>? unstablePublicCategoricalEvaluatorOutputDefinition = default;
             if (__bestIndex >= 0)
             {
                 if (__bestIndex == 0)
@@ -76,9 +76,9 @@ namespace Langfuse.JsonConverters
                     try
                     {
 
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>).Name}");
-                        unstablePublicEvaluatorOutputDefinitionVariant1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>).Name}");
+                        unstablePublicNumericEvaluatorOutputDefinition = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -93,9 +93,9 @@ namespace Langfuse.JsonConverters
                     try
                     {
 
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>).Name}");
-                        unstablePublicEvaluatorOutputDefinitionVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>).Name}");
+                        unstablePublicBooleanEvaluatorOutputDefinition = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -110,9 +110,9 @@ namespace Langfuse.JsonConverters
                     try
                     {
 
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>).Name}");
-                        unstablePublicEvaluatorOutputDefinitionVariant3 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>).Name}");
+                        unstablePublicCategoricalEvaluatorOutputDefinition = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -123,14 +123,14 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (unstablePublicEvaluatorOutputDefinitionVariant1 == null && unstablePublicEvaluatorOutputDefinitionVariant2 == null && unstablePublicEvaluatorOutputDefinitionVariant3 == null)
+            if (unstablePublicNumericEvaluatorOutputDefinition == null && unstablePublicBooleanEvaluatorOutputDefinition == null && unstablePublicCategoricalEvaluatorOutputDefinition == null)
             {
                 try
                 {
 
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>).Name}");
-                    unstablePublicEvaluatorOutputDefinitionVariant1 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>).Name}");
+                    unstablePublicNumericEvaluatorOutputDefinition = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -140,14 +140,14 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (unstablePublicEvaluatorOutputDefinitionVariant1 == null && unstablePublicEvaluatorOutputDefinitionVariant2 == null && unstablePublicEvaluatorOutputDefinitionVariant3 == null)
+            if (unstablePublicNumericEvaluatorOutputDefinition == null && unstablePublicBooleanEvaluatorOutputDefinition == null && unstablePublicCategoricalEvaluatorOutputDefinition == null)
             {
                 try
                 {
 
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>).Name}");
-                    unstablePublicEvaluatorOutputDefinitionVariant2 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>).Name}");
+                    unstablePublicBooleanEvaluatorOutputDefinition = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -157,14 +157,14 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (unstablePublicEvaluatorOutputDefinitionVariant1 == null && unstablePublicEvaluatorOutputDefinitionVariant2 == null && unstablePublicEvaluatorOutputDefinitionVariant3 == null)
+            if (unstablePublicNumericEvaluatorOutputDefinition == null && unstablePublicBooleanEvaluatorOutputDefinition == null && unstablePublicCategoricalEvaluatorOutputDefinition == null)
             {
                 try
                 {
 
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>).Name}");
-                    unstablePublicEvaluatorOutputDefinitionVariant3 = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>).Name}");
+                    unstablePublicCategoricalEvaluatorOutputDefinition = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -175,11 +175,11 @@ namespace Langfuse.JsonConverters
             }
 
             var __value = new global::Langfuse.UnstablePublicEvaluatorOutputDefinition(
-                unstablePublicEvaluatorOutputDefinitionVariant1,
+                unstablePublicNumericEvaluatorOutputDefinition,
 
-                unstablePublicEvaluatorOutputDefinitionVariant2,
+                unstablePublicBooleanEvaluatorOutputDefinition,
 
-                unstablePublicEvaluatorOutputDefinitionVariant3
+                unstablePublicCategoricalEvaluatorOutputDefinition
                 );
 
             return __value;
@@ -194,23 +194,23 @@ namespace Langfuse.JsonConverters
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));
             var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
-            if (value.IsUnstablePublicEvaluatorOutputDefinitionVariant1)
+            if (value.IsUnstablePublicNumericEvaluatorOutputDefinition)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UnstablePublicEvaluatorOutputDefinitionVariant1!.Value, typeInfo);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UnstablePublicNumericEvaluatorOutputDefinition!.Value, typeInfo);
             }
-            else if (value.IsUnstablePublicEvaluatorOutputDefinitionVariant2)
+            else if (value.IsUnstablePublicBooleanEvaluatorOutputDefinition)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UnstablePublicEvaluatorOutputDefinitionVariant2!.Value, typeInfo);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UnstablePublicBooleanEvaluatorOutputDefinition!.Value, typeInfo);
             }
-            else if (value.IsUnstablePublicEvaluatorOutputDefinitionVariant3)
+            else if (value.IsUnstablePublicCategoricalEvaluatorOutputDefinition)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UnstablePublicEvaluatorOutputDefinitionVariant3!.Value, typeInfo);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.UnstablePublicEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UnstablePublicCategoricalEvaluatorOutputDefinition!.Value, typeInfo);
             }
         }
     }

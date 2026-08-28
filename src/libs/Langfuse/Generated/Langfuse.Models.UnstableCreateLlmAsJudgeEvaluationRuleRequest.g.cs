@@ -60,12 +60,12 @@ namespace Langfuse
 
         /// <summary>
         /// LLM-as-judge variable mappings.<br/>
-        /// Every evaluator variable must appear exactly once.<br/>
-        /// Build this list from the evaluator `variables` array returned by the evaluator endpoints.
+        /// Every prompt variable must appear exactly once.<br/>
+        /// Build this list from the evaluator's `variables` array.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mapping")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleMapping> Mapping { get; set; }
+        public required global::System.Collections.Generic.IList<global::Langfuse.UnstablePromptVariableMappingInput> Mapping { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -96,8 +96,8 @@ namespace Langfuse
         /// </param>
         /// <param name="mapping">
         /// LLM-as-judge variable mappings.<br/>
-        /// Every evaluator variable must appear exactly once.<br/>
-        /// Build this list from the evaluator `variables` array returned by the evaluator endpoints.
+        /// Every prompt variable must appear exactly once.<br/>
+        /// Build this list from the evaluator's `variables` array.
         /// </param>
         /// <param name="sampling">
         /// Optional sampling fraction. Defaults to `1`.
@@ -116,7 +116,7 @@ namespace Langfuse
             global::Langfuse.UnstableLlmAsJudgeEvaluationRuleEvaluatorReference evaluator,
             global::Langfuse.UnstableEvaluationRuleTarget target,
             bool enabled,
-            global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleMapping> mapping,
+            global::System.Collections.Generic.IList<global::Langfuse.UnstablePromptVariableMappingInput> mapping,
             double? sampling,
             global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleFilter>? filter)
         {

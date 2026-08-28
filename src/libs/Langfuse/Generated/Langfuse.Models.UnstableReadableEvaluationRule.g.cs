@@ -47,8 +47,8 @@ namespace Langfuse
             : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableEvaluationRule' but the value was {ToString()}.");
 
         /// <summary>
-        /// Legacy trace- or dataset-level evaluation rule returned by list and get for migration.<br/>
-        /// This resource is read-only through the unstable public API. Its mapping preserves the trace, dataset item, or named observation selected for each evaluator variable.
+        /// **Deprecated:** Legacy trace- or dataset-level evaluation rule returned by list and get for migration.<br/>
+        /// This resource is read-only through the unstable public API. Its mapping preserves the trace, dataset item, or named observation selected for each prompt variable.
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::Langfuse.UnstableLegacyEvaluationRule? UnstableLegacyEvaluationRule { get; init; }

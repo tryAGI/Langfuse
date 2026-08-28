@@ -19,211 +19,211 @@ namespace Langfuse
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>? UnstableEvaluatorOutputDefinitionVariant1 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>? UnstablePublicNumericEvaluatorOutputDefinition { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>? UnstableEvaluatorOutputDefinitionVariant1 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>? UnstablePublicNumericEvaluatorOutputDefinition { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableEvaluatorOutputDefinitionVariant1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstablePublicNumericEvaluatorOutputDefinition))]
 #endif
-        public bool IsUnstableEvaluatorOutputDefinitionVariant1 => UnstableEvaluatorOutputDefinitionVariant1 != null;
+        public bool IsUnstablePublicNumericEvaluatorOutputDefinition => UnstablePublicNumericEvaluatorOutputDefinition != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickUnstableEvaluatorOutputDefinitionVariant1(
+        public bool TryPickUnstablePublicNumericEvaluatorOutputDefinition(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>? value)
+            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>? value)
         {
-            value = UnstableEvaluatorOutputDefinitionVariant1;
-            return IsUnstableEvaluatorOutputDefinitionVariant1;
+            value = UnstablePublicNumericEvaluatorOutputDefinition;
+            return IsUnstablePublicNumericEvaluatorOutputDefinition;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition> PickUnstableEvaluatorOutputDefinitionVariant1() => IsUnstableEvaluatorOutputDefinitionVariant1
-            ? UnstableEvaluatorOutputDefinitionVariant1!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableEvaluatorOutputDefinitionVariant1' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition> PickUnstablePublicNumericEvaluatorOutputDefinition() => IsUnstablePublicNumericEvaluatorOutputDefinition
+            ? UnstablePublicNumericEvaluatorOutputDefinition!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstablePublicNumericEvaluatorOutputDefinition' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>? UnstableEvaluatorOutputDefinitionVariant2 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>? UnstablePublicBooleanEvaluatorOutputDefinition { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>? UnstableEvaluatorOutputDefinitionVariant2 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>? UnstablePublicBooleanEvaluatorOutputDefinition { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableEvaluatorOutputDefinitionVariant2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstablePublicBooleanEvaluatorOutputDefinition))]
 #endif
-        public bool IsUnstableEvaluatorOutputDefinitionVariant2 => UnstableEvaluatorOutputDefinitionVariant2 != null;
+        public bool IsUnstablePublicBooleanEvaluatorOutputDefinition => UnstablePublicBooleanEvaluatorOutputDefinition != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickUnstableEvaluatorOutputDefinitionVariant2(
+        public bool TryPickUnstablePublicBooleanEvaluatorOutputDefinition(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>? value)
+            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>? value)
         {
-            value = UnstableEvaluatorOutputDefinitionVariant2;
-            return IsUnstableEvaluatorOutputDefinitionVariant2;
+            value = UnstablePublicBooleanEvaluatorOutputDefinition;
+            return IsUnstablePublicBooleanEvaluatorOutputDefinition;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition> PickUnstableEvaluatorOutputDefinitionVariant2() => IsUnstableEvaluatorOutputDefinitionVariant2
-            ? UnstableEvaluatorOutputDefinitionVariant2!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableEvaluatorOutputDefinitionVariant2' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition> PickUnstablePublicBooleanEvaluatorOutputDefinition() => IsUnstablePublicBooleanEvaluatorOutputDefinition
+            ? UnstablePublicBooleanEvaluatorOutputDefinition!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstablePublicBooleanEvaluatorOutputDefinition' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>? UnstableEvaluatorOutputDefinitionVariant3 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>? UnstablePublicCategoricalEvaluatorOutputDefinition { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>? UnstableEvaluatorOutputDefinitionVariant3 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>? UnstablePublicCategoricalEvaluatorOutputDefinition { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableEvaluatorOutputDefinitionVariant3))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstablePublicCategoricalEvaluatorOutputDefinition))]
 #endif
-        public bool IsUnstableEvaluatorOutputDefinitionVariant3 => UnstableEvaluatorOutputDefinitionVariant3 != null;
+        public bool IsUnstablePublicCategoricalEvaluatorOutputDefinition => UnstablePublicCategoricalEvaluatorOutputDefinition != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickUnstableEvaluatorOutputDefinitionVariant3(
+        public bool TryPickUnstablePublicCategoricalEvaluatorOutputDefinition(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>? value)
+            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>? value)
         {
-            value = UnstableEvaluatorOutputDefinitionVariant3;
-            return IsUnstableEvaluatorOutputDefinitionVariant3;
+            value = UnstablePublicCategoricalEvaluatorOutputDefinition;
+            return IsUnstablePublicCategoricalEvaluatorOutputDefinition;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition> PickUnstableEvaluatorOutputDefinitionVariant3() => IsUnstableEvaluatorOutputDefinitionVariant3
-            ? UnstableEvaluatorOutputDefinitionVariant3!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableEvaluatorOutputDefinitionVariant3' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition> PickUnstablePublicCategoricalEvaluatorOutputDefinition() => IsUnstablePublicCategoricalEvaluatorOutputDefinition
+            ? UnstablePublicCategoricalEvaluatorOutputDefinition!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstablePublicCategoricalEvaluatorOutputDefinition' but the value was {ToString()}.");
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator UnstableEvaluatorOutputDefinition(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition> value) => new UnstableEvaluatorOutputDefinition((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>?)value);
+        public static implicit operator UnstableEvaluatorOutputDefinition(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition> value) => new UnstableEvaluatorOutputDefinition((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>?(UnstableEvaluatorOutputDefinition @this) => @this.UnstableEvaluatorOutputDefinitionVariant1;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>?(UnstableEvaluatorOutputDefinition @this) => @this.UnstablePublicNumericEvaluatorOutputDefinition;
 
         /// <summary>
         ///
         /// </summary>
-        public UnstableEvaluatorOutputDefinition(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>? value)
+        public UnstableEvaluatorOutputDefinition(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>? value)
         {
-            UnstableEvaluatorOutputDefinitionVariant1 = value;
+            UnstablePublicNumericEvaluatorOutputDefinition = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static UnstableEvaluatorOutputDefinition FromUnstableEvaluatorOutputDefinitionVariant1(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>? value) => new UnstableEvaluatorOutputDefinition(value);
+        public static UnstableEvaluatorOutputDefinition FromUnstablePublicNumericEvaluatorOutputDefinition(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>? value) => new UnstableEvaluatorOutputDefinition(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator UnstableEvaluatorOutputDefinition(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition> value) => new UnstableEvaluatorOutputDefinition((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>?)value);
+        public static implicit operator UnstableEvaluatorOutputDefinition(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition> value) => new UnstableEvaluatorOutputDefinition((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>?(UnstableEvaluatorOutputDefinition @this) => @this.UnstableEvaluatorOutputDefinitionVariant2;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>?(UnstableEvaluatorOutputDefinition @this) => @this.UnstablePublicBooleanEvaluatorOutputDefinition;
 
         /// <summary>
         ///
         /// </summary>
-        public UnstableEvaluatorOutputDefinition(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>? value)
+        public UnstableEvaluatorOutputDefinition(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>? value)
         {
-            UnstableEvaluatorOutputDefinitionVariant2 = value;
+            UnstablePublicBooleanEvaluatorOutputDefinition = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static UnstableEvaluatorOutputDefinition FromUnstableEvaluatorOutputDefinitionVariant2(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>? value) => new UnstableEvaluatorOutputDefinition(value);
+        public static UnstableEvaluatorOutputDefinition FromUnstablePublicBooleanEvaluatorOutputDefinition(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>? value) => new UnstableEvaluatorOutputDefinition(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator UnstableEvaluatorOutputDefinition(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition> value) => new UnstableEvaluatorOutputDefinition((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>?)value);
+        public static implicit operator UnstableEvaluatorOutputDefinition(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition> value) => new UnstableEvaluatorOutputDefinition((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>?(UnstableEvaluatorOutputDefinition @this) => @this.UnstableEvaluatorOutputDefinitionVariant3;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>?(UnstableEvaluatorOutputDefinition @this) => @this.UnstablePublicCategoricalEvaluatorOutputDefinition;
 
         /// <summary>
         ///
         /// </summary>
-        public UnstableEvaluatorOutputDefinition(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>? value)
+        public UnstableEvaluatorOutputDefinition(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>? value)
         {
-            UnstableEvaluatorOutputDefinitionVariant3 = value;
+            UnstablePublicCategoricalEvaluatorOutputDefinition = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static UnstableEvaluatorOutputDefinition FromUnstableEvaluatorOutputDefinitionVariant3(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>? value) => new UnstableEvaluatorOutputDefinition(value);
+        public static UnstableEvaluatorOutputDefinition FromUnstablePublicCategoricalEvaluatorOutputDefinition(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>? value) => new UnstableEvaluatorOutputDefinition(value);
 
         /// <summary>
         ///
         /// </summary>
         public UnstableEvaluatorOutputDefinition(
-            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>? unstableEvaluatorOutputDefinitionVariant1,
-            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>? unstableEvaluatorOutputDefinitionVariant2,
-            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>? unstableEvaluatorOutputDefinitionVariant3
+            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>? unstablePublicNumericEvaluatorOutputDefinition,
+            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>? unstablePublicBooleanEvaluatorOutputDefinition,
+            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>? unstablePublicCategoricalEvaluatorOutputDefinition
             )
         {
-            UnstableEvaluatorOutputDefinitionVariant1 = unstableEvaluatorOutputDefinitionVariant1;
-            UnstableEvaluatorOutputDefinitionVariant2 = unstableEvaluatorOutputDefinitionVariant2;
-            UnstableEvaluatorOutputDefinitionVariant3 = unstableEvaluatorOutputDefinitionVariant3;
+            UnstablePublicNumericEvaluatorOutputDefinition = unstablePublicNumericEvaluatorOutputDefinition;
+            UnstablePublicBooleanEvaluatorOutputDefinition = unstablePublicBooleanEvaluatorOutputDefinition;
+            UnstablePublicCategoricalEvaluatorOutputDefinition = unstablePublicCategoricalEvaluatorOutputDefinition;
         }
 
         /// <summary>
         ///
         /// </summary>
         public object? Object =>
-            UnstableEvaluatorOutputDefinitionVariant3 as object ??
-            UnstableEvaluatorOutputDefinitionVariant2 as object ??
-            UnstableEvaluatorOutputDefinitionVariant1 as object
+            UnstablePublicCategoricalEvaluatorOutputDefinition as object ??
+            UnstablePublicBooleanEvaluatorOutputDefinition as object ??
+            UnstablePublicNumericEvaluatorOutputDefinition as object
             ;
 
         /// <summary>
         ///
         /// </summary>
         public override string? ToString() =>
-            UnstableEvaluatorOutputDefinitionVariant1?.ToString() ??
-            UnstableEvaluatorOutputDefinitionVariant2?.ToString() ??
-            UnstableEvaluatorOutputDefinitionVariant3?.ToString()
+            UnstablePublicNumericEvaluatorOutputDefinition?.ToString() ??
+            UnstablePublicBooleanEvaluatorOutputDefinition?.ToString() ??
+            UnstablePublicCategoricalEvaluatorOutputDefinition?.ToString()
             ;
 
         /// <summary>
@@ -231,16 +231,16 @@ namespace Langfuse
         /// </summary>
         public bool Validate()
         {
-            return IsUnstableEvaluatorOutputDefinitionVariant1 && !IsUnstableEvaluatorOutputDefinitionVariant2 && !IsUnstableEvaluatorOutputDefinitionVariant3 || !IsUnstableEvaluatorOutputDefinitionVariant1 && IsUnstableEvaluatorOutputDefinitionVariant2 && !IsUnstableEvaluatorOutputDefinitionVariant3 || !IsUnstableEvaluatorOutputDefinitionVariant1 && !IsUnstableEvaluatorOutputDefinitionVariant2 && IsUnstableEvaluatorOutputDefinitionVariant3;
+            return IsUnstablePublicNumericEvaluatorOutputDefinition && !IsUnstablePublicBooleanEvaluatorOutputDefinition && !IsUnstablePublicCategoricalEvaluatorOutputDefinition || !IsUnstablePublicNumericEvaluatorOutputDefinition && IsUnstablePublicBooleanEvaluatorOutputDefinition && !IsUnstablePublicCategoricalEvaluatorOutputDefinition || !IsUnstablePublicNumericEvaluatorOutputDefinition && !IsUnstablePublicBooleanEvaluatorOutputDefinition && IsUnstablePublicCategoricalEvaluatorOutputDefinition;
         }
 
         /// <summary>
         ///
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>?, TResult>? unstableEvaluatorOutputDefinitionVariant1 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>?, TResult>? unstableEvaluatorOutputDefinitionVariant2 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>?, TResult>? unstableEvaluatorOutputDefinitionVariant3 = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>?, TResult>? unstablePublicNumericEvaluatorOutputDefinition = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>?, TResult>? unstablePublicBooleanEvaluatorOutputDefinition = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>?, TResult>? unstablePublicCategoricalEvaluatorOutputDefinition = null,
             bool validate = true)
         {
             if (validate)
@@ -248,17 +248,17 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUnstableEvaluatorOutputDefinitionVariant1 && unstableEvaluatorOutputDefinitionVariant1 != null)
+            if (IsUnstablePublicNumericEvaluatorOutputDefinition && unstablePublicNumericEvaluatorOutputDefinition != null)
             {
-                return unstableEvaluatorOutputDefinitionVariant1(UnstableEvaluatorOutputDefinitionVariant1!);
+                return unstablePublicNumericEvaluatorOutputDefinition(UnstablePublicNumericEvaluatorOutputDefinition!);
             }
-            else if (IsUnstableEvaluatorOutputDefinitionVariant2 && unstableEvaluatorOutputDefinitionVariant2 != null)
+            else if (IsUnstablePublicBooleanEvaluatorOutputDefinition && unstablePublicBooleanEvaluatorOutputDefinition != null)
             {
-                return unstableEvaluatorOutputDefinitionVariant2(UnstableEvaluatorOutputDefinitionVariant2!);
+                return unstablePublicBooleanEvaluatorOutputDefinition(UnstablePublicBooleanEvaluatorOutputDefinition!);
             }
-            else if (IsUnstableEvaluatorOutputDefinitionVariant3 && unstableEvaluatorOutputDefinitionVariant3 != null)
+            else if (IsUnstablePublicCategoricalEvaluatorOutputDefinition && unstablePublicCategoricalEvaluatorOutputDefinition != null)
             {
-                return unstableEvaluatorOutputDefinitionVariant3(UnstableEvaluatorOutputDefinitionVariant3!);
+                return unstablePublicCategoricalEvaluatorOutputDefinition(UnstablePublicCategoricalEvaluatorOutputDefinition!);
             }
 
             return default(TResult);
@@ -268,11 +268,11 @@ namespace Langfuse
         ///
         /// </summary>
         public void Match(
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>?>? unstableEvaluatorOutputDefinitionVariant1 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>?>? unstablePublicNumericEvaluatorOutputDefinition = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>?>? unstableEvaluatorOutputDefinitionVariant2 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>?>? unstablePublicBooleanEvaluatorOutputDefinition = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>?>? unstableEvaluatorOutputDefinitionVariant3 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>?>? unstablePublicCategoricalEvaluatorOutputDefinition = null,
             bool validate = true)
         {
             if (validate)
@@ -280,17 +280,17 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUnstableEvaluatorOutputDefinitionVariant1)
+            if (IsUnstablePublicNumericEvaluatorOutputDefinition)
             {
-                unstableEvaluatorOutputDefinitionVariant1?.Invoke(UnstableEvaluatorOutputDefinitionVariant1!);
+                unstablePublicNumericEvaluatorOutputDefinition?.Invoke(UnstablePublicNumericEvaluatorOutputDefinition!);
             }
-            else if (IsUnstableEvaluatorOutputDefinitionVariant2)
+            else if (IsUnstablePublicBooleanEvaluatorOutputDefinition)
             {
-                unstableEvaluatorOutputDefinitionVariant2?.Invoke(UnstableEvaluatorOutputDefinitionVariant2!);
+                unstablePublicBooleanEvaluatorOutputDefinition?.Invoke(UnstablePublicBooleanEvaluatorOutputDefinition!);
             }
-            else if (IsUnstableEvaluatorOutputDefinitionVariant3)
+            else if (IsUnstablePublicCategoricalEvaluatorOutputDefinition)
             {
-                unstableEvaluatorOutputDefinitionVariant3?.Invoke(UnstableEvaluatorOutputDefinitionVariant3!);
+                unstablePublicCategoricalEvaluatorOutputDefinition?.Invoke(UnstablePublicCategoricalEvaluatorOutputDefinition!);
             }
         }
 
@@ -298,9 +298,9 @@ namespace Langfuse
         ///
         /// </summary>
         public void Switch(
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>?>? unstableEvaluatorOutputDefinitionVariant1 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>?>? unstableEvaluatorOutputDefinitionVariant2 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>?>? unstableEvaluatorOutputDefinitionVariant3 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>?>? unstablePublicNumericEvaluatorOutputDefinition = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>?>? unstablePublicBooleanEvaluatorOutputDefinition = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>?>? unstablePublicCategoricalEvaluatorOutputDefinition = null,
             bool validate = true)
         {
             if (validate)
@@ -308,17 +308,17 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUnstableEvaluatorOutputDefinitionVariant1)
+            if (IsUnstablePublicNumericEvaluatorOutputDefinition)
             {
-                unstableEvaluatorOutputDefinitionVariant1?.Invoke(UnstableEvaluatorOutputDefinitionVariant1!);
+                unstablePublicNumericEvaluatorOutputDefinition?.Invoke(UnstablePublicNumericEvaluatorOutputDefinition!);
             }
-            else if (IsUnstableEvaluatorOutputDefinitionVariant2)
+            else if (IsUnstablePublicBooleanEvaluatorOutputDefinition)
             {
-                unstableEvaluatorOutputDefinitionVariant2?.Invoke(UnstableEvaluatorOutputDefinitionVariant2!);
+                unstablePublicBooleanEvaluatorOutputDefinition?.Invoke(UnstablePublicBooleanEvaluatorOutputDefinition!);
             }
-            else if (IsUnstableEvaluatorOutputDefinitionVariant3)
+            else if (IsUnstablePublicCategoricalEvaluatorOutputDefinition)
             {
-                unstableEvaluatorOutputDefinitionVariant3?.Invoke(UnstableEvaluatorOutputDefinitionVariant3!);
+                unstablePublicCategoricalEvaluatorOutputDefinition?.Invoke(UnstablePublicCategoricalEvaluatorOutputDefinition!);
             }
         }
 
@@ -329,12 +329,12 @@ namespace Langfuse
         {
             var fields = new object?[]
             {
-                UnstableEvaluatorOutputDefinitionVariant1,
-                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>),
-                UnstableEvaluatorOutputDefinitionVariant2,
-                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>),
-                UnstableEvaluatorOutputDefinitionVariant3,
-                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>),
+                UnstablePublicNumericEvaluatorOutputDefinition,
+                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>),
+                UnstablePublicBooleanEvaluatorOutputDefinition,
+                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>),
+                UnstablePublicCategoricalEvaluatorOutputDefinition,
+                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>),
             };
             const int offset = unchecked((int)2166136261);
             const int prime = 16777619;
@@ -351,9 +351,9 @@ namespace Langfuse
         public bool Equals(UnstableEvaluatorOutputDefinition other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant12, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>?>.Default.Equals(UnstableEvaluatorOutputDefinitionVariant1, other.UnstableEvaluatorOutputDefinitionVariant1) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant22, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>?>.Default.Equals(UnstableEvaluatorOutputDefinitionVariant2, other.UnstableEvaluatorOutputDefinitionVariant2) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionVariant32, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>?>.Default.Equals(UnstableEvaluatorOutputDefinitionVariant3, other.UnstableEvaluatorOutputDefinitionVariant3)
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicNumericEvaluatorOutputDefinition>?>.Default.Equals(UnstablePublicNumericEvaluatorOutputDefinition, other.UnstablePublicNumericEvaluatorOutputDefinition) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicBooleanEvaluatorOutputDefinition>?>.Default.Equals(UnstablePublicBooleanEvaluatorOutputDefinition, other.UnstablePublicBooleanEvaluatorOutputDefinition) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicCategoricalEvaluatorOutputDefinition2, global::Langfuse.UnstablePublicCategoricalEvaluatorOutputDefinition>?>.Default.Equals(UnstablePublicCategoricalEvaluatorOutputDefinition, other.UnstablePublicCategoricalEvaluatorOutputDefinition)
                 ;
         }
 

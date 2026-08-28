@@ -19,7 +19,7 @@ namespace Langfuse
         /// Optional rule-specific override. Omit to inherit the evaluator version's default mapping. Omit for code evaluators.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mapping")]
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleMapping>? Mapping { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstablePromptVariableMappingInput>? Mapping { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -39,7 +39,7 @@ namespace Langfuse
 #endif
         public UnstableCreateEvaluationRuleEvaluatorAssignment(
             global::Langfuse.UnstableCreateEvaluationRuleEvaluatorReference evaluator,
-            global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleMapping>? mapping)
+            global::System.Collections.Generic.IList<global::Langfuse.UnstablePromptVariableMappingInput>? mapping)
         {
             this.Evaluator = evaluator ?? throw new global::System.ArgumentNullException(nameof(evaluator));
             this.Mapping = mapping;

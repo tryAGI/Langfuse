@@ -4,8 +4,8 @@
 namespace Langfuse
 {
     /// <summary>
-    /// Legacy trace- or dataset-level evaluation rule returned by list and get for migration.<br/>
-    /// This resource is read-only through the unstable public API. Its mapping preserves the trace, dataset item, or named observation selected for each evaluator variable.
+    /// **Deprecated:** Legacy trace- or dataset-level evaluation rule returned by list and get for migration.<br/>
+    /// This resource is read-only through the unstable public API. Its mapping preserves the trace, dataset item, or named observation selected for each prompt variable.
     /// </summary>
     public sealed partial class UnstableLegacyEvaluationRule
     {
@@ -17,7 +17,7 @@ namespace Langfuse
         public required global::System.Collections.Generic.IList<global::Langfuse.UnstableLegacyEvaluationRuleEvaluatorAssignment> Evaluators { get; set; }
 
         /// <summary>
-        ///
+        /// **Deprecated:** Legacy trace or dataset evaluation target.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("target")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.UnstableLegacyEvaluationRuleTargetJsonConverter))]
@@ -50,7 +50,7 @@ namespace Langfuse
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mapping")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::Langfuse.UnstableLegacyEvaluationRuleMapping> Mapping { get; set; }
+        public required global::System.Collections.Generic.IList<global::Langfuse.UnstableLegacyPromptVariableMapping> Mapping { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -64,7 +64,9 @@ namespace Langfuse
         /// <param name="evaluators">
         /// Evaluators attached to this rule in deterministic assignment order.
         /// </param>
-        /// <param name="target"></param>
+        /// <param name="target">
+        /// **Deprecated:** Legacy trace or dataset evaluation target.
+        /// </param>
         /// <param name="delay">
         /// Delay in milliseconds before the legacy evaluation job runs.
         /// </param>
@@ -86,7 +88,7 @@ namespace Langfuse
             int delay,
             global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleTimeScope> timeScope,
             global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleFilter> filter,
-            global::System.Collections.Generic.IList<global::Langfuse.UnstableLegacyEvaluationRuleMapping> mapping)
+            global::System.Collections.Generic.IList<global::Langfuse.UnstableLegacyPromptVariableMapping> mapping)
         {
             this.Evaluators = evaluators ?? throw new global::System.ArgumentNullException(nameof(evaluators));
             this.Target = target;

@@ -41,7 +41,7 @@ namespace Langfuse
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mapping")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleReadMapping> Mapping { get; set; }
+        public required global::System.Collections.Generic.IList<global::Langfuse.UnstablePromptVariableMappingRead> Mapping { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -77,7 +77,7 @@ namespace Langfuse
             global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleEvaluatorAssignment> evaluators,
             global::Langfuse.UnstableEvaluationRuleTarget target,
             global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleFilter> filter,
-            global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleReadMapping> mapping)
+            global::System.Collections.Generic.IList<global::Langfuse.UnstablePromptVariableMappingRead> mapping)
         {
             this.Evaluators = evaluators ?? throw new global::System.ArgumentNullException(nameof(evaluators));
             this.Target = target;

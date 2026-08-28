@@ -13,186 +13,186 @@ namespace Langfuse
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public string? MapValueVariant1 { get; init; }
+        public string? String { get; init; }
 #else
-        public string? MapValueVariant1 { get; }
+        public string? String { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MapValueVariant1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(String))]
 #endif
-        public bool IsMapValueVariant1 => MapValueVariant1 != null;
+        public bool IsString => String != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickMapValueVariant1(
+        public bool TryPickString(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
             out string? value)
         {
-            value = MapValueVariant1;
-            return IsMapValueVariant1;
+            value = String;
+            return IsString;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public string PickMapValueVariant1() => IsMapValueVariant1
-            ? MapValueVariant1!
-            : throw new global::System.InvalidOperationException($"Expected union variant 'MapValueVariant1' but the value was {ToString()}.");
+        public string PickString() => IsString
+            ? String!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'String' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public int? MapValueVariant2 { get; init; }
+        public int? Integer { get; init; }
 #else
-        public int? MapValueVariant2 { get; }
+        public int? Integer { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MapValueVariant2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Integer))]
 #endif
-        public bool IsMapValueVariant2 => MapValueVariant2 != null;
+        public bool IsInteger => Integer != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickMapValueVariant2(
+        public bool TryPickInteger(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
             out int? value)
         {
-            value = MapValueVariant2;
-            return IsMapValueVariant2;
+            value = Integer;
+            return IsInteger;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public int PickMapValueVariant2() => IsMapValueVariant2
-            ? MapValueVariant2!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'MapValueVariant2' but the value was {ToString()}.");
+        public int PickInteger() => IsInteger
+            ? Integer!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Integer' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public float? MapValueVariant3 { get; init; }
+        public float? FloatNumber { get; init; }
 #else
-        public float? MapValueVariant3 { get; }
+        public float? FloatNumber { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MapValueVariant3))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(FloatNumber))]
 #endif
-        public bool IsMapValueVariant3 => MapValueVariant3 != null;
+        public bool IsFloatNumber => FloatNumber != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickMapValueVariant3(
+        public bool TryPickFloatNumber(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
             out float? value)
         {
-            value = MapValueVariant3;
-            return IsMapValueVariant3;
+            value = FloatNumber;
+            return IsFloatNumber;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public float PickMapValueVariant3() => IsMapValueVariant3
-            ? MapValueVariant3!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'MapValueVariant3' but the value was {ToString()}.");
+        public float PickFloatNumber() => IsFloatNumber
+            ? FloatNumber!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'FloatNumber' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public bool? MapValueVariant4 { get; init; }
+        public bool? Boolean { get; init; }
 #else
-        public bool? MapValueVariant4 { get; }
+        public bool? Boolean { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MapValueVariant4))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Boolean))]
 #endif
-        public bool IsMapValueVariant4 => MapValueVariant4 != null;
+        public bool IsBoolean => Boolean != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickMapValueVariant4(
+        public bool TryPickBoolean(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
             out bool? value)
         {
-            value = MapValueVariant4;
-            return IsMapValueVariant4;
+            value = Boolean;
+            return IsBoolean;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public bool PickMapValueVariant4() => IsMapValueVariant4
-            ? MapValueVariant4!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'MapValueVariant4' but the value was {ToString()}.");
+        public bool PickBoolean() => IsBoolean
+            ? Boolean!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Boolean' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.Collections.Generic.IList<string>? MapValueVariant5 { get; init; }
+        public global::System.Collections.Generic.IList<string>? Array { get; init; }
 #else
-        public global::System.Collections.Generic.IList<string>? MapValueVariant5 { get; }
+        public global::System.Collections.Generic.IList<string>? Array { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(MapValueVariant5))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(Array))]
 #endif
-        public bool IsMapValueVariant5 => MapValueVariant5 != null;
+        public bool IsArray => Array != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickMapValueVariant5(
+        public bool TryPickArray(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
             out global::System.Collections.Generic.IList<string>? value)
         {
-            value = MapValueVariant5;
-            return IsMapValueVariant5;
+            value = Array;
+            return IsArray;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<string> PickMapValueVariant5() => IsMapValueVariant5
-            ? MapValueVariant5!
-            : throw new global::System.InvalidOperationException($"Expected union variant 'MapValueVariant5' but the value was {ToString()}.");
+        public global::System.Collections.Generic.IList<string> PickArray() => IsArray
+            ? Array!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'Array' but the value was {ToString()}.");
         /// <summary>
         ///
         /// </summary>
@@ -201,20 +201,20 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator string?(MapValue @this) => @this.MapValueVariant1;
+        public static implicit operator string?(MapValue @this) => @this.String;
 
         /// <summary>
         ///
         /// </summary>
         public MapValue(string? value)
         {
-            MapValueVariant1 = value;
+            String = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static MapValue FromMapValueVariant1(string? value) => new MapValue(value);
+        public static MapValue FromString(string? value) => new MapValue(value);
 
         /// <summary>
         ///
@@ -224,20 +224,20 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator int?(MapValue @this) => @this.MapValueVariant2;
+        public static implicit operator int?(MapValue @this) => @this.Integer;
 
         /// <summary>
         ///
         /// </summary>
         public MapValue(int? value)
         {
-            MapValueVariant2 = value;
+            Integer = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static MapValue FromMapValueVariant2(int? value) => new MapValue(value);
+        public static MapValue FromInteger(int? value) => new MapValue(value);
 
         /// <summary>
         ///
@@ -247,20 +247,20 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator float?(MapValue @this) => @this.MapValueVariant3;
+        public static implicit operator float?(MapValue @this) => @this.FloatNumber;
 
         /// <summary>
         ///
         /// </summary>
         public MapValue(float? value)
         {
-            MapValueVariant3 = value;
+            FloatNumber = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static MapValue FromMapValueVariant3(float? value) => new MapValue(value);
+        public static MapValue FromFloatNumber(float? value) => new MapValue(value);
 
         /// <summary>
         ///
@@ -270,59 +270,59 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator bool?(MapValue @this) => @this.MapValueVariant4;
+        public static implicit operator bool?(MapValue @this) => @this.Boolean;
 
         /// <summary>
         ///
         /// </summary>
         public MapValue(bool? value)
         {
-            MapValueVariant4 = value;
+            Boolean = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static MapValue FromMapValueVariant4(bool? value) => new MapValue(value);
+        public static MapValue FromBoolean(bool? value) => new MapValue(value);
 
         /// <summary>
         ///
         /// </summary>
         public MapValue(
-            string? mapValueVariant1,
-            int? mapValueVariant2,
-            float? mapValueVariant3,
-            bool? mapValueVariant4,
-            global::System.Collections.Generic.IList<string>? mapValueVariant5
+            string? @string,
+            int? integer,
+            float? floatNumber,
+            bool? boolean,
+            global::System.Collections.Generic.IList<string>? array
             )
         {
-            MapValueVariant1 = mapValueVariant1;
-            MapValueVariant2 = mapValueVariant2;
-            MapValueVariant3 = mapValueVariant3;
-            MapValueVariant4 = mapValueVariant4;
-            MapValueVariant5 = mapValueVariant5;
+            String = @string;
+            Integer = integer;
+            FloatNumber = floatNumber;
+            Boolean = boolean;
+            Array = array;
         }
 
         /// <summary>
         ///
         /// </summary>
         public object? Object =>
-            MapValueVariant5 as object ??
-            MapValueVariant4 as object ??
-            MapValueVariant3 as object ??
-            MapValueVariant2 as object ??
-            MapValueVariant1 as object
+            Array as object ??
+            Boolean as object ??
+            FloatNumber as object ??
+            Integer as object ??
+            String as object
             ;
 
         /// <summary>
         ///
         /// </summary>
         public override string? ToString() =>
-            MapValueVariant1?.ToString() ??
-            MapValueVariant2?.ToString() ??
-            MapValueVariant3?.ToString() ??
-            MapValueVariant4?.ToString().ToLowerInvariant() ??
-            MapValueVariant5?.ToString()
+            String?.ToString() ??
+            Integer?.ToString() ??
+            FloatNumber?.ToString() ??
+            Boolean?.ToString().ToLowerInvariant() ??
+            Array?.ToString()
             ;
 
         /// <summary>
@@ -330,18 +330,18 @@ namespace Langfuse
         /// </summary>
         public bool Validate()
         {
-            return IsMapValueVariant1 && !IsMapValueVariant2 && !IsMapValueVariant3 && !IsMapValueVariant4 && !IsMapValueVariant5 || !IsMapValueVariant1 && IsMapValueVariant2 && !IsMapValueVariant3 && !IsMapValueVariant4 && !IsMapValueVariant5 || !IsMapValueVariant1 && !IsMapValueVariant2 && IsMapValueVariant3 && !IsMapValueVariant4 && !IsMapValueVariant5 || !IsMapValueVariant1 && !IsMapValueVariant2 && !IsMapValueVariant3 && IsMapValueVariant4 && !IsMapValueVariant5 || !IsMapValueVariant1 && !IsMapValueVariant2 && !IsMapValueVariant3 && !IsMapValueVariant4 && IsMapValueVariant5;
+            return IsString && !IsInteger && !IsFloatNumber && !IsBoolean && !IsArray || !IsString && IsInteger && !IsFloatNumber && !IsBoolean && !IsArray || !IsString && !IsInteger && IsFloatNumber && !IsBoolean && !IsArray || !IsString && !IsInteger && !IsFloatNumber && IsBoolean && !IsArray || !IsString && !IsInteger && !IsFloatNumber && !IsBoolean && IsArray;
         }
 
         /// <summary>
         ///
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<string, TResult>? mapValueVariant1 = null,
-            global::System.Func<int?, TResult>? mapValueVariant2 = null,
-            global::System.Func<float?, TResult>? mapValueVariant3 = null,
-            global::System.Func<bool?, TResult>? mapValueVariant4 = null,
-            global::System.Func<global::System.Collections.Generic.IList<string>, TResult>? mapValueVariant5 = null,
+            global::System.Func<string, TResult>? @string = null,
+            global::System.Func<int?, TResult>? integer = null,
+            global::System.Func<float?, TResult>? floatNumber = null,
+            global::System.Func<bool?, TResult>? boolean = null,
+            global::System.Func<global::System.Collections.Generic.IList<string>, TResult>? array = null,
             bool validate = true)
         {
             if (validate)
@@ -349,25 +349,25 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsMapValueVariant1 && mapValueVariant1 != null)
+            if (IsString && @string != null)
             {
-                return mapValueVariant1(MapValueVariant1!);
+                return @string(String!);
             }
-            else if (IsMapValueVariant2 && mapValueVariant2 != null)
+            else if (IsInteger && integer != null)
             {
-                return mapValueVariant2(MapValueVariant2!);
+                return integer(Integer!);
             }
-            else if (IsMapValueVariant3 && mapValueVariant3 != null)
+            else if (IsFloatNumber && floatNumber != null)
             {
-                return mapValueVariant3(MapValueVariant3!);
+                return floatNumber(FloatNumber!);
             }
-            else if (IsMapValueVariant4 && mapValueVariant4 != null)
+            else if (IsBoolean && boolean != null)
             {
-                return mapValueVariant4(MapValueVariant4!);
+                return boolean(Boolean!);
             }
-            else if (IsMapValueVariant5 && mapValueVariant5 != null)
+            else if (IsArray && array != null)
             {
-                return mapValueVariant5(MapValueVariant5!);
+                return array(Array!);
             }
 
             return default(TResult);
@@ -377,15 +377,15 @@ namespace Langfuse
         ///
         /// </summary>
         public void Match(
-            global::System.Action<string>? mapValueVariant1 = null,
+            global::System.Action<string>? @string = null,
 
-            global::System.Action<int?>? mapValueVariant2 = null,
+            global::System.Action<int?>? integer = null,
 
-            global::System.Action<float?>? mapValueVariant3 = null,
+            global::System.Action<float?>? floatNumber = null,
 
-            global::System.Action<bool?>? mapValueVariant4 = null,
+            global::System.Action<bool?>? boolean = null,
 
-            global::System.Action<global::System.Collections.Generic.IList<string>>? mapValueVariant5 = null,
+            global::System.Action<global::System.Collections.Generic.IList<string>>? array = null,
             bool validate = true)
         {
             if (validate)
@@ -393,25 +393,25 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsMapValueVariant1)
+            if (IsString)
             {
-                mapValueVariant1?.Invoke(MapValueVariant1!);
+                @string?.Invoke(String!);
             }
-            else if (IsMapValueVariant2)
+            else if (IsInteger)
             {
-                mapValueVariant2?.Invoke(MapValueVariant2!);
+                integer?.Invoke(Integer!);
             }
-            else if (IsMapValueVariant3)
+            else if (IsFloatNumber)
             {
-                mapValueVariant3?.Invoke(MapValueVariant3!);
+                floatNumber?.Invoke(FloatNumber!);
             }
-            else if (IsMapValueVariant4)
+            else if (IsBoolean)
             {
-                mapValueVariant4?.Invoke(MapValueVariant4!);
+                boolean?.Invoke(Boolean!);
             }
-            else if (IsMapValueVariant5)
+            else if (IsArray)
             {
-                mapValueVariant5?.Invoke(MapValueVariant5!);
+                array?.Invoke(Array!);
             }
         }
 
@@ -419,11 +419,11 @@ namespace Langfuse
         ///
         /// </summary>
         public void Switch(
-            global::System.Action<string>? mapValueVariant1 = null,
-            global::System.Action<int?>? mapValueVariant2 = null,
-            global::System.Action<float?>? mapValueVariant3 = null,
-            global::System.Action<bool?>? mapValueVariant4 = null,
-            global::System.Action<global::System.Collections.Generic.IList<string>>? mapValueVariant5 = null,
+            global::System.Action<string>? @string = null,
+            global::System.Action<int?>? integer = null,
+            global::System.Action<float?>? floatNumber = null,
+            global::System.Action<bool?>? boolean = null,
+            global::System.Action<global::System.Collections.Generic.IList<string>>? array = null,
             bool validate = true)
         {
             if (validate)
@@ -431,25 +431,25 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsMapValueVariant1)
+            if (IsString)
             {
-                mapValueVariant1?.Invoke(MapValueVariant1!);
+                @string?.Invoke(String!);
             }
-            else if (IsMapValueVariant2)
+            else if (IsInteger)
             {
-                mapValueVariant2?.Invoke(MapValueVariant2!);
+                integer?.Invoke(Integer!);
             }
-            else if (IsMapValueVariant3)
+            else if (IsFloatNumber)
             {
-                mapValueVariant3?.Invoke(MapValueVariant3!);
+                floatNumber?.Invoke(FloatNumber!);
             }
-            else if (IsMapValueVariant4)
+            else if (IsBoolean)
             {
-                mapValueVariant4?.Invoke(MapValueVariant4!);
+                boolean?.Invoke(Boolean!);
             }
-            else if (IsMapValueVariant5)
+            else if (IsArray)
             {
-                mapValueVariant5?.Invoke(MapValueVariant5!);
+                array?.Invoke(Array!);
             }
         }
 
@@ -460,15 +460,15 @@ namespace Langfuse
         {
             var fields = new object?[]
             {
-                MapValueVariant1,
+                String,
                 typeof(string),
-                MapValueVariant2,
+                Integer,
                 typeof(int),
-                MapValueVariant3,
+                FloatNumber,
                 typeof(float),
-                MapValueVariant4,
+                Boolean,
                 typeof(bool),
-                MapValueVariant5,
+                Array,
                 typeof(global::System.Collections.Generic.IList<string>),
             };
             const int offset = unchecked((int)2166136261);
@@ -486,11 +486,11 @@ namespace Langfuse
         public bool Equals(MapValue other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(MapValueVariant1, other.MapValueVariant1) &&
-                global::System.Collections.Generic.EqualityComparer<int?>.Default.Equals(MapValueVariant2, other.MapValueVariant2) &&
-                global::System.Collections.Generic.EqualityComparer<float?>.Default.Equals(MapValueVariant3, other.MapValueVariant3) &&
-                global::System.Collections.Generic.EqualityComparer<bool?>.Default.Equals(MapValueVariant4, other.MapValueVariant4) &&
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<string>?>.Default.Equals(MapValueVariant5, other.MapValueVariant5)
+                global::System.Collections.Generic.EqualityComparer<string?>.Default.Equals(String, other.String) &&
+                global::System.Collections.Generic.EqualityComparer<int?>.Default.Equals(Integer, other.Integer) &&
+                global::System.Collections.Generic.EqualityComparer<float?>.Default.Equals(FloatNumber, other.FloatNumber) &&
+                global::System.Collections.Generic.EqualityComparer<bool?>.Default.Equals(Boolean, other.Boolean) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.IList<string>?>.Default.Equals(Array, other.Array)
                 ;
         }
 

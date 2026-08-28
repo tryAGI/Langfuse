@@ -10,7 +10,7 @@ namespace Langfuse
     /// - reference an existing evaluator family by `evaluator.name` and `evaluator.type`<br/>
     /// - choose `target=observation` or `target=experiment`<br/>
     /// - if `target=experiment` and you want a dataset filter, call `GET /api/public/v2/datasets` first and use dataset `id` values in `filter[].value`<br/>
-    /// - for `llm_as_judge`, fetch or inspect the evaluator first and provide a complete variable mapping for every evaluator variable<br/>
+    /// - for `llm_as_judge`, fetch or inspect the evaluator first and provide a complete mapping for every prompt variable<br/>
     /// - for `code`, do not send variables or mappings; Langfuse stores the fixed code runtime mapping automatically<br/>
     /// - optionally narrow execution with `filter`<br/>
     /// - set `enabled=true` only when you want live execution immediately

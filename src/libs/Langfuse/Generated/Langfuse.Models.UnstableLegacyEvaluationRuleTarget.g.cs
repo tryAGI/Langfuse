@@ -4,16 +4,16 @@
 namespace Langfuse
 {
     /// <summary>
-    ///
+    /// **Deprecated:** Legacy trace or dataset evaluation target.
     /// </summary>
     public enum UnstableLegacyEvaluationRuleTarget
     {
         /// <summary>
-        ///
+        /// ** Legacy trace or dataset evaluation target.
         /// </summary>
         Dataset,
         /// <summary>
-        ///
+        /// ** Legacy trace or dataset evaluation target.
         /// </summary>
         Trace,
     }

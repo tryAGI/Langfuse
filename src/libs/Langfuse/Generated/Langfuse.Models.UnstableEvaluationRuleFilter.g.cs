@@ -51,659 +51,659 @@ namespace Langfuse
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant12, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>? UnstableEvaluationRuleFilterVariant1 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableDateTimeEvaluationRuleFilter2, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>? UnstableDateTimeEvaluationRuleFilter { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant12, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>? UnstableEvaluationRuleFilterVariant1 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableDateTimeEvaluationRuleFilter2, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>? UnstableDateTimeEvaluationRuleFilter { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableEvaluationRuleFilterVariant1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableDateTimeEvaluationRuleFilter))]
 #endif
-        public bool IsUnstableEvaluationRuleFilterVariant1 => UnstableEvaluationRuleFilterVariant1 != null;
+        public bool IsUnstableDateTimeEvaluationRuleFilter => UnstableDateTimeEvaluationRuleFilter != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickUnstableEvaluationRuleFilterVariant1(
+        public bool TryPickUnstableDateTimeEvaluationRuleFilter(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant12, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>? value)
+            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableDateTimeEvaluationRuleFilter2, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>? value)
         {
-            value = UnstableEvaluationRuleFilterVariant1;
-            return IsUnstableEvaluationRuleFilterVariant1;
+            value = UnstableDateTimeEvaluationRuleFilter;
+            return IsUnstableDateTimeEvaluationRuleFilter;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant12, global::Langfuse.UnstableDateTimeEvaluationRuleFilter> PickUnstableEvaluationRuleFilterVariant1() => IsUnstableEvaluationRuleFilterVariant1
-            ? UnstableEvaluationRuleFilterVariant1!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableEvaluationRuleFilterVariant1' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableDateTimeEvaluationRuleFilter2, global::Langfuse.UnstableDateTimeEvaluationRuleFilter> PickUnstableDateTimeEvaluationRuleFilter() => IsUnstableDateTimeEvaluationRuleFilter
+            ? UnstableDateTimeEvaluationRuleFilter!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableDateTimeEvaluationRuleFilter' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant22, global::Langfuse.UnstableStringEvaluationRuleFilter>? UnstableEvaluationRuleFilterVariant2 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringEvaluationRuleFilter2, global::Langfuse.UnstableStringEvaluationRuleFilter>? UnstableStringEvaluationRuleFilter { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant22, global::Langfuse.UnstableStringEvaluationRuleFilter>? UnstableEvaluationRuleFilterVariant2 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringEvaluationRuleFilter2, global::Langfuse.UnstableStringEvaluationRuleFilter>? UnstableStringEvaluationRuleFilter { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableEvaluationRuleFilterVariant2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableStringEvaluationRuleFilter))]
 #endif
-        public bool IsUnstableEvaluationRuleFilterVariant2 => UnstableEvaluationRuleFilterVariant2 != null;
+        public bool IsUnstableStringEvaluationRuleFilter => UnstableStringEvaluationRuleFilter != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickUnstableEvaluationRuleFilterVariant2(
+        public bool TryPickUnstableStringEvaluationRuleFilter(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant22, global::Langfuse.UnstableStringEvaluationRuleFilter>? value)
+            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringEvaluationRuleFilter2, global::Langfuse.UnstableStringEvaluationRuleFilter>? value)
         {
-            value = UnstableEvaluationRuleFilterVariant2;
-            return IsUnstableEvaluationRuleFilterVariant2;
+            value = UnstableStringEvaluationRuleFilter;
+            return IsUnstableStringEvaluationRuleFilter;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant22, global::Langfuse.UnstableStringEvaluationRuleFilter> PickUnstableEvaluationRuleFilterVariant2() => IsUnstableEvaluationRuleFilterVariant2
-            ? UnstableEvaluationRuleFilterVariant2!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableEvaluationRuleFilterVariant2' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringEvaluationRuleFilter2, global::Langfuse.UnstableStringEvaluationRuleFilter> PickUnstableStringEvaluationRuleFilter() => IsUnstableStringEvaluationRuleFilter
+            ? UnstableStringEvaluationRuleFilter!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableStringEvaluationRuleFilter' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant32, global::Langfuse.UnstableNumberEvaluationRuleFilter>? UnstableEvaluationRuleFilterVariant3 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberEvaluationRuleFilter2, global::Langfuse.UnstableNumberEvaluationRuleFilter>? UnstableNumberEvaluationRuleFilter { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant32, global::Langfuse.UnstableNumberEvaluationRuleFilter>? UnstableEvaluationRuleFilterVariant3 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberEvaluationRuleFilter2, global::Langfuse.UnstableNumberEvaluationRuleFilter>? UnstableNumberEvaluationRuleFilter { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableEvaluationRuleFilterVariant3))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableNumberEvaluationRuleFilter))]
 #endif
-        public bool IsUnstableEvaluationRuleFilterVariant3 => UnstableEvaluationRuleFilterVariant3 != null;
+        public bool IsUnstableNumberEvaluationRuleFilter => UnstableNumberEvaluationRuleFilter != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickUnstableEvaluationRuleFilterVariant3(
+        public bool TryPickUnstableNumberEvaluationRuleFilter(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant32, global::Langfuse.UnstableNumberEvaluationRuleFilter>? value)
+            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberEvaluationRuleFilter2, global::Langfuse.UnstableNumberEvaluationRuleFilter>? value)
         {
-            value = UnstableEvaluationRuleFilterVariant3;
-            return IsUnstableEvaluationRuleFilterVariant3;
+            value = UnstableNumberEvaluationRuleFilter;
+            return IsUnstableNumberEvaluationRuleFilter;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant32, global::Langfuse.UnstableNumberEvaluationRuleFilter> PickUnstableEvaluationRuleFilterVariant3() => IsUnstableEvaluationRuleFilterVariant3
-            ? UnstableEvaluationRuleFilterVariant3!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableEvaluationRuleFilterVariant3' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberEvaluationRuleFilter2, global::Langfuse.UnstableNumberEvaluationRuleFilter> PickUnstableNumberEvaluationRuleFilter() => IsUnstableNumberEvaluationRuleFilter
+            ? UnstableNumberEvaluationRuleFilter!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableNumberEvaluationRuleFilter' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant42, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>? UnstableEvaluationRuleFilterVariant4 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringOptionsEvaluationRuleFilter2, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>? UnstableStringOptionsEvaluationRuleFilter { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant42, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>? UnstableEvaluationRuleFilterVariant4 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringOptionsEvaluationRuleFilter2, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>? UnstableStringOptionsEvaluationRuleFilter { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableEvaluationRuleFilterVariant4))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableStringOptionsEvaluationRuleFilter))]
 #endif
-        public bool IsUnstableEvaluationRuleFilterVariant4 => UnstableEvaluationRuleFilterVariant4 != null;
+        public bool IsUnstableStringOptionsEvaluationRuleFilter => UnstableStringOptionsEvaluationRuleFilter != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickUnstableEvaluationRuleFilterVariant4(
+        public bool TryPickUnstableStringOptionsEvaluationRuleFilter(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant42, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>? value)
+            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringOptionsEvaluationRuleFilter2, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>? value)
         {
-            value = UnstableEvaluationRuleFilterVariant4;
-            return IsUnstableEvaluationRuleFilterVariant4;
+            value = UnstableStringOptionsEvaluationRuleFilter;
+            return IsUnstableStringOptionsEvaluationRuleFilter;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant42, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter> PickUnstableEvaluationRuleFilterVariant4() => IsUnstableEvaluationRuleFilterVariant4
-            ? UnstableEvaluationRuleFilterVariant4!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableEvaluationRuleFilterVariant4' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringOptionsEvaluationRuleFilter2, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter> PickUnstableStringOptionsEvaluationRuleFilter() => IsUnstableStringOptionsEvaluationRuleFilter
+            ? UnstableStringOptionsEvaluationRuleFilter!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableStringOptionsEvaluationRuleFilter' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant52, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>? UnstableEvaluationRuleFilterVariant5 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableCategoryOptionsEvaluationRuleFilter2, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>? UnstableCategoryOptionsEvaluationRuleFilter { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant52, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>? UnstableEvaluationRuleFilterVariant5 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableCategoryOptionsEvaluationRuleFilter2, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>? UnstableCategoryOptionsEvaluationRuleFilter { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableEvaluationRuleFilterVariant5))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableCategoryOptionsEvaluationRuleFilter))]
 #endif
-        public bool IsUnstableEvaluationRuleFilterVariant5 => UnstableEvaluationRuleFilterVariant5 != null;
+        public bool IsUnstableCategoryOptionsEvaluationRuleFilter => UnstableCategoryOptionsEvaluationRuleFilter != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickUnstableEvaluationRuleFilterVariant5(
+        public bool TryPickUnstableCategoryOptionsEvaluationRuleFilter(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant52, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>? value)
+            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableCategoryOptionsEvaluationRuleFilter2, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>? value)
         {
-            value = UnstableEvaluationRuleFilterVariant5;
-            return IsUnstableEvaluationRuleFilterVariant5;
+            value = UnstableCategoryOptionsEvaluationRuleFilter;
+            return IsUnstableCategoryOptionsEvaluationRuleFilter;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant52, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter> PickUnstableEvaluationRuleFilterVariant5() => IsUnstableEvaluationRuleFilterVariant5
-            ? UnstableEvaluationRuleFilterVariant5!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableEvaluationRuleFilterVariant5' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableCategoryOptionsEvaluationRuleFilter2, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter> PickUnstableCategoryOptionsEvaluationRuleFilter() => IsUnstableCategoryOptionsEvaluationRuleFilter
+            ? UnstableCategoryOptionsEvaluationRuleFilter!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableCategoryOptionsEvaluationRuleFilter' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant62, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>? UnstableEvaluationRuleFilterVariant6 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableArrayOptionsEvaluationRuleFilter2, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>? UnstableArrayOptionsEvaluationRuleFilter { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant62, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>? UnstableEvaluationRuleFilterVariant6 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableArrayOptionsEvaluationRuleFilter2, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>? UnstableArrayOptionsEvaluationRuleFilter { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableEvaluationRuleFilterVariant6))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableArrayOptionsEvaluationRuleFilter))]
 #endif
-        public bool IsUnstableEvaluationRuleFilterVariant6 => UnstableEvaluationRuleFilterVariant6 != null;
+        public bool IsUnstableArrayOptionsEvaluationRuleFilter => UnstableArrayOptionsEvaluationRuleFilter != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickUnstableEvaluationRuleFilterVariant6(
+        public bool TryPickUnstableArrayOptionsEvaluationRuleFilter(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant62, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>? value)
+            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableArrayOptionsEvaluationRuleFilter2, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>? value)
         {
-            value = UnstableEvaluationRuleFilterVariant6;
-            return IsUnstableEvaluationRuleFilterVariant6;
+            value = UnstableArrayOptionsEvaluationRuleFilter;
+            return IsUnstableArrayOptionsEvaluationRuleFilter;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant62, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter> PickUnstableEvaluationRuleFilterVariant6() => IsUnstableEvaluationRuleFilterVariant6
-            ? UnstableEvaluationRuleFilterVariant6!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableEvaluationRuleFilterVariant6' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableArrayOptionsEvaluationRuleFilter2, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter> PickUnstableArrayOptionsEvaluationRuleFilter() => IsUnstableArrayOptionsEvaluationRuleFilter
+            ? UnstableArrayOptionsEvaluationRuleFilter!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableArrayOptionsEvaluationRuleFilter' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant72, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>? UnstableEvaluationRuleFilterVariant7 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringObjectEvaluationRuleFilter2, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>? UnstableStringObjectEvaluationRuleFilter { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant72, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>? UnstableEvaluationRuleFilterVariant7 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringObjectEvaluationRuleFilter2, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>? UnstableStringObjectEvaluationRuleFilter { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableEvaluationRuleFilterVariant7))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableStringObjectEvaluationRuleFilter))]
 #endif
-        public bool IsUnstableEvaluationRuleFilterVariant7 => UnstableEvaluationRuleFilterVariant7 != null;
+        public bool IsUnstableStringObjectEvaluationRuleFilter => UnstableStringObjectEvaluationRuleFilter != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickUnstableEvaluationRuleFilterVariant7(
+        public bool TryPickUnstableStringObjectEvaluationRuleFilter(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant72, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>? value)
+            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringObjectEvaluationRuleFilter2, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>? value)
         {
-            value = UnstableEvaluationRuleFilterVariant7;
-            return IsUnstableEvaluationRuleFilterVariant7;
+            value = UnstableStringObjectEvaluationRuleFilter;
+            return IsUnstableStringObjectEvaluationRuleFilter;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant72, global::Langfuse.UnstableStringObjectEvaluationRuleFilter> PickUnstableEvaluationRuleFilterVariant7() => IsUnstableEvaluationRuleFilterVariant7
-            ? UnstableEvaluationRuleFilterVariant7!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableEvaluationRuleFilterVariant7' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringObjectEvaluationRuleFilter2, global::Langfuse.UnstableStringObjectEvaluationRuleFilter> PickUnstableStringObjectEvaluationRuleFilter() => IsUnstableStringObjectEvaluationRuleFilter
+            ? UnstableStringObjectEvaluationRuleFilter!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableStringObjectEvaluationRuleFilter' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant82, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>? UnstableEvaluationRuleFilterVariant8 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberObjectEvaluationRuleFilter2, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>? UnstableNumberObjectEvaluationRuleFilter { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant82, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>? UnstableEvaluationRuleFilterVariant8 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberObjectEvaluationRuleFilter2, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>? UnstableNumberObjectEvaluationRuleFilter { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableEvaluationRuleFilterVariant8))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableNumberObjectEvaluationRuleFilter))]
 #endif
-        public bool IsUnstableEvaluationRuleFilterVariant8 => UnstableEvaluationRuleFilterVariant8 != null;
+        public bool IsUnstableNumberObjectEvaluationRuleFilter => UnstableNumberObjectEvaluationRuleFilter != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickUnstableEvaluationRuleFilterVariant8(
+        public bool TryPickUnstableNumberObjectEvaluationRuleFilter(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant82, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>? value)
+            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberObjectEvaluationRuleFilter2, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>? value)
         {
-            value = UnstableEvaluationRuleFilterVariant8;
-            return IsUnstableEvaluationRuleFilterVariant8;
+            value = UnstableNumberObjectEvaluationRuleFilter;
+            return IsUnstableNumberObjectEvaluationRuleFilter;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant82, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter> PickUnstableEvaluationRuleFilterVariant8() => IsUnstableEvaluationRuleFilterVariant8
-            ? UnstableEvaluationRuleFilterVariant8!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableEvaluationRuleFilterVariant8' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberObjectEvaluationRuleFilter2, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter> PickUnstableNumberObjectEvaluationRuleFilter() => IsUnstableNumberObjectEvaluationRuleFilter
+            ? UnstableNumberObjectEvaluationRuleFilter!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableNumberObjectEvaluationRuleFilter' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant92, global::Langfuse.UnstableBooleanEvaluationRuleFilter>? UnstableEvaluationRuleFilterVariant9 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableBooleanEvaluationRuleFilter2, global::Langfuse.UnstableBooleanEvaluationRuleFilter>? UnstableBooleanEvaluationRuleFilter { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant92, global::Langfuse.UnstableBooleanEvaluationRuleFilter>? UnstableEvaluationRuleFilterVariant9 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableBooleanEvaluationRuleFilter2, global::Langfuse.UnstableBooleanEvaluationRuleFilter>? UnstableBooleanEvaluationRuleFilter { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableEvaluationRuleFilterVariant9))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableBooleanEvaluationRuleFilter))]
 #endif
-        public bool IsUnstableEvaluationRuleFilterVariant9 => UnstableEvaluationRuleFilterVariant9 != null;
+        public bool IsUnstableBooleanEvaluationRuleFilter => UnstableBooleanEvaluationRuleFilter != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickUnstableEvaluationRuleFilterVariant9(
+        public bool TryPickUnstableBooleanEvaluationRuleFilter(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant92, global::Langfuse.UnstableBooleanEvaluationRuleFilter>? value)
+            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableBooleanEvaluationRuleFilter2, global::Langfuse.UnstableBooleanEvaluationRuleFilter>? value)
         {
-            value = UnstableEvaluationRuleFilterVariant9;
-            return IsUnstableEvaluationRuleFilterVariant9;
+            value = UnstableBooleanEvaluationRuleFilter;
+            return IsUnstableBooleanEvaluationRuleFilter;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant92, global::Langfuse.UnstableBooleanEvaluationRuleFilter> PickUnstableEvaluationRuleFilterVariant9() => IsUnstableEvaluationRuleFilterVariant9
-            ? UnstableEvaluationRuleFilterVariant9!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableEvaluationRuleFilterVariant9' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableBooleanEvaluationRuleFilter2, global::Langfuse.UnstableBooleanEvaluationRuleFilter> PickUnstableBooleanEvaluationRuleFilter() => IsUnstableBooleanEvaluationRuleFilter
+            ? UnstableBooleanEvaluationRuleFilter!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableBooleanEvaluationRuleFilter' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant102, global::Langfuse.UnstableNullEvaluationRuleFilter>? UnstableEvaluationRuleFilterVariant10 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNullEvaluationRuleFilter2, global::Langfuse.UnstableNullEvaluationRuleFilter>? UnstableNullEvaluationRuleFilter { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant102, global::Langfuse.UnstableNullEvaluationRuleFilter>? UnstableEvaluationRuleFilterVariant10 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNullEvaluationRuleFilter2, global::Langfuse.UnstableNullEvaluationRuleFilter>? UnstableNullEvaluationRuleFilter { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableEvaluationRuleFilterVariant10))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableNullEvaluationRuleFilter))]
 #endif
-        public bool IsUnstableEvaluationRuleFilterVariant10 => UnstableEvaluationRuleFilterVariant10 != null;
+        public bool IsUnstableNullEvaluationRuleFilter => UnstableNullEvaluationRuleFilter != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickUnstableEvaluationRuleFilterVariant10(
+        public bool TryPickUnstableNullEvaluationRuleFilter(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant102, global::Langfuse.UnstableNullEvaluationRuleFilter>? value)
+            out global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNullEvaluationRuleFilter2, global::Langfuse.UnstableNullEvaluationRuleFilter>? value)
         {
-            value = UnstableEvaluationRuleFilterVariant10;
-            return IsUnstableEvaluationRuleFilterVariant10;
+            value = UnstableNullEvaluationRuleFilter;
+            return IsUnstableNullEvaluationRuleFilter;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant102, global::Langfuse.UnstableNullEvaluationRuleFilter> PickUnstableEvaluationRuleFilterVariant10() => IsUnstableEvaluationRuleFilterVariant10
-            ? UnstableEvaluationRuleFilterVariant10!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableEvaluationRuleFilterVariant10' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNullEvaluationRuleFilter2, global::Langfuse.UnstableNullEvaluationRuleFilter> PickUnstableNullEvaluationRuleFilter() => IsUnstableNullEvaluationRuleFilter
+            ? UnstableNullEvaluationRuleFilter!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableNullEvaluationRuleFilter' but the value was {ToString()}.");
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant12, global::Langfuse.UnstableDateTimeEvaluationRuleFilter> value) => new UnstableEvaluationRuleFilter((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant12, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>?)value);
+        public static implicit operator UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableDateTimeEvaluationRuleFilter2, global::Langfuse.UnstableDateTimeEvaluationRuleFilter> value) => new UnstableEvaluationRuleFilter((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableDateTimeEvaluationRuleFilter2, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant12, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>?(UnstableEvaluationRuleFilter @this) => @this.UnstableEvaluationRuleFilterVariant1;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableDateTimeEvaluationRuleFilter2, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>?(UnstableEvaluationRuleFilter @this) => @this.UnstableDateTimeEvaluationRuleFilter;
 
         /// <summary>
         ///
         /// </summary>
-        public UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant12, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>? value)
+        public UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableDateTimeEvaluationRuleFilter2, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>? value)
         {
-            UnstableEvaluationRuleFilterVariant1 = value;
+            UnstableDateTimeEvaluationRuleFilter = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static UnstableEvaluationRuleFilter FromUnstableEvaluationRuleFilterVariant1(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant12, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>? value) => new UnstableEvaluationRuleFilter(value);
+        public static UnstableEvaluationRuleFilter FromUnstableDateTimeEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableDateTimeEvaluationRuleFilter2, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>? value) => new UnstableEvaluationRuleFilter(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant22, global::Langfuse.UnstableStringEvaluationRuleFilter> value) => new UnstableEvaluationRuleFilter((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant22, global::Langfuse.UnstableStringEvaluationRuleFilter>?)value);
+        public static implicit operator UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringEvaluationRuleFilter2, global::Langfuse.UnstableStringEvaluationRuleFilter> value) => new UnstableEvaluationRuleFilter((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringEvaluationRuleFilter2, global::Langfuse.UnstableStringEvaluationRuleFilter>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant22, global::Langfuse.UnstableStringEvaluationRuleFilter>?(UnstableEvaluationRuleFilter @this) => @this.UnstableEvaluationRuleFilterVariant2;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringEvaluationRuleFilter2, global::Langfuse.UnstableStringEvaluationRuleFilter>?(UnstableEvaluationRuleFilter @this) => @this.UnstableStringEvaluationRuleFilter;
 
         /// <summary>
         ///
         /// </summary>
-        public UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant22, global::Langfuse.UnstableStringEvaluationRuleFilter>? value)
+        public UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringEvaluationRuleFilter2, global::Langfuse.UnstableStringEvaluationRuleFilter>? value)
         {
-            UnstableEvaluationRuleFilterVariant2 = value;
+            UnstableStringEvaluationRuleFilter = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static UnstableEvaluationRuleFilter FromUnstableEvaluationRuleFilterVariant2(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant22, global::Langfuse.UnstableStringEvaluationRuleFilter>? value) => new UnstableEvaluationRuleFilter(value);
+        public static UnstableEvaluationRuleFilter FromUnstableStringEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringEvaluationRuleFilter2, global::Langfuse.UnstableStringEvaluationRuleFilter>? value) => new UnstableEvaluationRuleFilter(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant32, global::Langfuse.UnstableNumberEvaluationRuleFilter> value) => new UnstableEvaluationRuleFilter((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant32, global::Langfuse.UnstableNumberEvaluationRuleFilter>?)value);
+        public static implicit operator UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberEvaluationRuleFilter2, global::Langfuse.UnstableNumberEvaluationRuleFilter> value) => new UnstableEvaluationRuleFilter((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberEvaluationRuleFilter2, global::Langfuse.UnstableNumberEvaluationRuleFilter>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant32, global::Langfuse.UnstableNumberEvaluationRuleFilter>?(UnstableEvaluationRuleFilter @this) => @this.UnstableEvaluationRuleFilterVariant3;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberEvaluationRuleFilter2, global::Langfuse.UnstableNumberEvaluationRuleFilter>?(UnstableEvaluationRuleFilter @this) => @this.UnstableNumberEvaluationRuleFilter;
 
         /// <summary>
         ///
         /// </summary>
-        public UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant32, global::Langfuse.UnstableNumberEvaluationRuleFilter>? value)
+        public UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberEvaluationRuleFilter2, global::Langfuse.UnstableNumberEvaluationRuleFilter>? value)
         {
-            UnstableEvaluationRuleFilterVariant3 = value;
+            UnstableNumberEvaluationRuleFilter = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static UnstableEvaluationRuleFilter FromUnstableEvaluationRuleFilterVariant3(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant32, global::Langfuse.UnstableNumberEvaluationRuleFilter>? value) => new UnstableEvaluationRuleFilter(value);
+        public static UnstableEvaluationRuleFilter FromUnstableNumberEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberEvaluationRuleFilter2, global::Langfuse.UnstableNumberEvaluationRuleFilter>? value) => new UnstableEvaluationRuleFilter(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant42, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter> value) => new UnstableEvaluationRuleFilter((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant42, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>?)value);
+        public static implicit operator UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringOptionsEvaluationRuleFilter2, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter> value) => new UnstableEvaluationRuleFilter((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringOptionsEvaluationRuleFilter2, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant42, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>?(UnstableEvaluationRuleFilter @this) => @this.UnstableEvaluationRuleFilterVariant4;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringOptionsEvaluationRuleFilter2, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>?(UnstableEvaluationRuleFilter @this) => @this.UnstableStringOptionsEvaluationRuleFilter;
 
         /// <summary>
         ///
         /// </summary>
-        public UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant42, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>? value)
+        public UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringOptionsEvaluationRuleFilter2, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>? value)
         {
-            UnstableEvaluationRuleFilterVariant4 = value;
+            UnstableStringOptionsEvaluationRuleFilter = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static UnstableEvaluationRuleFilter FromUnstableEvaluationRuleFilterVariant4(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant42, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>? value) => new UnstableEvaluationRuleFilter(value);
+        public static UnstableEvaluationRuleFilter FromUnstableStringOptionsEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringOptionsEvaluationRuleFilter2, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>? value) => new UnstableEvaluationRuleFilter(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant52, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter> value) => new UnstableEvaluationRuleFilter((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant52, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>?)value);
+        public static implicit operator UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableCategoryOptionsEvaluationRuleFilter2, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter> value) => new UnstableEvaluationRuleFilter((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableCategoryOptionsEvaluationRuleFilter2, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant52, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>?(UnstableEvaluationRuleFilter @this) => @this.UnstableEvaluationRuleFilterVariant5;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableCategoryOptionsEvaluationRuleFilter2, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>?(UnstableEvaluationRuleFilter @this) => @this.UnstableCategoryOptionsEvaluationRuleFilter;
 
         /// <summary>
         ///
         /// </summary>
-        public UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant52, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>? value)
+        public UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableCategoryOptionsEvaluationRuleFilter2, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>? value)
         {
-            UnstableEvaluationRuleFilterVariant5 = value;
+            UnstableCategoryOptionsEvaluationRuleFilter = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static UnstableEvaluationRuleFilter FromUnstableEvaluationRuleFilterVariant5(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant52, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>? value) => new UnstableEvaluationRuleFilter(value);
+        public static UnstableEvaluationRuleFilter FromUnstableCategoryOptionsEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableCategoryOptionsEvaluationRuleFilter2, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>? value) => new UnstableEvaluationRuleFilter(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant62, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter> value) => new UnstableEvaluationRuleFilter((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant62, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>?)value);
+        public static implicit operator UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableArrayOptionsEvaluationRuleFilter2, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter> value) => new UnstableEvaluationRuleFilter((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableArrayOptionsEvaluationRuleFilter2, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant62, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>?(UnstableEvaluationRuleFilter @this) => @this.UnstableEvaluationRuleFilterVariant6;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableArrayOptionsEvaluationRuleFilter2, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>?(UnstableEvaluationRuleFilter @this) => @this.UnstableArrayOptionsEvaluationRuleFilter;
 
         /// <summary>
         ///
         /// </summary>
-        public UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant62, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>? value)
+        public UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableArrayOptionsEvaluationRuleFilter2, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>? value)
         {
-            UnstableEvaluationRuleFilterVariant6 = value;
+            UnstableArrayOptionsEvaluationRuleFilter = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static UnstableEvaluationRuleFilter FromUnstableEvaluationRuleFilterVariant6(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant62, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>? value) => new UnstableEvaluationRuleFilter(value);
+        public static UnstableEvaluationRuleFilter FromUnstableArrayOptionsEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableArrayOptionsEvaluationRuleFilter2, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>? value) => new UnstableEvaluationRuleFilter(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant72, global::Langfuse.UnstableStringObjectEvaluationRuleFilter> value) => new UnstableEvaluationRuleFilter((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant72, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>?)value);
+        public static implicit operator UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringObjectEvaluationRuleFilter2, global::Langfuse.UnstableStringObjectEvaluationRuleFilter> value) => new UnstableEvaluationRuleFilter((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringObjectEvaluationRuleFilter2, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant72, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>?(UnstableEvaluationRuleFilter @this) => @this.UnstableEvaluationRuleFilterVariant7;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringObjectEvaluationRuleFilter2, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>?(UnstableEvaluationRuleFilter @this) => @this.UnstableStringObjectEvaluationRuleFilter;
 
         /// <summary>
         ///
         /// </summary>
-        public UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant72, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>? value)
+        public UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringObjectEvaluationRuleFilter2, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>? value)
         {
-            UnstableEvaluationRuleFilterVariant7 = value;
+            UnstableStringObjectEvaluationRuleFilter = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static UnstableEvaluationRuleFilter FromUnstableEvaluationRuleFilterVariant7(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant72, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>? value) => new UnstableEvaluationRuleFilter(value);
+        public static UnstableEvaluationRuleFilter FromUnstableStringObjectEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringObjectEvaluationRuleFilter2, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>? value) => new UnstableEvaluationRuleFilter(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant82, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter> value) => new UnstableEvaluationRuleFilter((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant82, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>?)value);
+        public static implicit operator UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberObjectEvaluationRuleFilter2, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter> value) => new UnstableEvaluationRuleFilter((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberObjectEvaluationRuleFilter2, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant82, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>?(UnstableEvaluationRuleFilter @this) => @this.UnstableEvaluationRuleFilterVariant8;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberObjectEvaluationRuleFilter2, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>?(UnstableEvaluationRuleFilter @this) => @this.UnstableNumberObjectEvaluationRuleFilter;
 
         /// <summary>
         ///
         /// </summary>
-        public UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant82, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>? value)
+        public UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberObjectEvaluationRuleFilter2, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>? value)
         {
-            UnstableEvaluationRuleFilterVariant8 = value;
+            UnstableNumberObjectEvaluationRuleFilter = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static UnstableEvaluationRuleFilter FromUnstableEvaluationRuleFilterVariant8(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant82, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>? value) => new UnstableEvaluationRuleFilter(value);
+        public static UnstableEvaluationRuleFilter FromUnstableNumberObjectEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberObjectEvaluationRuleFilter2, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>? value) => new UnstableEvaluationRuleFilter(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant92, global::Langfuse.UnstableBooleanEvaluationRuleFilter> value) => new UnstableEvaluationRuleFilter((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant92, global::Langfuse.UnstableBooleanEvaluationRuleFilter>?)value);
+        public static implicit operator UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableBooleanEvaluationRuleFilter2, global::Langfuse.UnstableBooleanEvaluationRuleFilter> value) => new UnstableEvaluationRuleFilter((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableBooleanEvaluationRuleFilter2, global::Langfuse.UnstableBooleanEvaluationRuleFilter>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant92, global::Langfuse.UnstableBooleanEvaluationRuleFilter>?(UnstableEvaluationRuleFilter @this) => @this.UnstableEvaluationRuleFilterVariant9;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableBooleanEvaluationRuleFilter2, global::Langfuse.UnstableBooleanEvaluationRuleFilter>?(UnstableEvaluationRuleFilter @this) => @this.UnstableBooleanEvaluationRuleFilter;
 
         /// <summary>
         ///
         /// </summary>
-        public UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant92, global::Langfuse.UnstableBooleanEvaluationRuleFilter>? value)
+        public UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableBooleanEvaluationRuleFilter2, global::Langfuse.UnstableBooleanEvaluationRuleFilter>? value)
         {
-            UnstableEvaluationRuleFilterVariant9 = value;
+            UnstableBooleanEvaluationRuleFilter = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static UnstableEvaluationRuleFilter FromUnstableEvaluationRuleFilterVariant9(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant92, global::Langfuse.UnstableBooleanEvaluationRuleFilter>? value) => new UnstableEvaluationRuleFilter(value);
+        public static UnstableEvaluationRuleFilter FromUnstableBooleanEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableBooleanEvaluationRuleFilter2, global::Langfuse.UnstableBooleanEvaluationRuleFilter>? value) => new UnstableEvaluationRuleFilter(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant102, global::Langfuse.UnstableNullEvaluationRuleFilter> value) => new UnstableEvaluationRuleFilter((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant102, global::Langfuse.UnstableNullEvaluationRuleFilter>?)value);
+        public static implicit operator UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNullEvaluationRuleFilter2, global::Langfuse.UnstableNullEvaluationRuleFilter> value) => new UnstableEvaluationRuleFilter((global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNullEvaluationRuleFilter2, global::Langfuse.UnstableNullEvaluationRuleFilter>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant102, global::Langfuse.UnstableNullEvaluationRuleFilter>?(UnstableEvaluationRuleFilter @this) => @this.UnstableEvaluationRuleFilterVariant10;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNullEvaluationRuleFilter2, global::Langfuse.UnstableNullEvaluationRuleFilter>?(UnstableEvaluationRuleFilter @this) => @this.UnstableNullEvaluationRuleFilter;
 
         /// <summary>
         ///
         /// </summary>
-        public UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant102, global::Langfuse.UnstableNullEvaluationRuleFilter>? value)
+        public UnstableEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNullEvaluationRuleFilter2, global::Langfuse.UnstableNullEvaluationRuleFilter>? value)
         {
-            UnstableEvaluationRuleFilterVariant10 = value;
+            UnstableNullEvaluationRuleFilter = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static UnstableEvaluationRuleFilter FromUnstableEvaluationRuleFilterVariant10(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant102, global::Langfuse.UnstableNullEvaluationRuleFilter>? value) => new UnstableEvaluationRuleFilter(value);
+        public static UnstableEvaluationRuleFilter FromUnstableNullEvaluationRuleFilter(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNullEvaluationRuleFilter2, global::Langfuse.UnstableNullEvaluationRuleFilter>? value) => new UnstableEvaluationRuleFilter(value);
 
         /// <summary>
         ///
         /// </summary>
         public UnstableEvaluationRuleFilter(
-            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant12, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>? unstableEvaluationRuleFilterVariant1,
-            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant22, global::Langfuse.UnstableStringEvaluationRuleFilter>? unstableEvaluationRuleFilterVariant2,
-            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant32, global::Langfuse.UnstableNumberEvaluationRuleFilter>? unstableEvaluationRuleFilterVariant3,
-            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant42, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>? unstableEvaluationRuleFilterVariant4,
-            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant52, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>? unstableEvaluationRuleFilterVariant5,
-            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant62, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>? unstableEvaluationRuleFilterVariant6,
-            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant72, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>? unstableEvaluationRuleFilterVariant7,
-            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant82, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>? unstableEvaluationRuleFilterVariant8,
-            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant92, global::Langfuse.UnstableBooleanEvaluationRuleFilter>? unstableEvaluationRuleFilterVariant9,
-            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant102, global::Langfuse.UnstableNullEvaluationRuleFilter>? unstableEvaluationRuleFilterVariant10
+            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableDateTimeEvaluationRuleFilter2, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>? unstableDateTimeEvaluationRuleFilter,
+            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringEvaluationRuleFilter2, global::Langfuse.UnstableStringEvaluationRuleFilter>? unstableStringEvaluationRuleFilter,
+            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberEvaluationRuleFilter2, global::Langfuse.UnstableNumberEvaluationRuleFilter>? unstableNumberEvaluationRuleFilter,
+            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringOptionsEvaluationRuleFilter2, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>? unstableStringOptionsEvaluationRuleFilter,
+            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableCategoryOptionsEvaluationRuleFilter2, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>? unstableCategoryOptionsEvaluationRuleFilter,
+            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableArrayOptionsEvaluationRuleFilter2, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>? unstableArrayOptionsEvaluationRuleFilter,
+            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringObjectEvaluationRuleFilter2, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>? unstableStringObjectEvaluationRuleFilter,
+            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberObjectEvaluationRuleFilter2, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>? unstableNumberObjectEvaluationRuleFilter,
+            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableBooleanEvaluationRuleFilter2, global::Langfuse.UnstableBooleanEvaluationRuleFilter>? unstableBooleanEvaluationRuleFilter,
+            global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNullEvaluationRuleFilter2, global::Langfuse.UnstableNullEvaluationRuleFilter>? unstableNullEvaluationRuleFilter
             )
         {
-            UnstableEvaluationRuleFilterVariant1 = unstableEvaluationRuleFilterVariant1;
-            UnstableEvaluationRuleFilterVariant2 = unstableEvaluationRuleFilterVariant2;
-            UnstableEvaluationRuleFilterVariant3 = unstableEvaluationRuleFilterVariant3;
-            UnstableEvaluationRuleFilterVariant4 = unstableEvaluationRuleFilterVariant4;
-            UnstableEvaluationRuleFilterVariant5 = unstableEvaluationRuleFilterVariant5;
-            UnstableEvaluationRuleFilterVariant6 = unstableEvaluationRuleFilterVariant6;
-            UnstableEvaluationRuleFilterVariant7 = unstableEvaluationRuleFilterVariant7;
-            UnstableEvaluationRuleFilterVariant8 = unstableEvaluationRuleFilterVariant8;
-            UnstableEvaluationRuleFilterVariant9 = unstableEvaluationRuleFilterVariant9;
-            UnstableEvaluationRuleFilterVariant10 = unstableEvaluationRuleFilterVariant10;
+            UnstableDateTimeEvaluationRuleFilter = unstableDateTimeEvaluationRuleFilter;
+            UnstableStringEvaluationRuleFilter = unstableStringEvaluationRuleFilter;
+            UnstableNumberEvaluationRuleFilter = unstableNumberEvaluationRuleFilter;
+            UnstableStringOptionsEvaluationRuleFilter = unstableStringOptionsEvaluationRuleFilter;
+            UnstableCategoryOptionsEvaluationRuleFilter = unstableCategoryOptionsEvaluationRuleFilter;
+            UnstableArrayOptionsEvaluationRuleFilter = unstableArrayOptionsEvaluationRuleFilter;
+            UnstableStringObjectEvaluationRuleFilter = unstableStringObjectEvaluationRuleFilter;
+            UnstableNumberObjectEvaluationRuleFilter = unstableNumberObjectEvaluationRuleFilter;
+            UnstableBooleanEvaluationRuleFilter = unstableBooleanEvaluationRuleFilter;
+            UnstableNullEvaluationRuleFilter = unstableNullEvaluationRuleFilter;
         }
 
         /// <summary>
         ///
         /// </summary>
         public object? Object =>
-            UnstableEvaluationRuleFilterVariant10 as object ??
-            UnstableEvaluationRuleFilterVariant9 as object ??
-            UnstableEvaluationRuleFilterVariant8 as object ??
-            UnstableEvaluationRuleFilterVariant7 as object ??
-            UnstableEvaluationRuleFilterVariant6 as object ??
-            UnstableEvaluationRuleFilterVariant5 as object ??
-            UnstableEvaluationRuleFilterVariant4 as object ??
-            UnstableEvaluationRuleFilterVariant3 as object ??
-            UnstableEvaluationRuleFilterVariant2 as object ??
-            UnstableEvaluationRuleFilterVariant1 as object
+            UnstableNullEvaluationRuleFilter as object ??
+            UnstableBooleanEvaluationRuleFilter as object ??
+            UnstableNumberObjectEvaluationRuleFilter as object ??
+            UnstableStringObjectEvaluationRuleFilter as object ??
+            UnstableArrayOptionsEvaluationRuleFilter as object ??
+            UnstableCategoryOptionsEvaluationRuleFilter as object ??
+            UnstableStringOptionsEvaluationRuleFilter as object ??
+            UnstableNumberEvaluationRuleFilter as object ??
+            UnstableStringEvaluationRuleFilter as object ??
+            UnstableDateTimeEvaluationRuleFilter as object
             ;
 
         /// <summary>
         ///
         /// </summary>
         public override string? ToString() =>
-            UnstableEvaluationRuleFilterVariant1?.ToString() ??
-            UnstableEvaluationRuleFilterVariant2?.ToString() ??
-            UnstableEvaluationRuleFilterVariant3?.ToString() ??
-            UnstableEvaluationRuleFilterVariant4?.ToString() ??
-            UnstableEvaluationRuleFilterVariant5?.ToString() ??
-            UnstableEvaluationRuleFilterVariant6?.ToString() ??
-            UnstableEvaluationRuleFilterVariant7?.ToString() ??
-            UnstableEvaluationRuleFilterVariant8?.ToString() ??
-            UnstableEvaluationRuleFilterVariant9?.ToString() ??
-            UnstableEvaluationRuleFilterVariant10?.ToString()
+            UnstableDateTimeEvaluationRuleFilter?.ToString() ??
+            UnstableStringEvaluationRuleFilter?.ToString() ??
+            UnstableNumberEvaluationRuleFilter?.ToString() ??
+            UnstableStringOptionsEvaluationRuleFilter?.ToString() ??
+            UnstableCategoryOptionsEvaluationRuleFilter?.ToString() ??
+            UnstableArrayOptionsEvaluationRuleFilter?.ToString() ??
+            UnstableStringObjectEvaluationRuleFilter?.ToString() ??
+            UnstableNumberObjectEvaluationRuleFilter?.ToString() ??
+            UnstableBooleanEvaluationRuleFilter?.ToString() ??
+            UnstableNullEvaluationRuleFilter?.ToString()
             ;
 
         /// <summary>
@@ -711,23 +711,23 @@ namespace Langfuse
         /// </summary>
         public bool Validate()
         {
-            return IsUnstableEvaluationRuleFilterVariant1 && !IsUnstableEvaluationRuleFilterVariant2 && !IsUnstableEvaluationRuleFilterVariant3 && !IsUnstableEvaluationRuleFilterVariant4 && !IsUnstableEvaluationRuleFilterVariant5 && !IsUnstableEvaluationRuleFilterVariant6 && !IsUnstableEvaluationRuleFilterVariant7 && !IsUnstableEvaluationRuleFilterVariant8 && !IsUnstableEvaluationRuleFilterVariant9 && !IsUnstableEvaluationRuleFilterVariant10 || !IsUnstableEvaluationRuleFilterVariant1 && IsUnstableEvaluationRuleFilterVariant2 && !IsUnstableEvaluationRuleFilterVariant3 && !IsUnstableEvaluationRuleFilterVariant4 && !IsUnstableEvaluationRuleFilterVariant5 && !IsUnstableEvaluationRuleFilterVariant6 && !IsUnstableEvaluationRuleFilterVariant7 && !IsUnstableEvaluationRuleFilterVariant8 && !IsUnstableEvaluationRuleFilterVariant9 && !IsUnstableEvaluationRuleFilterVariant10 || !IsUnstableEvaluationRuleFilterVariant1 && !IsUnstableEvaluationRuleFilterVariant2 && IsUnstableEvaluationRuleFilterVariant3 && !IsUnstableEvaluationRuleFilterVariant4 && !IsUnstableEvaluationRuleFilterVariant5 && !IsUnstableEvaluationRuleFilterVariant6 && !IsUnstableEvaluationRuleFilterVariant7 && !IsUnstableEvaluationRuleFilterVariant8 && !IsUnstableEvaluationRuleFilterVariant9 && !IsUnstableEvaluationRuleFilterVariant10 || !IsUnstableEvaluationRuleFilterVariant1 && !IsUnstableEvaluationRuleFilterVariant2 && !IsUnstableEvaluationRuleFilterVariant3 && IsUnstableEvaluationRuleFilterVariant4 && !IsUnstableEvaluationRuleFilterVariant5 && !IsUnstableEvaluationRuleFilterVariant6 && !IsUnstableEvaluationRuleFilterVariant7 && !IsUnstableEvaluationRuleFilterVariant8 && !IsUnstableEvaluationRuleFilterVariant9 && !IsUnstableEvaluationRuleFilterVariant10 || !IsUnstableEvaluationRuleFilterVariant1 && !IsUnstableEvaluationRuleFilterVariant2 && !IsUnstableEvaluationRuleFilterVariant3 && !IsUnstableEvaluationRuleFilterVariant4 && IsUnstableEvaluationRuleFilterVariant5 && !IsUnstableEvaluationRuleFilterVariant6 && !IsUnstableEvaluationRuleFilterVariant7 && !IsUnstableEvaluationRuleFilterVariant8 && !IsUnstableEvaluationRuleFilterVariant9 && !IsUnstableEvaluationRuleFilterVariant10 || !IsUnstableEvaluationRuleFilterVariant1 && !IsUnstableEvaluationRuleFilterVariant2 && !IsUnstableEvaluationRuleFilterVariant3 && !IsUnstableEvaluationRuleFilterVariant4 && !IsUnstableEvaluationRuleFilterVariant5 && IsUnstableEvaluationRuleFilterVariant6 && !IsUnstableEvaluationRuleFilterVariant7 && !IsUnstableEvaluationRuleFilterVariant8 && !IsUnstableEvaluationRuleFilterVariant9 && !IsUnstableEvaluationRuleFilterVariant10 || !IsUnstableEvaluationRuleFilterVariant1 && !IsUnstableEvaluationRuleFilterVariant2 && !IsUnstableEvaluationRuleFilterVariant3 && !IsUnstableEvaluationRuleFilterVariant4 && !IsUnstableEvaluationRuleFilterVariant5 && !IsUnstableEvaluationRuleFilterVariant6 && IsUnstableEvaluationRuleFilterVariant7 && !IsUnstableEvaluationRuleFilterVariant8 && !IsUnstableEvaluationRuleFilterVariant9 && !IsUnstableEvaluationRuleFilterVariant10 || !IsUnstableEvaluationRuleFilterVariant1 && !IsUnstableEvaluationRuleFilterVariant2 && !IsUnstableEvaluationRuleFilterVariant3 && !IsUnstableEvaluationRuleFilterVariant4 && !IsUnstableEvaluationRuleFilterVariant5 && !IsUnstableEvaluationRuleFilterVariant6 && !IsUnstableEvaluationRuleFilterVariant7 && IsUnstableEvaluationRuleFilterVariant8 && !IsUnstableEvaluationRuleFilterVariant9 && !IsUnstableEvaluationRuleFilterVariant10 || !IsUnstableEvaluationRuleFilterVariant1 && !IsUnstableEvaluationRuleFilterVariant2 && !IsUnstableEvaluationRuleFilterVariant3 && !IsUnstableEvaluationRuleFilterVariant4 && !IsUnstableEvaluationRuleFilterVariant5 && !IsUnstableEvaluationRuleFilterVariant6 && !IsUnstableEvaluationRuleFilterVariant7 && !IsUnstableEvaluationRuleFilterVariant8 && IsUnstableEvaluationRuleFilterVariant9 && !IsUnstableEvaluationRuleFilterVariant10 || !IsUnstableEvaluationRuleFilterVariant1 && !IsUnstableEvaluationRuleFilterVariant2 && !IsUnstableEvaluationRuleFilterVariant3 && !IsUnstableEvaluationRuleFilterVariant4 && !IsUnstableEvaluationRuleFilterVariant5 && !IsUnstableEvaluationRuleFilterVariant6 && !IsUnstableEvaluationRuleFilterVariant7 && !IsUnstableEvaluationRuleFilterVariant8 && !IsUnstableEvaluationRuleFilterVariant9 && IsUnstableEvaluationRuleFilterVariant10;
+            return IsUnstableDateTimeEvaluationRuleFilter && !IsUnstableStringEvaluationRuleFilter && !IsUnstableNumberEvaluationRuleFilter && !IsUnstableStringOptionsEvaluationRuleFilter && !IsUnstableCategoryOptionsEvaluationRuleFilter && !IsUnstableArrayOptionsEvaluationRuleFilter && !IsUnstableStringObjectEvaluationRuleFilter && !IsUnstableNumberObjectEvaluationRuleFilter && !IsUnstableBooleanEvaluationRuleFilter && !IsUnstableNullEvaluationRuleFilter || !IsUnstableDateTimeEvaluationRuleFilter && IsUnstableStringEvaluationRuleFilter && !IsUnstableNumberEvaluationRuleFilter && !IsUnstableStringOptionsEvaluationRuleFilter && !IsUnstableCategoryOptionsEvaluationRuleFilter && !IsUnstableArrayOptionsEvaluationRuleFilter && !IsUnstableStringObjectEvaluationRuleFilter && !IsUnstableNumberObjectEvaluationRuleFilter && !IsUnstableBooleanEvaluationRuleFilter && !IsUnstableNullEvaluationRuleFilter || !IsUnstableDateTimeEvaluationRuleFilter && !IsUnstableStringEvaluationRuleFilter && IsUnstableNumberEvaluationRuleFilter && !IsUnstableStringOptionsEvaluationRuleFilter && !IsUnstableCategoryOptionsEvaluationRuleFilter && !IsUnstableArrayOptionsEvaluationRuleFilter && !IsUnstableStringObjectEvaluationRuleFilter && !IsUnstableNumberObjectEvaluationRuleFilter && !IsUnstableBooleanEvaluationRuleFilter && !IsUnstableNullEvaluationRuleFilter || !IsUnstableDateTimeEvaluationRuleFilter && !IsUnstableStringEvaluationRuleFilter && !IsUnstableNumberEvaluationRuleFilter && IsUnstableStringOptionsEvaluationRuleFilter && !IsUnstableCategoryOptionsEvaluationRuleFilter && !IsUnstableArrayOptionsEvaluationRuleFilter && !IsUnstableStringObjectEvaluationRuleFilter && !IsUnstableNumberObjectEvaluationRuleFilter && !IsUnstableBooleanEvaluationRuleFilter && !IsUnstableNullEvaluationRuleFilter || !IsUnstableDateTimeEvaluationRuleFilter && !IsUnstableStringEvaluationRuleFilter && !IsUnstableNumberEvaluationRuleFilter && !IsUnstableStringOptionsEvaluationRuleFilter && IsUnstableCategoryOptionsEvaluationRuleFilter && !IsUnstableArrayOptionsEvaluationRuleFilter && !IsUnstableStringObjectEvaluationRuleFilter && !IsUnstableNumberObjectEvaluationRuleFilter && !IsUnstableBooleanEvaluationRuleFilter && !IsUnstableNullEvaluationRuleFilter || !IsUnstableDateTimeEvaluationRuleFilter && !IsUnstableStringEvaluationRuleFilter && !IsUnstableNumberEvaluationRuleFilter && !IsUnstableStringOptionsEvaluationRuleFilter && !IsUnstableCategoryOptionsEvaluationRuleFilter && IsUnstableArrayOptionsEvaluationRuleFilter && !IsUnstableStringObjectEvaluationRuleFilter && !IsUnstableNumberObjectEvaluationRuleFilter && !IsUnstableBooleanEvaluationRuleFilter && !IsUnstableNullEvaluationRuleFilter || !IsUnstableDateTimeEvaluationRuleFilter && !IsUnstableStringEvaluationRuleFilter && !IsUnstableNumberEvaluationRuleFilter && !IsUnstableStringOptionsEvaluationRuleFilter && !IsUnstableCategoryOptionsEvaluationRuleFilter && !IsUnstableArrayOptionsEvaluationRuleFilter && IsUnstableStringObjectEvaluationRuleFilter && !IsUnstableNumberObjectEvaluationRuleFilter && !IsUnstableBooleanEvaluationRuleFilter && !IsUnstableNullEvaluationRuleFilter || !IsUnstableDateTimeEvaluationRuleFilter && !IsUnstableStringEvaluationRuleFilter && !IsUnstableNumberEvaluationRuleFilter && !IsUnstableStringOptionsEvaluationRuleFilter && !IsUnstableCategoryOptionsEvaluationRuleFilter && !IsUnstableArrayOptionsEvaluationRuleFilter && !IsUnstableStringObjectEvaluationRuleFilter && IsUnstableNumberObjectEvaluationRuleFilter && !IsUnstableBooleanEvaluationRuleFilter && !IsUnstableNullEvaluationRuleFilter || !IsUnstableDateTimeEvaluationRuleFilter && !IsUnstableStringEvaluationRuleFilter && !IsUnstableNumberEvaluationRuleFilter && !IsUnstableStringOptionsEvaluationRuleFilter && !IsUnstableCategoryOptionsEvaluationRuleFilter && !IsUnstableArrayOptionsEvaluationRuleFilter && !IsUnstableStringObjectEvaluationRuleFilter && !IsUnstableNumberObjectEvaluationRuleFilter && IsUnstableBooleanEvaluationRuleFilter && !IsUnstableNullEvaluationRuleFilter || !IsUnstableDateTimeEvaluationRuleFilter && !IsUnstableStringEvaluationRuleFilter && !IsUnstableNumberEvaluationRuleFilter && !IsUnstableStringOptionsEvaluationRuleFilter && !IsUnstableCategoryOptionsEvaluationRuleFilter && !IsUnstableArrayOptionsEvaluationRuleFilter && !IsUnstableStringObjectEvaluationRuleFilter && !IsUnstableNumberObjectEvaluationRuleFilter && !IsUnstableBooleanEvaluationRuleFilter && IsUnstableNullEvaluationRuleFilter;
         }
 
         /// <summary>
         ///
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant12, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>?, TResult>? unstableEvaluationRuleFilterVariant1 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant22, global::Langfuse.UnstableStringEvaluationRuleFilter>?, TResult>? unstableEvaluationRuleFilterVariant2 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant32, global::Langfuse.UnstableNumberEvaluationRuleFilter>?, TResult>? unstableEvaluationRuleFilterVariant3 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant42, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>?, TResult>? unstableEvaluationRuleFilterVariant4 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant52, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>?, TResult>? unstableEvaluationRuleFilterVariant5 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant62, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>?, TResult>? unstableEvaluationRuleFilterVariant6 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant72, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>?, TResult>? unstableEvaluationRuleFilterVariant7 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant82, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>?, TResult>? unstableEvaluationRuleFilterVariant8 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant92, global::Langfuse.UnstableBooleanEvaluationRuleFilter>?, TResult>? unstableEvaluationRuleFilterVariant9 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant102, global::Langfuse.UnstableNullEvaluationRuleFilter>?, TResult>? unstableEvaluationRuleFilterVariant10 = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableDateTimeEvaluationRuleFilter2, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>?, TResult>? unstableDateTimeEvaluationRuleFilter = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringEvaluationRuleFilter2, global::Langfuse.UnstableStringEvaluationRuleFilter>?, TResult>? unstableStringEvaluationRuleFilter = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberEvaluationRuleFilter2, global::Langfuse.UnstableNumberEvaluationRuleFilter>?, TResult>? unstableNumberEvaluationRuleFilter = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringOptionsEvaluationRuleFilter2, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>?, TResult>? unstableStringOptionsEvaluationRuleFilter = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableCategoryOptionsEvaluationRuleFilter2, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>?, TResult>? unstableCategoryOptionsEvaluationRuleFilter = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableArrayOptionsEvaluationRuleFilter2, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>?, TResult>? unstableArrayOptionsEvaluationRuleFilter = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringObjectEvaluationRuleFilter2, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>?, TResult>? unstableStringObjectEvaluationRuleFilter = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberObjectEvaluationRuleFilter2, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>?, TResult>? unstableNumberObjectEvaluationRuleFilter = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableBooleanEvaluationRuleFilter2, global::Langfuse.UnstableBooleanEvaluationRuleFilter>?, TResult>? unstableBooleanEvaluationRuleFilter = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNullEvaluationRuleFilter2, global::Langfuse.UnstableNullEvaluationRuleFilter>?, TResult>? unstableNullEvaluationRuleFilter = null,
             bool validate = true)
         {
             if (validate)
@@ -735,45 +735,45 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUnstableEvaluationRuleFilterVariant1 && unstableEvaluationRuleFilterVariant1 != null)
+            if (IsUnstableDateTimeEvaluationRuleFilter && unstableDateTimeEvaluationRuleFilter != null)
             {
-                return unstableEvaluationRuleFilterVariant1(UnstableEvaluationRuleFilterVariant1!);
+                return unstableDateTimeEvaluationRuleFilter(UnstableDateTimeEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant2 && unstableEvaluationRuleFilterVariant2 != null)
+            else if (IsUnstableStringEvaluationRuleFilter && unstableStringEvaluationRuleFilter != null)
             {
-                return unstableEvaluationRuleFilterVariant2(UnstableEvaluationRuleFilterVariant2!);
+                return unstableStringEvaluationRuleFilter(UnstableStringEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant3 && unstableEvaluationRuleFilterVariant3 != null)
+            else if (IsUnstableNumberEvaluationRuleFilter && unstableNumberEvaluationRuleFilter != null)
             {
-                return unstableEvaluationRuleFilterVariant3(UnstableEvaluationRuleFilterVariant3!);
+                return unstableNumberEvaluationRuleFilter(UnstableNumberEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant4 && unstableEvaluationRuleFilterVariant4 != null)
+            else if (IsUnstableStringOptionsEvaluationRuleFilter && unstableStringOptionsEvaluationRuleFilter != null)
             {
-                return unstableEvaluationRuleFilterVariant4(UnstableEvaluationRuleFilterVariant4!);
+                return unstableStringOptionsEvaluationRuleFilter(UnstableStringOptionsEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant5 && unstableEvaluationRuleFilterVariant5 != null)
+            else if (IsUnstableCategoryOptionsEvaluationRuleFilter && unstableCategoryOptionsEvaluationRuleFilter != null)
             {
-                return unstableEvaluationRuleFilterVariant5(UnstableEvaluationRuleFilterVariant5!);
+                return unstableCategoryOptionsEvaluationRuleFilter(UnstableCategoryOptionsEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant6 && unstableEvaluationRuleFilterVariant6 != null)
+            else if (IsUnstableArrayOptionsEvaluationRuleFilter && unstableArrayOptionsEvaluationRuleFilter != null)
             {
-                return unstableEvaluationRuleFilterVariant6(UnstableEvaluationRuleFilterVariant6!);
+                return unstableArrayOptionsEvaluationRuleFilter(UnstableArrayOptionsEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant7 && unstableEvaluationRuleFilterVariant7 != null)
+            else if (IsUnstableStringObjectEvaluationRuleFilter && unstableStringObjectEvaluationRuleFilter != null)
             {
-                return unstableEvaluationRuleFilterVariant7(UnstableEvaluationRuleFilterVariant7!);
+                return unstableStringObjectEvaluationRuleFilter(UnstableStringObjectEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant8 && unstableEvaluationRuleFilterVariant8 != null)
+            else if (IsUnstableNumberObjectEvaluationRuleFilter && unstableNumberObjectEvaluationRuleFilter != null)
             {
-                return unstableEvaluationRuleFilterVariant8(UnstableEvaluationRuleFilterVariant8!);
+                return unstableNumberObjectEvaluationRuleFilter(UnstableNumberObjectEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant9 && unstableEvaluationRuleFilterVariant9 != null)
+            else if (IsUnstableBooleanEvaluationRuleFilter && unstableBooleanEvaluationRuleFilter != null)
             {
-                return unstableEvaluationRuleFilterVariant9(UnstableEvaluationRuleFilterVariant9!);
+                return unstableBooleanEvaluationRuleFilter(UnstableBooleanEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant10 && unstableEvaluationRuleFilterVariant10 != null)
+            else if (IsUnstableNullEvaluationRuleFilter && unstableNullEvaluationRuleFilter != null)
             {
-                return unstableEvaluationRuleFilterVariant10(UnstableEvaluationRuleFilterVariant10!);
+                return unstableNullEvaluationRuleFilter(UnstableNullEvaluationRuleFilter!);
             }
 
             return default(TResult);
@@ -783,25 +783,25 @@ namespace Langfuse
         ///
         /// </summary>
         public void Match(
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant12, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>?>? unstableEvaluationRuleFilterVariant1 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableDateTimeEvaluationRuleFilter2, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>?>? unstableDateTimeEvaluationRuleFilter = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant22, global::Langfuse.UnstableStringEvaluationRuleFilter>?>? unstableEvaluationRuleFilterVariant2 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringEvaluationRuleFilter2, global::Langfuse.UnstableStringEvaluationRuleFilter>?>? unstableStringEvaluationRuleFilter = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant32, global::Langfuse.UnstableNumberEvaluationRuleFilter>?>? unstableEvaluationRuleFilterVariant3 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberEvaluationRuleFilter2, global::Langfuse.UnstableNumberEvaluationRuleFilter>?>? unstableNumberEvaluationRuleFilter = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant42, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>?>? unstableEvaluationRuleFilterVariant4 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringOptionsEvaluationRuleFilter2, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>?>? unstableStringOptionsEvaluationRuleFilter = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant52, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>?>? unstableEvaluationRuleFilterVariant5 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableCategoryOptionsEvaluationRuleFilter2, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>?>? unstableCategoryOptionsEvaluationRuleFilter = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant62, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>?>? unstableEvaluationRuleFilterVariant6 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableArrayOptionsEvaluationRuleFilter2, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>?>? unstableArrayOptionsEvaluationRuleFilter = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant72, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>?>? unstableEvaluationRuleFilterVariant7 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringObjectEvaluationRuleFilter2, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>?>? unstableStringObjectEvaluationRuleFilter = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant82, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>?>? unstableEvaluationRuleFilterVariant8 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberObjectEvaluationRuleFilter2, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>?>? unstableNumberObjectEvaluationRuleFilter = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant92, global::Langfuse.UnstableBooleanEvaluationRuleFilter>?>? unstableEvaluationRuleFilterVariant9 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableBooleanEvaluationRuleFilter2, global::Langfuse.UnstableBooleanEvaluationRuleFilter>?>? unstableBooleanEvaluationRuleFilter = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant102, global::Langfuse.UnstableNullEvaluationRuleFilter>?>? unstableEvaluationRuleFilterVariant10 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNullEvaluationRuleFilter2, global::Langfuse.UnstableNullEvaluationRuleFilter>?>? unstableNullEvaluationRuleFilter = null,
             bool validate = true)
         {
             if (validate)
@@ -809,45 +809,45 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUnstableEvaluationRuleFilterVariant1)
+            if (IsUnstableDateTimeEvaluationRuleFilter)
             {
-                unstableEvaluationRuleFilterVariant1?.Invoke(UnstableEvaluationRuleFilterVariant1!);
+                unstableDateTimeEvaluationRuleFilter?.Invoke(UnstableDateTimeEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant2)
+            else if (IsUnstableStringEvaluationRuleFilter)
             {
-                unstableEvaluationRuleFilterVariant2?.Invoke(UnstableEvaluationRuleFilterVariant2!);
+                unstableStringEvaluationRuleFilter?.Invoke(UnstableStringEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant3)
+            else if (IsUnstableNumberEvaluationRuleFilter)
             {
-                unstableEvaluationRuleFilterVariant3?.Invoke(UnstableEvaluationRuleFilterVariant3!);
+                unstableNumberEvaluationRuleFilter?.Invoke(UnstableNumberEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant4)
+            else if (IsUnstableStringOptionsEvaluationRuleFilter)
             {
-                unstableEvaluationRuleFilterVariant4?.Invoke(UnstableEvaluationRuleFilterVariant4!);
+                unstableStringOptionsEvaluationRuleFilter?.Invoke(UnstableStringOptionsEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant5)
+            else if (IsUnstableCategoryOptionsEvaluationRuleFilter)
             {
-                unstableEvaluationRuleFilterVariant5?.Invoke(UnstableEvaluationRuleFilterVariant5!);
+                unstableCategoryOptionsEvaluationRuleFilter?.Invoke(UnstableCategoryOptionsEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant6)
+            else if (IsUnstableArrayOptionsEvaluationRuleFilter)
             {
-                unstableEvaluationRuleFilterVariant6?.Invoke(UnstableEvaluationRuleFilterVariant6!);
+                unstableArrayOptionsEvaluationRuleFilter?.Invoke(UnstableArrayOptionsEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant7)
+            else if (IsUnstableStringObjectEvaluationRuleFilter)
             {
-                unstableEvaluationRuleFilterVariant7?.Invoke(UnstableEvaluationRuleFilterVariant7!);
+                unstableStringObjectEvaluationRuleFilter?.Invoke(UnstableStringObjectEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant8)
+            else if (IsUnstableNumberObjectEvaluationRuleFilter)
             {
-                unstableEvaluationRuleFilterVariant8?.Invoke(UnstableEvaluationRuleFilterVariant8!);
+                unstableNumberObjectEvaluationRuleFilter?.Invoke(UnstableNumberObjectEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant9)
+            else if (IsUnstableBooleanEvaluationRuleFilter)
             {
-                unstableEvaluationRuleFilterVariant9?.Invoke(UnstableEvaluationRuleFilterVariant9!);
+                unstableBooleanEvaluationRuleFilter?.Invoke(UnstableBooleanEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant10)
+            else if (IsUnstableNullEvaluationRuleFilter)
             {
-                unstableEvaluationRuleFilterVariant10?.Invoke(UnstableEvaluationRuleFilterVariant10!);
+                unstableNullEvaluationRuleFilter?.Invoke(UnstableNullEvaluationRuleFilter!);
             }
         }
 
@@ -855,16 +855,16 @@ namespace Langfuse
         ///
         /// </summary>
         public void Switch(
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant12, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>?>? unstableEvaluationRuleFilterVariant1 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant22, global::Langfuse.UnstableStringEvaluationRuleFilter>?>? unstableEvaluationRuleFilterVariant2 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant32, global::Langfuse.UnstableNumberEvaluationRuleFilter>?>? unstableEvaluationRuleFilterVariant3 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant42, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>?>? unstableEvaluationRuleFilterVariant4 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant52, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>?>? unstableEvaluationRuleFilterVariant5 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant62, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>?>? unstableEvaluationRuleFilterVariant6 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant72, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>?>? unstableEvaluationRuleFilterVariant7 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant82, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>?>? unstableEvaluationRuleFilterVariant8 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant92, global::Langfuse.UnstableBooleanEvaluationRuleFilter>?>? unstableEvaluationRuleFilterVariant9 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant102, global::Langfuse.UnstableNullEvaluationRuleFilter>?>? unstableEvaluationRuleFilterVariant10 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableDateTimeEvaluationRuleFilter2, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>?>? unstableDateTimeEvaluationRuleFilter = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringEvaluationRuleFilter2, global::Langfuse.UnstableStringEvaluationRuleFilter>?>? unstableStringEvaluationRuleFilter = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberEvaluationRuleFilter2, global::Langfuse.UnstableNumberEvaluationRuleFilter>?>? unstableNumberEvaluationRuleFilter = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringOptionsEvaluationRuleFilter2, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>?>? unstableStringOptionsEvaluationRuleFilter = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableCategoryOptionsEvaluationRuleFilter2, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>?>? unstableCategoryOptionsEvaluationRuleFilter = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableArrayOptionsEvaluationRuleFilter2, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>?>? unstableArrayOptionsEvaluationRuleFilter = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringObjectEvaluationRuleFilter2, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>?>? unstableStringObjectEvaluationRuleFilter = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberObjectEvaluationRuleFilter2, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>?>? unstableNumberObjectEvaluationRuleFilter = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableBooleanEvaluationRuleFilter2, global::Langfuse.UnstableBooleanEvaluationRuleFilter>?>? unstableBooleanEvaluationRuleFilter = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNullEvaluationRuleFilter2, global::Langfuse.UnstableNullEvaluationRuleFilter>?>? unstableNullEvaluationRuleFilter = null,
             bool validate = true)
         {
             if (validate)
@@ -872,45 +872,45 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUnstableEvaluationRuleFilterVariant1)
+            if (IsUnstableDateTimeEvaluationRuleFilter)
             {
-                unstableEvaluationRuleFilterVariant1?.Invoke(UnstableEvaluationRuleFilterVariant1!);
+                unstableDateTimeEvaluationRuleFilter?.Invoke(UnstableDateTimeEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant2)
+            else if (IsUnstableStringEvaluationRuleFilter)
             {
-                unstableEvaluationRuleFilterVariant2?.Invoke(UnstableEvaluationRuleFilterVariant2!);
+                unstableStringEvaluationRuleFilter?.Invoke(UnstableStringEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant3)
+            else if (IsUnstableNumberEvaluationRuleFilter)
             {
-                unstableEvaluationRuleFilterVariant3?.Invoke(UnstableEvaluationRuleFilterVariant3!);
+                unstableNumberEvaluationRuleFilter?.Invoke(UnstableNumberEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant4)
+            else if (IsUnstableStringOptionsEvaluationRuleFilter)
             {
-                unstableEvaluationRuleFilterVariant4?.Invoke(UnstableEvaluationRuleFilterVariant4!);
+                unstableStringOptionsEvaluationRuleFilter?.Invoke(UnstableStringOptionsEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant5)
+            else if (IsUnstableCategoryOptionsEvaluationRuleFilter)
             {
-                unstableEvaluationRuleFilterVariant5?.Invoke(UnstableEvaluationRuleFilterVariant5!);
+                unstableCategoryOptionsEvaluationRuleFilter?.Invoke(UnstableCategoryOptionsEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant6)
+            else if (IsUnstableArrayOptionsEvaluationRuleFilter)
             {
-                unstableEvaluationRuleFilterVariant6?.Invoke(UnstableEvaluationRuleFilterVariant6!);
+                unstableArrayOptionsEvaluationRuleFilter?.Invoke(UnstableArrayOptionsEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant7)
+            else if (IsUnstableStringObjectEvaluationRuleFilter)
             {
-                unstableEvaluationRuleFilterVariant7?.Invoke(UnstableEvaluationRuleFilterVariant7!);
+                unstableStringObjectEvaluationRuleFilter?.Invoke(UnstableStringObjectEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant8)
+            else if (IsUnstableNumberObjectEvaluationRuleFilter)
             {
-                unstableEvaluationRuleFilterVariant8?.Invoke(UnstableEvaluationRuleFilterVariant8!);
+                unstableNumberObjectEvaluationRuleFilter?.Invoke(UnstableNumberObjectEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant9)
+            else if (IsUnstableBooleanEvaluationRuleFilter)
             {
-                unstableEvaluationRuleFilterVariant9?.Invoke(UnstableEvaluationRuleFilterVariant9!);
+                unstableBooleanEvaluationRuleFilter?.Invoke(UnstableBooleanEvaluationRuleFilter!);
             }
-            else if (IsUnstableEvaluationRuleFilterVariant10)
+            else if (IsUnstableNullEvaluationRuleFilter)
             {
-                unstableEvaluationRuleFilterVariant10?.Invoke(UnstableEvaluationRuleFilterVariant10!);
+                unstableNullEvaluationRuleFilter?.Invoke(UnstableNullEvaluationRuleFilter!);
             }
         }
 
@@ -921,26 +921,26 @@ namespace Langfuse
         {
             var fields = new object?[]
             {
-                UnstableEvaluationRuleFilterVariant1,
-                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant12, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>),
-                UnstableEvaluationRuleFilterVariant2,
-                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant22, global::Langfuse.UnstableStringEvaluationRuleFilter>),
-                UnstableEvaluationRuleFilterVariant3,
-                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant32, global::Langfuse.UnstableNumberEvaluationRuleFilter>),
-                UnstableEvaluationRuleFilterVariant4,
-                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant42, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>),
-                UnstableEvaluationRuleFilterVariant5,
-                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant52, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>),
-                UnstableEvaluationRuleFilterVariant6,
-                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant62, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>),
-                UnstableEvaluationRuleFilterVariant7,
-                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant72, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>),
-                UnstableEvaluationRuleFilterVariant8,
-                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant82, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>),
-                UnstableEvaluationRuleFilterVariant9,
-                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant92, global::Langfuse.UnstableBooleanEvaluationRuleFilter>),
-                UnstableEvaluationRuleFilterVariant10,
-                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant102, global::Langfuse.UnstableNullEvaluationRuleFilter>),
+                UnstableDateTimeEvaluationRuleFilter,
+                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableDateTimeEvaluationRuleFilter2, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>),
+                UnstableStringEvaluationRuleFilter,
+                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringEvaluationRuleFilter2, global::Langfuse.UnstableStringEvaluationRuleFilter>),
+                UnstableNumberEvaluationRuleFilter,
+                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberEvaluationRuleFilter2, global::Langfuse.UnstableNumberEvaluationRuleFilter>),
+                UnstableStringOptionsEvaluationRuleFilter,
+                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringOptionsEvaluationRuleFilter2, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>),
+                UnstableCategoryOptionsEvaluationRuleFilter,
+                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableCategoryOptionsEvaluationRuleFilter2, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>),
+                UnstableArrayOptionsEvaluationRuleFilter,
+                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableArrayOptionsEvaluationRuleFilter2, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>),
+                UnstableStringObjectEvaluationRuleFilter,
+                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringObjectEvaluationRuleFilter2, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>),
+                UnstableNumberObjectEvaluationRuleFilter,
+                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberObjectEvaluationRuleFilter2, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>),
+                UnstableBooleanEvaluationRuleFilter,
+                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableBooleanEvaluationRuleFilter2, global::Langfuse.UnstableBooleanEvaluationRuleFilter>),
+                UnstableNullEvaluationRuleFilter,
+                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNullEvaluationRuleFilter2, global::Langfuse.UnstableNullEvaluationRuleFilter>),
             };
             const int offset = unchecked((int)2166136261);
             const int prime = 16777619;
@@ -957,16 +957,16 @@ namespace Langfuse
         public bool Equals(UnstableEvaluationRuleFilter other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant12, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>?>.Default.Equals(UnstableEvaluationRuleFilterVariant1, other.UnstableEvaluationRuleFilterVariant1) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant22, global::Langfuse.UnstableStringEvaluationRuleFilter>?>.Default.Equals(UnstableEvaluationRuleFilterVariant2, other.UnstableEvaluationRuleFilterVariant2) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant32, global::Langfuse.UnstableNumberEvaluationRuleFilter>?>.Default.Equals(UnstableEvaluationRuleFilterVariant3, other.UnstableEvaluationRuleFilterVariant3) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant42, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>?>.Default.Equals(UnstableEvaluationRuleFilterVariant4, other.UnstableEvaluationRuleFilterVariant4) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant52, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>?>.Default.Equals(UnstableEvaluationRuleFilterVariant5, other.UnstableEvaluationRuleFilterVariant5) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant62, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>?>.Default.Equals(UnstableEvaluationRuleFilterVariant6, other.UnstableEvaluationRuleFilterVariant6) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant72, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>?>.Default.Equals(UnstableEvaluationRuleFilterVariant7, other.UnstableEvaluationRuleFilterVariant7) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant82, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>?>.Default.Equals(UnstableEvaluationRuleFilterVariant8, other.UnstableEvaluationRuleFilterVariant8) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant92, global::Langfuse.UnstableBooleanEvaluationRuleFilter>?>.Default.Equals(UnstableEvaluationRuleFilterVariant9, other.UnstableEvaluationRuleFilterVariant9) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterVariant102, global::Langfuse.UnstableNullEvaluationRuleFilter>?>.Default.Equals(UnstableEvaluationRuleFilterVariant10, other.UnstableEvaluationRuleFilterVariant10)
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableDateTimeEvaluationRuleFilter2, global::Langfuse.UnstableDateTimeEvaluationRuleFilter>?>.Default.Equals(UnstableDateTimeEvaluationRuleFilter, other.UnstableDateTimeEvaluationRuleFilter) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringEvaluationRuleFilter2, global::Langfuse.UnstableStringEvaluationRuleFilter>?>.Default.Equals(UnstableStringEvaluationRuleFilter, other.UnstableStringEvaluationRuleFilter) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberEvaluationRuleFilter2, global::Langfuse.UnstableNumberEvaluationRuleFilter>?>.Default.Equals(UnstableNumberEvaluationRuleFilter, other.UnstableNumberEvaluationRuleFilter) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringOptionsEvaluationRuleFilter2, global::Langfuse.UnstableStringOptionsEvaluationRuleFilter>?>.Default.Equals(UnstableStringOptionsEvaluationRuleFilter, other.UnstableStringOptionsEvaluationRuleFilter) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableCategoryOptionsEvaluationRuleFilter2, global::Langfuse.UnstableCategoryOptionsEvaluationRuleFilter>?>.Default.Equals(UnstableCategoryOptionsEvaluationRuleFilter, other.UnstableCategoryOptionsEvaluationRuleFilter) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableArrayOptionsEvaluationRuleFilter2, global::Langfuse.UnstableArrayOptionsEvaluationRuleFilter>?>.Default.Equals(UnstableArrayOptionsEvaluationRuleFilter, other.UnstableArrayOptionsEvaluationRuleFilter) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableStringObjectEvaluationRuleFilter2, global::Langfuse.UnstableStringObjectEvaluationRuleFilter>?>.Default.Equals(UnstableStringObjectEvaluationRuleFilter, other.UnstableStringObjectEvaluationRuleFilter) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNumberObjectEvaluationRuleFilter2, global::Langfuse.UnstableNumberObjectEvaluationRuleFilter>?>.Default.Equals(UnstableNumberObjectEvaluationRuleFilter, other.UnstableNumberObjectEvaluationRuleFilter) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableBooleanEvaluationRuleFilter2, global::Langfuse.UnstableBooleanEvaluationRuleFilter>?>.Default.Equals(UnstableBooleanEvaluationRuleFilter, other.UnstableBooleanEvaluationRuleFilter) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableEvaluationRuleFilterUnstableNullEvaluationRuleFilter2, global::Langfuse.UnstableNullEvaluationRuleFilter>?>.Default.Equals(UnstableNullEvaluationRuleFilter, other.UnstableNullEvaluationRuleFilter)
                 ;
         }
 

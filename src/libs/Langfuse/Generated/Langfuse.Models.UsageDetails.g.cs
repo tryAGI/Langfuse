@@ -13,38 +13,38 @@ namespace Langfuse
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::System.Collections.Generic.Dictionary<string, int>? UsageDetailsVariant1 { get; init; }
+        public global::System.Collections.Generic.Dictionary<string, int>? ObjectValue { get; init; }
 #else
-        public global::System.Collections.Generic.Dictionary<string, int>? UsageDetailsVariant1 { get; }
+        public global::System.Collections.Generic.Dictionary<string, int>? ObjectValue { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UsageDetailsVariant1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(ObjectValue))]
 #endif
-        public bool IsUsageDetailsVariant1 => UsageDetailsVariant1 != null;
+        public bool IsObjectValue => ObjectValue != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickUsageDetailsVariant1(
+        public bool TryPickObjectValue(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
             out global::System.Collections.Generic.Dictionary<string, int>? value)
         {
-            value = UsageDetailsVariant1;
-            return IsUsageDetailsVariant1;
+            value = ObjectValue;
+            return IsObjectValue;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, int> PickUsageDetailsVariant1() => IsUsageDetailsVariant1
-            ? UsageDetailsVariant1!
-            : throw new global::System.InvalidOperationException($"Expected union variant 'UsageDetailsVariant1' but the value was {ToString()}.");
+        public global::System.Collections.Generic.Dictionary<string, int> PickObjectValue() => IsObjectValue
+            ? ObjectValue!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'ObjectValue' but the value was {ToString()}.");
 
         /// <summary>
         /// OpenAI Usage schema from (Chat-)Completion APIs
@@ -127,20 +127,20 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::System.Collections.Generic.Dictionary<string, int>?(UsageDetails @this) => @this.UsageDetailsVariant1;
+        public static implicit operator global::System.Collections.Generic.Dictionary<string, int>?(UsageDetails @this) => @this.ObjectValue;
 
         /// <summary>
         ///
         /// </summary>
         public UsageDetails(global::System.Collections.Generic.Dictionary<string, int>? value)
         {
-            UsageDetailsVariant1 = value;
+            ObjectValue = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static UsageDetails FromUsageDetailsVariant1(global::System.Collections.Generic.Dictionary<string, int>? value) => new UsageDetails(value);
+        public static UsageDetails FromObjectValue(global::System.Collections.Generic.Dictionary<string, int>? value) => new UsageDetails(value);
 
         /// <summary>
         ///
@@ -192,12 +192,12 @@ namespace Langfuse
         ///
         /// </summary>
         public UsageDetails(
-            global::System.Collections.Generic.Dictionary<string, int>? usageDetailsVariant1,
+            global::System.Collections.Generic.Dictionary<string, int>? objectValue,
             global::Langfuse.OpenAICompletionUsageSchema? openAICompletionUsageSchema,
             global::Langfuse.OpenAIResponseUsageSchema? openAIResponseUsageSchema
             )
         {
-            UsageDetailsVariant1 = usageDetailsVariant1;
+            ObjectValue = objectValue;
             OpenAICompletionUsageSchema = openAICompletionUsageSchema;
             OpenAIResponseUsageSchema = openAIResponseUsageSchema;
         }
@@ -208,14 +208,14 @@ namespace Langfuse
         public object? Object =>
             OpenAIResponseUsageSchema as object ??
             OpenAICompletionUsageSchema as object ??
-            UsageDetailsVariant1 as object
+            ObjectValue as object
             ;
 
         /// <summary>
         ///
         /// </summary>
         public override string? ToString() =>
-            UsageDetailsVariant1?.ToString() ??
+            ObjectValue?.ToString() ??
             OpenAICompletionUsageSchema?.ToString() ??
             OpenAIResponseUsageSchema?.ToString()
             ;
@@ -225,14 +225,14 @@ namespace Langfuse
         /// </summary>
         public bool Validate()
         {
-            return IsUsageDetailsVariant1 && !IsOpenAICompletionUsageSchema && !IsOpenAIResponseUsageSchema || !IsUsageDetailsVariant1 && IsOpenAICompletionUsageSchema && !IsOpenAIResponseUsageSchema || !IsUsageDetailsVariant1 && !IsOpenAICompletionUsageSchema && IsOpenAIResponseUsageSchema;
+            return IsObjectValue && !IsOpenAICompletionUsageSchema && !IsOpenAIResponseUsageSchema || !IsObjectValue && IsOpenAICompletionUsageSchema && !IsOpenAIResponseUsageSchema || !IsObjectValue && !IsOpenAICompletionUsageSchema && IsOpenAIResponseUsageSchema;
         }
 
         /// <summary>
         ///
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::System.Collections.Generic.Dictionary<string, int>, TResult>? usageDetailsVariant1 = null,
+            global::System.Func<global::System.Collections.Generic.Dictionary<string, int>, TResult>? objectValue = null,
             global::System.Func<global::Langfuse.OpenAICompletionUsageSchema, TResult>? openAICompletionUsageSchema = null,
             global::System.Func<global::Langfuse.OpenAIResponseUsageSchema, TResult>? openAIResponseUsageSchema = null,
             bool validate = true)
@@ -242,9 +242,9 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUsageDetailsVariant1 && usageDetailsVariant1 != null)
+            if (IsObjectValue && objectValue != null)
             {
-                return usageDetailsVariant1(UsageDetailsVariant1!);
+                return objectValue(ObjectValue!);
             }
             else if (IsOpenAICompletionUsageSchema && openAICompletionUsageSchema != null)
             {
@@ -262,7 +262,7 @@ namespace Langfuse
         ///
         /// </summary>
         public void Match(
-            global::System.Action<global::System.Collections.Generic.Dictionary<string, int>>? usageDetailsVariant1 = null,
+            global::System.Action<global::System.Collections.Generic.Dictionary<string, int>>? objectValue = null,
 
             global::System.Action<global::Langfuse.OpenAICompletionUsageSchema>? openAICompletionUsageSchema = null,
 
@@ -274,9 +274,9 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUsageDetailsVariant1)
+            if (IsObjectValue)
             {
-                usageDetailsVariant1?.Invoke(UsageDetailsVariant1!);
+                objectValue?.Invoke(ObjectValue!);
             }
             else if (IsOpenAICompletionUsageSchema)
             {
@@ -292,7 +292,7 @@ namespace Langfuse
         ///
         /// </summary>
         public void Switch(
-            global::System.Action<global::System.Collections.Generic.Dictionary<string, int>>? usageDetailsVariant1 = null,
+            global::System.Action<global::System.Collections.Generic.Dictionary<string, int>>? objectValue = null,
             global::System.Action<global::Langfuse.OpenAICompletionUsageSchema>? openAICompletionUsageSchema = null,
             global::System.Action<global::Langfuse.OpenAIResponseUsageSchema>? openAIResponseUsageSchema = null,
             bool validate = true)
@@ -302,9 +302,9 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUsageDetailsVariant1)
+            if (IsObjectValue)
             {
-                usageDetailsVariant1?.Invoke(UsageDetailsVariant1!);
+                objectValue?.Invoke(ObjectValue!);
             }
             else if (IsOpenAICompletionUsageSchema)
             {
@@ -323,7 +323,7 @@ namespace Langfuse
         {
             var fields = new object?[]
             {
-                UsageDetailsVariant1,
+                ObjectValue,
                 typeof(global::System.Collections.Generic.Dictionary<string, int>),
                 OpenAICompletionUsageSchema,
                 typeof(global::Langfuse.OpenAICompletionUsageSchema),
@@ -345,7 +345,7 @@ namespace Langfuse
         public bool Equals(UsageDetails other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.Dictionary<string, int>?>.Default.Equals(UsageDetailsVariant1, other.UsageDetailsVariant1) &&
+                global::System.Collections.Generic.EqualityComparer<global::System.Collections.Generic.Dictionary<string, int>?>.Default.Equals(ObjectValue, other.ObjectValue) &&
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.OpenAICompletionUsageSchema?>.Default.Equals(OpenAICompletionUsageSchema, other.OpenAICompletionUsageSchema) &&
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.OpenAIResponseUsageSchema?>.Default.Equals(OpenAIResponseUsageSchema, other.OpenAIResponseUsageSchema)
                 ;

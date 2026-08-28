@@ -100,6 +100,24 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
+        public EvaluationRulesClient EvaluationRules => new EvaluationRulesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
+        };
+
+        /// <summary>
+        ///
+        /// </summary>
+        public EvaluatorsClient Evaluators => new EvaluatorsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
+        };
+
+        /// <summary>
+        ///
+        /// </summary>
         public ExperimentsClient Experiments => new ExperimentsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
@@ -281,24 +299,6 @@ namespace Langfuse
         ///
         /// </summary>
         public UnstableDashboardsClient UnstableDashboards => new UnstableDashboardsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContextProvider = JsonSerializerContextProvider,
-        };
-
-        /// <summary>
-        ///
-        /// </summary>
-        public UnstableEvaluationRulesClient UnstableEvaluationRules => new UnstableEvaluationRulesClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
-        {
-            ReadResponseAsString = ReadResponseAsString,
-            JsonSerializerContextProvider = JsonSerializerContextProvider,
-        };
-
-        /// <summary>
-        ///
-        /// </summary>
-        public UnstableEvaluatorsClient UnstableEvaluators => new UnstableEvaluatorsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,
             JsonSerializerContextProvider = JsonSerializerContextProvider,

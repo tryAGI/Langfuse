@@ -13,147 +13,147 @@ namespace Langfuse
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant12, global::Langfuse.UnstableCreateWidgetPlacement>? UnstableCreateDashboardPlacementRequestVariant1 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2, global::Langfuse.UnstableCreateWidgetPlacement>? UnstableCreateWidgetPlacement { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant12, global::Langfuse.UnstableCreateWidgetPlacement>? UnstableCreateDashboardPlacementRequestVariant1 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2, global::Langfuse.UnstableCreateWidgetPlacement>? UnstableCreateWidgetPlacement { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableCreateDashboardPlacementRequestVariant1))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableCreateWidgetPlacement))]
 #endif
-        public bool IsUnstableCreateDashboardPlacementRequestVariant1 => UnstableCreateDashboardPlacementRequestVariant1 != null;
+        public bool IsUnstableCreateWidgetPlacement => UnstableCreateWidgetPlacement != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickUnstableCreateDashboardPlacementRequestVariant1(
+        public bool TryPickUnstableCreateWidgetPlacement(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant12, global::Langfuse.UnstableCreateWidgetPlacement>? value)
+            out global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2, global::Langfuse.UnstableCreateWidgetPlacement>? value)
         {
-            value = UnstableCreateDashboardPlacementRequestVariant1;
-            return IsUnstableCreateDashboardPlacementRequestVariant1;
+            value = UnstableCreateWidgetPlacement;
+            return IsUnstableCreateWidgetPlacement;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant12, global::Langfuse.UnstableCreateWidgetPlacement> PickUnstableCreateDashboardPlacementRequestVariant1() => IsUnstableCreateDashboardPlacementRequestVariant1
-            ? UnstableCreateDashboardPlacementRequestVariant1!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableCreateDashboardPlacementRequestVariant1' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2, global::Langfuse.UnstableCreateWidgetPlacement> PickUnstableCreateWidgetPlacement() => IsUnstableCreateWidgetPlacement
+            ? UnstableCreateWidgetPlacement!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableCreateWidgetPlacement' but the value was {ToString()}.");
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant22, global::Langfuse.UnstableCreatePresetPlacement>? UnstableCreateDashboardPlacementRequestVariant2 { get; init; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2, global::Langfuse.UnstableCreatePresetPlacement>? UnstableCreatePresetPlacement { get; init; }
 #else
-        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant22, global::Langfuse.UnstableCreatePresetPlacement>? UnstableCreateDashboardPlacementRequestVariant2 { get; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2, global::Langfuse.UnstableCreatePresetPlacement>? UnstableCreatePresetPlacement { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableCreateDashboardPlacementRequestVariant2))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableCreatePresetPlacement))]
 #endif
-        public bool IsUnstableCreateDashboardPlacementRequestVariant2 => UnstableCreateDashboardPlacementRequestVariant2 != null;
+        public bool IsUnstableCreatePresetPlacement => UnstableCreatePresetPlacement != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickUnstableCreateDashboardPlacementRequestVariant2(
+        public bool TryPickUnstableCreatePresetPlacement(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant22, global::Langfuse.UnstableCreatePresetPlacement>? value)
+            out global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2, global::Langfuse.UnstableCreatePresetPlacement>? value)
         {
-            value = UnstableCreateDashboardPlacementRequestVariant2;
-            return IsUnstableCreateDashboardPlacementRequestVariant2;
+            value = UnstableCreatePresetPlacement;
+            return IsUnstableCreatePresetPlacement;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant22, global::Langfuse.UnstableCreatePresetPlacement> PickUnstableCreateDashboardPlacementRequestVariant2() => IsUnstableCreateDashboardPlacementRequestVariant2
-            ? UnstableCreateDashboardPlacementRequestVariant2!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableCreateDashboardPlacementRequestVariant2' but the value was {ToString()}.");
+        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2, global::Langfuse.UnstableCreatePresetPlacement> PickUnstableCreatePresetPlacement() => IsUnstableCreatePresetPlacement
+            ? UnstableCreatePresetPlacement!.Value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableCreatePresetPlacement' but the value was {ToString()}.");
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator UnstableCreateDashboardPlacementRequest(global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant12, global::Langfuse.UnstableCreateWidgetPlacement> value) => new UnstableCreateDashboardPlacementRequest((global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant12, global::Langfuse.UnstableCreateWidgetPlacement>?)value);
+        public static implicit operator UnstableCreateDashboardPlacementRequest(global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2, global::Langfuse.UnstableCreateWidgetPlacement> value) => new UnstableCreateDashboardPlacementRequest((global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2, global::Langfuse.UnstableCreateWidgetPlacement>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant12, global::Langfuse.UnstableCreateWidgetPlacement>?(UnstableCreateDashboardPlacementRequest @this) => @this.UnstableCreateDashboardPlacementRequestVariant1;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2, global::Langfuse.UnstableCreateWidgetPlacement>?(UnstableCreateDashboardPlacementRequest @this) => @this.UnstableCreateWidgetPlacement;
 
         /// <summary>
         ///
         /// </summary>
-        public UnstableCreateDashboardPlacementRequest(global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant12, global::Langfuse.UnstableCreateWidgetPlacement>? value)
+        public UnstableCreateDashboardPlacementRequest(global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2, global::Langfuse.UnstableCreateWidgetPlacement>? value)
         {
-            UnstableCreateDashboardPlacementRequestVariant1 = value;
+            UnstableCreateWidgetPlacement = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static UnstableCreateDashboardPlacementRequest FromUnstableCreateDashboardPlacementRequestVariant1(global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant12, global::Langfuse.UnstableCreateWidgetPlacement>? value) => new UnstableCreateDashboardPlacementRequest(value);
+        public static UnstableCreateDashboardPlacementRequest FromUnstableCreateWidgetPlacement(global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2, global::Langfuse.UnstableCreateWidgetPlacement>? value) => new UnstableCreateDashboardPlacementRequest(value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator UnstableCreateDashboardPlacementRequest(global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant22, global::Langfuse.UnstableCreatePresetPlacement> value) => new UnstableCreateDashboardPlacementRequest((global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant22, global::Langfuse.UnstableCreatePresetPlacement>?)value);
+        public static implicit operator UnstableCreateDashboardPlacementRequest(global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2, global::Langfuse.UnstableCreatePresetPlacement> value) => new UnstableCreateDashboardPlacementRequest((global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2, global::Langfuse.UnstableCreatePresetPlacement>?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant22, global::Langfuse.UnstableCreatePresetPlacement>?(UnstableCreateDashboardPlacementRequest @this) => @this.UnstableCreateDashboardPlacementRequestVariant2;
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2, global::Langfuse.UnstableCreatePresetPlacement>?(UnstableCreateDashboardPlacementRequest @this) => @this.UnstableCreatePresetPlacement;
 
         /// <summary>
         ///
         /// </summary>
-        public UnstableCreateDashboardPlacementRequest(global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant22, global::Langfuse.UnstableCreatePresetPlacement>? value)
+        public UnstableCreateDashboardPlacementRequest(global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2, global::Langfuse.UnstableCreatePresetPlacement>? value)
         {
-            UnstableCreateDashboardPlacementRequestVariant2 = value;
+            UnstableCreatePresetPlacement = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static UnstableCreateDashboardPlacementRequest FromUnstableCreateDashboardPlacementRequestVariant2(global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant22, global::Langfuse.UnstableCreatePresetPlacement>? value) => new UnstableCreateDashboardPlacementRequest(value);
+        public static UnstableCreateDashboardPlacementRequest FromUnstableCreatePresetPlacement(global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2, global::Langfuse.UnstableCreatePresetPlacement>? value) => new UnstableCreateDashboardPlacementRequest(value);
 
         /// <summary>
         ///
         /// </summary>
         public UnstableCreateDashboardPlacementRequest(
-            global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant12, global::Langfuse.UnstableCreateWidgetPlacement>? unstableCreateDashboardPlacementRequestVariant1,
-            global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant22, global::Langfuse.UnstableCreatePresetPlacement>? unstableCreateDashboardPlacementRequestVariant2
+            global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2, global::Langfuse.UnstableCreateWidgetPlacement>? unstableCreateWidgetPlacement,
+            global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2, global::Langfuse.UnstableCreatePresetPlacement>? unstableCreatePresetPlacement
             )
         {
-            UnstableCreateDashboardPlacementRequestVariant1 = unstableCreateDashboardPlacementRequestVariant1;
-            UnstableCreateDashboardPlacementRequestVariant2 = unstableCreateDashboardPlacementRequestVariant2;
+            UnstableCreateWidgetPlacement = unstableCreateWidgetPlacement;
+            UnstableCreatePresetPlacement = unstableCreatePresetPlacement;
         }
 
         /// <summary>
         ///
         /// </summary>
         public object? Object =>
-            UnstableCreateDashboardPlacementRequestVariant2 as object ??
-            UnstableCreateDashboardPlacementRequestVariant1 as object
+            UnstableCreatePresetPlacement as object ??
+            UnstableCreateWidgetPlacement as object
             ;
 
         /// <summary>
         ///
         /// </summary>
         public override string? ToString() =>
-            UnstableCreateDashboardPlacementRequestVariant1?.ToString() ??
-            UnstableCreateDashboardPlacementRequestVariant2?.ToString()
+            UnstableCreateWidgetPlacement?.ToString() ??
+            UnstableCreatePresetPlacement?.ToString()
             ;
 
         /// <summary>
@@ -161,15 +161,15 @@ namespace Langfuse
         /// </summary>
         public bool Validate()
         {
-            return IsUnstableCreateDashboardPlacementRequestVariant1 && !IsUnstableCreateDashboardPlacementRequestVariant2 || !IsUnstableCreateDashboardPlacementRequestVariant1 && IsUnstableCreateDashboardPlacementRequestVariant2;
+            return IsUnstableCreateWidgetPlacement && !IsUnstableCreatePresetPlacement || !IsUnstableCreateWidgetPlacement && IsUnstableCreatePresetPlacement;
         }
 
         /// <summary>
         ///
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant12, global::Langfuse.UnstableCreateWidgetPlacement>?, TResult>? unstableCreateDashboardPlacementRequestVariant1 = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant22, global::Langfuse.UnstableCreatePresetPlacement>?, TResult>? unstableCreateDashboardPlacementRequestVariant2 = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2, global::Langfuse.UnstableCreateWidgetPlacement>?, TResult>? unstableCreateWidgetPlacement = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2, global::Langfuse.UnstableCreatePresetPlacement>?, TResult>? unstableCreatePresetPlacement = null,
             bool validate = true)
         {
             if (validate)
@@ -177,13 +177,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUnstableCreateDashboardPlacementRequestVariant1 && unstableCreateDashboardPlacementRequestVariant1 != null)
+            if (IsUnstableCreateWidgetPlacement && unstableCreateWidgetPlacement != null)
             {
-                return unstableCreateDashboardPlacementRequestVariant1(UnstableCreateDashboardPlacementRequestVariant1!);
+                return unstableCreateWidgetPlacement(UnstableCreateWidgetPlacement!);
             }
-            else if (IsUnstableCreateDashboardPlacementRequestVariant2 && unstableCreateDashboardPlacementRequestVariant2 != null)
+            else if (IsUnstableCreatePresetPlacement && unstableCreatePresetPlacement != null)
             {
-                return unstableCreateDashboardPlacementRequestVariant2(UnstableCreateDashboardPlacementRequestVariant2!);
+                return unstableCreatePresetPlacement(UnstableCreatePresetPlacement!);
             }
 
             return default(TResult);
@@ -193,9 +193,9 @@ namespace Langfuse
         ///
         /// </summary>
         public void Match(
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant12, global::Langfuse.UnstableCreateWidgetPlacement>?>? unstableCreateDashboardPlacementRequestVariant1 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2, global::Langfuse.UnstableCreateWidgetPlacement>?>? unstableCreateWidgetPlacement = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant22, global::Langfuse.UnstableCreatePresetPlacement>?>? unstableCreateDashboardPlacementRequestVariant2 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2, global::Langfuse.UnstableCreatePresetPlacement>?>? unstableCreatePresetPlacement = null,
             bool validate = true)
         {
             if (validate)
@@ -203,13 +203,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUnstableCreateDashboardPlacementRequestVariant1)
+            if (IsUnstableCreateWidgetPlacement)
             {
-                unstableCreateDashboardPlacementRequestVariant1?.Invoke(UnstableCreateDashboardPlacementRequestVariant1!);
+                unstableCreateWidgetPlacement?.Invoke(UnstableCreateWidgetPlacement!);
             }
-            else if (IsUnstableCreateDashboardPlacementRequestVariant2)
+            else if (IsUnstableCreatePresetPlacement)
             {
-                unstableCreateDashboardPlacementRequestVariant2?.Invoke(UnstableCreateDashboardPlacementRequestVariant2!);
+                unstableCreatePresetPlacement?.Invoke(UnstableCreatePresetPlacement!);
             }
         }
 
@@ -217,8 +217,8 @@ namespace Langfuse
         ///
         /// </summary>
         public void Switch(
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant12, global::Langfuse.UnstableCreateWidgetPlacement>?>? unstableCreateDashboardPlacementRequestVariant1 = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant22, global::Langfuse.UnstableCreatePresetPlacement>?>? unstableCreateDashboardPlacementRequestVariant2 = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2, global::Langfuse.UnstableCreateWidgetPlacement>?>? unstableCreateWidgetPlacement = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2, global::Langfuse.UnstableCreatePresetPlacement>?>? unstableCreatePresetPlacement = null,
             bool validate = true)
         {
             if (validate)
@@ -226,13 +226,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUnstableCreateDashboardPlacementRequestVariant1)
+            if (IsUnstableCreateWidgetPlacement)
             {
-                unstableCreateDashboardPlacementRequestVariant1?.Invoke(UnstableCreateDashboardPlacementRequestVariant1!);
+                unstableCreateWidgetPlacement?.Invoke(UnstableCreateWidgetPlacement!);
             }
-            else if (IsUnstableCreateDashboardPlacementRequestVariant2)
+            else if (IsUnstableCreatePresetPlacement)
             {
-                unstableCreateDashboardPlacementRequestVariant2?.Invoke(UnstableCreateDashboardPlacementRequestVariant2!);
+                unstableCreatePresetPlacement?.Invoke(UnstableCreatePresetPlacement!);
             }
         }
 
@@ -243,10 +243,10 @@ namespace Langfuse
         {
             var fields = new object?[]
             {
-                UnstableCreateDashboardPlacementRequestVariant1,
-                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant12, global::Langfuse.UnstableCreateWidgetPlacement>),
-                UnstableCreateDashboardPlacementRequestVariant2,
-                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant22, global::Langfuse.UnstableCreatePresetPlacement>),
+                UnstableCreateWidgetPlacement,
+                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2, global::Langfuse.UnstableCreateWidgetPlacement>),
+                UnstableCreatePresetPlacement,
+                typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2, global::Langfuse.UnstableCreatePresetPlacement>),
             };
             const int offset = unchecked((int)2166136261);
             const int prime = 16777619;
@@ -263,8 +263,8 @@ namespace Langfuse
         public bool Equals(UnstableCreateDashboardPlacementRequest other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant12, global::Langfuse.UnstableCreateWidgetPlacement>?>.Default.Equals(UnstableCreateDashboardPlacementRequestVariant1, other.UnstableCreateDashboardPlacementRequestVariant1) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestVariant22, global::Langfuse.UnstableCreatePresetPlacement>?>.Default.Equals(UnstableCreateDashboardPlacementRequestVariant2, other.UnstableCreateDashboardPlacementRequestVariant2)
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2, global::Langfuse.UnstableCreateWidgetPlacement>?>.Default.Equals(UnstableCreateWidgetPlacement, other.UnstableCreateWidgetPlacement) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2, global::Langfuse.UnstableCreatePresetPlacement>?>.Default.Equals(UnstableCreatePresetPlacement, other.UnstableCreatePresetPlacement)
                 ;
         }
 
