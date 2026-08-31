@@ -1,9 +1,9 @@
 /*
 order: 20
-title: Traces
-slug: traces
+title: Observations
+slug: observations
 
-List and retrieve traces from the Langfuse API.
+List observations from the current Langfuse API.
 */
 
 namespace Langfuse.IntegrationTests;
@@ -11,12 +11,12 @@ namespace Langfuse.IntegrationTests;
 public partial class Tests
 {
     [TestMethod]
-    public async Task Example_ListTraces()
+    public async Task Example_ListObservations()
     {
         using var client = GetAuthenticatedClient();
 
-        //// List the most recent traces in your project.
-        var response = await client.Trace.TraceListAsync(
+        //// List the most recent observations in your project.
+        var response = await client.Observations.ObservationsGetManyAsync(
             limit: 10);
 
         Assert.IsNotNull(response.Data);

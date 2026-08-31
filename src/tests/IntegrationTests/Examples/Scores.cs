@@ -16,7 +16,7 @@ public partial class Tests
         using var client = GetAuthenticatedClient();
 
         //// List all scores in your project with pagination.
-        var response = await client.Scores.ScoresGetManyAsync(
+        var response = await client.ScoresV3.ScoresV3GetManyV3Async(
             limit: 10);
 
         Assert.IsNotNull(response.Data);
