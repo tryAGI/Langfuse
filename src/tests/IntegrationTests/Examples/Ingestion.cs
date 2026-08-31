@@ -1,9 +1,9 @@
 /*
 order: 40
-title: Ingestion
+title: OpenTelemetry ingestion
 slug: ingestion
 
-Ingest trace events into Langfuse using the batch ingestion API.
+Ingest trace spans into Langfuse using the current OpenTelemetry endpoint.
 */
 
 namespace Langfuse.IntegrationTests;
@@ -15,26 +15,34 @@ public partial class Tests
     {
         using var client = GetAuthenticatedClient();
 
-        //// Create a trace event and send it via batch ingestion.
-        var traceId = Guid.NewGuid().ToString();
-        var traceEvent = new TraceEvent(body: new TraceBody
-        {
-            Id = traceId,
-            Name = "sdk-integration-test",
-            Input = "What is Langfuse?",
-            Output = "Langfuse is an open-source LLM observability platform.",
-        });
+        //// Create a span and send it via OTLP/HTTP JSON ingestion.
+        var nowNanoseconds = (DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() * 1_000_000).ToString();
+        var response = await client.Opentelemetry.OpentelemetryExportTracesAsync(
+            resourceSpans:
+            [
+                new OtelResourceSpan
+                {
+                    ScopeSpans =
+                    [
+                        new OtelScopeSpan
+                        {
+                            Spans =
+                            [
+                                new OtelSpan
+                                {
+                                    TraceId = Guid.NewGuid().ToString("N"),
+                                    SpanId = Guid.NewGuid().ToString("N")[..16],
+                                    Name = "sdk-integration-test",
+                                    Kind = 1,
+                                    StartTimeUnixNano = nowNanoseconds,
+                                    EndTimeUnixNano = nowNanoseconds,
+                                },
+                            ],
+                        },
+                    ],
+                },
+            ]);
 
-        var ingestionEvent = new IngestionEvent(
-            new AllOf<IngestionEventVariant12, TraceEvent>(
-                value1: new IngestionEventVariant12(
-                    type: IngestionEventVariant1Type.TraceCreate),
-                value2: traceEvent));
-
-        var response = await client.Ingestion.IngestionBatchAsync(
-            batch: [ingestionEvent]);
-
-        Assert.IsNotNull(response.Successes);
-        Assert.AreEqual(0, response.Errors.Count);
+        Assert.IsNotNull(response);
     }
 }
