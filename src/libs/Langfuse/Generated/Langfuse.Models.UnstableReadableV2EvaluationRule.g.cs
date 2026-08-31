@@ -1,0 +1,96 @@
+
+#nullable enable
+
+namespace Langfuse
+{
+    /// <summary>
+    ///
+    /// </summary>
+    public sealed partial class UnstableReadableV2EvaluationRule
+    {
+        /// <summary>
+        /// Evaluators attached to this rule in deterministic assignment order. A `null` mapping inherits the evaluator version's default mapping.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("evaluators")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleEvaluatorAssignment> Evaluators { get; set; }
+
+        /// <summary>
+        /// The ingestion object type that should trigger evaluation runs.<br/>
+        /// Choose the target first, because it changes both the valid filter columns and the valid variable-mapping sources:<br/>
+        /// - `observation` evaluates live-ingested observations such as generations, spans, and events.<br/>
+        ///   It supports mapping from `input`, `output`, `metadata`, and `tool_calls`.<br/>
+        /// - `experiment` evaluates live experiment executions and can additionally map `expected_output` and `experiment_item_metadata`.<br/>
+        ///   It currently supports filtering by `datasetId`.<br/>
+        ///   Discover valid dataset IDs with `GET /api/public/v2/datasets`, then use the returned dataset `id` values in your filter.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("target")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.UnstableEvaluationRuleTargetJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Langfuse.UnstableEvaluationRuleTarget Target { get; set; }
+
+        /// <summary>
+        /// List of stored filter conditions returned verbatim. Historical filters remain readable even when the current write contract no longer accepts their shape.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("filter")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Langfuse.EvaluationRuleReadFilter> Filter { get; set; }
+
+        /// <summary>
+        /// Deprecated compatibility alias containing the effective mapping for `evaluators[0]`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("mapping")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<global::Langfuse.UnstablePromptVariableMappingRead> Mapping { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UnstableReadableV2EvaluationRule" /> class.
+        /// </summary>
+        /// <param name="evaluators">
+        /// Evaluators attached to this rule in deterministic assignment order. A `null` mapping inherits the evaluator version's default mapping.
+        /// </param>
+        /// <param name="target">
+        /// The ingestion object type that should trigger evaluation runs.<br/>
+        /// Choose the target first, because it changes both the valid filter columns and the valid variable-mapping sources:<br/>
+        /// - `observation` evaluates live-ingested observations such as generations, spans, and events.<br/>
+        ///   It supports mapping from `input`, `output`, `metadata`, and `tool_calls`.<br/>
+        /// - `experiment` evaluates live experiment executions and can additionally map `expected_output` and `experiment_item_metadata`.<br/>
+        ///   It currently supports filtering by `datasetId`.<br/>
+        ///   Discover valid dataset IDs with `GET /api/public/v2/datasets`, then use the returned dataset `id` values in your filter.
+        /// </param>
+        /// <param name="filter">
+        /// List of stored filter conditions returned verbatim. Historical filters remain readable even when the current write contract no longer accepts their shape.
+        /// </param>
+        /// <param name="mapping">
+        /// Deprecated compatibility alias containing the effective mapping for `evaluators[0]`.
+        /// </param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public UnstableReadableV2EvaluationRule(
+            global::System.Collections.Generic.IList<global::Langfuse.UnstableEvaluationRuleEvaluatorAssignment> evaluators,
+            global::Langfuse.UnstableEvaluationRuleTarget target,
+            global::System.Collections.Generic.IList<global::Langfuse.EvaluationRuleReadFilter> filter,
+            global::System.Collections.Generic.IList<global::Langfuse.UnstablePromptVariableMappingRead> mapping)
+        {
+            this.Evaluators = evaluators ?? throw new global::System.ArgumentNullException(nameof(evaluators));
+            this.Target = target;
+            this.Filter = filter ?? throw new global::System.ArgumentNullException(nameof(filter));
+            this.Mapping = mapping ?? throw new global::System.ArgumentNullException(nameof(mapping));
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UnstableReadableV2EvaluationRule" /> class.
+        /// </summary>
+        public UnstableReadableV2EvaluationRule()
+        {
+        }
+
+    }
+}
