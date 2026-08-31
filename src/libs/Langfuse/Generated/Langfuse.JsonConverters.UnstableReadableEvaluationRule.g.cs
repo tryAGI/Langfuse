@@ -44,7 +44,7 @@ namespace Langfuse.JsonConverters
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
             if (__score1 > __bestScore) { __bestScore = __score1; __bestIndex = 1; }
 
-            global::Langfuse.UnstableEvaluationRule? unstableEvaluationRule = default;
+            global::Langfuse.UnstableReadableV2EvaluationRule? unstableReadableV2EvaluationRule = default;
             global::Langfuse.UnstableLegacyEvaluationRule? unstableLegacyEvaluationRule = default;
             if (__bestIndex >= 0)
             {
@@ -52,9 +52,9 @@ namespace Langfuse.JsonConverters
                 {
                     try
                     {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.UnstableEvaluationRule), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.UnstableEvaluationRule> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.UnstableEvaluationRule).Name}");
-                        unstableEvaluationRule = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.UnstableReadableV2EvaluationRule), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.UnstableReadableV2EvaluationRule> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.UnstableReadableV2EvaluationRule).Name}");
+                        unstableReadableV2EvaluationRule = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                     }
                     catch (global::System.Text.Json.JsonException)
                     {
@@ -80,14 +80,14 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (unstableEvaluationRule == null && unstableLegacyEvaluationRule == null)
+            if (unstableReadableV2EvaluationRule == null && unstableLegacyEvaluationRule == null)
             {
                 try
                 {
 
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.UnstableEvaluationRule), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.UnstableEvaluationRule> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.UnstableEvaluationRule).Name}");
-                    unstableEvaluationRule = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.UnstableReadableV2EvaluationRule), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.UnstableReadableV2EvaluationRule> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.UnstableReadableV2EvaluationRule).Name}");
+                    unstableReadableV2EvaluationRule = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
                 }
                 catch (global::System.Text.Json.JsonException)
                 {
@@ -97,7 +97,7 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (unstableEvaluationRule == null && unstableLegacyEvaluationRule == null)
+            if (unstableReadableV2EvaluationRule == null && unstableLegacyEvaluationRule == null)
             {
                 try
                 {
@@ -115,7 +115,7 @@ namespace Langfuse.JsonConverters
             }
 
             var __value = new global::Langfuse.UnstableReadableEvaluationRule(
-                unstableEvaluationRule,
+                unstableReadableV2EvaluationRule,
 
                 unstableLegacyEvaluationRule
                 );
@@ -132,11 +132,11 @@ namespace Langfuse.JsonConverters
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));
             var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
-            if (value.IsUnstableEvaluationRule)
+            if (value.IsUnstableReadableV2EvaluationRule)
             {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.UnstableEvaluationRule), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.UnstableEvaluationRule?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.UnstableEvaluationRule).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UnstableEvaluationRule!, typeInfo);
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.UnstableReadableV2EvaluationRule), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.UnstableReadableV2EvaluationRule?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.UnstableReadableV2EvaluationRule).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UnstableReadableV2EvaluationRule!, typeInfo);
             }
             else if (value.IsUnstableLegacyEvaluationRule)
             {

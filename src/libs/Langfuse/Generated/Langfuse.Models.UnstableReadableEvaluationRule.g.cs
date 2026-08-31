@@ -13,38 +13,38 @@ namespace Langfuse
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.UnstableEvaluationRule? UnstableEvaluationRule { get; init; }
+        public global::Langfuse.UnstableReadableV2EvaluationRule? UnstableReadableV2EvaluationRule { get; init; }
 #else
-        public global::Langfuse.UnstableEvaluationRule? UnstableEvaluationRule { get; }
+        public global::Langfuse.UnstableReadableV2EvaluationRule? UnstableReadableV2EvaluationRule { get; }
 #endif
 
         /// <summary>
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableEvaluationRule))]
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UnstableReadableV2EvaluationRule))]
 #endif
-        public bool IsUnstableEvaluationRule => UnstableEvaluationRule != null;
+        public bool IsUnstableReadableV2EvaluationRule => UnstableReadableV2EvaluationRule != null;
 
         /// <summary>
         ///
         /// </summary>
-        public bool TryPickUnstableEvaluationRule(
+        public bool TryPickUnstableReadableV2EvaluationRule(
 #if NET6_0_OR_GREATER
             [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
 #endif
-            out global::Langfuse.UnstableEvaluationRule? value)
+            out global::Langfuse.UnstableReadableV2EvaluationRule? value)
         {
-            value = UnstableEvaluationRule;
-            return IsUnstableEvaluationRule;
+            value = UnstableReadableV2EvaluationRule;
+            return IsUnstableReadableV2EvaluationRule;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableEvaluationRule PickUnstableEvaluationRule() => IsUnstableEvaluationRule
-            ? UnstableEvaluationRule!
-            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableEvaluationRule' but the value was {ToString()}.");
+        public global::Langfuse.UnstableReadableV2EvaluationRule PickUnstableReadableV2EvaluationRule() => IsUnstableReadableV2EvaluationRule
+            ? UnstableReadableV2EvaluationRule!
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableReadableV2EvaluationRule' but the value was {ToString()}.");
 
         /// <summary>
         /// **Deprecated:** Legacy trace- or dataset-level evaluation rule returned by list and get for migration.<br/>
@@ -86,25 +86,25 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator UnstableReadableEvaluationRule(global::Langfuse.UnstableEvaluationRule value) => new UnstableReadableEvaluationRule((global::Langfuse.UnstableEvaluationRule?)value);
+        public static implicit operator UnstableReadableEvaluationRule(global::Langfuse.UnstableReadableV2EvaluationRule value) => new UnstableReadableEvaluationRule((global::Langfuse.UnstableReadableV2EvaluationRule?)value);
 
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator global::Langfuse.UnstableEvaluationRule?(UnstableReadableEvaluationRule @this) => @this.UnstableEvaluationRule;
+        public static implicit operator global::Langfuse.UnstableReadableV2EvaluationRule?(UnstableReadableEvaluationRule @this) => @this.UnstableReadableV2EvaluationRule;
 
         /// <summary>
         ///
         /// </summary>
-        public UnstableReadableEvaluationRule(global::Langfuse.UnstableEvaluationRule? value)
+        public UnstableReadableEvaluationRule(global::Langfuse.UnstableReadableV2EvaluationRule? value)
         {
-            UnstableEvaluationRule = value;
+            UnstableReadableV2EvaluationRule = value;
         }
 
         /// <summary>
         ///
         /// </summary>
-        public static UnstableReadableEvaluationRule FromUnstableEvaluationRule(global::Langfuse.UnstableEvaluationRule? value) => new UnstableReadableEvaluationRule(value);
+        public static UnstableReadableEvaluationRule FromUnstableReadableV2EvaluationRule(global::Langfuse.UnstableReadableV2EvaluationRule? value) => new UnstableReadableEvaluationRule(value);
 
         /// <summary>
         ///
@@ -133,11 +133,11 @@ namespace Langfuse
         ///
         /// </summary>
         public UnstableReadableEvaluationRule(
-            global::Langfuse.UnstableEvaluationRule? unstableEvaluationRule,
+            global::Langfuse.UnstableReadableV2EvaluationRule? unstableReadableV2EvaluationRule,
             global::Langfuse.UnstableLegacyEvaluationRule? unstableLegacyEvaluationRule
             )
         {
-            UnstableEvaluationRule = unstableEvaluationRule;
+            UnstableReadableV2EvaluationRule = unstableReadableV2EvaluationRule;
             UnstableLegacyEvaluationRule = unstableLegacyEvaluationRule;
         }
 
@@ -146,14 +146,14 @@ namespace Langfuse
         /// </summary>
         public object? Object =>
             UnstableLegacyEvaluationRule as object ??
-            UnstableEvaluationRule as object
+            UnstableReadableV2EvaluationRule as object
             ;
 
         /// <summary>
         ///
         /// </summary>
         public override string? ToString() =>
-            UnstableEvaluationRule?.ToString() ??
+            UnstableReadableV2EvaluationRule?.ToString() ??
             UnstableLegacyEvaluationRule?.ToString()
             ;
 
@@ -162,14 +162,14 @@ namespace Langfuse
         /// </summary>
         public bool Validate()
         {
-            return IsUnstableEvaluationRule && !IsUnstableLegacyEvaluationRule || !IsUnstableEvaluationRule && IsUnstableLegacyEvaluationRule;
+            return IsUnstableReadableV2EvaluationRule && !IsUnstableLegacyEvaluationRule || !IsUnstableReadableV2EvaluationRule && IsUnstableLegacyEvaluationRule;
         }
 
         /// <summary>
         ///
         /// </summary>
         public TResult? Match<TResult>(
-            global::System.Func<global::Langfuse.UnstableEvaluationRule, TResult>? unstableEvaluationRule = null,
+            global::System.Func<global::Langfuse.UnstableReadableV2EvaluationRule, TResult>? unstableReadableV2EvaluationRule = null,
             global::System.Func<global::Langfuse.UnstableLegacyEvaluationRule, TResult>? unstableLegacyEvaluationRule = null,
             bool validate = true)
         {
@@ -178,9 +178,9 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUnstableEvaluationRule && unstableEvaluationRule != null)
+            if (IsUnstableReadableV2EvaluationRule && unstableReadableV2EvaluationRule != null)
             {
-                return unstableEvaluationRule(UnstableEvaluationRule!);
+                return unstableReadableV2EvaluationRule(UnstableReadableV2EvaluationRule!);
             }
             else if (IsUnstableLegacyEvaluationRule && unstableLegacyEvaluationRule != null)
             {
@@ -194,7 +194,7 @@ namespace Langfuse
         ///
         /// </summary>
         public void Match(
-            global::System.Action<global::Langfuse.UnstableEvaluationRule>? unstableEvaluationRule = null,
+            global::System.Action<global::Langfuse.UnstableReadableV2EvaluationRule>? unstableReadableV2EvaluationRule = null,
 
             global::System.Action<global::Langfuse.UnstableLegacyEvaluationRule>? unstableLegacyEvaluationRule = null,
             bool validate = true)
@@ -204,9 +204,9 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUnstableEvaluationRule)
+            if (IsUnstableReadableV2EvaluationRule)
             {
-                unstableEvaluationRule?.Invoke(UnstableEvaluationRule!);
+                unstableReadableV2EvaluationRule?.Invoke(UnstableReadableV2EvaluationRule!);
             }
             else if (IsUnstableLegacyEvaluationRule)
             {
@@ -218,7 +218,7 @@ namespace Langfuse
         ///
         /// </summary>
         public void Switch(
-            global::System.Action<global::Langfuse.UnstableEvaluationRule>? unstableEvaluationRule = null,
+            global::System.Action<global::Langfuse.UnstableReadableV2EvaluationRule>? unstableReadableV2EvaluationRule = null,
             global::System.Action<global::Langfuse.UnstableLegacyEvaluationRule>? unstableLegacyEvaluationRule = null,
             bool validate = true)
         {
@@ -227,9 +227,9 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUnstableEvaluationRule)
+            if (IsUnstableReadableV2EvaluationRule)
             {
-                unstableEvaluationRule?.Invoke(UnstableEvaluationRule!);
+                unstableReadableV2EvaluationRule?.Invoke(UnstableReadableV2EvaluationRule!);
             }
             else if (IsUnstableLegacyEvaluationRule)
             {
@@ -244,8 +244,8 @@ namespace Langfuse
         {
             var fields = new object?[]
             {
-                UnstableEvaluationRule,
-                typeof(global::Langfuse.UnstableEvaluationRule),
+                UnstableReadableV2EvaluationRule,
+                typeof(global::Langfuse.UnstableReadableV2EvaluationRule),
                 UnstableLegacyEvaluationRule,
                 typeof(global::Langfuse.UnstableLegacyEvaluationRule),
             };
@@ -264,7 +264,7 @@ namespace Langfuse
         public bool Equals(UnstableReadableEvaluationRule other)
         {
             return
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.UnstableEvaluationRule?>.Default.Equals(UnstableEvaluationRule, other.UnstableEvaluationRule) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.UnstableReadableV2EvaluationRule?>.Default.Equals(UnstableReadableV2EvaluationRule, other.UnstableReadableV2EvaluationRule) &&
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.UnstableLegacyEvaluationRule?>.Default.Equals(UnstableLegacyEvaluationRule, other.UnstableLegacyEvaluationRule)
                 ;
         }
