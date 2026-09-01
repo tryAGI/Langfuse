@@ -5,7 +5,7 @@
 namespace Langfuse
 {
     /// <summary>
-    /// A user prompt string, or a list containing exactly one user chat message.
+    /// A user prompt string shortcut, or an ordered list of chat messages.
     /// </summary>
     public readonly partial struct EvaluatorChatPromptInput : global::System.IEquatable<EvaluatorChatPromptInput>
     {
@@ -47,7 +47,7 @@ namespace Langfuse
             : throw new global::System.InvalidOperationException($"Expected union variant 'String' but the value was {ToString()}.");
 
         /// <summary>
-        /// A list containing exactly one user chat message.
+        /// An ordered list of chat messages. A system message is only allowed as the first message.
         /// </summary>
 #if NET6_0_OR_GREATER
         public global::System.Collections.Generic.IList<global::Langfuse.EvaluatorChatMessage>? EvaluatorChatPrompt { get; init; }

@@ -4,16 +4,17 @@
 namespace Langfuse
 {
     /// <summary>
-    /// One user chat message in an evaluator prompt.
+    /// One chat message in an evaluator prompt.
     /// </summary>
     public sealed partial class EvaluatorChatMessage
     {
         /// <summary>
-        ///
+        /// Role of an evaluator prompt message.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("role")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.EvaluatorChatMessageRoleJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required string Role { get; set; }
+        public required global::Langfuse.EvaluatorChatMessageRole Role { get; set; }
 
         /// <summary>
         /// Message content. Evaluator variables use `{{variable}}` syntax.
@@ -31,7 +32,9 @@ namespace Langfuse
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluatorChatMessage" /> class.
         /// </summary>
-        /// <param name="role"></param>
+        /// <param name="role">
+        /// Role of an evaluator prompt message.
+        /// </param>
         /// <param name="content">
         /// Message content. Evaluator variables use `{{variable}}` syntax.
         /// </param>
@@ -39,10 +42,10 @@ namespace Langfuse
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public EvaluatorChatMessage(
-            string role,
+            global::Langfuse.EvaluatorChatMessageRole role,
             string content)
         {
-            this.Role = role ?? throw new global::System.ArgumentNullException(nameof(role));
+            this.Role = role;
             this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
         }
 

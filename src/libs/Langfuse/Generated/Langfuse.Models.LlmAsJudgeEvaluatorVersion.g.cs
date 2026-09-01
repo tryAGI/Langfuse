@@ -16,7 +16,7 @@ namespace Langfuse
         public required string Type { get; set; }
 
         /// <summary>
-        /// A list containing exactly one user chat message.
+        /// An ordered list of chat messages. A system message is only allowed as the first message.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("prompt")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -68,7 +68,7 @@ namespace Langfuse
         /// Evaluator type.
         /// </param>
         /// <param name="prompt">
-        /// A list containing exactly one user chat message.
+        /// An ordered list of chat messages. A system message is only allowed as the first message.
         /// </param>
         /// <param name="variables">
         /// Variables extracted from the prompt and available for evaluation-rule mappings.<br/>

@@ -295,6 +295,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CursorMeta))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DeletedEvaluationRule))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorModelConfig))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorChatMessageRole), TypeInfoPropertyName = "EvaluatorChatMessageRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorChatMessage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.EvaluatorChatMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorChatPromptInput), TypeInfoPropertyName = "EvaluatorChatPromptInput2")]
@@ -513,7 +514,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.ResourceType>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ResourceType))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.SchemaExtension>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SchemaExtension))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -548,6 +548,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>?), TypeInfoPropertyName = "UnstableCreateLlmAsJudgeEvaluatorRequest_9d997ebaea6815fe")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string?>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SchemaExtension))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SchemasResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.SchemaResource>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SchemaResource))]
@@ -929,6 +930,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleFilterNullEvaluationRuleFilterType?), TypeInfoPropertyName = "NullableEvaluationRuleFilterNullEvaluationRuleFilterType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleReadFilter?), TypeInfoPropertyName = "NullableEvaluationRuleReadFilter2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PublicApiErrorCode?), TypeInfoPropertyName = "NullablePublicApiErrorCode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorChatMessageRole?), TypeInfoPropertyName = "NullableEvaluatorChatMessageRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorChatPromptInput?), TypeInfoPropertyName = "NullableEvaluatorChatPromptInput2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorVersion?), TypeInfoPropertyName = "NullableEvaluatorVersion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionLlmAsJudgeEvaluatorVersion2, global::Langfuse.LlmAsJudgeEvaluatorVersion>?), TypeInfoPropertyName = "NullableAllOfEvaluatorVersionLlmAsJudgeEvaluatorVersion2LlmAsJudgeEvaluatorVersion2")]
@@ -1024,8 +1026,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableCodeEvaluatorSourceCodeLanguage?), TypeInfoPropertyName = "NullableUnstableCodeEvaluatorSourceCodeLanguage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluationRuleTarget?), TypeInfoPropertyName = "NullableUnstableEvaluationRuleTarget2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluationRuleStatus?), TypeInfoPropertyName = "NullableUnstableEvaluationRuleStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstablePromptVariableMappingSource?), TypeInfoPropertyName = "NullableUnstablePromptVariableMappingSource2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluatorOutputDataType?), TypeInfoPropertyName = "NullableUnstableEvaluatorOutputDataType2")]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -1060,6 +1060,8 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>?), TypeInfoPropertyName = "UnstableCreateLlmAsJudgeEvaluatorRequest_9d997ebaea6815fe")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string?>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstablePromptVariableMappingSource?), TypeInfoPropertyName = "NullableUnstablePromptVariableMappingSource2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluatorOutputDataType?), TypeInfoPropertyName = "NullableUnstableEvaluatorOutputDataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluatorOutputDefinition?), TypeInfoPropertyName = "NullableUnstableEvaluatorOutputDefinition2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinitionDataType?), TypeInfoPropertyName = "NullableUnstableEvaluatorOutputDefinitionUnstablePublicNumericEvaluatorOutputDefinitionDataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinitionDataType?), TypeInfoPropertyName = "NullableUnstableEvaluatorOutputDefinitionUnstablePublicBooleanEvaluatorOutputDefinitionDataType2")]
@@ -1593,6 +1595,10 @@ namespace Langfuse
                     || typeToConvert == typeof(global::Langfuse.PublicApiErrorCode)
 
                     || typeToConvert == typeof(global::Langfuse.PublicApiErrorCode?)
+
+                    || typeToConvert == typeof(global::Langfuse.EvaluatorChatMessageRole)
+
+                    || typeToConvert == typeof(global::Langfuse.EvaluatorChatMessageRole?)
 
                     || typeToConvert == typeof(global::Langfuse.EvaluatorVersionLlmAsJudgeEvaluatorVersionType)
 
@@ -2531,6 +2537,16 @@ namespace Langfuse
                 if (typeToConvert == typeof(global::Langfuse.PublicApiErrorCode?))
                 {
                     return new global::Langfuse.JsonConverters.PublicApiErrorCodeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.EvaluatorChatMessageRole))
+                {
+                    return new global::Langfuse.JsonConverters.EvaluatorChatMessageRoleJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.EvaluatorChatMessageRole?))
+                {
+                    return new global::Langfuse.JsonConverters.EvaluatorChatMessageRoleNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Langfuse.EvaluatorVersionLlmAsJudgeEvaluatorVersionType))
