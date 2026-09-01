@@ -28,7 +28,7 @@ namespace Langfuse
         public required string Type { get; set; }
 
         /// <summary>
-        /// A user prompt string, or a list containing exactly one user chat message.
+        /// A user prompt string shortcut, or an ordered list of chat messages.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("prompt")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.EvaluatorChatPromptInputJsonConverter))]
@@ -75,7 +75,7 @@ namespace Langfuse
         /// Evaluator type. The type of an existing evaluator cannot change.
         /// </param>
         /// <param name="prompt">
-        /// A user prompt string, or a list containing exactly one user chat message.
+        /// A user prompt string shortcut, or an ordered list of chat messages.
         /// </param>
         /// <param name="outputDefinition">
         /// Flat structured output definition used when creating or updating an evaluator.<br/>
