@@ -17,7 +17,7 @@ namespace Langfuse
         /// - `time` - completionStartTime, createdAt, updatedAt<br/>
         /// - `io` - input, output<br/>
         /// - `metadata` - metadata (truncated to 200 chars by default, use `expandMetadata` to get full values)<br/>
-        /// - `model` - providedModelName, internalModelId, modelParameters<br/>
+        /// - `model` - model, internalModelId, modelParameters<br/>
         /// - `usage` - usageDetails, costDetails, totalCost, usagePricingTierName<br/>
         /// - `prompt` - promptId, promptName, promptVersion<br/>
         /// - `metrics` - latency, timeToFirstToken<br/>
@@ -82,7 +82,7 @@ namespace Langfuse
         /// - `time` - completionStartTime, createdAt, updatedAt<br/>
         /// - `io` - input, output<br/>
         /// - `metadata` - metadata (truncated to 200 chars by default, use `expandMetadata` to get full values)<br/>
-        /// - `model` - providedModelName, internalModelId, modelParameters<br/>
+        /// - `model` - model, internalModelId, modelParameters<br/>
         /// - `usage` - usageDetails, costDetails, totalCost, usagePricingTierName<br/>
         /// - `prompt` - promptId, promptName, promptVersion<br/>
         /// - `metrics` - latency, timeToFirstToken<br/>
