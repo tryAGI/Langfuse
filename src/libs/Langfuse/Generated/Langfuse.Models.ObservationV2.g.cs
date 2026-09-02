@@ -157,8 +157,8 @@ namespace Langfuse
         /// <summary>
         /// The model name as provided by the user
         /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("providedModelName")]
-        public string? ProvidedModelName { get; set; }
+        [global::System.Text.Json.Serialization.JsonPropertyName("model")]
+        public string? Model { get; set; }
 
         /// <summary>
         /// The internal model ID matched by Langfuse
@@ -346,7 +346,7 @@ namespace Langfuse
         /// <param name="metadata">
         /// Additional metadata of the observation
         /// </param>
-        /// <param name="providedModelName">
+        /// <param name="model">
         /// The model name as provided by the user
         /// </param>
         /// <param name="internalModelId">
@@ -430,7 +430,7 @@ namespace Langfuse
             object? input,
             object? output,
             object? metadata,
-            string? providedModelName,
+            string? model,
             string? internalModelId,
             object? modelParameters,
             global::System.Collections.Generic.Dictionary<string, int>? usageDetails,
@@ -473,7 +473,7 @@ namespace Langfuse
             this.Input = input;
             this.Output = output;
             this.Metadata = metadata;
-            this.ProvidedModelName = providedModelName;
+            this.Model = model;
             this.InternalModelId = internalModelId;
             this.ModelParameters = modelParameters;
             this.UsageDetails = usageDetails;
