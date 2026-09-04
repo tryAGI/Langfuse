@@ -10,6 +10,7 @@ namespace Langfuse
     /// - password: Langfuse Secret Key<br/>
     /// ## Exports<br/>
     /// - OpenAPI spec: https://cloud.langfuse.com/generated/api/openapi.yml<br/>
+    /// - Self-hosted deployments: interactive API reference at `/api/docs` and OpenAPI spec at `/api/openapi.yaml`<br/>
     /// If no httpClient is provided, a new one will be created.<br/>
     /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.
     /// </summary>
