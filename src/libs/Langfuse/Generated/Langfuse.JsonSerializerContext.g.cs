@@ -1213,6 +1213,7 @@ namespace Langfuse
     {
         private static readonly global::System.Text.Json.Serialization.Metadata.IJsonTypeInfoResolver Resolver = new LazyChunkResolver();
 
+
         private static readonly global::System.Text.Json.JsonSerializerOptions DefaultOptions = CreateDefaultOptions();
 
         /// <summary>
@@ -1234,13 +1235,8 @@ namespace Langfuse
             return Resolver.GetTypeInfo(type, Options);
         }
 
-        private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
+         static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            var options = new global::System.Text.Json.JsonSerializerOptions
-            {
-                DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
-                TypeInfoResolver = Resolver,
-            };
             options.Converters.Add(new global::Langfuse.JsonConverters.ScoreV1JsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.CreateScoreValueJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.PricingTierConditionJsonConverter());
@@ -1356,8 +1352,17 @@ namespace Langfuse
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.UnstableCreateLlmAsJudgeEvaluatorRequest>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableCreateEvaluatorRequestUnstableCreateCodeEvaluatorRequest2, global::Langfuse.UnstableCreateCodeEvaluatorRequest>());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnixTimestampJsonConverter());
-
             options.Converters.Add(new LazyEnumJsonConverterFactory());
+        }
+
+        private static global::System.Text.Json.JsonSerializerOptions CreateDefaultOptions()
+        {
+            var options = new global::System.Text.Json.JsonSerializerOptions
+            {
+                DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull,
+                TypeInfoResolver = Resolver,
+            };
+            AddConverters(options);
 
             return options;
         }
