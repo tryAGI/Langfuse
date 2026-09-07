@@ -4,28 +4,26 @@
 namespace Langfuse
 {
     /// <summary>
-    /// One validation issue returned for malformed request bodies or query parameters.<br/>
-    /// This mirrors the most important parts of a Zod issue: a machine-readable `code`,<br/>
-    /// a human-readable `message`, and a structured `path`.
+    /// A validation issue returned for malformed request bodies or query parameters.
     /// </summary>
     public sealed partial class UnstablePublicApiValidationIssue
     {
         /// <summary>
-        /// Machine-readable validation issue code emitted by the server validator.
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("code")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Code { get; set; }
 
         /// <summary>
-        /// Human-readable explanation of the validation failure.
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("message")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required string Message { get; set; }
 
         /// <summary>
-        /// Path to the invalid field, for example `["mapping", 0, "jsonPath"]`.
+        ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("path")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -40,15 +38,9 @@ namespace Langfuse
         /// <summary>
         /// Initializes a new instance of the <see cref="UnstablePublicApiValidationIssue" /> class.
         /// </summary>
-        /// <param name="code">
-        /// Machine-readable validation issue code emitted by the server validator.
-        /// </param>
-        /// <param name="message">
-        /// Human-readable explanation of the validation failure.
-        /// </param>
-        /// <param name="path">
-        /// Path to the invalid field, for example `["mapping", 0, "jsonPath"]`.
-        /// </param>
+        /// <param name="code"></param>
+        /// <param name="message"></param>
+        /// <param name="path"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
