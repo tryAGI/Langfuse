@@ -48,7 +48,7 @@ namespace Langfuse
 
         /// <summary>
         /// ISO 8601 timestamp (RFC 3339, Section 5.6) in UTC (e.g., "2026-01-21T14:35:42Z").<br/>
-        /// Specifies the dataset version to use for this experiment run. <br/>
+        /// Specifies the dataset version to use for this experiment run.<br/>
         /// If provided, the experiment will use dataset items as they existed at or before this timestamp.<br/>
         /// If not provided, uses the latest version of dataset items.
         /// </summary>
@@ -84,7 +84,7 @@ namespace Langfuse
         /// </param>
         /// <param name="datasetVersion">
         /// ISO 8601 timestamp (RFC 3339, Section 5.6) in UTC (e.g., "2026-01-21T14:35:42Z").<br/>
-        /// Specifies the dataset version to use for this experiment run. <br/>
+        /// Specifies the dataset version to use for this experiment run.<br/>
         /// If provided, the experiment will use dataset items as they existed at or before this timestamp.<br/>
         /// If not provided, uses the latest version of dataset items.
         /// </param>
