@@ -47,7 +47,7 @@ namespace Langfuse
         /// The id of the user who created the comment. Must be a member of the organization that owns the project, otherwise an error will be thrown.
         /// </param>
         /// <param name="objectStartTime">
-        /// The start time of the referenced object (for observations, the observation's start time). When provided, Langfuse validates the reference more efficiently by narrowing the lookup to that time range.
+        /// The start time of the referenced object (for observations, the observation's start time). Optional performance hint - when provided, Langfuse narrows the lookup to validate the reference faster. It only affects speed - an incorrect or omitted value never changes the result.
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
