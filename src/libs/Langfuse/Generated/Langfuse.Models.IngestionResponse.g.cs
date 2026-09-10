@@ -23,6 +23,12 @@ namespace Langfuse
         public required global::System.Collections.Generic.IList<global::Langfuse.IngestionError> Errors { get; set; }
 
         /// <summary>
+        /// Migration signal returned by deprecated endpoints. Optional fields are omitted when they have no value.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("_deprecation")]
+        public global::Langfuse.Deprecation? Deprecation { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -33,15 +39,20 @@ namespace Langfuse
         /// </summary>
         /// <param name="successes"></param>
         /// <param name="errors"></param>
+        /// <param name="deprecation">
+        /// Migration signal returned by deprecated endpoints. Optional fields are omitted when they have no value.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public IngestionResponse(
             global::System.Collections.Generic.IList<global::Langfuse.IngestionSuccess> successes,
-            global::System.Collections.Generic.IList<global::Langfuse.IngestionError> errors)
+            global::System.Collections.Generic.IList<global::Langfuse.IngestionError> errors,
+            global::Langfuse.Deprecation? deprecation)
         {
             this.Successes = successes ?? throw new global::System.ArgumentNullException(nameof(successes));
             this.Errors = errors ?? throw new global::System.ArgumentNullException(nameof(errors));
+            this.Deprecation = deprecation;
         }
 
         /// <summary>
