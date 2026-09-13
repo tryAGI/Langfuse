@@ -1,0 +1,38 @@
+
+#nullable enable
+
+namespace Langfuse
+{
+    public sealed partial class PromptsClient
+    {
+
+        /// <inheritdoc/>
+        public void AuthorizeUsingBasic(
+            string username,
+            string password)
+        {
+            username = username ?? throw new global::System.ArgumentNullException(nameof(username));
+            password = password ?? throw new global::System.ArgumentNullException(nameof(password));
+
+            for (var i = Authorizations.Count - 1; i >= 0; i--)
+            {
+                var __authorization = Authorizations[i];
+                if (__authorization.Type == "Http" &&
+                    __authorization.Name == "Basic")
+                {
+                    Authorizations.RemoveAt(i);
+                }
+            }
+
+            Authorizations.Add(new global::Langfuse.EndPointAuthorization
+            {
+                Type = "Http",
+                SchemeId = "HttpBasic",
+                Location = "Header",
+                Name = "Basic",
+                Value = global::System.Convert.ToBase64String(
+                    global::System.Text.Encoding.UTF8.GetBytes($"{username}:{password}")),
+            });
+        }
+    }
+}
