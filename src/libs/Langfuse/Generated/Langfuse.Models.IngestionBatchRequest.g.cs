@@ -9,7 +9,7 @@ namespace Langfuse
     public sealed partial class IngestionBatchRequest
     {
         /// <summary>
-        /// Batch of tracing events to be ingested. Discriminated by attribute `type`.
+        /// Batch of events to be ingested, discriminated by attribute `type`. From November 16, 2026 on Langfuse Cloud, only `score-create` events are accepted; all other event types are rejected.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("batch")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -31,7 +31,7 @@ namespace Langfuse
         /// Initializes a new instance of the <see cref="IngestionBatchRequest" /> class.
         /// </summary>
         /// <param name="batch">
-        /// Batch of tracing events to be ingested. Discriminated by attribute `type`.
+        /// Batch of events to be ingested, discriminated by attribute `type`. From November 16, 2026 on Langfuse Cloud, only `score-create` events are accepted; all other event types are rejected.
         /// </param>
         /// <param name="metadata">
         /// Optional. Metadata field used by the Langfuse SDKs for debugging.

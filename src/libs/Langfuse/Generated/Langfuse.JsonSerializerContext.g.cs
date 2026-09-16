@@ -365,10 +365,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventCreateEventEvent2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventCreateEventEventType), TypeInfoPropertyName = "IngestionEventCreateEventEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateEventEvent))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>), TypeInfoPropertyName = "AllOfIngestionEventSDKLogEvent2SDKLogEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventSDKLogEvent2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventSDKLogEventType), TypeInfoPropertyName = "IngestionEventSDKLogEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SDKLogEvent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>), TypeInfoPropertyName = "AllOfIngestionEventCreateObservationEvent2CreateObservationEvent2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventCreateObservationEvent2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventCreateObservationEventType), TypeInfoPropertyName = "IngestionEventCreateObservationEventType2")]
@@ -390,7 +386,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UpdateGenerationBody))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ObservationBody))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.TraceBody))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SDKLogBody))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreBody))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BaseEvent))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionSuccess))]
@@ -514,6 +509,11 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UpdateScoreConfigRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectTraceV3))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectObservationV3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectSessionV3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectExperimentV3))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectV3), TypeInfoPropertyName = "ScoreSubjectV32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV32, global::Langfuse.ScoreSubjectTraceV3>), TypeInfoPropertyName = "AllOfScoreSubjectV3ScoreSubjectTraceV32ScoreSubjectTraceV32")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV32))]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -530,11 +530,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string?>), TypeInfoPropertyName = "IListString_System_Collections_Generic_IList_string_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string?>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectSessionV3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectExperimentV3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectV3), TypeInfoPropertyName = "ScoreSubjectV32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV32, global::Langfuse.ScoreSubjectTraceV3>), TypeInfoPropertyName = "AllOfScoreSubjectV3ScoreSubjectTraceV32ScoreSubjectTraceV32")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV32))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV3Kind), TypeInfoPropertyName = "ScoreSubjectV3ScoreSubjectTraceV3Kind2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectObservationV32, global::Langfuse.ScoreSubjectObservationV3>), TypeInfoPropertyName = "AllOfScoreSubjectV3ScoreSubjectObservationV32ScoreSubjectObservationV32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectV3ScoreSubjectObservationV32))]
@@ -798,8 +793,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventUpdateGenerationEventType?), TypeInfoPropertyName = "NullableIngestionEventUpdateGenerationEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>?), TypeInfoPropertyName = "NullableAllOfIngestionEventCreateEventEvent2CreateEventEvent2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventCreateEventEventType?), TypeInfoPropertyName = "NullableIngestionEventCreateEventEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>?), TypeInfoPropertyName = "NullableAllOfIngestionEventSDKLogEvent2SDKLogEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventSDKLogEventType?), TypeInfoPropertyName = "NullableIngestionEventSDKLogEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>?), TypeInfoPropertyName = "NullableAllOfIngestionEventCreateObservationEvent2CreateObservationEvent2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventCreateObservationEventType?), TypeInfoPropertyName = "NullableIngestionEventCreateObservationEventType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>?), TypeInfoPropertyName = "NullableAllOfIngestionEventUpdateObservationEvent2UpdateObservationEvent2")]
@@ -1038,7 +1031,6 @@ namespace Langfuse
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>());
-            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt>());
@@ -1374,10 +1366,6 @@ namespace Langfuse
                     || typeToConvert == typeof(global::Langfuse.IngestionEventCreateEventEventType)
 
                     || typeToConvert == typeof(global::Langfuse.IngestionEventCreateEventEventType?)
-
-                    || typeToConvert == typeof(global::Langfuse.IngestionEventSDKLogEventType)
-
-                    || typeToConvert == typeof(global::Langfuse.IngestionEventSDKLogEventType?)
 
                     || typeToConvert == typeof(global::Langfuse.IngestionEventCreateObservationEventType)
 
@@ -2268,16 +2256,6 @@ namespace Langfuse
                 if (typeToConvert == typeof(global::Langfuse.IngestionEventCreateEventEventType?))
                 {
                     return new global::Langfuse.JsonConverters.IngestionEventCreateEventEventTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.IngestionEventSDKLogEventType))
-                {
-                    return new global::Langfuse.JsonConverters.IngestionEventSDKLogEventTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.IngestionEventSDKLogEventType?))
-                {
-                    return new global::Langfuse.JsonConverters.IngestionEventSDKLogEventTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Langfuse.IngestionEventCreateObservationEventType))

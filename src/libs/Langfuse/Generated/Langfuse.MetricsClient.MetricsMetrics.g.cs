@@ -43,6 +43,7 @@ namespace Langfuse
 
         /// <summary>
         /// Get metrics from the Langfuse project using a query object. V2 endpoint with optimized performance.<br/>
+        /// Together with OpenTelemetry ingestion and Observations API v2, this is the only real-time read path. Other public API endpoints can delay data by about 10 minutes.<br/>
         /// ## V2 Differences<br/>
         /// - Supports `observations`, `scores-numeric`, `scores-boolean`, and `scores-categorical` views only (traces view not supported)<br/>
         /// - Direct access to tags and release fields on observations<br/>
@@ -156,6 +157,7 @@ namespace Langfuse
         }
         /// <summary>
         /// Get metrics from the Langfuse project using a query object. V2 endpoint with optimized performance.<br/>
+        /// Together with OpenTelemetry ingestion and Observations API v2, this is the only real-time read path. Other public API endpoints can delay data by about 10 minutes.<br/>
         /// ## V2 Differences<br/>
         /// - Supports `observations`, `scores-numeric`, `scores-boolean`, and `scores-categorical` views only (traces view not supported)<br/>
         /// - Direct access to tags and release fields on observations<br/>

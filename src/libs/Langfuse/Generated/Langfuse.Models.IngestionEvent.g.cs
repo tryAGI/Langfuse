@@ -272,43 +272,6 @@ namespace Langfuse
         ///
         /// </summary>
 #if NET6_0_OR_GREATER
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>? SDKLogEvent { get; init; }
-#else
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>? SDKLogEvent { get; }
-#endif
-
-        /// <summary>
-        ///
-        /// </summary>
-#if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(SDKLogEvent))]
-#endif
-        public bool IsSDKLogEvent => SDKLogEvent != null;
-
-        /// <summary>
-        ///
-        /// </summary>
-        public bool TryPickSDKLogEvent(
-#if NET6_0_OR_GREATER
-            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
-#endif
-            out global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>? value)
-        {
-            value = SDKLogEvent;
-            return IsSDKLogEvent;
-        }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent> PickSDKLogEvent() => IsSDKLogEvent
-            ? SDKLogEvent!.Value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'SDKLogEvent' but the value was {ToString()}.");
-
-        /// <summary>
-        ///
-        /// </summary>
-#if NET6_0_OR_GREATER
         public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>? CreateObservationEvent { get; init; }
 #else
         public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>? CreateObservationEvent { get; }
@@ -542,29 +505,6 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>?)value);
-
-        /// <summary>
-        ///
-        /// </summary>
-        public static implicit operator global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>?(IngestionEvent @this) => @this.SDKLogEvent;
-
-        /// <summary>
-        ///
-        /// </summary>
-        public IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>? value)
-        {
-            SDKLogEvent = value;
-        }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public static IngestionEvent FromSDKLogEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>? value) => new IngestionEvent(value);
-
-        /// <summary>
-        ///
-        /// </summary>
         public static implicit operator IngestionEvent(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent> value) => new IngestionEvent((global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>?)value);
 
         /// <summary>
@@ -619,7 +559,6 @@ namespace Langfuse
             global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>? createGenerationEvent,
             global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>? updateGenerationEvent,
             global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>? createEventEvent,
-            global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>? sDKLogEvent,
             global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>? createObservationEvent,
             global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>? updateObservationEvent
             )
@@ -631,7 +570,6 @@ namespace Langfuse
             CreateGenerationEvent = createGenerationEvent;
             UpdateGenerationEvent = updateGenerationEvent;
             CreateEventEvent = createEventEvent;
-            SDKLogEvent = sDKLogEvent;
             CreateObservationEvent = createObservationEvent;
             UpdateObservationEvent = updateObservationEvent;
         }
@@ -642,7 +580,6 @@ namespace Langfuse
         public object? Object =>
             UpdateObservationEvent as object ??
             CreateObservationEvent as object ??
-            SDKLogEvent as object ??
             CreateEventEvent as object ??
             UpdateGenerationEvent as object ??
             CreateGenerationEvent as object ??
@@ -663,7 +600,6 @@ namespace Langfuse
             CreateGenerationEvent?.ToString() ??
             UpdateGenerationEvent?.ToString() ??
             CreateEventEvent?.ToString() ??
-            SDKLogEvent?.ToString() ??
             CreateObservationEvent?.ToString() ??
             UpdateObservationEvent?.ToString()
             ;
@@ -673,7 +609,7 @@ namespace Langfuse
         /// </summary>
         public bool Validate()
         {
-            return IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && !IsSDKLogEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && !IsSDKLogEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && !IsSDKLogEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && !IsSDKLogEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && !IsSDKLogEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && IsUpdateGenerationEvent && !IsCreateEventEvent && !IsSDKLogEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && IsCreateEventEvent && !IsSDKLogEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && IsSDKLogEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && !IsSDKLogEvent && IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && !IsSDKLogEvent && !IsCreateObservationEvent && IsUpdateObservationEvent;
+            return IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && IsUpdateGenerationEvent && !IsCreateEventEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && IsCreateEventEvent && !IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && IsCreateObservationEvent && !IsUpdateObservationEvent || !IsTraceEvent && !IsScoreEvent && !IsCreateSpanEvent && !IsUpdateSpanEvent && !IsCreateGenerationEvent && !IsUpdateGenerationEvent && !IsCreateEventEvent && !IsCreateObservationEvent && IsUpdateObservationEvent;
         }
 
         /// <summary>
@@ -687,7 +623,6 @@ namespace Langfuse
             global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>?, TResult>? createGenerationEvent = null,
             global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>?, TResult>? updateGenerationEvent = null,
             global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>?, TResult>? createEventEvent = null,
-            global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>?, TResult>? sDKLogEvent = null,
             global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>?, TResult>? createObservationEvent = null,
             global::System.Func<global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>?, TResult>? updateObservationEvent = null,
             bool validate = true)
@@ -725,10 +660,6 @@ namespace Langfuse
             {
                 return createEventEvent(CreateEventEvent!);
             }
-            else if (IsSDKLogEvent && sDKLogEvent != null)
-            {
-                return sDKLogEvent(SDKLogEvent!);
-            }
             else if (IsCreateObservationEvent && createObservationEvent != null)
             {
                 return createObservationEvent(CreateObservationEvent!);
@@ -759,8 +690,6 @@ namespace Langfuse
 
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>?>? createEventEvent = null,
 
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>?>? sDKLogEvent = null,
-
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>?>? createObservationEvent = null,
 
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>?>? updateObservationEvent = null,
@@ -798,10 +727,6 @@ namespace Langfuse
             else if (IsCreateEventEvent)
             {
                 createEventEvent?.Invoke(CreateEventEvent!);
-            }
-            else if (IsSDKLogEvent)
-            {
-                sDKLogEvent?.Invoke(SDKLogEvent!);
             }
             else if (IsCreateObservationEvent)
             {
@@ -824,7 +749,6 @@ namespace Langfuse
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>?>? createGenerationEvent = null,
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>?>? updateGenerationEvent = null,
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>?>? createEventEvent = null,
-            global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>?>? sDKLogEvent = null,
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>?>? createObservationEvent = null,
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>?>? updateObservationEvent = null,
             bool validate = true)
@@ -861,10 +785,6 @@ namespace Langfuse
             else if (IsCreateEventEvent)
             {
                 createEventEvent?.Invoke(CreateEventEvent!);
-            }
-            else if (IsSDKLogEvent)
-            {
-                sDKLogEvent?.Invoke(SDKLogEvent!);
             }
             else if (IsCreateObservationEvent)
             {
@@ -897,8 +817,6 @@ namespace Langfuse
                 typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>),
                 CreateEventEvent,
                 typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>),
-                SDKLogEvent,
-                typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>),
                 CreateObservationEvent,
                 typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>),
                 UpdateObservationEvent,
@@ -926,7 +844,6 @@ namespace Langfuse
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>?>.Default.Equals(CreateGenerationEvent, other.CreateGenerationEvent) &&
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>?>.Default.Equals(UpdateGenerationEvent, other.UpdateGenerationEvent) &&
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>?>.Default.Equals(CreateEventEvent, other.CreateEventEvent) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>?>.Default.Equals(SDKLogEvent, other.SDKLogEvent) &&
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>?>.Default.Equals(CreateObservationEvent, other.CreateObservationEvent) &&
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>?>.Default.Equals(UpdateObservationEvent, other.UpdateObservationEvent)
                 ;
