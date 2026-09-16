@@ -7,6 +7,7 @@ namespace Langfuse
         /// <summary>
         /// **OpenTelemetry Traces Ingestion Endpoint**<br/>
         /// This endpoint implements the OTLP/HTTP specification for trace ingestion, providing native OpenTelemetry integration for Langfuse Observability.<br/>
+        /// Together with Observations API v2 and Metrics API v2, this is the only real-time write path. Other public API endpoints can delay data by about 10 minutes. Direct exporters must send `x-langfuse-ingestion-version: 4`; current Python and JS SDKs already do.<br/>
         /// **Supported Formats:**<br/>
         /// - Binary Protobuf: `Content-Type: application/x-protobuf`<br/>
         /// - JSON Protobuf: `Content-Type: application/json`<br/>
@@ -30,6 +31,7 @@ namespace Langfuse
         /// <summary>
         /// **OpenTelemetry Traces Ingestion Endpoint**<br/>
         /// This endpoint implements the OTLP/HTTP specification for trace ingestion, providing native OpenTelemetry integration for Langfuse Observability.<br/>
+        /// Together with Observations API v2 and Metrics API v2, this is the only real-time write path. Other public API endpoints can delay data by about 10 minutes. Direct exporters must send `x-langfuse-ingestion-version: 4`; current Python and JS SDKs already do.<br/>
         /// **Supported Formats:**<br/>
         /// - Binary Protobuf: `Content-Type: application/x-protobuf`<br/>
         /// - JSON Protobuf: `Content-Type: application/json`<br/>
@@ -53,6 +55,7 @@ namespace Langfuse
         /// <summary>
         /// **OpenTelemetry Traces Ingestion Endpoint**<br/>
         /// This endpoint implements the OTLP/HTTP specification for trace ingestion, providing native OpenTelemetry integration for Langfuse Observability.<br/>
+        /// Together with Observations API v2 and Metrics API v2, this is the only real-time write path. Other public API endpoints can delay data by about 10 minutes. Direct exporters must send `x-langfuse-ingestion-version: 4`; current Python and JS SDKs already do.<br/>
         /// **Supported Formats:**<br/>
         /// - Binary Protobuf: `Content-Type: application/x-protobuf`<br/>
         /// - JSON Protobuf: `Content-Type: application/json`<br/>

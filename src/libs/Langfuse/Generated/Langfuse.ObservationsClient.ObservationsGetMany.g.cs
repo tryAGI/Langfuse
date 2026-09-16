@@ -77,6 +77,7 @@ namespace Langfuse
 
         /// <summary>
         /// Get a list of observations with cursor-based pagination and flexible field selection.<br/>
+        /// Together with OpenTelemetry ingestion and Metrics API v2, this is the only real-time read path. Other public API endpoints can delay data by about 10 minutes.<br/>
         /// ## Cursor-based Pagination<br/>
         /// This endpoint uses cursor-based pagination for efficient traversal of large datasets.<br/>
         /// The cursor is returned in the response metadata and should be passed in subsequent requests<br/>
@@ -168,6 +169,7 @@ namespace Langfuse
         }
         /// <summary>
         /// Get a list of observations with cursor-based pagination and flexible field selection.<br/>
+        /// Together with OpenTelemetry ingestion and Metrics API v2, this is the only real-time read path. Other public API endpoints can delay data by about 10 minutes.<br/>
         /// ## Cursor-based Pagination<br/>
         /// This endpoint uses cursor-based pagination for efficient traversal of large datasets.<br/>
         /// The cursor is returned in the response metadata and should be passed in subsequent requests<br/>

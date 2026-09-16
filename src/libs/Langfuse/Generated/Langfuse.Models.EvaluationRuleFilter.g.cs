@@ -16,7 +16,7 @@ namespace Langfuse
     /// - `datetime`: `"="`, `"&gt;"`, `"&lt;"`, `"&gt;="`, `"&lt;="`<br/>
     /// - `stringOptions`: `any of`, `none of`<br/>
     /// - `arrayOptions`: `any of`, `none of`, `all of`<br/>
-    /// - `stringObject`: same operators as `string`<br/>
+    /// - `stringObject`: `"="`, `contains`, `does not contain`, `starts with`, `ends with`, `is set`, `is not set` (use `is set` / `is not set` for key presence; an empty value for `contains`, `starts with`, or `ends with` is treated as `is set`)<br/>
     /// - `boolean`: `"="`, `"&lt;&gt;"`<br/>
     /// - `null`: `is null`, `is not null`<br/>
     /// Supported columns. Each column accepts exactly one filter `type`; sending a column with a different `type` is rejected with `400`.<br/>

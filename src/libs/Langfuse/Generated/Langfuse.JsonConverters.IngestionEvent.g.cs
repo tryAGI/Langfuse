@@ -106,7 +106,7 @@ namespace Langfuse.JsonConverters
             }
             var __score7 = 0;
             {
-                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>), options);
+                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>), options);
                 if (__ti != null && __ti.Kind == global::System.Text.Json.Serialization.Metadata.JsonTypeInfoKind.Object)
                 {
                     foreach (var __prop in __ti.Properties)
@@ -117,23 +117,12 @@ namespace Langfuse.JsonConverters
             }
             var __score8 = 0;
             {
-                var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>), options);
-                if (__ti != null && __ti.Kind == global::System.Text.Json.Serialization.Metadata.JsonTypeInfoKind.Object)
-                {
-                    foreach (var __prop in __ti.Properties)
-                    {
-                        if (__jsonProps.Contains(__prop.Name)) __score8++;
-                    }
-                }
-            }
-            var __score9 = 0;
-            {
                 var __ti = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>), options);
                 if (__ti != null && __ti.Kind == global::System.Text.Json.Serialization.Metadata.JsonTypeInfoKind.Object)
                 {
                     foreach (var __prop in __ti.Properties)
                     {
-                        if (__jsonProps.Contains(__prop.Name)) __score9++;
+                        if (__jsonProps.Contains(__prop.Name)) __score8++;
                     }
                 }
             }
@@ -148,7 +137,6 @@ namespace Langfuse.JsonConverters
             if (__score6 > __bestScore) { __bestScore = __score6; __bestIndex = 6; }
             if (__score7 > __bestScore) { __bestScore = __score7; __bestIndex = 7; }
             if (__score8 > __bestScore) { __bestScore = __score8; __bestIndex = 8; }
-            if (__score9 > __bestScore) { __bestScore = __score9; __bestIndex = 9; }
 
             global::Langfuse.AllOf<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent>? traceEvent = default;
             global::Langfuse.AllOf<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent>? scoreEvent = default;
@@ -157,7 +145,6 @@ namespace Langfuse.JsonConverters
             global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>? createGenerationEvent = default;
             global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>? updateGenerationEvent = default;
             global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>? createEventEvent = default;
-            global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>? sDKLogEvent = default;
             global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>? createObservationEvent = default;
             global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>? updateObservationEvent = default;
             if (__bestIndex >= 0)
@@ -286,23 +273,6 @@ namespace Langfuse.JsonConverters
                     try
                     {
 
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>).Name}");
-                        sDKLogEvent = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
-                    }
-                    catch (global::System.Text.Json.JsonException)
-                    {
-                    }
-                    catch (global::System.InvalidOperationException)
-                    {
-                    }
-                }
-
-                else if (__bestIndex == 8)
-                {
-                    try
-                    {
-
                         var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>> ??
                                        throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>).Name}");
                         createObservationEvent = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
@@ -315,7 +285,7 @@ namespace Langfuse.JsonConverters
                     }
                 }
 
-                else if (__bestIndex == 9)
+                else if (__bestIndex == 8)
                 {
                     try
                     {
@@ -333,7 +303,7 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (traceEvent == null && scoreEvent == null && createSpanEvent == null && updateSpanEvent == null && createGenerationEvent == null && updateGenerationEvent == null && createEventEvent == null && sDKLogEvent == null && createObservationEvent == null && updateObservationEvent == null)
+            if (traceEvent == null && scoreEvent == null && createSpanEvent == null && updateSpanEvent == null && createGenerationEvent == null && updateGenerationEvent == null && createEventEvent == null && createObservationEvent == null && updateObservationEvent == null)
             {
                 try
                 {
@@ -350,7 +320,7 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (traceEvent == null && scoreEvent == null && createSpanEvent == null && updateSpanEvent == null && createGenerationEvent == null && updateGenerationEvent == null && createEventEvent == null && sDKLogEvent == null && createObservationEvent == null && updateObservationEvent == null)
+            if (traceEvent == null && scoreEvent == null && createSpanEvent == null && updateSpanEvent == null && createGenerationEvent == null && updateGenerationEvent == null && createEventEvent == null && createObservationEvent == null && updateObservationEvent == null)
             {
                 try
                 {
@@ -367,7 +337,7 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (traceEvent == null && scoreEvent == null && createSpanEvent == null && updateSpanEvent == null && createGenerationEvent == null && updateGenerationEvent == null && createEventEvent == null && sDKLogEvent == null && createObservationEvent == null && updateObservationEvent == null)
+            if (traceEvent == null && scoreEvent == null && createSpanEvent == null && updateSpanEvent == null && createGenerationEvent == null && updateGenerationEvent == null && createEventEvent == null && createObservationEvent == null && updateObservationEvent == null)
             {
                 try
                 {
@@ -384,7 +354,7 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (traceEvent == null && scoreEvent == null && createSpanEvent == null && updateSpanEvent == null && createGenerationEvent == null && updateGenerationEvent == null && createEventEvent == null && sDKLogEvent == null && createObservationEvent == null && updateObservationEvent == null)
+            if (traceEvent == null && scoreEvent == null && createSpanEvent == null && updateSpanEvent == null && createGenerationEvent == null && updateGenerationEvent == null && createEventEvent == null && createObservationEvent == null && updateObservationEvent == null)
             {
                 try
                 {
@@ -401,7 +371,7 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (traceEvent == null && scoreEvent == null && createSpanEvent == null && updateSpanEvent == null && createGenerationEvent == null && updateGenerationEvent == null && createEventEvent == null && sDKLogEvent == null && createObservationEvent == null && updateObservationEvent == null)
+            if (traceEvent == null && scoreEvent == null && createSpanEvent == null && updateSpanEvent == null && createGenerationEvent == null && updateGenerationEvent == null && createEventEvent == null && createObservationEvent == null && updateObservationEvent == null)
             {
                 try
                 {
@@ -418,7 +388,7 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (traceEvent == null && scoreEvent == null && createSpanEvent == null && updateSpanEvent == null && createGenerationEvent == null && updateGenerationEvent == null && createEventEvent == null && sDKLogEvent == null && createObservationEvent == null && updateObservationEvent == null)
+            if (traceEvent == null && scoreEvent == null && createSpanEvent == null && updateSpanEvent == null && createGenerationEvent == null && updateGenerationEvent == null && createEventEvent == null && createObservationEvent == null && updateObservationEvent == null)
             {
                 try
                 {
@@ -435,7 +405,7 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (traceEvent == null && scoreEvent == null && createSpanEvent == null && updateSpanEvent == null && createGenerationEvent == null && updateGenerationEvent == null && createEventEvent == null && sDKLogEvent == null && createObservationEvent == null && updateObservationEvent == null)
+            if (traceEvent == null && scoreEvent == null && createSpanEvent == null && updateSpanEvent == null && createGenerationEvent == null && updateGenerationEvent == null && createEventEvent == null && createObservationEvent == null && updateObservationEvent == null)
             {
                 try
                 {
@@ -452,24 +422,7 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (traceEvent == null && scoreEvent == null && createSpanEvent == null && updateSpanEvent == null && createGenerationEvent == null && updateGenerationEvent == null && createEventEvent == null && sDKLogEvent == null && createObservationEvent == null && updateObservationEvent == null)
-            {
-                try
-                {
-
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>).Name}");
-                    sDKLogEvent = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
-                }
-                catch (global::System.Text.Json.JsonException)
-                {
-                }
-                catch (global::System.InvalidOperationException)
-                {
-                }
-            }
-
-            if (traceEvent == null && scoreEvent == null && createSpanEvent == null && updateSpanEvent == null && createGenerationEvent == null && updateGenerationEvent == null && createEventEvent == null && sDKLogEvent == null && createObservationEvent == null && updateObservationEvent == null)
+            if (traceEvent == null && scoreEvent == null && createSpanEvent == null && updateSpanEvent == null && createGenerationEvent == null && updateGenerationEvent == null && createEventEvent == null && createObservationEvent == null && updateObservationEvent == null)
             {
                 try
                 {
@@ -486,7 +439,7 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (traceEvent == null && scoreEvent == null && createSpanEvent == null && updateSpanEvent == null && createGenerationEvent == null && updateGenerationEvent == null && createEventEvent == null && sDKLogEvent == null && createObservationEvent == null && updateObservationEvent == null)
+            if (traceEvent == null && scoreEvent == null && createSpanEvent == null && updateSpanEvent == null && createGenerationEvent == null && updateGenerationEvent == null && createEventEvent == null && createObservationEvent == null && updateObservationEvent == null)
             {
                 try
                 {
@@ -517,8 +470,6 @@ namespace Langfuse.JsonConverters
                 updateGenerationEvent,
 
                 createEventEvent,
-
-                sDKLogEvent,
 
                 createObservationEvent,
 
@@ -578,12 +529,6 @@ namespace Langfuse.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.CreateEventEvent!.Value, typeInfo);
-            }
-            else if (value.IsSDKLogEvent)
-            {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventSDKLogEvent2, global::Langfuse.SDKLogEvent>).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.SDKLogEvent!.Value, typeInfo);
             }
             else if (value.IsCreateObservationEvent)
             {
