@@ -62,7 +62,7 @@ namespace Langfuse
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("modelParameters")]
-        public object? ModelParameters { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, global::Langfuse.MapValue>? ModelParameters { get; set; }
 
         /// <summary>
         ///
@@ -160,7 +160,7 @@ namespace Langfuse
             global::System.DateTime? endTime,
             global::System.DateTime? completionStartTime,
             string? model,
-            object? modelParameters,
+            global::System.Collections.Generic.Dictionary<string, global::Langfuse.MapValue>? modelParameters,
             object? input,
             string? version,
             object? metadata,
