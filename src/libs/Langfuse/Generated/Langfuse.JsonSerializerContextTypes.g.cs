@@ -1469,1047 +1469,1051 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UsageDetails? Type359 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, global::Langfuse.MapValue>? Type359 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UpdateGenerationBody? Type360 { get; set; }
+        public global::Langfuse.UsageDetails? Type360 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ObservationBody? Type361 { get; set; }
+        public global::Langfuse.UpdateGenerationBody? Type361 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.TraceBody? Type362 { get; set; }
+        public global::Langfuse.ObservationBody? Type362 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreBody? Type363 { get; set; }
+        public global::Langfuse.TraceBody? Type363 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.BaseEvent? Type364 { get; set; }
+        public global::Langfuse.ScoreBody? Type364 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.IngestionSuccess? Type365 { get; set; }
+        public global::Langfuse.BaseEvent? Type365 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.IngestionError? Type366 { get; set; }
+        public global::Langfuse.IngestionSuccess? Type366 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.IngestionResponse? Type367 { get; set; }
+        public global::Langfuse.IngestionError? Type367 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.IngestionSuccess>? Type368 { get; set; }
+        public global::Langfuse.IngestionResponse? Type368 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.IngestionError>? Type369 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.IngestionSuccess>? Type369 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.OpenAICompletionUsageSchema? Type370 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.IngestionError>? Type370 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.OpenAIResponseUsageSchema? Type371 { get; set; }
+        public global::Langfuse.OpenAICompletionUsageSchema? Type371 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.LegacyMetricsResponse? Type372 { get; set; }
+        public global::Langfuse.OpenAIResponseUsageSchema? Type372 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.LegacyObservations? Type373 { get; set; }
+        public global::Langfuse.LegacyMetricsResponse? Type373 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.Observation>? Type374 { get; set; }
+        public global::Langfuse.LegacyObservations? Type374 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.LegacyObservationsViews? Type375 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.Observation>? Type375 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.LlmConnection? Type376 { get; set; }
+        public global::Langfuse.LegacyObservationsViews? Type376 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.PaginatedLlmConnections? Type377 { get; set; }
+        public global::Langfuse.LlmConnection? Type377 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.LlmConnection>? Type378 { get; set; }
+        public global::Langfuse.PaginatedLlmConnections? Type378 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UpsertLlmConnectionRequest? Type379 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.LlmConnection>? Type379 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.LlmAdapter? Type380 { get; set; }
+        public global::Langfuse.UpsertLlmConnectionRequest? Type380 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, string>? Type381 { get; set; }
+        public global::Langfuse.LlmAdapter? Type381 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.DeleteLlmConnectionResponse? Type382 { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, string>? Type382 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetMediaResponse? Type383 { get; set; }
+        public global::Langfuse.DeleteLlmConnectionResponse? Type383 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.PatchMediaBody? Type384 { get; set; }
+        public global::Langfuse.GetMediaResponse? Type384 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetMediaUploadUrlRequest? Type385 { get; set; }
+        public global::Langfuse.PatchMediaBody? Type385 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.MediaContentType? Type386 { get; set; }
+        public global::Langfuse.GetMediaUploadUrlRequest? Type386 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetMediaUploadUrlResponse? Type387 { get; set; }
+        public global::Langfuse.MediaContentType? Type387 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.MetricsV2Response? Type388 { get; set; }
+        public global::Langfuse.GetMediaUploadUrlResponse? Type388 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ModelTokenizerId? Type389 { get; set; }
+        public global::Langfuse.MetricsV2Response? Type389 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.PaginatedModels? Type390 { get; set; }
+        public global::Langfuse.ModelTokenizerId? Type390 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.Model>? Type391 { get; set; }
+        public global::Langfuse.PaginatedModels? Type391 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.CreateModelRequest? Type392 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.Model>? Type392 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.PricingTierInput>? Type393 { get; set; }
+        public global::Langfuse.CreateModelRequest? Type393 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ObservationsV2Response? Type394 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.PricingTierInput>? Type394 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.ObservationV2>? Type395 { get; set; }
+        public global::Langfuse.ObservationsV2Response? Type395 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ObservationsV2Meta? Type396 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.ObservationV2>? Type396 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.OtelResourceSpan? Type397 { get; set; }
+        public global::Langfuse.ObservationsV2Meta? Type397 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.OtelResource? Type398 { get; set; }
+        public global::Langfuse.OtelResourceSpan? Type398 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.OtelScopeSpan>? Type399 { get; set; }
+        public global::Langfuse.OtelResource? Type399 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.OtelScopeSpan? Type400 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.OtelScopeSpan>? Type400 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.OtelAttribute>? Type401 { get; set; }
+        public global::Langfuse.OtelScopeSpan? Type401 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.OtelAttribute? Type402 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.OtelAttribute>? Type402 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.OtelScope? Type403 { get; set; }
+        public global::Langfuse.OtelAttribute? Type403 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.OtelSpan>? Type404 { get; set; }
+        public global::Langfuse.OtelScope? Type404 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.OtelSpan? Type405 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.OtelSpan>? Type405 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.OtelAttributeValue? Type406 { get; set; }
+        public global::Langfuse.OtelSpan? Type406 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.OtelTraceResponse? Type407 { get; set; }
+        public global::Langfuse.OtelAttributeValue? Type407 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.MembershipRole? Type408 { get; set; }
+        public global::Langfuse.OtelTraceResponse? Type408 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.MembershipRequest? Type409 { get; set; }
+        public global::Langfuse.MembershipRole? Type409 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.DeleteMembershipRequest? Type410 { get; set; }
+        public global::Langfuse.MembershipRequest? Type410 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.MembershipResponse? Type411 { get; set; }
+        public global::Langfuse.DeleteMembershipRequest? Type411 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.MembershipDeletionResponse? Type412 { get; set; }
+        public global::Langfuse.MembershipResponse? Type412 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.MembershipsResponse? Type413 { get; set; }
+        public global::Langfuse.MembershipDeletionResponse? Type413 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.MembershipResponse>? Type414 { get; set; }
+        public global::Langfuse.MembershipsResponse? Type414 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.OrganizationProject? Type415 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.MembershipResponse>? Type415 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.OrganizationProjectsResponse? Type416 { get; set; }
+        public global::Langfuse.OrganizationProject? Type416 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.OrganizationProject>? Type417 { get; set; }
+        public global::Langfuse.OrganizationProjectsResponse? Type417 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.OrganizationApiKey? Type418 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.OrganizationProject>? Type418 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.OrganizationApiKeysResponse? Type419 { get; set; }
+        public global::Langfuse.OrganizationApiKey? Type419 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.OrganizationApiKey>? Type420 { get; set; }
+        public global::Langfuse.OrganizationApiKeysResponse? Type420 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.Projects? Type421 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.OrganizationApiKey>? Type421 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.Project>? Type422 { get; set; }
+        public global::Langfuse.Projects? Type422 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.Project? Type423 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.Project>? Type423 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.Organization? Type424 { get; set; }
+        public global::Langfuse.Project? Type424 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ProjectDeletionResponse? Type425 { get; set; }
+        public global::Langfuse.Organization? Type425 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ApiKeyList? Type426 { get; set; }
+        public global::Langfuse.ProjectDeletionResponse? Type426 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.ApiKeySummary>? Type427 { get; set; }
+        public global::Langfuse.ApiKeyList? Type427 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ApiKeySummary? Type428 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.ApiKeySummary>? Type428 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ApiKeyResponse? Type429 { get; set; }
+        public global::Langfuse.ApiKeySummary? Type429 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ApiKeyDeletionResponse? Type430 { get; set; }
+        public global::Langfuse.ApiKeyResponse? Type430 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.PromptMetaListResponse? Type431 { get; set; }
+        public global::Langfuse.ApiKeyDeletionResponse? Type431 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.PromptMeta>? Type432 { get; set; }
+        public global::Langfuse.PromptMetaListResponse? Type432 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.PromptMeta? Type433 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.PromptMeta>? Type433 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.PromptType? Type434 { get; set; }
+        public global::Langfuse.PromptMeta? Type434 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<int>? Type435 { get; set; }
+        public global::Langfuse.PromptType? Type435 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.CreatePromptRequest? Type436 { get; set; }
+        public global::System.Collections.Generic.IList<int>? Type436 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.CreateChatPromptRequest? Type437 { get; set; }
+        public global::Langfuse.CreatePromptRequest? Type437 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.CreateTextPromptRequest? Type438 { get; set; }
+        public global::Langfuse.CreateChatPromptRequest? Type438 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.ChatMessageWithPlaceholders>? Type439 { get; set; }
+        public global::Langfuse.CreateTextPromptRequest? Type439 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ChatMessageWithPlaceholders? Type440 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.ChatMessageWithPlaceholders>? Type440 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.CreateChatPromptType? Type441 { get; set; }
+        public global::Langfuse.ChatMessageWithPlaceholders? Type441 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.CreateTextPromptType? Type442 { get; set; }
+        public global::Langfuse.CreateChatPromptType? Type442 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.Prompt? Type443 { get; set; }
+        public global::Langfuse.CreateTextPromptType? Type443 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt>? Type444 { get; set; }
+        public global::Langfuse.Prompt? Type444 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.PromptChatPrompt2? Type445 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt>? Type445 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.PromptChatPromptType? Type446 { get; set; }
+        public global::Langfuse.PromptChatPrompt2? Type446 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ChatPrompt? Type447 { get; set; }
+        public global::Langfuse.PromptChatPromptType? Type447 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.PromptTextPrompt2, global::Langfuse.TextPrompt>? Type448 { get; set; }
+        public global::Langfuse.ChatPrompt? Type448 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.PromptTextPrompt2? Type449 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.PromptTextPrompt2, global::Langfuse.TextPrompt>? Type449 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.PromptTextPromptType? Type450 { get; set; }
+        public global::Langfuse.PromptTextPrompt2? Type450 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.TextPrompt? Type451 { get; set; }
+        public global::Langfuse.PromptTextPromptType? Type451 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.BasePrompt? Type452 { get; set; }
+        public global::Langfuse.TextPrompt? Type452 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ChatMessage? Type453 { get; set; }
+        public global::Langfuse.BasePrompt? Type453 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.PlaceholderMessage? Type454 { get; set; }
+        public global::Langfuse.ChatMessage? Type454 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ChatMessageType? Type455 { get; set; }
+        public global::Langfuse.PlaceholderMessage? Type455 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.PlaceholderMessageType? Type456 { get; set; }
+        public global::Langfuse.ChatMessageType? Type456 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ServiceProviderConfig? Type457 { get; set; }
+        public global::Langfuse.PlaceholderMessageType? Type457 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScimFeatureSupport? Type458 { get; set; }
+        public global::Langfuse.ServiceProviderConfig? Type458 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.BulkConfig? Type459 { get; set; }
+        public global::Langfuse.ScimFeatureSupport? Type459 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.FilterConfig? Type460 { get; set; }
+        public global::Langfuse.BulkConfig? Type460 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.AuthenticationScheme>? Type461 { get; set; }
+        public global::Langfuse.FilterConfig? Type461 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AuthenticationScheme? Type462 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.AuthenticationScheme>? Type462 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ResourceMeta? Type463 { get; set; }
+        public global::Langfuse.AuthenticationScheme? Type463 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ResourceTypesResponse? Type464 { get; set; }
+        public global::Langfuse.ResourceMeta? Type464 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.ResourceType>? Type465 { get; set; }
+        public global::Langfuse.ResourceTypesResponse? Type465 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ResourceType? Type466 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.ResourceType>? Type466 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.SchemaExtension>? Type467 { get; set; }
+        public global::Langfuse.ResourceType? Type467 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.SchemaExtension? Type468 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.SchemaExtension>? Type468 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.SchemasResponse? Type469 { get; set; }
+        public global::Langfuse.SchemaExtension? Type469 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.SchemaResource>? Type470 { get; set; }
+        public global::Langfuse.SchemasResponse? Type470 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.SchemaResource? Type471 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.SchemaResource>? Type471 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScimUsersListResponse? Type472 { get; set; }
+        public global::Langfuse.SchemaResource? Type472 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.ScimUser>? Type473 { get; set; }
+        public global::Langfuse.ScimUsersListResponse? Type473 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScimUser? Type474 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.ScimUser>? Type474 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScimName? Type475 { get; set; }
+        public global::Langfuse.ScimUser? Type475 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.ScimEmail>? Type476 { get; set; }
+        public global::Langfuse.ScimName? Type476 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScimEmail? Type477 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.ScimEmail>? Type477 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UserMeta? Type478 { get; set; }
+        public global::Langfuse.ScimEmail? Type478 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.EmptyResponse? Type479 { get; set; }
+        public global::Langfuse.UserMeta? Type479 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreConfigs? Type480 { get; set; }
+        public global::Langfuse.EmptyResponse? Type480 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.ScoreConfig>? Type481 { get; set; }
+        public global::Langfuse.ScoreConfigs? Type481 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.CreateScoreConfigRequest? Type482 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.ScoreConfig>? Type482 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UpdateScoreConfigRequest? Type483 { get; set; }
+        public global::Langfuse.CreateScoreConfigRequest? Type483 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreSubjectTraceV3? Type484 { get; set; }
+        public global::Langfuse.UpdateScoreConfigRequest? Type484 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreSubjectObservationV3? Type485 { get; set; }
+        public global::Langfuse.ScoreSubjectTraceV3? Type485 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreSubjectSessionV3? Type486 { get; set; }
+        public global::Langfuse.ScoreSubjectObservationV3? Type486 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreSubjectExperimentV3? Type487 { get; set; }
+        public global::Langfuse.ScoreSubjectSessionV3? Type487 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreSubjectV3? Type488 { get; set; }
+        public global::Langfuse.ScoreSubjectExperimentV3? Type488 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV32, global::Langfuse.ScoreSubjectTraceV3>? Type489 { get; set; }
+        public global::Langfuse.ScoreSubjectV3? Type489 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV32? Type490 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV32, global::Langfuse.ScoreSubjectTraceV3>? Type490 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV3Kind? Type491 { get; set; }
+        public global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV32? Type491 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectObservationV32, global::Langfuse.ScoreSubjectObservationV3>? Type492 { get; set; }
+        public global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV3Kind? Type492 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreSubjectV3ScoreSubjectObservationV32? Type493 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectObservationV32, global::Langfuse.ScoreSubjectObservationV3>? Type493 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreSubjectV3ScoreSubjectObservationV3Kind? Type494 { get; set; }
+        public global::Langfuse.ScoreSubjectV3ScoreSubjectObservationV32? Type494 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectSessionV32, global::Langfuse.ScoreSubjectSessionV3>? Type495 { get; set; }
+        public global::Langfuse.ScoreSubjectV3ScoreSubjectObservationV3Kind? Type495 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreSubjectV3ScoreSubjectSessionV32? Type496 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectSessionV32, global::Langfuse.ScoreSubjectSessionV3>? Type496 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreSubjectV3ScoreSubjectSessionV3Kind? Type497 { get; set; }
+        public global::Langfuse.ScoreSubjectV3ScoreSubjectSessionV32? Type497 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectExperimentV32, global::Langfuse.ScoreSubjectExperimentV3>? Type498 { get; set; }
+        public global::Langfuse.ScoreSubjectV3ScoreSubjectSessionV3Kind? Type498 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreSubjectV3ScoreSubjectExperimentV32? Type499 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectExperimentV32, global::Langfuse.ScoreSubjectExperimentV3>? Type499 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreSubjectV3ScoreSubjectExperimentV3Kind? Type500 { get; set; }
+        public global::Langfuse.ScoreSubjectV3ScoreSubjectExperimentV32? Type500 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.BaseScoreV3? Type501 { get; set; }
+        public global::Langfuse.ScoreSubjectV3ScoreSubjectExperimentV3Kind? Type501 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.NumericScoreV3? Type502 { get; set; }
+        public global::Langfuse.BaseScoreV3? Type502 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.BooleanScoreV3? Type503 { get; set; }
+        public global::Langfuse.NumericScoreV3? Type503 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.CategoricalScoreV3? Type504 { get; set; }
+        public global::Langfuse.BooleanScoreV3? Type504 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.TextScoreV3? Type505 { get; set; }
+        public global::Langfuse.CategoricalScoreV3? Type505 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.CorrectionScoreV3? Type506 { get; set; }
+        public global::Langfuse.TextScoreV3? Type506 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.ScoreV3NumericScoreV32, global::Langfuse.NumericScoreV3>? Type507 { get; set; }
+        public global::Langfuse.CorrectionScoreV3? Type507 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreV3NumericScoreV32? Type508 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.ScoreV3NumericScoreV32, global::Langfuse.NumericScoreV3>? Type508 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreV3NumericScoreV3DataType? Type509 { get; set; }
+        public global::Langfuse.ScoreV3NumericScoreV32? Type509 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.ScoreV3BooleanScoreV32, global::Langfuse.BooleanScoreV3>? Type510 { get; set; }
+        public global::Langfuse.ScoreV3NumericScoreV3DataType? Type510 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreV3BooleanScoreV32? Type511 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.ScoreV3BooleanScoreV32, global::Langfuse.BooleanScoreV3>? Type511 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreV3BooleanScoreV3DataType? Type512 { get; set; }
+        public global::Langfuse.ScoreV3BooleanScoreV32? Type512 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.ScoreV3CategoricalScoreV32, global::Langfuse.CategoricalScoreV3>? Type513 { get; set; }
+        public global::Langfuse.ScoreV3BooleanScoreV3DataType? Type513 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreV3CategoricalScoreV32? Type514 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.ScoreV3CategoricalScoreV32, global::Langfuse.CategoricalScoreV3>? Type514 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreV3CategoricalScoreV3DataType? Type515 { get; set; }
+        public global::Langfuse.ScoreV3CategoricalScoreV32? Type515 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.ScoreV3TextScoreV32, global::Langfuse.TextScoreV3>? Type516 { get; set; }
+        public global::Langfuse.ScoreV3CategoricalScoreV3DataType? Type516 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreV3TextScoreV32? Type517 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.ScoreV3TextScoreV32, global::Langfuse.TextScoreV3>? Type517 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreV3TextScoreV3DataType? Type518 { get; set; }
+        public global::Langfuse.ScoreV3TextScoreV32? Type518 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.ScoreV3CorrectionScoreV32, global::Langfuse.CorrectionScoreV3>? Type519 { get; set; }
+        public global::Langfuse.ScoreV3TextScoreV3DataType? Type519 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreV3CorrectionScoreV32? Type520 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.ScoreV3CorrectionScoreV32, global::Langfuse.CorrectionScoreV3>? Type520 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScoreV3CorrectionScoreV3DataType? Type521 { get; set; }
+        public global::Langfuse.ScoreV3CorrectionScoreV32? Type521 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetScoresV3Meta? Type522 { get; set; }
+        public global::Langfuse.ScoreV3CorrectionScoreV3DataType? Type522 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetScoresV3Response? Type523 { get; set; }
+        public global::Langfuse.GetScoresV3Meta? Type523 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.CreateScoreRequest? Type524 { get; set; }
+        public global::Langfuse.GetScoresV3Response? Type524 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.CreateScoreSource? Type525 { get; set; }
+        public global::Langfuse.CreateScoreRequest? Type525 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.CreateScoreResponse? Type526 { get; set; }
+        public global::Langfuse.CreateScoreSource? Type526 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetScoresResponseTraceData? Type527 { get; set; }
+        public global::Langfuse.CreateScoreResponse? Type527 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetScoresResponseDataNumeric? Type528 { get; set; }
+        public global::Langfuse.GetScoresResponseTraceData? Type528 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetScoresResponseDataCategorical? Type529 { get; set; }
+        public global::Langfuse.GetScoresResponseDataNumeric? Type529 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetScoresResponseDataBoolean? Type530 { get; set; }
+        public global::Langfuse.GetScoresResponseDataCategorical? Type530 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetScoresResponseDataCorrection? Type531 { get; set; }
+        public global::Langfuse.GetScoresResponseDataBoolean? Type531 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetScoresResponseDataText? Type532 { get; set; }
+        public global::Langfuse.GetScoresResponseDataCorrection? Type532 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetScoresResponseData? Type533 { get; set; }
+        public global::Langfuse.GetScoresResponseDataText? Type533 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataNumeric2, global::Langfuse.GetScoresResponseDataNumeric>? Type534 { get; set; }
+        public global::Langfuse.GetScoresResponseData? Type534 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetScoresResponseDataGetScoresResponseDataNumeric2? Type535 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataNumeric2, global::Langfuse.GetScoresResponseDataNumeric>? Type535 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetScoresResponseDataGetScoresResponseDataNumericDataType? Type536 { get; set; }
+        public global::Langfuse.GetScoresResponseDataGetScoresResponseDataNumeric2? Type536 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataCategorical2, global::Langfuse.GetScoresResponseDataCategorical>? Type537 { get; set; }
+        public global::Langfuse.GetScoresResponseDataGetScoresResponseDataNumericDataType? Type537 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetScoresResponseDataGetScoresResponseDataCategorical2? Type538 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataCategorical2, global::Langfuse.GetScoresResponseDataCategorical>? Type538 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetScoresResponseDataGetScoresResponseDataCategoricalDataType? Type539 { get; set; }
+        public global::Langfuse.GetScoresResponseDataGetScoresResponseDataCategorical2? Type539 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataBoolean2, global::Langfuse.GetScoresResponseDataBoolean>? Type540 { get; set; }
+        public global::Langfuse.GetScoresResponseDataGetScoresResponseDataCategoricalDataType? Type540 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetScoresResponseDataGetScoresResponseDataBoolean2? Type541 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataBoolean2, global::Langfuse.GetScoresResponseDataBoolean>? Type541 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetScoresResponseDataGetScoresResponseDataBooleanDataType? Type542 { get; set; }
+        public global::Langfuse.GetScoresResponseDataGetScoresResponseDataBoolean2? Type542 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataCorrection2, global::Langfuse.GetScoresResponseDataCorrection>? Type543 { get; set; }
+        public global::Langfuse.GetScoresResponseDataGetScoresResponseDataBooleanDataType? Type543 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetScoresResponseDataGetScoresResponseDataCorrection2? Type544 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataCorrection2, global::Langfuse.GetScoresResponseDataCorrection>? Type544 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetScoresResponseDataGetScoresResponseDataCorrectionDataType? Type545 { get; set; }
+        public global::Langfuse.GetScoresResponseDataGetScoresResponseDataCorrection2? Type545 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataText2, global::Langfuse.GetScoresResponseDataText>? Type546 { get; set; }
+        public global::Langfuse.GetScoresResponseDataGetScoresResponseDataCorrectionDataType? Type546 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetScoresResponseDataGetScoresResponseDataText2? Type547 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataText2, global::Langfuse.GetScoresResponseDataText>? Type547 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetScoresResponseDataGetScoresResponseDataTextDataType? Type548 { get; set; }
+        public global::Langfuse.GetScoresResponseDataGetScoresResponseDataText2? Type548 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.GetScoresResponse? Type549 { get; set; }
+        public global::Langfuse.GetScoresResponseDataGetScoresResponseDataTextDataType? Type549 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.GetScoresResponseData>? Type550 { get; set; }
+        public global::Langfuse.GetScoresResponse? Type550 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.PaginatedSessions? Type551 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.GetScoresResponseData>? Type551 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.Session>? Type552 { get; set; }
+        public global::Langfuse.PaginatedSessions? Type552 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.Traces? Type553 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.Session>? Type553 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.TraceWithDetails>? Type554 { get; set; }
+        public global::Langfuse.Traces? Type554 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.DeleteTraceResponse? Type555 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.TraceWithDetails>? Type555 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.Sort? Type556 { get; set; }
+        public global::Langfuse.DeleteTraceResponse? Type556 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetView? Type557 { get; set; }
+        public global::Langfuse.Sort? Type557 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetViewWithLegacy? Type558 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetView? Type558 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetChartType? Type559 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetViewWithLegacy? Type559 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetMetricAggregation? Type560 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetChartType? Type560 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetDimension? Type561 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetMetricAggregation? Type561 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetMetric? Type562 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetDimension? Type562 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetFilter? Type563 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetMetric? Type563 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetChartConfig? Type564 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetFilter? Type564 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetDefaultSort? Type565 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetChartConfig? Type565 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetSortOrder? Type566 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetDefaultSort? Type566 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetChartConfigInput? Type567 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetSortOrder? Type567 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableCreateDashboardWidgetRequest? Type568 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetChartConfigInput? Type568 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetDimension>? Type569 { get; set; }
+        public global::Langfuse.UnstableCreateDashboardWidgetRequest? Type569 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetMetric>? Type570 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetDimension>? Type570 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetFilter>? Type571 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetMetric>? Type571 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableUpdateDashboardWidgetRequest? Type572 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetFilter>? Type572 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetList? Type573 { get; set; }
+        public global::Langfuse.UnstableUpdateDashboardWidgetRequest? Type573 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidget>? Type574 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetList? Type574 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidget? Type575 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidget>? Type575 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDeleteDashboardWidgetResponse? Type576 { get; set; }
+        public global::Langfuse.UnstableDashboardWidget? Type576 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardPlacement? Type577 { get; set; }
+        public global::Langfuse.UnstableDeleteDashboardWidgetResponse? Type577 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2, global::Langfuse.UnstableWidgetPlacement>? Type578 { get; set; }
+        public global::Langfuse.UnstableDashboardPlacement? Type578 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2? Type579 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2, global::Langfuse.UnstableWidgetPlacement>? Type579 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacementType? Type580 { get; set; }
+        public global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2? Type580 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableWidgetPlacement? Type581 { get; set; }
+        public global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacementType? Type581 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2, global::Langfuse.UnstablePresetPlacement>? Type582 { get; set; }
+        public global::Langfuse.UnstableWidgetPlacement? Type582 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2? Type583 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2, global::Langfuse.UnstablePresetPlacement>? Type583 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacementType? Type584 { get; set; }
+        public global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2? Type584 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstablePresetPlacement? Type585 { get; set; }
+        public global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacementType? Type585 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableCreateDashboardPlacementRequest? Type586 { get; set; }
+        public global::Langfuse.UnstablePresetPlacement? Type586 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2, global::Langfuse.UnstableCreateWidgetPlacement>? Type587 { get; set; }
+        public global::Langfuse.UnstableCreateDashboardPlacementRequest? Type587 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2? Type588 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2, global::Langfuse.UnstableCreateWidgetPlacement>? Type588 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacementType? Type589 { get; set; }
+        public global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2? Type589 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableCreateWidgetPlacement? Type590 { get; set; }
+        public global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacementType? Type590 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2, global::Langfuse.UnstableCreatePresetPlacement>? Type591 { get; set; }
+        public global::Langfuse.UnstableCreateWidgetPlacement? Type591 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2? Type592 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2, global::Langfuse.UnstableCreatePresetPlacement>? Type592 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacementType? Type593 { get; set; }
+        public global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2? Type593 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableCreatePresetPlacement? Type594 { get; set; }
+        public global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacementType? Type594 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableUpdateDashboardPlacementRequest? Type595 { get; set; }
+        public global::Langfuse.UnstableCreatePresetPlacement? Type595 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDeleteDashboardPlacementResponse? Type596 { get; set; }
+        public global::Langfuse.UnstableUpdateDashboardPlacementRequest? Type596 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardDefinition? Type597 { get; set; }
+        public global::Langfuse.UnstableDeleteDashboardPlacementResponse? Type597 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardPlacement>? Type598 { get; set; }
+        public global::Langfuse.UnstableDashboardDefinition? Type598 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboard? Type599 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardPlacement>? Type599 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardList? Type600 { get; set; }
+        public global::Langfuse.UnstableDashboard? Type600 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboard>? Type601 { get; set; }
+        public global::Langfuse.UnstableDashboardList? Type601 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableCreateDashboardRequest? Type602 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboard>? Type602 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableUpdateDashboardRequest? Type603 { get; set; }
+        public global::Langfuse.UnstableCreateDashboardRequest? Type603 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDeleteDashboardResponse? Type604 { get; set; }
+        public global::Langfuse.UnstableUpdateDashboardRequest? Type604 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstablePublicApiErrorCode? Type605 { get; set; }
+        public global::Langfuse.UnstableDeleteDashboardResponse? Type605 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstablePublicApiValidationIssue? Type606 { get; set; }
+        public global::Langfuse.UnstablePublicApiErrorCode? Type606 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstablePublicApiErrorDetails? Type607 { get; set; }
+        public global::Langfuse.UnstablePublicApiValidationIssue? Type607 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstablePublicApiValidationIssue>? Type608 { get; set; }
+        public global::Langfuse.UnstablePublicApiErrorDetails? Type608 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstablePublicApiError? Type609 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstablePublicApiValidationIssue>? Type609 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.IngestionBatchRequest? Type610 { get; set; }
+        public global::Langfuse.UnstablePublicApiError? Type610 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.IngestionEvent>? Type611 { get; set; }
+        public global::Langfuse.IngestionBatchRequest? Type611 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.OpentelemetryExportTracesRequest? Type612 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.IngestionEvent>? Type612 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.OtelResourceSpan>? Type613 { get; set; }
+        public global::Langfuse.OpentelemetryExportTracesRequest? Type613 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ProjectsCreateRequest? Type614 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.OtelResourceSpan>? Type614 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ProjectsUpdateRequest? Type615 { get; set; }
+        public global::Langfuse.ProjectsCreateRequest? Type615 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ProjectsCreateApiKeyRequest? Type616 { get; set; }
+        public global::Langfuse.ProjectsUpdateRequest? Type616 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.PromptVersionUpdateRequest? Type617 { get; set; }
+        public global::Langfuse.ProjectsCreateApiKeyRequest? Type617 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScimCreateUserRequest? Type618 { get; set; }
+        public global::Langfuse.PromptVersionUpdateRequest? Type618 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.TraceDeleteMultipleRequest? Type619 { get; set; }
+        public global::Langfuse.ScimCreateUserRequest? Type619 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.TraceDeleteMultipleRequest? Type620 { get; set; }
 
         /// <summary>
         ///

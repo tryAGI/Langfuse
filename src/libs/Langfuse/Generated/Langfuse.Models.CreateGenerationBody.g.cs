@@ -24,7 +24,7 @@ namespace Langfuse
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("modelParameters")]
-        public object? ModelParameters { get; set; }
+        public global::System.Collections.Generic.Dictionary<string, global::Langfuse.MapValue>? ModelParameters { get; set; }
 
         /// <summary>
         ///
@@ -81,7 +81,7 @@ namespace Langfuse
         public CreateGenerationBody(
             global::System.DateTime? completionStartTime,
             string? model,
-            object? modelParameters,
+            global::System.Collections.Generic.Dictionary<string, global::Langfuse.MapValue>? modelParameters,
             global::Langfuse.IngestionUsage? usage,
             global::Langfuse.UsageDetails? usageDetails,
             global::System.Collections.Generic.Dictionary<string, double>? costDetails,
