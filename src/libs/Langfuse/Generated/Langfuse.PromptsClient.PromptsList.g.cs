@@ -33,7 +33,8 @@ namespace Langfuse
             ref int? page,
             ref int? limit,
             ref global::System.DateTime? fromUpdatedAt,
-            ref global::System.DateTime? toUpdatedAt);
+            ref global::System.DateTime? toUpdatedAt,
+            ref string? filter);
         partial void PreparePromptsListRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
@@ -43,7 +44,8 @@ namespace Langfuse
             int? page,
             int? limit,
             global::System.DateTime? fromUpdatedAt,
-            global::System.DateTime? toUpdatedAt);
+            global::System.DateTime? toUpdatedAt,
+            string? filter);
         partial void ProcessPromptsListResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -63,6 +65,7 @@ namespace Langfuse
         /// <param name="limit"></param>
         /// <param name="fromUpdatedAt"></param>
         /// <param name="toUpdatedAt"></param>
+        /// <param name="filter"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
@@ -74,6 +77,7 @@ namespace Langfuse
             int? limit = default,
             global::System.DateTime? fromUpdatedAt = default,
             global::System.DateTime? toUpdatedAt = default,
+            string? filter = default,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -85,6 +89,7 @@ namespace Langfuse
                 limit: limit,
                 fromUpdatedAt: fromUpdatedAt,
                 toUpdatedAt: toUpdatedAt,
+                filter: filter,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -101,6 +106,7 @@ namespace Langfuse
         /// <param name="limit"></param>
         /// <param name="fromUpdatedAt"></param>
         /// <param name="toUpdatedAt"></param>
+        /// <param name="filter"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
@@ -112,6 +118,7 @@ namespace Langfuse
             int? limit = default,
             global::System.DateTime? fromUpdatedAt = default,
             global::System.DateTime? toUpdatedAt = default,
+            string? filter = default,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -125,7 +132,8 @@ namespace Langfuse
                 page: ref page,
                 limit: ref limit,
                 fromUpdatedAt: ref fromUpdatedAt,
-                toUpdatedAt: ref toUpdatedAt);
+                toUpdatedAt: ref toUpdatedAt,
+                filter: ref filter);
 
 
             var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
@@ -161,6 +169,7 @@ namespace Langfuse
                                 .AddOptionalParameter("limit", limit?.ToString())
                                 .AddOptionalParameter("fromUpdatedAt", fromUpdatedAt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
                                 .AddOptionalParameter("toUpdatedAt", toUpdatedAt?.ToString("yyyy-MM-ddTHH:mm:ssZ"))
+                                .AddOptionalParameter("filter", filter)
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Langfuse.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -208,7 +217,8 @@ namespace Langfuse
                     page: page,
                     limit: limit,
                     fromUpdatedAt: fromUpdatedAt,
-                    toUpdatedAt: toUpdatedAt);
+                    toUpdatedAt: toUpdatedAt,
+                    filter: filter);
 
                 return __httpRequest;
             }
