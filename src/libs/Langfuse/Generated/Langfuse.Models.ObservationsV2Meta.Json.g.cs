@@ -2,7 +2,7 @@
 
 namespace Langfuse
 {
-    public sealed partial class ObservationsV2Meta
+    public readonly partial struct ObservationsV2Meta
     {
         /// <summary>
         /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
@@ -54,7 +54,7 @@ namespace Langfuse
             return global::System.Text.Json.JsonSerializer.Deserialize(
                 json,
                 typeof(global::Langfuse.ObservationsV2Meta),
-                jsonSerializerContext) as global::Langfuse.ObservationsV2Meta;
+                jsonSerializerContext) as global::Langfuse.ObservationsV2Meta?;
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace Langfuse
             return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
                 jsonStream,
                 typeof(global::Langfuse.ObservationsV2Meta),
-                jsonSerializerContext).ConfigureAwait(false)) as global::Langfuse.ObservationsV2Meta;
+                jsonSerializerContext).ConfigureAwait(false)) as global::Langfuse.ObservationsV2Meta?;
         }
 
         /// <summary>

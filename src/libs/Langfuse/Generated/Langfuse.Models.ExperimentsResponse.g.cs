@@ -16,11 +16,11 @@ namespace Langfuse
         public required global::System.Collections.Generic.IList<global::Langfuse.Experiment> Data { get; set; }
 
         /// <summary>
-        ///
+        /// Metadata for cursor-based pagination.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Langfuse.ExperimentsResponseMeta Meta { get; set; }
+        public required global::Langfuse.UtilsCursorMetaResponse Meta { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -32,13 +32,15 @@ namespace Langfuse
         /// Initializes a new instance of the <see cref="ExperimentsResponse" /> class.
         /// </summary>
         /// <param name="data"></param>
-        /// <param name="meta"></param>
+        /// <param name="meta">
+        /// Metadata for cursor-based pagination.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ExperimentsResponse(
             global::System.Collections.Generic.IList<global::Langfuse.Experiment> data,
-            global::Langfuse.ExperimentsResponseMeta meta)
+            global::Langfuse.UtilsCursorMetaResponse meta)
         {
             this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
             this.Meta = meta ?? throw new global::System.ArgumentNullException(nameof(meta));
