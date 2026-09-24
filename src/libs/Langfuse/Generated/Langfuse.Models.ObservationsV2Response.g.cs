@@ -18,11 +18,11 @@ namespace Langfuse
         public required global::System.Collections.Generic.IList<global::Langfuse.ObservationV2> Data { get; set; }
 
         /// <summary>
-        /// Metadata for cursor-based pagination
+        /// Metadata for cursor-based pagination.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Langfuse.ObservationsV2Meta Meta { get; set; }
+        public required global::Langfuse.UtilsCursorMetaResponse Meta { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -37,14 +37,14 @@ namespace Langfuse
         /// Array of observation objects. Fields included depend on the `fields` parameter in the request.
         /// </param>
         /// <param name="meta">
-        /// Metadata for cursor-based pagination
+        /// Metadata for cursor-based pagination.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ObservationsV2Response(
             global::System.Collections.Generic.IList<global::Langfuse.ObservationV2> data,
-            global::Langfuse.ObservationsV2Meta meta)
+            global::Langfuse.UtilsCursorMetaResponse meta)
         {
             this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
             this.Meta = meta ?? throw new global::System.ArgumentNullException(nameof(meta));

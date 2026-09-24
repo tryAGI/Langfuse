@@ -101,8 +101,9 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UpdateEvaluationRuleRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRulesPage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.EvaluationRule>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CursorMeta))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DeletedEvaluationRule))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CursorMeta), TypeInfoPropertyName = "CursorMeta2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UtilsCursorMetaResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
@@ -139,6 +140,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleFilterNullEvaluationRuleFilterType?), TypeInfoPropertyName = "NullableEvaluationRuleFilterNullEvaluationRuleFilterType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleReadFilter?), TypeInfoPropertyName = "NullableEvaluationRuleReadFilter2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PublicApiErrorCode?), TypeInfoPropertyName = "NullablePublicApiErrorCode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CursorMeta?), TypeInfoPropertyName = "NullableCursorMeta2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.PublicApiValidationIssue>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.PromptVariableMappingInput>))]
@@ -195,6 +197,7 @@ namespace Langfuse
             options.Converters.Add(new global::Langfuse.JsonConverters.PromptVariableMappingJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.EvaluationRuleFilterJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.EvaluationRuleReadFilterJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.CursorMetaJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.EvaluationRuleFilterDateTimeEvaluationRuleFilter2, global::Langfuse.DateTimeEvaluationRuleFilter>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.EvaluationRuleFilterStringEvaluationRuleFilter2, global::Langfuse.StringEvaluationRuleFilter>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.EvaluationRuleFilterNumberEvaluationRuleFilter2, global::Langfuse.NumberEvaluationRuleFilter>());

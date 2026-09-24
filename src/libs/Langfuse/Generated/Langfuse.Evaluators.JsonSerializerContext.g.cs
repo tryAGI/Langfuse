@@ -65,7 +65,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.PromptVariableMappingInput>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.PromptVariableMapping>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.Creator))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CursorMeta))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorModelConfig))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorChatMessageRole), TypeInfoPropertyName = "EvaluatorChatMessageRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorChatMessage))]
@@ -112,6 +111,8 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.Evaluator>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorVersionsPage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.EvaluatorVersion>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CursorMeta), TypeInfoPropertyName = "CursorMeta2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UtilsCursorMetaResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DeletedEvaluator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
@@ -155,6 +156,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequest2, global::Langfuse.CreateCodeEvaluatorRequest>?), TypeInfoPropertyName = "NullableAllOfCreateEvaluatorRequestCreateCodeEvaluatorRequest2CreateCodeEvaluatorRequest2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequestType?), TypeInfoPropertyName = "NullableCreateEvaluatorRequestCreateCodeEvaluatorRequestType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UpdateEvaluatorRequest?), TypeInfoPropertyName = "NullableUpdateEvaluatorRequest2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CursorMeta?), TypeInfoPropertyName = "NullableCursorMeta2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.PublicApiValidationIssue>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.PromptVariableMappingInput>))]
@@ -216,6 +218,7 @@ namespace Langfuse
             options.Converters.Add(new global::Langfuse.JsonConverters.EvaluatorJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.CreateEvaluatorRequestJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.UpdateEvaluatorRequestJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.CursorMetaJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.EvaluatorOutputDefinitionPublicEvaluatorNumericScore2, global::Langfuse.PublicEvaluatorNumericScore>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.EvaluatorOutputDefinitionPublicEvaluatorBooleanScore2, global::Langfuse.PublicEvaluatorBooleanScore>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.EvaluatorOutputDefinitionPublicEvaluatorCategoricalScore2, global::Langfuse.PublicEvaluatorCategoricalScore>());

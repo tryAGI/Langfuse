@@ -2,7 +2,7 @@
 
 namespace Langfuse
 {
-    public sealed partial class CursorMeta
+    public readonly partial struct CursorMeta
     {
         /// <summary>
         /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
@@ -54,7 +54,7 @@ namespace Langfuse
             return global::System.Text.Json.JsonSerializer.Deserialize(
                 json,
                 typeof(global::Langfuse.CursorMeta),
-                jsonSerializerContext) as global::Langfuse.CursorMeta;
+                jsonSerializerContext) as global::Langfuse.CursorMeta?;
         }
 
         /// <summary>
@@ -101,7 +101,7 @@ namespace Langfuse
             return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
                 jsonStream,
                 typeof(global::Langfuse.CursorMeta),
-                jsonSerializerContext).ConfigureAwait(false)) as global::Langfuse.CursorMeta;
+                jsonSerializerContext).ConfigureAwait(false)) as global::Langfuse.CursorMeta?;
         }
 
         /// <summary>
