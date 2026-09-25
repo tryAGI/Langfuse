@@ -5895,6 +5895,71 @@ paths:
             type: string
             format: date-time
             nullable: true
+        - name: filter
+          in: query
+          description: >-
+            JSON string containing an array of filter conditions, combined with
+            AND.
+
+            When provided, this takes precedence over name, version,
+
+            label, tag, fromUpdatedAt, and toUpdatedAt. An empty array applies
+            no
+
+            filters. Project scoping and pagination always apply.
+
+
+            Each condition requires `type`, `column`, `operator`, and `value`.
+
+            Supported types and columns:
+
+            - `string`: `id`, `name`, `type`. Operators: `=`, `contains`, `does
+            not contain`, `starts with`, `ends with`, `is not empty`.
+
+            - `stringOptions`: `id`, `name`, `type`. Operators: `any of`, `none
+            of`. Value: non-empty string array.
+
+            - `number`: `version`. Operators: `=`, `>`, `<`, `>=`, `<=`. Value:
+            number.
+
+            - `datetime`: `createdAt`, `updatedAt`. Operators: `>`, `<`, `>=`,
+            `<=`. Value: ISO 8601 timestamp.
+
+            - `arrayOptions`: `labels`, `tags`. Operators: `any of`, `all of`,
+            `none of`. Value: non-empty string array.
+
+            - `stringObject`: `config`. Requires an additional `key` field.
+            Operators: `=`, `contains`, `does not contain`, `starts with`, `ends
+            with`, `is set`, `is not set`. Value: string (use an empty string
+            for key-presence operators).
+
+
+            String equality is case-sensitive. String search operators use
+
+            case-insensitive SQL pattern matching: `%` matches any sequence and
+
+            `_` matches a single character. A backslash escapes these
+            characters;
+
+            JSON-escape the backslash in the filter value. Asterisks are
+            literal.
+
+            For config, an empty search value is treated as `is set`.
+
+
+            Filters apply to prompt versions before aggregation: returned
+            versions,
+
+            labels, and lastConfig reflect only matching versions.
+
+
+            Example: [{"type":"string","column":"name","operator":"starts
+            with","value":"tools/"},{"type":"string","column":"name","operator":"ends
+            with","value":"/description"}]
+          required: false
+          schema:
+            type: string
+            nullable: true
       responses:
         '200':
           description: ''
@@ -10505,9 +10570,13 @@ components:
         metadata:
           description: Metadata associated with the dataset
         inputSchema:
+          type: object
+          additionalProperties: true
           nullable: true
           description: JSON Schema for validating dataset item inputs
         expectedOutputSchema:
+          type: object
+          additionalProperties: true
           nullable: true
           description: JSON Schema for validating dataset item expected outputs
         projectId:
@@ -11427,11 +11496,15 @@ components:
         metadata:
           nullable: true
         inputSchema:
+          type: object
+          additionalProperties: true
           nullable: true
           description: >-
             JSON Schema for validating dataset item inputs. When set, all new
             and existing dataset items will be validated against this schema.
         expectedOutputSchema:
+          type: object
+          additionalProperties: true
           nullable: true
           description: >-
             JSON Schema for validating dataset item expected outputs. When set,
@@ -13289,11 +13362,10 @@ components:
     CursorMeta:
       title: CursorMeta
       type: object
-      properties:
-        cursor:
-          type: string
-          nullable: true
-          description: Opaque cursor for the next page. Omitted when there is no next page.
+      description: Cursor pagination metadata.
+      properties: {}
+      allOf:
+        - $ref: '#/components/schemas/utilsCursorMetaResponse'
     DeletedEvaluator:
       title: DeletedEvaluator
       type: object
@@ -13320,13 +13392,10 @@ components:
     ExperimentsResponseMeta:
       title: ExperimentsResponseMeta
       type: object
-      properties:
-        cursor:
-          type: string
-          nullable: true
-          description: >-
-            Versioned base64url cursor for retrieving the next page. Absent when
-            there are no more results.
+      description: Metadata for cursor-based pagination.
+      properties: {}
+      allOf:
+        - $ref: '#/components/schemas/utilsCursorMetaResponse'
     Experiment:
       title: Experiment
       type: object
@@ -14907,14 +14976,10 @@ components:
     ObservationsV2Meta:
       title: ObservationsV2Meta
       type: object
-      description: Metadata for cursor-based pagination
-      properties:
-        cursor:
-          type: string
-          nullable: true
-          description: >-
-            Base64-encoded cursor to use for retrieving the next page. If not
-            present, there are no more results.
+      description: Metadata for cursor-based pagination.
+      properties: {}
+      allOf:
+        - $ref: '#/components/schemas/utilsCursorMetaResponse'
     OtelResourceSpan:
       title: OtelResourceSpan
       type: object
@@ -15014,6 +15079,8 @@ components:
             Span attributes including Langfuse-specific attributes
             (langfuse.observation.*)
         status:
+          type: object
+          additionalProperties: true
           nullable: true
           description: Span status object
     OtelAttribute:
@@ -16277,14 +16344,10 @@ components:
       properties:
         limit:
           type: integer
-        cursor:
-          type: string
-          nullable: true
-          description: >-
-            URL-safe base64 (base64url) cursor for the next page. Absent when
-            there are no more results.
       required:
         - limit
+      allOf:
+        - $ref: '#/components/schemas/utilsCursorMetaResponse'
     GetScoresV3Response:
       title: GetScoresV3Response
       type: object
@@ -17313,6 +17376,15 @@ components:
         - limit
         - totalItems
         - totalPages
+    utilsCursorMetaResponse:
+      title: utilsCursorMetaResponse
+      type: object
+      description: Metadata for cursor-based pagination.
+      properties:
+        cursor:
+          type: string
+          nullable: true
+          description: Opaque cursor for the next page. Omitted when there is no next page.
   securitySchemes:
     BasicAuth:
       type: http
