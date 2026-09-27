@@ -308,6 +308,15 @@ namespace Langfuse
         };
 
         /// <summary>
+        ///
+        /// </summary>
+        public UnstableSkillsClient UnstableSkills => new UnstableSkillsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
+        };
+
+        /// <summary>
         /// Creates a new instance of the LangfuseClient.
         /// If no httpClient is provided, a new one will be created.
         /// If no baseUri is provided, the default baseUri from OpenAPI spec will be used.

@@ -1,0 +1,54 @@
+#nullable enable
+
+namespace Langfuse
+{
+    public partial interface IUnstableSkillsClient
+    {
+        /// <summary>
+        /// List skills with metadata and timestamps from their latest version, shared tags, and the version assigned to production when present.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="search"></param>
+        /// <param name="tag"></param>
+        /// <param name="page"></param>
+        /// <param name="limit"></param>
+        /// <param name="fromUpdatedAt"></param>
+        /// <param name="toUpdatedAt"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Langfuse.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Langfuse.UnstableSkillMetaListResponse> UnstableSkillsListAsync(
+            string? name = default,
+            string? search = default,
+            string? tag = default,
+            int? page = default,
+            int? limit = default,
+            global::System.DateTime? fromUpdatedAt = default,
+            global::System.DateTime? toUpdatedAt = default,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+        /// <summary>
+        /// List skills with metadata and timestamps from their latest version, shared tags, and the version assigned to production when present.
+        /// </summary>
+        /// <param name="name"></param>
+        /// <param name="search"></param>
+        /// <param name="tag"></param>
+        /// <param name="page"></param>
+        /// <param name="limit"></param>
+        /// <param name="fromUpdatedAt"></param>
+        /// <param name="toUpdatedAt"></param>
+        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
+        /// <param name="cancellationToken">The token to cancel the operation with</param>
+        /// <exception cref="global::Langfuse.ApiException"></exception>
+        global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.UnstableSkillMetaListResponse>> UnstableSkillsListAsResponseAsync(
+            string? name = default,
+            string? search = default,
+            string? tag = default,
+            int? page = default,
+            int? limit = default,
+            global::System.DateTime? fromUpdatedAt = default,
+            global::System.DateTime? toUpdatedAt = default,
+            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
+            global::System.Threading.CancellationToken cancellationToken = default);
+    }
+}
