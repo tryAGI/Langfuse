@@ -1,0 +1,57 @@
+
+#nullable enable
+
+namespace Langfuse
+{
+    /// <summary>
+    ///
+    /// </summary>
+    public sealed partial class UnstableSkillVersionFileReference
+    {
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("path")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Path { get; set; }
+
+        /// <summary>
+        /// Canonical base64-encoded SHA-256 from a skill file manifest. The content must already exist in this project.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("sha256Hash")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required string Sha256Hash { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UnstableSkillVersionFileReference" /> class.
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="sha256Hash">
+        /// Canonical base64-encoded SHA-256 from a skill file manifest. The content must already exist in this project.
+        /// </param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public UnstableSkillVersionFileReference(
+            string path,
+            string sha256Hash)
+        {
+            this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
+            this.Sha256Hash = sha256Hash ?? throw new global::System.ArgumentNullException(nameof(sha256Hash));
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UnstableSkillVersionFileReference" /> class.
+        /// </summary>
+        public UnstableSkillVersionFileReference()
+        {
+        }
+
+    }
+}
