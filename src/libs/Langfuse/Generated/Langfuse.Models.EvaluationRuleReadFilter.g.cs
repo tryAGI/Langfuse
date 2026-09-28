@@ -43,8 +43,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.EvaluationRuleReadFilterWithKey PickEvaluationRuleReadFilterWithKey() => IsEvaluationRuleReadFilterWithKey
-            ? EvaluationRuleReadFilterWithKey!
+        public global::Langfuse.EvaluationRuleReadFilterWithKey PickEvaluationRuleReadFilterWithKey() => EvaluationRuleReadFilterWithKey is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'EvaluationRuleReadFilterWithKey' but the value was {ToString()}.");
 
         /// <summary>
@@ -80,8 +80,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.EvaluationRuleReadFilterBase PickEvaluationRuleReadFilterBase() => IsEvaluationRuleReadFilterBase
-            ? EvaluationRuleReadFilterBase!
+        public global::Langfuse.EvaluationRuleReadFilterBase PickEvaluationRuleReadFilterBase() => EvaluationRuleReadFilterBase is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'EvaluationRuleReadFilterBase' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -178,13 +178,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsEvaluationRuleReadFilterWithKey && evaluationRuleReadFilterWithKey != null)
+            if (EvaluationRuleReadFilterWithKey is { } __value0 && evaluationRuleReadFilterWithKey != null)
             {
-                return evaluationRuleReadFilterWithKey(EvaluationRuleReadFilterWithKey!);
+                return evaluationRuleReadFilterWithKey(__value0);
             }
-            else if (IsEvaluationRuleReadFilterBase && evaluationRuleReadFilterBase != null)
+            else if (EvaluationRuleReadFilterBase is { } __value1 && evaluationRuleReadFilterBase != null)
             {
-                return evaluationRuleReadFilterBase(EvaluationRuleReadFilterBase!);
+                return evaluationRuleReadFilterBase(__value1);
             }
 
             return default(TResult);
@@ -204,13 +204,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsEvaluationRuleReadFilterWithKey)
+            if (EvaluationRuleReadFilterWithKey is { } __value0)
             {
-                evaluationRuleReadFilterWithKey?.Invoke(EvaluationRuleReadFilterWithKey!);
+                evaluationRuleReadFilterWithKey?.Invoke(__value0);
             }
-            else if (IsEvaluationRuleReadFilterBase)
+            else if (EvaluationRuleReadFilterBase is { } __value1)
             {
-                evaluationRuleReadFilterBase?.Invoke(EvaluationRuleReadFilterBase!);
+                evaluationRuleReadFilterBase?.Invoke(__value1);
             }
         }
 
@@ -227,13 +227,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsEvaluationRuleReadFilterWithKey)
+            if (EvaluationRuleReadFilterWithKey is { } __value0)
             {
-                evaluationRuleReadFilterWithKey?.Invoke(EvaluationRuleReadFilterWithKey!);
+                evaluationRuleReadFilterWithKey?.Invoke(__value0);
             }
-            else if (IsEvaluationRuleReadFilterBase)
+            else if (EvaluationRuleReadFilterBase is { } __value1)
             {
-                evaluationRuleReadFilterBase?.Invoke(EvaluationRuleReadFilterBase!);
+                evaluationRuleReadFilterBase?.Invoke(__value1);
             }
         }
 

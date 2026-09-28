@@ -131,13 +131,13 @@ namespace Langfuse.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.EvaluationRuleReadFilterWithKey), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.EvaluationRuleReadFilterWithKey?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.EvaluationRuleReadFilterWithKey).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.EvaluationRuleReadFilterWithKey!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickEvaluationRuleReadFilterWithKey(), typeInfo);
             }
             else if (value.IsEvaluationRuleReadFilterBase)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.EvaluationRuleReadFilterBase), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.EvaluationRuleReadFilterBase?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.EvaluationRuleReadFilterBase).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.EvaluationRuleReadFilterBase!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickEvaluationRuleReadFilterBase(), typeInfo);
             }
         }
     }

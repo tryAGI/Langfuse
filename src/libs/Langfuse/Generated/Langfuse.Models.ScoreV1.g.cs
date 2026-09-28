@@ -42,8 +42,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.ScoreV1NumericScoreV12, global::Langfuse.NumericScoreV1> PickNumericScoreV1() => IsNumericScoreV1
-            ? NumericScoreV1!.Value
+        public global::Langfuse.AllOf<global::Langfuse.ScoreV1NumericScoreV12, global::Langfuse.NumericScoreV1> PickNumericScoreV1() => NumericScoreV1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'NumericScoreV1' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.ScoreV1CategoricalScoreV12, global::Langfuse.CategoricalScoreV1> PickCategoricalScoreV1() => IsCategoricalScoreV1
-            ? CategoricalScoreV1!.Value
+        public global::Langfuse.AllOf<global::Langfuse.ScoreV1CategoricalScoreV12, global::Langfuse.CategoricalScoreV1> PickCategoricalScoreV1() => CategoricalScoreV1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CategoricalScoreV1' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.ScoreV1BooleanScoreV12, global::Langfuse.BooleanScoreV1> PickBooleanScoreV1() => IsBooleanScoreV1
-            ? BooleanScoreV1!.Value
+        public global::Langfuse.AllOf<global::Langfuse.ScoreV1BooleanScoreV12, global::Langfuse.BooleanScoreV1> PickBooleanScoreV1() => BooleanScoreV1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'BooleanScoreV1' but the value was {ToString()}.");
 
         /// <summary>
@@ -153,8 +153,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.ScoreV1TextScoreV12, global::Langfuse.TextScoreV1> PickTextScoreV1() => IsTextScoreV1
-            ? TextScoreV1!.Value
+        public global::Langfuse.AllOf<global::Langfuse.ScoreV1TextScoreV12, global::Langfuse.TextScoreV1> PickTextScoreV1() => TextScoreV1 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'TextScoreV1' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -307,21 +307,21 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsNumericScoreV1 && numericScoreV1 != null)
+            if (NumericScoreV1 is { } __value0 && numericScoreV1 != null)
             {
-                return numericScoreV1(NumericScoreV1!);
+                return numericScoreV1(__value0);
             }
-            else if (IsCategoricalScoreV1 && categoricalScoreV1 != null)
+            else if (CategoricalScoreV1 is { } __value1 && categoricalScoreV1 != null)
             {
-                return categoricalScoreV1(CategoricalScoreV1!);
+                return categoricalScoreV1(__value1);
             }
-            else if (IsBooleanScoreV1 && booleanScoreV1 != null)
+            else if (BooleanScoreV1 is { } __value2 && booleanScoreV1 != null)
             {
-                return booleanScoreV1(BooleanScoreV1!);
+                return booleanScoreV1(__value2);
             }
-            else if (IsTextScoreV1 && textScoreV1 != null)
+            else if (TextScoreV1 is { } __value3 && textScoreV1 != null)
             {
-                return textScoreV1(TextScoreV1!);
+                return textScoreV1(__value3);
             }
 
             return default(TResult);
@@ -345,21 +345,21 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsNumericScoreV1)
+            if (NumericScoreV1 is { } __value0)
             {
-                numericScoreV1?.Invoke(NumericScoreV1!);
+                numericScoreV1?.Invoke(__value0);
             }
-            else if (IsCategoricalScoreV1)
+            else if (CategoricalScoreV1 is { } __value1)
             {
-                categoricalScoreV1?.Invoke(CategoricalScoreV1!);
+                categoricalScoreV1?.Invoke(__value1);
             }
-            else if (IsBooleanScoreV1)
+            else if (BooleanScoreV1 is { } __value2)
             {
-                booleanScoreV1?.Invoke(BooleanScoreV1!);
+                booleanScoreV1?.Invoke(__value2);
             }
-            else if (IsTextScoreV1)
+            else if (TextScoreV1 is { } __value3)
             {
-                textScoreV1?.Invoke(TextScoreV1!);
+                textScoreV1?.Invoke(__value3);
             }
         }
 
@@ -378,21 +378,21 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsNumericScoreV1)
+            if (NumericScoreV1 is { } __value0)
             {
-                numericScoreV1?.Invoke(NumericScoreV1!);
+                numericScoreV1?.Invoke(__value0);
             }
-            else if (IsCategoricalScoreV1)
+            else if (CategoricalScoreV1 is { } __value1)
             {
-                categoricalScoreV1?.Invoke(CategoricalScoreV1!);
+                categoricalScoreV1?.Invoke(__value1);
             }
-            else if (IsBooleanScoreV1)
+            else if (BooleanScoreV1 is { } __value2)
             {
-                booleanScoreV1?.Invoke(BooleanScoreV1!);
+                booleanScoreV1?.Invoke(__value2);
             }
-            else if (IsTextScoreV1)
+            else if (TextScoreV1 is { } __value3)
             {
-                textScoreV1?.Invoke(TextScoreV1!);
+                textScoreV1?.Invoke(__value3);
             }
         }
 

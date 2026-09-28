@@ -42,8 +42,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public string PickString() => IsString
-            ? String!
+        public string PickString() => String is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'String' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public int PickInteger() => IsInteger
-            ? Integer!.Value
+        public int PickInteger() => Integer is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Integer' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public float PickFloatNumber() => IsFloatNumber
-            ? FloatNumber!.Value
+        public float PickFloatNumber() => FloatNumber is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'FloatNumber' but the value was {ToString()}.");
 
         /// <summary>
@@ -153,8 +153,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public bool PickBoolean() => IsBoolean
-            ? Boolean!.Value
+        public bool PickBoolean() => Boolean is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Boolean' but the value was {ToString()}.");
 
         /// <summary>
@@ -190,8 +190,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<string> PickArray() => IsArray
-            ? Array!
+        public global::System.Collections.Generic.IList<string> PickArray() => Array is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'Array' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -349,25 +349,25 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsString && @string != null)
+            if (String is { } __value0 && @string != null)
             {
-                return @string(String!);
+                return @string(__value0);
             }
-            else if (IsInteger && integer != null)
+            else if (Integer is { } __value1 && integer != null)
             {
-                return integer(Integer!);
+                return integer(__value1);
             }
-            else if (IsFloatNumber && floatNumber != null)
+            else if (FloatNumber is { } __value2 && floatNumber != null)
             {
-                return floatNumber(FloatNumber!);
+                return floatNumber(__value2);
             }
-            else if (IsBoolean && boolean != null)
+            else if (Boolean is { } __value3 && boolean != null)
             {
-                return boolean(Boolean!);
+                return boolean(__value3);
             }
-            else if (IsArray && array != null)
+            else if (Array is { } __value4 && array != null)
             {
-                return array(Array!);
+                return array(__value4);
             }
 
             return default(TResult);
@@ -393,25 +393,25 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsString)
+            if (String is { } __value0)
             {
-                @string?.Invoke(String!);
+                @string?.Invoke(__value0);
             }
-            else if (IsInteger)
+            else if (Integer is { } __value1)
             {
-                integer?.Invoke(Integer!);
+                integer?.Invoke(__value1);
             }
-            else if (IsFloatNumber)
+            else if (FloatNumber is { } __value2)
             {
-                floatNumber?.Invoke(FloatNumber!);
+                floatNumber?.Invoke(__value2);
             }
-            else if (IsBoolean)
+            else if (Boolean is { } __value3)
             {
-                boolean?.Invoke(Boolean!);
+                boolean?.Invoke(__value3);
             }
-            else if (IsArray)
+            else if (Array is { } __value4)
             {
-                array?.Invoke(Array!);
+                array?.Invoke(__value4);
             }
         }
 
@@ -431,25 +431,25 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsString)
+            if (String is { } __value0)
             {
-                @string?.Invoke(String!);
+                @string?.Invoke(__value0);
             }
-            else if (IsInteger)
+            else if (Integer is { } __value1)
             {
-                integer?.Invoke(Integer!);
+                integer?.Invoke(__value1);
             }
-            else if (IsFloatNumber)
+            else if (FloatNumber is { } __value2)
             {
-                floatNumber?.Invoke(FloatNumber!);
+                floatNumber?.Invoke(__value2);
             }
-            else if (IsBoolean)
+            else if (Boolean is { } __value3)
             {
-                boolean?.Invoke(Boolean!);
+                boolean?.Invoke(__value3);
             }
-            else if (IsArray)
+            else if (Array is { } __value4)
             {
-                array?.Invoke(Array!);
+                array?.Invoke(__value4);
             }
         }
 

@@ -46,8 +46,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2, global::Langfuse.UnstableWidgetPlacement> PickUnstableWidgetPlacement() => IsUnstableWidgetPlacement
-            ? UnstableWidgetPlacement!.Value
+        public global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2, global::Langfuse.UnstableWidgetPlacement> PickUnstableWidgetPlacement() => UnstableWidgetPlacement is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableWidgetPlacement' but the value was {ToString()}.");
 
         /// <summary>
@@ -83,8 +83,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2, global::Langfuse.UnstablePresetPlacement> PickUnstablePresetPlacement() => IsUnstablePresetPlacement
-            ? UnstablePresetPlacement!.Value
+        public global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2, global::Langfuse.UnstablePresetPlacement> PickUnstablePresetPlacement() => UnstablePresetPlacement is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'UnstablePresetPlacement' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -181,13 +181,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUnstableWidgetPlacement && unstableWidgetPlacement != null)
+            if (UnstableWidgetPlacement is { } __value0 && unstableWidgetPlacement != null)
             {
-                return unstableWidgetPlacement(UnstableWidgetPlacement!);
+                return unstableWidgetPlacement(__value0);
             }
-            else if (IsUnstablePresetPlacement && unstablePresetPlacement != null)
+            else if (UnstablePresetPlacement is { } __value1 && unstablePresetPlacement != null)
             {
-                return unstablePresetPlacement(UnstablePresetPlacement!);
+                return unstablePresetPlacement(__value1);
             }
 
             return default(TResult);
@@ -207,13 +207,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUnstableWidgetPlacement)
+            if (UnstableWidgetPlacement is { } __value0)
             {
-                unstableWidgetPlacement?.Invoke(UnstableWidgetPlacement!);
+                unstableWidgetPlacement?.Invoke(__value0);
             }
-            else if (IsUnstablePresetPlacement)
+            else if (UnstablePresetPlacement is { } __value1)
             {
-                unstablePresetPlacement?.Invoke(UnstablePresetPlacement!);
+                unstablePresetPlacement?.Invoke(__value1);
             }
         }
 
@@ -230,13 +230,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUnstableWidgetPlacement)
+            if (UnstableWidgetPlacement is { } __value0)
             {
-                unstableWidgetPlacement?.Invoke(UnstableWidgetPlacement!);
+                unstableWidgetPlacement?.Invoke(__value0);
             }
-            else if (IsUnstablePresetPlacement)
+            else if (UnstablePresetPlacement is { } __value1)
             {
-                unstablePresetPlacement?.Invoke(UnstablePresetPlacement!);
+                unstablePresetPlacement?.Invoke(__value1);
             }
         }
 

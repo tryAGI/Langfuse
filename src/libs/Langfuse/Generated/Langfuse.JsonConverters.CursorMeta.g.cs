@@ -54,7 +54,7 @@ namespace Langfuse.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.UtilsCursorMetaResponse), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.UtilsCursorMetaResponse?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.UtilsCursorMetaResponse).Name}");
-                var __element0 = global::System.Text.Json.JsonSerializer.SerializeToElement(value.UtilsCursorMetaResponse!, typeInfo);
+                var __element0 = global::System.Text.Json.JsonSerializer.SerializeToElement(value.PickUtilsCursorMetaResponse(), typeInfo);
                 if (__element0.ValueKind != global::System.Text.Json.JsonValueKind.Object)
                 {
                     throw new global::System.Text.Json.JsonException("AllOf values must serialize as JSON objects.");

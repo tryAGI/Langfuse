@@ -130,13 +130,13 @@ namespace Langfuse.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.UnstableSkillVersionFileInput), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.UnstableSkillVersionFileInput?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.UnstableSkillVersionFileInput).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UnstableSkillVersionFileInput!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickUnstableSkillVersionFileInput(), typeInfo);
             }
             else if (value.IsUnstableSkillVersionFileReference)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.UnstableSkillVersionFileReference), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.UnstableSkillVersionFileReference?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.UnstableSkillVersionFileReference).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UnstableSkillVersionFileReference!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickUnstableSkillVersionFileReference(), typeInfo);
             }
         }
     }

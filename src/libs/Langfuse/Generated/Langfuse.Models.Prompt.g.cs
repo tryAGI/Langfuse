@@ -42,8 +42,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt> PickChatPrompt() => IsChatPrompt
-            ? ChatPrompt!.Value
+        public global::Langfuse.AllOf<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt> PickChatPrompt() => ChatPrompt is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ChatPrompt' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.PromptTextPrompt2, global::Langfuse.TextPrompt> PickTextPrompt() => IsTextPrompt
-            ? TextPrompt!.Value
+        public global::Langfuse.AllOf<global::Langfuse.PromptTextPrompt2, global::Langfuse.TextPrompt> PickTextPrompt() => TextPrompt is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'TextPrompt' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsChatPrompt && chatPrompt != null)
+            if (ChatPrompt is { } __value0 && chatPrompt != null)
             {
-                return chatPrompt(ChatPrompt!);
+                return chatPrompt(__value0);
             }
-            else if (IsTextPrompt && textPrompt != null)
+            else if (TextPrompt is { } __value1 && textPrompt != null)
             {
-                return textPrompt(TextPrompt!);
+                return textPrompt(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsChatPrompt)
+            if (ChatPrompt is { } __value0)
             {
-                chatPrompt?.Invoke(ChatPrompt!);
+                chatPrompt?.Invoke(__value0);
             }
-            else if (IsTextPrompt)
+            else if (TextPrompt is { } __value1)
             {
-                textPrompt?.Invoke(TextPrompt!);
+                textPrompt?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsChatPrompt)
+            if (ChatPrompt is { } __value0)
             {
-                chatPrompt?.Invoke(ChatPrompt!);
+                chatPrompt?.Invoke(__value0);
             }
-            else if (IsTextPrompt)
+            else if (TextPrompt is { } __value1)
             {
-                textPrompt?.Invoke(TextPrompt!);
+                textPrompt?.Invoke(__value1);
             }
         }
 

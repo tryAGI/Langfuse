@@ -134,13 +134,13 @@ namespace Langfuse.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.PricingTierUsageCondition), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.PricingTierUsageCondition?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.PricingTierUsageCondition).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PricingTierUsageCondition!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickPricingTierUsageCondition(), typeInfo);
             }
             else if (value.IsPricingTierAttributeCondition)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.PricingTierAttributeCondition), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.PricingTierAttributeCondition?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.PricingTierAttributeCondition).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PricingTierAttributeCondition!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickPricingTierAttributeCondition(), typeInfo);
             }
         }
     }

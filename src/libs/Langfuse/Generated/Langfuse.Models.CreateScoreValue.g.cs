@@ -42,8 +42,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public double PickDoubleNumber() => IsDoubleNumber
-            ? DoubleNumber!.Value
+        public double PickDoubleNumber() => DoubleNumber is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'DoubleNumber' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public string PickString() => IsString
-            ? String!
+        public string PickString() => String is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'String' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsDoubleNumber && doubleNumber != null)
+            if (DoubleNumber is { } __value0 && doubleNumber != null)
             {
-                return doubleNumber(DoubleNumber!);
+                return doubleNumber(__value0);
             }
-            else if (IsString && @string != null)
+            else if (String is { } __value1 && @string != null)
             {
-                return @string(String!);
+                return @string(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsDoubleNumber)
+            if (DoubleNumber is { } __value0)
             {
-                doubleNumber?.Invoke(DoubleNumber!);
+                doubleNumber?.Invoke(__value0);
             }
-            else if (IsString)
+            else if (String is { } __value1)
             {
-                @string?.Invoke(String!);
+                @string?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsDoubleNumber)
+            if (DoubleNumber is { } __value0)
             {
-                doubleNumber?.Invoke(DoubleNumber!);
+                doubleNumber?.Invoke(__value0);
             }
-            else if (IsString)
+            else if (String is { } __value1)
             {
-                @string?.Invoke(String!);
+                @string?.Invoke(__value1);
             }
         }
 

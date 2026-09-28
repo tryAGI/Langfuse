@@ -42,8 +42,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.CreateChatPromptRequest PickCreateChatPromptRequest() => IsCreateChatPromptRequest
-            ? CreateChatPromptRequest!
+        public global::Langfuse.CreateChatPromptRequest PickCreateChatPromptRequest() => CreateChatPromptRequest is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CreateChatPromptRequest' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.CreateTextPromptRequest PickCreateTextPromptRequest() => IsCreateTextPromptRequest
-            ? CreateTextPromptRequest!
+        public global::Langfuse.CreateTextPromptRequest PickCreateTextPromptRequest() => CreateTextPromptRequest is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CreateTextPromptRequest' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsCreateChatPromptRequest && createChatPromptRequest != null)
+            if (CreateChatPromptRequest is { } __value0 && createChatPromptRequest != null)
             {
-                return createChatPromptRequest(CreateChatPromptRequest!);
+                return createChatPromptRequest(__value0);
             }
-            else if (IsCreateTextPromptRequest && createTextPromptRequest != null)
+            else if (CreateTextPromptRequest is { } __value1 && createTextPromptRequest != null)
             {
-                return createTextPromptRequest(CreateTextPromptRequest!);
+                return createTextPromptRequest(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsCreateChatPromptRequest)
+            if (CreateChatPromptRequest is { } __value0)
             {
-                createChatPromptRequest?.Invoke(CreateChatPromptRequest!);
+                createChatPromptRequest?.Invoke(__value0);
             }
-            else if (IsCreateTextPromptRequest)
+            else if (CreateTextPromptRequest is { } __value1)
             {
-                createTextPromptRequest?.Invoke(CreateTextPromptRequest!);
+                createTextPromptRequest?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsCreateChatPromptRequest)
+            if (CreateChatPromptRequest is { } __value0)
             {
-                createChatPromptRequest?.Invoke(CreateChatPromptRequest!);
+                createChatPromptRequest?.Invoke(__value0);
             }
-            else if (IsCreateTextPromptRequest)
+            else if (CreateTextPromptRequest is { } __value1)
             {
-                createTextPromptRequest?.Invoke(CreateTextPromptRequest!);
+                createTextPromptRequest?.Invoke(__value1);
             }
         }
 

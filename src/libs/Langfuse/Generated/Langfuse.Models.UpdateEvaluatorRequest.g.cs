@@ -42,8 +42,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UpdateEvaluatorMetadataRequest PickUpdateEvaluatorMetadataRequest() => IsUpdateEvaluatorMetadataRequest
-            ? UpdateEvaluatorMetadataRequest!
+        public global::Langfuse.UpdateEvaluatorMetadataRequest PickUpdateEvaluatorMetadataRequest() => UpdateEvaluatorMetadataRequest is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'UpdateEvaluatorMetadataRequest' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UpdateLlmAsJudgeEvaluatorRequest PickUpdateLlmAsJudgeEvaluatorRequest() => IsUpdateLlmAsJudgeEvaluatorRequest
-            ? UpdateLlmAsJudgeEvaluatorRequest!
+        public global::Langfuse.UpdateLlmAsJudgeEvaluatorRequest PickUpdateLlmAsJudgeEvaluatorRequest() => UpdateLlmAsJudgeEvaluatorRequest is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'UpdateLlmAsJudgeEvaluatorRequest' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UpdateCodeEvaluatorRequest PickUpdateCodeEvaluatorRequest() => IsUpdateCodeEvaluatorRequest
-            ? UpdateCodeEvaluatorRequest!
+        public global::Langfuse.UpdateCodeEvaluatorRequest PickUpdateCodeEvaluatorRequest() => UpdateCodeEvaluatorRequest is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'UpdateCodeEvaluatorRequest' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -242,17 +242,17 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUpdateEvaluatorMetadataRequest && updateEvaluatorMetadataRequest != null)
+            if (UpdateEvaluatorMetadataRequest is { } __value0 && updateEvaluatorMetadataRequest != null)
             {
-                return updateEvaluatorMetadataRequest(UpdateEvaluatorMetadataRequest!);
+                return updateEvaluatorMetadataRequest(__value0);
             }
-            else if (IsUpdateLlmAsJudgeEvaluatorRequest && updateLlmAsJudgeEvaluatorRequest != null)
+            else if (UpdateLlmAsJudgeEvaluatorRequest is { } __value1 && updateLlmAsJudgeEvaluatorRequest != null)
             {
-                return updateLlmAsJudgeEvaluatorRequest(UpdateLlmAsJudgeEvaluatorRequest!);
+                return updateLlmAsJudgeEvaluatorRequest(__value1);
             }
-            else if (IsUpdateCodeEvaluatorRequest && updateCodeEvaluatorRequest != null)
+            else if (UpdateCodeEvaluatorRequest is { } __value2 && updateCodeEvaluatorRequest != null)
             {
-                return updateCodeEvaluatorRequest(UpdateCodeEvaluatorRequest!);
+                return updateCodeEvaluatorRequest(__value2);
             }
 
             return default(TResult);
@@ -274,17 +274,17 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUpdateEvaluatorMetadataRequest)
+            if (UpdateEvaluatorMetadataRequest is { } __value0)
             {
-                updateEvaluatorMetadataRequest?.Invoke(UpdateEvaluatorMetadataRequest!);
+                updateEvaluatorMetadataRequest?.Invoke(__value0);
             }
-            else if (IsUpdateLlmAsJudgeEvaluatorRequest)
+            else if (UpdateLlmAsJudgeEvaluatorRequest is { } __value1)
             {
-                updateLlmAsJudgeEvaluatorRequest?.Invoke(UpdateLlmAsJudgeEvaluatorRequest!);
+                updateLlmAsJudgeEvaluatorRequest?.Invoke(__value1);
             }
-            else if (IsUpdateCodeEvaluatorRequest)
+            else if (UpdateCodeEvaluatorRequest is { } __value2)
             {
-                updateCodeEvaluatorRequest?.Invoke(UpdateCodeEvaluatorRequest!);
+                updateCodeEvaluatorRequest?.Invoke(__value2);
             }
         }
 
@@ -302,17 +302,17 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUpdateEvaluatorMetadataRequest)
+            if (UpdateEvaluatorMetadataRequest is { } __value0)
             {
-                updateEvaluatorMetadataRequest?.Invoke(UpdateEvaluatorMetadataRequest!);
+                updateEvaluatorMetadataRequest?.Invoke(__value0);
             }
-            else if (IsUpdateLlmAsJudgeEvaluatorRequest)
+            else if (UpdateLlmAsJudgeEvaluatorRequest is { } __value1)
             {
-                updateLlmAsJudgeEvaluatorRequest?.Invoke(UpdateLlmAsJudgeEvaluatorRequest!);
+                updateLlmAsJudgeEvaluatorRequest?.Invoke(__value1);
             }
-            else if (IsUpdateCodeEvaluatorRequest)
+            else if (UpdateCodeEvaluatorRequest is { } __value2)
             {
-                updateCodeEvaluatorRequest?.Invoke(UpdateCodeEvaluatorRequest!);
+                updateCodeEvaluatorRequest?.Invoke(__value2);
             }
         }
 

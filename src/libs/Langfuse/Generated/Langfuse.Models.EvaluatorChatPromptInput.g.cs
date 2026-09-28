@@ -42,8 +42,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public string PickString() => IsString
-            ? String!
+        public string PickString() => String is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'String' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.EvaluatorChatMessage> PickEvaluatorChatPrompt() => IsEvaluatorChatPrompt
-            ? EvaluatorChatPrompt!
+        public global::System.Collections.Generic.IList<global::Langfuse.EvaluatorChatMessage> PickEvaluatorChatPrompt() => EvaluatorChatPrompt is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'EvaluatorChatPrompt' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -154,13 +154,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsString && @string != null)
+            if (String is { } __value0 && @string != null)
             {
-                return @string(String!);
+                return @string(__value0);
             }
-            else if (IsEvaluatorChatPrompt && evaluatorChatPrompt != null)
+            else if (EvaluatorChatPrompt is { } __value1 && evaluatorChatPrompt != null)
             {
-                return evaluatorChatPrompt(EvaluatorChatPrompt!);
+                return evaluatorChatPrompt(__value1);
             }
 
             return default(TResult);
@@ -180,13 +180,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsString)
+            if (String is { } __value0)
             {
-                @string?.Invoke(String!);
+                @string?.Invoke(__value0);
             }
-            else if (IsEvaluatorChatPrompt)
+            else if (EvaluatorChatPrompt is { } __value1)
             {
-                evaluatorChatPrompt?.Invoke(EvaluatorChatPrompt!);
+                evaluatorChatPrompt?.Invoke(__value1);
             }
         }
 
@@ -203,13 +203,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsString)
+            if (String is { } __value0)
             {
-                @string?.Invoke(String!);
+                @string?.Invoke(__value0);
             }
-            else if (IsEvaluatorChatPrompt)
+            else if (EvaluatorChatPrompt is { } __value1)
             {
-                evaluatorChatPrompt?.Invoke(EvaluatorChatPrompt!);
+                evaluatorChatPrompt?.Invoke(__value1);
             }
         }
 

@@ -42,8 +42,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionLlmAsJudgeEvaluatorVersion2, global::Langfuse.LlmAsJudgeEvaluatorVersion> PickLlmAsJudgeEvaluatorVersion() => IsLlmAsJudgeEvaluatorVersion
-            ? LlmAsJudgeEvaluatorVersion!.Value
+        public global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionLlmAsJudgeEvaluatorVersion2, global::Langfuse.LlmAsJudgeEvaluatorVersion> PickLlmAsJudgeEvaluatorVersion() => LlmAsJudgeEvaluatorVersion is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'LlmAsJudgeEvaluatorVersion' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionCodeEvaluatorVersion2, global::Langfuse.CodeEvaluatorVersion> PickCodeEvaluatorVersion() => IsCodeEvaluatorVersion
-            ? CodeEvaluatorVersion!.Value
+        public global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionCodeEvaluatorVersion2, global::Langfuse.CodeEvaluatorVersion> PickCodeEvaluatorVersion() => CodeEvaluatorVersion is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CodeEvaluatorVersion' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsLlmAsJudgeEvaluatorVersion && llmAsJudgeEvaluatorVersion != null)
+            if (LlmAsJudgeEvaluatorVersion is { } __value0 && llmAsJudgeEvaluatorVersion != null)
             {
-                return llmAsJudgeEvaluatorVersion(LlmAsJudgeEvaluatorVersion!);
+                return llmAsJudgeEvaluatorVersion(__value0);
             }
-            else if (IsCodeEvaluatorVersion && codeEvaluatorVersion != null)
+            else if (CodeEvaluatorVersion is { } __value1 && codeEvaluatorVersion != null)
             {
-                return codeEvaluatorVersion(CodeEvaluatorVersion!);
+                return codeEvaluatorVersion(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsLlmAsJudgeEvaluatorVersion)
+            if (LlmAsJudgeEvaluatorVersion is { } __value0)
             {
-                llmAsJudgeEvaluatorVersion?.Invoke(LlmAsJudgeEvaluatorVersion!);
+                llmAsJudgeEvaluatorVersion?.Invoke(__value0);
             }
-            else if (IsCodeEvaluatorVersion)
+            else if (CodeEvaluatorVersion is { } __value1)
             {
-                codeEvaluatorVersion?.Invoke(CodeEvaluatorVersion!);
+                codeEvaluatorVersion?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsLlmAsJudgeEvaluatorVersion)
+            if (LlmAsJudgeEvaluatorVersion is { } __value0)
             {
-                llmAsJudgeEvaluatorVersion?.Invoke(LlmAsJudgeEvaluatorVersion!);
+                llmAsJudgeEvaluatorVersion?.Invoke(__value0);
             }
-            else if (IsCodeEvaluatorVersion)
+            else if (CodeEvaluatorVersion is { } __value1)
             {
-                codeEvaluatorVersion?.Invoke(CodeEvaluatorVersion!);
+                codeEvaluatorVersion?.Invoke(__value1);
             }
         }
 
