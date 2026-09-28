@@ -43,8 +43,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.PromptVariableMappingRead PickPromptVariableMappingRead() => IsPromptVariableMappingRead
-            ? PromptVariableMappingRead!
+        public global::Langfuse.PromptVariableMappingRead PickPromptVariableMappingRead() => PromptVariableMappingRead is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'PromptVariableMappingRead' but the value was {ToString()}.");
 
         /// <summary>
@@ -81,8 +81,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.LegacyPromptVariableMapping PickLegacyPromptVariableMapping() => IsLegacyPromptVariableMapping
-            ? LegacyPromptVariableMapping!
+        public global::Langfuse.LegacyPromptVariableMapping PickLegacyPromptVariableMapping() => LegacyPromptVariableMapping is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'LegacyPromptVariableMapping' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -179,13 +179,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsPromptVariableMappingRead && promptVariableMappingRead != null)
+            if (PromptVariableMappingRead is { } __value0 && promptVariableMappingRead != null)
             {
-                return promptVariableMappingRead(PromptVariableMappingRead!);
+                return promptVariableMappingRead(__value0);
             }
-            else if (IsLegacyPromptVariableMapping && legacyPromptVariableMapping != null)
+            else if (LegacyPromptVariableMapping is { } __value1 && legacyPromptVariableMapping != null)
             {
-                return legacyPromptVariableMapping(LegacyPromptVariableMapping!);
+                return legacyPromptVariableMapping(__value1);
             }
 
             return default(TResult);
@@ -205,13 +205,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsPromptVariableMappingRead)
+            if (PromptVariableMappingRead is { } __value0)
             {
-                promptVariableMappingRead?.Invoke(PromptVariableMappingRead!);
+                promptVariableMappingRead?.Invoke(__value0);
             }
-            else if (IsLegacyPromptVariableMapping)
+            else if (LegacyPromptVariableMapping is { } __value1)
             {
-                legacyPromptVariableMapping?.Invoke(LegacyPromptVariableMapping!);
+                legacyPromptVariableMapping?.Invoke(__value1);
             }
         }
 
@@ -228,13 +228,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsPromptVariableMappingRead)
+            if (PromptVariableMappingRead is { } __value0)
             {
-                promptVariableMappingRead?.Invoke(PromptVariableMappingRead!);
+                promptVariableMappingRead?.Invoke(__value0);
             }
-            else if (IsLegacyPromptVariableMapping)
+            else if (LegacyPromptVariableMapping is { } __value1)
             {
-                legacyPromptVariableMapping?.Invoke(LegacyPromptVariableMapping!);
+                legacyPromptVariableMapping?.Invoke(__value1);
             }
         }
 

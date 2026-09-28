@@ -186,19 +186,19 @@ namespace Langfuse.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.UpdateEvaluatorMetadataRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.UpdateEvaluatorMetadataRequest?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.UpdateEvaluatorMetadataRequest).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UpdateEvaluatorMetadataRequest!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickUpdateEvaluatorMetadataRequest(), typeInfo);
             }
             else if (value.IsUpdateLlmAsJudgeEvaluatorRequest)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.UpdateLlmAsJudgeEvaluatorRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.UpdateLlmAsJudgeEvaluatorRequest?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.UpdateLlmAsJudgeEvaluatorRequest).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UpdateLlmAsJudgeEvaluatorRequest!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickUpdateLlmAsJudgeEvaluatorRequest(), typeInfo);
             }
             else if (value.IsUpdateCodeEvaluatorRequest)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.UpdateCodeEvaluatorRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.UpdateCodeEvaluatorRequest?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.UpdateCodeEvaluatorRequest).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.UpdateCodeEvaluatorRequest!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickUpdateCodeEvaluatorRequest(), typeInfo);
             }
         }
     }

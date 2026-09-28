@@ -42,8 +42,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.Dictionary<string, int> PickObjectValue() => IsObjectValue
-            ? ObjectValue!
+        public global::System.Collections.Generic.Dictionary<string, int> PickObjectValue() => ObjectValue is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ObjectValue' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.OpenAICompletionUsageSchema PickOpenAICompletionUsageSchema() => IsOpenAICompletionUsageSchema
-            ? OpenAICompletionUsageSchema!
+        public global::Langfuse.OpenAICompletionUsageSchema PickOpenAICompletionUsageSchema() => OpenAICompletionUsageSchema is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'OpenAICompletionUsageSchema' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.OpenAIResponseUsageSchema PickOpenAIResponseUsageSchema() => IsOpenAIResponseUsageSchema
-            ? OpenAIResponseUsageSchema!
+        public global::Langfuse.OpenAIResponseUsageSchema PickOpenAIResponseUsageSchema() => OpenAIResponseUsageSchema is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'OpenAIResponseUsageSchema' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -242,17 +242,17 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsObjectValue && objectValue != null)
+            if (ObjectValue is { } __value0 && objectValue != null)
             {
-                return objectValue(ObjectValue!);
+                return objectValue(__value0);
             }
-            else if (IsOpenAICompletionUsageSchema && openAICompletionUsageSchema != null)
+            else if (OpenAICompletionUsageSchema is { } __value1 && openAICompletionUsageSchema != null)
             {
-                return openAICompletionUsageSchema(OpenAICompletionUsageSchema!);
+                return openAICompletionUsageSchema(__value1);
             }
-            else if (IsOpenAIResponseUsageSchema && openAIResponseUsageSchema != null)
+            else if (OpenAIResponseUsageSchema is { } __value2 && openAIResponseUsageSchema != null)
             {
-                return openAIResponseUsageSchema(OpenAIResponseUsageSchema!);
+                return openAIResponseUsageSchema(__value2);
             }
 
             return default(TResult);
@@ -274,17 +274,17 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsObjectValue)
+            if (ObjectValue is { } __value0)
             {
-                objectValue?.Invoke(ObjectValue!);
+                objectValue?.Invoke(__value0);
             }
-            else if (IsOpenAICompletionUsageSchema)
+            else if (OpenAICompletionUsageSchema is { } __value1)
             {
-                openAICompletionUsageSchema?.Invoke(OpenAICompletionUsageSchema!);
+                openAICompletionUsageSchema?.Invoke(__value1);
             }
-            else if (IsOpenAIResponseUsageSchema)
+            else if (OpenAIResponseUsageSchema is { } __value2)
             {
-                openAIResponseUsageSchema?.Invoke(OpenAIResponseUsageSchema!);
+                openAIResponseUsageSchema?.Invoke(__value2);
             }
         }
 
@@ -302,17 +302,17 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsObjectValue)
+            if (ObjectValue is { } __value0)
             {
-                objectValue?.Invoke(ObjectValue!);
+                objectValue?.Invoke(__value0);
             }
-            else if (IsOpenAICompletionUsageSchema)
+            else if (OpenAICompletionUsageSchema is { } __value1)
             {
-                openAICompletionUsageSchema?.Invoke(OpenAICompletionUsageSchema!);
+                openAICompletionUsageSchema?.Invoke(__value1);
             }
-            else if (IsOpenAIResponseUsageSchema)
+            else if (OpenAIResponseUsageSchema is { } __value2)
             {
-                openAIResponseUsageSchema?.Invoke(OpenAIResponseUsageSchema!);
+                openAIResponseUsageSchema?.Invoke(__value2);
             }
         }
 

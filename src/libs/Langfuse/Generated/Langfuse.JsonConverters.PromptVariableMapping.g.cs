@@ -135,13 +135,13 @@ namespace Langfuse.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.PromptVariableMappingRead), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.PromptVariableMappingRead?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.PromptVariableMappingRead).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PromptVariableMappingRead!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickPromptVariableMappingRead(), typeInfo);
             }
             else if (value.IsLegacyPromptVariableMapping)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.LegacyPromptVariableMapping), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.LegacyPromptVariableMapping?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.LegacyPromptVariableMapping).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.LegacyPromptVariableMapping!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickLegacyPromptVariableMapping(), typeInfo);
             }
         }
     }

@@ -149,13 +149,13 @@ namespace Langfuse.JsonConverters
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(string), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<string?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(string).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.String!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickString(), typeInfo);
             }
             else if (value.IsEvaluatorChatPrompt)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::System.Collections.Generic.IList<global::Langfuse.EvaluatorChatMessage>), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::System.Collections.Generic.IList<global::Langfuse.EvaluatorChatMessage>?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::System.Collections.Generic.IList<global::Langfuse.EvaluatorChatMessage>).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.EvaluatorChatPrompt!, typeInfo);
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickEvaluatorChatPrompt(), typeInfo);
             }
         }
     }

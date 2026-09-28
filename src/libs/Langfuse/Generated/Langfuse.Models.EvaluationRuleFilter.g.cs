@@ -73,8 +73,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.EvaluationRuleFilterDateTimeEvaluationRuleFilter2, global::Langfuse.DateTimeEvaluationRuleFilter> PickDateTimeEvaluationRuleFilter() => IsDateTimeEvaluationRuleFilter
-            ? DateTimeEvaluationRuleFilter!.Value
+        public global::Langfuse.AllOf<global::Langfuse.EvaluationRuleFilterDateTimeEvaluationRuleFilter2, global::Langfuse.DateTimeEvaluationRuleFilter> PickDateTimeEvaluationRuleFilter() => DateTimeEvaluationRuleFilter is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'DateTimeEvaluationRuleFilter' but the value was {ToString()}.");
 
         /// <summary>
@@ -110,8 +110,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.EvaluationRuleFilterStringEvaluationRuleFilter2, global::Langfuse.StringEvaluationRuleFilter> PickStringEvaluationRuleFilter() => IsStringEvaluationRuleFilter
-            ? StringEvaluationRuleFilter!.Value
+        public global::Langfuse.AllOf<global::Langfuse.EvaluationRuleFilterStringEvaluationRuleFilter2, global::Langfuse.StringEvaluationRuleFilter> PickStringEvaluationRuleFilter() => StringEvaluationRuleFilter is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'StringEvaluationRuleFilter' but the value was {ToString()}.");
 
         /// <summary>
@@ -147,8 +147,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.EvaluationRuleFilterNumberEvaluationRuleFilter2, global::Langfuse.NumberEvaluationRuleFilter> PickNumberEvaluationRuleFilter() => IsNumberEvaluationRuleFilter
-            ? NumberEvaluationRuleFilter!.Value
+        public global::Langfuse.AllOf<global::Langfuse.EvaluationRuleFilterNumberEvaluationRuleFilter2, global::Langfuse.NumberEvaluationRuleFilter> PickNumberEvaluationRuleFilter() => NumberEvaluationRuleFilter is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'NumberEvaluationRuleFilter' but the value was {ToString()}.");
 
         /// <summary>
@@ -184,8 +184,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.EvaluationRuleFilterStringOptionsEvaluationRuleFilter2, global::Langfuse.StringOptionsEvaluationRuleFilter> PickStringOptionsEvaluationRuleFilter() => IsStringOptionsEvaluationRuleFilter
-            ? StringOptionsEvaluationRuleFilter!.Value
+        public global::Langfuse.AllOf<global::Langfuse.EvaluationRuleFilterStringOptionsEvaluationRuleFilter2, global::Langfuse.StringOptionsEvaluationRuleFilter> PickStringOptionsEvaluationRuleFilter() => StringOptionsEvaluationRuleFilter is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'StringOptionsEvaluationRuleFilter' but the value was {ToString()}.");
 
         /// <summary>
@@ -221,8 +221,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.EvaluationRuleFilterCategoryOptionsEvaluationRuleFilter2, global::Langfuse.CategoryOptionsEvaluationRuleFilter> PickCategoryOptionsEvaluationRuleFilter() => IsCategoryOptionsEvaluationRuleFilter
-            ? CategoryOptionsEvaluationRuleFilter!.Value
+        public global::Langfuse.AllOf<global::Langfuse.EvaluationRuleFilterCategoryOptionsEvaluationRuleFilter2, global::Langfuse.CategoryOptionsEvaluationRuleFilter> PickCategoryOptionsEvaluationRuleFilter() => CategoryOptionsEvaluationRuleFilter is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CategoryOptionsEvaluationRuleFilter' but the value was {ToString()}.");
 
         /// <summary>
@@ -258,8 +258,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.EvaluationRuleFilterArrayOptionsEvaluationRuleFilter2, global::Langfuse.ArrayOptionsEvaluationRuleFilter> PickArrayOptionsEvaluationRuleFilter() => IsArrayOptionsEvaluationRuleFilter
-            ? ArrayOptionsEvaluationRuleFilter!.Value
+        public global::Langfuse.AllOf<global::Langfuse.EvaluationRuleFilterArrayOptionsEvaluationRuleFilter2, global::Langfuse.ArrayOptionsEvaluationRuleFilter> PickArrayOptionsEvaluationRuleFilter() => ArrayOptionsEvaluationRuleFilter is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ArrayOptionsEvaluationRuleFilter' but the value was {ToString()}.");
 
         /// <summary>
@@ -295,8 +295,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.EvaluationRuleFilterStringObjectEvaluationRuleFilter2, global::Langfuse.StringObjectEvaluationRuleFilter> PickStringObjectEvaluationRuleFilter() => IsStringObjectEvaluationRuleFilter
-            ? StringObjectEvaluationRuleFilter!.Value
+        public global::Langfuse.AllOf<global::Langfuse.EvaluationRuleFilterStringObjectEvaluationRuleFilter2, global::Langfuse.StringObjectEvaluationRuleFilter> PickStringObjectEvaluationRuleFilter() => StringObjectEvaluationRuleFilter is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'StringObjectEvaluationRuleFilter' but the value was {ToString()}.");
 
         /// <summary>
@@ -332,8 +332,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.EvaluationRuleFilterNumberObjectEvaluationRuleFilter2, global::Langfuse.NumberObjectEvaluationRuleFilter> PickNumberObjectEvaluationRuleFilter() => IsNumberObjectEvaluationRuleFilter
-            ? NumberObjectEvaluationRuleFilter!.Value
+        public global::Langfuse.AllOf<global::Langfuse.EvaluationRuleFilterNumberObjectEvaluationRuleFilter2, global::Langfuse.NumberObjectEvaluationRuleFilter> PickNumberObjectEvaluationRuleFilter() => NumberObjectEvaluationRuleFilter is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'NumberObjectEvaluationRuleFilter' but the value was {ToString()}.");
 
         /// <summary>
@@ -369,8 +369,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.EvaluationRuleFilterBooleanEvaluationRuleFilter2, global::Langfuse.BooleanEvaluationRuleFilter> PickBooleanEvaluationRuleFilter() => IsBooleanEvaluationRuleFilter
-            ? BooleanEvaluationRuleFilter!.Value
+        public global::Langfuse.AllOf<global::Langfuse.EvaluationRuleFilterBooleanEvaluationRuleFilter2, global::Langfuse.BooleanEvaluationRuleFilter> PickBooleanEvaluationRuleFilter() => BooleanEvaluationRuleFilter is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'BooleanEvaluationRuleFilter' but the value was {ToString()}.");
 
         /// <summary>
@@ -406,8 +406,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.EvaluationRuleFilterNullEvaluationRuleFilter2, global::Langfuse.NullEvaluationRuleFilter> PickNullEvaluationRuleFilter() => IsNullEvaluationRuleFilter
-            ? NullEvaluationRuleFilter!.Value
+        public global::Langfuse.AllOf<global::Langfuse.EvaluationRuleFilterNullEvaluationRuleFilter2, global::Langfuse.NullEvaluationRuleFilter> PickNullEvaluationRuleFilter() => NullEvaluationRuleFilter is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'NullEvaluationRuleFilter' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -728,45 +728,45 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsDateTimeEvaluationRuleFilter && dateTimeEvaluationRuleFilter != null)
+            if (DateTimeEvaluationRuleFilter is { } __value0 && dateTimeEvaluationRuleFilter != null)
             {
-                return dateTimeEvaluationRuleFilter(DateTimeEvaluationRuleFilter!);
+                return dateTimeEvaluationRuleFilter(__value0);
             }
-            else if (IsStringEvaluationRuleFilter && stringEvaluationRuleFilter != null)
+            else if (StringEvaluationRuleFilter is { } __value1 && stringEvaluationRuleFilter != null)
             {
-                return stringEvaluationRuleFilter(StringEvaluationRuleFilter!);
+                return stringEvaluationRuleFilter(__value1);
             }
-            else if (IsNumberEvaluationRuleFilter && numberEvaluationRuleFilter != null)
+            else if (NumberEvaluationRuleFilter is { } __value2 && numberEvaluationRuleFilter != null)
             {
-                return numberEvaluationRuleFilter(NumberEvaluationRuleFilter!);
+                return numberEvaluationRuleFilter(__value2);
             }
-            else if (IsStringOptionsEvaluationRuleFilter && stringOptionsEvaluationRuleFilter != null)
+            else if (StringOptionsEvaluationRuleFilter is { } __value3 && stringOptionsEvaluationRuleFilter != null)
             {
-                return stringOptionsEvaluationRuleFilter(StringOptionsEvaluationRuleFilter!);
+                return stringOptionsEvaluationRuleFilter(__value3);
             }
-            else if (IsCategoryOptionsEvaluationRuleFilter && categoryOptionsEvaluationRuleFilter != null)
+            else if (CategoryOptionsEvaluationRuleFilter is { } __value4 && categoryOptionsEvaluationRuleFilter != null)
             {
-                return categoryOptionsEvaluationRuleFilter(CategoryOptionsEvaluationRuleFilter!);
+                return categoryOptionsEvaluationRuleFilter(__value4);
             }
-            else if (IsArrayOptionsEvaluationRuleFilter && arrayOptionsEvaluationRuleFilter != null)
+            else if (ArrayOptionsEvaluationRuleFilter is { } __value5 && arrayOptionsEvaluationRuleFilter != null)
             {
-                return arrayOptionsEvaluationRuleFilter(ArrayOptionsEvaluationRuleFilter!);
+                return arrayOptionsEvaluationRuleFilter(__value5);
             }
-            else if (IsStringObjectEvaluationRuleFilter && stringObjectEvaluationRuleFilter != null)
+            else if (StringObjectEvaluationRuleFilter is { } __value6 && stringObjectEvaluationRuleFilter != null)
             {
-                return stringObjectEvaluationRuleFilter(StringObjectEvaluationRuleFilter!);
+                return stringObjectEvaluationRuleFilter(__value6);
             }
-            else if (IsNumberObjectEvaluationRuleFilter && numberObjectEvaluationRuleFilter != null)
+            else if (NumberObjectEvaluationRuleFilter is { } __value7 && numberObjectEvaluationRuleFilter != null)
             {
-                return numberObjectEvaluationRuleFilter(NumberObjectEvaluationRuleFilter!);
+                return numberObjectEvaluationRuleFilter(__value7);
             }
-            else if (IsBooleanEvaluationRuleFilter && booleanEvaluationRuleFilter != null)
+            else if (BooleanEvaluationRuleFilter is { } __value8 && booleanEvaluationRuleFilter != null)
             {
-                return booleanEvaluationRuleFilter(BooleanEvaluationRuleFilter!);
+                return booleanEvaluationRuleFilter(__value8);
             }
-            else if (IsNullEvaluationRuleFilter && nullEvaluationRuleFilter != null)
+            else if (NullEvaluationRuleFilter is { } __value9 && nullEvaluationRuleFilter != null)
             {
-                return nullEvaluationRuleFilter(NullEvaluationRuleFilter!);
+                return nullEvaluationRuleFilter(__value9);
             }
 
             return default(TResult);
@@ -802,45 +802,45 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsDateTimeEvaluationRuleFilter)
+            if (DateTimeEvaluationRuleFilter is { } __value0)
             {
-                dateTimeEvaluationRuleFilter?.Invoke(DateTimeEvaluationRuleFilter!);
+                dateTimeEvaluationRuleFilter?.Invoke(__value0);
             }
-            else if (IsStringEvaluationRuleFilter)
+            else if (StringEvaluationRuleFilter is { } __value1)
             {
-                stringEvaluationRuleFilter?.Invoke(StringEvaluationRuleFilter!);
+                stringEvaluationRuleFilter?.Invoke(__value1);
             }
-            else if (IsNumberEvaluationRuleFilter)
+            else if (NumberEvaluationRuleFilter is { } __value2)
             {
-                numberEvaluationRuleFilter?.Invoke(NumberEvaluationRuleFilter!);
+                numberEvaluationRuleFilter?.Invoke(__value2);
             }
-            else if (IsStringOptionsEvaluationRuleFilter)
+            else if (StringOptionsEvaluationRuleFilter is { } __value3)
             {
-                stringOptionsEvaluationRuleFilter?.Invoke(StringOptionsEvaluationRuleFilter!);
+                stringOptionsEvaluationRuleFilter?.Invoke(__value3);
             }
-            else if (IsCategoryOptionsEvaluationRuleFilter)
+            else if (CategoryOptionsEvaluationRuleFilter is { } __value4)
             {
-                categoryOptionsEvaluationRuleFilter?.Invoke(CategoryOptionsEvaluationRuleFilter!);
+                categoryOptionsEvaluationRuleFilter?.Invoke(__value4);
             }
-            else if (IsArrayOptionsEvaluationRuleFilter)
+            else if (ArrayOptionsEvaluationRuleFilter is { } __value5)
             {
-                arrayOptionsEvaluationRuleFilter?.Invoke(ArrayOptionsEvaluationRuleFilter!);
+                arrayOptionsEvaluationRuleFilter?.Invoke(__value5);
             }
-            else if (IsStringObjectEvaluationRuleFilter)
+            else if (StringObjectEvaluationRuleFilter is { } __value6)
             {
-                stringObjectEvaluationRuleFilter?.Invoke(StringObjectEvaluationRuleFilter!);
+                stringObjectEvaluationRuleFilter?.Invoke(__value6);
             }
-            else if (IsNumberObjectEvaluationRuleFilter)
+            else if (NumberObjectEvaluationRuleFilter is { } __value7)
             {
-                numberObjectEvaluationRuleFilter?.Invoke(NumberObjectEvaluationRuleFilter!);
+                numberObjectEvaluationRuleFilter?.Invoke(__value7);
             }
-            else if (IsBooleanEvaluationRuleFilter)
+            else if (BooleanEvaluationRuleFilter is { } __value8)
             {
-                booleanEvaluationRuleFilter?.Invoke(BooleanEvaluationRuleFilter!);
+                booleanEvaluationRuleFilter?.Invoke(__value8);
             }
-            else if (IsNullEvaluationRuleFilter)
+            else if (NullEvaluationRuleFilter is { } __value9)
             {
-                nullEvaluationRuleFilter?.Invoke(NullEvaluationRuleFilter!);
+                nullEvaluationRuleFilter?.Invoke(__value9);
             }
         }
 
@@ -865,45 +865,45 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsDateTimeEvaluationRuleFilter)
+            if (DateTimeEvaluationRuleFilter is { } __value0)
             {
-                dateTimeEvaluationRuleFilter?.Invoke(DateTimeEvaluationRuleFilter!);
+                dateTimeEvaluationRuleFilter?.Invoke(__value0);
             }
-            else if (IsStringEvaluationRuleFilter)
+            else if (StringEvaluationRuleFilter is { } __value1)
             {
-                stringEvaluationRuleFilter?.Invoke(StringEvaluationRuleFilter!);
+                stringEvaluationRuleFilter?.Invoke(__value1);
             }
-            else if (IsNumberEvaluationRuleFilter)
+            else if (NumberEvaluationRuleFilter is { } __value2)
             {
-                numberEvaluationRuleFilter?.Invoke(NumberEvaluationRuleFilter!);
+                numberEvaluationRuleFilter?.Invoke(__value2);
             }
-            else if (IsStringOptionsEvaluationRuleFilter)
+            else if (StringOptionsEvaluationRuleFilter is { } __value3)
             {
-                stringOptionsEvaluationRuleFilter?.Invoke(StringOptionsEvaluationRuleFilter!);
+                stringOptionsEvaluationRuleFilter?.Invoke(__value3);
             }
-            else if (IsCategoryOptionsEvaluationRuleFilter)
+            else if (CategoryOptionsEvaluationRuleFilter is { } __value4)
             {
-                categoryOptionsEvaluationRuleFilter?.Invoke(CategoryOptionsEvaluationRuleFilter!);
+                categoryOptionsEvaluationRuleFilter?.Invoke(__value4);
             }
-            else if (IsArrayOptionsEvaluationRuleFilter)
+            else if (ArrayOptionsEvaluationRuleFilter is { } __value5)
             {
-                arrayOptionsEvaluationRuleFilter?.Invoke(ArrayOptionsEvaluationRuleFilter!);
+                arrayOptionsEvaluationRuleFilter?.Invoke(__value5);
             }
-            else if (IsStringObjectEvaluationRuleFilter)
+            else if (StringObjectEvaluationRuleFilter is { } __value6)
             {
-                stringObjectEvaluationRuleFilter?.Invoke(StringObjectEvaluationRuleFilter!);
+                stringObjectEvaluationRuleFilter?.Invoke(__value6);
             }
-            else if (IsNumberObjectEvaluationRuleFilter)
+            else if (NumberObjectEvaluationRuleFilter is { } __value7)
             {
-                numberObjectEvaluationRuleFilter?.Invoke(NumberObjectEvaluationRuleFilter!);
+                numberObjectEvaluationRuleFilter?.Invoke(__value7);
             }
-            else if (IsBooleanEvaluationRuleFilter)
+            else if (BooleanEvaluationRuleFilter is { } __value8)
             {
-                booleanEvaluationRuleFilter?.Invoke(BooleanEvaluationRuleFilter!);
+                booleanEvaluationRuleFilter?.Invoke(__value8);
             }
-            else if (IsNullEvaluationRuleFilter)
+            else if (NullEvaluationRuleFilter is { } __value9)
             {
-                nullEvaluationRuleFilter?.Invoke(NullEvaluationRuleFilter!);
+                nullEvaluationRuleFilter?.Invoke(__value9);
             }
         }
 

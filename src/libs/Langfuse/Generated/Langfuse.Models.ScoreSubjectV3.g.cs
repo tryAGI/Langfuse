@@ -42,8 +42,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV32, global::Langfuse.ScoreSubjectTraceV3> PickScoreSubjectTraceV3() => IsScoreSubjectTraceV3
-            ? ScoreSubjectTraceV3!.Value
+        public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV32, global::Langfuse.ScoreSubjectTraceV3> PickScoreSubjectTraceV3() => ScoreSubjectTraceV3 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ScoreSubjectTraceV3' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectObservationV32, global::Langfuse.ScoreSubjectObservationV3> PickScoreSubjectObservationV3() => IsScoreSubjectObservationV3
-            ? ScoreSubjectObservationV3!.Value
+        public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectObservationV32, global::Langfuse.ScoreSubjectObservationV3> PickScoreSubjectObservationV3() => ScoreSubjectObservationV3 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ScoreSubjectObservationV3' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectSessionV32, global::Langfuse.ScoreSubjectSessionV3> PickScoreSubjectSessionV3() => IsScoreSubjectSessionV3
-            ? ScoreSubjectSessionV3!.Value
+        public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectSessionV32, global::Langfuse.ScoreSubjectSessionV3> PickScoreSubjectSessionV3() => ScoreSubjectSessionV3 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ScoreSubjectSessionV3' but the value was {ToString()}.");
 
         /// <summary>
@@ -153,8 +153,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectExperimentV32, global::Langfuse.ScoreSubjectExperimentV3> PickScoreSubjectExperimentV3() => IsScoreSubjectExperimentV3
-            ? ScoreSubjectExperimentV3!.Value
+        public global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectExperimentV32, global::Langfuse.ScoreSubjectExperimentV3> PickScoreSubjectExperimentV3() => ScoreSubjectExperimentV3 is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ScoreSubjectExperimentV3' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -307,21 +307,21 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsScoreSubjectTraceV3 && scoreSubjectTraceV3 != null)
+            if (ScoreSubjectTraceV3 is { } __value0 && scoreSubjectTraceV3 != null)
             {
-                return scoreSubjectTraceV3(ScoreSubjectTraceV3!);
+                return scoreSubjectTraceV3(__value0);
             }
-            else if (IsScoreSubjectObservationV3 && scoreSubjectObservationV3 != null)
+            else if (ScoreSubjectObservationV3 is { } __value1 && scoreSubjectObservationV3 != null)
             {
-                return scoreSubjectObservationV3(ScoreSubjectObservationV3!);
+                return scoreSubjectObservationV3(__value1);
             }
-            else if (IsScoreSubjectSessionV3 && scoreSubjectSessionV3 != null)
+            else if (ScoreSubjectSessionV3 is { } __value2 && scoreSubjectSessionV3 != null)
             {
-                return scoreSubjectSessionV3(ScoreSubjectSessionV3!);
+                return scoreSubjectSessionV3(__value2);
             }
-            else if (IsScoreSubjectExperimentV3 && scoreSubjectExperimentV3 != null)
+            else if (ScoreSubjectExperimentV3 is { } __value3 && scoreSubjectExperimentV3 != null)
             {
-                return scoreSubjectExperimentV3(ScoreSubjectExperimentV3!);
+                return scoreSubjectExperimentV3(__value3);
             }
 
             return default(TResult);
@@ -345,21 +345,21 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsScoreSubjectTraceV3)
+            if (ScoreSubjectTraceV3 is { } __value0)
             {
-                scoreSubjectTraceV3?.Invoke(ScoreSubjectTraceV3!);
+                scoreSubjectTraceV3?.Invoke(__value0);
             }
-            else if (IsScoreSubjectObservationV3)
+            else if (ScoreSubjectObservationV3 is { } __value1)
             {
-                scoreSubjectObservationV3?.Invoke(ScoreSubjectObservationV3!);
+                scoreSubjectObservationV3?.Invoke(__value1);
             }
-            else if (IsScoreSubjectSessionV3)
+            else if (ScoreSubjectSessionV3 is { } __value2)
             {
-                scoreSubjectSessionV3?.Invoke(ScoreSubjectSessionV3!);
+                scoreSubjectSessionV3?.Invoke(__value2);
             }
-            else if (IsScoreSubjectExperimentV3)
+            else if (ScoreSubjectExperimentV3 is { } __value3)
             {
-                scoreSubjectExperimentV3?.Invoke(ScoreSubjectExperimentV3!);
+                scoreSubjectExperimentV3?.Invoke(__value3);
             }
         }
 
@@ -378,21 +378,21 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsScoreSubjectTraceV3)
+            if (ScoreSubjectTraceV3 is { } __value0)
             {
-                scoreSubjectTraceV3?.Invoke(ScoreSubjectTraceV3!);
+                scoreSubjectTraceV3?.Invoke(__value0);
             }
-            else if (IsScoreSubjectObservationV3)
+            else if (ScoreSubjectObservationV3 is { } __value1)
             {
-                scoreSubjectObservationV3?.Invoke(ScoreSubjectObservationV3!);
+                scoreSubjectObservationV3?.Invoke(__value1);
             }
-            else if (IsScoreSubjectSessionV3)
+            else if (ScoreSubjectSessionV3 is { } __value2)
             {
-                scoreSubjectSessionV3?.Invoke(ScoreSubjectSessionV3!);
+                scoreSubjectSessionV3?.Invoke(__value2);
             }
-            else if (IsScoreSubjectExperimentV3)
+            else if (ScoreSubjectExperimentV3 is { } __value3)
             {
-                scoreSubjectExperimentV3?.Invoke(ScoreSubjectExperimentV3!);
+                scoreSubjectExperimentV3?.Invoke(__value3);
             }
         }
 

@@ -43,8 +43,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.PricingTierUsageCondition PickPricingTierUsageCondition() => IsPricingTierUsageCondition
-            ? PricingTierUsageCondition!
+        public global::Langfuse.PricingTierUsageCondition PickPricingTierUsageCondition() => PricingTierUsageCondition is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'PricingTierUsageCondition' but the value was {ToString()}.");
 
         /// <summary>
@@ -80,8 +80,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.PricingTierAttributeCondition PickPricingTierAttributeCondition() => IsPricingTierAttributeCondition
-            ? PricingTierAttributeCondition!
+        public global::Langfuse.PricingTierAttributeCondition PickPricingTierAttributeCondition() => PricingTierAttributeCondition is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'PricingTierAttributeCondition' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -178,13 +178,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsPricingTierUsageCondition && pricingTierUsageCondition != null)
+            if (PricingTierUsageCondition is { } __value0 && pricingTierUsageCondition != null)
             {
-                return pricingTierUsageCondition(PricingTierUsageCondition!);
+                return pricingTierUsageCondition(__value0);
             }
-            else if (IsPricingTierAttributeCondition && pricingTierAttributeCondition != null)
+            else if (PricingTierAttributeCondition is { } __value1 && pricingTierAttributeCondition != null)
             {
-                return pricingTierAttributeCondition(PricingTierAttributeCondition!);
+                return pricingTierAttributeCondition(__value1);
             }
 
             return default(TResult);
@@ -204,13 +204,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsPricingTierUsageCondition)
+            if (PricingTierUsageCondition is { } __value0)
             {
-                pricingTierUsageCondition?.Invoke(PricingTierUsageCondition!);
+                pricingTierUsageCondition?.Invoke(__value0);
             }
-            else if (IsPricingTierAttributeCondition)
+            else if (PricingTierAttributeCondition is { } __value1)
             {
-                pricingTierAttributeCondition?.Invoke(PricingTierAttributeCondition!);
+                pricingTierAttributeCondition?.Invoke(__value1);
             }
         }
 
@@ -227,13 +227,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsPricingTierUsageCondition)
+            if (PricingTierUsageCondition is { } __value0)
             {
-                pricingTierUsageCondition?.Invoke(PricingTierUsageCondition!);
+                pricingTierUsageCondition?.Invoke(__value0);
             }
-            else if (IsPricingTierAttributeCondition)
+            else if (PricingTierAttributeCondition is { } __value1)
             {
-                pricingTierAttributeCondition?.Invoke(PricingTierAttributeCondition!);
+                pricingTierAttributeCondition?.Invoke(__value1);
             }
         }
 

@@ -42,8 +42,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent> PickTraceEvent() => IsTraceEvent
-            ? TraceEvent!.Value
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent> PickTraceEvent() => TraceEvent is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'TraceEvent' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent> PickScoreEvent() => IsScoreEvent
-            ? ScoreEvent!.Value
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent> PickScoreEvent() => ScoreEvent is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'ScoreEvent' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateSpanEvent2, global::Langfuse.CreateSpanEvent> PickCreateSpanEvent() => IsCreateSpanEvent
-            ? CreateSpanEvent!.Value
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateSpanEvent2, global::Langfuse.CreateSpanEvent> PickCreateSpanEvent() => CreateSpanEvent is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CreateSpanEvent' but the value was {ToString()}.");
 
         /// <summary>
@@ -153,8 +153,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateSpanEvent2, global::Langfuse.UpdateSpanEvent> PickUpdateSpanEvent() => IsUpdateSpanEvent
-            ? UpdateSpanEvent!.Value
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateSpanEvent2, global::Langfuse.UpdateSpanEvent> PickUpdateSpanEvent() => UpdateSpanEvent is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'UpdateSpanEvent' but the value was {ToString()}.");
 
         /// <summary>
@@ -190,8 +190,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent> PickCreateGenerationEvent() => IsCreateGenerationEvent
-            ? CreateGenerationEvent!.Value
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent> PickCreateGenerationEvent() => CreateGenerationEvent is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CreateGenerationEvent' but the value was {ToString()}.");
 
         /// <summary>
@@ -227,8 +227,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent> PickUpdateGenerationEvent() => IsUpdateGenerationEvent
-            ? UpdateGenerationEvent!.Value
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent> PickUpdateGenerationEvent() => UpdateGenerationEvent is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'UpdateGenerationEvent' but the value was {ToString()}.");
 
         /// <summary>
@@ -264,8 +264,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent> PickCreateEventEvent() => IsCreateEventEvent
-            ? CreateEventEvent!.Value
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent> PickCreateEventEvent() => CreateEventEvent is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CreateEventEvent' but the value was {ToString()}.");
 
         /// <summary>
@@ -301,8 +301,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent> PickCreateObservationEvent() => IsCreateObservationEvent
-            ? CreateObservationEvent!.Value
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent> PickCreateObservationEvent() => CreateObservationEvent is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CreateObservationEvent' but the value was {ToString()}.");
 
         /// <summary>
@@ -338,8 +338,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent> PickUpdateObservationEvent() => IsUpdateObservationEvent
-            ? UpdateObservationEvent!.Value
+        public global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent> PickUpdateObservationEvent() => UpdateObservationEvent is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'UpdateObservationEvent' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -632,41 +632,41 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsTraceEvent && traceEvent != null)
+            if (TraceEvent is { } __value0 && traceEvent != null)
             {
-                return traceEvent(TraceEvent!);
+                return traceEvent(__value0);
             }
-            else if (IsScoreEvent && scoreEvent != null)
+            else if (ScoreEvent is { } __value1 && scoreEvent != null)
             {
-                return scoreEvent(ScoreEvent!);
+                return scoreEvent(__value1);
             }
-            else if (IsCreateSpanEvent && createSpanEvent != null)
+            else if (CreateSpanEvent is { } __value2 && createSpanEvent != null)
             {
-                return createSpanEvent(CreateSpanEvent!);
+                return createSpanEvent(__value2);
             }
-            else if (IsUpdateSpanEvent && updateSpanEvent != null)
+            else if (UpdateSpanEvent is { } __value3 && updateSpanEvent != null)
             {
-                return updateSpanEvent(UpdateSpanEvent!);
+                return updateSpanEvent(__value3);
             }
-            else if (IsCreateGenerationEvent && createGenerationEvent != null)
+            else if (CreateGenerationEvent is { } __value4 && createGenerationEvent != null)
             {
-                return createGenerationEvent(CreateGenerationEvent!);
+                return createGenerationEvent(__value4);
             }
-            else if (IsUpdateGenerationEvent && updateGenerationEvent != null)
+            else if (UpdateGenerationEvent is { } __value5 && updateGenerationEvent != null)
             {
-                return updateGenerationEvent(UpdateGenerationEvent!);
+                return updateGenerationEvent(__value5);
             }
-            else if (IsCreateEventEvent && createEventEvent != null)
+            else if (CreateEventEvent is { } __value6 && createEventEvent != null)
             {
-                return createEventEvent(CreateEventEvent!);
+                return createEventEvent(__value6);
             }
-            else if (IsCreateObservationEvent && createObservationEvent != null)
+            else if (CreateObservationEvent is { } __value7 && createObservationEvent != null)
             {
-                return createObservationEvent(CreateObservationEvent!);
+                return createObservationEvent(__value7);
             }
-            else if (IsUpdateObservationEvent && updateObservationEvent != null)
+            else if (UpdateObservationEvent is { } __value8 && updateObservationEvent != null)
             {
-                return updateObservationEvent(UpdateObservationEvent!);
+                return updateObservationEvent(__value8);
             }
 
             return default(TResult);
@@ -700,41 +700,41 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsTraceEvent)
+            if (TraceEvent is { } __value0)
             {
-                traceEvent?.Invoke(TraceEvent!);
+                traceEvent?.Invoke(__value0);
             }
-            else if (IsScoreEvent)
+            else if (ScoreEvent is { } __value1)
             {
-                scoreEvent?.Invoke(ScoreEvent!);
+                scoreEvent?.Invoke(__value1);
             }
-            else if (IsCreateSpanEvent)
+            else if (CreateSpanEvent is { } __value2)
             {
-                createSpanEvent?.Invoke(CreateSpanEvent!);
+                createSpanEvent?.Invoke(__value2);
             }
-            else if (IsUpdateSpanEvent)
+            else if (UpdateSpanEvent is { } __value3)
             {
-                updateSpanEvent?.Invoke(UpdateSpanEvent!);
+                updateSpanEvent?.Invoke(__value3);
             }
-            else if (IsCreateGenerationEvent)
+            else if (CreateGenerationEvent is { } __value4)
             {
-                createGenerationEvent?.Invoke(CreateGenerationEvent!);
+                createGenerationEvent?.Invoke(__value4);
             }
-            else if (IsUpdateGenerationEvent)
+            else if (UpdateGenerationEvent is { } __value5)
             {
-                updateGenerationEvent?.Invoke(UpdateGenerationEvent!);
+                updateGenerationEvent?.Invoke(__value5);
             }
-            else if (IsCreateEventEvent)
+            else if (CreateEventEvent is { } __value6)
             {
-                createEventEvent?.Invoke(CreateEventEvent!);
+                createEventEvent?.Invoke(__value6);
             }
-            else if (IsCreateObservationEvent)
+            else if (CreateObservationEvent is { } __value7)
             {
-                createObservationEvent?.Invoke(CreateObservationEvent!);
+                createObservationEvent?.Invoke(__value7);
             }
-            else if (IsUpdateObservationEvent)
+            else if (UpdateObservationEvent is { } __value8)
             {
-                updateObservationEvent?.Invoke(UpdateObservationEvent!);
+                updateObservationEvent?.Invoke(__value8);
             }
         }
 
@@ -758,41 +758,41 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsTraceEvent)
+            if (TraceEvent is { } __value0)
             {
-                traceEvent?.Invoke(TraceEvent!);
+                traceEvent?.Invoke(__value0);
             }
-            else if (IsScoreEvent)
+            else if (ScoreEvent is { } __value1)
             {
-                scoreEvent?.Invoke(ScoreEvent!);
+                scoreEvent?.Invoke(__value1);
             }
-            else if (IsCreateSpanEvent)
+            else if (CreateSpanEvent is { } __value2)
             {
-                createSpanEvent?.Invoke(CreateSpanEvent!);
+                createSpanEvent?.Invoke(__value2);
             }
-            else if (IsUpdateSpanEvent)
+            else if (UpdateSpanEvent is { } __value3)
             {
-                updateSpanEvent?.Invoke(UpdateSpanEvent!);
+                updateSpanEvent?.Invoke(__value3);
             }
-            else if (IsCreateGenerationEvent)
+            else if (CreateGenerationEvent is { } __value4)
             {
-                createGenerationEvent?.Invoke(CreateGenerationEvent!);
+                createGenerationEvent?.Invoke(__value4);
             }
-            else if (IsUpdateGenerationEvent)
+            else if (UpdateGenerationEvent is { } __value5)
             {
-                updateGenerationEvent?.Invoke(UpdateGenerationEvent!);
+                updateGenerationEvent?.Invoke(__value5);
             }
-            else if (IsCreateEventEvent)
+            else if (CreateEventEvent is { } __value6)
             {
-                createEventEvent?.Invoke(CreateEventEvent!);
+                createEventEvent?.Invoke(__value6);
             }
-            else if (IsCreateObservationEvent)
+            else if (CreateObservationEvent is { } __value7)
             {
-                createObservationEvent?.Invoke(CreateObservationEvent!);
+                createObservationEvent?.Invoke(__value7);
             }
-            else if (IsUpdateObservationEvent)
+            else if (UpdateObservationEvent is { } __value8)
             {
-                updateObservationEvent?.Invoke(UpdateObservationEvent!);
+                updateObservationEvent?.Invoke(__value8);
             }
         }
 

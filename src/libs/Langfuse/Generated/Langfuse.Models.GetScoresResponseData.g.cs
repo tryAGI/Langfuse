@@ -42,8 +42,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataNumeric2, global::Langfuse.GetScoresResponseDataNumeric> PickGetScoresResponseDataNumeric() => IsGetScoresResponseDataNumeric
-            ? GetScoresResponseDataNumeric!.Value
+        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataNumeric2, global::Langfuse.GetScoresResponseDataNumeric> PickGetScoresResponseDataNumeric() => GetScoresResponseDataNumeric is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'GetScoresResponseDataNumeric' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataCategorical2, global::Langfuse.GetScoresResponseDataCategorical> PickGetScoresResponseDataCategorical() => IsGetScoresResponseDataCategorical
-            ? GetScoresResponseDataCategorical!.Value
+        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataCategorical2, global::Langfuse.GetScoresResponseDataCategorical> PickGetScoresResponseDataCategorical() => GetScoresResponseDataCategorical is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'GetScoresResponseDataCategorical' but the value was {ToString()}.");
 
         /// <summary>
@@ -116,8 +116,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataBoolean2, global::Langfuse.GetScoresResponseDataBoolean> PickGetScoresResponseDataBoolean() => IsGetScoresResponseDataBoolean
-            ? GetScoresResponseDataBoolean!.Value
+        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataBoolean2, global::Langfuse.GetScoresResponseDataBoolean> PickGetScoresResponseDataBoolean() => GetScoresResponseDataBoolean is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'GetScoresResponseDataBoolean' but the value was {ToString()}.");
 
         /// <summary>
@@ -153,8 +153,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataCorrection2, global::Langfuse.GetScoresResponseDataCorrection> PickGetScoresResponseDataCorrection() => IsGetScoresResponseDataCorrection
-            ? GetScoresResponseDataCorrection!.Value
+        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataCorrection2, global::Langfuse.GetScoresResponseDataCorrection> PickGetScoresResponseDataCorrection() => GetScoresResponseDataCorrection is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'GetScoresResponseDataCorrection' but the value was {ToString()}.");
 
         /// <summary>
@@ -190,8 +190,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataText2, global::Langfuse.GetScoresResponseDataText> PickGetScoresResponseDataText() => IsGetScoresResponseDataText
-            ? GetScoresResponseDataText!.Value
+        public global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataText2, global::Langfuse.GetScoresResponseDataText> PickGetScoresResponseDataText() => GetScoresResponseDataText is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'GetScoresResponseDataText' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -372,25 +372,25 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsGetScoresResponseDataNumeric && getScoresResponseDataNumeric != null)
+            if (GetScoresResponseDataNumeric is { } __value0 && getScoresResponseDataNumeric != null)
             {
-                return getScoresResponseDataNumeric(GetScoresResponseDataNumeric!);
+                return getScoresResponseDataNumeric(__value0);
             }
-            else if (IsGetScoresResponseDataCategorical && getScoresResponseDataCategorical != null)
+            else if (GetScoresResponseDataCategorical is { } __value1 && getScoresResponseDataCategorical != null)
             {
-                return getScoresResponseDataCategorical(GetScoresResponseDataCategorical!);
+                return getScoresResponseDataCategorical(__value1);
             }
-            else if (IsGetScoresResponseDataBoolean && getScoresResponseDataBoolean != null)
+            else if (GetScoresResponseDataBoolean is { } __value2 && getScoresResponseDataBoolean != null)
             {
-                return getScoresResponseDataBoolean(GetScoresResponseDataBoolean!);
+                return getScoresResponseDataBoolean(__value2);
             }
-            else if (IsGetScoresResponseDataCorrection && getScoresResponseDataCorrection != null)
+            else if (GetScoresResponseDataCorrection is { } __value3 && getScoresResponseDataCorrection != null)
             {
-                return getScoresResponseDataCorrection(GetScoresResponseDataCorrection!);
+                return getScoresResponseDataCorrection(__value3);
             }
-            else if (IsGetScoresResponseDataText && getScoresResponseDataText != null)
+            else if (GetScoresResponseDataText is { } __value4 && getScoresResponseDataText != null)
             {
-                return getScoresResponseDataText(GetScoresResponseDataText!);
+                return getScoresResponseDataText(__value4);
             }
 
             return default(TResult);
@@ -416,25 +416,25 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsGetScoresResponseDataNumeric)
+            if (GetScoresResponseDataNumeric is { } __value0)
             {
-                getScoresResponseDataNumeric?.Invoke(GetScoresResponseDataNumeric!);
+                getScoresResponseDataNumeric?.Invoke(__value0);
             }
-            else if (IsGetScoresResponseDataCategorical)
+            else if (GetScoresResponseDataCategorical is { } __value1)
             {
-                getScoresResponseDataCategorical?.Invoke(GetScoresResponseDataCategorical!);
+                getScoresResponseDataCategorical?.Invoke(__value1);
             }
-            else if (IsGetScoresResponseDataBoolean)
+            else if (GetScoresResponseDataBoolean is { } __value2)
             {
-                getScoresResponseDataBoolean?.Invoke(GetScoresResponseDataBoolean!);
+                getScoresResponseDataBoolean?.Invoke(__value2);
             }
-            else if (IsGetScoresResponseDataCorrection)
+            else if (GetScoresResponseDataCorrection is { } __value3)
             {
-                getScoresResponseDataCorrection?.Invoke(GetScoresResponseDataCorrection!);
+                getScoresResponseDataCorrection?.Invoke(__value3);
             }
-            else if (IsGetScoresResponseDataText)
+            else if (GetScoresResponseDataText is { } __value4)
             {
-                getScoresResponseDataText?.Invoke(GetScoresResponseDataText!);
+                getScoresResponseDataText?.Invoke(__value4);
             }
         }
 
@@ -454,25 +454,25 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsGetScoresResponseDataNumeric)
+            if (GetScoresResponseDataNumeric is { } __value0)
             {
-                getScoresResponseDataNumeric?.Invoke(GetScoresResponseDataNumeric!);
+                getScoresResponseDataNumeric?.Invoke(__value0);
             }
-            else if (IsGetScoresResponseDataCategorical)
+            else if (GetScoresResponseDataCategorical is { } __value1)
             {
-                getScoresResponseDataCategorical?.Invoke(GetScoresResponseDataCategorical!);
+                getScoresResponseDataCategorical?.Invoke(__value1);
             }
-            else if (IsGetScoresResponseDataBoolean)
+            else if (GetScoresResponseDataBoolean is { } __value2)
             {
-                getScoresResponseDataBoolean?.Invoke(GetScoresResponseDataBoolean!);
+                getScoresResponseDataBoolean?.Invoke(__value2);
             }
-            else if (IsGetScoresResponseDataCorrection)
+            else if (GetScoresResponseDataCorrection is { } __value3)
             {
-                getScoresResponseDataCorrection?.Invoke(GetScoresResponseDataCorrection!);
+                getScoresResponseDataCorrection?.Invoke(__value3);
             }
-            else if (IsGetScoresResponseDataText)
+            else if (GetScoresResponseDataText is { } __value4)
             {
-                getScoresResponseDataText?.Invoke(GetScoresResponseDataText!);
+                getScoresResponseDataText?.Invoke(__value4);
             }
         }
 

@@ -44,8 +44,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.PublicEvaluatorOutputDefinitionPublicEvaluatorNumericScore2, global::Langfuse.PublicEvaluatorNumericScore> PickPublicEvaluatorNumericScore() => IsPublicEvaluatorNumericScore
-            ? PublicEvaluatorNumericScore!.Value
+        public global::Langfuse.AllOf<global::Langfuse.PublicEvaluatorOutputDefinitionPublicEvaluatorNumericScore2, global::Langfuse.PublicEvaluatorNumericScore> PickPublicEvaluatorNumericScore() => PublicEvaluatorNumericScore is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'PublicEvaluatorNumericScore' but the value was {ToString()}.");
 
         /// <summary>
@@ -81,8 +81,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.PublicEvaluatorOutputDefinitionPublicEvaluatorBooleanScore2, global::Langfuse.PublicEvaluatorBooleanScore> PickPublicEvaluatorBooleanScore() => IsPublicEvaluatorBooleanScore
-            ? PublicEvaluatorBooleanScore!.Value
+        public global::Langfuse.AllOf<global::Langfuse.PublicEvaluatorOutputDefinitionPublicEvaluatorBooleanScore2, global::Langfuse.PublicEvaluatorBooleanScore> PickPublicEvaluatorBooleanScore() => PublicEvaluatorBooleanScore is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'PublicEvaluatorBooleanScore' but the value was {ToString()}.");
 
         /// <summary>
@@ -118,8 +118,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.PublicEvaluatorOutputDefinitionPublicEvaluatorCategoricalScore2, global::Langfuse.PublicEvaluatorCategoricalScore> PickPublicEvaluatorCategoricalScore() => IsPublicEvaluatorCategoricalScore
-            ? PublicEvaluatorCategoricalScore!.Value
+        public global::Langfuse.AllOf<global::Langfuse.PublicEvaluatorOutputDefinitionPublicEvaluatorCategoricalScore2, global::Langfuse.PublicEvaluatorCategoricalScore> PickPublicEvaluatorCategoricalScore() => PublicEvaluatorCategoricalScore is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'PublicEvaluatorCategoricalScore' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -244,17 +244,17 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsPublicEvaluatorNumericScore && publicEvaluatorNumericScore != null)
+            if (PublicEvaluatorNumericScore is { } __value0 && publicEvaluatorNumericScore != null)
             {
-                return publicEvaluatorNumericScore(PublicEvaluatorNumericScore!);
+                return publicEvaluatorNumericScore(__value0);
             }
-            else if (IsPublicEvaluatorBooleanScore && publicEvaluatorBooleanScore != null)
+            else if (PublicEvaluatorBooleanScore is { } __value1 && publicEvaluatorBooleanScore != null)
             {
-                return publicEvaluatorBooleanScore(PublicEvaluatorBooleanScore!);
+                return publicEvaluatorBooleanScore(__value1);
             }
-            else if (IsPublicEvaluatorCategoricalScore && publicEvaluatorCategoricalScore != null)
+            else if (PublicEvaluatorCategoricalScore is { } __value2 && publicEvaluatorCategoricalScore != null)
             {
-                return publicEvaluatorCategoricalScore(PublicEvaluatorCategoricalScore!);
+                return publicEvaluatorCategoricalScore(__value2);
             }
 
             return default(TResult);
@@ -276,17 +276,17 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsPublicEvaluatorNumericScore)
+            if (PublicEvaluatorNumericScore is { } __value0)
             {
-                publicEvaluatorNumericScore?.Invoke(PublicEvaluatorNumericScore!);
+                publicEvaluatorNumericScore?.Invoke(__value0);
             }
-            else if (IsPublicEvaluatorBooleanScore)
+            else if (PublicEvaluatorBooleanScore is { } __value1)
             {
-                publicEvaluatorBooleanScore?.Invoke(PublicEvaluatorBooleanScore!);
+                publicEvaluatorBooleanScore?.Invoke(__value1);
             }
-            else if (IsPublicEvaluatorCategoricalScore)
+            else if (PublicEvaluatorCategoricalScore is { } __value2)
             {
-                publicEvaluatorCategoricalScore?.Invoke(PublicEvaluatorCategoricalScore!);
+                publicEvaluatorCategoricalScore?.Invoke(__value2);
             }
         }
 
@@ -304,17 +304,17 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsPublicEvaluatorNumericScore)
+            if (PublicEvaluatorNumericScore is { } __value0)
             {
-                publicEvaluatorNumericScore?.Invoke(PublicEvaluatorNumericScore!);
+                publicEvaluatorNumericScore?.Invoke(__value0);
             }
-            else if (IsPublicEvaluatorBooleanScore)
+            else if (PublicEvaluatorBooleanScore is { } __value1)
             {
-                publicEvaluatorBooleanScore?.Invoke(PublicEvaluatorBooleanScore!);
+                publicEvaluatorBooleanScore?.Invoke(__value1);
             }
-            else if (IsPublicEvaluatorCategoricalScore)
+            else if (PublicEvaluatorCategoricalScore is { } __value2)
             {
-                publicEvaluatorCategoricalScore?.Invoke(PublicEvaluatorCategoricalScore!);
+                publicEvaluatorCategoricalScore?.Invoke(__value2);
             }
         }
 

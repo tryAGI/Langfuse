@@ -42,8 +42,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.CreateLlmAsJudgeEvaluatorRequest> PickCreateLlmAsJudgeEvaluatorRequest() => IsCreateLlmAsJudgeEvaluatorRequest
-            ? CreateLlmAsJudgeEvaluatorRequest!.Value
+        public global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.CreateLlmAsJudgeEvaluatorRequest> PickCreateLlmAsJudgeEvaluatorRequest() => CreateLlmAsJudgeEvaluatorRequest is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CreateLlmAsJudgeEvaluatorRequest' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequest2, global::Langfuse.CreateCodeEvaluatorRequest> PickCreateCodeEvaluatorRequest() => IsCreateCodeEvaluatorRequest
-            ? CreateCodeEvaluatorRequest!.Value
+        public global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequest2, global::Langfuse.CreateCodeEvaluatorRequest> PickCreateCodeEvaluatorRequest() => CreateCodeEvaluatorRequest is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CreateCodeEvaluatorRequest' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsCreateLlmAsJudgeEvaluatorRequest && createLlmAsJudgeEvaluatorRequest != null)
+            if (CreateLlmAsJudgeEvaluatorRequest is { } __value0 && createLlmAsJudgeEvaluatorRequest != null)
             {
-                return createLlmAsJudgeEvaluatorRequest(CreateLlmAsJudgeEvaluatorRequest!);
+                return createLlmAsJudgeEvaluatorRequest(__value0);
             }
-            else if (IsCreateCodeEvaluatorRequest && createCodeEvaluatorRequest != null)
+            else if (CreateCodeEvaluatorRequest is { } __value1 && createCodeEvaluatorRequest != null)
             {
-                return createCodeEvaluatorRequest(CreateCodeEvaluatorRequest!);
+                return createCodeEvaluatorRequest(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsCreateLlmAsJudgeEvaluatorRequest)
+            if (CreateLlmAsJudgeEvaluatorRequest is { } __value0)
             {
-                createLlmAsJudgeEvaluatorRequest?.Invoke(CreateLlmAsJudgeEvaluatorRequest!);
+                createLlmAsJudgeEvaluatorRequest?.Invoke(__value0);
             }
-            else if (IsCreateCodeEvaluatorRequest)
+            else if (CreateCodeEvaluatorRequest is { } __value1)
             {
-                createCodeEvaluatorRequest?.Invoke(CreateCodeEvaluatorRequest!);
+                createCodeEvaluatorRequest?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsCreateLlmAsJudgeEvaluatorRequest)
+            if (CreateLlmAsJudgeEvaluatorRequest is { } __value0)
             {
-                createLlmAsJudgeEvaluatorRequest?.Invoke(CreateLlmAsJudgeEvaluatorRequest!);
+                createLlmAsJudgeEvaluatorRequest?.Invoke(__value0);
             }
-            else if (IsCreateCodeEvaluatorRequest)
+            else if (CreateCodeEvaluatorRequest is { } __value1)
             {
-                createCodeEvaluatorRequest?.Invoke(CreateCodeEvaluatorRequest!);
+                createCodeEvaluatorRequest?.Invoke(__value1);
             }
         }
 

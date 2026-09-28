@@ -42,8 +42,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillVersionFileInput PickUnstableSkillVersionFileInput() => IsUnstableSkillVersionFileInput
-            ? UnstableSkillVersionFileInput!
+        public global::Langfuse.UnstableSkillVersionFileInput PickUnstableSkillVersionFileInput() => UnstableSkillVersionFileInput is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableSkillVersionFileInput' but the value was {ToString()}.");
 
         /// <summary>
@@ -79,8 +79,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillVersionFileReference PickUnstableSkillVersionFileReference() => IsUnstableSkillVersionFileReference
-            ? UnstableSkillVersionFileReference!
+        public global::Langfuse.UnstableSkillVersionFileReference PickUnstableSkillVersionFileReference() => UnstableSkillVersionFileReference is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'UnstableSkillVersionFileReference' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -177,13 +177,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUnstableSkillVersionFileInput && unstableSkillVersionFileInput != null)
+            if (UnstableSkillVersionFileInput is { } __value0 && unstableSkillVersionFileInput != null)
             {
-                return unstableSkillVersionFileInput(UnstableSkillVersionFileInput!);
+                return unstableSkillVersionFileInput(__value0);
             }
-            else if (IsUnstableSkillVersionFileReference && unstableSkillVersionFileReference != null)
+            else if (UnstableSkillVersionFileReference is { } __value1 && unstableSkillVersionFileReference != null)
             {
-                return unstableSkillVersionFileReference(UnstableSkillVersionFileReference!);
+                return unstableSkillVersionFileReference(__value1);
             }
 
             return default(TResult);
@@ -203,13 +203,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUnstableSkillVersionFileInput)
+            if (UnstableSkillVersionFileInput is { } __value0)
             {
-                unstableSkillVersionFileInput?.Invoke(UnstableSkillVersionFileInput!);
+                unstableSkillVersionFileInput?.Invoke(__value0);
             }
-            else if (IsUnstableSkillVersionFileReference)
+            else if (UnstableSkillVersionFileReference is { } __value1)
             {
-                unstableSkillVersionFileReference?.Invoke(UnstableSkillVersionFileReference!);
+                unstableSkillVersionFileReference?.Invoke(__value1);
             }
         }
 
@@ -226,13 +226,13 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUnstableSkillVersionFileInput)
+            if (UnstableSkillVersionFileInput is { } __value0)
             {
-                unstableSkillVersionFileInput?.Invoke(UnstableSkillVersionFileInput!);
+                unstableSkillVersionFileInput?.Invoke(__value0);
             }
-            else if (IsUnstableSkillVersionFileReference)
+            else if (UnstableSkillVersionFileReference is { } __value1)
             {
-                unstableSkillVersionFileReference?.Invoke(UnstableSkillVersionFileReference!);
+                unstableSkillVersionFileReference?.Invoke(__value1);
             }
         }
 

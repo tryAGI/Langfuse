@@ -149,7 +149,7 @@ namespace Langfuse
                 PrepareUnstableDashboardWidgetsDeleteRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    widgetId: widgetId!);
+                    widgetId: widgetId);
 
                 return __httpRequest;
             }
@@ -171,7 +171,7 @@ namespace Langfuse
                                 pathTemplate: "$\"/api/public/unstable/dashboard-widgets/{widgetId}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: null,
                                 clientOptions: Options,
@@ -205,7 +205,7 @@ namespace Langfuse
                                 pathTemplate: "$\"/api/public/unstable/dashboard-widgets/{widgetId}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: null,
                                 exception: __exception,
                                 clientOptions: Options,
@@ -246,7 +246,7 @@ namespace Langfuse
                                 pathTemplate: "$\"/api/public/unstable/dashboard-widgets/{widgetId}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -294,7 +294,7 @@ namespace Langfuse
                                 pathTemplate: "$\"/api/public/unstable/dashboard-widgets/{widgetId}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,
@@ -316,7 +316,7 @@ namespace Langfuse
                                 pathTemplate: "$\"/api/public/unstable/dashboard-widgets/{widgetId}\"",
                                 httpMethod: "DELETE",
                                 baseUri: BaseUri,
-                                request: __httpRequest!,
+                                request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
                                 response: __response,
                                 exception: null,
                                 clientOptions: Options,

@@ -42,8 +42,8 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UtilsCursorMetaResponse PickUtilsCursorMetaResponse() => IsUtilsCursorMetaResponse
-            ? UtilsCursorMetaResponse!
+        public global::Langfuse.UtilsCursorMetaResponse PickUtilsCursorMetaResponse() => UtilsCursorMetaResponse is { } value
+            ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'UtilsCursorMetaResponse' but the value was {ToString()}.");
         /// <summary>
         ///
@@ -102,9 +102,9 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUtilsCursorMetaResponse && utilsCursorMetaResponse != null)
+            if (UtilsCursorMetaResponse is { } __value0 && utilsCursorMetaResponse != null)
             {
-                return utilsCursorMetaResponse(UtilsCursorMetaResponse!);
+                return utilsCursorMetaResponse(__value0);
             }
 
             return default(TResult);
@@ -122,9 +122,9 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUtilsCursorMetaResponse)
+            if (UtilsCursorMetaResponse is { } __value0)
             {
-                utilsCursorMetaResponse?.Invoke(UtilsCursorMetaResponse!);
+                utilsCursorMetaResponse?.Invoke(__value0);
             }
         }
 
@@ -140,9 +140,9 @@ namespace Langfuse
                 Validate();
             }
 
-            if (IsUtilsCursorMetaResponse)
+            if (UtilsCursorMetaResponse is { } __value0)
             {
-                utilsCursorMetaResponse?.Invoke(UtilsCursorMetaResponse!);
+                utilsCursorMetaResponse?.Invoke(__value0);
             }
         }
 
