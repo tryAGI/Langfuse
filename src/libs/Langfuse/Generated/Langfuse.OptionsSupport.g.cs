@@ -241,7 +241,8 @@ namespace Langfuse
         {
             context = context ?? throw new global::System.ArgumentNullException(nameof(context));
 
-            if (context.Request == null)
+            var request = context.Request;
+            if (request == null)
             {
                 return;
             }
@@ -251,10 +252,10 @@ namespace Langfuse
             {
                 for (var index = 0; index < perRequest.Count; index++)
                 {
-                    ApplyAuthorization(context.Request, perRequest[index]);
+                    ApplyAuthorization(request, perRequest[index]);
                 }
 
-                global::Langfuse.AutoSDKHttpRequestOptions.StampAuthorizationOverride(context.Request);
+                global::Langfuse.AutoSDKHttpRequestOptions.StampAuthorizationOverride(request);
                 return;
             }
 
@@ -272,10 +273,10 @@ namespace Langfuse
 
             for (var index = 0; index < resolved.Count; index++)
             {
-                ApplyAuthorization(context.Request, resolved[index]);
+                ApplyAuthorization(request, resolved[index]);
             }
 
-            global::Langfuse.AutoSDKHttpRequestOptions.StampAuthorizationOverride(context.Request);
+            global::Langfuse.AutoSDKHttpRequestOptions.StampAuthorizationOverride(request);
         }
 
         private static void ApplyAuthorization(
@@ -486,7 +487,7 @@ namespace Langfuse
         /// <summary>
         /// The outgoing HTTP request for the current attempt.
         /// </summary>
-        public global::System.Net.Http.HttpRequestMessage Request { get; set; } = null!;
+        public global::System.Net.Http.HttpRequestMessage? Request { get; set; }
 
         /// <summary>
         /// The HTTP response when one was received.
@@ -501,7 +502,7 @@ namespace Langfuse
         /// <summary>
         /// The client-wide runtime options.
         /// </summary>
-        public global::Langfuse.AutoSDKClientOptions ClientOptions { get; set; } = null!;
+        public global::Langfuse.AutoSDKClientOptions? ClientOptions { get; set; }
 
         /// <summary>
         /// The per-request runtime options.
