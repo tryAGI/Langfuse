@@ -2,7 +2,7 @@
 
 namespace Langfuse
 {
-    public sealed partial class UnstableSkillsGetFileContentResponse
+    public sealed partial class UnstableSkillsGetFileContentsResponse2
     {
         /// <summary>
         /// Serializes the current instance to a JSON string using the provided JsonSerializerContext.
@@ -47,20 +47,20 @@ namespace Langfuse
         /// <summary>
         /// Deserializes a JSON string using the provided JsonSerializerContext.
         /// </summary>
-        public static global::Langfuse.UnstableSkillsGetFileContentResponse? FromJson(
+        public static global::Langfuse.UnstableSkillsGetFileContentsResponse2? FromJson(
             string json,
             global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
         {
             return global::System.Text.Json.JsonSerializer.Deserialize(
                 json,
-                typeof(global::Langfuse.UnstableSkillsGetFileContentResponse),
-                jsonSerializerContext) as global::Langfuse.UnstableSkillsGetFileContentResponse;
+                typeof(global::Langfuse.UnstableSkillsGetFileContentsResponse2),
+                jsonSerializerContext) as global::Langfuse.UnstableSkillsGetFileContentsResponse2;
         }
 
         /// <summary>
         /// Deserializes a JSON string using the generated default JsonSerializerContext.
         /// </summary>
-        public static global::Langfuse.UnstableSkillsGetFileContentResponse? FromJson(
+        public static global::Langfuse.UnstableSkillsGetFileContentsResponse2? FromJson(
             string json)
         {
             return FromJson(
@@ -75,7 +75,7 @@ namespace Langfuse
         [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
         [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
 #endif
-        public static global::Langfuse.UnstableSkillsGetFileContentResponse? FromJson(
+        public static global::Langfuse.UnstableSkillsGetFileContentsResponse2? FromJson(
             string json,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
@@ -86,7 +86,7 @@ namespace Langfuse
                     global::Langfuse.SourceGenerationContext.Default);
             }
 
-            return global::System.Text.Json.JsonSerializer.Deserialize<global::Langfuse.UnstableSkillsGetFileContentResponse>(
+            return global::System.Text.Json.JsonSerializer.Deserialize<global::Langfuse.UnstableSkillsGetFileContentsResponse2>(
                 json,
                 jsonSerializerOptions);
         }
@@ -94,20 +94,20 @@ namespace Langfuse
         /// <summary>
         /// Deserializes a JSON stream using the provided JsonSerializerContext.
         /// </summary>
-        public static async global::System.Threading.Tasks.ValueTask<global::Langfuse.UnstableSkillsGetFileContentResponse?> FromJsonStreamAsync(
+        public static async global::System.Threading.Tasks.ValueTask<global::Langfuse.UnstableSkillsGetFileContentsResponse2?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.Serialization.JsonSerializerContext jsonSerializerContext)
         {
             return (await global::System.Text.Json.JsonSerializer.DeserializeAsync(
                 jsonStream,
-                typeof(global::Langfuse.UnstableSkillsGetFileContentResponse),
-                jsonSerializerContext).ConfigureAwait(false)) as global::Langfuse.UnstableSkillsGetFileContentResponse;
+                typeof(global::Langfuse.UnstableSkillsGetFileContentsResponse2),
+                jsonSerializerContext).ConfigureAwait(false)) as global::Langfuse.UnstableSkillsGetFileContentsResponse2;
         }
 
         /// <summary>
         /// Deserializes a JSON stream using the generated default JsonSerializerContext.
         /// </summary>
-        public static global::System.Threading.Tasks.ValueTask<global::Langfuse.UnstableSkillsGetFileContentResponse?> FromJsonStreamAsync(
+        public static global::System.Threading.Tasks.ValueTask<global::Langfuse.UnstableSkillsGetFileContentsResponse2?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream)
         {
             return FromJsonStreamAsync(
@@ -122,7 +122,7 @@ namespace Langfuse
         [global::System.Diagnostics.CodeAnalysis.RequiresUnreferencedCode("JSON serialization and deserialization might require types that cannot be statically analyzed. Use the overload that takes a JsonTypeInfo or JsonSerializerContext, or make sure all of the required types are preserved.")]
         [global::System.Diagnostics.CodeAnalysis.RequiresDynamicCode("JSON serialization and deserialization might require types that cannot be statically analyzed and might need runtime code generation. Use System.Text.Json source generation for native AOT applications.")]
 #endif
-        public static global::System.Threading.Tasks.ValueTask<global::Langfuse.UnstableSkillsGetFileContentResponse?> FromJsonStreamAsync(
+        public static global::System.Threading.Tasks.ValueTask<global::Langfuse.UnstableSkillsGetFileContentsResponse2?> FromJsonStreamAsync(
             global::System.IO.Stream jsonStream,
             global::System.Text.Json.JsonSerializerOptions? jsonSerializerOptions = null)
         {
@@ -133,7 +133,7 @@ namespace Langfuse
                     global::Langfuse.SourceGenerationContext.Default);
             }
 
-            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::Langfuse.UnstableSkillsGetFileContentResponse?>(
+            return global::System.Text.Json.JsonSerializer.DeserializeAsync<global::Langfuse.UnstableSkillsGetFileContentsResponse2?>(
                 jsonStream,
                 jsonSerializerOptions);
         }
