@@ -6,7 +6,7 @@ namespace Langfuse
     /// <summary>
     ///
     /// </summary>
-    public sealed partial class UnstableSkillsGetFileContentResponse
+    public sealed partial class UnstableSkillsGetFileContentsResponse2
     {
 
         /// <summary>

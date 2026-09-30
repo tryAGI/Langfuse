@@ -46,7 +46,7 @@ namespace Langfuse
             ref string content);
 
         /// <summary>
-        /// Resolve a skill's metadata and file manifest by version or label. Defaults to the production label. Use each file's id with getFileContent to read its text content.
+        /// Resolve a skill's metadata and file manifest by version or label. Defaults to the production label. Use each file's sha256Hash with getFileContents, individually or in batches across manifests.
         /// </summary>
         /// <param name="skillName"></param>
         /// <param name="version"></param>
@@ -72,7 +72,7 @@ namespace Langfuse
             return __response.Body;
         }
         /// <summary>
-        /// Resolve a skill's metadata and file manifest by version or label. Defaults to the production label. Use each file's id with getFileContent to read its text content.
+        /// Resolve a skill's metadata and file manifest by version or label. Defaults to the production label. Use each file's sha256Hash with getFileContents, individually or in batches across manifests.
         /// </summary>
         /// <param name="skillName"></param>
         /// <param name="version"></param>

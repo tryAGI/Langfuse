@@ -7,7 +7,7 @@ namespace Langfuse
     {
 
 
-        private static readonly global::Langfuse.EndPointSecurityRequirement s_UnstableSkillsGetFileContentSecurityRequirement0 =
+        private static readonly global::Langfuse.EndPointSecurityRequirement s_UnstableSkillsGetFileContentsSecurityRequirement0 =
             new global::Langfuse.EndPointSecurityRequirement
             {
                 Authorizations = new global::Langfuse.EndPointAuthorizationRequirement[]
@@ -21,40 +21,40 @@ namespace Langfuse
                     },
                 },
             };
-        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_UnstableSkillsGetFileContentSecurityRequirements =
+        private static readonly global::Langfuse.EndPointSecurityRequirement[] s_UnstableSkillsGetFileContentsSecurityRequirements =
             new global::Langfuse.EndPointSecurityRequirement[]
-            {                s_UnstableSkillsGetFileContentSecurityRequirement0,
+            {                s_UnstableSkillsGetFileContentsSecurityRequirement0,
             };
-        partial void PrepareUnstableSkillsGetFileContentArguments(
+        partial void PrepareUnstableSkillsGetFileContentsArguments(
             global::System.Net.Http.HttpClient httpClient,
-            ref string fileId);
-        partial void PrepareUnstableSkillsGetFileContentRequest(
+            ref string sha256Hashes);
+        partial void PrepareUnstableSkillsGetFileContentsRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            string fileId);
-        partial void ProcessUnstableSkillsGetFileContentResponse(
+            string sha256Hashes);
+        partial void ProcessUnstableSkillsGetFileContentsResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
 
-        partial void ProcessUnstableSkillsGetFileContentResponseContent(
+        partial void ProcessUnstableSkillsGetFileContentsResponseContent(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage,
             ref string content);
 
         /// <summary>
-        /// Read one text file from a persisted skill version using its file id, not its blob id. Returns JSON containing the text content with Cache-Control no-store.
+        /// Read a batch of text contents by canonical base64-encoded SHA-256 hashes.
         /// </summary>
-        /// <param name="fileId"></param>
+        /// <param name="sha256Hashes"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Langfuse.UnstableSkillFileContentResponse> UnstableSkillsGetFileContentAsync(
-            string fileId,
+        public async global::System.Threading.Tasks.Task<global::Langfuse.UnstableSkillFileContentsResponse> UnstableSkillsGetFileContentsAsync(
+            string sha256Hashes,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
-            var __response = await UnstableSkillsGetFileContentAsResponseAsync(
-                fileId: fileId,
+            var __response = await UnstableSkillsGetFileContentsAsResponseAsync(
+                sha256Hashes: sha256Hashes,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -62,28 +62,28 @@ namespace Langfuse
             return __response.Body;
         }
         /// <summary>
-        /// Read one text file from a persisted skill version using its file id, not its blob id. Returns JSON containing the text content with Cache-Control no-store.
+        /// Read a batch of text contents by canonical base64-encoded SHA-256 hashes.
         /// </summary>
-        /// <param name="fileId"></param>
+        /// <param name="sha256Hashes"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.UnstableSkillFileContentResponse>> UnstableSkillsGetFileContentAsResponseAsync(
-            string fileId,
+        public async global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.UnstableSkillFileContentsResponse>> UnstableSkillsGetFileContentsAsResponseAsync(
+            string sha256Hashes,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
             PrepareArguments(
                 client: HttpClient);
-            PrepareUnstableSkillsGetFileContentArguments(
+            PrepareUnstableSkillsGetFileContentsArguments(
                 httpClient: HttpClient,
-                fileId: ref fileId);
+                sha256Hashes: ref sha256Hashes);
 
 
             var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
                 availableAuthorizations: Authorizations,
-                securityRequirements: s_UnstableSkillsGetFileContentSecurityRequirements,
-                operationName: "UnstableSkillsGetFileContentAsync");
+                securityRequirements: s_UnstableSkillsGetFileContentsSecurityRequirements,
+                operationName: "UnstableSkillsGetFileContentsAsync");
 
             using var __timeoutCancellationTokenSource = global::Langfuse.AutoSDKRequestOptionsSupport.CreateTimeoutCancellationTokenSource(
                 clientOptions: Options,
@@ -103,8 +103,11 @@ namespace Langfuse
             {
 
                             var __pathBuilder = new global::Langfuse.PathBuilder(
-                                path: $"/api/public/unstable/skills/files/{fileId}/content",
+                                path: "/api/public/unstable/skills/files/content",
                                 baseUri: HttpClient.BaseAddress);
+                            __pathBuilder
+                                .AddRequiredParameter("sha256Hashes", sha256Hashes)
+                                ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Langfuse.AutoSDKRequestOptionsSupport.AppendQueryParameters(
                     path: __path,
@@ -142,10 +145,10 @@ namespace Langfuse
                 PrepareRequest(
                     client: HttpClient,
                     request: __httpRequest);
-                PrepareUnstableSkillsGetFileContentRequest(
+                PrepareUnstableSkillsGetFileContentsRequest(
                     httpClient: HttpClient,
                     httpRequestMessage: __httpRequest,
-                    fileId: fileId);
+                    sha256Hashes: sha256Hashes);
 
                 return __httpRequest;
             }
@@ -162,9 +165,9 @@ namespace Langfuse
                     await global::Langfuse.AutoSDKRequestOptionsSupport.OnBeforeRequestAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "UnstableSkillsGetFileContent",
-                                methodName: "UnstableSkillsGetFileContentAsync",
-                                pathTemplate: "$\"/api/public/unstable/skills/files/{fileId}/content\"",
+                                operationId: "UnstableSkillsGetFileContents",
+                                methodName: "UnstableSkillsGetFileContentsAsync",
+                                pathTemplate: "\"/api/public/unstable/skills/files/content\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
@@ -196,9 +199,9 @@ namespace Langfuse
                         await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "UnstableSkillsGetFileContent",
-                                methodName: "UnstableSkillsGetFileContentAsync",
-                                pathTemplate: "$\"/api/public/unstable/skills/files/{fileId}/content\"",
+                                operationId: "UnstableSkillsGetFileContents",
+                                methodName: "UnstableSkillsGetFileContentsAsync",
+                                pathTemplate: "\"/api/public/unstable/skills/files/content\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
@@ -237,9 +240,9 @@ namespace Langfuse
                         await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "UnstableSkillsGetFileContent",
-                                methodName: "UnstableSkillsGetFileContentAsync",
-                                pathTemplate: "$\"/api/public/unstable/skills/files/{fileId}/content\"",
+                                operationId: "UnstableSkillsGetFileContents",
+                                methodName: "UnstableSkillsGetFileContentsAsync",
+                                pathTemplate: "\"/api/public/unstable/skills/files/content\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
@@ -277,7 +280,7 @@ namespace Langfuse
                 ProcessResponse(
                     client: HttpClient,
                     response: __response);
-                ProcessUnstableSkillsGetFileContentResponse(
+                ProcessUnstableSkillsGetFileContentsResponse(
                     httpClient: HttpClient,
                     httpResponseMessage: __response);
                 if (__response.IsSuccessStatusCode)
@@ -285,9 +288,9 @@ namespace Langfuse
                     await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterSuccessAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "UnstableSkillsGetFileContent",
-                                methodName: "UnstableSkillsGetFileContentAsync",
-                                pathTemplate: "$\"/api/public/unstable/skills/files/{fileId}/content\"",
+                                operationId: "UnstableSkillsGetFileContents",
+                                methodName: "UnstableSkillsGetFileContentsAsync",
+                                pathTemplate: "\"/api/public/unstable/skills/files/content\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
@@ -307,9 +310,9 @@ namespace Langfuse
                     await global::Langfuse.AutoSDKRequestOptionsSupport.OnAfterErrorAsync(
                             clientOptions: Options,
                             context: global::Langfuse.AutoSDKRequestOptionsSupport.CreateHookContext(
-                                operationId: "UnstableSkillsGetFileContent",
-                                methodName: "UnstableSkillsGetFileContentAsync",
-                                pathTemplate: "$\"/api/public/unstable/skills/files/{fileId}/content\"",
+                                operationId: "UnstableSkillsGetFileContents",
+                                methodName: "UnstableSkillsGetFileContentsAsync",
+                                pathTemplate: "\"/api/public/unstable/skills/files/content\"",
                                 httpMethod: "GET",
                                 baseUri: BaseUri,
                                 request: __httpRequest ?? throw new global::System.InvalidOperationException("The HTTP request was not created before invoking a request hook."),
@@ -522,7 +525,7 @@ namespace Langfuse
                                     client: HttpClient,
                                     response: __response,
                                     content: ref __content);
-                                ProcessUnstableSkillsGetFileContentResponseContent(
+                                ProcessUnstableSkillsGetFileContentsResponseContent(
                                     httpClient: HttpClient,
                                     httpResponseMessage: __response,
                                     content: ref __content);
@@ -531,9 +534,9 @@ namespace Langfuse
                                 {
                                     __response.EnsureSuccessStatusCode();
 
-                                    var __value = global::Langfuse.UnstableSkillFileContentResponse.FromJson(__content, JsonSerializerContext) ??
+                                    var __value = global::Langfuse.UnstableSkillFileContentsResponse.FromJson(__content, JsonSerializerContext) ??
                                         throw new global::System.InvalidOperationException($"Response deserialization failed for \"{__content}\" ");
-                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.UnstableSkillFileContentResponse>(
+                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.UnstableSkillFileContentsResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Langfuse.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
@@ -563,9 +566,9 @@ namespace Langfuse
                 #endif
                                     ).ConfigureAwait(false);
 
-                                    var __value = await global::Langfuse.UnstableSkillFileContentResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
+                                    var __value = await global::Langfuse.UnstableSkillFileContentsResponse.FromJsonStreamAsync(__content, JsonSerializerContext).ConfigureAwait(false) ??
                                         throw new global::System.InvalidOperationException("Response deserialization failed.");
-                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.UnstableSkillFileContentResponse>(
+                                    return new global::Langfuse.AutoSDKHttpResponse<global::Langfuse.UnstableSkillFileContentsResponse>(
                                         statusCode: __response.StatusCode,
                                         headers: global::Langfuse.AutoSDKHttpResponse.CreateHeaders(__response),
                                         requestUri: __response.RequestMessage?.RequestUri,
