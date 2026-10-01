@@ -65,7 +65,7 @@ namespace Langfuse
         public string? UserId { get; set; }
 
         /// <summary>
-        /// The metadata associated with the trace. Can be any JSON.
+        /// The metadata associated with the trace. Values can be any JSON; non-object metadata sent at ingestion is returned under the `metadata` key.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
         public object? Metadata { get; set; }
@@ -137,7 +137,7 @@ namespace Langfuse
         /// The user identifier associated with the trace
         /// </param>
         /// <param name="metadata">
-        /// The metadata associated with the trace. Can be any JSON.
+        /// The metadata associated with the trace. Values can be any JSON; non-object metadata sent at ingestion is returned under the `metadata` key.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
