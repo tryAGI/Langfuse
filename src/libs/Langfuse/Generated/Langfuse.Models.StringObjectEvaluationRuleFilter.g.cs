@@ -26,12 +26,12 @@ namespace Langfuse
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("operator")]
-        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.EvaluationRuleStringFilterOperatorJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.EvaluationRuleStringObjectFilterOperatorJsonConverter))]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Langfuse.EvaluationRuleStringFilterOperator Operator { get; set; }
+        public required global::Langfuse.EvaluationRuleStringObjectFilterOperator Operator { get; set; }
 
         /// <summary>
-        ///
+        /// Value to compare against. Ignored for `is set` / `is not set`; send `""`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -53,14 +53,16 @@ namespace Langfuse
         /// Top-level key inside the object-valued column to filter on.
         /// </param>
         /// <param name="operator"></param>
-        /// <param name="value"></param>
+        /// <param name="value">
+        /// Value to compare against. Ignored for `is set` / `is not set`; send `""`.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public StringObjectEvaluationRuleFilter(
             string column,
             string key,
-            global::Langfuse.EvaluationRuleStringFilterOperator @operator,
+            global::Langfuse.EvaluationRuleStringObjectFilterOperator @operator,
             string value)
         {
             this.Column = column ?? throw new global::System.ArgumentNullException(nameof(column));

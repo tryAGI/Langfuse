@@ -22,6 +22,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PromptVariableMappingSource), TypeInfoPropertyName = "PromptVariableMappingSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleStringFilterOperator), TypeInfoPropertyName = "EvaluationRuleStringFilterOperator2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleStringObjectFilterOperator), TypeInfoPropertyName = "EvaluationRuleStringObjectFilterOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleNumberFilterOperator), TypeInfoPropertyName = "EvaluationRuleNumberFilterOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleOptionsFilterOperator), TypeInfoPropertyName = "EvaluationRuleOptionsFilterOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleArrayOptionsFilterOperator), TypeInfoPropertyName = "EvaluationRuleArrayOptionsFilterOperator2")]
@@ -105,6 +106,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PromptVariableMappingSource?), TypeInfoPropertyName = "NullablePromptVariableMappingSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleStringFilterOperator?), TypeInfoPropertyName = "NullableEvaluationRuleStringFilterOperator2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleStringObjectFilterOperator?), TypeInfoPropertyName = "NullableEvaluationRuleStringObjectFilterOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleNumberFilterOperator?), TypeInfoPropertyName = "NullableEvaluationRuleNumberFilterOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleOptionsFilterOperator?), TypeInfoPropertyName = "NullableEvaluationRuleOptionsFilterOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleArrayOptionsFilterOperator?), TypeInfoPropertyName = "NullableEvaluationRuleArrayOptionsFilterOperator2")]
@@ -236,6 +238,10 @@ namespace Langfuse
 
                     || typeToConvert == typeof(global::Langfuse.EvaluationRuleStringFilterOperator?)
 
+                    || typeToConvert == typeof(global::Langfuse.EvaluationRuleStringObjectFilterOperator)
+
+                    || typeToConvert == typeof(global::Langfuse.EvaluationRuleStringObjectFilterOperator?)
+
                     || typeToConvert == typeof(global::Langfuse.EvaluationRuleNumberFilterOperator)
 
                     || typeToConvert == typeof(global::Langfuse.EvaluationRuleNumberFilterOperator?)
@@ -327,6 +333,16 @@ namespace Langfuse
                 if (typeToConvert == typeof(global::Langfuse.EvaluationRuleStringFilterOperator?))
                 {
                     return new global::Langfuse.JsonConverters.EvaluationRuleStringFilterOperatorNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.EvaluationRuleStringObjectFilterOperator))
+                {
+                    return new global::Langfuse.JsonConverters.EvaluationRuleStringObjectFilterOperatorJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.EvaluationRuleStringObjectFilterOperator?))
+                {
+                    return new global::Langfuse.JsonConverters.EvaluationRuleStringObjectFilterOperatorNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Langfuse.EvaluationRuleNumberFilterOperator))

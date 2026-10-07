@@ -1,4 +1,6 @@
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 #nullable enable
 
 namespace Langfuse
@@ -38,6 +40,7 @@ namespace Langfuse
         /// Ignored. Accepted only for compatibility with identity providers that always send a password on user creation (Okta sends a placeholder value even when password sync is disabled). No credential is created for the user; provisioned users authenticate via SSO or set a password themselves through the password reset flow.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("password")]
+        [global::System.Obsolete("This property marked as deprecated.")]
         public string? Password { get; set; }
 
         /// <summary>
@@ -59,9 +62,6 @@ namespace Langfuse
         /// <param name="active">
         /// Whether the user is active
         /// </param>
-        /// <param name="password">
-        /// Ignored. Accepted only for compatibility with identity providers that always send a password on user creation (Okta sends a placeholder value even when password sync is disabled). No credential is created for the user; provisioned users authenticate via SSO or set a password themselves through the password reset flow.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -69,14 +69,12 @@ namespace Langfuse
             string userName,
             global::Langfuse.ScimName name,
             global::System.Collections.Generic.IList<global::Langfuse.ScimEmail>? emails,
-            bool? active,
-            string? password)
+            bool? active)
         {
             this.UserName = userName ?? throw new global::System.ArgumentNullException(nameof(userName));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Emails = emails;
             this.Active = active;
-            this.Password = password;
         }
 
         /// <summary>

@@ -195,6 +195,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PublicEvaluatorOutputDefinitionPublicEvaluatorCategoricalScore2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PublicEvaluatorOutputDefinitionPublicEvaluatorCategoricalScoreDataType), TypeInfoPropertyName = "PublicEvaluatorOutputDefinitionPublicEvaluatorCategoricalScoreDataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleStringFilterOperator), TypeInfoPropertyName = "EvaluationRuleStringFilterOperator2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleStringObjectFilterOperator), TypeInfoPropertyName = "EvaluationRuleStringObjectFilterOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleNumberFilterOperator), TypeInfoPropertyName = "EvaluationRuleNumberFilterOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleOptionsFilterOperator), TypeInfoPropertyName = "EvaluationRuleOptionsFilterOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleArrayOptionsFilterOperator), TypeInfoPropertyName = "EvaluationRuleArrayOptionsFilterOperator2")]
@@ -508,7 +509,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectObservationV3))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectSessionV3))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectExperimentV3))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectV3), TypeInfoPropertyName = "ScoreSubjectV32")]
     internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
     }
@@ -523,6 +523,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string?>), TypeInfoPropertyName = "IListString_System_Collections_Generic_IList_string_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string?>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectV3), TypeInfoPropertyName = "ScoreSubjectV32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV32, global::Langfuse.ScoreSubjectTraceV3>), TypeInfoPropertyName = "AllOfScoreSubjectV3ScoreSubjectTraceV32ScoreSubjectTraceV32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV32))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV3Kind), TypeInfoPropertyName = "ScoreSubjectV3ScoreSubjectTraceV3Kind2")]
@@ -558,9 +559,14 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV3CorrectionScoreV3DataType), TypeInfoPropertyName = "ScoreV3CorrectionScoreV3DataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresV3Meta))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresV3Response))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoresRequest), TypeInfoPropertyName = "CreateScoresRequest2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.CreateScoreRequest>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreSource), TypeInfoPropertyName = "CreateScoreSource2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoresResponse), TypeInfoPropertyName = "CreateScoresResponse2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreBatchResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreBatchResults))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseTraceData))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataNumeric))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataCategorical))]
@@ -585,6 +591,8 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataTextDataType), TypeInfoPropertyName = "GetScoresResponseDataGetScoresResponseDataTextDataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.GetScoresResponseData>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.CreateScoreBatchError>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreBatchError))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PaginatedSessions))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.Session>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.Traces))]
@@ -740,6 +748,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.PublicEvaluatorOutputDefinitionPublicEvaluatorCategoricalScore2, global::Langfuse.PublicEvaluatorCategoricalScore>?), TypeInfoPropertyName = "NullableAllOfPublicEvaluatorOutputDefinitionPublicEvaluatorCategoricalScore2PublicEvaluatorCategoricalScore2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PublicEvaluatorOutputDefinitionPublicEvaluatorCategoricalScoreDataType?), TypeInfoPropertyName = "NullablePublicEvaluatorOutputDefinitionPublicEvaluatorCategoricalScoreDataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleStringFilterOperator?), TypeInfoPropertyName = "NullableEvaluationRuleStringFilterOperator2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleStringObjectFilterOperator?), TypeInfoPropertyName = "NullableEvaluationRuleStringObjectFilterOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleNumberFilterOperator?), TypeInfoPropertyName = "NullableEvaluationRuleNumberFilterOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleOptionsFilterOperator?), TypeInfoPropertyName = "NullableEvaluationRuleOptionsFilterOperator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleArrayOptionsFilterOperator?), TypeInfoPropertyName = "NullableEvaluationRuleArrayOptionsFilterOperator2")]
@@ -851,7 +860,9 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV3TextScoreV3DataType?), TypeInfoPropertyName = "NullableScoreV3TextScoreV3DataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.ScoreV3CorrectionScoreV32, global::Langfuse.CorrectionScoreV3>?), TypeInfoPropertyName = "NullableAllOfScoreV3CorrectionScoreV32CorrectionScoreV32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV3CorrectionScoreV3DataType?), TypeInfoPropertyName = "NullableScoreV3CorrectionScoreV3DataType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoresRequest?), TypeInfoPropertyName = "NullableCreateScoresRequest2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreSource?), TypeInfoPropertyName = "NullableCreateScoreSource2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoresResponse?), TypeInfoPropertyName = "NullableCreateScoresResponse2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseData?), TypeInfoPropertyName = "NullableGetScoresResponseData2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataNumeric2, global::Langfuse.GetScoresResponseDataNumeric>?), TypeInfoPropertyName = "NullableAllOfGetScoresResponseDataGetScoresResponseDataNumeric2GetScoresResponseDataNumeric2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataNumericDataType?), TypeInfoPropertyName = "NullableGetScoresResponseDataGetScoresResponseDataNumericDataType2")]
@@ -938,7 +949,9 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.ScimUser>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.ScimEmail>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.ScoreConfig>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.CreateScoreRequest>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.GetScoresResponseData>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.CreateScoreBatchError>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.Session>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.TraceWithDetails>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableDashboardWidgetDimension>))]
@@ -1017,6 +1030,8 @@ namespace Langfuse
             options.Converters.Add(new global::Langfuse.JsonConverters.ChatMessageWithPlaceholdersJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.ScoreSubjectV3JsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.ScoreV3JsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.CreateScoresRequestJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.CreateScoresResponseJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.GetScoresResponseDataJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnstableDashboardPlacementJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnstableCreateDashboardPlacementRequestJsonConverter());
@@ -1262,6 +1277,10 @@ namespace Langfuse
                     || typeToConvert == typeof(global::Langfuse.EvaluationRuleStringFilterOperator)
 
                     || typeToConvert == typeof(global::Langfuse.EvaluationRuleStringFilterOperator?)
+
+                    || typeToConvert == typeof(global::Langfuse.EvaluationRuleStringObjectFilterOperator)
+
+                    || typeToConvert == typeof(global::Langfuse.EvaluationRuleStringObjectFilterOperator?)
 
                     || typeToConvert == typeof(global::Langfuse.EvaluationRuleNumberFilterOperator)
 
@@ -1954,6 +1973,16 @@ namespace Langfuse
                 if (typeToConvert == typeof(global::Langfuse.EvaluationRuleStringFilterOperator?))
                 {
                     return new global::Langfuse.JsonConverters.EvaluationRuleStringFilterOperatorNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.EvaluationRuleStringObjectFilterOperator))
+                {
+                    return new global::Langfuse.JsonConverters.EvaluationRuleStringObjectFilterOperatorJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.EvaluationRuleStringObjectFilterOperator?))
+                {
+                    return new global::Langfuse.JsonConverters.EvaluationRuleStringObjectFilterOperatorNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Langfuse.EvaluationRuleNumberFilterOperator))

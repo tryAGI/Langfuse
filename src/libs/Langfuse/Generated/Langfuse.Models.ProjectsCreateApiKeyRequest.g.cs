@@ -1,4 +1,6 @@
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 #nullable enable
 
 namespace Langfuse
@@ -9,10 +11,23 @@ namespace Langfuse
     public sealed partial class ProjectsCreateApiKeyRequest
     {
         /// <summary>
-        /// Optional note for the API key
+        /// Optional name for the API key. Cannot be provided together with note, even if either value is an empty string.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string? Name { get; set; }
+
+        /// <summary>
+        /// Deprecated alias for name. Cannot be provided together with name, even if either value is an empty string.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("note")]
+        [global::System.Obsolete("This property marked as deprecated.")]
         public string? Note { get; set; }
+
+        /// <summary>
+        /// Optional expiration timestamp in ISO 8601 format. Must be in the future. Omit or set to null for a key that does not expire.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("expiresAt")]
+        public global::System.DateTime? ExpiresAt { get; set; }
 
         /// <summary>
         /// Optional predefined public key. Must start with 'pk-lf-'. If provided, secretKey must also be provided.
@@ -35,8 +50,11 @@ namespace Langfuse
         /// <summary>
         /// Initializes a new instance of the <see cref="ProjectsCreateApiKeyRequest" /> class.
         /// </summary>
-        /// <param name="note">
-        /// Optional note for the API key
+        /// <param name="name">
+        /// Optional name for the API key. Cannot be provided together with note, even if either value is an empty string.
+        /// </param>
+        /// <param name="expiresAt">
+        /// Optional expiration timestamp in ISO 8601 format. Must be in the future. Omit or set to null for a key that does not expire.
         /// </param>
         /// <param name="publicKey">
         /// Optional predefined public key. Must start with 'pk-lf-'. If provided, secretKey must also be provided.
@@ -48,11 +66,13 @@ namespace Langfuse
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public ProjectsCreateApiKeyRequest(
-            string? note,
+            string? name,
+            global::System.DateTime? expiresAt,
             string? publicKey,
             string? secretKey)
         {
-            this.Note = note;
+            this.Name = name;
+            this.ExpiresAt = expiresAt;
             this.PublicKey = publicKey;
             this.SecretKey = secretKey;
         }

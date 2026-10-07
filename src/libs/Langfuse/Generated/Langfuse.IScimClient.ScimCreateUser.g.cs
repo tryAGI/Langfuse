@@ -1,5 +1,7 @@
 #nullable enable
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 namespace Langfuse
 {
     public partial interface IScimClient
@@ -41,9 +43,6 @@ namespace Langfuse
         /// <param name="active">
         /// Whether the user is active
         /// </param>
-        /// <param name="password">
-        /// Ignored. Accepted only for compatibility with identity providers that always send a password on user creation (Okta sends a placeholder value even when password sync is disabled). No credential is created for the user; provisioned users authenticate via SSO or set a password themselves through the password reset flow.
-        /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::System.InvalidOperationException"></exception>
@@ -52,7 +51,6 @@ namespace Langfuse
             global::Langfuse.ScimName name,
             global::System.Collections.Generic.IList<global::Langfuse.ScimEmail>? emails = default,
             bool? active = default,
-            string? password = default,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default);
     }
