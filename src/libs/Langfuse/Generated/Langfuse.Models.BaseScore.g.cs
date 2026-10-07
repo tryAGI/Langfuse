@@ -91,8 +91,7 @@ namespace Langfuse
         /// Metadata associated with the score
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required object Metadata { get; set; }
+        public object? Metadata { get; set; }
 
         /// <summary>
         /// Reference a score config on a score. When set, config and score name must be equal and value must comply to optionally defined numerical range
@@ -128,9 +127,6 @@ namespace Langfuse
         /// <param name="timestamp"></param>
         /// <param name="createdAt"></param>
         /// <param name="updatedAt"></param>
-        /// <param name="metadata">
-        /// Metadata associated with the score
-        /// </param>
         /// <param name="environment">
         /// The environment from which this score originated. Can be any lowercase alphanumeric string with hyphens and underscores that does not start with 'langfuse'.
         /// </param>
@@ -152,6 +148,9 @@ namespace Langfuse
         /// <param name="comment">
         /// Comment on the score
         /// </param>
+        /// <param name="metadata">
+        /// Metadata associated with the score
+        /// </param>
         /// <param name="configId">
         /// Reference a score config on a score. When set, config and score name must be equal and value must comply to optionally defined numerical range
         /// </param>
@@ -168,7 +167,6 @@ namespace Langfuse
             global::System.DateTime timestamp,
             global::System.DateTime createdAt,
             global::System.DateTime updatedAt,
-            object metadata,
             string environment,
             string? traceId,
             string? sessionId,
@@ -176,6 +174,7 @@ namespace Langfuse
             string? datasetRunId,
             string? authorUserId,
             string? comment,
+            object? metadata,
             string? configId,
             string? queueId)
         {
@@ -191,7 +190,7 @@ namespace Langfuse
             this.UpdatedAt = updatedAt;
             this.AuthorUserId = authorUserId;
             this.Comment = comment;
-            this.Metadata = metadata ?? throw new global::System.ArgumentNullException(nameof(metadata));
+            this.Metadata = metadata;
             this.ConfigId = configId;
             this.QueueId = queueId;
             this.Environment = environment ?? throw new global::System.ArgumentNullException(nameof(environment));

@@ -83,8 +83,7 @@ namespace Langfuse
         /// Additional metadata of the observation
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("metadata")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required object Metadata { get; set; }
+        public object? Metadata { get; set; }
 
         /// <summary>
         /// The output data of the observation
@@ -171,9 +170,6 @@ namespace Langfuse
         /// <param name="input">
         /// The input data of the observation
         /// </param>
-        /// <param name="metadata">
-        /// Additional metadata of the observation
-        /// </param>
         /// <param name="output">
         /// The output data of the observation
         /// </param>
@@ -208,6 +204,9 @@ namespace Langfuse
         /// <param name="version">
         /// The version of the observation
         /// </param>
+        /// <param name="metadata">
+        /// Additional metadata of the observation
+        /// </param>
         /// <param name="statusMessage">
         /// The status message of the observation
         /// </param>
@@ -226,7 +225,6 @@ namespace Langfuse
             global::System.DateTime startTime,
             object modelParameters,
             object input,
-            object metadata,
             object output,
             global::Langfuse.Usage usage,
             global::Langfuse.ObservationLevel level,
@@ -239,6 +237,7 @@ namespace Langfuse
             global::System.DateTime? completionStartTime,
             string? model,
             string? version,
+            object? metadata,
             string? statusMessage,
             string? parentObservationId,
             string? promptId)
@@ -254,7 +253,7 @@ namespace Langfuse
             this.ModelParameters = modelParameters ?? throw new global::System.ArgumentNullException(nameof(modelParameters));
             this.Input = input ?? throw new global::System.ArgumentNullException(nameof(input));
             this.Version = version;
-            this.Metadata = metadata ?? throw new global::System.ArgumentNullException(nameof(metadata));
+            this.Metadata = metadata;
             this.Output = output ?? throw new global::System.ArgumentNullException(nameof(output));
             this.Usage = usage ?? throw new global::System.ArgumentNullException(nameof(usage));
             this.Level = level;

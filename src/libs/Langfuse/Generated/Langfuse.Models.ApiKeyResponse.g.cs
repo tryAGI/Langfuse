@@ -1,4 +1,6 @@
 
+#pragma warning disable CS0618 // Type or member is obsolete
+
 #nullable enable
 
 namespace Langfuse
@@ -23,6 +25,12 @@ namespace Langfuse
         public required global::System.DateTime CreatedAt { get; set; }
 
         /// <summary>
+        /// Expiration timestamp. Null if the key does not expire.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("expiresAt")]
+        public global::System.DateTime? ExpiresAt { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("publicKey")]
@@ -44,9 +52,16 @@ namespace Langfuse
         public required string DisplaySecretKey { get; set; }
 
         /// <summary>
-        ///
+        /// Name of the API key. Contains the same value as note; null if no name was provided.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("name")]
+        public string? Name { get; set; }
+
+        /// <summary>
+        /// Deprecated alias for name. Contains the same value as name.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("note")]
+        [global::System.Obsolete("This property marked as deprecated.")]
         public string? Note { get; set; }
 
         /// <summary>
@@ -63,7 +78,12 @@ namespace Langfuse
         /// <param name="publicKey"></param>
         /// <param name="secretKey"></param>
         /// <param name="displaySecretKey"></param>
-        /// <param name="note"></param>
+        /// <param name="expiresAt">
+        /// Expiration timestamp. Null if the key does not expire.
+        /// </param>
+        /// <param name="name">
+        /// Name of the API key. Contains the same value as note; null if no name was provided.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -73,14 +93,16 @@ namespace Langfuse
             string publicKey,
             string secretKey,
             string displaySecretKey,
-            string? note)
+            global::System.DateTime? expiresAt,
+            string? name)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.CreatedAt = createdAt;
+            this.ExpiresAt = expiresAt;
             this.PublicKey = publicKey ?? throw new global::System.ArgumentNullException(nameof(publicKey));
             this.SecretKey = secretKey ?? throw new global::System.ArgumentNullException(nameof(secretKey));
             this.DisplaySecretKey = displaySecretKey ?? throw new global::System.ArgumentNullException(nameof(displaySecretKey));
-            this.Note = note;
+            this.Name = name;
         }
 
         /// <summary>

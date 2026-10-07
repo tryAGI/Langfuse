@@ -43,12 +43,6 @@ namespace Langfuse
         public string? AuthorUserId { get; set; }
 
         /// <summary>
-        /// The start time of the referenced object (for observations, the observation's start time). Optional performance hint - when provided, Langfuse narrows the lookup to validate the reference faster. It only affects speed - an incorrect or omitted value never changes the result.
-        /// </summary>
-        [global::System.Text.Json.Serialization.JsonPropertyName("objectStartTime")]
-        public global::System.DateTime? ObjectStartTime { get; set; }
-
-        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -72,9 +66,6 @@ namespace Langfuse
         /// <param name="authorUserId">
         /// The id of the user who created the comment. Must be a member of the organization that owns the project, otherwise an error will be thrown.
         /// </param>
-        /// <param name="objectStartTime">
-        /// The start time of the referenced object (for observations, the observation's start time). Optional performance hint - when provided, Langfuse narrows the lookup to validate the reference faster. It only affects speed - an incorrect or omitted value never changes the result.
-        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -83,15 +74,13 @@ namespace Langfuse
             string objectType,
             string objectId,
             string content,
-            string? authorUserId,
-            global::System.DateTime? objectStartTime)
+            string? authorUserId)
         {
             this.ProjectId = projectId ?? throw new global::System.ArgumentNullException(nameof(projectId));
             this.ObjectType = objectType ?? throw new global::System.ArgumentNullException(nameof(objectType));
             this.ObjectId = objectId ?? throw new global::System.ArgumentNullException(nameof(objectId));
             this.Content = content ?? throw new global::System.ArgumentNullException(nameof(content));
             this.AuthorUserId = authorUserId;
-            this.ObjectStartTime = objectStartTime;
         }
 
         /// <summary>
