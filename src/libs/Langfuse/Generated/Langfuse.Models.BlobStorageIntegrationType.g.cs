@@ -15,6 +15,10 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
+        GoogleCloudStorage,
+        /// <summary>
+        ///
+        /// </summary>
         S3,
         /// <summary>
         ///
@@ -35,6 +39,7 @@ namespace Langfuse
             return value switch
             {
                 BlobStorageIntegrationType.AzureBlobStorage => "AZURE_BLOB_STORAGE",
+                BlobStorageIntegrationType.GoogleCloudStorage => "GOOGLE_CLOUD_STORAGE",
                 BlobStorageIntegrationType.S3 => "S3",
                 BlobStorageIntegrationType.S3Compatible => "S3_COMPATIBLE",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
@@ -48,6 +53,7 @@ namespace Langfuse
             return value switch
             {
                 "AZURE_BLOB_STORAGE" => BlobStorageIntegrationType.AzureBlobStorage,
+                "GOOGLE_CLOUD_STORAGE" => BlobStorageIntegrationType.GoogleCloudStorage,
                 "S3" => BlobStorageIntegrationType.S3,
                 "S3_COMPATIBLE" => BlobStorageIntegrationType.S3Compatible,
                 _ => null,
