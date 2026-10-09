@@ -28,55 +28,25 @@ namespace Langfuse.JsonConverters
             }
 
             var __score0 = 0;
-            if (__jsonProps.Contains("id")) __score0++;
+            if (__jsonProps.Contains("accepted")) __score0++;
+            if (__jsonProps.Contains("errors")) __score0++;
+            if (__jsonProps.Contains("rejected")) __score0++;
             var __score1 = 0;
-            if (__jsonProps.Contains("message")) __score1++;
+            if (__jsonProps.Contains("id")) __score1++;
             var __score2 = 0;
-            if (__jsonProps.Contains("accepted")) __score2++;
-            if (__jsonProps.Contains("errors")) __score2++;
-            if (__jsonProps.Contains("rejected")) __score2++;
+            if (__jsonProps.Contains("message")) __score2++;
             var __bestScore = 0;
             var __bestIndex = -1;
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
             if (__score1 > __bestScore) { __bestScore = __score1; __bestIndex = 1; }
             if (__score2 > __bestScore) { __bestScore = __score2; __bestIndex = 2; }
 
+            global::Langfuse.CreateScoreBatchResults? createScoreBatchResults = default;
             global::Langfuse.CreateScoreResponse? createScoreResponse = default;
             global::Langfuse.CreateScoreBatchResponse? createScoreBatchResponse = default;
-            global::Langfuse.CreateScoreBatchResults? createScoreBatchResults = default;
             if (__bestIndex >= 0)
             {
                 if (__bestIndex == 0)
-                {
-                    try
-                    {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.CreateScoreResponse), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.CreateScoreResponse> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.CreateScoreResponse).Name}");
-                        createScoreResponse = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
-                    }
-                    catch (global::System.Text.Json.JsonException)
-                    {
-                    }
-                    catch (global::System.InvalidOperationException)
-                    {
-                    }
-                }
-                else if (__bestIndex == 1)
-                {
-                    try
-                    {
-                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.CreateScoreBatchResponse), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.CreateScoreBatchResponse> ??
-                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.CreateScoreBatchResponse).Name}");
-                        createScoreBatchResponse = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
-                    }
-                    catch (global::System.Text.Json.JsonException)
-                    {
-                    }
-                    catch (global::System.InvalidOperationException)
-                    {
-                    }
-                }
-                else if (__bestIndex == 2)
                 {
                     try
                     {
@@ -91,43 +61,39 @@ namespace Langfuse.JsonConverters
                     {
                     }
                 }
-            }
-
-            if (createScoreResponse == null && createScoreBatchResponse == null && createScoreBatchResults == null)
-            {
-                try
+                else if (__bestIndex == 1)
                 {
-
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.CreateScoreResponse), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.CreateScoreResponse> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.CreateScoreResponse).Name}");
-                    createScoreResponse = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    try
+                    {
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.CreateScoreResponse), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.CreateScoreResponse> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.CreateScoreResponse).Name}");
+                        createScoreResponse = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    }
+                    catch (global::System.Text.Json.JsonException)
+                    {
+                    }
+                    catch (global::System.InvalidOperationException)
+                    {
+                    }
                 }
-                catch (global::System.Text.Json.JsonException)
+                else if (__bestIndex == 2)
                 {
-                }
-                catch (global::System.InvalidOperationException)
-                {
-                }
-            }
-
-            if (createScoreResponse == null && createScoreBatchResponse == null && createScoreBatchResults == null)
-            {
-                try
-                {
-
-                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.CreateScoreBatchResponse), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.CreateScoreBatchResponse> ??
-                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.CreateScoreBatchResponse).Name}");
-                    createScoreBatchResponse = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
-                }
-                catch (global::System.Text.Json.JsonException)
-                {
-                }
-                catch (global::System.InvalidOperationException)
-                {
+                    try
+                    {
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.CreateScoreBatchResponse), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.CreateScoreBatchResponse> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.CreateScoreBatchResponse).Name}");
+                        createScoreBatchResponse = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    }
+                    catch (global::System.Text.Json.JsonException)
+                    {
+                    }
+                    catch (global::System.InvalidOperationException)
+                    {
+                    }
                 }
             }
 
-            if (createScoreResponse == null && createScoreBatchResponse == null && createScoreBatchResults == null)
+            if (createScoreBatchResults == null && createScoreResponse == null && createScoreBatchResponse == null)
             {
                 try
                 {
@@ -144,12 +110,46 @@ namespace Langfuse.JsonConverters
                 }
             }
 
+            if (createScoreBatchResults == null && createScoreResponse == null && createScoreBatchResponse == null)
+            {
+                try
+                {
+
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.CreateScoreResponse), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.CreateScoreResponse> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.CreateScoreResponse).Name}");
+                    createScoreResponse = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                }
+                catch (global::System.Text.Json.JsonException)
+                {
+                }
+                catch (global::System.InvalidOperationException)
+                {
+                }
+            }
+
+            if (createScoreBatchResults == null && createScoreResponse == null && createScoreBatchResponse == null)
+            {
+                try
+                {
+
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.CreateScoreBatchResponse), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.CreateScoreBatchResponse> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.CreateScoreBatchResponse).Name}");
+                    createScoreBatchResponse = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                }
+                catch (global::System.Text.Json.JsonException)
+                {
+                }
+                catch (global::System.InvalidOperationException)
+                {
+                }
+            }
+
             var __value = new global::Langfuse.CreateScoresResponse(
+                createScoreBatchResults,
+
                 createScoreResponse,
 
-                createScoreBatchResponse,
-
-                createScoreBatchResults
+                createScoreBatchResponse
                 );
 
             return __value;
@@ -164,7 +164,13 @@ namespace Langfuse.JsonConverters
             options = options ?? throw new global::System.ArgumentNullException(nameof(options));
             var typeInfoResolver = options.TypeInfoResolver ?? throw new global::System.InvalidOperationException("TypeInfoResolver is not set.");
 
-            if (value.IsCreateScoreResponse)
+            if (value.IsCreateScoreBatchResults)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.CreateScoreBatchResults), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.CreateScoreBatchResults?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.CreateScoreBatchResults).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickCreateScoreBatchResults(), typeInfo);
+            }
+            else if (value.IsCreateScoreResponse)
             {
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.CreateScoreResponse), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.CreateScoreResponse?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.CreateScoreResponse).Name}");
@@ -175,12 +181,6 @@ namespace Langfuse.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.CreateScoreBatchResponse), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.CreateScoreBatchResponse?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.CreateScoreBatchResponse).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickCreateScoreBatchResponse(), typeInfo);
-            }
-            else if (value.IsCreateScoreBatchResults)
-            {
-                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.CreateScoreBatchResults), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.CreateScoreBatchResults?> ??
-                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.CreateScoreBatchResults).Name}");
-                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickCreateScoreBatchResults(), typeInfo);
             }
         }
     }

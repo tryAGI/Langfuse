@@ -2161,15 +2161,15 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.CreateScoreResponse? Type532 { get; set; }
+        public global::Langfuse.CreateScoreBatchResults? Type532 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.CreateScoreBatchResponse? Type533 { get; set; }
+        public global::Langfuse.CreateScoreResponse? Type533 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.CreateScoreBatchResults? Type534 { get; set; }
+        public global::Langfuse.CreateScoreBatchResponse? Type534 { get; set; }
         /// <summary>
         ///
         /// </summary>
