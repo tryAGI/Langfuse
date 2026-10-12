@@ -9,7 +9,7 @@ namespace Langfuse
     public sealed partial class CreateTextPromptRequest
     {
         /// <summary>
-        ///
+        /// The full prompt name, including any folder path, with at most 255 characters.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -62,7 +62,9 @@ namespace Langfuse
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateTextPromptRequest" /> class.
         /// </summary>
-        /// <param name="name"></param>
+        /// <param name="name">
+        /// The full prompt name, including any folder path, with at most 255 characters.
+        /// </param>
         /// <param name="prompt"></param>
         /// <param name="config"></param>
         /// <param name="type"></param>
