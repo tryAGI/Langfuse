@@ -85,6 +85,12 @@ namespace Langfuse
         public required global::System.DateTime UpdatedAt { get; set; }
 
         /// <summary>
+        /// When this version of the dataset item became current. Listing dataset items with a `version` at or after this timestamp returns this item version, until the item is changed again. Self-hosted deployments that set `LANGFUSE_DATASET_SERVICE_WRITE_TO_VERSIONED_IMPLEMENTATION=false` update items in place, so there it stays at the item's first write.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("version")]
+        public global::System.DateTime? Version { get; set; }
+
+        /// <summary>
         /// Resolved Langfuse media references found in input, expectedOutput, and metadata.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("mediaReferences")]
@@ -124,6 +130,9 @@ namespace Langfuse
         /// <param name="sourceObservationId">
         /// The observation ID that sourced this dataset item
         /// </param>
+        /// <param name="version">
+        /// When this version of the dataset item became current. Listing dataset items with a `version` at or after this timestamp returns this item version, until the item is changed again. Self-hosted deployments that set `LANGFUSE_DATASET_SERVICE_WRITE_TO_VERSIONED_IMPLEMENTATION=false` update items in place, so there it stays at the item's first write.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -139,7 +148,8 @@ namespace Langfuse
             global::System.DateTime updatedAt,
             global::System.Collections.Generic.IList<global::Langfuse.DatasetItemMediaReference> mediaReferences,
             string? sourceTraceId,
-            string? sourceObservationId)
+            string? sourceObservationId,
+            global::System.DateTime? version)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Status = status;
@@ -152,6 +162,7 @@ namespace Langfuse
             this.DatasetName = datasetName ?? throw new global::System.ArgumentNullException(nameof(datasetName));
             this.CreatedAt = createdAt;
             this.UpdatedAt = updatedAt;
+            this.Version = version;
             this.MediaReferences = mediaReferences ?? throw new global::System.ArgumentNullException(nameof(mediaReferences));
         }
 

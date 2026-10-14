@@ -106,11 +106,6 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public LegacyScoreV1Client LegacyScoreV1 { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
         public LlmConnectionsClient LlmConnections { get; }
 
         /// <summary>
@@ -172,11 +167,6 @@ namespace Langfuse
         ///
         /// </summary>
         public ScoresClient Scores { get; }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public ScoresV3Client ScoresV3 { get; }
 
         /// <summary>
         ///

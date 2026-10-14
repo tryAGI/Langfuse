@@ -27,11 +27,11 @@ namespace Langfuse
             };
         partial void PrepareScoresCreateArguments(
             global::System.Net.Http.HttpClient httpClient,
-            global::Langfuse.CreateScoresRequest request);
+            global::System.Collections.Generic.IList<global::Langfuse.CreateScoreRequest> request);
         partial void PrepareScoresCreateRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
-            global::Langfuse.CreateScoresRequest request);
+            global::System.Collections.Generic.IList<global::Langfuse.CreateScoreRequest> request);
         partial void ProcessScoresCreateResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -42,7 +42,7 @@ namespace Langfuse
             ref string content);
 
         /// <summary>
-        /// Create scores asynchronously. Single score: 200 with ID. Batch: 202 if accepted, or 207 with accepted/rejected counts and error messages. Do not automatically retry a 207 batch. The generated reference shows only 200; batches return 202 or 207.
+        /// Create scores asynchronously from a list of scores. Returns 202 if all scores are accepted, or 207 with accepted/rejected counts and error messages. Do not automatically retry a 207 batch. The generated reference shows only 200; the endpoint returns 202 or 207.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -50,7 +50,7 @@ namespace Langfuse
         /// <exception cref="global::Langfuse.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Langfuse.CreateScoresResponse> ScoresCreateAsync(
 
-            global::Langfuse.CreateScoresRequest request,
+            global::System.Collections.Generic.IList<global::Langfuse.CreateScoreRequest> request,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -64,7 +64,7 @@ namespace Langfuse
             return __response.Body;
         }
         /// <summary>
-        /// Create scores asynchronously. Single score: 200 with ID. Batch: 202 if accepted, or 207 with accepted/rejected counts and error messages. Do not automatically retry a 207 batch. The generated reference shows only 200; batches return 202 or 207.
+        /// Create scores asynchronously from a list of scores. Returns 202 if all scores are accepted, or 207 with accepted/rejected counts and error messages. Do not automatically retry a 207 batch. The generated reference shows only 200; the endpoint returns 202 or 207.
         /// </summary>
         /// <param name="request"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
@@ -72,10 +72,12 @@ namespace Langfuse
         /// <exception cref="global::Langfuse.ApiException"></exception>
         public async global::System.Threading.Tasks.Task<global::Langfuse.AutoSDKHttpResponse<global::Langfuse.CreateScoresResponse>> ScoresCreateAsResponseAsync(
 
-            global::Langfuse.CreateScoresRequest request,
+            global::System.Collections.Generic.IList<global::Langfuse.CreateScoreRequest> request,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
+            request = request ?? throw new global::System.ArgumentNullException(nameof(request));
+
             PrepareArguments(
                 client: HttpClient);
             PrepareScoresCreateArguments(
@@ -137,7 +139,7 @@ namespace Langfuse
                     __httpRequest.Headers.Add(__authorization.Name, __authorization.Value);
                 }
             }
-                            var __httpRequestContentBody = request.ToJson(JsonSerializerContext);
+                            var __httpRequestContentBody = global::System.Text.Json.JsonSerializer.Serialize(request, request.GetType(), JsonSerializerContext);
                             var __httpRequestContent = new global::System.Net.Http.StringContent(
                                 content: __httpRequestContentBody,
                                 encoding: global::System.Text.Encoding.UTF8,
@@ -613,25 +615,6 @@ namespace Langfuse
             {
                 __httpRequest?.Dispose();
             }
-        }
-        /// <summary>
-        /// Create scores asynchronously. Single score: 200 with ID. Batch: 202 if accepted, or 207 with accepted/rejected counts and error messages. Do not automatically retry a 207 batch. The generated reference shows only 200; batches return 202 or 207.
-        /// </summary>
-        /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
-        /// <param name="cancellationToken">The token to cancel the operation with</param>
-        /// <exception cref="global::System.InvalidOperationException"></exception>
-        public async global::System.Threading.Tasks.Task<global::Langfuse.CreateScoresResponse> ScoresCreateAsync(
-            global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
-            global::System.Threading.CancellationToken cancellationToken = default)
-        {
-            var __request = new global::Langfuse.CreateScoresRequest
-            {
-            };
-
-            return await ScoresCreateAsync(
-                request: __request,
-                requestOptions: requestOptions,
-                cancellationToken: cancellationToken).ConfigureAwait(false);
         }
     }
 }
