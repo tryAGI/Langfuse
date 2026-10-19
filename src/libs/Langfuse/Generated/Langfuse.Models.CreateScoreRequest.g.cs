@@ -100,6 +100,12 @@ namespace Langfuse
         public global::Langfuse.CreateScoreSource? Source { get; set; }
 
         /// <summary>
+        /// The timestamp of the score, as an ISO 8601 datetime with a timezone offset. Defaults to the time the request is received. To update an existing score, send it again with the same id and timestamp.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("timestamp")]
+        public global::System.DateTime? Timestamp { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -134,6 +140,9 @@ namespace Langfuse
         /// EVAL is reserved for internal evaluator outputs and is intentionally not<br/>
         /// exposed here — use commons.ScoreSource when reading scores.
         /// </param>
+        /// <param name="timestamp">
+        /// The timestamp of the score, as an ISO 8601 datetime with a timezone offset. Defaults to the time the request is received. To update an existing score, send it again with the same id and timestamp.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -151,7 +160,8 @@ namespace Langfuse
             string? queueId,
             global::Langfuse.ScoreDataType? dataType,
             string? configId,
-            global::Langfuse.CreateScoreSource? source)
+            global::Langfuse.CreateScoreSource? source,
+            global::System.DateTime? timestamp)
         {
             this.Id = id;
             this.TraceId = traceId;
@@ -167,6 +177,7 @@ namespace Langfuse
             this.DataType = dataType;
             this.ConfigId = configId;
             this.Source = source;
+            this.Timestamp = timestamp;
         }
 
         /// <summary>

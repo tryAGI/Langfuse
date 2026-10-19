@@ -47,43 +47,6 @@ namespace Langfuse
             : throw new global::System.InvalidOperationException($"Expected union variant 'CreateScoreBatchResults' but the value was {ToString()}.");
 
         /// <summary>
-        ///
-        /// </summary>
-#if NET6_0_OR_GREATER
-        public global::Langfuse.CreateScoreResponse? CreateScoreResponse { get; init; }
-#else
-        public global::Langfuse.CreateScoreResponse? CreateScoreResponse { get; }
-#endif
-
-        /// <summary>
-        ///
-        /// </summary>
-#if NET6_0_OR_GREATER
-        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CreateScoreResponse))]
-#endif
-        public bool IsCreateScoreResponse => CreateScoreResponse != null;
-
-        /// <summary>
-        ///
-        /// </summary>
-        public bool TryPickCreateScoreResponse(
-#if NET6_0_OR_GREATER
-            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
-#endif
-            out global::Langfuse.CreateScoreResponse? value)
-        {
-            value = CreateScoreResponse;
-            return IsCreateScoreResponse;
-        }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public global::Langfuse.CreateScoreResponse PickCreateScoreResponse() => CreateScoreResponse is { } value
-            ? value
-            : throw new global::System.InvalidOperationException($"Expected union variant 'CreateScoreResponse' but the value was {ToString()}.");
-
-        /// <summary>
         /// Batch accepted (HTTP 202).
         /// </summary>
 #if NET6_0_OR_GREATER
@@ -145,29 +108,6 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public static implicit operator CreateScoresResponse(global::Langfuse.CreateScoreResponse value) => new CreateScoresResponse((global::Langfuse.CreateScoreResponse?)value);
-
-        /// <summary>
-        ///
-        /// </summary>
-        public static implicit operator global::Langfuse.CreateScoreResponse?(CreateScoresResponse @this) => @this.CreateScoreResponse;
-
-        /// <summary>
-        ///
-        /// </summary>
-        public CreateScoresResponse(global::Langfuse.CreateScoreResponse? value)
-        {
-            CreateScoreResponse = value;
-        }
-
-        /// <summary>
-        ///
-        /// </summary>
-        public static CreateScoresResponse FromCreateScoreResponse(global::Langfuse.CreateScoreResponse? value) => new CreateScoresResponse(value);
-
-        /// <summary>
-        ///
-        /// </summary>
         public static implicit operator CreateScoresResponse(global::Langfuse.CreateScoreBatchResponse value) => new CreateScoresResponse((global::Langfuse.CreateScoreBatchResponse?)value);
 
         /// <summary>
@@ -193,12 +133,10 @@ namespace Langfuse
         /// </summary>
         public CreateScoresResponse(
             global::Langfuse.CreateScoreBatchResults? createScoreBatchResults,
-            global::Langfuse.CreateScoreResponse? createScoreResponse,
             global::Langfuse.CreateScoreBatchResponse? createScoreBatchResponse
             )
         {
             CreateScoreBatchResults = createScoreBatchResults;
-            CreateScoreResponse = createScoreResponse;
             CreateScoreBatchResponse = createScoreBatchResponse;
         }
 
@@ -207,7 +145,6 @@ namespace Langfuse
         /// </summary>
         public object? Object =>
             CreateScoreBatchResponse as object ??
-            CreateScoreResponse as object ??
             CreateScoreBatchResults as object
             ;
 
@@ -216,7 +153,6 @@ namespace Langfuse
         /// </summary>
         public override string? ToString() =>
             CreateScoreBatchResults?.ToString() ??
-            CreateScoreResponse?.ToString() ??
             CreateScoreBatchResponse?.ToString()
             ;
 
@@ -225,7 +161,7 @@ namespace Langfuse
         /// </summary>
         public bool Validate()
         {
-            return IsCreateScoreBatchResults && !IsCreateScoreResponse && !IsCreateScoreBatchResponse || !IsCreateScoreBatchResults && IsCreateScoreResponse && !IsCreateScoreBatchResponse || !IsCreateScoreBatchResults && !IsCreateScoreResponse && IsCreateScoreBatchResponse;
+            return IsCreateScoreBatchResults && !IsCreateScoreBatchResponse || !IsCreateScoreBatchResults && IsCreateScoreBatchResponse;
         }
 
         /// <summary>
@@ -233,7 +169,6 @@ namespace Langfuse
         /// </summary>
         public TResult? Match<TResult>(
             global::System.Func<global::Langfuse.CreateScoreBatchResults, TResult>? createScoreBatchResults = null,
-            global::System.Func<global::Langfuse.CreateScoreResponse, TResult>? createScoreResponse = null,
             global::System.Func<global::Langfuse.CreateScoreBatchResponse, TResult>? createScoreBatchResponse = null,
             bool validate = true)
         {
@@ -246,13 +181,9 @@ namespace Langfuse
             {
                 return createScoreBatchResults(__value0);
             }
-            else if (CreateScoreResponse is { } __value1 && createScoreResponse != null)
+            else if (CreateScoreBatchResponse is { } __value1 && createScoreBatchResponse != null)
             {
-                return createScoreResponse(__value1);
-            }
-            else if (CreateScoreBatchResponse is { } __value2 && createScoreBatchResponse != null)
-            {
-                return createScoreBatchResponse(__value2);
+                return createScoreBatchResponse(__value1);
             }
 
             return default(TResult);
@@ -264,8 +195,6 @@ namespace Langfuse
         public void Match(
             global::System.Action<global::Langfuse.CreateScoreBatchResults>? createScoreBatchResults = null,
 
-            global::System.Action<global::Langfuse.CreateScoreResponse>? createScoreResponse = null,
-
             global::System.Action<global::Langfuse.CreateScoreBatchResponse>? createScoreBatchResponse = null,
             bool validate = true)
         {
@@ -278,13 +207,9 @@ namespace Langfuse
             {
                 createScoreBatchResults?.Invoke(__value0);
             }
-            else if (CreateScoreResponse is { } __value1)
+            else if (CreateScoreBatchResponse is { } __value1)
             {
-                createScoreResponse?.Invoke(__value1);
-            }
-            else if (CreateScoreBatchResponse is { } __value2)
-            {
-                createScoreBatchResponse?.Invoke(__value2);
+                createScoreBatchResponse?.Invoke(__value1);
             }
         }
 
@@ -293,7 +218,6 @@ namespace Langfuse
         /// </summary>
         public void Switch(
             global::System.Action<global::Langfuse.CreateScoreBatchResults>? createScoreBatchResults = null,
-            global::System.Action<global::Langfuse.CreateScoreResponse>? createScoreResponse = null,
             global::System.Action<global::Langfuse.CreateScoreBatchResponse>? createScoreBatchResponse = null,
             bool validate = true)
         {
@@ -306,13 +230,9 @@ namespace Langfuse
             {
                 createScoreBatchResults?.Invoke(__value0);
             }
-            else if (CreateScoreResponse is { } __value1)
+            else if (CreateScoreBatchResponse is { } __value1)
             {
-                createScoreResponse?.Invoke(__value1);
-            }
-            else if (CreateScoreBatchResponse is { } __value2)
-            {
-                createScoreBatchResponse?.Invoke(__value2);
+                createScoreBatchResponse?.Invoke(__value1);
             }
         }
 
@@ -325,8 +245,6 @@ namespace Langfuse
             {
                 CreateScoreBatchResults,
                 typeof(global::Langfuse.CreateScoreBatchResults),
-                CreateScoreResponse,
-                typeof(global::Langfuse.CreateScoreResponse),
                 CreateScoreBatchResponse,
                 typeof(global::Langfuse.CreateScoreBatchResponse),
             };
@@ -346,7 +264,6 @@ namespace Langfuse
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.CreateScoreBatchResults?>.Default.Equals(CreateScoreBatchResults, other.CreateScoreBatchResults) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.CreateScoreResponse?>.Default.Equals(CreateScoreResponse, other.CreateScoreResponse) &&
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.CreateScoreBatchResponse?>.Default.Equals(CreateScoreBatchResponse, other.CreateScoreBatchResponse)
                 ;
         }

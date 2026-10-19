@@ -16,7 +16,7 @@ namespace Langfuse
         public required string Id { get; set; }
 
         /// <summary>
-        ///
+        /// Score config name. Maximum 80 characters.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -92,7 +92,9 @@ namespace Langfuse
         /// Initializes a new instance of the <see cref="ScoreConfig" /> class.
         /// </summary>
         /// <param name="id"></param>
-        /// <param name="name"></param>
+        /// <param name="name">
+        /// Score config name. Maximum 80 characters.
+        /// </param>
         /// <param name="createdAt"></param>
         /// <param name="updatedAt"></param>
         /// <param name="projectId"></param>

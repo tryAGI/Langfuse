@@ -15,9 +15,12 @@ public partial class Tests
     {
         using var client = GetAuthenticatedClient();
 
-        //// List the most recent observations in your project.
+        //// Bound observation reads to a time range; follow response.Meta.Cursor for more rows.
+        var end = DateTime.UtcNow;
         var response = await client.Observations.ObservationsGetManyAsync(
-            limit: 10);
+            limit: 10,
+            fromStartTime: end.AddDays(-1),
+            toStartTime: end);
 
         Assert.IsNotNull(response.Data);
         Assert.IsNotNull(response.Meta);

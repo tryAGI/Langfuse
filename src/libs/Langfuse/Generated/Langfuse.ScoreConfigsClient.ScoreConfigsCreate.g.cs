@@ -620,7 +620,7 @@ namespace Langfuse
         /// Create a score configuration (config). Score configs are used to define the structure of scores
         /// </summary>
         /// <param name="name">
-        /// Name of the score config. Max 35 characters. Only letters, numbers, underscores, spaces, periods, parentheses, and hyphens are allowed.
+        /// Name of the score config. Max 80 characters. Only letters, numbers, underscores, spaces, periods, parentheses, and hyphens are allowed.
         /// </param>
         /// <param name="dataType"></param>
         /// <param name="categories">

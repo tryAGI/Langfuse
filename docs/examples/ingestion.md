@@ -1,28 +1,44 @@
-# Ingestion
+# OpenTelemetry ingestion
 
-Ingest trace events into Langfuse using the batch ingestion API.
+Ingest trace spans into Langfuse using the current OpenTelemetry endpoint.
 
-This example assumes `using Langfuse;` is in scope and `apiKey` contains your Langfuse API key.
+This example assumes `using Langfuse;` is in scope and `publicKey` / `secretKey` contain your Langfuse project Basic Auth keys.
 
 ```csharp
-using var client = new LangfuseClient(apiKey);
+using var client = new LangfuseClient(username: publicKey, password: secretKey);
 
-// Create a trace event and send it via batch ingestion.
-var traceId = Guid.NewGuid().ToString();
-var traceEvent = new TraceEvent(body: new TraceBody
+// Use the v4 ingestion header for real-time observation visibility.
+var options = new AutoSDKRequestOptions
 {
-    Id = traceId,
-    Name = "sdk-integration-test",
-    Input = "What is Langfuse?",
-    Output = "Langfuse is an open-source LLM observability platform.",
-});
+    Headers = { ["x-langfuse-ingestion-version"] = "4" },
+};
 
-var ingestionEvent = new IngestionEvent(
-    new AllOf<IngestionEventVariant12, TraceEvent>(
-        value1: new IngestionEventVariant12(
-            type: IngestionEventVariant1Type.TraceCreate),
-        value2: traceEvent));
-
-var response = await client.Ingestion.IngestionBatchAsync(
-    batch: [ingestionEvent]);
+// Create a span and send it via OTLP/HTTP JSON ingestion.
+var nowNanoseconds = (DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() * 1_000_000).ToString();
+var response = await client.Opentelemetry.OpentelemetryExportTracesAsync(
+    resourceSpans:
+    [
+        new OtelResourceSpan
+        {
+            ScopeSpans =
+            [
+                new OtelScopeSpan
+                {
+                    Spans =
+                    [
+                        new OtelSpan
+                        {
+                            TraceId = Guid.NewGuid().ToString("N"),
+                            SpanId = Guid.NewGuid().ToString("N")[..16],
+                            Name = "sdk-integration-test",
+                            Kind = 1,
+                            StartTimeUnixNano = nowNanoseconds,
+                            EndTimeUnixNano = nowNanoseconds,
+                        },
+                    ],
+                },
+            ],
+        },
+    ],
+    requestOptions: options);
 ```

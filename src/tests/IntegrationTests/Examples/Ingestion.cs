@@ -15,6 +15,12 @@ public partial class Tests
     {
         using var client = GetAuthenticatedClient();
 
+        //// Use the v4 ingestion header for real-time observation visibility.
+        var options = new AutoSDKRequestOptions
+        {
+            Headers = { ["x-langfuse-ingestion-version"] = "4" },
+        };
+
         //// Create a span and send it via OTLP/HTTP JSON ingestion.
         var nowNanoseconds = (DateTimeOffset.UtcNow.ToUnixTimeMilliseconds() * 1_000_000).ToString();
         var response = await client.Opentelemetry.OpentelemetryExportTracesAsync(
@@ -41,7 +47,8 @@ public partial class Tests
                         },
                     ],
                 },
-            ]);
+            ],
+            requestOptions: options);
 
         Assert.IsNotNull(response);
     }

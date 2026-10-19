@@ -15,8 +15,8 @@ public partial class Tests
     {
         using var client = GetAuthenticatedClient();
 
-        //// List all scores in your project with pagination.
-        var response = await client.ScoresV3.ScoresV3GetManyV3Async(
+        //// Read Scores API v3. Use cursor pagination instead of the legacy page parameter.
+        var response = await client.Scores.ScoresGetManyAsync(
             limit: 10);
 
         Assert.IsNotNull(response.Data);

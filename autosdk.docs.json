@@ -1,3 +1,5 @@
 {
-  "exampleSourceDirectory": "src/tests/IntegrationTests/Examples"
+  "exampleSourceDirectory": "src/tests/IntegrationTests/Examples",
+  "apiKeyVariableName": "username: publicKey, password: secretKey",
+  "exampleIntro": "This example assumes `using Langfuse;` is in scope and `publicKey` / `secretKey` contain your Langfuse project Basic Auth keys."
 }

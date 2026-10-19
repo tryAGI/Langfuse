@@ -51,6 +51,12 @@ namespace Langfuse
         public required long ContentLength { get; set; }
 
         /// <summary>
+        /// UTF-8 text content, included when fetching a skill with includeContent enabled.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("content")]
+        public string? Content { get; set; }
+
+        /// <summary>
         /// Additional properties that are not explicitly defined in the schema
         /// </summary>
         [global::System.Text.Json.Serialization.JsonExtensionData]
@@ -65,6 +71,9 @@ namespace Langfuse
         /// <param name="sha256Hash"></param>
         /// <param name="contentType"></param>
         /// <param name="contentLength"></param>
+        /// <param name="content">
+        /// UTF-8 text content, included when fetching a skill with includeContent enabled.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -74,7 +83,8 @@ namespace Langfuse
             string blobId,
             string sha256Hash,
             string contentType,
-            long contentLength)
+            long contentLength,
+            string? content)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.Path = path ?? throw new global::System.ArgumentNullException(nameof(path));
@@ -82,6 +92,7 @@ namespace Langfuse
             this.Sha256Hash = sha256Hash ?? throw new global::System.ArgumentNullException(nameof(sha256Hash));
             this.ContentType = contentType ?? throw new global::System.ArgumentNullException(nameof(contentType));
             this.ContentLength = contentLength;
+            this.Content = content;
         }
 
         /// <summary>

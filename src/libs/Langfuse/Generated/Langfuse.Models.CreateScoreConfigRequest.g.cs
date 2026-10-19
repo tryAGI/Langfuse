@@ -9,7 +9,7 @@ namespace Langfuse
     public sealed partial class CreateScoreConfigRequest
     {
         /// <summary>
-        /// Name of the score config. Max 35 characters. Only letters, numbers, underscores, spaces, periods, parentheses, and hyphens are allowed.
+        /// Name of the score config. Max 80 characters. Only letters, numbers, underscores, spaces, periods, parentheses, and hyphens are allowed.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("name")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -57,7 +57,7 @@ namespace Langfuse
         /// Initializes a new instance of the <see cref="CreateScoreConfigRequest" /> class.
         /// </summary>
         /// <param name="name">
-        /// Name of the score config. Max 35 characters. Only letters, numbers, underscores, spaces, periods, parentheses, and hyphens are allowed.
+        /// Name of the score config. Max 80 characters. Only letters, numbers, underscores, spaces, periods, parentheses, and hyphens are allowed.
         /// </param>
         /// <param name="dataType"></param>
         /// <param name="categories">

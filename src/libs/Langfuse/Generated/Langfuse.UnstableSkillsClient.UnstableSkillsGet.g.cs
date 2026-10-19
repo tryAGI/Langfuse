@@ -29,13 +29,15 @@ namespace Langfuse
             global::System.Net.Http.HttpClient httpClient,
             ref string skillName,
             ref int? version,
-            ref string? label);
+            ref string? label,
+            ref bool? includeContent);
         partial void PrepareUnstableSkillsGetRequest(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpRequestMessage httpRequestMessage,
             string skillName,
             int? version,
-            string? label);
+            string? label,
+            bool? includeContent);
         partial void ProcessUnstableSkillsGetResponse(
             global::System.Net.Http.HttpClient httpClient,
             global::System.Net.Http.HttpResponseMessage httpResponseMessage);
@@ -46,11 +48,12 @@ namespace Langfuse
             ref string content);
 
         /// <summary>
-        /// Resolve a skill's metadata and file manifest by version or label. Defaults to the production label. Use each file's sha256Hash with getFileContents, individually or in batches across manifests.
+        /// Resolve a skill's metadata and file manifest by version or label. Defaults to the production label. Set includeContent to return file contents inline, or use each file's sha256Hash with getFileContents.
         /// </summary>
         /// <param name="skillName"></param>
         /// <param name="version"></param>
         /// <param name="label"></param>
+        /// <param name="includeContent"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
@@ -58,6 +61,7 @@ namespace Langfuse
             string skillName,
             int? version = default,
             string? label = default,
+            bool? includeContent = default,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -65,6 +69,7 @@ namespace Langfuse
                 skillName: skillName,
                 version: version,
                 label: label,
+                includeContent: includeContent,
                 requestOptions: requestOptions,
                 cancellationToken: cancellationToken
             ).ConfigureAwait(false);
@@ -72,11 +77,12 @@ namespace Langfuse
             return __response.Body;
         }
         /// <summary>
-        /// Resolve a skill's metadata and file manifest by version or label. Defaults to the production label. Use each file's sha256Hash with getFileContents, individually or in batches across manifests.
+        /// Resolve a skill's metadata and file manifest by version or label. Defaults to the production label. Set includeContent to return file contents inline, or use each file's sha256Hash with getFileContents.
         /// </summary>
         /// <param name="skillName"></param>
         /// <param name="version"></param>
         /// <param name="label"></param>
+        /// <param name="includeContent"></param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>
         /// <exception cref="global::Langfuse.ApiException"></exception>
@@ -84,6 +90,7 @@ namespace Langfuse
             string skillName,
             int? version = default,
             string? label = default,
+            bool? includeContent = default,
             global::Langfuse.AutoSDKRequestOptions? requestOptions = default,
             global::System.Threading.CancellationToken cancellationToken = default)
         {
@@ -93,7 +100,8 @@ namespace Langfuse
                 httpClient: HttpClient,
                 skillName: ref skillName,
                 version: ref version,
-                label: ref label);
+                label: ref label,
+                includeContent: ref includeContent);
 
 
             var __authorizations = global::Langfuse.EndPointSecurityResolver.ResolveAuthorizations(
@@ -124,6 +132,7 @@ namespace Langfuse
                             __pathBuilder
                                 .AddOptionalParameter("version", version?.ToString())
                                 .AddOptionalParameter("label", label)
+                                .AddOptionalParameter("includeContent", includeContent?.ToString().ToLowerInvariant())
                                 ;
                             var __path = __pathBuilder.ToString();
                 __path = global::Langfuse.AutoSDKRequestOptionsSupport.AppendQueryParameters(
@@ -167,7 +176,8 @@ namespace Langfuse
                     httpRequestMessage: __httpRequest,
                     skillName: skillName,
                     version: version,
-                    label: label);
+                    label: label,
+                    includeContent: includeContent);
 
                 return __httpRequest;
             }

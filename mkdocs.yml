@@ -11,12 +11,15 @@ nav:
 # EXAMPLES:START
 - Examples:
   - Health Check: examples/health-check.md
-  - Traces: examples/traces.md
+  - Observations: examples/observations.md
   - Prompts: examples/prompts.md
-  - Ingestion: examples/ingestion.md
+  - OpenTelemetry ingestion: examples/ingestion.md
   - Projects: examples/projects.md
   - Scores: examples/scores.md
   - Datasets: examples/datasets.md
+  - Experiments: examples/experiments.md
+  - Experiment Items: examples/experiment-items.md
+  - Metrics: examples/metrics.md
 # EXAMPLES:END
 
 theme:

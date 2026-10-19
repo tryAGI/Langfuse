@@ -57,49 +57,20 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.Comment>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.Comment))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.Deprecation))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.Trace))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.TraceWithDetails))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.TraceWithFullDetails))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.ObservationsView>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ObservationsView))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.ScoreV1>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV1), TypeInfoPropertyName = "ScoreV12")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.Session))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SessionWithTraces))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.Trace>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.Observation))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.Usage))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ObservationV2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ObservationLevel), TypeInfoPropertyName = "ObservationLevel2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, int>), TypeInfoPropertyName = "DictionaryStringInt32_System_Collections_Generic_Dictionary_string_int")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, int>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, double>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ObservationsViewSingle))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ObservationV2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.Usage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreConfig))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreConfigDataType), TypeInfoPropertyName = "ScoreConfigDataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.ConfigCategory>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ConfigCategory))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BaseScoreV1))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSource), TypeInfoPropertyName = "ScoreSource2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.NumericScoreV1))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BooleanScoreV1))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CategoricalScoreV1))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.TextScoreV1))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.ScoreV1NumericScoreV12, global::Langfuse.NumericScoreV1>), TypeInfoPropertyName = "AllOfScoreV1NumericScoreV12NumericScoreV12")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV1NumericScoreV12))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV1NumericScoreV1DataType), TypeInfoPropertyName = "ScoreV1NumericScoreV1DataType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.ScoreV1CategoricalScoreV12, global::Langfuse.CategoricalScoreV1>), TypeInfoPropertyName = "AllOfScoreV1CategoricalScoreV12CategoricalScoreV12")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV1CategoricalScoreV12))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV1CategoricalScoreV1DataType), TypeInfoPropertyName = "ScoreV1CategoricalScoreV1DataType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.ScoreV1BooleanScoreV12, global::Langfuse.BooleanScoreV1>), TypeInfoPropertyName = "AllOfScoreV1BooleanScoreV12BooleanScoreV12")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV1BooleanScoreV12))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV1BooleanScoreV1DataType), TypeInfoPropertyName = "ScoreV1BooleanScoreV1DataType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.ScoreV1TextScoreV12, global::Langfuse.TextScoreV1>), TypeInfoPropertyName = "AllOfScoreV1TextScoreV12TextScoreV12")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV1TextScoreV12))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV1TextScoreV1DataType), TypeInfoPropertyName = "ScoreV1TextScoreV1DataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BaseScore))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSource), TypeInfoPropertyName = "ScoreSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.NumericScore))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BooleanScore))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CategoricalScore))]
@@ -131,10 +102,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DatasetItemMediaReferenceField), TypeInfoPropertyName = "DatasetItemMediaReferenceField2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DatasetItemMediaReferenceMedia))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(long))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DatasetRunItem))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DatasetRun))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DatasetRunWithItems))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.DatasetRunItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.Model))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ModelUsageUnit), TypeInfoPropertyName = "ModelUsageUnit2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Langfuse.ModelPrice>))]
@@ -154,18 +121,14 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.MapValue), TypeInfoPropertyName = "MapValue2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(float))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreDataType), TypeInfoPropertyName = "ScoreDataType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.OpenAIUsage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DeleteDatasetItemResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateDatasetItemRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PaginatedDatasetItems))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.DatasetItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateDatasetRunItemRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PaginatedDatasetRunItems))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PaginatedDatasets))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.Dataset>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateDatasetRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PaginatedDatasetRuns))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.DatasetRun>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DeleteDatasetRunResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorType), TypeInfoPropertyName = "EvaluatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CodeEvaluatorSourceCodeLanguage), TypeInfoPropertyName = "CodeEvaluatorSourceCodeLanguage2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PromptVariableMappingSource), TypeInfoPropertyName = "PromptVariableMappingSource2")]
@@ -333,71 +296,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SubmitFeedbackRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SubmitFeedbackResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.HealthResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEvent), TypeInfoPropertyName = "IngestionEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent>), TypeInfoPropertyName = "AllOfIngestionEventTraceEvent2TraceEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventTraceEvent2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventTraceEventType), TypeInfoPropertyName = "IngestionEventTraceEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.TraceEvent))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent>), TypeInfoPropertyName = "AllOfIngestionEventScoreEvent2ScoreEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventScoreEvent2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventScoreEventType), TypeInfoPropertyName = "IngestionEventScoreEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreEvent))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateSpanEvent2, global::Langfuse.CreateSpanEvent>), TypeInfoPropertyName = "AllOfIngestionEventCreateSpanEvent2CreateSpanEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventCreateSpanEvent2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventCreateSpanEventType), TypeInfoPropertyName = "IngestionEventCreateSpanEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateSpanEvent))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateSpanEvent2, global::Langfuse.UpdateSpanEvent>), TypeInfoPropertyName = "AllOfIngestionEventUpdateSpanEvent2UpdateSpanEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventUpdateSpanEvent2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventUpdateSpanEventType), TypeInfoPropertyName = "IngestionEventUpdateSpanEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UpdateSpanEvent))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>), TypeInfoPropertyName = "AllOfIngestionEventCreateGenerationEvent2CreateGenerationEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventCreateGenerationEvent2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventCreateGenerationEventType), TypeInfoPropertyName = "IngestionEventCreateGenerationEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateGenerationEvent))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>), TypeInfoPropertyName = "AllOfIngestionEventUpdateGenerationEvent2UpdateGenerationEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventUpdateGenerationEvent2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventUpdateGenerationEventType), TypeInfoPropertyName = "IngestionEventUpdateGenerationEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UpdateGenerationEvent))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>), TypeInfoPropertyName = "AllOfIngestionEventCreateEventEvent2CreateEventEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventCreateEventEvent2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventCreateEventEventType), TypeInfoPropertyName = "IngestionEventCreateEventEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateEventEvent))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>), TypeInfoPropertyName = "AllOfIngestionEventCreateObservationEvent2CreateObservationEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventCreateObservationEvent2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventCreateObservationEventType), TypeInfoPropertyName = "IngestionEventCreateObservationEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateObservationEvent))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>), TypeInfoPropertyName = "AllOfIngestionEventUpdateObservationEvent2UpdateObservationEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventUpdateObservationEvent2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventUpdateObservationEventType), TypeInfoPropertyName = "IngestionEventUpdateObservationEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UpdateObservationEvent))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ObservationType), TypeInfoPropertyName = "ObservationType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionUsage), TypeInfoPropertyName = "IngestionUsage2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.OpenAIUsage))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.OptionalObservationBody))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateEventBody))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UpdateEventBody))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateSpanBody))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UpdateSpanBody))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateGenerationBody))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, global::Langfuse.MapValue>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UsageDetails), TypeInfoPropertyName = "UsageDetails2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UpdateGenerationBody))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ObservationBody))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.TraceBody))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreBody))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BaseEvent))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionSuccess))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.IngestionSuccess>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.IngestionError>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.OpenAICompletionUsageSchema))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.Dictionary<string, int?>), TypeInfoPropertyName = "DictionaryStringInt32_System_Collections_Generic_Dictionary_string_int_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.OpenAIResponseUsageSchema))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.LegacyMetricsResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.LegacyObservations))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.Observation>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.LegacyObservationsViews))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.LlmConnection))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PaginatedLlmConnections))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.LlmConnection>))]
@@ -505,24 +403,18 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.ScoreConfig>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreConfigRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UpdateScoreConfigRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.CreateScoreRequest>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreSource), TypeInfoPropertyName = "CreateScoreSource2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoresResponse), TypeInfoPropertyName = "CreateScoresResponse2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreBatchResults))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreBatchResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.CreateScoreBatchError>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreBatchError))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectTraceV3))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectObservationV3))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectSessionV3))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectExperimentV3))]
-    internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
-    {
-    }
-
-    /// <summary>
-    ///
-    /// </summary>
-    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
-    )]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>), TypeInfoPropertyName = "IListString_System_Collections_Generic_IList_string")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string?>), TypeInfoPropertyName = "IListString_System_Collections_Generic_IList_string_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string?>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectV3), TypeInfoPropertyName = "ScoreSubjectV32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV32, global::Langfuse.ScoreSubjectTraceV3>), TypeInfoPropertyName = "AllOfScoreSubjectV3ScoreSubjectTraceV32ScoreSubjectTraceV32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV32))]
@@ -559,46 +451,8 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV3CorrectionScoreV3DataType), TypeInfoPropertyName = "ScoreV3CorrectionScoreV3DataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresV3Meta))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresV3Response))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoresRequest), TypeInfoPropertyName = "CreateScoresRequest2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.CreateScoreRequest>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreSource), TypeInfoPropertyName = "CreateScoreSource2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoresResponse), TypeInfoPropertyName = "CreateScoresResponse2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreBatchResults))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreBatchResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseTraceData))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataNumeric))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataCategorical))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataBoolean))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataCorrection))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataText))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseData), TypeInfoPropertyName = "GetScoresResponseData2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataNumeric2, global::Langfuse.GetScoresResponseDataNumeric>), TypeInfoPropertyName = "AllOfGetScoresResponseDataGetScoresResponseDataNumeric2GetScoresResponseDataNumeric2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataNumeric2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataNumericDataType), TypeInfoPropertyName = "GetScoresResponseDataGetScoresResponseDataNumericDataType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataCategorical2, global::Langfuse.GetScoresResponseDataCategorical>), TypeInfoPropertyName = "AllOfGetScoresResponseDataGetScoresResponseDataCategorical2GetScoresResponseDataCategorical2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataCategorical2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataCategoricalDataType), TypeInfoPropertyName = "GetScoresResponseDataGetScoresResponseDataCategoricalDataType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataBoolean2, global::Langfuse.GetScoresResponseDataBoolean>), TypeInfoPropertyName = "AllOfGetScoresResponseDataGetScoresResponseDataBoolean2GetScoresResponseDataBoolean2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataBoolean2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataBooleanDataType), TypeInfoPropertyName = "GetScoresResponseDataGetScoresResponseDataBooleanDataType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataCorrection2, global::Langfuse.GetScoresResponseDataCorrection>), TypeInfoPropertyName = "AllOfGetScoresResponseDataGetScoresResponseDataCorrection2GetScoresResponseDataCorrection2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataCorrection2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataCorrectionDataType), TypeInfoPropertyName = "GetScoresResponseDataGetScoresResponseDataCorrectionDataType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataText2, global::Langfuse.GetScoresResponseDataText>), TypeInfoPropertyName = "AllOfGetScoresResponseDataGetScoresResponseDataText2GetScoresResponseDataText2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataText2))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataTextDataType), TypeInfoPropertyName = "GetScoresResponseDataGetScoresResponseDataTextDataType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.GetScoresResponseData>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.CreateScoreBatchError>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreBatchError))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PaginatedSessions))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.Session>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.Traces))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.TraceWithDetails>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreBody))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DeleteTraceResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.Sort))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetView), TypeInfoPropertyName = "UnstableDashboardWidgetView2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetViewWithLegacy), TypeInfoPropertyName = "UnstableDashboardWidgetViewWithLegacy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetChartType), TypeInfoPropertyName = "UnstableDashboardWidgetChartType2")]
@@ -655,6 +509,20 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableSkillMetaListResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillMeta>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableSkillMeta))]
+    internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+
+    /// <summary>
+    ///
+    /// </summary>
+    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>), TypeInfoPropertyName = "IListString_System_Collections_Generic_IList_string")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string?>), TypeInfoPropertyName = "IListString_System_Collections_Generic_IList_string_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string?>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableSkillListPagination))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableSkillVersionFileInput))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableSkillVersionFileReference))]
@@ -670,8 +538,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableUpdateSkillRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableUpdateSkillLabelsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDeleteSkillVersionResponse))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionBatchRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.IngestionEvent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.OpentelemetryExportTracesRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.OtelResourceSpan>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ProjectsCreateRequest))]
@@ -692,20 +558,11 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageExportSource?), TypeInfoPropertyName = "NullableBlobStorageExportSource2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageExportFieldGroup?), TypeInfoPropertyName = "NullableBlobStorageExportFieldGroup2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageSyncStatus?), TypeInfoPropertyName = "NullableBlobStorageSyncStatus2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV1?), TypeInfoPropertyName = "NullableScoreV12")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ObservationLevel?), TypeInfoPropertyName = "NullableObservationLevel2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreConfigDataType?), TypeInfoPropertyName = "NullableScoreConfigDataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSource?), TypeInfoPropertyName = "NullableScoreSource2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.ScoreV1NumericScoreV12, global::Langfuse.NumericScoreV1>?), TypeInfoPropertyName = "NullableAllOfScoreV1NumericScoreV12NumericScoreV12")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV1NumericScoreV1DataType?), TypeInfoPropertyName = "NullableScoreV1NumericScoreV1DataType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.ScoreV1CategoricalScoreV12, global::Langfuse.CategoricalScoreV1>?), TypeInfoPropertyName = "NullableAllOfScoreV1CategoricalScoreV12CategoricalScoreV12")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV1CategoricalScoreV1DataType?), TypeInfoPropertyName = "NullableScoreV1CategoricalScoreV1DataType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.ScoreV1BooleanScoreV12, global::Langfuse.BooleanScoreV1>?), TypeInfoPropertyName = "NullableAllOfScoreV1BooleanScoreV12BooleanScoreV12")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV1BooleanScoreV1DataType?), TypeInfoPropertyName = "NullableScoreV1BooleanScoreV1DataType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.ScoreV1TextScoreV12, global::Langfuse.TextScoreV1>?), TypeInfoPropertyName = "NullableAllOfScoreV1TextScoreV12TextScoreV12")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV1TextScoreV1DataType?), TypeInfoPropertyName = "NullableScoreV1TextScoreV1DataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.ScoreNumericScore2, global::Langfuse.NumericScore>?), TypeInfoPropertyName = "NullableAllOfScoreNumericScore2NumericScore2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreNumericScoreDataType?), TypeInfoPropertyName = "NullableScoreNumericScoreDataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.ScoreCategoricalScore2, global::Langfuse.CategoricalScore>?), TypeInfoPropertyName = "NullableAllOfScoreCategoricalScore2CategoricalScore2")]
@@ -802,28 +659,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ExperimentsResponseMeta?), TypeInfoPropertyName = "NullableExperimentsResponseMeta2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV3?), TypeInfoPropertyName = "NullableScoreV32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.FeedbackTargetType?), TypeInfoPropertyName = "NullableFeedbackTargetType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEvent?), TypeInfoPropertyName = "NullableIngestionEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent>?), TypeInfoPropertyName = "NullableAllOfIngestionEventTraceEvent2TraceEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventTraceEventType?), TypeInfoPropertyName = "NullableIngestionEventTraceEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent>?), TypeInfoPropertyName = "NullableAllOfIngestionEventScoreEvent2ScoreEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventScoreEventType?), TypeInfoPropertyName = "NullableIngestionEventScoreEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateSpanEvent2, global::Langfuse.CreateSpanEvent>?), TypeInfoPropertyName = "NullableAllOfIngestionEventCreateSpanEvent2CreateSpanEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventCreateSpanEventType?), TypeInfoPropertyName = "NullableIngestionEventCreateSpanEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateSpanEvent2, global::Langfuse.UpdateSpanEvent>?), TypeInfoPropertyName = "NullableAllOfIngestionEventUpdateSpanEvent2UpdateSpanEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventUpdateSpanEventType?), TypeInfoPropertyName = "NullableIngestionEventUpdateSpanEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>?), TypeInfoPropertyName = "NullableAllOfIngestionEventCreateGenerationEvent2CreateGenerationEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventCreateGenerationEventType?), TypeInfoPropertyName = "NullableIngestionEventCreateGenerationEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>?), TypeInfoPropertyName = "NullableAllOfIngestionEventUpdateGenerationEvent2UpdateGenerationEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventUpdateGenerationEventType?), TypeInfoPropertyName = "NullableIngestionEventUpdateGenerationEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>?), TypeInfoPropertyName = "NullableAllOfIngestionEventCreateEventEvent2CreateEventEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventCreateEventEventType?), TypeInfoPropertyName = "NullableIngestionEventCreateEventEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>?), TypeInfoPropertyName = "NullableAllOfIngestionEventCreateObservationEvent2CreateObservationEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventCreateObservationEventType?), TypeInfoPropertyName = "NullableIngestionEventCreateObservationEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>?), TypeInfoPropertyName = "NullableAllOfIngestionEventUpdateObservationEvent2UpdateObservationEvent2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionEventUpdateObservationEventType?), TypeInfoPropertyName = "NullableIngestionEventUpdateObservationEventType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ObservationType?), TypeInfoPropertyName = "NullableObservationType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.IngestionUsage?), TypeInfoPropertyName = "NullableIngestionUsage2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UsageDetails?), TypeInfoPropertyName = "NullableUsageDetails2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.LlmAdapter?), TypeInfoPropertyName = "NullableLlmAdapter2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.MediaContentType?), TypeInfoPropertyName = "NullableMediaContentType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ModelTokenizerId?), TypeInfoPropertyName = "NullableModelTokenizerId2")]
@@ -841,6 +676,8 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PromptTextPromptType?), TypeInfoPropertyName = "NullablePromptTextPromptType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ChatMessageType?), TypeInfoPropertyName = "NullableChatMessageType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PlaceholderMessageType?), TypeInfoPropertyName = "NullablePlaceholderMessageType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreSource?), TypeInfoPropertyName = "NullableCreateScoreSource2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoresResponse?), TypeInfoPropertyName = "NullableCreateScoresResponse2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectV3?), TypeInfoPropertyName = "NullableScoreSubjectV32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV32, global::Langfuse.ScoreSubjectTraceV3>?), TypeInfoPropertyName = "NullableAllOfScoreSubjectV3ScoreSubjectTraceV32ScoreSubjectTraceV32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV3Kind?), TypeInfoPropertyName = "NullableScoreSubjectV3ScoreSubjectTraceV3Kind2")]
@@ -860,20 +697,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV3TextScoreV3DataType?), TypeInfoPropertyName = "NullableScoreV3TextScoreV3DataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.ScoreV3CorrectionScoreV32, global::Langfuse.CorrectionScoreV3>?), TypeInfoPropertyName = "NullableAllOfScoreV3CorrectionScoreV32CorrectionScoreV32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV3CorrectionScoreV3DataType?), TypeInfoPropertyName = "NullableScoreV3CorrectionScoreV3DataType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoresRequest?), TypeInfoPropertyName = "NullableCreateScoresRequest2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoreSource?), TypeInfoPropertyName = "NullableCreateScoreSource2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateScoresResponse?), TypeInfoPropertyName = "NullableCreateScoresResponse2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseData?), TypeInfoPropertyName = "NullableGetScoresResponseData2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataNumeric2, global::Langfuse.GetScoresResponseDataNumeric>?), TypeInfoPropertyName = "NullableAllOfGetScoresResponseDataGetScoresResponseDataNumeric2GetScoresResponseDataNumeric2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataNumericDataType?), TypeInfoPropertyName = "NullableGetScoresResponseDataGetScoresResponseDataNumericDataType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataCategorical2, global::Langfuse.GetScoresResponseDataCategorical>?), TypeInfoPropertyName = "NullableAllOfGetScoresResponseDataGetScoresResponseDataCategorical2GetScoresResponseDataCategorical2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataCategoricalDataType?), TypeInfoPropertyName = "NullableGetScoresResponseDataGetScoresResponseDataCategoricalDataType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataBoolean2, global::Langfuse.GetScoresResponseDataBoolean>?), TypeInfoPropertyName = "NullableAllOfGetScoresResponseDataGetScoresResponseDataBoolean2GetScoresResponseDataBoolean2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataBooleanDataType?), TypeInfoPropertyName = "NullableGetScoresResponseDataGetScoresResponseDataBooleanDataType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataCorrection2, global::Langfuse.GetScoresResponseDataCorrection>?), TypeInfoPropertyName = "NullableAllOfGetScoresResponseDataGetScoresResponseDataCorrection2GetScoresResponseDataCorrection2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataCorrectionDataType?), TypeInfoPropertyName = "NullableGetScoresResponseDataGetScoresResponseDataCorrectionDataType2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.GetScoresResponseDataGetScoresResponseDataText2, global::Langfuse.GetScoresResponseDataText>?), TypeInfoPropertyName = "NullableAllOfGetScoresResponseDataGetScoresResponseDataText2GetScoresResponseDataText2")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataTextDataType?), TypeInfoPropertyName = "NullableGetScoresResponseDataGetScoresResponseDataTextDataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetView?), TypeInfoPropertyName = "NullableUnstableDashboardWidgetView2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetViewWithLegacy?), TypeInfoPropertyName = "NullableUnstableDashboardWidgetViewWithLegacy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetChartType?), TypeInfoPropertyName = "NullableUnstableDashboardWidgetChartType2")]
@@ -896,18 +719,13 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.BlobStorageExportFieldGroup>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.BlobStorageIntegrationResponse>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.Comment>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.ObservationsView>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.ScoreV1>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.Trace>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.ConfigCategory>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.DatasetItemMediaReference>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.DatasetRunItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.PricingTier>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.PricingTierCondition>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.PricingTierConditionInput>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.DatasetItem>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.Dataset>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.DatasetRun>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.PublicApiValidationIssue>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.PromptVariableMappingInput>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.PromptVariableMapping>))]
@@ -924,9 +742,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.Experiment>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.ScoreV3>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.ExperimentItem>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.IngestionSuccess>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.IngestionError>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.Observation>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.LlmConnection>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.Model>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.PricingTierInput>))]
@@ -950,10 +765,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.ScimEmail>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.ScoreConfig>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.CreateScoreRequest>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.GetScoresResponseData>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.CreateScoreBatchError>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.Session>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.TraceWithDetails>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableDashboardWidgetDimension>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableDashboardWidgetMetric>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableDashboardWidgetFilter>))]
@@ -965,7 +777,6 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableSkillVersionFileCreateInput>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableSkillFileContent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableSkillFile>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.IngestionEvent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.OtelResourceSpan>))]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
@@ -1004,7 +815,6 @@ namespace Langfuse
 
                 internal static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
-            options.Converters.Add(new global::Langfuse.JsonConverters.ScoreV1JsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.CreateScoreValueJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.PricingTierConditionJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.PricingTierConditionInputJsonConverter());
@@ -1021,25 +831,16 @@ namespace Langfuse
             options.Converters.Add(new global::Langfuse.JsonConverters.UpdateEvaluatorRequestJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.CursorMetaJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.ExperimentsResponseMetaJsonConverter());
-            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionEventJsonConverter());
-            options.Converters.Add(new global::Langfuse.JsonConverters.IngestionUsageJsonConverter());
-            options.Converters.Add(new global::Langfuse.JsonConverters.UsageDetailsJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.ObservationsV2MetaJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.CreatePromptRequestJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.PromptJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.ChatMessageWithPlaceholdersJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.CreateScoresResponseJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.ScoreSubjectV3JsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.ScoreV3JsonConverter());
-            options.Converters.Add(new global::Langfuse.JsonConverters.CreateScoresRequestJsonConverter());
-            options.Converters.Add(new global::Langfuse.JsonConverters.CreateScoresResponseJsonConverter());
-            options.Converters.Add(new global::Langfuse.JsonConverters.GetScoresResponseDataJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnstableDashboardPlacementJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnstableCreateDashboardPlacementRequestJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnstableSkillVersionFileCreateInputJsonConverter());
-            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreV1NumericScoreV12, global::Langfuse.NumericScoreV1>());
-            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreV1CategoricalScoreV12, global::Langfuse.CategoricalScoreV1>());
-            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreV1BooleanScoreV12, global::Langfuse.BooleanScoreV1>());
-            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreV1TextScoreV12, global::Langfuse.TextScoreV1>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreNumericScore2, global::Langfuse.NumericScore>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreCategoricalScore2, global::Langfuse.CategoricalScore>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreBooleanScore2, global::Langfuse.BooleanScore>());
@@ -1067,15 +868,6 @@ namespace Langfuse
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.EvaluatorCodeEvaluator2, global::Langfuse.CodeEvaluator>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.CreateEvaluatorRequestCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.CreateLlmAsJudgeEvaluatorRequest>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequest2, global::Langfuse.CreateCodeEvaluatorRequest>());
-            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventTraceEvent2, global::Langfuse.TraceEvent>());
-            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventScoreEvent2, global::Langfuse.ScoreEvent>());
-            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventCreateSpanEvent2, global::Langfuse.CreateSpanEvent>());
-            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventUpdateSpanEvent2, global::Langfuse.UpdateSpanEvent>());
-            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventCreateGenerationEvent2, global::Langfuse.CreateGenerationEvent>());
-            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventUpdateGenerationEvent2, global::Langfuse.UpdateGenerationEvent>());
-            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventCreateEventEvent2, global::Langfuse.CreateEventEvent>());
-            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventCreateObservationEvent2, global::Langfuse.CreateObservationEvent>());
-            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.IngestionEventUpdateObservationEvent2, global::Langfuse.UpdateObservationEvent>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.PromptChatPrompt2, global::Langfuse.ChatPrompt>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.PromptTextPrompt2, global::Langfuse.TextPrompt>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV32, global::Langfuse.ScoreSubjectTraceV3>());
@@ -1087,11 +879,6 @@ namespace Langfuse
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreV3CategoricalScoreV32, global::Langfuse.CategoricalScoreV3>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreV3TextScoreV32, global::Langfuse.TextScoreV3>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.ScoreV3CorrectionScoreV32, global::Langfuse.CorrectionScoreV3>());
-            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.GetScoresResponseDataGetScoresResponseDataNumeric2, global::Langfuse.GetScoresResponseDataNumeric>());
-            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.GetScoresResponseDataGetScoresResponseDataCategorical2, global::Langfuse.GetScoresResponseDataCategorical>());
-            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.GetScoresResponseDataGetScoresResponseDataBoolean2, global::Langfuse.GetScoresResponseDataBoolean>());
-            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.GetScoresResponseDataGetScoresResponseDataCorrection2, global::Langfuse.GetScoresResponseDataCorrection>());
-            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.GetScoresResponseDataGetScoresResponseDataText2, global::Langfuse.GetScoresResponseDataText>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2, global::Langfuse.UnstableWidgetPlacement>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2, global::Langfuse.UnstablePresetPlacement>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2, global::Langfuse.UnstableCreateWidgetPlacement>());
@@ -1157,22 +944,6 @@ namespace Langfuse
                     || typeToConvert == typeof(global::Langfuse.BlobStorageSyncStatus)
 
                     || typeToConvert == typeof(global::Langfuse.BlobStorageSyncStatus?)
-
-                    || typeToConvert == typeof(global::Langfuse.ScoreV1NumericScoreV1DataType)
-
-                    || typeToConvert == typeof(global::Langfuse.ScoreV1NumericScoreV1DataType?)
-
-                    || typeToConvert == typeof(global::Langfuse.ScoreV1CategoricalScoreV1DataType)
-
-                    || typeToConvert == typeof(global::Langfuse.ScoreV1CategoricalScoreV1DataType?)
-
-                    || typeToConvert == typeof(global::Langfuse.ScoreV1BooleanScoreV1DataType)
-
-                    || typeToConvert == typeof(global::Langfuse.ScoreV1BooleanScoreV1DataType?)
-
-                    || typeToConvert == typeof(global::Langfuse.ScoreV1TextScoreV1DataType)
-
-                    || typeToConvert == typeof(global::Langfuse.ScoreV1TextScoreV1DataType?)
 
                     || typeToConvert == typeof(global::Langfuse.ScoreNumericScoreDataType)
 
@@ -1386,46 +1157,6 @@ namespace Langfuse
 
                     || typeToConvert == typeof(global::Langfuse.FeedbackTargetType?)
 
-                    || typeToConvert == typeof(global::Langfuse.IngestionEventTraceEventType)
-
-                    || typeToConvert == typeof(global::Langfuse.IngestionEventTraceEventType?)
-
-                    || typeToConvert == typeof(global::Langfuse.IngestionEventScoreEventType)
-
-                    || typeToConvert == typeof(global::Langfuse.IngestionEventScoreEventType?)
-
-                    || typeToConvert == typeof(global::Langfuse.IngestionEventCreateSpanEventType)
-
-                    || typeToConvert == typeof(global::Langfuse.IngestionEventCreateSpanEventType?)
-
-                    || typeToConvert == typeof(global::Langfuse.IngestionEventUpdateSpanEventType)
-
-                    || typeToConvert == typeof(global::Langfuse.IngestionEventUpdateSpanEventType?)
-
-                    || typeToConvert == typeof(global::Langfuse.IngestionEventCreateGenerationEventType)
-
-                    || typeToConvert == typeof(global::Langfuse.IngestionEventCreateGenerationEventType?)
-
-                    || typeToConvert == typeof(global::Langfuse.IngestionEventUpdateGenerationEventType)
-
-                    || typeToConvert == typeof(global::Langfuse.IngestionEventUpdateGenerationEventType?)
-
-                    || typeToConvert == typeof(global::Langfuse.IngestionEventCreateEventEventType)
-
-                    || typeToConvert == typeof(global::Langfuse.IngestionEventCreateEventEventType?)
-
-                    || typeToConvert == typeof(global::Langfuse.IngestionEventCreateObservationEventType)
-
-                    || typeToConvert == typeof(global::Langfuse.IngestionEventCreateObservationEventType?)
-
-                    || typeToConvert == typeof(global::Langfuse.IngestionEventUpdateObservationEventType)
-
-                    || typeToConvert == typeof(global::Langfuse.IngestionEventUpdateObservationEventType?)
-
-                    || typeToConvert == typeof(global::Langfuse.ObservationType)
-
-                    || typeToConvert == typeof(global::Langfuse.ObservationType?)
-
                     || typeToConvert == typeof(global::Langfuse.LlmAdapter)
 
                     || typeToConvert == typeof(global::Langfuse.LlmAdapter?)
@@ -1470,6 +1201,10 @@ namespace Langfuse
 
                     || typeToConvert == typeof(global::Langfuse.CreateTextPromptType?)
 
+                    || typeToConvert == typeof(global::Langfuse.CreateScoreSource)
+
+                    || typeToConvert == typeof(global::Langfuse.CreateScoreSource?)
+
                     || typeToConvert == typeof(global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV3Kind)
 
                     || typeToConvert == typeof(global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV3Kind?)
@@ -1505,30 +1240,6 @@ namespace Langfuse
                     || typeToConvert == typeof(global::Langfuse.ScoreV3CorrectionScoreV3DataType)
 
                     || typeToConvert == typeof(global::Langfuse.ScoreV3CorrectionScoreV3DataType?)
-
-                    || typeToConvert == typeof(global::Langfuse.CreateScoreSource)
-
-                    || typeToConvert == typeof(global::Langfuse.CreateScoreSource?)
-
-                    || typeToConvert == typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataNumericDataType)
-
-                    || typeToConvert == typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataNumericDataType?)
-
-                    || typeToConvert == typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataCategoricalDataType)
-
-                    || typeToConvert == typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataCategoricalDataType?)
-
-                    || typeToConvert == typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataBooleanDataType)
-
-                    || typeToConvert == typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataBooleanDataType?)
-
-                    || typeToConvert == typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataCorrectionDataType)
-
-                    || typeToConvert == typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataCorrectionDataType?)
-
-                    || typeToConvert == typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataTextDataType)
-
-                    || typeToConvert == typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataTextDataType?)
 
                     || typeToConvert == typeof(global::Langfuse.UnstableDashboardWidgetView)
 
@@ -1673,46 +1384,6 @@ namespace Langfuse
                 if (typeToConvert == typeof(global::Langfuse.BlobStorageSyncStatus?))
                 {
                     return new global::Langfuse.JsonConverters.BlobStorageSyncStatusNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.ScoreV1NumericScoreV1DataType))
-                {
-                    return new global::Langfuse.JsonConverters.ScoreV1NumericScoreV1DataTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.ScoreV1NumericScoreV1DataType?))
-                {
-                    return new global::Langfuse.JsonConverters.ScoreV1NumericScoreV1DataTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.ScoreV1CategoricalScoreV1DataType))
-                {
-                    return new global::Langfuse.JsonConverters.ScoreV1CategoricalScoreV1DataTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.ScoreV1CategoricalScoreV1DataType?))
-                {
-                    return new global::Langfuse.JsonConverters.ScoreV1CategoricalScoreV1DataTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.ScoreV1BooleanScoreV1DataType))
-                {
-                    return new global::Langfuse.JsonConverters.ScoreV1BooleanScoreV1DataTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.ScoreV1BooleanScoreV1DataType?))
-                {
-                    return new global::Langfuse.JsonConverters.ScoreV1BooleanScoreV1DataTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.ScoreV1TextScoreV1DataType))
-                {
-                    return new global::Langfuse.JsonConverters.ScoreV1TextScoreV1DataTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.ScoreV1TextScoreV1DataType?))
-                {
-                    return new global::Langfuse.JsonConverters.ScoreV1TextScoreV1DataTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Langfuse.ScoreNumericScoreDataType))
@@ -2245,106 +1916,6 @@ namespace Langfuse
                     return new global::Langfuse.JsonConverters.FeedbackTargetTypeNullableJsonConverter();
                 }
 
-                if (typeToConvert == typeof(global::Langfuse.IngestionEventTraceEventType))
-                {
-                    return new global::Langfuse.JsonConverters.IngestionEventTraceEventTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.IngestionEventTraceEventType?))
-                {
-                    return new global::Langfuse.JsonConverters.IngestionEventTraceEventTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.IngestionEventScoreEventType))
-                {
-                    return new global::Langfuse.JsonConverters.IngestionEventScoreEventTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.IngestionEventScoreEventType?))
-                {
-                    return new global::Langfuse.JsonConverters.IngestionEventScoreEventTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.IngestionEventCreateSpanEventType))
-                {
-                    return new global::Langfuse.JsonConverters.IngestionEventCreateSpanEventTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.IngestionEventCreateSpanEventType?))
-                {
-                    return new global::Langfuse.JsonConverters.IngestionEventCreateSpanEventTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.IngestionEventUpdateSpanEventType))
-                {
-                    return new global::Langfuse.JsonConverters.IngestionEventUpdateSpanEventTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.IngestionEventUpdateSpanEventType?))
-                {
-                    return new global::Langfuse.JsonConverters.IngestionEventUpdateSpanEventTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.IngestionEventCreateGenerationEventType))
-                {
-                    return new global::Langfuse.JsonConverters.IngestionEventCreateGenerationEventTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.IngestionEventCreateGenerationEventType?))
-                {
-                    return new global::Langfuse.JsonConverters.IngestionEventCreateGenerationEventTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.IngestionEventUpdateGenerationEventType))
-                {
-                    return new global::Langfuse.JsonConverters.IngestionEventUpdateGenerationEventTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.IngestionEventUpdateGenerationEventType?))
-                {
-                    return new global::Langfuse.JsonConverters.IngestionEventUpdateGenerationEventTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.IngestionEventCreateEventEventType))
-                {
-                    return new global::Langfuse.JsonConverters.IngestionEventCreateEventEventTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.IngestionEventCreateEventEventType?))
-                {
-                    return new global::Langfuse.JsonConverters.IngestionEventCreateEventEventTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.IngestionEventCreateObservationEventType))
-                {
-                    return new global::Langfuse.JsonConverters.IngestionEventCreateObservationEventTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.IngestionEventCreateObservationEventType?))
-                {
-                    return new global::Langfuse.JsonConverters.IngestionEventCreateObservationEventTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.IngestionEventUpdateObservationEventType))
-                {
-                    return new global::Langfuse.JsonConverters.IngestionEventUpdateObservationEventTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.IngestionEventUpdateObservationEventType?))
-                {
-                    return new global::Langfuse.JsonConverters.IngestionEventUpdateObservationEventTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.ObservationType))
-                {
-                    return new global::Langfuse.JsonConverters.ObservationTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.ObservationType?))
-                {
-                    return new global::Langfuse.JsonConverters.ObservationTypeNullableJsonConverter();
-                }
-
                 if (typeToConvert == typeof(global::Langfuse.LlmAdapter))
                 {
                     return new global::Langfuse.JsonConverters.LlmAdapterJsonConverter();
@@ -2455,6 +2026,16 @@ namespace Langfuse
                     return new global::Langfuse.JsonConverters.CreateTextPromptTypeNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::Langfuse.CreateScoreSource))
+                {
+                    return new global::Langfuse.JsonConverters.CreateScoreSourceJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.CreateScoreSource?))
+                {
+                    return new global::Langfuse.JsonConverters.CreateScoreSourceNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Langfuse.ScoreSubjectV3ScoreSubjectTraceV3Kind))
                 {
                     return new global::Langfuse.JsonConverters.ScoreSubjectV3ScoreSubjectTraceV3KindJsonConverter();
@@ -2543,66 +2124,6 @@ namespace Langfuse
                 if (typeToConvert == typeof(global::Langfuse.ScoreV3CorrectionScoreV3DataType?))
                 {
                     return new global::Langfuse.JsonConverters.ScoreV3CorrectionScoreV3DataTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.CreateScoreSource))
-                {
-                    return new global::Langfuse.JsonConverters.CreateScoreSourceJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.CreateScoreSource?))
-                {
-                    return new global::Langfuse.JsonConverters.CreateScoreSourceNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataNumericDataType))
-                {
-                    return new global::Langfuse.JsonConverters.GetScoresResponseDataGetScoresResponseDataNumericDataTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataNumericDataType?))
-                {
-                    return new global::Langfuse.JsonConverters.GetScoresResponseDataGetScoresResponseDataNumericDataTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataCategoricalDataType))
-                {
-                    return new global::Langfuse.JsonConverters.GetScoresResponseDataGetScoresResponseDataCategoricalDataTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataCategoricalDataType?))
-                {
-                    return new global::Langfuse.JsonConverters.GetScoresResponseDataGetScoresResponseDataCategoricalDataTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataBooleanDataType))
-                {
-                    return new global::Langfuse.JsonConverters.GetScoresResponseDataGetScoresResponseDataBooleanDataTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataBooleanDataType?))
-                {
-                    return new global::Langfuse.JsonConverters.GetScoresResponseDataGetScoresResponseDataBooleanDataTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataCorrectionDataType))
-                {
-                    return new global::Langfuse.JsonConverters.GetScoresResponseDataGetScoresResponseDataCorrectionDataTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataCorrectionDataType?))
-                {
-                    return new global::Langfuse.JsonConverters.GetScoresResponseDataGetScoresResponseDataCorrectionDataTypeNullableJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataTextDataType))
-                {
-                    return new global::Langfuse.JsonConverters.GetScoresResponseDataGetScoresResponseDataTextDataTypeJsonConverter();
-                }
-
-                if (typeToConvert == typeof(global::Langfuse.GetScoresResponseDataGetScoresResponseDataTextDataType?))
-                {
-                    return new global::Langfuse.JsonConverters.GetScoresResponseDataGetScoresResponseDataTextDataTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Langfuse.UnstableDashboardWidgetView))

@@ -2,12 +2,12 @@
 
 List scores for evaluating LLM outputs in Langfuse.
 
-This example assumes `using Langfuse;` is in scope and `apiKey` contains your Langfuse API key.
+This example assumes `using Langfuse;` is in scope and `publicKey` / `secretKey` contain your Langfuse project Basic Auth keys.
 
 ```csharp
-using var client = new LangfuseClient(apiKey);
+using var client = new LangfuseClient(username: publicKey, password: secretKey);
 
-// List all scores in your project with pagination.
+// Read Scores API v3. Use cursor pagination instead of the legacy page parameter.
 var response = await client.Scores.ScoresGetManyAsync(
     limit: 10);
 ```

@@ -22,4 +22,8 @@
     <ProjectReference Include="..\..\libs\Langfuse\Langfuse.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Include="../Contracts/ReplacementApiContract.cs" Link="ReplacementApiContract.cs" />
+  </ItemGroup>
+
 </Project>
