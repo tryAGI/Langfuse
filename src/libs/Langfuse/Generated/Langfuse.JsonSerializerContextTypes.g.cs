@@ -1777,323 +1777,395 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.DeleteTraceResponse? Type436 { get; set; }
+        public global::Langfuse.SkillMetaListResponse? Type436 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetView? Type437 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.SkillMeta>? Type437 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetViewWithLegacy? Type438 { get; set; }
+        public global::Langfuse.SkillMeta? Type438 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetChartType? Type439 { get; set; }
+        public global::Langfuse.SkillListPagination? Type439 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetMetricAggregation? Type440 { get; set; }
+        public global::Langfuse.SkillVersionFileInput? Type440 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetDimension? Type441 { get; set; }
+        public global::Langfuse.SkillVersionFileReference? Type441 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetMetric? Type442 { get; set; }
+        public global::Langfuse.SkillVersionFileCreateInput? Type442 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetFilter? Type443 { get; set; }
+        public global::Langfuse.CreateSkillVersionRequest? Type443 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetChartConfig? Type444 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.SkillVersionFileCreateInput>? Type444 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetDefaultSort? Type445 { get; set; }
+        public global::Langfuse.SkillFile? Type445 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetSortOrder? Type446 { get; set; }
+        public global::Langfuse.SkillFileContentsResponse? Type446 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetChartConfigInput? Type447 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.SkillFileContent>? Type447 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableCreateDashboardWidgetRequest? Type448 { get; set; }
+        public global::Langfuse.SkillFileContent? Type448 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetDimension>? Type449 { get; set; }
+        public global::Langfuse.SkillVersion? Type449 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetMetric>? Type450 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.SkillFile>? Type450 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetFilter>? Type451 { get; set; }
+        public global::Langfuse.UpdateSkillRequest? Type451 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableUpdateDashboardWidgetRequest? Type452 { get; set; }
+        public global::Langfuse.UpdateSkillLabelsRequest? Type452 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidgetList? Type453 { get; set; }
+        public global::Langfuse.DeleteSkillVersionResponse? Type453 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidget>? Type454 { get; set; }
+        public global::Langfuse.DeleteTraceResponse? Type454 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardWidget? Type455 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetView? Type455 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDeleteDashboardWidgetResponse? Type456 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetViewWithLegacy? Type456 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardPlacement? Type457 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetChartType? Type457 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2, global::Langfuse.UnstableWidgetPlacement>? Type458 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetMetricAggregation? Type458 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2? Type459 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetDimension? Type459 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacementType? Type460 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetMetric? Type460 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableWidgetPlacement? Type461 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetFilter? Type461 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2, global::Langfuse.UnstablePresetPlacement>? Type462 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetChartConfig? Type462 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2? Type463 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetDefaultSort? Type463 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacementType? Type464 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetSortOrder? Type464 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstablePresetPlacement? Type465 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetChartConfigInput? Type465 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableCreateDashboardPlacementRequest? Type466 { get; set; }
+        public global::Langfuse.UnstableCreateDashboardWidgetRequest? Type466 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2, global::Langfuse.UnstableCreateWidgetPlacement>? Type467 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetDimension>? Type467 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2? Type468 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetMetric>? Type468 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacementType? Type469 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidgetFilter>? Type469 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableCreateWidgetPlacement? Type470 { get; set; }
+        public global::Langfuse.UnstableUpdateDashboardWidgetRequest? Type470 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2, global::Langfuse.UnstableCreatePresetPlacement>? Type471 { get; set; }
+        public global::Langfuse.UnstableDashboardWidgetList? Type471 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2? Type472 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardWidget>? Type472 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacementType? Type473 { get; set; }
+        public global::Langfuse.UnstableDashboardWidget? Type473 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableCreatePresetPlacement? Type474 { get; set; }
+        public global::Langfuse.UnstableDeleteDashboardWidgetResponse? Type474 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableUpdateDashboardPlacementRequest? Type475 { get; set; }
+        public global::Langfuse.UnstableDashboardPlacement? Type475 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDeleteDashboardPlacementResponse? Type476 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2, global::Langfuse.UnstableWidgetPlacement>? Type476 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardDefinition? Type477 { get; set; }
+        public global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacement2? Type477 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardPlacement>? Type478 { get; set; }
+        public global::Langfuse.UnstableDashboardPlacementUnstableWidgetPlacementType? Type478 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboard? Type479 { get; set; }
+        public global::Langfuse.UnstableWidgetPlacement? Type479 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDashboardList? Type480 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2, global::Langfuse.UnstablePresetPlacement>? Type480 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboard>? Type481 { get; set; }
+        public global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacement2? Type481 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableCreateDashboardRequest? Type482 { get; set; }
+        public global::Langfuse.UnstableDashboardPlacementUnstablePresetPlacementType? Type482 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableUpdateDashboardRequest? Type483 { get; set; }
+        public global::Langfuse.UnstablePresetPlacement? Type483 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDeleteDashboardResponse? Type484 { get; set; }
+        public global::Langfuse.UnstableCreateDashboardPlacementRequest? Type484 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstablePublicApiErrorCode? Type485 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2, global::Langfuse.UnstableCreateWidgetPlacement>? Type485 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstablePublicApiValidationIssue? Type486 { get; set; }
+        public global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacement2? Type486 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstablePublicApiErrorDetails? Type487 { get; set; }
+        public global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreateWidgetPlacementType? Type487 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstablePublicApiValidationIssue>? Type488 { get; set; }
+        public global::Langfuse.UnstableCreateWidgetPlacement? Type488 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstablePublicApiError? Type489 { get; set; }
+        public global::Langfuse.AllOf<global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2, global::Langfuse.UnstableCreatePresetPlacement>? Type489 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillMetaListResponse? Type490 { get; set; }
+        public global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2? Type490 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillMeta>? Type491 { get; set; }
+        public global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacementType? Type491 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillMeta? Type492 { get; set; }
+        public global::Langfuse.UnstableCreatePresetPlacement? Type492 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillListPagination? Type493 { get; set; }
+        public global::Langfuse.UnstableUpdateDashboardPlacementRequest? Type493 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillVersionFileInput? Type494 { get; set; }
+        public global::Langfuse.UnstableDeleteDashboardPlacementResponse? Type494 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillVersionFileReference? Type495 { get; set; }
+        public global::Langfuse.UnstableDashboardDefinition? Type495 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillVersionFileCreateInput? Type496 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboardPlacement>? Type496 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableCreateSkillVersionRequest? Type497 { get; set; }
+        public global::Langfuse.UnstableDashboard? Type497 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillVersionFileCreateInput>? Type498 { get; set; }
+        public global::Langfuse.UnstableDashboardList? Type498 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillFile? Type499 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableDashboard>? Type499 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillFileContentsResponse? Type500 { get; set; }
+        public global::Langfuse.UnstableCreateDashboardRequest? Type500 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillFileContent>? Type501 { get; set; }
+        public global::Langfuse.UnstableUpdateDashboardRequest? Type501 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillFileContent? Type502 { get; set; }
+        public global::Langfuse.UnstableDeleteDashboardResponse? Type502 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillVersion? Type503 { get; set; }
+        public global::Langfuse.UnstablePublicApiErrorCode? Type503 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillFile>? Type504 { get; set; }
+        public global::Langfuse.UnstablePublicApiValidationIssue? Type504 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableUpdateSkillRequest? Type505 { get; set; }
+        public global::Langfuse.UnstablePublicApiErrorDetails? Type505 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableUpdateSkillLabelsRequest? Type506 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstablePublicApiValidationIssue>? Type506 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDeleteSkillVersionResponse? Type507 { get; set; }
+        public global::Langfuse.UnstablePublicApiError? Type507 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.OpentelemetryExportTracesRequest? Type508 { get; set; }
+        public global::Langfuse.UnstableSkillMetaListResponse? Type508 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.OtelResourceSpan>? Type509 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillMeta>? Type509 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ProjectsCreateRequest? Type510 { get; set; }
+        public global::Langfuse.UnstableSkillMeta? Type510 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ProjectsUpdateRequest? Type511 { get; set; }
+        public global::Langfuse.UnstableSkillListPagination? Type511 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ProjectsCreateApiKeyRequest? Type512 { get; set; }
+        public global::Langfuse.UnstableSkillVersion? Type512 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.PromptVersionUpdateRequest? Type513 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillFile>? Type513 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScimCreateUserRequest? Type514 { get; set; }
+        public global::Langfuse.UnstableSkillFile? Type514 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.TraceDeleteMultipleRequest? Type515 { get; set; }
+        public global::Langfuse.UnstableCreateSkillVersionRequest? Type515 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillVersionFileCreateInput>? Type516 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.UnstableSkillVersionFileCreateInput? Type517 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.UnstableSkillVersionFileInput? Type518 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.UnstableSkillVersionFileReference? Type519 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.UnstableUpdateSkillRequest? Type520 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.UnstableDeleteSkillVersionResponse? Type521 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.UnstableUpdateSkillLabelsRequest? Type522 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.UnstableSkillFileContentsResponse? Type523 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillFileContent>? Type524 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.UnstableSkillFileContent? Type525 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.OpentelemetryExportTracesRequest? Type526 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.IList<global::Langfuse.OtelResourceSpan>? Type527 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.ProjectsCreateRequest? Type528 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.ProjectsUpdateRequest? Type529 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.ProjectsCreateApiKeyRequest? Type530 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.PromptVersionUpdateRequest? Type531 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.ScimCreateUserRequest? Type532 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.TraceDeleteMultipleRequest? Type533 { get; set; }
 
         /// <summary>
         ///
@@ -2310,50 +2382,66 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Langfuse.UnstableDashboardWidgetDimension>? ListType53 { get; set; }
+        public global::System.Collections.Generic.List<global::Langfuse.SkillMeta>? ListType53 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Langfuse.UnstableDashboardWidgetMetric>? ListType54 { get; set; }
+        public global::System.Collections.Generic.List<global::Langfuse.SkillVersionFileCreateInput>? ListType54 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Langfuse.UnstableDashboardWidgetFilter>? ListType55 { get; set; }
+        public global::System.Collections.Generic.List<global::Langfuse.SkillFileContent>? ListType55 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Langfuse.UnstableDashboardWidget>? ListType56 { get; set; }
+        public global::System.Collections.Generic.List<global::Langfuse.SkillFile>? ListType56 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Langfuse.UnstableDashboardPlacement>? ListType57 { get; set; }
+        public global::System.Collections.Generic.List<global::Langfuse.UnstableDashboardWidgetDimension>? ListType57 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Langfuse.UnstableDashboard>? ListType58 { get; set; }
+        public global::System.Collections.Generic.List<global::Langfuse.UnstableDashboardWidgetMetric>? ListType58 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Langfuse.UnstablePublicApiValidationIssue>? ListType59 { get; set; }
+        public global::System.Collections.Generic.List<global::Langfuse.UnstableDashboardWidgetFilter>? ListType59 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Langfuse.UnstableSkillMeta>? ListType60 { get; set; }
+        public global::System.Collections.Generic.List<global::Langfuse.UnstableDashboardWidget>? ListType60 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Langfuse.UnstableSkillVersionFileCreateInput>? ListType61 { get; set; }
+        public global::System.Collections.Generic.List<global::Langfuse.UnstableDashboardPlacement>? ListType61 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Langfuse.UnstableSkillFileContent>? ListType62 { get; set; }
+        public global::System.Collections.Generic.List<global::Langfuse.UnstableDashboard>? ListType62 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Langfuse.UnstableSkillFile>? ListType63 { get; set; }
+        public global::System.Collections.Generic.List<global::Langfuse.UnstablePublicApiValidationIssue>? ListType63 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Langfuse.OtelResourceSpan>? ListType64 { get; set; }
+        public global::System.Collections.Generic.List<global::Langfuse.UnstableSkillMeta>? ListType64 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.List<global::Langfuse.UnstableSkillFile>? ListType65 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.List<global::Langfuse.UnstableSkillVersionFileCreateInput>? ListType66 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.List<global::Langfuse.UnstableSkillFileContent>? ListType67 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.List<global::Langfuse.OtelResourceSpan>? ListType68 { get; set; }
     }
 }

@@ -452,6 +452,24 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresV3Meta))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.GetScoresV3Response))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreBody))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SkillMetaListResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.SkillMeta>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SkillMeta))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SkillListPagination))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SkillVersionFileInput))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SkillVersionFileReference))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SkillVersionFileCreateInput), TypeInfoPropertyName = "SkillVersionFileCreateInput2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateSkillVersionRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.SkillVersionFileCreateInput>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SkillFile))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SkillFileContentsResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.SkillFileContent>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SkillFileContent))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SkillVersion))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.SkillFile>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UpdateSkillRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UpdateSkillLabelsRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DeleteSkillVersionResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DeleteTraceResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetView), TypeInfoPropertyName = "UnstableDashboardWidgetView2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetViewWithLegacy), TypeInfoPropertyName = "UnstableDashboardWidgetViewWithLegacy2")]
@@ -491,6 +509,20 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacement2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacementType), TypeInfoPropertyName = "UnstableCreateDashboardPlacementRequestUnstableCreatePresetPlacementType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableCreatePresetPlacement))]
+    internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
+    {
+    }
+
+    /// <summary>
+    ///
+    /// </summary>
+    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
+        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
+    )]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>), TypeInfoPropertyName = "IListString_System_Collections_Generic_IList_string")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string?>), TypeInfoPropertyName = "IListString_System_Collections_Generic_IList_string_3")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string?>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableUpdateDashboardPlacementRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDeleteDashboardPlacementResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardDefinition))]
@@ -509,35 +541,21 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableSkillMetaListResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillMeta>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableSkillMeta))]
-    internal sealed partial class SourceGenerationContextChunk0 : global::System.Text.Json.Serialization.JsonSerializerContext
-    {
-    }
-
-    /// <summary>
-    ///
-    /// </summary>
-    [global::System.Text.Json.Serialization.JsonSourceGenerationOptions(
-        DefaultIgnoreCondition = global::System.Text.Json.Serialization.JsonIgnoreCondition.WhenWritingNull
-    )]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string>), TypeInfoPropertyName = "IListString_System_Collections_Generic_IList_string")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<string?>), TypeInfoPropertyName = "IListString_System_Collections_Generic_IList_string_3")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string")]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string?>), TypeInfoPropertyName = "ListString_System_Collections_Generic_List_string_3")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableSkillListPagination))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableSkillVersionFileInput))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableSkillVersionFileReference))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableSkillVersionFileCreateInput), TypeInfoPropertyName = "UnstableSkillVersionFileCreateInput2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableSkillVersion))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillFile>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableSkillFile))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableCreateSkillVersionRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillVersionFileCreateInput>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableSkillFile))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableSkillVersionFileCreateInput), TypeInfoPropertyName = "UnstableSkillVersionFileCreateInput2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableSkillVersionFileInput))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableSkillVersionFileReference))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableUpdateSkillRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDeleteSkillVersionResponse))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableUpdateSkillLabelsRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableSkillFileContentsResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillFileContent>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableSkillFileContent))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableSkillVersion))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillFile>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableUpdateSkillRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableUpdateSkillLabelsRequest))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDeleteSkillVersionResponse))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.OpentelemetryExportTracesRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.OtelResourceSpan>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ProjectsCreateRequest))]
@@ -697,6 +715,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV3TextScoreV3DataType?), TypeInfoPropertyName = "NullableScoreV3TextScoreV3DataType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.ScoreV3CorrectionScoreV32, global::Langfuse.CorrectionScoreV3>?), TypeInfoPropertyName = "NullableAllOfScoreV3CorrectionScoreV32CorrectionScoreV32")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.ScoreV3CorrectionScoreV3DataType?), TypeInfoPropertyName = "NullableScoreV3CorrectionScoreV3DataType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.SkillVersionFileCreateInput?), TypeInfoPropertyName = "NullableSkillVersionFileCreateInput2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetView?), TypeInfoPropertyName = "NullableUnstableDashboardWidgetView2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetViewWithLegacy?), TypeInfoPropertyName = "NullableUnstableDashboardWidgetViewWithLegacy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableDashboardWidgetChartType?), TypeInfoPropertyName = "NullableUnstableDashboardWidgetChartType2")]
@@ -766,6 +785,10 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.ScoreConfig>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.CreateScoreRequest>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.CreateScoreBatchError>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.SkillMeta>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.SkillVersionFileCreateInput>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.SkillFileContent>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.SkillFile>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableDashboardWidgetDimension>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableDashboardWidgetMetric>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableDashboardWidgetFilter>))]
@@ -774,9 +797,9 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableDashboard>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstablePublicApiValidationIssue>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableSkillMeta>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableSkillFile>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableSkillVersionFileCreateInput>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableSkillFileContent>))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableSkillFile>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.OtelResourceSpan>))]
     internal sealed partial class SourceGenerationContextChunk1 : global::System.Text.Json.Serialization.JsonSerializerContext
     {
@@ -838,6 +861,7 @@ namespace Langfuse
             options.Converters.Add(new global::Langfuse.JsonConverters.CreateScoresResponseJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.ScoreSubjectV3JsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.ScoreV3JsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.SkillVersionFileCreateInputJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnstableDashboardPlacementJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnstableCreateDashboardPlacementRequestJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnstableSkillVersionFileCreateInputJsonConverter());

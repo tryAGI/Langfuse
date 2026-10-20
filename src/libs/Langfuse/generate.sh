@@ -26,8 +26,10 @@ fetch_spec --fail --silent --show-error --location \
   https://raw.githubusercontent.com/langfuse/langfuse/main/web/public/generated/api/openapi.yml
 
 # Fail before replacing the checked-in spec on unexpected operation loss.
-# Only the documented v4 migration is approved; replacement APIs stay mandatory.
+# Only reviewed migrations are approved; replacement APIs stay mandatory.
+# Upstream retains the old Skills routes as compatibility aliases (langfuse#19025).
 if [[ -f openapi.yaml ]]; then
+  python3 ../../../scripts/preserve-skills-aliases.py openapi.yaml "$temp_spec"
   python3 ../../../scripts/check-openapi-migration.py openapi.yaml "$temp_spec"
 else
   python3 ../../../scripts/check-openapi-migration.py "$temp_spec" "$temp_spec"

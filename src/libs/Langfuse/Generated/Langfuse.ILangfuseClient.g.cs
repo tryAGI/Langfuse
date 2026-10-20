@@ -171,6 +171,11 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
+        public SkillsClient Skills { get; }
+
+        /// <summary>
+        ///
+        /// </summary>
         public TraceClient Trace { get; }
 
         /// <summary>

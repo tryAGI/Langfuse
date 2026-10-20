@@ -11,6 +11,21 @@ Langfuse Cloud sunsets legacy reads and trace/observation ingestion on
 The regenerated SDK removes legacy schema types and moves Scores v3 into
 `client.Scores`. Consumers of removed members must update and recompile.
 
+## Stable Skills API (October 20, 2026)
+
+`client.Skills` uses the newly stable `/api/public/skills` endpoints. Existing
+`client.UnstableSkills` members and `UnstableSkill*` models remain available:
+Langfuse retains their old server routes as compatibility aliases. New code
+should use `client.Skills`; existing callers can migrate separately.
+
+Regeneration preserves exactly seven reviewed aliases and the schema components
+they reference. It verifies that each stable replacement remains present,
+nondeprecated and wire-compatible before retaining the alias; unexpected
+operation loss still fails the original migration guard. A request/response
+schema change requires another review rather than silently copying stale data.
+
+See [the provider stabilization change](https://github.com/langfuse/langfuse/pull/19025).
+
 ## Authentication
 
 ```csharp
@@ -79,7 +94,7 @@ autosdk trim src/libs/Langfuse/Langfuse.csproj
 
 Use `linux-x64` on Linux. The shared HTTP contract fixture exercises replacement
 reads, filters, cursors, authentication, OTLP JSON/header handling and direct score
-writes/deletes with an in-memory handler. The native executable disables JSON
+writes/deletes with an in-memory handler. Both stable and legacy Skills list calls are also covered. The native executable disables JSON
 reflection. It does not call a provider or prove live server acceptance.
 
 ## Primary references

@@ -44,7 +44,10 @@ internal static class ReplacementApiContract
             [new CreateScoreRequest { Id = "score/1", Name = "quality", Value = 0.9, TraceId = "trace/1" }]);
         Require(created.PickCreateScoreBatchResults().Accepted == 1, "Batched scores response");
         await client.Scores.ScoresDeleteAsync(scoreId: "score-1");
-        Require(handler.Count == 9, "All replacement requests completed");
+        var stableSkills = await client.Skills.SkillsListAsync(name: "example/skill", page: 1, limit: 10);
+        var compatibilitySkills = await client.UnstableSkills.UnstableSkillsListAsync(name: "example/skill", page: 1, limit: 10);
+        Require(stableSkills.Data.Count == 0 && compatibilitySkills.Data.Count == 0, "Stable and compatibility Skills responses");
+        Require(handler.Count == 11, "All replacement and compatibility requests completed");
     }
 
     private static void Require(bool condition, string message)
@@ -68,6 +71,12 @@ internal static class ReplacementApiContract
             string response;
             switch (uri.AbsolutePath)
             {
+                case "/api/public/skills":
+                case "/api/public/unstable/skills":
+                    Require(request.Method == HttpMethod.Get && query["name"] == "example/skill", "Skills aliases and encoded query");
+                    Require(query["page"] == "1" && query["limit"] == "10", "Skills pagination");
+                    response = "{\"data\":[],\"meta\":{\"hasNextPage\":false}}";
+                    break;
                 case "/api/public/v2/observations":
                     Require(request.Method == HttpMethod.Get, "Observation GET");
                     Require(query.ContainsKey("fromStartTime") && query.ContainsKey("toStartTime"), "Bounded observations");
