@@ -124,7 +124,7 @@ namespace Langfuse
         public global::Langfuse.BlobStorageExportSource? ExportSource { get; set; }
 
         /// <summary>
-        /// Field groups to include in each exported observation row. Applies to all export sources; must include `core` if provided. When omitted on create, the column default (all groups) applies. When omitted on update, the existing value is preserved.<br/>
+        /// Field groups to include in each exported observation and score row. Applies to all export sources; must include the observation `core` group if provided. Core score columns are always exported; score groups add columns on top. When omitted on create, all observation groups are selected and no score groups. When omitted on update, the existing value is preserved.<br/>
         /// `exportFieldGroups` requires `exportSource` to be provided in the same request.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("exportFieldGroups")]
@@ -187,7 +187,7 @@ namespace Langfuse
         /// **Note:** which sources a deployment accepts depends on how far it has moved to the v4 data model. `OBSERVATIONS_V2` and the enriched-observations portion of `LEGACY_TRACES_AND_ENRICHED_OBSERVATIONS` read the enriched observations table, so they require a deployment that already populates it. `LEGACY_TRACES_OBSERVATIONS` and the legacy portion of `LEGACY_TRACES_AND_ENRICHED_OBSERVATIONS` read the legacy traces and observations tables, so they require a deployment that still populates those. A deployment part-way through the migration populates both and accepts every source. Selecting a source the deployment cannot serve is rejected with `400`, rather than exporting an empty result. See https://langfuse.com/docs/v4.
         /// </param>
         /// <param name="exportFieldGroups">
-        /// Field groups to include in each exported observation row. Applies to all export sources; must include `core` if provided. When omitted on create, the column default (all groups) applies. When omitted on update, the existing value is preserved.<br/>
+        /// Field groups to include in each exported observation and score row. Applies to all export sources; must include the observation `core` group if provided. Core score columns are always exported; score groups add columns on top. When omitted on create, all observation groups are selected and no score groups. When omitted on update, the existing value is preserved.<br/>
         /// `exportFieldGroups` requires `exportSource` to be provided in the same request.
         /// </param>
 #if NET7_0_OR_GREATER

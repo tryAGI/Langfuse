@@ -127,7 +127,7 @@ namespace Langfuse
         public required global::Langfuse.BlobStorageExportSource ExportSource { get; set; }
 
         /// <summary>
-        /// Field groups included in each exported observation row. An empty list is treated as all groups during export.
+        /// Field groups included in each exported observation and score row. An empty list is treated as all observation groups and no score groups during export. Core score columns are always exported.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("exportFieldGroups")]
         public global::System.Collections.Generic.IList<global::Langfuse.BlobStorageExportFieldGroup>? ExportFieldGroups { get; set; }
@@ -206,7 +206,7 @@ namespace Langfuse
         /// <param name="accessKeyId"></param>
         /// <param name="exportStartDate"></param>
         /// <param name="exportFieldGroups">
-        /// Field groups included in each exported observation row. An empty list is treated as all groups during export.
+        /// Field groups included in each exported observation and score row. An empty list is treated as all observation groups and no score groups during export. Core score columns are always exported.
         /// </param>
         /// <param name="nextSyncAt"></param>
         /// <param name="lastSyncAt"></param>
