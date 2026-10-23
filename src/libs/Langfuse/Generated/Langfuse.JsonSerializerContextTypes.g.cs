@@ -2065,107 +2065,163 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillMetaListResponse? Type508 { get; set; }
+        public global::Langfuse.UnstableTopicsOrderBy? Type508 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillMeta>? Type509 { get; set; }
+        public global::Langfuse.UnstableTopicFacetPublishedRun? Type509 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillMeta? Type510 { get; set; }
+        public global::Langfuse.UnstableTopicFacet? Type510 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillListPagination? Type511 { get; set; }
+        public global::Langfuse.UnstableTopicFacetList? Type511 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillVersion? Type512 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableTopicFacet>? Type512 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillFile>? Type513 { get; set; }
+        public global::Langfuse.UnstableTopicFacetRef? Type513 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillFile? Type514 { get; set; }
+        public global::Langfuse.UnstableTopicWindow? Type514 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableCreateSkillVersionRequest? Type515 { get; set; }
+        public global::Langfuse.UnstableTopic? Type515 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillVersionFileCreateInput>? Type516 { get; set; }
+        public global::Langfuse.UnstableTopicWithStatus? Type516 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillVersionFileCreateInput? Type517 { get; set; }
+        public global::Langfuse.UnstableTopicStatusCounts? Type517 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillVersionFileInput? Type518 { get; set; }
+        public global::Langfuse.UnstableTopicFacetCounts? Type518 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillVersionFileReference? Type519 { get; set; }
+        public global::Langfuse.UnstableTopicList? Type519 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableUpdateSkillRequest? Type520 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableTopic>? Type520 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableDeleteSkillVersionResponse? Type521 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableTopicFacetCounts>? Type521 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableUpdateSkillLabelsRequest? Type522 { get; set; }
+        public global::Langfuse.UnstableSkillMetaListResponse? Type522 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillFileContentsResponse? Type523 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillMeta>? Type523 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillFileContent>? Type524 { get; set; }
+        public global::Langfuse.UnstableSkillMeta? Type524 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.UnstableSkillFileContent? Type525 { get; set; }
+        public global::Langfuse.UnstableSkillListPagination? Type525 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.OpentelemetryExportTracesRequest? Type526 { get; set; }
+        public global::Langfuse.UnstableSkillVersion? Type526 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.IList<global::Langfuse.OtelResourceSpan>? Type527 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillFile>? Type527 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ProjectsCreateRequest? Type528 { get; set; }
+        public global::Langfuse.UnstableSkillFile? Type528 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ProjectsUpdateRequest? Type529 { get; set; }
+        public global::Langfuse.UnstableCreateSkillVersionRequest? Type529 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ProjectsCreateApiKeyRequest? Type530 { get; set; }
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillVersionFileCreateInput>? Type530 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.PromptVersionUpdateRequest? Type531 { get; set; }
+        public global::Langfuse.UnstableSkillVersionFileCreateInput? Type531 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.ScimCreateUserRequest? Type532 { get; set; }
+        public global::Langfuse.UnstableSkillVersionFileInput? Type532 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::Langfuse.TraceDeleteMultipleRequest? Type533 { get; set; }
+        public global::Langfuse.UnstableSkillVersionFileReference? Type533 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.UnstableUpdateSkillRequest? Type534 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.UnstableDeleteSkillVersionResponse? Type535 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.UnstableUpdateSkillLabelsRequest? Type536 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.UnstableSkillFileContentsResponse? Type537 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.IList<global::Langfuse.UnstableSkillFileContent>? Type538 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.UnstableSkillFileContent? Type539 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.OpentelemetryExportTracesRequest? Type540 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.IList<global::Langfuse.OtelResourceSpan>? Type541 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.ProjectsCreateRequest? Type542 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.ProjectsUpdateRequest? Type543 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.ProjectsCreateApiKeyRequest? Type544 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.PromptVersionUpdateRequest? Type545 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.ScimCreateUserRequest? Type546 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.TraceDeleteMultipleRequest? Type547 { get; set; }
 
         /// <summary>
         ///
@@ -2426,22 +2482,34 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Langfuse.UnstableSkillMeta>? ListType64 { get; set; }
+        public global::System.Collections.Generic.List<global::Langfuse.UnstableTopicFacet>? ListType64 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Langfuse.UnstableSkillFile>? ListType65 { get; set; }
+        public global::System.Collections.Generic.List<global::Langfuse.UnstableTopic>? ListType65 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Langfuse.UnstableSkillVersionFileCreateInput>? ListType66 { get; set; }
+        public global::System.Collections.Generic.List<global::Langfuse.UnstableTopicFacetCounts>? ListType66 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Langfuse.UnstableSkillFileContent>? ListType67 { get; set; }
+        public global::System.Collections.Generic.List<global::Langfuse.UnstableSkillMeta>? ListType67 { get; set; }
         /// <summary>
         ///
         /// </summary>
-        public global::System.Collections.Generic.List<global::Langfuse.OtelResourceSpan>? ListType68 { get; set; }
+        public global::System.Collections.Generic.List<global::Langfuse.UnstableSkillFile>? ListType68 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.List<global::Langfuse.UnstableSkillVersionFileCreateInput>? ListType69 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.List<global::Langfuse.UnstableSkillFileContent>? ListType70 { get; set; }
+        /// <summary>
+        ///
+        /// </summary>
+        public global::System.Collections.Generic.List<global::Langfuse.OtelResourceSpan>? ListType71 { get; set; }
     }
 }
