@@ -1,0 +1,55 @@
+
+#nullable enable
+
+namespace Langfuse
+{
+    /// <summary>
+    ///
+    /// </summary>
+    public sealed partial class UnstableTopicWindow
+    {
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("from")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.DateTime From { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("to")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.DateTime To { get; set; }
+
+        /// <summary>
+        /// Additional properties that are not explicitly defined in the schema
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonExtensionData]
+        public global::System.Collections.Generic.IDictionary<string, object> AdditionalProperties { get; set; } = new global::System.Collections.Generic.Dictionary<string, object>();
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UnstableTopicWindow" /> class.
+        /// </summary>
+        /// <param name="from"></param>
+        /// <param name="to"></param>
+#if NET7_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
+#endif
+        public UnstableTopicWindow(
+            global::System.DateTime from,
+            global::System.DateTime to)
+        {
+            this.From = from;
+            this.To = to;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UnstableTopicWindow" /> class.
+        /// </summary>
+        public UnstableTopicWindow()
+        {
+        }
+
+    }
+}
