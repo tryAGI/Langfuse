@@ -47,9 +47,9 @@ namespace Langfuse
 
         /// <summary>
         /// Unstable: Topics is in closed beta. The shape may change without notice.<br/>
-        /// List the project's Topics facets. Only active facets (attached to the<br/>
-        /// project's Topics rule, or all facets if the project has no rule) are<br/>
-        /// returned unless `filter` contains an `active` condition.<br/>
+        /// List the project's Topics facets. Only active facets (run by a Topics<br/>
+        /// rule, or all facets if the project has no rule) are returned unless<br/>
+        /// `filter` contains an `active` condition.<br/>
         /// `filter` is a JSON array of filter conditions combined with AND.<br/>
         /// String matching is case-insensitive. Columns: `id` (stringOptions),<br/>
         /// `name` (string, stringOptions), `description` (string), `isBuiltIn`<br/>
@@ -80,9 +80,9 @@ namespace Langfuse
         }
         /// <summary>
         /// Unstable: Topics is in closed beta. The shape may change without notice.<br/>
-        /// List the project's Topics facets. Only active facets (attached to the<br/>
-        /// project's Topics rule, or all facets if the project has no rule) are<br/>
-        /// returned unless `filter` contains an `active` condition.<br/>
+        /// List the project's Topics facets. Only active facets (run by a Topics<br/>
+        /// rule, or all facets if the project has no rule) are returned unless<br/>
+        /// `filter` contains an `active` condition.<br/>
         /// `filter` is a JSON array of filter conditions combined with AND.<br/>
         /// String matching is case-insensitive. Columns: `id` (stringOptions),<br/>
         /// `name` (string, stringOptions), `description` (string), `isBuiltIn`<br/>

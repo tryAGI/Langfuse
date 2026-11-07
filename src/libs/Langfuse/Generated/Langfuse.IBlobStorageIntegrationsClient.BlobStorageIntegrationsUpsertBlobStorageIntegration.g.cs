@@ -44,8 +44,16 @@ namespace Langfuse
         /// <param name="region">
         /// Storage region used by S3-compatible clients (AWS, GCS, Cloudflare R2, MinIO, Azure location IDs such as eastus, OCI). Leading and trailing whitespace is removed. The remaining value must be 1-63 letters, numbers, or hyphens, and cannot start or end with a hyphen. Examples: us-east-1, europe-west1, eastus, auto. Not used by GOOGLE_CLOUD_STORAGE; pass auto.
         /// </param>
+        /// <param name="authType">
+        /// How Langfuse authenticates to the bucket.<br/>
+        /// - `ACCESS_KEYS`: stored access key ID and secret access key.<br/>
+        /// - `ROLE_ARN`: Langfuse assumes an IAM role in your AWS account (Amazon S3 only). Langfuse's cross-account role (`crossAccountRoleArn`) assumes your role with the integration's `externalId`, using a session limited to writing under the configured prefix. Requires an Enterprise plan and a deployment that configures a cross-account role; `crossAccountRoleArn` is not null when both apply.
+        /// </param>
+        /// <param name="roleArn">
+        /// ARN of the IAM role in your AWS account that Langfuse assumes when `authType` is `ROLE_ARN`, e.g. `arn:aws:iam::123456789012:role/langfuse-export`. When omitted on update, the stored role ARN is kept.
+        /// </param>
         /// <param name="accessKeyId">
-        /// Access key ID for authentication. Not used for GOOGLE_CLOUD_STORAGE.
+        /// Access key ID for authentication. Not used for GOOGLE_CLOUD_STORAGE or when `authType` is `ROLE_ARN`.
         /// </param>
         /// <param name="secretAccessKey">
         /// Secret access key for authentication (will be encrypted when stored). When omitted on update, the stored secret is kept, unless the type changes between GOOGLE_CLOUD_STORAGE and another type.<br/>
@@ -96,6 +104,8 @@ namespace Langfuse
             global::Langfuse.BlobStorageIntegrationFileType fileType,
             global::Langfuse.BlobStorageExportMode exportMode,
             string? endpoint = default,
+            global::Langfuse.BlobStorageIntegrationAuthType? authType = default,
+            string? roleArn = default,
             string? accessKeyId = default,
             string? secretAccessKey = default,
             string? prefix = default,
