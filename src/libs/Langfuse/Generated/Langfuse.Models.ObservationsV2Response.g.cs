@@ -6,7 +6,9 @@ namespace Langfuse
     /// <summary>
     /// Response containing observations with field-group-based filtering and cursor-based pagination.<br/>
     /// The `data` array contains observation objects with only the requested field groups included.<br/>
-    /// Use the `cursor` in `meta` to retrieve the next page of results.
+    /// Use the `cursor` in `meta` to retrieve the next page of results. The array may contain fewer<br/>
+    /// than the requested `limit` items, or be empty, while a cursor is present. Continue until the<br/>
+    /// cursor is absent.
     /// </summary>
     public sealed partial class ObservationsV2Response
     {
@@ -22,7 +24,7 @@ namespace Langfuse
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("meta")]
         [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::Langfuse.UtilsCursorMetaResponse Meta { get; set; }
+        public required global::Langfuse.ObservationsV2Meta Meta { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -44,7 +46,7 @@ namespace Langfuse
 #endif
         public ObservationsV2Response(
             global::System.Collections.Generic.IList<global::Langfuse.ObservationV2> data,
-            global::Langfuse.UtilsCursorMetaResponse meta)
+            global::Langfuse.ObservationsV2Meta meta)
         {
             this.Data = data ?? throw new global::System.ArgumentNullException(nameof(data));
             this.Meta = meta ?? throw new global::System.ArgumentNullException(nameof(meta));

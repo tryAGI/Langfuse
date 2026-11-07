@@ -4,7 +4,7 @@
 namespace Langfuse
 {
     /// <summary>
-    /// Optional. Configuration for the selected tokenizer. Needs to be JSON. See docs for more details.
+    /// Legacy tokenizer configuration retained for API compatibility. Ingestion no longer uses it to infer observation usage.
     /// </summary>
     public sealed partial class ModelTokenizerConfig
     {

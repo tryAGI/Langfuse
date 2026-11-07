@@ -10,7 +10,10 @@ namespace Langfuse
         /// ## Cursor-based Pagination<br/>
         /// This endpoint uses cursor-based pagination for efficient traversal of large datasets.<br/>
         /// The cursor is returned in the response metadata and should be passed in subsequent requests<br/>
-        /// to retrieve the next page of results.<br/>
+        /// to retrieve the next page of results. The `limit` parameter is a maximum: a page may contain<br/>
+        /// fewer items than the requested limit, including zero items, while `meta.cursor` is present.<br/>
+        /// Continue requesting pages until `meta.cursor` is absent.<br/>
+        /// Requests without a lower start-time bound may search only from January 1, 2020.<br/>
         /// ## Field Selection<br/>
         /// Use the `fields` parameter to control which observation fields are returned:<br/>
         /// - `core` - Always included: id, traceId, startTime, endTime, projectId, parentObservationId, type<br/>
@@ -76,7 +79,10 @@ namespace Langfuse
         /// ## Cursor-based Pagination<br/>
         /// This endpoint uses cursor-based pagination for efficient traversal of large datasets.<br/>
         /// The cursor is returned in the response metadata and should be passed in subsequent requests<br/>
-        /// to retrieve the next page of results.<br/>
+        /// to retrieve the next page of results. The `limit` parameter is a maximum: a page may contain<br/>
+        /// fewer items than the requested limit, including zero items, while `meta.cursor` is present.<br/>
+        /// Continue requesting pages until `meta.cursor` is absent.<br/>
+        /// Requests without a lower start-time bound may search only from January 1, 2020.<br/>
         /// ## Field Selection<br/>
         /// Use the `fields` parameter to control which observation fields are returned:<br/>
         /// - `core` - Always included: id, traceId, startTime, endTime, projectId, parentObservationId, type<br/>

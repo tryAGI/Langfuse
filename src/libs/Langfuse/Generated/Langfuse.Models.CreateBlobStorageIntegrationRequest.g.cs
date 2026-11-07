@@ -44,7 +44,22 @@ namespace Langfuse
         public required string Region { get; set; }
 
         /// <summary>
-        /// Access key ID for authentication. Not used for GOOGLE_CLOUD_STORAGE.
+        /// How Langfuse authenticates to the bucket.<br/>
+        /// - `ACCESS_KEYS`: stored access key ID and secret access key.<br/>
+        /// - `ROLE_ARN`: Langfuse assumes an IAM role in your AWS account (Amazon S3 only). Langfuse's cross-account role (`crossAccountRoleArn`) assumes your role with the integration's `externalId`, using a session limited to writing under the configured prefix. Requires an Enterprise plan and a deployment that configures a cross-account role; `crossAccountRoleArn` is not null when both apply.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("authType")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.BlobStorageIntegrationAuthTypeJsonConverter))]
+        public global::Langfuse.BlobStorageIntegrationAuthType? AuthType { get; set; }
+
+        /// <summary>
+        /// ARN of the IAM role in your AWS account that Langfuse assumes when `authType` is `ROLE_ARN`, e.g. `arn:aws:iam::123456789012:role/langfuse-export`. When omitted on update, the stored role ARN is kept.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("roleArn")]
+        public string? RoleArn { get; set; }
+
+        /// <summary>
+        /// Access key ID for authentication. Not used for GOOGLE_CLOUD_STORAGE or when `authType` is `ROLE_ARN`.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("accessKeyId")]
         public string? AccessKeyId { get; set; }
@@ -163,8 +178,16 @@ namespace Langfuse
         /// <param name="endpoint">
         /// Custom endpoint URL (required for S3_COMPATIBLE type). Ignored for GOOGLE_CLOUD_STORAGE.
         /// </param>
+        /// <param name="authType">
+        /// How Langfuse authenticates to the bucket.<br/>
+        /// - `ACCESS_KEYS`: stored access key ID and secret access key.<br/>
+        /// - `ROLE_ARN`: Langfuse assumes an IAM role in your AWS account (Amazon S3 only). Langfuse's cross-account role (`crossAccountRoleArn`) assumes your role with the integration's `externalId`, using a session limited to writing under the configured prefix. Requires an Enterprise plan and a deployment that configures a cross-account role; `crossAccountRoleArn` is not null when both apply.
+        /// </param>
+        /// <param name="roleArn">
+        /// ARN of the IAM role in your AWS account that Langfuse assumes when `authType` is `ROLE_ARN`, e.g. `arn:aws:iam::123456789012:role/langfuse-export`. When omitted on update, the stored role ARN is kept.
+        /// </param>
         /// <param name="accessKeyId">
-        /// Access key ID for authentication. Not used for GOOGLE_CLOUD_STORAGE.
+        /// Access key ID for authentication. Not used for GOOGLE_CLOUD_STORAGE or when `authType` is `ROLE_ARN`.
         /// </param>
         /// <param name="secretAccessKey">
         /// Secret access key for authentication (will be encrypted when stored). When omitted on update, the stored secret is kept, unless the type changes between GOOGLE_CLOUD_STORAGE and another type.<br/>
@@ -204,6 +227,8 @@ namespace Langfuse
             global::Langfuse.BlobStorageIntegrationFileType fileType,
             global::Langfuse.BlobStorageExportMode exportMode,
             string? endpoint,
+            global::Langfuse.BlobStorageIntegrationAuthType? authType,
+            string? roleArn,
             string? accessKeyId,
             string? secretAccessKey,
             string? prefix,
@@ -217,6 +242,8 @@ namespace Langfuse
             this.BucketName = bucketName ?? throw new global::System.ArgumentNullException(nameof(bucketName));
             this.Endpoint = endpoint;
             this.Region = region ?? throw new global::System.ArgumentNullException(nameof(region));
+            this.AuthType = authType;
+            this.RoleArn = roleArn;
             this.AccessKeyId = accessKeyId;
             this.SecretAccessKey = secretAccessKey;
             this.Prefix = prefix;
