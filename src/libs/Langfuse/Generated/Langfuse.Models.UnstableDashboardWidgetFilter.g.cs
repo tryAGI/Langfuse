@@ -12,7 +12,7 @@ namespace Langfuse
     /// | `number` | number | `=`, `&gt;`, `&lt;`, `&gt;=`, `&lt;=` |<br/>
     /// | `datetime` | ISO datetime string | `&gt;`, `&lt;`, `&gt;=`, `&lt;=` |<br/>
     /// | `boolean` | boolean | `=`, `&lt;&gt;` |<br/>
-    /// | `null` | `""` | `is null`, `is not null` |<br/>
+    /// | `null` | `""` (can be omitted on servers newer than v4.78.0) | `is null`, `is not null` |<br/>
     /// | `stringOptions` | list of strings | `any of`, `none of` |<br/>
     /// | `arrayOptions` | list of strings | `any of`, `none of`, `all of` |<br/>
     /// | `categoryOptions` | list of strings (requires `key`) | `any of`, `none of` |<br/>

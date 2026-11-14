@@ -44,6 +44,12 @@ namespace Langfuse
         public required global::Langfuse.UnstableTopicFacetRef Facet { get; set; }
 
         /// <summary>
+        /// The rule whose live map has the topic. Null when the project has no rule.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ruleId")]
+        public string? RuleId { get; set; }
+
+        /// <summary>
         /// The run that produced this topic version.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("runId")]
@@ -81,6 +87,9 @@ namespace Langfuse
         /// <param name="traceCount">
         /// Traces in the window whose current result for the facet is this topic.
         /// </param>
+        /// <param name="ruleId">
+        /// The rule whose live map has the topic. Null when the project has no rule.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
@@ -91,13 +100,15 @@ namespace Langfuse
             string description,
             global::Langfuse.UnstableTopicFacetRef facet,
             string runId,
-            int traceCount)
+            int traceCount,
+            string? ruleId)
         {
             this.Id = id ?? throw new global::System.ArgumentNullException(nameof(id));
             this.VersionId = versionId ?? throw new global::System.ArgumentNullException(nameof(versionId));
             this.Name = name ?? throw new global::System.ArgumentNullException(nameof(name));
             this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
             this.Facet = facet ?? throw new global::System.ArgumentNullException(nameof(facet));
+            this.RuleId = ruleId;
             this.RunId = runId ?? throw new global::System.ArgumentNullException(nameof(runId));
             this.TraceCount = traceCount;
         }
