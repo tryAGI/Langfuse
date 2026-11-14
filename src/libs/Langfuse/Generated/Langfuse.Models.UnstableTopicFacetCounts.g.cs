@@ -18,6 +18,12 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ruleId")]
+        public string? RuleId { get; set; }
+
+        /// <summary>
+        ///
+        /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("publishedRunId")]
         public string? PublishedRunId { get; set; }
 
@@ -41,6 +47,7 @@ namespace Langfuse
         /// <param name="counts">
         /// Traces in the window by their current result for one facet.
         /// </param>
+        /// <param name="ruleId"></param>
         /// <param name="publishedRunId"></param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
@@ -48,9 +55,11 @@ namespace Langfuse
         public UnstableTopicFacetCounts(
             global::Langfuse.UnstableTopicFacetRef facet,
             global::Langfuse.UnstableTopicStatusCounts counts,
+            string? ruleId,
             string? publishedRunId)
         {
             this.Facet = facet ?? throw new global::System.ArgumentNullException(nameof(facet));
+            this.RuleId = ruleId;
             this.PublishedRunId = publishedRunId;
             this.Counts = counts ?? throw new global::System.ArgumentNullException(nameof(counts));
         }

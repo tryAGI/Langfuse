@@ -47,9 +47,8 @@ namespace Langfuse
 
         /// <summary>
         /// Unstable: Topics is in closed beta. The shape may change without notice.<br/>
-        /// Get one topic by its stable id. Topics on the current map are always<br/>
-        /// found. A retired topic is found while traces in the window are still<br/>
-        /// assigned to it, with `inCurrentMap: false`.
+        /// Get one topic of a facet's current map by its stable id. Retired<br/>
+        /// topics are not found.
         /// </summary>
         /// <param name="topicId"></param>
         /// <param name="fromTimestamp"></param>
@@ -76,9 +75,8 @@ namespace Langfuse
         }
         /// <summary>
         /// Unstable: Topics is in closed beta. The shape may change without notice.<br/>
-        /// Get one topic by its stable id. Topics on the current map are always<br/>
-        /// found. A retired topic is found while traces in the window are still<br/>
-        /// assigned to it, with `inCurrentMap: false`.
+        /// Get one topic of a facet's current map by its stable id. Retired<br/>
+        /// topics are not found.
         /// </summary>
         /// <param name="topicId"></param>
         /// <param name="fromTimestamp"></param>

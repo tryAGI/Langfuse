@@ -12,8 +12,13 @@ namespace Langfuse
         /// New labels for the prompt version. Labels are unique across versions. The "latest" label is reserved and managed by Langfuse.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("newLabels")]
-        [global::System.Text.Json.Serialization.JsonRequired]
-        public required global::System.Collections.Generic.IList<string> NewLabels { get; set; }
+        public global::System.Collections.Generic.IList<string>? NewLabels { get; set; }
+
+        /// <summary>
+        /// Labels to remove from the prompt version. The "latest" label is reserved and managed by Langfuse.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("removeLabels")]
+        public global::System.Collections.Generic.IList<string>? RemoveLabels { get; set; }
 
         /// <summary>
         /// Additional properties that are not explicitly defined in the schema
@@ -27,13 +32,18 @@ namespace Langfuse
         /// <param name="newLabels">
         /// New labels for the prompt version. Labels are unique across versions. The "latest" label is reserved and managed by Langfuse.
         /// </param>
+        /// <param name="removeLabels">
+        /// Labels to remove from the prompt version. The "latest" label is reserved and managed by Langfuse.
+        /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]
 #endif
         public PromptVersionUpdateRequest(
-            global::System.Collections.Generic.IList<string> newLabels)
+            global::System.Collections.Generic.IList<string>? newLabels,
+            global::System.Collections.Generic.IList<string>? removeLabels)
         {
-            this.NewLabels = newLabels ?? throw new global::System.ArgumentNullException(nameof(newLabels));
+            this.NewLabels = newLabels;
+            this.RemoveLabels = removeLabels;
         }
 
         /// <summary>
