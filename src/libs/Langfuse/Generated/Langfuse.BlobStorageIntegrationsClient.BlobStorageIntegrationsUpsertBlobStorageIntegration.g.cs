@@ -346,13 +346,13 @@ namespace Langfuse
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_400 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(string), JsonSerializerContext);
+                                        __value_400 = __content_400 is not { Length: > 0 } ? null : (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(string), JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_400 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_400 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(string), JsonSerializerContext);
+                                        __value_400 = __content_400 is not { Length: > 0 } ? null : (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_400, typeof(string), JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -363,7 +363,7 @@ namespace Langfuse
 
                                 throw global::Langfuse.ApiException<string>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_400 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_400 is { Length: > 0 } ? __content_400 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_400,
                                     responseBody: __content_400,
                                     responseObject: __value_400,
@@ -383,13 +383,13 @@ namespace Langfuse
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_401 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(string), JsonSerializerContext);
+                                        __value_401 = __content_401 is not { Length: > 0 } ? null : (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(string), JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_401 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_401 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(string), JsonSerializerContext);
+                                        __value_401 = __content_401 is not { Length: > 0 } ? null : (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_401, typeof(string), JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -400,7 +400,7 @@ namespace Langfuse
 
                                 throw global::Langfuse.ApiException<string>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_401 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_401 is { Length: > 0 } ? __content_401 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_401,
                                     responseBody: __content_401,
                                     responseObject: __value_401,
@@ -420,13 +420,13 @@ namespace Langfuse
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_403 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_403, typeof(string), JsonSerializerContext);
+                                        __value_403 = __content_403 is not { Length: > 0 } ? null : (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_403, typeof(string), JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_403 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_403 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_403, typeof(string), JsonSerializerContext);
+                                        __value_403 = __content_403 is not { Length: > 0 } ? null : (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_403, typeof(string), JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -437,7 +437,7 @@ namespace Langfuse
 
                                 throw global::Langfuse.ApiException<string>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_403 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_403 is { Length: > 0 } ? __content_403 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_403,
                                     responseBody: __content_403,
                                     responseObject: __value_403,
@@ -457,13 +457,13 @@ namespace Langfuse
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_404 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_404, typeof(string), JsonSerializerContext);
+                                        __value_404 = __content_404 is not { Length: > 0 } ? null : (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_404, typeof(string), JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_404 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_404 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_404, typeof(string), JsonSerializerContext);
+                                        __value_404 = __content_404 is not { Length: > 0 } ? null : (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_404, typeof(string), JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -474,7 +474,7 @@ namespace Langfuse
 
                                 throw global::Langfuse.ApiException<string>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_404 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_404 is { Length: > 0 } ? __content_404 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_404,
                                     responseBody: __content_404,
                                     responseObject: __value_404,
@@ -494,13 +494,13 @@ namespace Langfuse
                                     if (__effectiveReadResponseAsString)
                                     {
                                         __content_405 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
-                                        __value_405 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_405, typeof(string), JsonSerializerContext);
+                                        __value_405 = __content_405 is not { Length: > 0 } ? null : (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_405, typeof(string), JsonSerializerContext);
                                     }
                                     else
                                     {
                                         __content_405 = await __response.Content.ReadAsStringAsync(__effectiveCancellationToken).ConfigureAwait(false);
 
-                                        __value_405 = (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_405, typeof(string), JsonSerializerContext);
+                                        __value_405 = __content_405 is not { Length: > 0 } ? null : (string?)global::System.Text.Json.JsonSerializer.Deserialize(__content_405, typeof(string), JsonSerializerContext);
                                     }
                                 }
                                 catch (global::System.Exception __ex)
@@ -511,7 +511,7 @@ namespace Langfuse
 
                                 throw global::Langfuse.ApiException<string>.Create(
                                     statusCode: __response.StatusCode,
-                                    message: __content_405 ?? __response.ReasonPhrase ?? string.Empty,
+                                    message: __content_405 is { Length: > 0 } ? __content_405 : __response.ReasonPhrase ?? string.Empty,
                                     innerException: __exception_405,
                                     responseBody: __content_405,
                                     responseObject: __value_405,
@@ -554,7 +554,7 @@ namespace Langfuse
                                 {
                                     throw global::Langfuse.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -599,7 +599,7 @@ namespace Langfuse
 
                                     throw global::Langfuse.ApiException.Create(
                                         statusCode: __response.StatusCode,
-                                        message: __content ?? __response.ReasonPhrase ?? string.Empty,
+                                        message: __content is { Length: > 0 } ? __content : __response.ReasonPhrase ?? string.Empty,
                                         innerException: __ex,
                                         responseBody: __content,
                                         responseHeaders: global::System.Linq.Enumerable.ToDictionary(
@@ -632,8 +632,16 @@ namespace Langfuse
         /// <param name="region">
         /// Storage region used by S3-compatible clients (AWS, GCS, Cloudflare R2, MinIO, Azure location IDs such as eastus, OCI). Leading and trailing whitespace is removed. The remaining value must be 1-63 letters, numbers, or hyphens, and cannot start or end with a hyphen. Examples: us-east-1, europe-west1, eastus, auto. Not used by GOOGLE_CLOUD_STORAGE; pass auto.
         /// </param>
+        /// <param name="authType">
+        /// How Langfuse authenticates to the bucket.<br/>
+        /// - `ACCESS_KEYS`: stored access key ID and secret access key.<br/>
+        /// - `ROLE_ARN`: Langfuse assumes an IAM role in your AWS account (Amazon S3 only). Langfuse's cross-account role (`crossAccountRoleArn`) assumes your role with the integration's `externalId`, using a session limited to writing under the configured prefix. Requires an Enterprise plan and a deployment that configures a cross-account role; `crossAccountRoleArn` is not null when both apply.
+        /// </param>
+        /// <param name="roleArn">
+        /// ARN of the IAM role in your AWS account that Langfuse assumes when `authType` is `ROLE_ARN`, e.g. `arn:aws:iam::123456789012:role/langfuse-export`. When omitted on update, the stored role ARN is kept.
+        /// </param>
         /// <param name="accessKeyId">
-        /// Access key ID for authentication. Not used for GOOGLE_CLOUD_STORAGE.
+        /// Access key ID for authentication. Not used for GOOGLE_CLOUD_STORAGE or when `authType` is `ROLE_ARN`.
         /// </param>
         /// <param name="secretAccessKey">
         /// Secret access key for authentication (will be encrypted when stored). When omitted on update, the stored secret is kept, unless the type changes between GOOGLE_CLOUD_STORAGE and another type.<br/>
@@ -684,6 +692,8 @@ namespace Langfuse
             global::Langfuse.BlobStorageIntegrationFileType fileType,
             global::Langfuse.BlobStorageExportMode exportMode,
             string? endpoint = default,
+            global::Langfuse.BlobStorageIntegrationAuthType? authType = default,
+            string? roleArn = default,
             string? accessKeyId = default,
             string? secretAccessKey = default,
             string? prefix = default,
@@ -701,6 +711,8 @@ namespace Langfuse
                 BucketName = bucketName,
                 Endpoint = endpoint,
                 Region = region,
+                AuthType = authType,
+                RoleArn = roleArn,
                 AccessKeyId = accessKeyId,
                 SecretAccessKey = secretAccessKey,
                 Prefix = prefix,

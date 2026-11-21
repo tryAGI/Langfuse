@@ -4,7 +4,7 @@
 namespace Langfuse
 {
     /// <summary>
-    /// Model definition used for transforming usage into USD cost and/or tokenization.<br/>
+    /// Model definition used for calculating USD cost from usage submitted with observations.<br/>
     /// Models can have either simple flat pricing or tiered pricing:<br/>
     /// - Flat pricing: Single price per usage type (legacy, but still supported)<br/>
     /// - Tiered pricing: Multiple pricing tiers with conditional matching based on usage patterns or observation attributes<br/>
@@ -67,13 +67,13 @@ namespace Langfuse
         public double? TotalPrice { get; set; }
 
         /// <summary>
-        /// Optional. Tokenizer to be applied to observations which match to this model. See docs for more details.
+        /// Legacy tokenizer identifier retained for API compatibility. Ingestion no longer uses it to infer observation usage.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tokenizerId")]
         public string? TokenizerId { get; set; }
 
         /// <summary>
-        /// Optional. Configuration for the selected tokenizer. Needs to be JSON. See docs for more details.
+        /// Legacy tokenizer configuration retained for API compatibility. Ingestion no longer uses it to infer observation usage.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tokenizerConfig")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -131,7 +131,7 @@ namespace Langfuse
         /// Regex pattern which matches this model definition to generation.model. Useful in case of fine-tuned models. If you want to exact match, use `(?i)^modelname$`
         /// </param>
         /// <param name="tokenizerConfig">
-        /// Optional. Configuration for the selected tokenizer. Needs to be JSON. See docs for more details.
+        /// Legacy tokenizer configuration retained for API compatibility. Ingestion no longer uses it to infer observation usage.
         /// </param>
         /// <param name="isLangfuseManaged"></param>
         /// <param name="createdAt">
@@ -166,7 +166,7 @@ namespace Langfuse
         /// Deprecated. See 'prices' instead. Price (USD) per total unit. Cannot be set if input or output price is set.
         /// </param>
         /// <param name="tokenizerId">
-        /// Optional. Tokenizer to be applied to observations which match to this model. See docs for more details.
+        /// Legacy tokenizer identifier retained for API compatibility. Ingestion no longer uses it to infer observation usage.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

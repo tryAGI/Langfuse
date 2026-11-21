@@ -18,6 +18,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageIntegrationType), TypeInfoPropertyName = "BlobStorageIntegrationType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageIntegrationAuthType), TypeInfoPropertyName = "BlobStorageIntegrationAuthType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageIntegrationFileType), TypeInfoPropertyName = "BlobStorageIntegrationFileType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageIntegrationFileTypeResponse), TypeInfoPropertyName = "BlobStorageIntegrationFileTypeResponse2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageExportMode), TypeInfoPropertyName = "BlobStorageExportMode2")]
@@ -36,6 +37,7 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageIntegrationType?), TypeInfoPropertyName = "NullableBlobStorageIntegrationType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageIntegrationAuthType?), TypeInfoPropertyName = "NullableBlobStorageIntegrationAuthType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageIntegrationFileType?), TypeInfoPropertyName = "NullableBlobStorageIntegrationFileType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageIntegrationFileTypeResponse?), TypeInfoPropertyName = "NullableBlobStorageIntegrationFileTypeResponse2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.BlobStorageExportMode?), TypeInfoPropertyName = "NullableBlobStorageExportMode2")]
@@ -118,6 +120,10 @@ namespace Langfuse
 
                     || typeToConvert == typeof(global::Langfuse.BlobStorageIntegrationType?)
 
+                    || typeToConvert == typeof(global::Langfuse.BlobStorageIntegrationAuthType)
+
+                    || typeToConvert == typeof(global::Langfuse.BlobStorageIntegrationAuthType?)
+
                     || typeToConvert == typeof(global::Langfuse.BlobStorageIntegrationFileType)
 
                     || typeToConvert == typeof(global::Langfuse.BlobStorageIntegrationFileType?)
@@ -159,6 +165,16 @@ namespace Langfuse
                 if (typeToConvert == typeof(global::Langfuse.BlobStorageIntegrationType?))
                 {
                     return new global::Langfuse.JsonConverters.BlobStorageIntegrationTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.BlobStorageIntegrationAuthType))
+                {
+                    return new global::Langfuse.JsonConverters.BlobStorageIntegrationAuthTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.BlobStorageIntegrationAuthType?))
+                {
+                    return new global::Langfuse.JsonConverters.BlobStorageIntegrationAuthTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Langfuse.BlobStorageIntegrationFileType))

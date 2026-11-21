@@ -51,10 +51,38 @@ namespace Langfuse
         public required string Region { get; set; }
 
         /// <summary>
+        /// How Langfuse authenticates to the bucket.<br/>
+        /// - `ACCESS_KEYS`: stored access key ID and secret access key.<br/>
+        /// - `ROLE_ARN`: Langfuse assumes an IAM role in your AWS account (Amazon S3 only). Langfuse's cross-account role (`crossAccountRoleArn`) assumes your role with the integration's `externalId`, using a session limited to writing under the configured prefix. Requires an Enterprise plan and a deployment that configures a cross-account role; `crossAccountRoleArn` is not null when both apply.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("authType")]
+        [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.BlobStorageIntegrationAuthTypeJsonConverter))]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::Langfuse.BlobStorageIntegrationAuthType AuthType { get; set; }
+
+        /// <summary>
         ///
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("accessKeyId")]
         public string? AccessKeyId { get; set; }
+
+        /// <summary>
+        /// IAM role Langfuse assumes. May be set while `authType` is `ACCESS_KEYS` if the integration used `ROLE_ARN` before.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("roleArn")]
+        public string? RoleArn { get; set; }
+
+        /// <summary>
+        /// External ID Langfuse passes when assuming `roleArn`. Require it in the role's trust policy with an `sts:ExternalId` condition. Null until the integration first uses `ROLE_ARN`.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("externalId")]
+        public string? ExternalId { get; set; }
+
+        /// <summary>
+        /// Langfuse role that must be trusted by `roleArn`. Null when the deployment does not support IAM role auth or the organization is not on an Enterprise plan.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("crossAccountRoleArn")]
+        public string? CrossAccountRoleArn { get; set; }
 
         /// <summary>
         ///
@@ -184,6 +212,11 @@ namespace Langfuse
         /// <param name="type"></param>
         /// <param name="bucketName"></param>
         /// <param name="region"></param>
+        /// <param name="authType">
+        /// How Langfuse authenticates to the bucket.<br/>
+        /// - `ACCESS_KEYS`: stored access key ID and secret access key.<br/>
+        /// - `ROLE_ARN`: Langfuse assumes an IAM role in your AWS account (Amazon S3 only). Langfuse's cross-account role (`crossAccountRoleArn`) assumes your role with the integration's `externalId`, using a session limited to writing under the configured prefix. Requires an Enterprise plan and a deployment that configures a cross-account role; `crossAccountRoleArn` is not null when both apply.
+        /// </param>
         /// <param name="prefix"></param>
         /// <param name="exportFrequency"></param>
         /// <param name="enabled"></param>
@@ -204,6 +237,15 @@ namespace Langfuse
         /// <param name="updatedAt"></param>
         /// <param name="endpoint"></param>
         /// <param name="accessKeyId"></param>
+        /// <param name="roleArn">
+        /// IAM role Langfuse assumes. May be set while `authType` is `ACCESS_KEYS` if the integration used `ROLE_ARN` before.
+        /// </param>
+        /// <param name="externalId">
+        /// External ID Langfuse passes when assuming `roleArn`. Require it in the role's trust policy with an `sts:ExternalId` condition. Null until the integration first uses `ROLE_ARN`.
+        /// </param>
+        /// <param name="crossAccountRoleArn">
+        /// Langfuse role that must be trusted by `roleArn`. Null when the deployment does not support IAM role auth or the organization is not on an Enterprise plan.
+        /// </param>
         /// <param name="exportStartDate"></param>
         /// <param name="exportFieldGroups">
         /// Field groups included in each exported observation and score row. An empty list is treated as all observation groups and no score groups during export. Core score columns are always exported.
@@ -221,6 +263,7 @@ namespace Langfuse
             global::Langfuse.BlobStorageIntegrationType type,
             string bucketName,
             string region,
+            global::Langfuse.BlobStorageIntegrationAuthType authType,
             string prefix,
             global::Langfuse.BlobStorageExportFrequency exportFrequency,
             bool enabled,
@@ -233,6 +276,9 @@ namespace Langfuse
             global::System.DateTime updatedAt,
             string? endpoint,
             string? accessKeyId,
+            string? roleArn,
+            string? externalId,
+            string? crossAccountRoleArn,
             global::System.DateTime? exportStartDate,
             global::System.Collections.Generic.IList<global::Langfuse.BlobStorageExportFieldGroup>? exportFieldGroups,
             global::System.DateTime? nextSyncAt,
@@ -246,7 +292,11 @@ namespace Langfuse
             this.BucketName = bucketName ?? throw new global::System.ArgumentNullException(nameof(bucketName));
             this.Endpoint = endpoint;
             this.Region = region ?? throw new global::System.ArgumentNullException(nameof(region));
+            this.AuthType = authType;
             this.AccessKeyId = accessKeyId;
+            this.RoleArn = roleArn;
+            this.ExternalId = externalId;
+            this.CrossAccountRoleArn = crossAccountRoleArn;
             this.Prefix = prefix ?? throw new global::System.ArgumentNullException(nameof(prefix));
             this.ExportFrequency = exportFrequency;
             this.Enabled = enabled;
