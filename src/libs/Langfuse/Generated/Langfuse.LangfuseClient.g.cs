@@ -283,6 +283,15 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
+        public UnstableBillableUnitsClient UnstableBillableUnits => new UnstableBillableUnitsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
+        {
+            ReadResponseAsString = ReadResponseAsString,
+            JsonSerializerContextProvider = JsonSerializerContextProvider,
+        };
+
+        /// <summary>
+        ///
+        /// </summary>
         public UnstableDashboardWidgetsClient UnstableDashboardWidgets => new UnstableDashboardWidgetsClient(HttpClient, baseUri: null, authorizations: Authorizations, options: Options)
         {
             ReadResponseAsString = ReadResponseAsString,

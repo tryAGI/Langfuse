@@ -4,7 +4,7 @@
 namespace Langfuse
 {
     /// <summary>
-    /// Tokenizer supported by Langfuse for model usage inference.
+    /// Legacy tokenizer identifier retained for API compatibility. Ingestion no longer uses it to infer observation usage.
     /// </summary>
     public enum ModelTokenizerId
     {

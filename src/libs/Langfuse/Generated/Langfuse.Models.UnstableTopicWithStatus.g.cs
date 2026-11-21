@@ -9,7 +9,7 @@ namespace Langfuse
     public sealed partial class UnstableTopicWithStatus
     {
         /// <summary>
-        /// False for retired topics that still have assigned traces in the window.
+        /// Always true; retired topics are not returned.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("inCurrentMap")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -32,7 +32,7 @@ namespace Langfuse
         /// Initializes a new instance of the <see cref="UnstableTopicWithStatus" /> class.
         /// </summary>
         /// <param name="inCurrentMap">
-        /// False for retired topics that still have assigned traces in the window.
+        /// Always true; retired topics are not returned.
         /// </param>
         /// <param name="window"></param>
 #if NET7_0_OR_GREATER

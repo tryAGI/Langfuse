@@ -66,6 +66,11 @@ namespace Langfuse
         /// - `observationModelName` - Model name of the associated observation<br/>
         /// - `observationPromptName` - Prompt name of the associated observation<br/>
         /// - `observationPromptVersion` - Prompt version of the associated observation<br/>
+        /// **Trace dimensions** (`traceName`, `tags`, `userId`, `traceRelease`, `traceVersion`) describe the score's whole trace, across all of its observations in the query time range:<br/>
+        /// - `tags` is the union of the tags on every observation of the trace. `traceName`, `userId`, `traceRelease` and `traceVersion` take the most recent non-empty value.<br/>
+        /// - A `tags` filter matches if any observation of the trace carries the tag; `none of` matches only when no observation does.<br/>
+        /// - Filters on the other trace dimensions compare the trace-level value; `is null` matches when no observation has a value.<br/>
+        /// - Filters and groupings read the same trace-level values, so they agree within one query.<br/>
         /// **Measures:**<br/>
         /// - `count` - Total number of scores<br/>
         /// - `value` - Score value (for aggregations)<br/>
@@ -171,6 +176,11 @@ namespace Langfuse
         /// - `observationModelName` - Model name of the associated observation<br/>
         /// - `observationPromptName` - Prompt name of the associated observation<br/>
         /// - `observationPromptVersion` - Prompt version of the associated observation<br/>
+        /// **Trace dimensions** (`traceName`, `tags`, `userId`, `traceRelease`, `traceVersion`) describe the score's whole trace, across all of its observations in the query time range:<br/>
+        /// - `tags` is the union of the tags on every observation of the trace. `traceName`, `userId`, `traceRelease` and `traceVersion` take the most recent non-empty value.<br/>
+        /// - A `tags` filter matches if any observation of the trace carries the tag; `none of` matches only when no observation does.<br/>
+        /// - Filters on the other trace dimensions compare the trace-level value; `is null` matches when no observation has a value.<br/>
+        /// - Filters and groupings read the same trace-level values, so they agree within one query.<br/>
         /// **Measures:**<br/>
         /// - `count` - Total number of scores<br/>
         /// - `value` - Score value (for aggregations)<br/>

@@ -181,6 +181,11 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
+        public UnstableBillableUnitsClient UnstableBillableUnits { get; }
+
+        /// <summary>
+        ///
+        /// </summary>
         public UnstableDashboardWidgetsClient UnstableDashboardWidgets { get; }
 
         /// <summary>
