@@ -119,6 +119,43 @@ namespace Langfuse
         public global::Langfuse.UpdateCodeEvaluatorRequest PickUpdateCodeEvaluatorRequest() => UpdateCodeEvaluatorRequest is { } value
             ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'UpdateCodeEvaluatorRequest' but the value was {ToString()}.");
+
+        /// <summary>
+        ///
+        /// </summary>
+#if NET6_0_OR_GREATER
+        public global::Langfuse.UpdateDecisionModelEvaluatorRequest? UpdateDecisionModelEvaluatorRequest { get; init; }
+#else
+        public global::Langfuse.UpdateDecisionModelEvaluatorRequest? UpdateDecisionModelEvaluatorRequest { get; }
+#endif
+
+        /// <summary>
+        ///
+        /// </summary>
+#if NET6_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(UpdateDecisionModelEvaluatorRequest))]
+#endif
+        public bool IsUpdateDecisionModelEvaluatorRequest => UpdateDecisionModelEvaluatorRequest != null;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public bool TryPickUpdateDecisionModelEvaluatorRequest(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.UpdateDecisionModelEvaluatorRequest? value)
+        {
+            value = UpdateDecisionModelEvaluatorRequest;
+            return IsUpdateDecisionModelEvaluatorRequest;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.UpdateDecisionModelEvaluatorRequest PickUpdateDecisionModelEvaluatorRequest() => UpdateDecisionModelEvaluatorRequest is { } value
+            ? value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'UpdateDecisionModelEvaluatorRequest' but the value was {ToString()}.");
         /// <summary>
         ///
         /// </summary>
@@ -191,21 +228,47 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
+        public static implicit operator UpdateEvaluatorRequest(global::Langfuse.UpdateDecisionModelEvaluatorRequest value) => new UpdateEvaluatorRequest((global::Langfuse.UpdateDecisionModelEvaluatorRequest?)value);
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static implicit operator global::Langfuse.UpdateDecisionModelEvaluatorRequest?(UpdateEvaluatorRequest @this) => @this.UpdateDecisionModelEvaluatorRequest;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public UpdateEvaluatorRequest(global::Langfuse.UpdateDecisionModelEvaluatorRequest? value)
+        {
+            UpdateDecisionModelEvaluatorRequest = value;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static UpdateEvaluatorRequest FromUpdateDecisionModelEvaluatorRequest(global::Langfuse.UpdateDecisionModelEvaluatorRequest? value) => new UpdateEvaluatorRequest(value);
+
+        /// <summary>
+        ///
+        /// </summary>
         public UpdateEvaluatorRequest(
             global::Langfuse.UpdateEvaluatorMetadataRequest? updateEvaluatorMetadataRequest,
             global::Langfuse.UpdateLlmAsJudgeEvaluatorRequest? updateLlmAsJudgeEvaluatorRequest,
-            global::Langfuse.UpdateCodeEvaluatorRequest? updateCodeEvaluatorRequest
+            global::Langfuse.UpdateCodeEvaluatorRequest? updateCodeEvaluatorRequest,
+            global::Langfuse.UpdateDecisionModelEvaluatorRequest? updateDecisionModelEvaluatorRequest
             )
         {
             UpdateEvaluatorMetadataRequest = updateEvaluatorMetadataRequest;
             UpdateLlmAsJudgeEvaluatorRequest = updateLlmAsJudgeEvaluatorRequest;
             UpdateCodeEvaluatorRequest = updateCodeEvaluatorRequest;
+            UpdateDecisionModelEvaluatorRequest = updateDecisionModelEvaluatorRequest;
         }
 
         /// <summary>
         ///
         /// </summary>
         public object? Object =>
+            UpdateDecisionModelEvaluatorRequest as object ??
             UpdateCodeEvaluatorRequest as object ??
             UpdateLlmAsJudgeEvaluatorRequest as object ??
             UpdateEvaluatorMetadataRequest as object
@@ -217,7 +280,8 @@ namespace Langfuse
         public override string? ToString() =>
             UpdateEvaluatorMetadataRequest?.ToString() ??
             UpdateLlmAsJudgeEvaluatorRequest?.ToString() ??
-            UpdateCodeEvaluatorRequest?.ToString()
+            UpdateCodeEvaluatorRequest?.ToString() ??
+            UpdateDecisionModelEvaluatorRequest?.ToString()
             ;
 
         /// <summary>
@@ -225,7 +289,7 @@ namespace Langfuse
         /// </summary>
         public bool Validate()
         {
-            return IsUpdateEvaluatorMetadataRequest && !IsUpdateLlmAsJudgeEvaluatorRequest && !IsUpdateCodeEvaluatorRequest || !IsUpdateEvaluatorMetadataRequest && IsUpdateLlmAsJudgeEvaluatorRequest && !IsUpdateCodeEvaluatorRequest || !IsUpdateEvaluatorMetadataRequest && !IsUpdateLlmAsJudgeEvaluatorRequest && IsUpdateCodeEvaluatorRequest;
+            return IsUpdateEvaluatorMetadataRequest && !IsUpdateLlmAsJudgeEvaluatorRequest && !IsUpdateCodeEvaluatorRequest && !IsUpdateDecisionModelEvaluatorRequest || !IsUpdateEvaluatorMetadataRequest && IsUpdateLlmAsJudgeEvaluatorRequest && !IsUpdateCodeEvaluatorRequest && !IsUpdateDecisionModelEvaluatorRequest || !IsUpdateEvaluatorMetadataRequest && !IsUpdateLlmAsJudgeEvaluatorRequest && IsUpdateCodeEvaluatorRequest && !IsUpdateDecisionModelEvaluatorRequest || !IsUpdateEvaluatorMetadataRequest && !IsUpdateLlmAsJudgeEvaluatorRequest && !IsUpdateCodeEvaluatorRequest && IsUpdateDecisionModelEvaluatorRequest;
         }
 
         /// <summary>
@@ -235,6 +299,7 @@ namespace Langfuse
             global::System.Func<global::Langfuse.UpdateEvaluatorMetadataRequest, TResult>? updateEvaluatorMetadataRequest = null,
             global::System.Func<global::Langfuse.UpdateLlmAsJudgeEvaluatorRequest, TResult>? updateLlmAsJudgeEvaluatorRequest = null,
             global::System.Func<global::Langfuse.UpdateCodeEvaluatorRequest, TResult>? updateCodeEvaluatorRequest = null,
+            global::System.Func<global::Langfuse.UpdateDecisionModelEvaluatorRequest, TResult>? updateDecisionModelEvaluatorRequest = null,
             bool validate = true)
         {
             if (validate)
@@ -254,6 +319,10 @@ namespace Langfuse
             {
                 return updateCodeEvaluatorRequest(__value2);
             }
+            else if (UpdateDecisionModelEvaluatorRequest is { } __value3 && updateDecisionModelEvaluatorRequest != null)
+            {
+                return updateDecisionModelEvaluatorRequest(__value3);
+            }
 
             return default(TResult);
         }
@@ -267,6 +336,8 @@ namespace Langfuse
             global::System.Action<global::Langfuse.UpdateLlmAsJudgeEvaluatorRequest>? updateLlmAsJudgeEvaluatorRequest = null,
 
             global::System.Action<global::Langfuse.UpdateCodeEvaluatorRequest>? updateCodeEvaluatorRequest = null,
+
+            global::System.Action<global::Langfuse.UpdateDecisionModelEvaluatorRequest>? updateDecisionModelEvaluatorRequest = null,
             bool validate = true)
         {
             if (validate)
@@ -285,6 +356,10 @@ namespace Langfuse
             else if (UpdateCodeEvaluatorRequest is { } __value2)
             {
                 updateCodeEvaluatorRequest?.Invoke(__value2);
+            }
+            else if (UpdateDecisionModelEvaluatorRequest is { } __value3)
+            {
+                updateDecisionModelEvaluatorRequest?.Invoke(__value3);
             }
         }
 
@@ -295,6 +370,7 @@ namespace Langfuse
             global::System.Action<global::Langfuse.UpdateEvaluatorMetadataRequest>? updateEvaluatorMetadataRequest = null,
             global::System.Action<global::Langfuse.UpdateLlmAsJudgeEvaluatorRequest>? updateLlmAsJudgeEvaluatorRequest = null,
             global::System.Action<global::Langfuse.UpdateCodeEvaluatorRequest>? updateCodeEvaluatorRequest = null,
+            global::System.Action<global::Langfuse.UpdateDecisionModelEvaluatorRequest>? updateDecisionModelEvaluatorRequest = null,
             bool validate = true)
         {
             if (validate)
@@ -313,6 +389,10 @@ namespace Langfuse
             else if (UpdateCodeEvaluatorRequest is { } __value2)
             {
                 updateCodeEvaluatorRequest?.Invoke(__value2);
+            }
+            else if (UpdateDecisionModelEvaluatorRequest is { } __value3)
+            {
+                updateDecisionModelEvaluatorRequest?.Invoke(__value3);
             }
         }
 
@@ -329,6 +409,8 @@ namespace Langfuse
                 typeof(global::Langfuse.UpdateLlmAsJudgeEvaluatorRequest),
                 UpdateCodeEvaluatorRequest,
                 typeof(global::Langfuse.UpdateCodeEvaluatorRequest),
+                UpdateDecisionModelEvaluatorRequest,
+                typeof(global::Langfuse.UpdateDecisionModelEvaluatorRequest),
             };
             const int offset = unchecked((int)2166136261);
             const int prime = 16777619;
@@ -347,7 +429,8 @@ namespace Langfuse
             return
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.UpdateEvaluatorMetadataRequest?>.Default.Equals(UpdateEvaluatorMetadataRequest, other.UpdateEvaluatorMetadataRequest) &&
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.UpdateLlmAsJudgeEvaluatorRequest?>.Default.Equals(UpdateLlmAsJudgeEvaluatorRequest, other.UpdateLlmAsJudgeEvaluatorRequest) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.UpdateCodeEvaluatorRequest?>.Default.Equals(UpdateCodeEvaluatorRequest, other.UpdateCodeEvaluatorRequest)
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.UpdateCodeEvaluatorRequest?>.Default.Equals(UpdateCodeEvaluatorRequest, other.UpdateCodeEvaluatorRequest) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.UpdateDecisionModelEvaluatorRequest?>.Default.Equals(UpdateDecisionModelEvaluatorRequest, other.UpdateDecisionModelEvaluatorRequest)
                 ;
         }
 

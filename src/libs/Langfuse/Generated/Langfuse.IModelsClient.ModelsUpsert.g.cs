@@ -73,10 +73,10 @@ namespace Langfuse
         /// which will automatically create a single default tier named "Standard".
         /// </param>
         /// <param name="tokenizerId">
-        /// Tokenizer supported by Langfuse for model usage inference.
+        /// Legacy tokenizer identifier retained for API compatibility. Ingestion no longer uses it to infer observation usage.
         /// </param>
         /// <param name="tokenizerConfig">
-        /// Optional. Configuration for the selected tokenizer. Needs to be JSON. See docs for more details.
+        /// Legacy tokenizer configuration retained for API compatibility. Ingestion no longer uses it to infer observation usage.
         /// </param>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>
         /// <param name="cancellationToken">The token to cancel the operation with</param>

@@ -70,6 +70,28 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.LlmAsJudgeEvaluatorVersion))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.PromptVariableMappingRead>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CodeEvaluatorVersion))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelEntry), TypeInfoPropertyName = "DecisionModelEntry2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelChoiceCriterion))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelScoreCriterion))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelBooleanCriteria))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelBooleanCriterion))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelChoiceQuestion))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.DecisionModelChoiceCriterion>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelScoreQuestion))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.DecisionModelScoreCriterion>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelBooleanQuestion))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelQuestion), TypeInfoPropertyName = "DecisionModelQuestion2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.DecisionModelQuestionDecisionModelChoiceQuestion2, global::Langfuse.DecisionModelChoiceQuestion>), TypeInfoPropertyName = "AllOfDecisionModelQuestionDecisionModelChoiceQuestion2DecisionModelChoiceQuestion2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelQuestionDecisionModelChoiceQuestion2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelQuestionDecisionModelChoiceQuestionType), TypeInfoPropertyName = "DecisionModelQuestionDecisionModelChoiceQuestionType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.DecisionModelQuestionDecisionModelScoreQuestion2, global::Langfuse.DecisionModelScoreQuestion>), TypeInfoPropertyName = "AllOfDecisionModelQuestionDecisionModelScoreQuestion2DecisionModelScoreQuestion2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelQuestionDecisionModelScoreQuestion2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelQuestionDecisionModelScoreQuestionType), TypeInfoPropertyName = "DecisionModelQuestionDecisionModelScoreQuestionType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.DecisionModelQuestionDecisionModelBooleanQuestion2, global::Langfuse.DecisionModelBooleanQuestion>), TypeInfoPropertyName = "AllOfDecisionModelQuestionDecisionModelBooleanQuestion2DecisionModelBooleanQuestion2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelQuestionDecisionModelBooleanQuestion2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelQuestionDecisionModelBooleanQuestionType), TypeInfoPropertyName = "DecisionModelQuestionDecisionModelBooleanQuestionType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelEvaluatorVersion))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.DecisionModelQuestion>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorVersion), TypeInfoPropertyName = "EvaluatorVersion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionLlmAsJudgeEvaluatorVersion2, global::Langfuse.LlmAsJudgeEvaluatorVersion>), TypeInfoPropertyName = "AllOfEvaluatorVersionLlmAsJudgeEvaluatorVersion2LlmAsJudgeEvaluatorVersion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorVersionLlmAsJudgeEvaluatorVersion2))]
@@ -77,12 +99,16 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionCodeEvaluatorVersion2, global::Langfuse.CodeEvaluatorVersion>), TypeInfoPropertyName = "AllOfEvaluatorVersionCodeEvaluatorVersion2CodeEvaluatorVersion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorVersionCodeEvaluatorVersion2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorVersionCodeEvaluatorVersionType), TypeInfoPropertyName = "EvaluatorVersionCodeEvaluatorVersionType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersion2, global::Langfuse.DecisionModelEvaluatorVersion>), TypeInfoPropertyName = "AllOfEvaluatorVersionDecisionModelEvaluatorVersion2DecisionModelEvaluatorVersion2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersion2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersionType), TypeInfoPropertyName = "EvaluatorVersionDecisionModelEvaluatorVersionType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleAssignment))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorBase))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorStatus), TypeInfoPropertyName = "EvaluatorStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.EvaluationRuleAssignment>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.LlmAsJudgeEvaluator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CodeEvaluator))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelEvaluator))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.Evaluator), TypeInfoPropertyName = "Evaluator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.EvaluatorLlmAsJudgeEvaluator2, global::Langfuse.LlmAsJudgeEvaluator>), TypeInfoPropertyName = "AllOfEvaluatorLlmAsJudgeEvaluator2LlmAsJudgeEvaluator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorLlmAsJudgeEvaluator2))]
@@ -90,8 +116,12 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.EvaluatorCodeEvaluator2, global::Langfuse.CodeEvaluator>), TypeInfoPropertyName = "AllOfEvaluatorCodeEvaluator2CodeEvaluator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorCodeEvaluator2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorCodeEvaluatorType), TypeInfoPropertyName = "EvaluatorCodeEvaluatorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.EvaluatorDecisionModelEvaluator2, global::Langfuse.DecisionModelEvaluator>), TypeInfoPropertyName = "AllOfEvaluatorDecisionModelEvaluator2DecisionModelEvaluator2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorDecisionModelEvaluator2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorDecisionModelEvaluatorType), TypeInfoPropertyName = "EvaluatorDecisionModelEvaluatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateLlmAsJudgeEvaluatorRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateCodeEvaluatorRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateDecisionModelEvaluatorRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateEvaluatorRequest), TypeInfoPropertyName = "CreateEvaluatorRequest2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.CreateLlmAsJudgeEvaluatorRequest>), TypeInfoPropertyName = "AllOfCreateEvaluatorRequestCreateLlmAsJudgeEvaluatorRequest2CreateLlmAsJudgeEvaluatorRequest2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateEvaluatorRequestCreateLlmAsJudgeEvaluatorRequest2))]
@@ -99,9 +129,13 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequest2, global::Langfuse.CreateCodeEvaluatorRequest>), TypeInfoPropertyName = "AllOfCreateEvaluatorRequestCreateCodeEvaluatorRequest2CreateCodeEvaluatorRequest2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequest2))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequestType), TypeInfoPropertyName = "CreateEvaluatorRequestCreateCodeEvaluatorRequestType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2, global::Langfuse.CreateDecisionModelEvaluatorRequest>), TypeInfoPropertyName = "AllOfCreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2CreateDecisionModelEvaluatorRequest2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequestType), TypeInfoPropertyName = "CreateEvaluatorRequestCreateDecisionModelEvaluatorRequestType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UpdateEvaluatorMetadataRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UpdateLlmAsJudgeEvaluatorRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UpdateCodeEvaluatorRequest))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UpdateDecisionModelEvaluatorRequest))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UpdateEvaluatorRequest), TypeInfoPropertyName = "UpdateEvaluatorRequest2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorsPage))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.Evaluator>))]
@@ -135,22 +169,36 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.PublicApiErrorCode?), TypeInfoPropertyName = "NullablePublicApiErrorCode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorChatMessageRole?), TypeInfoPropertyName = "NullableEvaluatorChatMessageRole2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorChatPromptInput?), TypeInfoPropertyName = "NullableEvaluatorChatPromptInput2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelEntry?), TypeInfoPropertyName = "NullableDecisionModelEntry2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelQuestion?), TypeInfoPropertyName = "NullableDecisionModelQuestion2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.DecisionModelQuestionDecisionModelChoiceQuestion2, global::Langfuse.DecisionModelChoiceQuestion>?), TypeInfoPropertyName = "NullableAllOfDecisionModelQuestionDecisionModelChoiceQuestion2DecisionModelChoiceQuestion2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelQuestionDecisionModelChoiceQuestionType?), TypeInfoPropertyName = "NullableDecisionModelQuestionDecisionModelChoiceQuestionType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.DecisionModelQuestionDecisionModelScoreQuestion2, global::Langfuse.DecisionModelScoreQuestion>?), TypeInfoPropertyName = "NullableAllOfDecisionModelQuestionDecisionModelScoreQuestion2DecisionModelScoreQuestion2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelQuestionDecisionModelScoreQuestionType?), TypeInfoPropertyName = "NullableDecisionModelQuestionDecisionModelScoreQuestionType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.DecisionModelQuestionDecisionModelBooleanQuestion2, global::Langfuse.DecisionModelBooleanQuestion>?), TypeInfoPropertyName = "NullableAllOfDecisionModelQuestionDecisionModelBooleanQuestion2DecisionModelBooleanQuestion2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.DecisionModelQuestionDecisionModelBooleanQuestionType?), TypeInfoPropertyName = "NullableDecisionModelQuestionDecisionModelBooleanQuestionType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorVersion?), TypeInfoPropertyName = "NullableEvaluatorVersion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionLlmAsJudgeEvaluatorVersion2, global::Langfuse.LlmAsJudgeEvaluatorVersion>?), TypeInfoPropertyName = "NullableAllOfEvaluatorVersionLlmAsJudgeEvaluatorVersion2LlmAsJudgeEvaluatorVersion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorVersionLlmAsJudgeEvaluatorVersionType?), TypeInfoPropertyName = "NullableEvaluatorVersionLlmAsJudgeEvaluatorVersionType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionCodeEvaluatorVersion2, global::Langfuse.CodeEvaluatorVersion>?), TypeInfoPropertyName = "NullableAllOfEvaluatorVersionCodeEvaluatorVersion2CodeEvaluatorVersion2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorVersionCodeEvaluatorVersionType?), TypeInfoPropertyName = "NullableEvaluatorVersionCodeEvaluatorVersionType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersion2, global::Langfuse.DecisionModelEvaluatorVersion>?), TypeInfoPropertyName = "NullableAllOfEvaluatorVersionDecisionModelEvaluatorVersion2DecisionModelEvaluatorVersion2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersionType?), TypeInfoPropertyName = "NullableEvaluatorVersionDecisionModelEvaluatorVersionType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorStatus?), TypeInfoPropertyName = "NullableEvaluatorStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.Evaluator?), TypeInfoPropertyName = "NullableEvaluator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.EvaluatorLlmAsJudgeEvaluator2, global::Langfuse.LlmAsJudgeEvaluator>?), TypeInfoPropertyName = "NullableAllOfEvaluatorLlmAsJudgeEvaluator2LlmAsJudgeEvaluator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorLlmAsJudgeEvaluatorType?), TypeInfoPropertyName = "NullableEvaluatorLlmAsJudgeEvaluatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.EvaluatorCodeEvaluator2, global::Langfuse.CodeEvaluator>?), TypeInfoPropertyName = "NullableAllOfEvaluatorCodeEvaluator2CodeEvaluator2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorCodeEvaluatorType?), TypeInfoPropertyName = "NullableEvaluatorCodeEvaluatorType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.EvaluatorDecisionModelEvaluator2, global::Langfuse.DecisionModelEvaluator>?), TypeInfoPropertyName = "NullableAllOfEvaluatorDecisionModelEvaluator2DecisionModelEvaluator2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluatorDecisionModelEvaluatorType?), TypeInfoPropertyName = "NullableEvaluatorDecisionModelEvaluatorType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateEvaluatorRequest?), TypeInfoPropertyName = "NullableCreateEvaluatorRequest2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.CreateLlmAsJudgeEvaluatorRequest>?), TypeInfoPropertyName = "NullableAllOfCreateEvaluatorRequestCreateLlmAsJudgeEvaluatorRequest2CreateLlmAsJudgeEvaluatorRequest2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateEvaluatorRequestCreateLlmAsJudgeEvaluatorRequestType?), TypeInfoPropertyName = "NullableCreateEvaluatorRequestCreateLlmAsJudgeEvaluatorRequestType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequest2, global::Langfuse.CreateCodeEvaluatorRequest>?), TypeInfoPropertyName = "NullableAllOfCreateEvaluatorRequestCreateCodeEvaluatorRequest2CreateCodeEvaluatorRequest2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequestType?), TypeInfoPropertyName = "NullableCreateEvaluatorRequestCreateCodeEvaluatorRequestType2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2, global::Langfuse.CreateDecisionModelEvaluatorRequest>?), TypeInfoPropertyName = "NullableAllOfCreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2CreateDecisionModelEvaluatorRequest2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequestType?), TypeInfoPropertyName = "NullableCreateEvaluatorRequestCreateDecisionModelEvaluatorRequestType2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UpdateEvaluatorRequest?), TypeInfoPropertyName = "NullableUpdateEvaluatorRequest2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.CursorMeta?), TypeInfoPropertyName = "NullableCursorMeta2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
@@ -159,6 +207,9 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.PromptVariableMapping>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.EvaluatorChatMessage>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.PromptVariableMappingRead>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.DecisionModelChoiceCriterion>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.DecisionModelScoreCriterion>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.DecisionModelQuestion>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.EvaluationRuleAssignment>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.Evaluator>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.EvaluatorVersion>))]
@@ -213,6 +264,8 @@ namespace Langfuse
             options.Converters.Add(new global::Langfuse.JsonConverters.PublicEvaluatorOutputDefinitionJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.PromptVariableMappingJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.EvaluatorChatPromptInputJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.DecisionModelEntryJsonConverter());
+            options.Converters.Add(new global::Langfuse.JsonConverters.DecisionModelQuestionJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.EvaluatorVersionJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.EvaluatorJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.CreateEvaluatorRequestJsonConverter());
@@ -224,12 +277,18 @@ namespace Langfuse
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.PublicEvaluatorOutputDefinitionPublicEvaluatorNumericScore2, global::Langfuse.PublicEvaluatorNumericScore>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.PublicEvaluatorOutputDefinitionPublicEvaluatorBooleanScore2, global::Langfuse.PublicEvaluatorBooleanScore>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.PublicEvaluatorOutputDefinitionPublicEvaluatorCategoricalScore2, global::Langfuse.PublicEvaluatorCategoricalScore>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.DecisionModelQuestionDecisionModelChoiceQuestion2, global::Langfuse.DecisionModelChoiceQuestion>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.DecisionModelQuestionDecisionModelScoreQuestion2, global::Langfuse.DecisionModelScoreQuestion>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.DecisionModelQuestionDecisionModelBooleanQuestion2, global::Langfuse.DecisionModelBooleanQuestion>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.EvaluatorVersionLlmAsJudgeEvaluatorVersion2, global::Langfuse.LlmAsJudgeEvaluatorVersion>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.EvaluatorVersionCodeEvaluatorVersion2, global::Langfuse.CodeEvaluatorVersion>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersion2, global::Langfuse.DecisionModelEvaluatorVersion>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.EvaluatorLlmAsJudgeEvaluator2, global::Langfuse.LlmAsJudgeEvaluator>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.EvaluatorCodeEvaluator2, global::Langfuse.CodeEvaluator>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.EvaluatorDecisionModelEvaluator2, global::Langfuse.DecisionModelEvaluator>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.CreateEvaluatorRequestCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.CreateLlmAsJudgeEvaluatorRequest>());
             options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequest2, global::Langfuse.CreateCodeEvaluatorRequest>());
+            options.Converters.Add(new global::Langfuse.JsonConverters.AllOfJsonConverter<global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2, global::Langfuse.CreateDecisionModelEvaluatorRequest>());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnixTimestampJsonConverter());
             options.Converters.Add(new LazyEnumJsonConverterFactory());
         }
@@ -296,6 +355,18 @@ namespace Langfuse
 
                     || typeToConvert == typeof(global::Langfuse.EvaluatorChatMessageRole?)
 
+                    || typeToConvert == typeof(global::Langfuse.DecisionModelQuestionDecisionModelChoiceQuestionType)
+
+                    || typeToConvert == typeof(global::Langfuse.DecisionModelQuestionDecisionModelChoiceQuestionType?)
+
+                    || typeToConvert == typeof(global::Langfuse.DecisionModelQuestionDecisionModelScoreQuestionType)
+
+                    || typeToConvert == typeof(global::Langfuse.DecisionModelQuestionDecisionModelScoreQuestionType?)
+
+                    || typeToConvert == typeof(global::Langfuse.DecisionModelQuestionDecisionModelBooleanQuestionType)
+
+                    || typeToConvert == typeof(global::Langfuse.DecisionModelQuestionDecisionModelBooleanQuestionType?)
+
                     || typeToConvert == typeof(global::Langfuse.EvaluatorVersionLlmAsJudgeEvaluatorVersionType)
 
                     || typeToConvert == typeof(global::Langfuse.EvaluatorVersionLlmAsJudgeEvaluatorVersionType?)
@@ -304,6 +375,10 @@ namespace Langfuse
 
                     || typeToConvert == typeof(global::Langfuse.EvaluatorVersionCodeEvaluatorVersionType?)
 
+                    || typeToConvert == typeof(global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersionType)
+
+                    || typeToConvert == typeof(global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersionType?)
+
                     || typeToConvert == typeof(global::Langfuse.EvaluatorLlmAsJudgeEvaluatorType)
 
                     || typeToConvert == typeof(global::Langfuse.EvaluatorLlmAsJudgeEvaluatorType?)
@@ -311,6 +386,10 @@ namespace Langfuse
                     || typeToConvert == typeof(global::Langfuse.EvaluatorCodeEvaluatorType)
 
                     || typeToConvert == typeof(global::Langfuse.EvaluatorCodeEvaluatorType?)
+
+                    || typeToConvert == typeof(global::Langfuse.EvaluatorDecisionModelEvaluatorType)
+
+                    || typeToConvert == typeof(global::Langfuse.EvaluatorDecisionModelEvaluatorType?)
 
                     || typeToConvert == typeof(global::Langfuse.EvaluatorStatus)
 
@@ -322,7 +401,11 @@ namespace Langfuse
 
                     || typeToConvert == typeof(global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequestType)
 
-                    || typeToConvert == typeof(global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequestType?);
+                    || typeToConvert == typeof(global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequestType?)
+
+                    || typeToConvert == typeof(global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequestType)
+
+                    || typeToConvert == typeof(global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequestType?);
             }
 
             public override global::System.Text.Json.Serialization.JsonConverter CreateConverter(
@@ -439,6 +522,36 @@ namespace Langfuse
                     return new global::Langfuse.JsonConverters.EvaluatorChatMessageRoleNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::Langfuse.DecisionModelQuestionDecisionModelChoiceQuestionType))
+                {
+                    return new global::Langfuse.JsonConverters.DecisionModelQuestionDecisionModelChoiceQuestionTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.DecisionModelQuestionDecisionModelChoiceQuestionType?))
+                {
+                    return new global::Langfuse.JsonConverters.DecisionModelQuestionDecisionModelChoiceQuestionTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.DecisionModelQuestionDecisionModelScoreQuestionType))
+                {
+                    return new global::Langfuse.JsonConverters.DecisionModelQuestionDecisionModelScoreQuestionTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.DecisionModelQuestionDecisionModelScoreQuestionType?))
+                {
+                    return new global::Langfuse.JsonConverters.DecisionModelQuestionDecisionModelScoreQuestionTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.DecisionModelQuestionDecisionModelBooleanQuestionType))
+                {
+                    return new global::Langfuse.JsonConverters.DecisionModelQuestionDecisionModelBooleanQuestionTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.DecisionModelQuestionDecisionModelBooleanQuestionType?))
+                {
+                    return new global::Langfuse.JsonConverters.DecisionModelQuestionDecisionModelBooleanQuestionTypeNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Langfuse.EvaluatorVersionLlmAsJudgeEvaluatorVersionType))
                 {
                     return new global::Langfuse.JsonConverters.EvaluatorVersionLlmAsJudgeEvaluatorVersionTypeJsonConverter();
@@ -459,6 +572,16 @@ namespace Langfuse
                     return new global::Langfuse.JsonConverters.EvaluatorVersionCodeEvaluatorVersionTypeNullableJsonConverter();
                 }
 
+                if (typeToConvert == typeof(global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersionType))
+                {
+                    return new global::Langfuse.JsonConverters.EvaluatorVersionDecisionModelEvaluatorVersionTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersionType?))
+                {
+                    return new global::Langfuse.JsonConverters.EvaluatorVersionDecisionModelEvaluatorVersionTypeNullableJsonConverter();
+                }
+
                 if (typeToConvert == typeof(global::Langfuse.EvaluatorLlmAsJudgeEvaluatorType))
                 {
                     return new global::Langfuse.JsonConverters.EvaluatorLlmAsJudgeEvaluatorTypeJsonConverter();
@@ -477,6 +600,16 @@ namespace Langfuse
                 if (typeToConvert == typeof(global::Langfuse.EvaluatorCodeEvaluatorType?))
                 {
                     return new global::Langfuse.JsonConverters.EvaluatorCodeEvaluatorTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.EvaluatorDecisionModelEvaluatorType))
+                {
+                    return new global::Langfuse.JsonConverters.EvaluatorDecisionModelEvaluatorTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.EvaluatorDecisionModelEvaluatorType?))
+                {
+                    return new global::Langfuse.JsonConverters.EvaluatorDecisionModelEvaluatorTypeNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Langfuse.EvaluatorStatus))
@@ -507,6 +640,16 @@ namespace Langfuse
                 if (typeToConvert == typeof(global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequestType?))
                 {
                     return new global::Langfuse.JsonConverters.CreateEvaluatorRequestCreateCodeEvaluatorRequestTypeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequestType))
+                {
+                    return new global::Langfuse.JsonConverters.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequestTypeJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequestType?))
+                {
+                    return new global::Langfuse.JsonConverters.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequestTypeNullableJsonConverter();
                 }
                 throw new global::System.NotSupportedException($"No generated enum converter is registered for '{typeToConvert}'.");
             }

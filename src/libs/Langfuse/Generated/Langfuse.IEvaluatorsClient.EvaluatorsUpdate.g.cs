@@ -7,7 +7,7 @@ namespace Langfuse
         /// <summary>
         /// Update an evaluator by its stable identifier.<br/>
         /// Provide only the top-level fields to change. Metadata-only changes do not create a version. Evaluator type cannot change.<br/>
-        /// Definition fields are flattened into the request. To replace a definition, include `type` and every definition field for that type. Definition fields are replaced as a complete unit rather than merged. For LLM-as-a-judge evaluators, omitting or setting `modelConfig` to `null` selects the project's default evaluation model.<br/>
+        /// Definition fields are flattened into the request. To replace a definition, include `type` and every definition field for that type. Definition fields are replaced as a complete unit rather than merged. For LLM-as-a-judge evaluators, omitting or setting `modelConfig` to `null` selects the project's default evaluation model. Decision-model evaluators always require `modelConfig`.<br/>
         /// Replacing a definition automatically returns an evaluator paused by an invalid or missing model configuration to `active`, while preserving its id and evaluation-rule assignments. Pauses caused by provider authentication, billing, connectivity, account state, or an unknown legacy reason remain paused until the explicit reactivation check succeeds.
         /// </summary>
         /// <param name="evaluatorId"></param>
@@ -24,7 +24,7 @@ namespace Langfuse
         /// <summary>
         /// Update an evaluator by its stable identifier.<br/>
         /// Provide only the top-level fields to change. Metadata-only changes do not create a version. Evaluator type cannot change.<br/>
-        /// Definition fields are flattened into the request. To replace a definition, include `type` and every definition field for that type. Definition fields are replaced as a complete unit rather than merged. For LLM-as-a-judge evaluators, omitting or setting `modelConfig` to `null` selects the project's default evaluation model.<br/>
+        /// Definition fields are flattened into the request. To replace a definition, include `type` and every definition field for that type. Definition fields are replaced as a complete unit rather than merged. For LLM-as-a-judge evaluators, omitting or setting `modelConfig` to `null` selects the project's default evaluation model. Decision-model evaluators always require `modelConfig`.<br/>
         /// Replacing a definition automatically returns an evaluator paused by an invalid or missing model configuration to `active`, while preserving its id and evaluation-rule assignments. Pauses caused by provider authentication, billing, connectivity, account state, or an unknown legacy reason remain paused until the explicit reactivation check succeeds.
         /// </summary>
         /// <param name="evaluatorId"></param>
@@ -41,7 +41,7 @@ namespace Langfuse
         /// <summary>
         /// Update an evaluator by its stable identifier.<br/>
         /// Provide only the top-level fields to change. Metadata-only changes do not create a version. Evaluator type cannot change.<br/>
-        /// Definition fields are flattened into the request. To replace a definition, include `type` and every definition field for that type. Definition fields are replaced as a complete unit rather than merged. For LLM-as-a-judge evaluators, omitting or setting `modelConfig` to `null` selects the project's default evaluation model.<br/>
+        /// Definition fields are flattened into the request. To replace a definition, include `type` and every definition field for that type. Definition fields are replaced as a complete unit rather than merged. For LLM-as-a-judge evaluators, omitting or setting `modelConfig` to `null` selects the project's default evaluation model. Decision-model evaluators always require `modelConfig`.<br/>
         /// Replacing a definition automatically returns an evaluator paused by an invalid or missing model configuration to `active`, while preserving its id and evaluation-rule assignments. Pauses caused by provider authentication, billing, connectivity, account state, or an unknown legacy reason remain paused until the explicit reactivation check succeeds.
         /// </summary>
         /// <param name="evaluatorId"></param>

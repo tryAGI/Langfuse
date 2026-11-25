@@ -53,15 +53,26 @@ namespace Langfuse.JsonConverters
             if (__jsonProps.Contains("sourceCode")) __score2++;
             if (__jsonProps.Contains("sourceCodeLanguage")) __score2++;
             if (__jsonProps.Contains("type")) __score2++;
+            var __score3 = 0;
+            if (__jsonProps.Contains("description")) __score3++;
+            if (__jsonProps.Contains("modelConfig")) __score3++;
+            if (__jsonProps.Contains("modelConfig.model")) __score3++;
+            if (__jsonProps.Contains("modelConfig.provider")) __score3++;
+            if (__jsonProps.Contains("name")) __score3++;
+            if (__jsonProps.Contains("questions")) __score3++;
+            if (__jsonProps.Contains("type")) __score3++;
+            if (__jsonProps.Contains("variableMapping")) __score3++;
             var __bestScore = 0;
             var __bestIndex = -1;
             if (__score0 > __bestScore) { __bestScore = __score0; __bestIndex = 0; }
             if (__score1 > __bestScore) { __bestScore = __score1; __bestIndex = 1; }
             if (__score2 > __bestScore) { __bestScore = __score2; __bestIndex = 2; }
+            if (__score3 > __bestScore) { __bestScore = __score3; __bestIndex = 3; }
 
             global::Langfuse.UpdateEvaluatorMetadataRequest? updateEvaluatorMetadataRequest = default;
             global::Langfuse.UpdateLlmAsJudgeEvaluatorRequest? updateLlmAsJudgeEvaluatorRequest = default;
             global::Langfuse.UpdateCodeEvaluatorRequest? updateCodeEvaluatorRequest = default;
+            global::Langfuse.UpdateDecisionModelEvaluatorRequest? updateDecisionModelEvaluatorRequest = default;
             if (__bestIndex >= 0)
             {
                 if (__bestIndex == 0)
@@ -121,9 +132,28 @@ namespace Langfuse.JsonConverters
                         // Legacy enum converters signal an incompatible JSON token with this exception.
                     }
                 }
+                else if (__bestIndex == 3)
+                {
+                    try
+                    {
+                        var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.UpdateDecisionModelEvaluatorRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.UpdateDecisionModelEvaluatorRequest> ??
+                                       throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.UpdateDecisionModelEvaluatorRequest).Name}");
+                        updateDecisionModelEvaluatorRequest = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                    }
+                    catch (global::System.Text.Json.JsonException)
+                    {
+                    }
+                    catch (global::System.InvalidOperationException)
+                    {
+                    }
+                    catch (global::System.ArgumentOutOfRangeException __enumTokenException) when (__enumTokenException.ParamName == "reader")
+                    {
+                        // Legacy enum converters signal an incompatible JSON token with this exception.
+                    }
+                }
             }
 
-            if (updateEvaluatorMetadataRequest == null && updateLlmAsJudgeEvaluatorRequest == null && updateCodeEvaluatorRequest == null)
+            if (updateEvaluatorMetadataRequest == null && updateLlmAsJudgeEvaluatorRequest == null && updateCodeEvaluatorRequest == null && updateDecisionModelEvaluatorRequest == null)
             {
                 try
                 {
@@ -144,7 +174,7 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (updateEvaluatorMetadataRequest == null && updateLlmAsJudgeEvaluatorRequest == null && updateCodeEvaluatorRequest == null)
+            if (updateEvaluatorMetadataRequest == null && updateLlmAsJudgeEvaluatorRequest == null && updateCodeEvaluatorRequest == null && updateDecisionModelEvaluatorRequest == null)
             {
                 try
                 {
@@ -165,7 +195,7 @@ namespace Langfuse.JsonConverters
                 }
             }
 
-            if (updateEvaluatorMetadataRequest == null && updateLlmAsJudgeEvaluatorRequest == null && updateCodeEvaluatorRequest == null)
+            if (updateEvaluatorMetadataRequest == null && updateLlmAsJudgeEvaluatorRequest == null && updateCodeEvaluatorRequest == null && updateDecisionModelEvaluatorRequest == null)
             {
                 try
                 {
@@ -186,12 +216,35 @@ namespace Langfuse.JsonConverters
                 }
             }
 
+            if (updateEvaluatorMetadataRequest == null && updateLlmAsJudgeEvaluatorRequest == null && updateCodeEvaluatorRequest == null && updateDecisionModelEvaluatorRequest == null)
+            {
+                try
+                {
+
+                    var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.UpdateDecisionModelEvaluatorRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.UpdateDecisionModelEvaluatorRequest> ??
+                                   throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.UpdateDecisionModelEvaluatorRequest).Name}");
+                    updateDecisionModelEvaluatorRequest = global::System.Text.Json.JsonSerializer.Deserialize(__rawJson, typeInfo);
+                }
+                catch (global::System.Text.Json.JsonException)
+                {
+                }
+                catch (global::System.InvalidOperationException)
+                {
+                }
+                catch (global::System.ArgumentOutOfRangeException __enumTokenException) when (__enumTokenException.ParamName == "reader")
+                {
+                    // Legacy enum converters signal an incompatible JSON token with this exception.
+                }
+            }
+
             var __value = new global::Langfuse.UpdateEvaluatorRequest(
                 updateEvaluatorMetadataRequest,
 
                 updateLlmAsJudgeEvaluatorRequest,
 
-                updateCodeEvaluatorRequest
+                updateCodeEvaluatorRequest,
+
+                updateDecisionModelEvaluatorRequest
                 );
 
             return __value;
@@ -223,6 +276,12 @@ namespace Langfuse.JsonConverters
                 var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.UpdateCodeEvaluatorRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.UpdateCodeEvaluatorRequest?> ??
                                throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.UpdateCodeEvaluatorRequest).Name}");
                 global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickUpdateCodeEvaluatorRequest(), typeInfo);
+            }
+            else if (value.IsUpdateDecisionModelEvaluatorRequest)
+            {
+                var typeInfo = typeInfoResolver.GetTypeInfo(typeof(global::Langfuse.UpdateDecisionModelEvaluatorRequest), options) as global::System.Text.Json.Serialization.Metadata.JsonTypeInfo<global::Langfuse.UpdateDecisionModelEvaluatorRequest?> ??
+                               throw new global::System.InvalidOperationException($"Cannot get type info for {typeof(global::Langfuse.UpdateDecisionModelEvaluatorRequest).Name}");
+                global::System.Text.Json.JsonSerializer.Serialize(writer, value.PickUpdateDecisionModelEvaluatorRequest(), typeInfo);
             }
         }
     }

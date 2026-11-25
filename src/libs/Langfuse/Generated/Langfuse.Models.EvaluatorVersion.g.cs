@@ -82,6 +82,43 @@ namespace Langfuse
         public global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionCodeEvaluatorVersion2, global::Langfuse.CodeEvaluatorVersion> PickCodeEvaluatorVersion() => CodeEvaluatorVersion is { } value
             ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CodeEvaluatorVersion' but the value was {ToString()}.");
+
+        /// <summary>
+        ///
+        /// </summary>
+#if NET6_0_OR_GREATER
+        public global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersion2, global::Langfuse.DecisionModelEvaluatorVersion>? DecisionModelEvaluatorVersion { get; init; }
+#else
+        public global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersion2, global::Langfuse.DecisionModelEvaluatorVersion>? DecisionModelEvaluatorVersion { get; }
+#endif
+
+        /// <summary>
+        ///
+        /// </summary>
+#if NET6_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(DecisionModelEvaluatorVersion))]
+#endif
+        public bool IsDecisionModelEvaluatorVersion => DecisionModelEvaluatorVersion != null;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public bool TryPickDecisionModelEvaluatorVersion(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersion2, global::Langfuse.DecisionModelEvaluatorVersion>? value)
+        {
+            value = DecisionModelEvaluatorVersion;
+            return IsDecisionModelEvaluatorVersion;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersion2, global::Langfuse.DecisionModelEvaluatorVersion> PickDecisionModelEvaluatorVersion() => DecisionModelEvaluatorVersion is { } value
+            ? value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'DecisionModelEvaluatorVersion' but the value was {ToString()}.");
         /// <summary>
         ///
         /// </summary>
@@ -131,19 +168,45 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
+        public static implicit operator EvaluatorVersion(global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersion2, global::Langfuse.DecisionModelEvaluatorVersion> value) => new EvaluatorVersion((global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersion2, global::Langfuse.DecisionModelEvaluatorVersion>?)value);
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersion2, global::Langfuse.DecisionModelEvaluatorVersion>?(EvaluatorVersion @this) => @this.DecisionModelEvaluatorVersion;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public EvaluatorVersion(global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersion2, global::Langfuse.DecisionModelEvaluatorVersion>? value)
+        {
+            DecisionModelEvaluatorVersion = value;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static EvaluatorVersion FromDecisionModelEvaluatorVersion(global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersion2, global::Langfuse.DecisionModelEvaluatorVersion>? value) => new EvaluatorVersion(value);
+
+        /// <summary>
+        ///
+        /// </summary>
         public EvaluatorVersion(
             global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionLlmAsJudgeEvaluatorVersion2, global::Langfuse.LlmAsJudgeEvaluatorVersion>? llmAsJudgeEvaluatorVersion,
-            global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionCodeEvaluatorVersion2, global::Langfuse.CodeEvaluatorVersion>? codeEvaluatorVersion
+            global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionCodeEvaluatorVersion2, global::Langfuse.CodeEvaluatorVersion>? codeEvaluatorVersion,
+            global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersion2, global::Langfuse.DecisionModelEvaluatorVersion>? decisionModelEvaluatorVersion
             )
         {
             LlmAsJudgeEvaluatorVersion = llmAsJudgeEvaluatorVersion;
             CodeEvaluatorVersion = codeEvaluatorVersion;
+            DecisionModelEvaluatorVersion = decisionModelEvaluatorVersion;
         }
 
         /// <summary>
         ///
         /// </summary>
         public object? Object =>
+            DecisionModelEvaluatorVersion as object ??
             CodeEvaluatorVersion as object ??
             LlmAsJudgeEvaluatorVersion as object
             ;
@@ -153,7 +216,8 @@ namespace Langfuse
         /// </summary>
         public override string? ToString() =>
             LlmAsJudgeEvaluatorVersion?.ToString() ??
-            CodeEvaluatorVersion?.ToString()
+            CodeEvaluatorVersion?.ToString() ??
+            DecisionModelEvaluatorVersion?.ToString()
             ;
 
         /// <summary>
@@ -161,7 +225,7 @@ namespace Langfuse
         /// </summary>
         public bool Validate()
         {
-            return IsLlmAsJudgeEvaluatorVersion && !IsCodeEvaluatorVersion || !IsLlmAsJudgeEvaluatorVersion && IsCodeEvaluatorVersion;
+            return IsLlmAsJudgeEvaluatorVersion && !IsCodeEvaluatorVersion && !IsDecisionModelEvaluatorVersion || !IsLlmAsJudgeEvaluatorVersion && IsCodeEvaluatorVersion && !IsDecisionModelEvaluatorVersion || !IsLlmAsJudgeEvaluatorVersion && !IsCodeEvaluatorVersion && IsDecisionModelEvaluatorVersion;
         }
 
         /// <summary>
@@ -170,6 +234,7 @@ namespace Langfuse
         public TResult? Match<TResult>(
             global::System.Func<global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionLlmAsJudgeEvaluatorVersion2, global::Langfuse.LlmAsJudgeEvaluatorVersion>?, TResult>? llmAsJudgeEvaluatorVersion = null,
             global::System.Func<global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionCodeEvaluatorVersion2, global::Langfuse.CodeEvaluatorVersion>?, TResult>? codeEvaluatorVersion = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersion2, global::Langfuse.DecisionModelEvaluatorVersion>?, TResult>? decisionModelEvaluatorVersion = null,
             bool validate = true)
         {
             if (validate)
@@ -185,6 +250,10 @@ namespace Langfuse
             {
                 return codeEvaluatorVersion(__value1);
             }
+            else if (DecisionModelEvaluatorVersion is { } __value2 && decisionModelEvaluatorVersion != null)
+            {
+                return decisionModelEvaluatorVersion(__value2);
+            }
 
             return default(TResult);
         }
@@ -196,6 +265,8 @@ namespace Langfuse
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionLlmAsJudgeEvaluatorVersion2, global::Langfuse.LlmAsJudgeEvaluatorVersion>?>? llmAsJudgeEvaluatorVersion = null,
 
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionCodeEvaluatorVersion2, global::Langfuse.CodeEvaluatorVersion>?>? codeEvaluatorVersion = null,
+
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersion2, global::Langfuse.DecisionModelEvaluatorVersion>?>? decisionModelEvaluatorVersion = null,
             bool validate = true)
         {
             if (validate)
@@ -210,6 +281,10 @@ namespace Langfuse
             else if (CodeEvaluatorVersion is { } __value1)
             {
                 codeEvaluatorVersion?.Invoke(__value1);
+            }
+            else if (DecisionModelEvaluatorVersion is { } __value2)
+            {
+                decisionModelEvaluatorVersion?.Invoke(__value2);
             }
         }
 
@@ -219,6 +294,7 @@ namespace Langfuse
         public void Switch(
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionLlmAsJudgeEvaluatorVersion2, global::Langfuse.LlmAsJudgeEvaluatorVersion>?>? llmAsJudgeEvaluatorVersion = null,
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionCodeEvaluatorVersion2, global::Langfuse.CodeEvaluatorVersion>?>? codeEvaluatorVersion = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersion2, global::Langfuse.DecisionModelEvaluatorVersion>?>? decisionModelEvaluatorVersion = null,
             bool validate = true)
         {
             if (validate)
@@ -233,6 +309,10 @@ namespace Langfuse
             else if (CodeEvaluatorVersion is { } __value1)
             {
                 codeEvaluatorVersion?.Invoke(__value1);
+            }
+            else if (DecisionModelEvaluatorVersion is { } __value2)
+            {
+                decisionModelEvaluatorVersion?.Invoke(__value2);
             }
         }
 
@@ -247,6 +327,8 @@ namespace Langfuse
                 typeof(global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionLlmAsJudgeEvaluatorVersion2, global::Langfuse.LlmAsJudgeEvaluatorVersion>),
                 CodeEvaluatorVersion,
                 typeof(global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionCodeEvaluatorVersion2, global::Langfuse.CodeEvaluatorVersion>),
+                DecisionModelEvaluatorVersion,
+                typeof(global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersion2, global::Langfuse.DecisionModelEvaluatorVersion>),
             };
             const int offset = unchecked((int)2166136261);
             const int prime = 16777619;
@@ -264,7 +346,8 @@ namespace Langfuse
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionLlmAsJudgeEvaluatorVersion2, global::Langfuse.LlmAsJudgeEvaluatorVersion>?>.Default.Equals(LlmAsJudgeEvaluatorVersion, other.LlmAsJudgeEvaluatorVersion) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionCodeEvaluatorVersion2, global::Langfuse.CodeEvaluatorVersion>?>.Default.Equals(CodeEvaluatorVersion, other.CodeEvaluatorVersion)
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionCodeEvaluatorVersion2, global::Langfuse.CodeEvaluatorVersion>?>.Default.Equals(CodeEvaluatorVersion, other.CodeEvaluatorVersion) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.EvaluatorVersionDecisionModelEvaluatorVersion2, global::Langfuse.DecisionModelEvaluatorVersion>?>.Default.Equals(DecisionModelEvaluatorVersion, other.DecisionModelEvaluatorVersion)
                 ;
         }
 

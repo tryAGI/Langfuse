@@ -82,6 +82,43 @@ namespace Langfuse
         public global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequest2, global::Langfuse.CreateCodeEvaluatorRequest> PickCreateCodeEvaluatorRequest() => CreateCodeEvaluatorRequest is { } value
             ? value
             : throw new global::System.InvalidOperationException($"Expected union variant 'CreateCodeEvaluatorRequest' but the value was {ToString()}.");
+
+        /// <summary>
+        ///
+        /// </summary>
+#if NET6_0_OR_GREATER
+        public global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2, global::Langfuse.CreateDecisionModelEvaluatorRequest>? CreateDecisionModelEvaluatorRequest { get; init; }
+#else
+        public global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2, global::Langfuse.CreateDecisionModelEvaluatorRequest>? CreateDecisionModelEvaluatorRequest { get; }
+#endif
+
+        /// <summary>
+        ///
+        /// </summary>
+#if NET6_0_OR_GREATER
+        [global::System.Diagnostics.CodeAnalysis.MemberNotNullWhen(true, nameof(CreateDecisionModelEvaluatorRequest))]
+#endif
+        public bool IsCreateDecisionModelEvaluatorRequest => CreateDecisionModelEvaluatorRequest != null;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public bool TryPickCreateDecisionModelEvaluatorRequest(
+#if NET6_0_OR_GREATER
+            [global::System.Diagnostics.CodeAnalysis.NotNullWhen(true)]
+#endif
+            out global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2, global::Langfuse.CreateDecisionModelEvaluatorRequest>? value)
+        {
+            value = CreateDecisionModelEvaluatorRequest;
+            return IsCreateDecisionModelEvaluatorRequest;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2, global::Langfuse.CreateDecisionModelEvaluatorRequest> PickCreateDecisionModelEvaluatorRequest() => CreateDecisionModelEvaluatorRequest is { } value
+            ? value
+            : throw new global::System.InvalidOperationException($"Expected union variant 'CreateDecisionModelEvaluatorRequest' but the value was {ToString()}.");
         /// <summary>
         ///
         /// </summary>
@@ -131,19 +168,45 @@ namespace Langfuse
         /// <summary>
         ///
         /// </summary>
+        public static implicit operator CreateEvaluatorRequest(global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2, global::Langfuse.CreateDecisionModelEvaluatorRequest> value) => new CreateEvaluatorRequest((global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2, global::Langfuse.CreateDecisionModelEvaluatorRequest>?)value);
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static implicit operator global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2, global::Langfuse.CreateDecisionModelEvaluatorRequest>?(CreateEvaluatorRequest @this) => @this.CreateDecisionModelEvaluatorRequest;
+
+        /// <summary>
+        ///
+        /// </summary>
+        public CreateEvaluatorRequest(global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2, global::Langfuse.CreateDecisionModelEvaluatorRequest>? value)
+        {
+            CreateDecisionModelEvaluatorRequest = value;
+        }
+
+        /// <summary>
+        ///
+        /// </summary>
+        public static CreateEvaluatorRequest FromCreateDecisionModelEvaluatorRequest(global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2, global::Langfuse.CreateDecisionModelEvaluatorRequest>? value) => new CreateEvaluatorRequest(value);
+
+        /// <summary>
+        ///
+        /// </summary>
         public CreateEvaluatorRequest(
             global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.CreateLlmAsJudgeEvaluatorRequest>? createLlmAsJudgeEvaluatorRequest,
-            global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequest2, global::Langfuse.CreateCodeEvaluatorRequest>? createCodeEvaluatorRequest
+            global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequest2, global::Langfuse.CreateCodeEvaluatorRequest>? createCodeEvaluatorRequest,
+            global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2, global::Langfuse.CreateDecisionModelEvaluatorRequest>? createDecisionModelEvaluatorRequest
             )
         {
             CreateLlmAsJudgeEvaluatorRequest = createLlmAsJudgeEvaluatorRequest;
             CreateCodeEvaluatorRequest = createCodeEvaluatorRequest;
+            CreateDecisionModelEvaluatorRequest = createDecisionModelEvaluatorRequest;
         }
 
         /// <summary>
         ///
         /// </summary>
         public object? Object =>
+            CreateDecisionModelEvaluatorRequest as object ??
             CreateCodeEvaluatorRequest as object ??
             CreateLlmAsJudgeEvaluatorRequest as object
             ;
@@ -153,7 +216,8 @@ namespace Langfuse
         /// </summary>
         public override string? ToString() =>
             CreateLlmAsJudgeEvaluatorRequest?.ToString() ??
-            CreateCodeEvaluatorRequest?.ToString()
+            CreateCodeEvaluatorRequest?.ToString() ??
+            CreateDecisionModelEvaluatorRequest?.ToString()
             ;
 
         /// <summary>
@@ -161,7 +225,7 @@ namespace Langfuse
         /// </summary>
         public bool Validate()
         {
-            return IsCreateLlmAsJudgeEvaluatorRequest && !IsCreateCodeEvaluatorRequest || !IsCreateLlmAsJudgeEvaluatorRequest && IsCreateCodeEvaluatorRequest;
+            return IsCreateLlmAsJudgeEvaluatorRequest && !IsCreateCodeEvaluatorRequest && !IsCreateDecisionModelEvaluatorRequest || !IsCreateLlmAsJudgeEvaluatorRequest && IsCreateCodeEvaluatorRequest && !IsCreateDecisionModelEvaluatorRequest || !IsCreateLlmAsJudgeEvaluatorRequest && !IsCreateCodeEvaluatorRequest && IsCreateDecisionModelEvaluatorRequest;
         }
 
         /// <summary>
@@ -170,6 +234,7 @@ namespace Langfuse
         public TResult? Match<TResult>(
             global::System.Func<global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.CreateLlmAsJudgeEvaluatorRequest>?, TResult>? createLlmAsJudgeEvaluatorRequest = null,
             global::System.Func<global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequest2, global::Langfuse.CreateCodeEvaluatorRequest>?, TResult>? createCodeEvaluatorRequest = null,
+            global::System.Func<global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2, global::Langfuse.CreateDecisionModelEvaluatorRequest>?, TResult>? createDecisionModelEvaluatorRequest = null,
             bool validate = true)
         {
             if (validate)
@@ -185,6 +250,10 @@ namespace Langfuse
             {
                 return createCodeEvaluatorRequest(__value1);
             }
+            else if (CreateDecisionModelEvaluatorRequest is { } __value2 && createDecisionModelEvaluatorRequest != null)
+            {
+                return createDecisionModelEvaluatorRequest(__value2);
+            }
 
             return default(TResult);
         }
@@ -196,6 +265,8 @@ namespace Langfuse
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.CreateLlmAsJudgeEvaluatorRequest>?>? createLlmAsJudgeEvaluatorRequest = null,
 
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequest2, global::Langfuse.CreateCodeEvaluatorRequest>?>? createCodeEvaluatorRequest = null,
+
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2, global::Langfuse.CreateDecisionModelEvaluatorRequest>?>? createDecisionModelEvaluatorRequest = null,
             bool validate = true)
         {
             if (validate)
@@ -210,6 +281,10 @@ namespace Langfuse
             else if (CreateCodeEvaluatorRequest is { } __value1)
             {
                 createCodeEvaluatorRequest?.Invoke(__value1);
+            }
+            else if (CreateDecisionModelEvaluatorRequest is { } __value2)
+            {
+                createDecisionModelEvaluatorRequest?.Invoke(__value2);
             }
         }
 
@@ -219,6 +294,7 @@ namespace Langfuse
         public void Switch(
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.CreateLlmAsJudgeEvaluatorRequest>?>? createLlmAsJudgeEvaluatorRequest = null,
             global::System.Action<global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequest2, global::Langfuse.CreateCodeEvaluatorRequest>?>? createCodeEvaluatorRequest = null,
+            global::System.Action<global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2, global::Langfuse.CreateDecisionModelEvaluatorRequest>?>? createDecisionModelEvaluatorRequest = null,
             bool validate = true)
         {
             if (validate)
@@ -233,6 +309,10 @@ namespace Langfuse
             else if (CreateCodeEvaluatorRequest is { } __value1)
             {
                 createCodeEvaluatorRequest?.Invoke(__value1);
+            }
+            else if (CreateDecisionModelEvaluatorRequest is { } __value2)
+            {
+                createDecisionModelEvaluatorRequest?.Invoke(__value2);
             }
         }
 
@@ -247,6 +327,8 @@ namespace Langfuse
                 typeof(global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.CreateLlmAsJudgeEvaluatorRequest>),
                 CreateCodeEvaluatorRequest,
                 typeof(global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequest2, global::Langfuse.CreateCodeEvaluatorRequest>),
+                CreateDecisionModelEvaluatorRequest,
+                typeof(global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2, global::Langfuse.CreateDecisionModelEvaluatorRequest>),
             };
             const int offset = unchecked((int)2166136261);
             const int prime = 16777619;
@@ -264,7 +346,8 @@ namespace Langfuse
         {
             return
                 global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateLlmAsJudgeEvaluatorRequest2, global::Langfuse.CreateLlmAsJudgeEvaluatorRequest>?>.Default.Equals(CreateLlmAsJudgeEvaluatorRequest, other.CreateLlmAsJudgeEvaluatorRequest) &&
-                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequest2, global::Langfuse.CreateCodeEvaluatorRequest>?>.Default.Equals(CreateCodeEvaluatorRequest, other.CreateCodeEvaluatorRequest)
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateCodeEvaluatorRequest2, global::Langfuse.CreateCodeEvaluatorRequest>?>.Default.Equals(CreateCodeEvaluatorRequest, other.CreateCodeEvaluatorRequest) &&
+                global::System.Collections.Generic.EqualityComparer<global::Langfuse.AllOf<global::Langfuse.CreateEvaluatorRequestCreateDecisionModelEvaluatorRequest2, global::Langfuse.CreateDecisionModelEvaluatorRequest>?>.Default.Equals(CreateDecisionModelEvaluatorRequest, other.CreateDecisionModelEvaluatorRequest)
                 ;
         }
 
