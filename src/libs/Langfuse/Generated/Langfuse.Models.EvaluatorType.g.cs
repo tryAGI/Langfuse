@@ -5,7 +5,7 @@ namespace Langfuse
 {
     /// <summary>
     /// The evaluator type.<br/>
-    /// The public API supports LLM-as-a-judge and code evaluators.
+    /// The public API supports LLM-as-a-judge, code, and decision-model evaluators.
     /// </summary>
     public enum EvaluatorType
     {
@@ -13,6 +13,10 @@ namespace Langfuse
         ///
         /// </summary>
         Code,
+        /// <summary>
+        ///
+        /// </summary>
+        DecisionModel,
         /// <summary>
         ///
         /// </summary>
@@ -32,6 +36,7 @@ namespace Langfuse
             return value switch
             {
                 EvaluatorType.Code => "code",
+                EvaluatorType.DecisionModel => "decision_model",
                 EvaluatorType.LlmAsJudge => "llm_as_judge",
                 _ => throw new global::System.ArgumentOutOfRangeException(nameof(value), value, null),
             };
@@ -44,6 +49,7 @@ namespace Langfuse
             return value switch
             {
                 "code" => EvaluatorType.Code,
+                "decision_model" => EvaluatorType.DecisionModel,
                 "llm_as_judge" => EvaluatorType.LlmAsJudge,
                 _ => null,
             };

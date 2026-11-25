@@ -37,11 +37,18 @@ namespace Langfuse
         public required bool IsBuiltIn { get; set; }
 
         /// <summary>
-        /// Whether the facet is attached to the project's Topics rule. True for all facets if the project has no rule.
+        /// Whether a Topics rule runs the facet. True for all facets if the project has no rule.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("active")]
         [global::System.Text.Json.Serialization.JsonRequired]
         public required bool Active { get; set; }
+
+        /// <summary>
+        /// The rules that run the facet.
+        /// </summary>
+        [global::System.Text.Json.Serialization.JsonPropertyName("ruleIds")]
+        [global::System.Text.Json.Serialization.JsonRequired]
+        public required global::System.Collections.Generic.IList<string> RuleIds { get; set; }
 
         /// <summary>
         /// Latest facet version.
@@ -77,7 +84,10 @@ namespace Langfuse
         /// <param name="description"></param>
         /// <param name="isBuiltIn"></param>
         /// <param name="active">
-        /// Whether the facet is attached to the project's Topics rule. True for all facets if the project has no rule.
+        /// Whether a Topics rule runs the facet. True for all facets if the project has no rule.
+        /// </param>
+        /// <param name="ruleIds">
+        /// The rules that run the facet.
         /// </param>
         /// <param name="version">
         /// Latest facet version.
@@ -95,6 +105,7 @@ namespace Langfuse
             string description,
             bool isBuiltIn,
             bool active,
+            global::System.Collections.Generic.IList<string> ruleIds,
             int version,
             string prompt,
             global::Langfuse.UnstableTopicFacetPublishedRun? publishedRun)
@@ -104,6 +115,7 @@ namespace Langfuse
             this.Description = description ?? throw new global::System.ArgumentNullException(nameof(description));
             this.IsBuiltIn = isBuiltIn;
             this.Active = active;
+            this.RuleIds = ruleIds ?? throw new global::System.ArgumentNullException(nameof(ruleIds));
             this.Version = version;
             this.Prompt = prompt ?? throw new global::System.ArgumentNullException(nameof(prompt));
             this.PublishedRun = publishedRun;

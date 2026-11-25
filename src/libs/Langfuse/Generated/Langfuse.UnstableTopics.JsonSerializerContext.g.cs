@@ -21,19 +21,38 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(object))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleReadFilterBase))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleReadFilterWithKey))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleReadFilter), TypeInfoPropertyName = "EvaluationRuleReadFilter2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<object>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.EvaluationRuleReadFilter>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstablePublicApiErrorCode), TypeInfoPropertyName = "UnstablePublicApiErrorCode2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstablePublicApiValidationIssue))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstablePublicApiErrorDetails))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstablePublicApiValidationIssue>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstablePublicApiError))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicResultsOrderBy), TypeInfoPropertyName = "UnstableTopicResultsOrderBy2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicResultListMeta))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicRule))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicRuleList))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableTopicRule>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicSummaryState), TypeInfoPropertyName = "UnstableTopicSummaryState2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicSummary))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicSummaryList))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicWindow))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableTopicSummary>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicAssignmentStatus), TypeInfoPropertyName = "UnstableTopicAssignmentStatus2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicAssignmentTopic))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicAssignment))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicAssignmentList))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableTopicAssignment>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicsOrderBy), TypeInfoPropertyName = "UnstableTopicsOrderBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicFacetPublishedRun))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicFacet))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicFacetList))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.IList<global::Langfuse.UnstableTopicFacet>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicFacetRef))]
-    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicWindow))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopic))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicWithStatus))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicStatusCounts))]
@@ -44,10 +63,19 @@ namespace Langfuse
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.DateTime?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(bool?))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(int?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(double?))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.EvaluationRuleReadFilter?), TypeInfoPropertyName = "NullableEvaluationRuleReadFilter2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstablePublicApiErrorCode?), TypeInfoPropertyName = "NullableUnstablePublicApiErrorCode2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicResultsOrderBy?), TypeInfoPropertyName = "NullableUnstableTopicResultsOrderBy2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicSummaryState?), TypeInfoPropertyName = "NullableUnstableTopicSummaryState2")]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicAssignmentStatus?), TypeInfoPropertyName = "NullableUnstableTopicAssignmentStatus2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::Langfuse.UnstableTopicsOrderBy?), TypeInfoPropertyName = "NullableUnstableTopicsOrderBy2")]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<string>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.EvaluationRuleReadFilter>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstablePublicApiValidationIssue>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableTopicRule>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableTopicSummary>))]
+    [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableTopicAssignment>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableTopicFacet>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableTopic>))]
     [global::System.Text.Json.Serialization.JsonSerializable(typeof(global::System.Collections.Generic.List<global::Langfuse.UnstableTopicFacetCounts>))]
@@ -98,6 +126,7 @@ namespace Langfuse
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
         public static void AddConverters(global::System.Text.Json.JsonSerializerOptions options)
         {
+            options.Converters.Add(new global::Langfuse.JsonConverters.EvaluationRuleReadFilterJsonConverter());
             options.Converters.Add(new global::Langfuse.JsonConverters.UnixTimestampJsonConverter());
             options.Converters.Add(new LazyEnumJsonConverterFactory());
         }
@@ -124,6 +153,18 @@ namespace Langfuse
 
                     || typeToConvert == typeof(global::Langfuse.UnstablePublicApiErrorCode?)
 
+                    || typeToConvert == typeof(global::Langfuse.UnstableTopicResultsOrderBy)
+
+                    || typeToConvert == typeof(global::Langfuse.UnstableTopicResultsOrderBy?)
+
+                    || typeToConvert == typeof(global::Langfuse.UnstableTopicSummaryState)
+
+                    || typeToConvert == typeof(global::Langfuse.UnstableTopicSummaryState?)
+
+                    || typeToConvert == typeof(global::Langfuse.UnstableTopicAssignmentStatus)
+
+                    || typeToConvert == typeof(global::Langfuse.UnstableTopicAssignmentStatus?)
+
                     || typeToConvert == typeof(global::Langfuse.UnstableTopicsOrderBy)
 
                     || typeToConvert == typeof(global::Langfuse.UnstableTopicsOrderBy?);
@@ -141,6 +182,36 @@ namespace Langfuse
                 if (typeToConvert == typeof(global::Langfuse.UnstablePublicApiErrorCode?))
                 {
                     return new global::Langfuse.JsonConverters.UnstablePublicApiErrorCodeNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.UnstableTopicResultsOrderBy))
+                {
+                    return new global::Langfuse.JsonConverters.UnstableTopicResultsOrderByJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.UnstableTopicResultsOrderBy?))
+                {
+                    return new global::Langfuse.JsonConverters.UnstableTopicResultsOrderByNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.UnstableTopicSummaryState))
+                {
+                    return new global::Langfuse.JsonConverters.UnstableTopicSummaryStateJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.UnstableTopicSummaryState?))
+                {
+                    return new global::Langfuse.JsonConverters.UnstableTopicSummaryStateNullableJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.UnstableTopicAssignmentStatus))
+                {
+                    return new global::Langfuse.JsonConverters.UnstableTopicAssignmentStatusJsonConverter();
+                }
+
+                if (typeToConvert == typeof(global::Langfuse.UnstableTopicAssignmentStatus?))
+                {
+                    return new global::Langfuse.JsonConverters.UnstableTopicAssignmentStatusNullableJsonConverter();
                 }
 
                 if (typeToConvert == typeof(global::Langfuse.UnstableTopicsOrderBy))

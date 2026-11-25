@@ -6,7 +6,7 @@ namespace Langfuse
     {
         /// <summary>
         /// Create an evaluator in the authenticated project.<br/>
-        /// An evaluator defines **how** Langfuse should score data. LLM-as-a-judge evaluators define a prompt, expected structured output, and optional model configuration. Code evaluators define source code and a runtime language.<br/>
+        /// An evaluator defines **how** Langfuse should score data. LLM-as-a-judge evaluators define a prompt, expected structured output, and optional model configuration. Code evaluators define source code and a runtime language. Decision-model evaluators define typed questions, a decision-model configuration, and a mapping from observation data to state keys.<br/>
         /// This always creates a new evaluator with version `1`. Names are not identifiers and do not need to be unique.
         /// </summary>
         /// <param name="request"></param>
@@ -20,7 +20,7 @@ namespace Langfuse
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create an evaluator in the authenticated project.<br/>
-        /// An evaluator defines **how** Langfuse should score data. LLM-as-a-judge evaluators define a prompt, expected structured output, and optional model configuration. Code evaluators define source code and a runtime language.<br/>
+        /// An evaluator defines **how** Langfuse should score data. LLM-as-a-judge evaluators define a prompt, expected structured output, and optional model configuration. Code evaluators define source code and a runtime language. Decision-model evaluators define typed questions, a decision-model configuration, and a mapping from observation data to state keys.<br/>
         /// This always creates a new evaluator with version `1`. Names are not identifiers and do not need to be unique.
         /// </summary>
         /// <param name="request"></param>
@@ -34,7 +34,7 @@ namespace Langfuse
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Create an evaluator in the authenticated project.<br/>
-        /// An evaluator defines **how** Langfuse should score data. LLM-as-a-judge evaluators define a prompt, expected structured output, and optional model configuration. Code evaluators define source code and a runtime language.<br/>
+        /// An evaluator defines **how** Langfuse should score data. LLM-as-a-judge evaluators define a prompt, expected structured output, and optional model configuration. Code evaluators define source code and a runtime language. Decision-model evaluators define typed questions, a decision-model configuration, and a mapping from observation data to state keys.<br/>
         /// This always creates a new evaluator with version `1`. Names are not identifiers and do not need to be unique.
         /// </summary>
         /// <param name="requestOptions">Per-request overrides such as headers, query parameters, timeout, retries, and response buffering.</param>

@@ -24,7 +24,7 @@ namespace Langfuse
         public required global::Langfuse.EvaluationRuleNullFilterOperator Operator { get; set; }
 
         /// <summary>
-        /// Required empty-string placeholder used by the runtime filter contract.
+        /// Empty-string placeholder. Can be omitted on servers newer than v4.78.0.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("value")]
         [global::System.Text.Json.Serialization.JsonRequired]
@@ -44,7 +44,7 @@ namespace Langfuse
         /// </param>
         /// <param name="operator"></param>
         /// <param name="value">
-        /// Required empty-string placeholder used by the runtime filter contract.
+        /// Empty-string placeholder. Can be omitted on servers newer than v4.78.0.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

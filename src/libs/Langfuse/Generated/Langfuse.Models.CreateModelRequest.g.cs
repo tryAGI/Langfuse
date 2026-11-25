@@ -73,14 +73,14 @@ namespace Langfuse
         public global::System.Collections.Generic.IList<global::Langfuse.PricingTierInput>? PricingTiers { get; set; }
 
         /// <summary>
-        /// Tokenizer supported by Langfuse for model usage inference.
+        /// Legacy tokenizer identifier retained for API compatibility. Ingestion no longer uses it to infer observation usage.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tokenizerId")]
         [global::System.Text.Json.Serialization.JsonConverter(typeof(global::Langfuse.JsonConverters.ModelTokenizerIdJsonConverter))]
         public global::Langfuse.ModelTokenizerId? TokenizerId { get; set; }
 
         /// <summary>
-        /// Optional. Configuration for the selected tokenizer. Needs to be JSON. See docs for more details.
+        /// Legacy tokenizer configuration retained for API compatibility. Ingestion no longer uses it to infer observation usage.
         /// </summary>
         [global::System.Text.Json.Serialization.JsonPropertyName("tokenizerConfig")]
         public object? TokenizerConfig { get; set; }
@@ -131,10 +131,10 @@ namespace Langfuse
         /// which will automatically create a single default tier named "Standard".
         /// </param>
         /// <param name="tokenizerId">
-        /// Tokenizer supported by Langfuse for model usage inference.
+        /// Legacy tokenizer identifier retained for API compatibility. Ingestion no longer uses it to infer observation usage.
         /// </param>
         /// <param name="tokenizerConfig">
-        /// Optional. Configuration for the selected tokenizer. Needs to be JSON. See docs for more details.
+        /// Legacy tokenizer configuration retained for API compatibility. Ingestion no longer uses it to infer observation usage.
         /// </param>
 #if NET7_0_OR_GREATER
         [global::System.Diagnostics.CodeAnalysis.SetsRequiredMembers]

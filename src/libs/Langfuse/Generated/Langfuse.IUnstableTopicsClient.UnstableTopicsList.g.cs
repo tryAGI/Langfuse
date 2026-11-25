@@ -6,7 +6,7 @@ namespace Langfuse
     {
         /// <summary>
         /// Unstable: Topics is in closed beta. The shape may change without notice.<br/>
-        /// List the topics of each active facet's current published map, with<br/>
+        /// List the topics of each active facet's live map, with<br/>
         /// the number of traces currently assigned to each topic in the window.<br/>
         /// Retired topics are not listed. `facets` holds per-facet trace counts<br/>
         /// by topic status.<br/>
@@ -14,9 +14,9 @@ namespace Langfuse
         /// 7 days and can span at most 93 days.<br/>
         /// `filter` is a JSON array of filter conditions combined with AND.<br/>
         /// String matching is case-insensitive. Columns: `facetId`<br/>
-        /// (stringOptions), `facetName` (string, stringOptions), `id`<br/>
-        /// (stringOptions), `name` (string, stringOptions). Facet conditions also<br/>
-        /// restrict `facets`.
+        /// (stringOptions), `facetName` (string, stringOptions), `ruleId`<br/>
+        /// (stringOptions), `id` (stringOptions), `name` (string, stringOptions).<br/>
+        /// Facet and rule conditions also restrict `facets`.
         /// </summary>
         /// <param name="fromTimestamp"></param>
         /// <param name="toTimestamp"></param>
@@ -38,7 +38,7 @@ namespace Langfuse
             global::System.Threading.CancellationToken cancellationToken = default);
         /// <summary>
         /// Unstable: Topics is in closed beta. The shape may change without notice.<br/>
-        /// List the topics of each active facet's current published map, with<br/>
+        /// List the topics of each active facet's live map, with<br/>
         /// the number of traces currently assigned to each topic in the window.<br/>
         /// Retired topics are not listed. `facets` holds per-facet trace counts<br/>
         /// by topic status.<br/>
@@ -46,9 +46,9 @@ namespace Langfuse
         /// 7 days and can span at most 93 days.<br/>
         /// `filter` is a JSON array of filter conditions combined with AND.<br/>
         /// String matching is case-insensitive. Columns: `facetId`<br/>
-        /// (stringOptions), `facetName` (string, stringOptions), `id`<br/>
-        /// (stringOptions), `name` (string, stringOptions). Facet conditions also<br/>
-        /// restrict `facets`.
+        /// (stringOptions), `facetName` (string, stringOptions), `ruleId`<br/>
+        /// (stringOptions), `id` (stringOptions), `name` (string, stringOptions).<br/>
+        /// Facet and rule conditions also restrict `facets`.
         /// </summary>
         /// <param name="fromTimestamp"></param>
         /// <param name="toTimestamp"></param>
